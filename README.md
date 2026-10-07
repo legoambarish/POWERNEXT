@@ -15,7 +15,15 @@ The complete portable Windows release is [`release/PowerNext_Track1_Competition_
 | Release status | `READY WITH CONDITIONS` |
 | Regression result | 383 checks passed |
 
-After cloning with Git LFS, extract the ZIP to a writable Windows x64 folder and run:
+Clone with Git LFS so the release, dataset and model binaries are downloaded instead of pointer files:
+
+```powershell
+git lfs install
+git clone https://github.com/legoambarish/POWERNEXT.git
+cd POWERNEXT
+```
+
+Extract the release ZIP to a writable Windows x64 folder and run from the extracted folder:
 
 ```powershell
 .\runtime\python.exe -m powernext_app
@@ -105,4 +113,3 @@ From a full extracted release:
 ```
 
 Use a new log label for each run. `tests/offline_acceptance.py` requires a fresh extraction because it intentionally creates application history and acceptance outputs.
-
