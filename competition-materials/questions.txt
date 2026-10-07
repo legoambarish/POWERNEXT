@@ -1,0 +1,254 @@
+From: Ambarish Pillai <legoambarish@gmail.com>
+Sent: Tuesday, September 29, 2026 19:13
+To: VED Club [MAHE-MIT] <vedclub.mit@manipal.edu>
+Cc: Purnendu Sinha [MAHE-MITBLR] <purnendu.sinha@manipal.edu>; RAAGMANAS MADHUKAR - 245859142 - MITBLR <raagmanas.mitblr2024@learner.manipal.edu>; SIDDHARTH GAUR - 245859070 - MITBLR <siddharth2.mitblr2024@learner.manipal.edu>
+Subject: PowerNext-AI | Track 01 | Technical Clarifications on HV Impulse Generator Setup
+
+
+
+
+You don't often get email from legoambarish@gmail.com. Learn why this is important
+
+Hi Team,
+
+We went through the Track 1 problem statement and the Excel file in detail. We had a few questions before we lock our model and start building around the equipment values.
+
+The Excel file seems to use 15 stages and 3 µF per stage, while the generator shown in the PDF has 12 stages and 0.125 µF per stage. Which one should we use for the challenge? If possible, could you also share the exact generator model/datasheet or circuit diagram that we should base our solution on?
+
+The document mentions an operating range of around 50–2400 kV. Does this mean the actual output crest voltage that our system should support, or the generator charging-voltage range? Also, are there separate practical voltage limits for lightning and switching impulses?
+
+Could you share the actual resistor combinations available on the generator? We found 30 Ω, 465 Ω and 3.7 kΩ front resistors, 520 Ω for LI tail and 22 kΩ for SI tail in the PDF. We mainly want to know what combinations can actually be used in practice, so that our software recommends real configurations instead of calculated resistance values that may not be physically possible.
+
+For compliance checking, should we strictly use the values given in the challenge, i.e. 1.2/50 µs for LI and 250/2500 µs for SI? We also noticed that the Excel uses ±20% for the SI tail time. Is that the tolerance you would like us to use for the challenge?
+
+Will we get any actual CPRI test data either before or during the finale? Raw voltage-vs-time waveforms would be especially useful. If available, it would also help to have the generator settings used for each waveform such as stages, charging voltage, resistor settings, load/DUT capacitance etc. Failed or out-of-tolerance trial shots would be useful as well, not only successful ones.
+
+During the finale, will there be any possibility of giving CPRI a recommended setting and getting back the waveform from an actual trial? Even a small number of such trials would help us test the calibration part of our solution.
+
+Before an actual test is started, which values are normally known accurately and which are only estimated? In particular, we wanted to understand how CPRI normally gets the DUT capacitance, divider capacitance, stray capacitance and stray inductance. Also, what exactly is included in the 545 pF basic load shown in the PDF?
+
+How are the first generator settings normally selected today? Is it mainly from previous experience/manual calculation, or is there existing manufacturer software being used? Also, roughly how many trial/setup shots are normally needed before getting the required waveform?
+
+From CPRI's point of view, what would be the most useful improvement from this project: getting closer on the first shot, reducing the total number of trial shots, reducing the time spent changing the setup, or something else?
+
+Which impulse analyser/digitizer and voltage divider are currently used? If possible, could you share one sample waveform export from the existing system? We want to make sure that our waveform-import and parameter-extraction part works with the type of data that is actually available.
+
+Are both LI and SI expected to be demonstrated in the final solution, or is it acceptable to demonstrate one in greater depth while supporting the other in software?
+
+We are also considering a small low-voltage physical demonstrator to show the calibration loop: predict a waveform, deliberately change the load, measure the changed waveform and let the system update its next recommendation. Would something like this be useful during judging, or would you prefer us to focus completely on the CPRI software use case?
+
+Are we allowed to bring code and hardware that we have already developed before the finale? Also, will basic equipment such as an oscilloscope and bench power supply be available there? Should we plan for the software to run fully offline?
+
+Lastly, if there is any difference between the PDF, Excel file, public problem statement and what was explained during the briefing, which one should we treat as the final reference? If the briefing recording/slides or transcript can be shared, that would also help.
+
+Thanks.
+
+Regards,
+Ambarish Pillai
+Track 01
+
+
+Disclaimer: This email and any files transmitted with it are privileged and confidential material of Manipal Academy of Higher Education (MAHE). They are intended to named recipient(s) only. If you are not the intended recipient of this message, please contact the sender and delete the message. This Email message including attachment(s), if any, is believed to be free of any virus. However, it is the responsibility of the recipient to ensure that it is virus-free, and MAHE accepts no liability for any loss or damage arising in any way from its use. Please consider the environment before printing this email.
+
+From: Purnendu Sinha [MAHE-MITBLR] <purnendu.sinha@manipal.edu>
+To: "Dr. Rangu Seshukumar"<seshukumar@cpri.in>
+Cc: "Arka Chakraborty"<arka@cpri.in>, "Dr. Samir Kumar Nath"<sknath@cpri.in>, "RAAGMANAS MADHUKAR - 245859142 - MITBLR"<raagmanas.mitblr2024@learner.manipal.edu>
+Date: Tue, 29 Sep 2026 19:45:34 +0530
+Subject: Fw: PowerNext-AI | Track 01 | Technical Clarifications on HV Impulse Generator Setup
+
+Dear Dr Seshukumar,
+
+We have received a set of queries from one of the participating teams. Could you please send us the response to the queries? Please note that the recording of the briefing session has already been shared with the Teams.
+
+Regards,
+Purnendu
+From: Dr. Rangu Seshukumar <seshukumar@cpri.in>
+Sent: Thursday, October 1, 2026 10:55 AM
+To: Purnendu Sinha [MAHE-MITBLR] <purnendu.sinha@manipal.edu>
+Cc: Arka Chakraborty <arka@cpri.in>; Dr. Samir Kumar Nath <sknath@cpri.in>; RAAGMANAS MADHUKAR - 245859142 - MITBLR <raagmanas.mitblr2024@learner.manipal.edu>
+Subject: Re: Fw: PowerNext-AI | Track 01 | Technical Clarifications on HV Impulse Generator Setup
+ 
+
+
+You don't often get email from seshukumar@cpri.in. Learn why this is important
+Dear Team,
+
+With reference to the queries raised by the team regarding the Track 1 problem statement, the following clarifications are provided based on the actual impulse voltage generator parameters available at CPRI.
+
+The Excel sheet shared earlier contains synthetic/generated values derived from the actual generator parameters and is intended for algorithm development and testing. The actual generator parameters provided below shall be considered as the reference for developing the practical configuration-selection and optimisation logic.
+
+1. Impulse generator configuration
+
+The actual impulse generator consists of 15 stages, with a maximum charging voltage of 3000 kV and a maximum stage voltage of 200 kV. The impulse capacitance per stage is 0.5 µF, and the maximum stored energy at rated voltage is 150 kJ.
+
+Therefore, for the challenge, the above actual generator parameters should be used as the basis of the model. The values appearing in the Excel sheet are synthetic values generated based on these actual generator characteristics.
+
+ 2. Required output voltage
+
+The required test voltage should be considered as the target impulse output crest voltage for the particular test.
+
+The algorithm should determine an appropriate number of stages/charging condition and resistor configuration to achieve the required test voltage while simultaneously obtaining the required impulse waveform.
+
+The maximum charging voltage of the generator is 3000 kV, with a maximum stage voltage of 200 kV.
+
+### 3. Available resistor configurations
+
+The resistor values provided in the actual generator parameter sheet should be treated as the available practical resistor values for the optimisation.
+
+The available front resistors per stage are:
+
+- R1 = 30 Ω
+- R2 = 46 Ω
+- R3 = 3700 Ω
+- R4 = 5000 Ω
+
+The available tail resistor for Lightning Impulse (LI) is:
+
+- R1p = 180 ,520Ω
+
+The available tail resistor for Switching Impulse (SI)is:
+
+- R2p = 5 kΩ
+
+The charging resistor per stage is 135 kΩ, and the potential resistor is 2 MΩ.
+
+The objective is therefore not to calculate an arbitrary resistance value and assume that such a resistor can be physically implemented. The algorithm should select the appropriate available resistor value/configuration for the particular test condition.
+
+ 4. Lightning Impulse waveform
+
+For a Lightning Impulse test, the required standard waveform is:
+
+1.2/50 µs
+
+The objective of the algorithm should be to obtain an impulse waveform that is as close as practically possible to the standard 1.2/50 µs waveform, while satisfying the applicable tolerance limits specified in IEC 60060-1.
+
+For the challenge, the following tolerances should be considered:
+
+- Front time (T₁): ±30%
+-Time to half-value / tail time (T₂): ±20%
+
+Accordingly, the algorithm should evaluate the generated/predicted waveform against the target waveform and determine whether the selected generator configuration satisfies the applicable limits.
+
+ 5. Switching Impulse waveform
+
+For Switching Impulse testing, the target waveform to be considered is:
+
+250/2500 µs
+
+The algorithm should similarly select the appropriate practical generator configuration and resistor arrangement so that the resulting waveform is as close as possible to the specified standard Switching Impulse waveform and remains within the applicable IEC 60060-1 tolerance limits.
+
+The relevant standard waveform and tolerance requirements should be incorporated into the compliance-checking portion of the software.
+
+ 6. Main objective of the optimisation algorithm
+
+The key objective of the challenge is to develop an algorithm that can determine:
+
+For a given test voltage and test type, which available generator/resistor configuration will produce an impulse waveform closest to the specified standard waveform while satisfying the applicable IEC tolerance limits?
+
+Thus, the optimisation should consider parameters such as:
+
+- Required crest voltage
+- Number of stages / charging voltage
+- Front resistor selection
+- Tail resistor selection
+- Front time (T₁)
+- Tail time / time to half-value (T₂)
+- Waveform conformity
+- Applicable tolerance limits
+
+The final output should be a practical generator setting/configuration, rather than only a theoretical resistance calculation.
+
+7. Use of the Excel data
+
+The Excel data provided for the challenge may be used for developing and testing the algorithm. These values are synthetic/generated values based on the actual generator parameters and are intended to provide a suitable dataset for model development.
+
+The team should therefore distinguish clearly between:
+
+Actual generator parameters → Physical constraints
+
+and
+
+Synthetic Excel data → Algorithm development/training/testing data.
+
+ 8. Generator loading and other parameters
+
+The actual generator parameter sheet specifies a basic load capacitance of 480 pF. This value may be incorporated into the model where applicable.
+
+Other parameters such as DUT capacitance, measuring-system capacitance, stray capacitance and stray inductance may be considered as additional model parameters wherever they are available or provided for the particular test configuration. Any assumed or estimated values should be clearly identified as such.
+
+ 9. Waveform optimisation approach
+
+The intended optimisation approach may be represented as:
+
+Required test voltage + Test type 
+↓ 
+Generator/stage configuration
+↓ 
+Available resistor selection
+↓ 
+Predicted impulse waveform
+↓ 
+Calculation of T₁, T₂ and crest voltage
+↓ 
+Comparison with standard waveform and IEC tolerance limits
+↓ 
+Selection of optimum practical configuration
+
+The algorithm should be capable of comparing different available configurations and recommending the configuration that provides the closest achievable waveform.
+
+ 10. LI and SI implementation
+
+Both Lightning Impulse (LI)and Switching Impulse (SI)should preferably be supported in the software.
+
+For LI, the target waveform is 1.2/50 µs, whereas for SI the target waveform is 250/2500 µs. The corresponding waveform parameters and applicable tolerance limits should be used independently for LI and SI.
+
+11. Actual waveform data
+
+If actual CPRI voltage-versus-time waveform data are made available, the same may be used for calibration and validation of the proposed algorithm.
+
+The team may therefore design the software such that actual measured waveform data can be imported later and used to improve the prediction/calibration process.
+
+12. Offline implementation
+
+The core solution may be developed as an offline application. The primary requirement is to demonstrate the capability of the proposed algorithm to select a practical generator configuration and optimise the impulse waveform against the required standard waveform.
+
+A physical low-voltage demonstrator may be included as an additional demonstration of the optimisation/calibration concept, but the primary focus should remain on the actual CPRI impulse-generator application.
+
+ 13. Important clarification regarding the challenge
+
+The challenge is not simply to calculate the theoretical resistor required for a particular waveform.
+
+The main requirement is to develop an intelligent optimisation method that uses the actual available generator parameters and resistor values and determines which practical configuration is most suitable for a particular test.
+
+For example:
+
+For a specified LI test voltage → select the appropriate stage/charging condition and available front/tail resistor configuration → predict the resulting waveform → compare T₁/T₂ and crest voltage with the 1.2/50 µs target and IEC tolerance limits → recommend the most suitable practical configuration.
+
+The same principle should be extended to Switching Impulse testing using the 250/2500 µs target waveform.
+
+14. Reference for discrepancies
+
+Where there is any apparent difference between the synthetic Excel data and the actual generator parameters, the actual generator parameters and the technical clarifications provided by CPRI shall be considered the reference for the physical generator configuration.
+
+The Excel sheet should be treated primarily as a dataset for developing and demonstrating the proposed algorithm.
+
+We hope the above clarifications will help you proceed with the development of the model and offline application.
+
+
+
+आदर के साथ/With kind regards
+ 
+
+डॉ. रंगू शेषुकुमार/ Dr.Rangu Seshu Kumar
+
+अभियांत्रिकी अधिकारी / Engineering Officer (Gr-3)
+
+ उच्च वोल्टता प्रभाग / High Voltage Division
+
+केंद्रीय विद्युत अनुसंधान संस्थान (सीपीआरआई) / Central Power Research Institute ( CPRI )
+
+बैंगलोर - ५६० ०८० / Bangalore - 560 080
+
+Ph: +91 9493503646
+
+ई-मेल:/E-mail : seshukumar@cpri.in

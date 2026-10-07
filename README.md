@@ -49,6 +49,7 @@ Get-Content .\release\PowerNext_Track1_Competition_v2.zip.sha256
 | `ui/` | Browser interface served by the application |
 | `models/` | Four selected ExtraTrees residual models, separated by LI/SI route and topology |
 | `training-data/` | Complete `clarification_v2` training dataset archive and checksum |
+| `competition-materials/` | Original problem statement, IVG workbook, parameter sheet, clarifications, briefing, questions, PRD and application previews |
 | `tests/` | Integrated application, frontend, red-team and release checks |
 | `docs/` | Phase reports, final regression report, claims, limits and judge Q&A |
 | `evidence/` | Acceptance outputs, source copies, hashes and phase logs |

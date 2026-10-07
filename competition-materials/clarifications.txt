@@ -1,0 +1,152 @@
+From: AMBARISH PILLAI - 251580190160 - MITBLR <ambarish.mitblr2025@learner.manipal.edu>
+Sent: Friday, 02 October 2026 15:47:28
+To: RAAGMANAS MADHUKAR - 245859142 - MITBLR <raagmanas.mitblr2024@learner.manipal.edu>; VED Club [MAHE-MIT] <vedclub.mit@manipal.edu>
+Cc: Purnendu Sinha [MAHE-MITBLR] <purnendu.sinha@manipal.edu>
+Subject: PowerNext-AI | Track 01 | Impulse Generator Circuit Configuration Clarification
+ 
+Hi Team,
+Thank you for the earlier clarification and the IVG parameter sheet. We have now started implementing the physics model using the actual generator values you shared.
+While modelling the generator, we reached one point where the component values alone are not enough to determine the fired circuit. Before we lock the physics and generate the ML training data, could you please clarify the following:
+Actual LI and SI firing circuit / erected configuration
+Could you share the circuit used when the generator is actually fired for standard Lightning Impulse and Switching Impulse tests?
+We mainly need to know the connection of:
+A circuit diagram, manual page, schematic screenshot or even a marked-up hand sketch would be sufficient.
+generator/stage capacitors;
+front resistors;
+tail resistors;
+test object/load;
+measuring divider;
+charging, potential and discharge resistors that remain connected during the impulse.
+How the listed resistor values are actually used
+For the front resistors listed as 30 Ω, 46 Ω, 3.7 kΩ and 5 kΩ per stage, are these selected uniformly across all active stages, or can different resistor values/combinations be used?
+Similarly, for LI, the clarification mentions “180, 520 Ω” while the parameter sheet lists 180 Ω. Could you confirm whether:
+We want the optimiser to recommend only configurations that are physically possible on the actual generator.
+180 Ω and 520 Ω are two separate available LI tail-resistor options;
+they are used together in some configuration;
+or 520 Ω was only a formatting/reference issue?
+Meaning of the 480 pF basic capacitance
+Could you clarify what is included in the 480 pF basic load capacitance?
+In particular, does it already include any part of:
+or should those be added separately?
+We want to avoid double-counting capacitance in the waveform model.
+measuring-divider capacitance;
+generator stray capacitance;
+fixed test-bay capacitance;
+One known working configuration for model verification
+If possible, could you share one known successful LI configuration and one SI configuration from the actual generator, even if only the evaluated parameters are available.
+The most useful information would be:
+A raw voltage-time waveform would be even better if one is readily available, but the evaluated parameters alone would already help us verify that our circuit representation matches the actual machine.
+number of active stages;
+charging voltage per stage;
+front resistor setting;
+tail resistor setting;
+approximate DUT/load capacitance;
+measured crest;
+measured T1 and T2 for LI, or Tp and T2 for SI.
+The reason we are asking now is that under the most straightforward interpretation of the listed resistor values, our provisional model does not reproduce the expected LI tail correctly. Rather than introduce an artificial correction or train the ML model on an assumed wiring arrangement, we would prefer to verify the physical connection first.
+Regards,
+Ambarish Pillai.
+
+
+
+
+Disclaimer: This email and any files transmitted with it are privileged and confidential material of Manipal Academy of Higher Education (MAHE). They are intended to named recipient(s) only. If you are not the intended recipient of this message, please contact the sender and delete the message. This Email message including attachment(s), if any, is believed to be free of any virus. However, it is the responsibility of the recipient to ensure that it is virus-free, and MAHE accepts no liability for any loss or damage arising in any way from its use. Please consider the environment before printing this email.
+
+From: Purnendu Sinha [MAHE-MITBLR] <purnendu.sinha@manipal.edu>
+Sent: Friday, 02 October 2026 18:21:14
+To: Dr. Rangu Seshukumar <seshukumar@cpri.in>
+Cc: Arka Chakraborty <arka@cpri.in>; Dr. Samir Kumar Nath <sknath@cpri.in>; RAAGMANAS MADHUKAR - 245859142 - MITBLR <raagmanas.mitblr2024@learner.manipal.edu>
+Subject: Fw: PowerNext-AI | Track 01 | Impulse Generator Circuit Configuration Clarification
+ 
+
+Dear Seshukumar,
+We have received subsequent queries from the team. Could you please provide the response to the query below. Thank you.
+Regards,
+Purnendu 
+
+Sent from an iOS device...
+From: Purnendu Sinha [MAHE-MITBLR] <purnendu.sinha@manipal.edu>
+To: "Dr. Rangu Seshukumar"<seshukumar@cpri.in>
+Cc: "Arka Chakraborty"<arka@cpri.in>, "Dr. Samir Kumar Nath"<sknath@cpri.in>, "RAAGMANAS MADHUKAR - 245859142 - MITBLR"<raagmanas.mitblr2024@learner.manipal.edu>
+Date: Fri, 02 Oct 2026 23:18:17 +0530
+Subject: Re: PowerNext-AI | Track 01 | Impulse Generator Circuit Configuration Clarification
+
+Dr Seshukumar,
+If you find that response to these queries could be generalised to be shared with other teams as well, please do let us know, and we can send it across to other teams so they can refine their solution accordingly. Thank you!
+
+Regards,
+Purnendu 
+
+Sent from an iOS device...
+From: Dr. Rangu Seshukumar <seshukumar@cpri.in>
+Sent: Sunday, October 4, 2026 12:25 PM
+To: Purnendu Sinha [MAHE-MITBLR] <purnendu.sinha@manipal.edu>
+Cc: Arka Chakraborty <arka@cpri.in>; Dr. Samir Kumar Nath <sknath@cpri.in>; RAAGMANAS MADHUKAR - 245859142 - MITBLR <raagmanas.mitblr2024@learner.manipal.edu>
+Subject: Further Clarification on Actual Resistor Values and Circuit Modelling – Track 1
+
+Dear Madhukar and Team,
+
+With reference to your further queries, please note the following clarification regarding the resistor values provided for the impulse voltage generator.
+
+The resistor values specified in the problem statement are the actual available resistor values of the generator and should be considered as the practical resistor inventory for the optimisation algorithm.
+
+In particular, the following values are available:
+
+30 Ω
+
+46 Ω
+
+180 Ω
+
+520 Ω
+
+3.7 kΩ
+
+5 kΩ
+
+These values should not be interpreted as theoretical resistance values to be calculated by the algorithm. The optimisation algorithm should select the appropriate available resistor value/configuration based on the required test voltage, impulse type and desired waveform parameters.
+
+The 180 Ω and 520 Ω values are both actual available resistors. They are not a formatting error. Depending on the particular generator configuration and test requirement, the available resistors may be used in the appropriate front or tail circuit arrangement to obtain the required impulse waveform.
+
+Therefore, the students should consider the resistor values as discrete practical design variables and evaluate the possible physically meaningful configurations rather than continuously calculating an ideal resistance and assuming that such a resistor can be implemented.
+
+The intended optimisation approach is therefore:
+
+Required test voltage + Test type (LI/SI)
+↓
+Select number of Marx stages and charging voltage
+↓
+Select available practical resistor configuration
+↓
+Construct/evaluate the equivalent impulse circuit
+↓
+Predict crest voltage, T₁ and T₂
+↓
+Compare with the required standard waveform and IEC tolerance limits
+↓
+Rank feasible configurations
+↓
+Recommend the best available practical configuration
+For the purpose of the hackathon, the team should clearly document how the available resistor inventory is incorporated into the equivalent Marx-generator circuit and which resistor arrangement is considered for each test condition.
+
+The objective is to demonstrate that the optimisation algorithm can select a practically implementable generator configuration using the actual available component values, rather than merely producing a mathematically optimum resistance.
+
+Objective: Develop a Hybrid Physics–Machine Learning Offline Optimisation Tool for Lightning /Switching Impulse Generator Parameter Selection
+
+आदर के साथ/With kind regards
+
+ 
+
+डॉ. रंगू शेषुकुमार/ Dr.Rangu Seshu Kumar
+
+अभियांत्रिकी अधिकारी / Engineering Officer (Gr-3)
+
+ उच्च वोल्टता प्रभाग / High Voltage Division
+
+केंद्रीय विद्युत अनुसंधान संस्थान (सीपीआरआई) / Central Power Research Institute ( CPRI )
+
+बैंगलोर - ५६० ०८० / Bangalore - 560 080
+
+Ph: +91 9493503646
+
+ई-मेल:/E-mail : seshukumar@cpri.in
