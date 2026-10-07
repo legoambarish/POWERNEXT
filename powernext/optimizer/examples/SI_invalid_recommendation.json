@@ -1,0 +1,17 @@
+{
+  "schema_version": "recommendation_result_v1",
+  "optimizer_version": "0.1.1+redteam",
+  "status": "INVALID_REQUEST",
+  "reason_codes": [
+    "REQUEST_OUTSIDE_DECLARED_DOMAIN"
+  ],
+  "detail": "Target lies outside the versioned request domain",
+  "best_configuration": null,
+  "ranked_alternatives": [],
+  "candidates": [],
+  "eligible_for_hardware_recommendation": false,
+  "artifact_manifest": {
+    "path": "SI_invalid_recommendation.assets/manifest.json",
+    "sha256": "38fedcf5b525d5ba5edbd9d0da858f7b5839ebddcafa0997a059e566c9b98380"
+  }
+}

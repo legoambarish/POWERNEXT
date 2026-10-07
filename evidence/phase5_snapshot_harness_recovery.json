@@ -1,0 +1,9 @@
+{
+  "status": "RESOLVED_TEST_HARNESS_ORDERING",
+  "original_error": "AssertionError: assert not (root/'data').exists() AFTER 52915 immutable-file comparisons",
+  "cause": "Offline acceptance was deliberately allowed to start after extraction, while immutable hash checking continued. It created the normal generated data folder before the late clean-state assertion.",
+  "correction": "Check no data entries in the original CRC-valid ZIP and use the offline harness initial no-database guard. Reverified every immutable extracted file against independently streamed ZIP-entry hashes; preserve generated test records.",
+  "application_defect": false,
+  "original_script": "phase5_snapshot_failed_original.py.txt",
+  "reverified_files": 52915
+}

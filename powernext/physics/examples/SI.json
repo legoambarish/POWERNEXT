@@ -1,0 +1,161 @@
+{
+  "schema_version": "2.0.0",
+  "model_version": "0.2.0",
+  "profile_id": "CPRI_IVG_OCT04_2026_v2",
+  "topology_id": "GSHUNT_v0",
+  "recipe_id": "DEV_UNIFORM_SINGLE_v2",
+  "evidence_domain": "PROVISIONAL_TOPOLOGY_SYNTHETIC",
+  "input_sha256": "067ccc80fe6fbb88ac44dacf3240c124fc3620c04713b186b4bd6ab4b395596c",
+  "inputs": {
+    "configuration": {
+      "impulse_type": "SI",
+      "stages": 9,
+      "stage_charge_V": 164366.29423280785,
+      "front_per_stage_ohm": 3700,
+      "tail_per_stage_ohm": 5000,
+      "topology_id": "GSHUNT_v0",
+      "polarity": 1,
+      "recipe_id": "DEV_UNIFORM_SINGLE_v2"
+    },
+    "setup": {
+      "dut_capacitance_F": 8.5e-10,
+      "divider_capacitance_F": 5e-10,
+      "stray_capacitance_F": 1.5e-10,
+      "loop_inductance_H": 1.85e-05,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "loop_resistance_ohm": 0.0,
+      "load_resistance_ohm": null,
+      "setup_id": "ILLUSTRATIVE_FIXED_SETUP",
+      "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED"
+    }
+  },
+  "derived": {
+    "Cg_F": 5.5555555555555555e-08,
+    "CL_F": 1.98e-09,
+    "Rf_total_ohm": 33300.0,
+    "Rt_total_ohm": 45000.0,
+    "U0_V": 1479296.6480952706,
+    "recipe": {
+      "id": "DEV_UNIFORM_SINGLE_v2",
+      "status": "PROVISIONAL_MODEL_ASSUMPTION",
+      "description": "one front and one tail component per active stage",
+      "front_components_ohm": [
+        3700
+      ],
+      "tail_components_ohm": [
+        5000
+      ],
+      "tail_connection": "SINGLE",
+      "tail_equivalent_per_stage_ohm": 5000.0,
+      "bill_of_materials": [
+        {
+          "component_ohm": 3700,
+          "required_count": 9,
+          "count_status": "REQUIRED_BY_HYPOTHESIS_AVAILABLE_QUANTITY_UNKNOWN"
+        },
+        {
+          "component_ohm": 5000,
+          "required_count": 9,
+          "count_status": "REQUIRED_BY_HYPOTHESIS_AVAILABLE_QUANTITY_UNKNOWN"
+        }
+      ],
+      "hardware_approved": false
+    }
+  },
+  "metrics": {
+    "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+    "evaluation_curve_id": "raw_clean",
+    "interpolation": "PCHIP",
+    "standards_certified": false,
+    "polarity": 1,
+    "baseline_V": 0.0,
+    "raw_crest_magnitude_V": 1299999.999999846,
+    "raw_signed_crest_V": 1299999.999999846,
+    "crest_magnitude_V": 1299999.999999846,
+    "t_peak_s": 0.00024174132169161623,
+    "T1_s": null,
+    "Tp_s": 0.00024174132169161623,
+    "T2_s": 0.002102381983336577,
+    "t30_s": 2.0404320075427517e-05,
+    "t90_s": 0.00011831863256534838,
+    "t50_falling_s": 0.002102381983336577,
+    "virtual_origin_s": null,
+    "beginning_s": 0.0,
+    "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+    "compliance_status": "PASS",
+    "reasons": [],
+    "checks": {
+      "front_or_peak": true,
+      "tail": true,
+      "crest": true
+    },
+    "deviation_pct": {
+      "front_or_peak_pct": -3.303471323353513,
+      "tail_pct": -15.904720666536921,
+      "crest_pct": -1.1834977442504169e-11
+    }
+  },
+  "assumptions": [
+    "Ideal simultaneous complete erection; equal initial stage charge.",
+    "Explicit DEV_UNIFORM_SINGLE_v2: one front and one tail component per active stage; unconfirmed CPRI connection and quantities.",
+    "Linear capacitive DUT; divider loading at DUT node; no flashover/corona/measurement transfer function.",
+    "480 pF coverage scenario: ADDITIONAL_DISJOINT.",
+    "Charging, potential and discharge branches omitted only as an explicit development scenario.",
+    "Minimum reliable stage charge and pulse/component ratings are unknown."
+  ],
+  "solver": {
+    "method": "Radau",
+    "requested_method": "Radau",
+    "rtol": 1e-09,
+    "atol": 1e-11,
+    "t_end_s": 0.03109711401145215,
+    "sample_count": 1608
+  },
+  "numeric_status": "VALID",
+  "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+  "eligible_for_hardware_recommendation": false,
+  "hardware_reason_codes": [
+    "TOPOLOGY_UNCONFIRMED",
+    "RECIPE_UNCONFIRMED",
+    "AUXILIARY_BRANCH_STATE_UNCONFIRMED",
+    "BASIC_CAPACITANCE_COVERAGE_ASSUMED",
+    "MIN_STAGE_CHARGE_UNKNOWN",
+    "COMPONENT_PULSE_RATINGS_UNKNOWN",
+    "COMPONENT_QUANTITIES_AND_SLOTS_UNKNOWN"
+  ],
+  "request_range_status": "WITHIN_REQUEST_DOMAIN",
+  "stored_energy_J": 60786.62702960841,
+  "remaining_energy_J": 2.211779434910361e-06,
+  "integrated_loss_J": 60786.62667737851,
+  "energy_balance_relative_error": -5.758143465275061e-09,
+  "branch_loss_J": {
+    "Rt": 58746.69485041911,
+    "front_path": 2039.931826959395
+  },
+  "max_energy_increase_fraction": 0.0,
+  "voltage_gain": 0.8787960154399828,
+  "front_current_peak_A": 44.4190893888625,
+  "component_bill_of_materials": [
+    {
+      "component_ohm": 3700,
+      "required_count": 9,
+      "count_status": "REQUIRED_BY_HYPOTHESIS_AVAILABLE_QUANTITY_UNKNOWN"
+    },
+    {
+      "component_ohm": 5000,
+      "required_count": 9,
+      "count_status": "REQUIRED_BY_HYPOTHESIS_AVAILABLE_QUANTITY_UNKNOWN"
+    }
+  ],
+  "tail_stress_proxies": [
+    {
+      "component_ohm": 5000,
+      "assumed_count": 9,
+      "voltage_peak_per_component_V": 164366.29423280785,
+      "current_peak_per_branch_A": 32.87325884656157,
+      "energy_per_component_J": 6527.410538935456,
+      "status": "IDEAL_UNIFORM_SHARING_PROXY_NOT_RATING_APPROVAL"
+    }
+  ],
+  "numerical_pass_is_not_IEC_certification": true
+}

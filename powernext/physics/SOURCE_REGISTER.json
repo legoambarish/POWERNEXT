@@ -1,0 +1,202 @@
+{
+  "review_date": "2026-10-04",
+  "schema_version": "source_register_v2",
+  "source_precedence": [
+    "S10",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "provided_sources": [
+    {
+      "id": "S10",
+      "kind": "LATEST_CPRI_DIRECT_CLARIFICATION",
+      "file": "../../evidence/sources/clarifications.txt",
+      "source_filename": "clarifications.txt",
+      "date": "2026-10-04",
+      "sha256": "560bf7d304d141dec6bd9a42cf8794645e5acf6227363fe235bf07288056cbda",
+      "locator": "Newest reply: six actual available resistor values and discrete practical selection; no explicit fired connection recipe",
+      "classification": "CONFIRMED CPRI FACT"
+    },
+    {
+      "id": "S1",
+      "kind": "CPRI_DIRECT_CLARIFICATION",
+      "file": "../../evidence/sources/questions.txt",
+      "date": "2026-10-01",
+      "locator": "CPRI response, sections 1–14; not the preceding participant questions",
+      "sha256": "31bd1a8a1e390163336be601e88a55cd88d0a6218c49ee46edee882da1af0f92",
+      "source_filename": "questions.txt"
+    },
+    {
+      "id": "S2",
+      "kind": "CPRI_PARAMETER_SHEET",
+      "file": "../../evidence/sources/Parameter values ivg.docx",
+      "locator": "Complete single-page table",
+      "sha256": "e5a1a3b523b93550687c3a077897b0e234de5ed55254546efd1a7c6d706f5608",
+      "source_filename": "Parameter values ivg.docx"
+    },
+    {
+      "id": "S3",
+      "kind": "ORIGINAL_CHALLENGE",
+      "file": "../../evidence/sources/HV IG Problem Statement.pdf",
+      "locator": "All 4 pages; page 4 illustration is superseded for actual hardware values",
+      "sha256": "9ab169fbda5eb612a7ff9ccfbadca8e85f5b49c2257c23388945d4e7c5532e93",
+      "source_filename": "HV IG Problem Statement.pdf"
+    },
+    {
+      "id": "S4",
+      "kind": "PROVIDED_TRANSCRIPT",
+      "file": "../../evidence/sources/briefing.txt",
+      "locator": "Complete provided Track 1 briefing/discussion extract; audiovisual playback not independently verified",
+      "sha256": "909488e111dc7e18993e53492893cfde5be4dd2579b1f597683f0abf3e79c6e6",
+      "source_filename": "briefing.txt"
+    },
+    {
+      "id": "S5",
+      "kind": "LEGACY_SYNTHETIC_WORKBOOK",
+      "file": "../../evidence/sources/Hybrid_Physics_ML_Impulse_Generator_Optimiser.xlsx",
+      "locator": "All six sheets; all 7029 formulas; all 2000 dataset records",
+      "sha256": "e855eadbe4d6da2579316e89e025e6990f9ba3c522a5af96d1dd2a5522d77480",
+      "source_filename": "Hybrid_Physics_ML_Impulse_Generator_Optimiser.xlsx"
+    },
+    {
+      "id": "S6",
+      "kind": "TEAM_PRD",
+      "file": "../../evidence/sources/PowerNext_Track1_PRD.docx",
+      "locator": "All seven pages; Physics is Phase 0",
+      "sha256": "d597f15f4857bee1608b8028417a661c86e661de556f90f315a771eeb71b342e",
+      "source_filename": "PowerNext_Track1_PRD.docx"
+    }
+  ],
+  "classification_policy": [
+    "CONFIRMED CPRI FACT",
+    "PROBLEM-STATEMENT REQUIREMENT",
+    "DERIVED ENGINEERING RESULT",
+    "EXTERNAL TECHNICAL EVIDENCE",
+    "PROVISIONAL MODEL ASSUMPTION",
+    "UNRESOLVED"
+  ],
+  "source_policy": "Newest direct clarification overrides older assumptions only where explicit. Source paths are relative to this register; primary files are copied byte-for-byte into the final release evidence area.",
+  "historical_supplemental_sources": [
+    {
+      "id": "S7",
+      "kind": "MASTER_INSTRUCTION",
+      "file": "Pasted text (3)(20261002-091204).txt",
+      "locator": "Complete master prompt",
+      "sha256": "491e0783a18c89c9849bbf1a7fa9aa37be70026d666983df57113a6827c60c80",
+      "availability_in_current_release": "NOT_BUNDLED_HERE; original historical source register preserved in audit archive"
+    },
+    {
+      "id": "S8",
+      "kind": "SUPPLIED_LI_DIAGRAM",
+      "file": "image(20261002-091150).png",
+      "locator": "Complete image; LI front/virtual origin/tail",
+      "sha256": "b030f2f3193f346eb9075b237ac37d5e46fd035f6f216ca7c41c2297576ebecb",
+      "availability_in_current_release": "NOT_BUNDLED_HERE; original historical source register preserved in audit archive"
+    },
+    {
+      "id": "S9",
+      "kind": "SUPPLIED_LI_DIAGRAM",
+      "file": "image(20261002-091157).png",
+      "locator": "Complete image; LI front/virtual origin/tail",
+      "sha256": "dfde11513bfa482c3980240a04c885c057eea2e0ae473da9b352ddd19b349fc6",
+      "availability_in_current_release": "NOT_BUNDLED_HERE; original historical source register preserved in audit archive"
+    }
+  ],
+  "historical_research_register": [
+    {
+      "id": "R1",
+      "title": "IEC 60060-1:2025, edition 4 — official publication page",
+      "url": "https://webstore.iec.ch/en/publication/65088",
+      "use": "Confirms publication on 2025-04-17 and new SI front-time convention 170/2500; not a substitute for the requested legacy competition profile. Full normative text not available in this review."
+    },
+    {
+      "id": "R2",
+      "title": "IEC 60060-1:2010 — official publication page",
+      "url": "https://webstore.iec.ch/en/publication/300",
+      "use": "Legacy edition context. Public preview inspected, not a claim of complete paid-standard access."
+    },
+    {
+      "id": "R3",
+      "title": "ITU-T Recommendation K.96 (02/2014), Appendix I.3.1 and Figure I.2",
+      "url": "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-K.96-201402-I!!PDF-E&lang=e&type=items",
+      "use": "Primary standards-body material reproducing IEC LI 30/90 front-time and virtual-origin definitions. Relevant diagram inspected."
+    },
+    {
+      "id": "R4",
+      "title": "Yutthagowith, An Accurate Evaluation of Switching Impulse Voltages for High-Voltage Tests, Energies 15(13),4760 (2022), DOI 10.3390/en15134760",
+      "url": "https://www.mdpi.com/1996-1073/15/13/4760",
+      "accessible_fulltext": "https://www.researchgate.net/publication/361626882_An_Accurate_Evaluation_of_Switching_Impulse_Voltages_for_High-Voltage_Tests",
+      "use": "Primary research: legacy SI target/tolerances, actual origin, broad/noisy peak evaluation; not blanket endorsement of every approximation in the paper."
+    },
+    {
+      "id": "R5",
+      "title": "J. R. Lucas, High Voltage Engineering (2001), chapter 8, University of Moratuwa",
+      "url": "https://uom.lk/sites/default/files/elect/files/HV_Chap8.pdf",
+      "use": "University HV source: two distinct two-capacitor impulse circuits, distributed Marx/Goodlet shaping, stray-capacitance effects. Relevant circuit diagrams inspected."
+    },
+    {
+      "id": "R6",
+      "title": "HAEFELY SGSA impulse-voltage test-system brochure, manufacturer",
+      "url": "https://www.pfiffner-group.com/fileadmin/user_upload/01_Pfiffner_Gruppe/HAEFELY/Products/HV/Impulse_Test_Systems/Datasheets/SGSA_-_Impulse_Voltage_Test_System_100-1200_kV_-_HAEFELY_-_Brochure.pdf",
+      "use": "Generic manufacturer evidence for Marx charging/erection, modular resistors, grounding apparatus and optional test circuits; NOT the CPRI model/datasheet. Relevant page inspected."
+    },
+    {
+      "id": "R7",
+      "title": "Lewin et al., Zero-Phase Filtering for Lightning Impulse Evaluation, IEEE Transactions on Power Delivery 23(1),3–12 (2008), DOI 10.1109/TPWRD.2007.911124",
+      "url": "https://ieeexplore.ieee.org/document/4408689/",
+      "accessible_fulltext": "https://www.researchgate.net/publication/3276351_Zero-Phase_Filtering_for_Lightning_Impulse_Evaluation_A_K-factor_Filter_for_the_Revision_of_IEC60060-1_and_-2",
+      "use": "Primary author-uploaded paper: double-exponential base curve and zero-phase residual filtering for LI overshoot; motivates gated, separately validated evaluator plugin."
+    },
+    {
+      "id": "R8",
+      "title": "IEC 61083-2:2013 — official publication page",
+      "url": "https://webstore.iec.ch/en/publication/4471",
+      "use": "Impulse-evaluation software and reference test-data qualification. TDG not obtained or executed."
+    },
+    {
+      "id": "R9",
+      "title": "SciPy solve_ivp and Radau official documentation",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html",
+      "use": "Implicit ODE integration and dense output; installed/tested SciPy version recorded separately."
+    },
+    {
+      "id": "R10",
+      "title": "ngspice official manual",
+      "url": "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml",
+      "use": "Independent transient reference netlists/initial-condition semantics; decks supplied, ngspice not available/executed in this environment."
+    },
+    {
+      "id": "R11",
+      "title": "K. M. Coetzer, P. G. Wiid, A. J. Rix, An investigation into the failure mechanisms of Schottky barrier diodes, as commonly implemented as bypass diodes in photovoltaic modules; Stellenbosch University conference paper",
+      "url": "https://www.sasec.org.za/full_papers/34.pdf",
+      "use": "Section 2.1 independently reproduces LI crest ±3%, front ±30%, tail ±20% and IEC-derived waveform definitions; no transfer of its small-generator hardware to CPRI."
+    },
+    {
+      "id": "R12",
+      "title": "Non-Iterative Technique for Determination of Full Lightning Impulse Voltage Parameters, Energies 15(12),4199 (2022), DOI 10.3390/en15124199",
+      "url": "https://www.mdpi.com/1996-1073/15/12/4199",
+      "accessible_fulltext": "https://www.researchgate.net/publication/361217011_Non-Iterative_Technique_for_Determination_of_Full_Lightning_Impulse_Voltage_Parameters",
+      "use": "Primary paper section 2: base/residual/test-curve method, fit interval and k(f)=1/(1+2.2 f^2), f in MHz. The proposed empirical speed-up method is not adopted."
+    }
+  ],
+  "historical_video_access": {
+    "url": "https://www.youtube.com/watch?v=IMfy1PPXtZY",
+    "status": "WEB_OPEN_FAILED; entire supplied Track 1 transcript extract read",
+    "unverified": "Full audiovisual content beyond the supplied extract"
+  },
+  "current_external_references": [
+    {
+      "url": "https://www.pfiffner-group.com/products-solutions/details/sgva",
+      "use": "Generic multiple resistor positions; not CPRI wiring"
+    },
+    {
+      "url": "https://nissin-pulse.jp/product/doc/product-01-05-03.pdf",
+      "use": "Generic manufacturer circuit illustration; not CPRI wiring"
+    }
+  ],
+  "limitations": "No genuine measured trace, confirmed fired schematic, part quantity/rating/slot allocation or operational approval is established by this source register."
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "suite": "physics",
+    "exit_code": 0,
+    "seconds": 24.031,
+    "command": [
+      "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\release\\PowerNext_Track1_Competition_v2\\runtime\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "powernext/physics/tests",
+      "-v"
+    ],
+    "log": "physics.log"
+  },
+  {
+    "suite": "ml",
+    "exit_code": 0,
+    "seconds": 41.047,
+    "command": [
+      "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\release\\PowerNext_Track1_Competition_v2\\runtime\\python.exe",
+      "-m",
+      "pytest",
+      "powernext/ml/tests",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "log": "ml.log"
+  },
+  {
+    "suite": "optimizer",
+    "exit_code": 0,
+    "seconds": 19.719,
+    "command": [
+      "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\release\\PowerNext_Track1_Competition_v2\\runtime\\python.exe",
+      "-m",
+      "pytest",
+      "powernext/optimizer/tests",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "log": "optimizer.log"
+  },
+  {
+    "suite": "application",
+    "exit_code": 0,
+    "seconds": 630.14,
+    "command": [
+      "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\release\\PowerNext_Track1_Competition_v2\\runtime\\python.exe",
+      "-m",
+      "pytest",
+      "tests/application",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "log": "application.log"
+  },
+  {
+    "suite": "frontend",
+    "exit_code": 0,
+    "seconds": 25.765,
+    "command": [
+      "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\release\\PowerNext_Track1_Competition_v2\\runtime\\tools\\node.exe",
+      "--test",
+      "tests/application/frontend.test.mjs",
+      "tests/application/ui_redesign.test.mjs",
+      "tests/application/clarification.test.mjs",
+      "tests/ui_selection.test.mjs"
+    ],
+    "log": "frontend.log"
+  },
+  {
+    "suite": "redteam",
+    "exit_code": 0,
+    "seconds": 41.812,
+    "command": [
+      "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\release\\PowerNext_Track1_Competition_v2\\runtime\\python.exe",
+      "-m",
+      "pytest",
+      "tests/redteam",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "log": "redteam.log"
+  },
+  {
+    "suite": "ui_race",
+    "exit_code": 0,
+    "seconds": 0.125,
+    "command": [
+      "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\release\\PowerNext_Track1_Competition_v2\\runtime\\tools\\node.exe",
+      "tests/redteam/ui_scenario_race.mjs"
+    ],
+    "log": "ui_race.log"
+  },
+  {
+    "suite": "final_release",
+    "exit_code": 0,
+    "seconds": 52.375,
+    "command": [
+      "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\release\\PowerNext_Track1_Competition_v2\\runtime\\python.exe",
+      "-m",
+      "pytest",
+      "tests/test_final_release.py",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "log": "final_release.log"
+  }
+]

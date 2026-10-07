@@ -1,0 +1,45 @@
+from pathlib import Path
+import sys,json,time,statistics
+from dataclasses import replace
+BASE=Path(__file__).resolve().parents[1]
+ROOT=BASE/'release/PowerNext_Track1_Competition_v2'
+sys.path.insert(0,str(ROOT)); import powernext_config
+from physics_engine import Configuration,Setup,simulate
+from physics_engine.recipes import COMPONENTS,SINGLE,PARALLEL
+from physics_engine.engine import build_network,sample_trajectory
+from physics_engine.network import Network,Element
+from physics_engine.evaluator import evaluate
+S=Setup(850e-12,500e-12,150e-12,18.5e-6,'ADDITIONAL_DISJOINT')
+rows=[]; counts={}; start=time.perf_counter()
+for mode,top,recipe in [('LI','GSHUNT_v0',SINGLE),('LI','OSHUNT_v0',SINGLE),('LI','GSHUNT_v0',PARALLEL),('SI','GSHUNT_v0',SINGLE),('SI','OSHUNT_v0',SINGLE)]:
+    group=[]; target=1550e3 if mode=='LI' else 1300e3
+    for n in range(2,16):
+        for rf in COMPONENTS:
+            for rt in ([180] if recipe==PARALLEL else COMPONENTS):
+                c=Configuration(mode,n,200e3,rf,rt,top,recipe_id=recipe)
+                r=simulate(c,S,solver='modal',n_points=1600); m=r.metadata
+                charge=min(200e3,target/(n*m['voltage_gain']))
+                r=simulate(replace(c,stage_charge_V=charge),S,solver='modal',n_points=1600,target_crest_V=target); m=r.metadata
+                row=dict(mode=mode,topology=top,recipe=recipe,stages=n,front=rf,tail=rt,charge_V=charge,crest_V=m['metrics']['crest_magnitude_V'],front_us=(m['metrics']['T1_s'] if mode=='LI' else m['metrics']['Tp_s'])*1e6 if m['metrics']['waveform_status']=='VALID_CLEAN_FULL_IMPULSE' else None,tail_us=m['metrics']['T2_s']*1e6 if m['metrics']['T2_s'] else None,status=m['metrics']['compliance_status'],waveform_status=m['metrics']['waveform_status'],energy_error=m['energy_balance_relative_error'])
+                group.append(row); rows.append(row)
+        print(time.strftime('%H:%M:%S'),mode,top,recipe,'stage',n,'done',flush=True)
+    counts[f'{mode}/{top}/{recipe}']=dict(total=len(group),passes=sum(r['status']=='PASS' for r in group),invalid=sum(r['waveform_status']!='VALID_CLEAN_FULL_IMPULSE' for r in group))
+
+# Diagnostic series 180+520 uses explicit two series components in a graph,
+# not an invented 700 ohm inventory entry or an allowed optimizer recipe.
+series=[]
+for n in [8,9,10]:
+    net=Network(['g','mid','o'],[Element('Cg','C','g','0',.5e-6/n),Element('CL','C','o','0',S.total_capacitance_F),Element('tail180','R','g','mid',n*180),Element('tail520','R','mid','0',n*520),Element('front','RL','g','o',S.loop_inductance_H,n*30)])
+    cn=net.compile({'g':n*200e3,'mid':0,'o':0}); tr=cn.integrate_linear(.005); t=sample_trajectory(tr,1,1600)
+    m=evaluate(t,tr.voltage('o',t),'LI',target_crest_V=1550e3)
+    series.append(dict(stages=n,front_us=m['T1_s']*1e6,tail_us=m['T2_s']*1e6,status=m['compliance_status']))
+
+bench={}
+for solver in ['modal','Radau']:
+    times=[]
+    for i in range(8):
+        t=time.perf_counter(); simulate(Configuration('LI',9,184238.3311,30,180,'GSHUNT_v0',recipe_id=PARALLEL),S,solver=solver,n_points=1600); times.append(time.perf_counter()-t)
+    bench[solver]={'median_ms':statistics.median(times)*1000,'samples':len(times)}
+out=dict(profile='CPRI_IVG_OCT04_2026_v2',setup=S.__dict__,classification='DERIVED ENGINEERING RESULT',hardware_verified=False,counts=counts,series_diagnostic=series,solver_benchmark=bench,seconds=time.perf_counter()-start,rows=rows)
+(BASE/'evidence/phase1_catalog_probe.json').write_text(json.dumps(out,indent=2,allow_nan=False),encoding='utf-8')
+print(json.dumps({k:v for k,v in out.items() if k!='rows'},indent=2),flush=True)

@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "SI_low_voltage",
+      "status": "PASS",
+      "result_status": "NUMERICALLY_COMPLIANT_PROVISIONAL",
+      "output": "SI_low_voltage_recommendation.json",
+      "output_sha256": "fd4906f1212a3b7ca1305bdf05c0874b765ff7103ebd2df065f012c40dedeea8",
+      "numerical_passes": 19,
+      "catalog_count": 504,
+      "independent_catalog_and_order_match": true,
+      "max_absolute_J_difference": 7.65965069149388e-12,
+      "waveforms_replayed": 504,
+      "independent_radau_pass_rechecks": 19,
+      "seconds": 112.71948329999941
+    },
+    {
+      "case": "LI_disagreement_request",
+      "status": "PASS",
+      "result_status": "NUMERICALLY_COMPLIANT_PROVISIONAL",
+      "output": "LI_disagreement_recommendation.json",
+      "output_sha256": "bfacd3900369df286cadee0051de6679311263841e0949e80726a6deb31cd916",
+      "numerical_passes": 6,
+      "catalog_count": 84,
+      "independent_catalog_and_order_match": true,
+      "max_absolute_J_difference": 4.8072251956909895e-08,
+      "waveforms_replayed": 84,
+      "independent_radau_pass_rechecks": 6,
+      "seconds": 42.859664300001896
+    }
+  ]
+}

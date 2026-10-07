@@ -1,0 +1,4543 @@
+{
+  "status": "COMPLETE",
+  "result_id": "recommendation_470e2c161a7497b080b5150c",
+  "files": [
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0095ee9bbff7270c.npz",
+      "sha256": "3d2b91bce786a1c9c8d1a7a7d0de724bf795de6766c7ba135385970922692520",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_00f7d1f3fdf43de4.npz",
+      "sha256": "89fd34b44be4349f8db468bc57070a9b5361e2069268e39fbc2bbd329b588fdc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0132e05dd0e6b9c2.npz",
+      "sha256": "702714ee386213c1369fd66cf08f80117c98ae606e241f809a6935fb8a1f8a24",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_019cef1e06bc3709.npz",
+      "sha256": "93ef1f94bdc8eddf296935b878b572a9ef762213a9678f356ca3e8221f4dfd24",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_029f4d1e0f6d3f74.npz",
+      "sha256": "b5b739c840d36151181c17a6aa719e78422a1574240faa9ee609219c887e3672",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_02c6636e47eb1804.npz",
+      "sha256": "e006433773ead87e87be3f58e4432e49c01a2c4d1b2fcb1bc5ee79a130a9c575",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_042b70ffb20eec5e.npz",
+      "sha256": "01ab5f05fc5a280825060458b8d7cf46bb2bccd1e97ab612985e8a1a9acd8869",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_04a219034ad9cdb1.npz",
+      "sha256": "c0c74c09fffc31065e41204e3cb2f3b664fb35bd0c1210c0c05a8c53150066a9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_05fa06ae097b6b7f.npz",
+      "sha256": "3612e3efa0746a0bafe3141847ef484ad333bcb1ae6db6263f2fadcdf92d7356",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_062d642e9a406ffa.npz",
+      "sha256": "b2d3675bdd8ca09de75e66296a9ae3fde557c23d07b3cd3d1268cb6f40fa0961",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_066564d2e5b23592.npz",
+      "sha256": "7a19acc059f9f271b6e91a52a8fe735222e4b64becbe292ce14bdae21fafa202",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_06e559a661e6a7e5.npz",
+      "sha256": "8e75ada82d97d1c77317184f206980d3d586a7c9fda81ad341dfcf6315759cbd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_06e9c6512dea7f45.npz",
+      "sha256": "764fe6d98a1637acfca93a42e8dc1d38aa0b56a6885cc736e9c908c26a869543",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_077f01c5ba600926.npz",
+      "sha256": "4f38a5c62dee34a09176616b50e9608a73d8a6af78637d8d73c930e96e15c59d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_078543b24017d794.npz",
+      "sha256": "b8a44ec1b1b62d8020ea133db03d5cfffeae5ec7fc52197eaa16aa033f009868",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_079a5a52f6897600.npz",
+      "sha256": "e9d3dcf2a88b65626cebf0135e069d36b750bf10fe910f240869120a7610036e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_09082423fe5c79b6.npz",
+      "sha256": "dcb8abb4acf2fa42f31871bda397ade5b1b8c29fee352c33338b52a39568d99e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_09148fba54a6672f.npz",
+      "sha256": "e4c05dfc9f1179e5a147ad3a40fc5242ccbd4334843e9bf2835278c940f5ac7f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_09277ff9623e4e66.npz",
+      "sha256": "4a6f44eaa4b229798175189c1d53824c9ff3f6b65f9264068777a2d1fcea5c23",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0b57484a34241cba.npz",
+      "sha256": "b6e837d304b1d3520d4dd5f5d73c2c8b00cc9f16336401b97f2da719ac113944",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0b9a6e636bade54a.npz",
+      "sha256": "044c04ba7ad6271e6a0b03af8903c85f6033865265fe4a125d105e568bc142cf",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0ba2631d304cb5a4.npz",
+      "sha256": "a8090a71d54dd0acbbe2fc7841c00521795dd16c129f5f270d9fd089dace6488",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0c125f9ddfc340de.npz",
+      "sha256": "d9f670d05f88fca645a51978d10b1d14ea598f6d66540a6e6fc91544e75f2b22",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0c5b840b7ed16be5.npz",
+      "sha256": "bc701bfdee6f4cda67620ffe57bcb3e42eb51b22c53bcd995d243d1fd4bcff87",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0cfb6ac91f210d25.npz",
+      "sha256": "9da1a458d6a2f885517c1fd3adefb4b2e71621a1ee66337af0f73c16658c382c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0d7a7725dd31efba.npz",
+      "sha256": "130ce079bc65fb5e8d9c94269532a873d65c7de697a74be6af6ec715d776358e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0d905047b2d57e40.npz",
+      "sha256": "42e1ec1dac42d64de64f82db01825031f3ce25e50f2eff3d0f072c1b228a07eb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0e11c05da3c9e2ed.npz",
+      "sha256": "3d97a3c6eb4b91c2b8da38787b73437cb148dd31db855398e9152ad05c2fa807",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0e334cd7b73a1531.npz",
+      "sha256": "1d9e5e7a30f09ee4ddbd3cb3a9add5a071c52bade58f394b4425ed071985ddc3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_0f39d4e5c6abcdc6.npz",
+      "sha256": "da189fb706d22c41b1e36a544585f9b6e3f96bfe55e5a724e7231531d13ea816",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_104c59e41218c545.npz",
+      "sha256": "e09ec6c63640bdf8d70ad4991d81e4118d2a1d6c12517b3d231fab9bb4930630",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_10b0cb379d165606.npz",
+      "sha256": "8e8a858485e2ade309662483e80d7468cf77c1a47c0c7faa2659cf933fbfd446",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_113bf5d982403ac8.npz",
+      "sha256": "933b52608e7f90647dcb64143743e3a292e50da3b1f41bf01acd94cac862d9dc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_118ede8ff6eea3e7.npz",
+      "sha256": "c72ffa8ccaa7e35dbd9a98087b302738f377d15b9ca093686d96a1e4dff76bd4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_11c363387cda857e.npz",
+      "sha256": "1d3250fb9fe724a02d36bdd3abb79732efcf7618221bcdd6c4ad435432356e70",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_11ef3435d1a461cd.npz",
+      "sha256": "a3dcc560ee81858e6ba1df4a19e902a6b26c5b2490e84cc9df334b2ca10ca5a1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_1236dfa9170ce73a.npz",
+      "sha256": "4bbba12dc11e185f62aad043a10973965e421dbcd4a4e4185f7af05d9c88bfa7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_12abbcdf782f49d0.npz",
+      "sha256": "40d400ba1655aef1932a1d508b07f711870ec4e605d15d022f50e7b7560bb022",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_133a15b76a11db48.npz",
+      "sha256": "8afbf8f0548ed3d88b5bea4f7a63d367cbba75879c0fb1257da77cd33db3ac5b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_13c50955ba6e6713.npz",
+      "sha256": "4b437d97fafc004bc88537e91af3b40f64d998c42dc9f26b91f98b4d3d9a0eba",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_13f08f6831fc6578.npz",
+      "sha256": "d27e559f057761bddb72d54a462726b598e3ad16d213305bdfeaf4bf1de8301b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_14816df13fe9595e.npz",
+      "sha256": "d63da4f77b2d9ddc6eff247a60af04aba4d9c8e9ba75e60f4cf39f8dae994227",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_15d7d372c50f4492.npz",
+      "sha256": "a88cfed0087de94bad334d0a7651f6e2b5f1c48ecaa523c6e566b0b7aa427600",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_163e5249e8889026.npz",
+      "sha256": "f6a54b1f072ddf7743fc90b50f55c673da62b20bc05ab617da50d5a17c7361f9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_16584caf7a383bf1.npz",
+      "sha256": "1791e9841c051e57e211a2ec211a6669a7951407e190949ab19726207ecb28e8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_171a02d499044b8a.npz",
+      "sha256": "2fbbcfca0a35a72c8fe6723d8c23678cf1e35047a47e05d4ec1da3f958bc6e14",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_178c4475fb947127.npz",
+      "sha256": "6535a7e35201bd0461bf1a1278183d229d881297fe2a58e21a120cf28c86bb79",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_184f279f13a31ee2.npz",
+      "sha256": "f4c4a874f1b2e9c7ded4fab4f18c7127fe143956774159c6ba77e58f16550761",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_18796262dbdc5431.npz",
+      "sha256": "0135bae39f8ec1bbc2ee64880a13b27f4340acd31b73c34bceeb8d527c17e184",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_18803fbe9887e614.npz",
+      "sha256": "abe903214416aa898de19250a3052d42763dc888c4be8fb5c1aee48ed2e4aed2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_18ad256a65aed8af.npz",
+      "sha256": "a9bfad6dcfd323643e1509a943a7783c8dd49a3b82e01341a3a4fcfb1d8324c7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_194186e3165298f9.npz",
+      "sha256": "ae51a1bb3553742b6fd0142e435c9f811b84962cc5669d8622f02306045e065c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_1953a839f3004932.npz",
+      "sha256": "c3965d9d6ba5e60d299d2f12092cc5a90971f0566b5e8b53da33ce22b81b12fb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_19a1d572d8398f14.npz",
+      "sha256": "532a282a14da6a290087db1a32402582e4acc2107e6c8b6f7c468e63526a43c5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_1a5756b93329de3a.npz",
+      "sha256": "68052f666b881cb46a78d88a72ef9b304b20f0559b5e49fd54952d6f841bc280",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_1ac34694dcdd9f75.npz",
+      "sha256": "4ab1788662a2d9f8fe010ef02f8d2ef77edafd576ddc2d6b4f70c84ba798da4b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_1b549b158f52eb4d.npz",
+      "sha256": "5899486153d3de947e950b80a85049bbe4001c3bd9c2ae1defbf186d6fa20f5e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_1b616affcac5fbb2.npz",
+      "sha256": "5ded6bf54753c187a545ab9b536285dc82a918b60a14e399e0e9517989afe3e7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_1c1ab42f37363091.npz",
+      "sha256": "c7e9407375de5f4a88c96bf4ec736ebb3deecd248d34b8c67bcf168b43b43dbd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_1c2e33d4d201d012.npz",
+      "sha256": "c0d2b55d8eaa11b9f352c2f80d4057b0c36f933dd08333f2a629d6a1a414d748",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_1e41f1e47571a378.npz",
+      "sha256": "07cbda30d8673dd8d2de7da1d5f4c7e91050e17631ffb412b2dea01c5a254a71",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_1f13f64fda85193c.npz",
+      "sha256": "ed96d9e4bc201385f9727f3206e1298abec1f6c5834d95808688988a15c5422a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_1f4b5d27bb9631a4.npz",
+      "sha256": "9170512f620b01affaa214e140f8130beef4c81b3116b0bad4532e609cf738d7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_1f7920fa38cd92e3.npz",
+      "sha256": "ac305f69131bd6f9317930d57f152c3d4194ea946af26b03502301fbbcc83d5d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_208fc51e2fd1453f.npz",
+      "sha256": "9a0acfa9012c2bcf19dd545d6913a28c70f67982f16a8a8849c669e6e615ed26",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_20ef27dc1e25f42f.npz",
+      "sha256": "b0a2bb7ecbd421207350e30d2f88a3dbeb7a28a2094bd7cf581e6d69a1a96f95",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2143b8ba01dc8c59.npz",
+      "sha256": "9f4b72aecc615501b5a4829080b1c9dce5523a0d34eebd9294fd5a7f4e108945",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_21696a68244daa40.npz",
+      "sha256": "a67ad4b611a71e49306c0b0ee53f8185ea59e3a5a6f509ca2f6c8d0b9d3b9924",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_216ca3bf306d2224.npz",
+      "sha256": "30a7bd51be5a414fe677de28a0aa285723293a73197c0eb140169dc905bcd997",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_23204a1a8393f245.npz",
+      "sha256": "783e37be831b0fb392353d219d021c73fe946d124136f13d8661c722a80c9182",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2389ffd13f5822e7.npz",
+      "sha256": "751908b3944292038f915688210baf2e17b2dede7ea43dd3f23662d6665330ce",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2406b8b34521ba62.npz",
+      "sha256": "2a92eb916ca1379fc8ecec7c7977915548b0aff6bc747d2873554ce51509bcdc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_247bbdc408724d7e.npz",
+      "sha256": "1085c7b0a8d4d0360b9f6bd1e43ba429c170797fd367b9391adc59f54a30009a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_25bd427cb491db03.npz",
+      "sha256": "2d7657ead8f2b16bf66916c86fa7aeca80d359540a52c92fe75f5cf0f2ea57ac",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2629053a22d9f179.npz",
+      "sha256": "b40f16653d1d4a064069942bd61506b763e8c1ec48487c4e24e837bd6ed9fbd9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_263076d3719740c1.npz",
+      "sha256": "578a475ff9d6e0103372df27968fa702f018fa38a88d7fd6b4721292336d221f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_265d21a21a0d0520.npz",
+      "sha256": "30d09ed6159b2409c63c8f8b5ec90eb374ea0b417f13a0279d8f8ac61e6873f4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_26f7ff8e811049c0.npz",
+      "sha256": "9da928f3e7a2cf0ef816b59dc996012b8c93ea2d53d99b239ab80548c36d2923",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_27a1943c3e30ee15.npz",
+      "sha256": "394ed01820f91bf2d0c62392e37311e88a4f344c029ddfe21a98a76b8ef0c221",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_282df4b3ed5580c7.npz",
+      "sha256": "454976e511bca0530be44bb2fe7bd076162de6e9241ebdbbbfdff69db4b8468b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_28642f88c47da4c2.npz",
+      "sha256": "149f3884b58fd6e977c6f77b461e324c6e12bfb1945656bb9156029634b2a7f8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_289f43f54a56e2e8.npz",
+      "sha256": "acbdcc215a2257313bb1b3aea1b53969d051a002757cb837f003c803938ec42f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2933a8fb39308d52.npz",
+      "sha256": "c4a476016faca0ca983c4a6226676f1b8e49fece4eb7c27ce0b544f0aaba7404",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2a130f4606d6310c.npz",
+      "sha256": "d77195d9c131aee2ff9d954efed6bc5997217193ce5c6020b8165b6e2f2a15be",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2aaf53c18bbbbe1c.npz",
+      "sha256": "5a98b83e8b6206ed0bd361adabe116636ae3ab1afe614b7b071ff457fb392582",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2bea167a77660ccf.npz",
+      "sha256": "4cbc7c6f71d4973bbe5067db81369f82375d57fd8b39ab9fc844901387c79406",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2c80ffb0befe92d3.npz",
+      "sha256": "e847f1318c214b1e77ae48abf4086b2b7f2faafef2b284adf039917878da2cd5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2dddaa360ea5e0b7.npz",
+      "sha256": "5764d324c413f82a20d4d570962652e34bc4eb7196cad3772967ee057d64b228",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2e0d23a06be66b97.npz",
+      "sha256": "dbc5a869df5371a71db43a67590303f9672842d68d0b3886914cb4dd4998dbd2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2e75317f50e9963a.npz",
+      "sha256": "d3ee791d488f1ee27f95aff8099579d64304c50ac88c17689956b3ba04de5fde",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2f07c9f1efaf10ab.npz",
+      "sha256": "5175db82df2ba13b0ebc2cb1c1a5ee9b3380f3d8ac802663c57302b45fc85229",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_2fb4fdb88e2cf8a1.npz",
+      "sha256": "d19e5486adf9cc2f5ee3d8c0a89759f56452675978852a5b1807f1c4d213d009",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_318ca1fa563bf264.npz",
+      "sha256": "7036d803b7fdc1bf076fd5e0c302be5337c4c934391e081f0d8c7d2a10146a3d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3196d3e1c7830998.npz",
+      "sha256": "480cee021b82ebe6899ebc10041d5fbf75028420c3fb41ec9532a5b1217d0d81",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3213202e68366491.npz",
+      "sha256": "41f0a1dc084b37a320b829354231c30b4b4183267802e663a93ba522097b03c9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3238dd044fd28a6b.npz",
+      "sha256": "f579a82636524d8569989c71950370f5a7b39582f4bcf84717e8931a125d4296",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3348b1e2d8fbe520.npz",
+      "sha256": "c3aca15589960632fc0e8003b671f1cee14f498574c572bf768c6269fe8c4306",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_34d9c63dfc2435fa.npz",
+      "sha256": "669d9e76e5aa56441fc1711427c87b692b2baf0ddd2acbe92cd044561c2c1f25",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_34e423df7bc79cf1.npz",
+      "sha256": "64093747525c2084787c4b568163b3048a12cc5603c416c60796937921cc2f83",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3564174aafd6fae6.npz",
+      "sha256": "ca50b50bd452f7fd2b98deb0bd551b970ad3f33a7c10a45b4438f2520de8c536",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3626dfd55467709f.npz",
+      "sha256": "d0632d007b2d56f5f36226e06856e46a0e3af42147dcf3b262bd8f5841c0da05",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_36273b5d6d7aa1d9.npz",
+      "sha256": "3aeb0445dfcd985e9d8fa0602177cfe084b03824c2e68c5f8a276403a784ac5e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_36364cf50fc71630.npz",
+      "sha256": "aeefaf5530eb6830dd77f95bde0459fbf38d9e003e1752f8fe7299189c5c3871",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3716382c8eff999c.npz",
+      "sha256": "fa3e3a260d2a75123e9b8d71b531d78f7604c61365811c66b5264fe6a128c4e7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_372ee71e5dc5f736.npz",
+      "sha256": "fa26387b1afd596e131964524043e1a2e4fbd65d0f7b9b44ab37a3c637e669ef",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_386337c8bc28529e.npz",
+      "sha256": "6d4adddd5bbe7e5a4399d76d84f3546c2823c123c365f403dab33c2c31738e05",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_38ae1226c19f4e4d.npz",
+      "sha256": "7825f083e076899fdc53acf50f32f03eb7ed47a7a95e76a01d9cbe222e96f2da",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_398947b7d4492f88.npz",
+      "sha256": "11f08fa427a19576bc3aea09e1bdd4cb3cd49f1741a035e56d57b17549e69141",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3992c8e0d7c6e77f.npz",
+      "sha256": "5e94e1fa7bb2a955955dfa441ee3c5e9af0f073b41a5542d853807866ef297a2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3a737de9171d4ff9.npz",
+      "sha256": "fc4c2368b0d068121108da30e18bd94872e19fb8141239d2755b7acb7c1550eb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3ae4c4c5324c7978.npz",
+      "sha256": "d514f3635cfc68daac2a896b4de2292673e25d0129e8d85ed2c8d4392543c29b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3affd7f09cbfa7a7.npz",
+      "sha256": "8d9279500367c0464ceb5b3efcd350ba5d1b9267ef66d2bd2de30eee6af183b3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3b842286a1146192.npz",
+      "sha256": "7475e75166970867cdbb78d70850f7b0b4ac6264f4d4c56b00b6a05c1123baa4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3c46c0f9c9adc095.npz",
+      "sha256": "32af006c52752f0eb1cd277508eb6cec12adf92ebe36492eb002615783120dfe",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3c5deeb0a5a588a9.npz",
+      "sha256": "e7bf476d67e1d15ee4c61d4b9252355034459adced5c8f9eb3eddaef78ca5272",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3ccf6166cede9341.npz",
+      "sha256": "4b81e88849fceeaf14c6dd0a184780ef82b3a2e1db9029e3f3c14b2935c6fefb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3dd84e8e7770c983.npz",
+      "sha256": "5a735fe18b3702d5b5bddede4879f9c18b0911388895674dddfba5bb423a6823",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3ee70634769f38ef.npz",
+      "sha256": "931b5c2e54230a7e60d442c979f01d70b0eaa13f2a5f3f114434493835e6af3a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3f0d6f42e00616cf.npz",
+      "sha256": "3fa283c2d512bf32060b9b4987d62d9d6790867bce0adb4e18db9b0fcb9c0b80",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_3fd85853bd000037.npz",
+      "sha256": "16de6d9e3f8fbbbc15f52e65ae2a5085179938dc6467675c58a86d1589f1d7a9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4021d898a098ba8b.npz",
+      "sha256": "16f8ed8d8402e7f51a2db08751958ed5f29c52395c3743de9aca784d4ff1fd7f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_412f27e05598be38.npz",
+      "sha256": "eacf2bb4ed1f4325287f5fc46792df7ced779508c2a23488ed1ae79347f04754",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_413e45180eb8207d.npz",
+      "sha256": "7fd6d42152d09ffe469e4011c5f9a87711ebcbc119610e4f7a5bea9e8500dd76",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_41a762edad9f6e4d.npz",
+      "sha256": "0051c7b0ef769d45df53db2120c6e83ff8e06ecd90f2591cce806d922a6dc27e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_41aea6e4409e987b.npz",
+      "sha256": "89f9714d1146e05f5964edd7a1977621f86485caa5f1c2996240ea3f7ab1a9c5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4392b01bfa981bfe.npz",
+      "sha256": "a86b4b8e8391ba53191d9bb69246fbb6476477db097de1f24f600639931e66f4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_43b364fa3de261d0.npz",
+      "sha256": "bd0dffbc3e9add016147f8078e7e4e12a322562af37dac97a7ceb8f1ebcb5e1f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4404e32a81cbba02.npz",
+      "sha256": "3df8eeff837d9c1a7d76848aba78149c6caf091813bd6a878767512149e76100",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_445595c505280549.npz",
+      "sha256": "ba7925460fbebcf9e25e1f51f9283fb09b58073b3d77542418e0ea08482eac12",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4691d1c85a59bf8e.npz",
+      "sha256": "e72eef507b20a2cd0c4a5dc307e6dcae63e79dcbe0ba0bce1443871c7dabc0d2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4718b46e59f9dd66.npz",
+      "sha256": "fb5746e6959812b3397b5a94c466c38b2d0a68c35fc2d3f606663e826dfbb885",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_479e6d950a7f7725.npz",
+      "sha256": "a8c316158dcf7e8533066a8b6ba5bace2abfc6fe2b7bc792d9cdcec5d13e4d55",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_47d54e5ac7a0db6a.npz",
+      "sha256": "fa284333f2aa6437116f813f07e5146a980966356302c5e10139a19d3249f0c3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_486946731d57796d.npz",
+      "sha256": "fca15830f6702734eb41a5648768ef86980f0547c5fb6b7a2d2569a8ac0d71a1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_48ac590db46441a6.npz",
+      "sha256": "08b1863a6bce5a673688da3618e2800e122626216a2edda6930437885b4024f7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_48aefd01dc7663a1.npz",
+      "sha256": "1744c867e49b83ef51a42ccce359c85faea0ec200d0fdcb4364906da77988d6a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_48d890e968dd9005.npz",
+      "sha256": "c355ed3753361c6b06f9316c5e02262d2d09026974a0d3dcd083b01fba1928f9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_498ee8fba58ac27f.npz",
+      "sha256": "e353c9ee49b4b02d72a6624aeb66732685f8d546c7e033672798e9560b0aa124",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4a112a4f932bedf2.npz",
+      "sha256": "f41849d1b6addc3fcddcc22cb3ff1b600ebd498d500ba6fb6bacc02e5edd8b9c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4a69e603152a45c5.npz",
+      "sha256": "35ef217e1dbf72039ec9aa0ba9e62f150468278816b09b4c9c6c767c1d3caff8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4aa9f0d92d7caea4.npz",
+      "sha256": "584c3ab1ddd0a6d02e97e8f26e2977be48c45272cf2f88bbd0fb6893afbafe63",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4b21377564a4a0ea.npz",
+      "sha256": "86cd59a9bbbd036d0baf50ef03c319d7d3c1636993397133c0ce35f9fde38797",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4b648e0135497805.npz",
+      "sha256": "e5222cc17c31d98ca77600cf8d8a1d5852df2da56b7970d30f59844f39711600",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4bcf043c73eef6c8.npz",
+      "sha256": "ed56f69628e27f5ebe8dfd1bb30cc36d5ce18c5bf861c4157bc2fbd66d868b0f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4d3e0006b66aa52f.npz",
+      "sha256": "0b6154408aeafbf12380747a85bd1944b2e319ef84402173d4ed4ad877569cac",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4ddd3705dba09533.npz",
+      "sha256": "4e1c2ce198b2bf9c3db7315caddbc8a25d0a56f13b50d5f5c58c38fc5231f844",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_4e8c82c7e9601848.npz",
+      "sha256": "98f5b4dc15987486a90a0104febedf2fc2d00e9318b89da4738b117177d657c3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5258d9a1cb940684.npz",
+      "sha256": "8dd5fca065c4b839d96fc8f62d7d7c93da785301199c9ddc34e393d9359d9a9f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5294bc71f03c414e.npz",
+      "sha256": "258ff8e77b81e5809098301d01da7729a005e9ae8c445ac2553b3514f31898f3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_52d0374af899931d.npz",
+      "sha256": "c513afb5855717bd232c6cd807e5f87e3b8681263c3cb17286fde2418e50dec3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_53b076b25da931bd.npz",
+      "sha256": "1cc91efe4096552e91a4ca58b99e65282b35e18cab99f0aa2dab8f3ac13b6570",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_53d9fae8eba576fb.npz",
+      "sha256": "2852813b47b40a4603c8770e3124c16fd5a3555207b7c8662510cfa19b191ded",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_554b7bc409b0e7b4.npz",
+      "sha256": "626b939e8e83eb8a488a651399a355a6474c6f920639c146420626b4dd2290e4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_568f2a71209b2b04.npz",
+      "sha256": "2a51eeab05a7c64d4b974a8041bf14c790845f0370cfd7bb428570727c3f4597",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5732797e14af7229.npz",
+      "sha256": "5f6aa4b2c4e2ba3fb1ce64984df49af9928d0870e06aa0593e7f7a08035f864f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5760b9cd4e0f6122.npz",
+      "sha256": "33f706b9387604ea54f0289425ee600db908d10628cc09c4888e4a9f13ddc7ed",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5767afbdc83485b2.npz",
+      "sha256": "5994c5c88e8a9db548aef5fec1d431132ddf254a54f72c0bb4bd18db8a4174a8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_577e759101f29396.npz",
+      "sha256": "02ab7d1f1b4ff9f64a7209b635ed3399705e6be9db13f135498ba457bd1ee2db",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_588058ccf9cad960.npz",
+      "sha256": "3d0c72dc30152f6df74115a58d841ffd4d848b6af380ce6565b2e352d65d4077",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_588f6ec51970b3aa.npz",
+      "sha256": "b34642b4b0833ceaf3f3b6980389f10bb2c322d04376fa0668befa98c7abe264",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_598ad37ab100c492.npz",
+      "sha256": "7b426d5f5fbfe2d544bbb50d63bab094f476661e927385e88e850b3b854e020e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_59e70be78af21192.npz",
+      "sha256": "a93f150ffc359cfd743082cbe342b0e2314e34d6e1e01bb316ac5e97d02646d1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5b867d58bf4b6fd3.npz",
+      "sha256": "c6da197c34cdc6b0b682776273fd6f04ad27f978a433e6d401946c72c11c90b4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5c082ffa33e8161e.npz",
+      "sha256": "519cd905196e011146d6ff82cba59d22b309fd571ade904e05325260c556e041",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5c162f4c07e98107.npz",
+      "sha256": "ea3cbbcc41ccb20d9f519275fdc1af3dd11e29e1271437c0951f55c8bde2976b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5cb0114498367351.npz",
+      "sha256": "635a472928c4da2582345fbbe33d15814a18d260acbb21b8a2907b650894fa4c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5d5741f6c3d6199d.npz",
+      "sha256": "4ad80b464cb6e7cf0e8adf7c26f6f5c8afd9c9f7beb4171c7ba3b0b43b351f53",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5e0930907e56ac47.npz",
+      "sha256": "6102d0711766d542092ed35353e71026d8690a8b3abe2a0563910a7de03e3521",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5e652060d8c9e3d3.npz",
+      "sha256": "510cc19687e193b26713fcda076f4020256cbe216baa7af3f7437d6bad927691",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5eac39d2e2df8d9d.npz",
+      "sha256": "d35c425c61d8f96757020b356169a66648901677d4eb492b96cb55b7fcaf6a31",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5f3c7656b5328c22.npz",
+      "sha256": "72ec4861ef6698e706b274f10256ace4f5828f3911b71aec3662589b0e48729b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_5fc01f6bdbd4e152.npz",
+      "sha256": "24bd2c1997f77078c34889940eac9d6588071853e96d9f18a8efa01b150bba0a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_602aba4d0ef3fdf6.npz",
+      "sha256": "99a4c37739b6404cf993f968ca1f29f179ff20172390924290448667005eb82d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6043166dbf84c853.npz",
+      "sha256": "7797fe0a9181aa52d7d52786455076937a957fd2c2806f9e712b6f4192f42268",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_61d7bc85de364e53.npz",
+      "sha256": "fcc2e3efba7032e587e318eb45901ca6e897d024b67558f9585f08383553d3ad",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6256a184f733d42e.npz",
+      "sha256": "f2cf7d06ee28de3c38503d51162ab7f91bb48fe94cfb79294803491d764a48c1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6317cf5ccbedbc55.npz",
+      "sha256": "88180b81a1df8e9b7c78981e767dbd96fce1b20fedc50e0a0276573daa936935",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_63c461579625c4bb.npz",
+      "sha256": "bcb47f5f8a281a120435a93de5baad1cfa38732e9864802025179a43185af47f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_647a942bdd2888d9.npz",
+      "sha256": "d7784eb2656b6eb0ecbce6077ddf12b0d5915a95415f78ea16c63ed87127ec72",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_64e1eebc7deee730.npz",
+      "sha256": "cf41ad3f157db748b58dbc0b69b6ceee40d87196d6a729f3a772b3c8bdcc402a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_65a0c8c041cb333a.npz",
+      "sha256": "6ddd66e1f48a10f4aedc269810a81c8d4717cd0a24c6530663c00413ce9ad1c6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_660742162ba1f413.npz",
+      "sha256": "75ce033d9054d925610d60d8c4f3cd820d196b27bfef5919a07259467392dd4c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_66b86f2446ba60c7.npz",
+      "sha256": "31984a0d36e04b8ecf6a432b9e4791f713fb9f460e7fd7eb75abf4de72fd1ebf",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_673387e8362bfb5a.npz",
+      "sha256": "0a781684f91243c0bae79ec55ee07f0e2cfc81f58f4a074cefc84e24c1389c11",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_684fea0f1349834c.npz",
+      "sha256": "7c705d9a1d15ac8eb997587d3c4adf28049bc427bdb6c4014214d27578434c91",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6871aad53d79b7c8.npz",
+      "sha256": "07c07e9cbaaafc13c929e1bd0f710add4048efee5e44b5b89ea7f719e35e41dd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_68cd2f4171bd4032.npz",
+      "sha256": "6cb852e991709d0bf6cb9e6e068e23bb374023006994d4affdc6468f7c228b38",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_68ceeccbb67c4b7a.npz",
+      "sha256": "672eebec8e79aca7a4a8dfcdaf38d926952929c9dfb27d6e9406dda1e6e444e3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_68fbc0ada250d16f.npz",
+      "sha256": "774090c66fb28d6c080ebbda6a8d8fc1e1c52506c890ac0bdc9d0074f6aae09e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_694118f41ee429c8.npz",
+      "sha256": "b1a6ff772a792b0fbeb2a3ac7895e03b4709f1b7d578eaa8521d761269580688",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_698ee91dae77fedc.npz",
+      "sha256": "7f021ef0a44adee10704b3ac09d972282abecfbff4706a3db7cf9d0bb85625b1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_69a8d0c2918f9392.npz",
+      "sha256": "68154d0a8e6a57bff7d974ecdc713cea00ab6ac9292c26cd367a1d0cbd0ef960",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_69e3763cef6577b8.npz",
+      "sha256": "0314c9a7a185606ba1e77f495bc29066816338972cfd682533054274662ad7bc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6a5367b6b43f571c.npz",
+      "sha256": "5257fbb1e0cc076e57775c61047754107f95f82e503fd90aa7332ca93c719ec6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6a8bef30b4c4d636.npz",
+      "sha256": "0fdc338e1dd084977a43994f368bf5191f8855fefbb63dce62816813c6ceed3b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6b6305a7dbbbf2b0.npz",
+      "sha256": "6b69b820dcf7ef65070a784e7a14ba21c90d33bf76488b4b7f19ba84f9285d62",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6c4639e0645c425e.npz",
+      "sha256": "aeebbf2829e03d9ad347f2173f402c1d9e18eb6bdb4b0d8acd859cc291a6ec09",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6c85134c352245f0.npz",
+      "sha256": "3304f08699cfd247280531249bb593919ef7847b8e57464c0eec1a16752881b5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6d176069c031d169.npz",
+      "sha256": "2d91e148e586789764f8e1d6e048dcf30056ed6b0ab48a7ae38f244d47641e50",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6d6b62876be8a81e.npz",
+      "sha256": "0a0d41f8a18a961c5f8ad32b8c0b63ad0f1d6ba9bc13f6f7e90ff8ba38893a22",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6d8a3cb6237f37e3.npz",
+      "sha256": "e1fa9bf686c1956edc9f3a898b34fbe825c5d95f3e2d8bddd38228a4eb5360d5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6db69f391ae9bdf8.npz",
+      "sha256": "5dd965fbdff4ab0682b4e5819a07f6653f3bd70e2cb60d8f8fc05d0cc885429f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6e1a92d42e6a8de7.npz",
+      "sha256": "fbfb1c51065b448846435e30cf0086e8259f1eea55ed58a244d8c5d7954d6596",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6e91da2a41e0f725.npz",
+      "sha256": "7eca4f4e5d5b158c1cd42bedb5058e19fbe1c55bd6bc13b4be2a0b7c40ea5c32",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6eef8ddaa9b9699d.npz",
+      "sha256": "1eea560a5bc03eefcab9f7f47820df24f013ae6e6923620725fb6b2f7cd792eb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6f06d94fe6fdcb5e.npz",
+      "sha256": "9f1bc7f865d0a8394d5b8d83d5262c48e72a3ef00a81964b2a1f800eb983ef82",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6f5c5638d641abe2.npz",
+      "sha256": "9aa3820b37faca1e99bd1d729a2fadde9adc971871491dee7e2851ca2ea8f5c1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6f9997345d6cc670.npz",
+      "sha256": "e2d1c3d295eb6aa97f832713b39b9a94e4a51025b529c03c0bd69d76c17c1d8d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6fb7ccad60bbb3cd.npz",
+      "sha256": "1117d25d4d4147dc366f5148572e0dc3b42665269434c855897ebd9445cc3639",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_6ffafb30c72eb36e.npz",
+      "sha256": "06b5ffe7443364d678141b73884ab37c2fa5fd7c68ddf141bc602ae95743ad3a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_703eb009ffb48b2c.npz",
+      "sha256": "b86ff1dba034733719fe85714e1156acc650388954c2129878e022e964e979f3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_70fc3a7076c60be0.npz",
+      "sha256": "5c79ad0c4c0dca16235b47956f327590bf20462906ab0d95b94b225d4b1086ed",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_70feb6382f442713.npz",
+      "sha256": "50ba20f0f4963d66150f0820adea855f7f96938a8746160e760510604579c9f1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_71736686637cc9db.npz",
+      "sha256": "54cb54f7c65371ea4bf5a9c03f73b2dd17c5d5e3ab8311c2feb09f6193bc3837",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_71e1aa8f015c1590.npz",
+      "sha256": "500283ba54631e7d259b2020efa8e89ae0387e9bf21924430adbf341b5c1b346",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_720b01e740a79db7.npz",
+      "sha256": "3469b8763d9edd5cbd8d6611a0787fadff9625609176248f818b78d288557b38",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_729d27c0d051805d.npz",
+      "sha256": "8ba912531c82cf3bfef903e8f1c8e0fd781eed489fe81926b9c0bb75be77dfd6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7343c38bca302a54.npz",
+      "sha256": "11f32a164056c2a6ec7930be3755db2a958159d8af1b38ddc37a7900d1284724",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_745381a902a6f95b.npz",
+      "sha256": "7910b304e033221061665fb28b8b2acbb6e47b114517807c26665f50b1c5e7db",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_74af0363a03cfb2b.npz",
+      "sha256": "27f1f8e4328b900469299bbb64482bcfa99ddbd0affb0f4e7a18485a6eb91b5f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_74f77edd69c9731f.npz",
+      "sha256": "88baf49d51f2405f75d0309cccdca2ac77d33d8b135eee999691bc2d2000d85c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_75b159803a831219.npz",
+      "sha256": "b7963aa5365539b32cd6e63839b1fdbb9d2168c70fd085ddc5a89bb2df877255",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_760d885a6bd74495.npz",
+      "sha256": "0aff0f77ec520fe4a9ac7ea155c280e465d56afdecf08704ae27253dc89b9691",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_77ecfe5c934a755c.npz",
+      "sha256": "dd9534bc4bb8784dda1338f8d00fc5318a0e9fd7ed8401e6dbb8fd328355fe00",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_78559a410fc0a00e.npz",
+      "sha256": "2fce1da39787520eaeb4c81cc9e52351c44dcafead3bfa37dd026a54602620b5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7923afc244593704.npz",
+      "sha256": "1b0c2aed25408835c60955a761bec9a2fb18631beeb95949f39475f12eba843d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7947b7b345030ffa.npz",
+      "sha256": "b40938d5125d833d9bef1f302691563d335394f765c42f27dde424f79f8e79e5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_796a46896a9f9a44.npz",
+      "sha256": "5532e3e495871d7889598d9faa921c7e081636efbd0914493775edf890b9b458",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7a1903e163437176.npz",
+      "sha256": "d552c70c19c069849e0fa81352b51f5e5dd23750f28010aa670202d3e95b76fc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7a853185d4181aac.npz",
+      "sha256": "16e8cc9b57b744e9871232f32fe71e09763e8ffc8af3530722d210c8c9bc30ea",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7ad1f03f61725814.npz",
+      "sha256": "708d48e39bc09ebaff63e0cfc9d13090e3cb2547ebc05c9332559c14fcfec66d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7b58af316e7385e9.npz",
+      "sha256": "38b0ab987cacfc3db321442b4d1e0bff5e8f2e5cee62fb2d732c9264e1fa138a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7b8a6cae20fcbc07.npz",
+      "sha256": "cf2d9509d0408ea8ea702c301f96e068c689376b3bf51b7f86b71b568bb72df1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7be222fe3482f1e5.npz",
+      "sha256": "ab7f130d4efe4651e7106b83b0936b1e8ffab76bde48c7dc6573008c4b5482bc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7c713c77e28bb27c.npz",
+      "sha256": "c9fe567e7590b6c5b9b546df39ef9ffa1270ac08d5ad613a0dd9e49c2c25eeaa",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7d1d3c6abf2e872e.npz",
+      "sha256": "a893b5e8ad3c11dad6af0ae8dfad3bf8bfe83d9422d8a4cb412fcc58e4370f3a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7d9de85111288a2d.npz",
+      "sha256": "4c816ca9a1c03bacda0999c363f084daa1c1e38bdfc7aae40853a80fefa4f298",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7e6acde42a985b46.npz",
+      "sha256": "b5ab13ad29b626b656aa17f01e592d6b97f932a9596bca190af6926935f09a97",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7f6d0daef5224c3e.npz",
+      "sha256": "95ceb45fc8cd74c3e24d141039b947fa1e90a192563017f117cb7ae01b5657f9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_7f9b76b88c2cc643.npz",
+      "sha256": "afa40c916c6b9acd64c834aca14e5f5aaa5b214e421a34b86bf1ad7af548e4b4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_802b9419c61b0434.npz",
+      "sha256": "fdd4ec7372adec730dbbfa97d21ab8523726b970e1ed19a72284c81b32a40b46",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8032ad67df5f0910.npz",
+      "sha256": "3198bbf9be490cfb05e2aa51e9d3af6383c479b7c4ce17fc7f62165a443533e1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_822aeacd077a3c06.npz",
+      "sha256": "594750af92db0887758be6c4b9b17a2149d07e38e3dc01bba7175bfbaeebb60e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_82bc387662edcd97.npz",
+      "sha256": "291ff2e40bf68284c941819013561aad99885267ed5db6ca22c0722311968f69",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8343facc48f81c88.npz",
+      "sha256": "bd728c03d08b9dadd583f272a3f34a3d76ac312eeaada7338fa7c8c4d72a6ce9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_83d1a8d183711c19.npz",
+      "sha256": "8b47d5bc59831a81c7294937f001621b163b5b2e88a6c616ce486ad9c635dcc7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_844eac8219da6a3b.npz",
+      "sha256": "2fa4ac4c0982cd2f4e4eb864f67e11c6f38340df6f592d12281fe5f0e13489d2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_846a1ab60a2c2e85.npz",
+      "sha256": "c2f15905ff2566966d3f854b8b17f4b3f3c9dc9fb167899ece0135abb553867a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_85ce5e72c4431d50.npz",
+      "sha256": "5db977eaec10d18058b32e765e01d6be067db0a61c647a0a1a285230bed44cbc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_888b76e89475451c.npz",
+      "sha256": "9aeaa8606715415d8e2dcb22cdf3cec5f1b2fa47b06400b6e282345d1b45a362",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_88c76b10534ea6c5.npz",
+      "sha256": "ea7a38082435f68ab583e170a32fc43ad6c627760ed7cfc19165eb9aacdc7744",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_88c87ea09b342fb4.npz",
+      "sha256": "665def6d36ed93e2b7a717f451ff848bd9799fb696eb6b16dc4369d346713e83",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_89183961329e5314.npz",
+      "sha256": "3014dab879adf4faf7f5952e3718fa68b9ec95e115d9ebe387e4dc558f0a8312",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_89738776133a0c8d.npz",
+      "sha256": "d3e4ee089d05c832b91c3bbbb3b06a4482e6d84ad34bd00e5bf4255d1430bba6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_89831ecdf38d8494.npz",
+      "sha256": "97b33ae00a009f1008192782c9bb41a8727ce1617e6f1ccdfa08cbc7e71d216f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8a264918c82f6ab1.npz",
+      "sha256": "19abd5b9a85ebc0dd49e2818e81321a58fe0513692b2a15df12fc6aed8293b17",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8a39e12d66e3ab4a.npz",
+      "sha256": "ee4518289a7794aa8b3145e347b92557143f5e245af5890f2069f87d41def4fe",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8ca6f2b9fe04b47e.npz",
+      "sha256": "bbc1d351f239faa06c969df43f73c22190773069f4d45497919baf54e0e52871",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8cc64ca0232f46b5.npz",
+      "sha256": "97576b2e04085565a6566f92465ae026b0537785456263d3cc9d9e11e012a623",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8cdc0cee7e5e1105.npz",
+      "sha256": "d8ec3fe3f008dc43c89cdc1aa798d450cc5c8539355ebd0cec7629944ef70976",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8d1db5a5262c312d.npz",
+      "sha256": "19384e743ee4c7d2a1a2581bb203b1dbd49046a842992b85a78647e5eb2be5d0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8d86c438a3fa552e.npz",
+      "sha256": "49807e2a04bcd11740643f21aaaaebe3e150555dceeab3f8a21ab3b031858654",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8df0ea85ec0d0c5d.npz",
+      "sha256": "e12ddb3f5ec49efed0b23d5eea5b8b32c0661435ea54f9866e22bdd316fe98ba",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8e45d0ef76a0f00d.npz",
+      "sha256": "2f6391d2a8c9ffd15678cd580c43f6ad4af787dbd8f4513a477d6869ec2f77dc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8e79e0d63345992c.npz",
+      "sha256": "2427bc026b77458ee0f886ea7ab7bd4a38b50b0473357694c8bc286e58304b1c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8eacc1922c5837a9.npz",
+      "sha256": "f4a117881658856f962b8a2d3920c3aae5789ed1788353faeec13de8fa2f7e33",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8f8e9f037ec5b865.npz",
+      "sha256": "70f4c618e2a6fe3a0047920603d699dfd1dd75fb4e45ce931f06c74d228e1f8a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_8fae260b6b13ba88.npz",
+      "sha256": "71359daa576f095a4c35a22dfc449a14cb1b95bcfb327baabcd2a464033eba38",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_90bf3a3890dcce71.npz",
+      "sha256": "9524e2e7e24e824c6e3dbadadec10d8601169edd0acd2625cc450e0140ba272b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9112a006049d3cea.npz",
+      "sha256": "ef2d90b0ed7c7c0e90b2c15fb534a4bbe19f10aa609f95a448c684dbd12bcec3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_91ff035987e84faa.npz",
+      "sha256": "ef8dbc08eac104296da693caca443c7b96c0487ebc7f45ba196394d3f87bdf0b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9218f4287e572864.npz",
+      "sha256": "5d522bf8f4f677dea53a74ba8153c4ac7b109ce7c92c41a6a68561d0e01602d1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_922d4c70b9dcbbbd.npz",
+      "sha256": "49c76d51c64487e85c423cf5b9078a987a8b06f83ae8c51f2fb55b19699376f7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_925bee8aa2dde92f.npz",
+      "sha256": "df334535d436122c02bd870a823d8052a052a3f48adc5a2aa495466ef51d3835",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_926652ecc1de0ca6.npz",
+      "sha256": "6bfc1600da9a7d37f771abc91e968fa0edd1f26cb5ff996b6be8bb1a27606d12",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_94089e92ca515c61.npz",
+      "sha256": "7f3b30dba26b9212cb516c18f6a152d945d05380258ddeb2136ec9ae589aa682",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_944b2a72f37fd6b5.npz",
+      "sha256": "800bc0cccfb0f4dcd8c337de82a312a0faa1b4d13fcc1a68991c0d72d7b5ad82",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9495383413b89ede.npz",
+      "sha256": "f7714186388d6d238a6eb28647ec0e034b30c1736937350d0a888d09c3f5773b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9514522c4cf26cea.npz",
+      "sha256": "566e512b13d88d6483e3c20222cf00e93f1b4ef7c889fcb65ca192acb8b542b7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_95e78680148902e7.npz",
+      "sha256": "9ad75b36523dd40d214faec358d03762d631d530a99a3be8602147d453e2eac5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_96c78982c03db427.npz",
+      "sha256": "40b6d5e0df8132d6c92838da628428b75ef469d608447164e83403405ef216ab",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_976e553c4b973774.npz",
+      "sha256": "38bf86035df6dbabee0d342a5d0cf1a4984b99e55b4999af6beec95d2d43a9b1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_978ce86222432916.npz",
+      "sha256": "766bab05833d9ca637b8801665afbf0e8308d43b177c4bed112832013ba3f738",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_97e69693d420a907.npz",
+      "sha256": "f1383d6c2ea432fbd08c617d195dd29a03719b16162690d8b6c1462375fb9dd9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9867755476a815d0.npz",
+      "sha256": "34685616f7b2387fc318665a76f4e4c5eaeeb94034591f44535894da5020862a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_98ee4e2a2f778125.npz",
+      "sha256": "cce7cd133a0d833ed9667cc5000bf11e900a780a0f9ad7701e48769c01f1a8eb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_990444072ab868c8.npz",
+      "sha256": "9b42588412270576c422ac4766e88f6caa12e4c4ff7690b7a829da2c8bcba4ca",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_99183b49244f9a83.npz",
+      "sha256": "7dc0bff618e91fe89292db3db6ec4e5de8247c5521e2ada17534b40c88952ffa",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_99d87d49a56b33c1.npz",
+      "sha256": "f4d14fb9c0aa6fbb9da51791500713a92cdef6097e567f432ce0fd52c5d3c5b6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9a0bf655c548e45a.npz",
+      "sha256": "dd31c9050defd1792c416a37663cd96bf28ba3311ce7a94854bce00a9dde2771",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9bec6195d2cd859b.npz",
+      "sha256": "a98e7a526a77754e41d676739301454b0dbf4e8d6f5e5a90f57f48b504e19612",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9c1c243d14aa9150.npz",
+      "sha256": "10ca01db735d1d840629b33c229c78e01ac67c227a5a544bce175731671c5fa3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9c2781fb41d5363f.npz",
+      "sha256": "25a0343dab508a497f2085860a908b7f17bf3ff3dfe74393e72a206e319344ce",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9ccddaf20872907f.npz",
+      "sha256": "6140141cce37fe40d6160af1c618ef0da1326dcabcceafb3d2de6277b116de3f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9cfe39e7068db530.npz",
+      "sha256": "1dd5f4d982c8c192a0797a46cdd3c22c95d4a8445cc9bd036ceef1654a3efdd3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9e2bd93546a38954.npz",
+      "sha256": "e2dd439da46a87f8efa88eb9af48d40d80969ecb747954fe3d74311a7e68c7f0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9e5d0da5f456d2de.npz",
+      "sha256": "d1f41d159b12886c125acfd18e890a45e35b2ad6377ec750b1ebb4ec9960570a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9f4fb95593e9dda0.npz",
+      "sha256": "34452bf5d61d0c3005c582f6654e03d17689a03eea387eead2cf442943962433",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9f57a081c4f315ac.npz",
+      "sha256": "557653bbc2525ca224c1f6c06482ec2499b646c875c61ea29866062933432de0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_9fa8af6b18c4c6dc.npz",
+      "sha256": "95eec0ca24afe2f4a53e6f79205e06fbb964d2461bc24725cd7414bc785baef4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a0065c2ef6bd64bb.npz",
+      "sha256": "28374f8e96c781807fac4f65d952badce891b8847e75f07d9a1b946d3bf43205",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a0331d5a95c629fa.npz",
+      "sha256": "be14173458099da98c6ed3aa9e8cdd64fd18fb8173edcc83e79be73d464ceaa9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a03f879740dc1c70.npz",
+      "sha256": "76229384861a6769ebd0c1a13cb7210673fbb710a658b23cdb329419984a582d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a068e56c300931a9.npz",
+      "sha256": "91b7f11e4a9dd917d5d8e911b9d21cf1c98ec2653848a5c4a13f0c42ef09596d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a196acc99eaf7b39.npz",
+      "sha256": "a30b6b8812bd676d0761b81c8cae6672d2824a0a61b45bc1c1232fefe4b016da",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a210e8594d0ff5e0.npz",
+      "sha256": "e5fd8c4f3b89e11f58e2ddf404d3cace5ca4ac2247506057bf3853f85b4ce7f3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a23043fe131e5c90.npz",
+      "sha256": "a76595e72b42808410762eb93106ff24a06a6d46f57e281968be7c456cc24347",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a2a49cb3e4ceb91e.npz",
+      "sha256": "554a36217b2983fd7f541f1c9015d4fa2a85679a42b952f3e84209b234689e4d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a2ec04cea506fae2.npz",
+      "sha256": "556c9a2556c034b97579edcc7ca9cf7602715cdd5311a3557841edc6b5194677",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a3a549042c1f8feb.npz",
+      "sha256": "28031464dc2d26450e233aedd1f74ede665642584c3e063e50b3d4bf500bb03d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a3ad665daa823a62.npz",
+      "sha256": "d4a3d04e70e124dd86a1aff77bcec7d10703d2007979b6120f17ac9c78151bef",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a53c43371b0ec446.npz",
+      "sha256": "3ec8cd3083a005ff137bdefb43b2321195edee334e879a373ce6e108f311850a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a583448581e9fd9d.npz",
+      "sha256": "e4c256fcc107e5b7f1975ad02ee96613ca1f34ea11aff5b1d90bb53cfd50ad1a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a7aa8afa4cd9f08a.npz",
+      "sha256": "2eb78b6434d33b7ae4a515fec1a13d66ef459d0fd109371938c45847b80f8726",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a7e003fdb57fb68e.npz",
+      "sha256": "7ad8a8faf439a5b66a5297853e33d694f93fbb0ddf2aafc71cb1bf064ecc55c7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a85149cb3b5aa187.npz",
+      "sha256": "bea6d0d2a51093772aafd6d42483dac111aa136d20b42616a2991855a8a41193",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a85370cfe74a7707.npz",
+      "sha256": "1befb0b0c473441d7a3205f783649b4b00d6b9404d8fde71f51b6bee4cae4993",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a8673c2a357db646.npz",
+      "sha256": "c138c655f100688a776ee0a6bdd72b63618e56fb1718e753f6a609499af60678",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a8dbfe80fd92c750.npz",
+      "sha256": "7255022345e0c58ee136b20a75bdcc78771b946e0306608bd314c8e463978052",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_a9379374776b47ca.npz",
+      "sha256": "c7b79d0790d978f5b13e7a60c004978a4470ae5910fd7ae4912a5429e23cdad8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_aa3458ce353d6297.npz",
+      "sha256": "ebbdb462dfd363608461dafa67327d62c871a2d25921a6003a55e52fc7678741",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_aa3ade849c525d7d.npz",
+      "sha256": "99b3dd51a9968e16d6aadf738f2ca6b7083d816efd64d3435bc3a885700463b4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_aaa4e53b6e947e40.npz",
+      "sha256": "0491f4de248498c194d6db662e2504394918aaa4422376ac8ce6e9b1e8e2ac5e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ab3d91f577892693.npz",
+      "sha256": "a011e5414fbf8b05714d266f59efacd159aea84d798f2d854b61903cc9e2aec3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ab7242c3f8360d12.npz",
+      "sha256": "5c7d5c7fdd25b6ad45c61a6fcd6553e30190307587e176b44174b0486afcd67d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_acfd3f14129009b8.npz",
+      "sha256": "87cd787cf34b1e2157f1d8987729e66fd5519f63b9accdd1608c81d52a288f7f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ad767930b87cdb30.npz",
+      "sha256": "4fde2322f8b22bc2ec6566c7b0673781fb07cfa406820d95742fd799f3d6ca8a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_adeac02407d92697.npz",
+      "sha256": "3b2c383d8df130d0626c93ab01abaa900424d3f134beb456220d0ca31be368fd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ae771ee436aebf8a.npz",
+      "sha256": "50f1cc216acf5eb1661da902093f102e1f6ff9f2f581ad64856b845eabc09d63",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_aec3f799484e90d7.npz",
+      "sha256": "3dc125a175155dccd424094472b2039a7df3890a7f8b05fbaaeec98fa04de33a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_aed65a46673c09af.npz",
+      "sha256": "7501a77345e02f49d498e375065121ed57b74bf12c4d0694b0e17397f061a1d7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_af079cd34bc7a762.npz",
+      "sha256": "9fda4553323579667569fccb1a7897a0ed3e9bb4ea202b3209267f8541d26aec",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_afbc8950d7662535.npz",
+      "sha256": "e57259ab9240eda8fef6f3e58d1a8bbf3f51bffbe15f1ab4e760421f0ddda364",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b159c42a677176e2.npz",
+      "sha256": "0c8060758d71ba3d3b057a72114506f9f152196cfbeec804566d0e2a13106e4a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b1d1191644286da8.npz",
+      "sha256": "53b47fdd3596a37e93517cb53bc31799c97085bdb45f0f5d0e4324b187ef3648",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b2f3aa1bebb2e36c.npz",
+      "sha256": "445b533809250afe7e270183b9d5ab91d4036829d364dc8e6b3bdbe7b669fdab",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b32ed02e645e7b84.npz",
+      "sha256": "07fd543d58d09b2134a043085ac501a9953ec03a47d3ef3e277e0a3dbd4838c8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b38edcd529cea115.npz",
+      "sha256": "6621c9efe23d3e16abc7104537d13a7622426f85ccd3cbfcf1e283e03687b934",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b3b555538ed6a039.npz",
+      "sha256": "8fad25dbb46e337440ff36b0e37357dab39ae6d2c49f1c2138399e99082385d0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b419bf1fea870cab.npz",
+      "sha256": "cb87ee6e21f6d1e4f2e8748e2c0847aedb8e52ead97153f5b862beaa6f3ab09c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b4773d8d04b765f0.npz",
+      "sha256": "097331f27717e6a345c33b6cfcab7453f08320025c3568498b51b3a713af88da",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b499ac91887525c9.npz",
+      "sha256": "a8964dd136a8cd814286f10946841695a74160c6f2d8a1684a950f74d8c49497",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b4c930a83f5bdd6f.npz",
+      "sha256": "8ef3e628fcba1766207ba0453b9ec20c6847aad1e4f28cb1e1c1fca76b4dc624",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b4d7be2e640b853c.npz",
+      "sha256": "c2edcdd041d8a4339ec4941b483487c1b2fcc3b99543e361698b7d001907174b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b550e9accd6cc73a.npz",
+      "sha256": "b9ff638f10d6f7d41082002c615f6b505b0f1d7167b5c3ec4eb27dbfaf7d9062",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b5b650cf58f34fbc.npz",
+      "sha256": "3080da6774c4d04a101e9fc63d54f33942f547da28ba505a563860d6a8ca7ee6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b5f5328c96685d9e.npz",
+      "sha256": "921252e8d36fab263cb43c2e172a1e22610e9abfe23cc76d901a59eaedeb9de6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b5f5e4aba5a7ad6a.npz",
+      "sha256": "eea3e4139f0b13fe0d9d80a1c33661089bc0cf9ec6e0a119fbaf9c45dcb198c9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b6113afb6541c19f.npz",
+      "sha256": "03b22b9003646b65c48ade71b7874cf361f989f961d580a906d3f5e40d69c3a6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b6781e210477eadc.npz",
+      "sha256": "850057a2b845dca19f83db56f7a2251f2af3c89d329d3b09f31cb0d655a52710",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b68735d88465b290.npz",
+      "sha256": "b9eec640d5c910291f7252d9f6d987dfaf00a60f16b863d8b1e657190a2f0ac8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b6f077f061638ba8.npz",
+      "sha256": "e36776e7e3fe880dd9b46474b840874c9e5ab68b815dca32545d8df373d41231",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b7a6ef823dbd8ace.npz",
+      "sha256": "78a5c988853bec42819e8c9d6019ece0e73b88cdf6e4b76474d4df9e70154d36",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b7b5a254ced7f7a8.npz",
+      "sha256": "f492875e36e489ce20ab208efad1cf8791bf12646bca3970f281f1f9a8814b9b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b7dbb40a7195cedf.npz",
+      "sha256": "823500d6e9e5b94a272f03de68e052a203031c0ca832087e362a42c45d1cf742",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b8334fca3d1e791f.npz",
+      "sha256": "f28f0c4e12883677007851596b039ac2bc814d3a6c9bd5205febcef73e470eec",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_b9dd0d786904ff7d.npz",
+      "sha256": "c3b60bea304c767da8382f998faffc20354182cfe258340d34a0e99a82357dae",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ba7dca38d31a322d.npz",
+      "sha256": "bfeb24195c6becd94495f440763ae9cf7d80b586196304cfa1efac15d2d944cb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ba8b18f16ff95e59.npz",
+      "sha256": "1fa687a1ea50958442c50ba8465fa34d444ed9730d4799acd5ada1661d7160be",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_bc146bb9ffe1704a.npz",
+      "sha256": "6079c69d436ea799843830e6c2f0a42b0074a2a172695f36e045399f0839a376",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_bc7e682cdfe31a68.npz",
+      "sha256": "8f146c7cacdd56a744070a815152169ac29379987d6c1ae94f9010bdccb6ab55",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_bca553595dac7a85.npz",
+      "sha256": "6aa9f76b85e9e31a9937ff7209490230e56ddd4af4db466b97aa72ea6b30fc32",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_bdb1e7cdec27e0f6.npz",
+      "sha256": "63ffc52d3820725f0e53bfa7c697f09380f594d70d80db61737710cfcd04e43a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_bdc109c94092f6f8.npz",
+      "sha256": "e165ac8a2a8d57dabffaeb06b81c1bb032bf476508ab64ccc10e6831675a0948",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_be3d08bc91c794ad.npz",
+      "sha256": "334cae85a028cd6a55cfde6623634c5ad63971b4654a52f2628971d3c7913fc4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_be6c22cf08181834.npz",
+      "sha256": "1efc8e5e5599f1aa40d8b45c70cbce2af6c171089adecd244d72a5a2173c333f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_bf61df42bde5cef8.npz",
+      "sha256": "89bbc8363b2e6f25bebda558b058482fbc61ab26ce4ff2234cbab599556fdbb4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_bffa1bd76f1d9669.npz",
+      "sha256": "2b30d485f85816cee38d23124a2852c90fef0b73c0dea5c155d11f62ba7125e2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c07d5a7a586026ec.npz",
+      "sha256": "af619f4f14e28c760848882dad8e6de7c976cf3057a9549486de971eb15f2bf1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c0d247914da899fa.npz",
+      "sha256": "7f6881ca34d10f4635e794d2249c7f9e0d0b48279e93ce7b34ae18316b63aaed",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c0dca94ba25d47f2.npz",
+      "sha256": "1d759dd86f5225d630e4c99813e2038d97a088b8c468ba267e810ba9305d25c4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c0f0d7902fb0f57a.npz",
+      "sha256": "4cf737f5b7fcc9c8e061b61dbda8ae1190c9e4015a004117c188a611f70d90c4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c0f8759818c1bef3.npz",
+      "sha256": "a7d0c781aaaaa30995d60f91487a89ac3705ce2c7eed7e9fcf0a09167314c4b3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c204fa4c1efd993b.npz",
+      "sha256": "4bca01a31f81e96bf0239d5a13e4848a6e812373d90bb801e2b39f185a09a8e1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c211b27140c040c8.npz",
+      "sha256": "7864d6aeb99478a6cf3416d2dd6e88025f9b13d698a0f4091411b864fa002772",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c25124642671fcfe.npz",
+      "sha256": "4f7e0f70ece5e24052497f5eba13c2599b2a0597f756609b43c1f5f9bfe32aea",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c293658c90b22fec.npz",
+      "sha256": "37dc7eaab41e6ab0a6e3a4a2e590483d7de963ebba56188662da808aad84b662",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c2b8b65fe5be9dad.npz",
+      "sha256": "355242c6c67f8b7b430edce5dbb446f7cccf8d3f70958770c87ae2c982e0efeb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c33f3b908e8a2e40.npz",
+      "sha256": "30aa617912cbed77d26be9c4234fe04769e7b42461c835090da17c5875080547",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c409207b8893fe60.npz",
+      "sha256": "0b0168298298153ced515e76118ecd2e793f21291ba8fb7aa6381ce9355c0b01",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c4de055aec77a7e2.npz",
+      "sha256": "d84ee640f311c5f71a48f2559082ecd03b9537aa44c23e34c0338d6bcdf4cd89",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c5131bd03b85142d.npz",
+      "sha256": "7f705207f8b7abdd8bacd9ed927043d888fa0804eb7b0acd03233399a5c13f15",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c65bfc2ee09ef6ca.npz",
+      "sha256": "71288cd331ce3e726f13ac070637ef42138c59252fe49f3f68e4e7cf8fb2b752",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c65e52b1373ec5ef.npz",
+      "sha256": "dc47ef46b042b73ae2265bfeeb95de0c1509d742195d63b3c7e664a4c4fe5858",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c69eaf14e55f425e.npz",
+      "sha256": "78d09f85bc1d629bc80234e8f03cd4ed66ac9f623ddc4715ec9610bf3fc0dab5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c71525b85fb595db.npz",
+      "sha256": "c6bcdd43a7618ff987198a04bef3bb657700f88421d0b25f2c2cfb5627691d45",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c71c6c06d6facafa.npz",
+      "sha256": "40b5ce400ea4aeb21ff0cf8d2e54a281eb6e23681c1333eb44322c8673d4ed34",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c760ab347d080d34.npz",
+      "sha256": "1b133d4ee5cc860125269e3aa017c3b538d7fd75e383b16782f191d365a28baf",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c810aee34bea06a4.npz",
+      "sha256": "a67de76d72025b8f1e39ff4e6ae97983c040d7a1830dc58701b72455edff2df3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c8fb81edc9a33532.npz",
+      "sha256": "7e5ab871b74acb4ecdf2e9119eada3002d5596878ea5acbfa39af1322f46d05b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c9af0944aea8c16a.npz",
+      "sha256": "6fd60be87ce7c726314b017b928e4c4a6312299446fb2238cd85c7586a3896c7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_c9c61e8e3e9e537c.npz",
+      "sha256": "023d64042da8cf2ea2837181698c39ef039a3b4a5d12de6ed3af373c3b3c3e23",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ca7d840451f50790.npz",
+      "sha256": "9b174061b8c219735387ac2d643a022aa7047451f034d67ceeabb0b649f706e6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_cab8010baa93f5a9.npz",
+      "sha256": "7c808ea853ed63c78e09a93b96e5dd9b8019c2a081a32ac15144a2c2f425efa3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_cb66a9c9bc8b31e1.npz",
+      "sha256": "f7d4ba61d3be00f9f7db62af3533cec482f3fbadf406e41515098b05f6418f5e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_cb76814ebb721370.npz",
+      "sha256": "c3437aac237905ef80efa8051f80e53382aadaebbf80cff4d1b5130efd4c4789",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_cbf1ae19d1dd1c28.npz",
+      "sha256": "8a724be524e5e167381a1a6500eeae2e8fbef3aeab7dc0c0d36164598f7cde78",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_cc3af014fc05e971.npz",
+      "sha256": "255cd43bffa50b8eaf5170e19a2886a759a8944b566891c065eb7003af71cb5f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ccbe291b0f6a0577.npz",
+      "sha256": "470d95cfa871e32b89e499335535b54ae221b16104dc71a818b45b4e24793676",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_cd514a0521fd5529.npz",
+      "sha256": "36e9970c90473fe43e4bfe24b7061c7ca33c3616e01b7d0aa13e0aeafcbfca57",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_cdef9105daf07b40.npz",
+      "sha256": "9228d1a6ea434689f768c0b681a7a5abf1f27ca951018af74150915dc470de22",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ce251edbb964cf55.npz",
+      "sha256": "bc44c55aef8aab41a8084990c07353da4ba9984328110f660f25d3dd2fb69b0b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ced2de46ea5e91eb.npz",
+      "sha256": "cd5de669861ce9108b8aa445cf13b5062969bfe1c12d7189e2eef9dcc5eb02c0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_cf071193c41dc7eb.npz",
+      "sha256": "7c090aedf462a925c1e385677a1380543789a92d68ab899a97655ba6e007f75b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_cfb030a55ca4fb18.npz",
+      "sha256": "fbf5971597466a52f5822c267e990e40b64203e44f04003349f98304b11a7671",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_cfcac6bb0c72997a.npz",
+      "sha256": "0f43d0ef2184f5f44372f9b9c328225b57a6f04aec2d38cbacdeab2a7687c6e5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d02b17f5d6797d69.npz",
+      "sha256": "2bd88c4be0417fe409828f990935c6e711820d30a7450876ca3587a9236ec5f8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d06aa29239e25c16.npz",
+      "sha256": "f055533d4ae6f8a224978eeb8c1341ff5bf1ab0df0b98ba5705a16223cc0b9e7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d0bd40bb01e95ac7.npz",
+      "sha256": "c64282890587be6d7cd6419142529344def931b5a22c178e34b27e3a5f130a23",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d0f01f74cc77623b.npz",
+      "sha256": "710be23639876bd843c749837067e2270581e59954c0d68d10e6ad09d0378f2d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d11eff44ec02d05d.npz",
+      "sha256": "e2a2fafd51e1024158760cef99c8086dbd5e74c61182831fbba5fe239d7898a6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d172f5abdd9b52d0.npz",
+      "sha256": "24df4f0ae8f997febb83b62e80557effb5aef0d0d1b968906ceef4c6960db821",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d177464b67a39107.npz",
+      "sha256": "d9584d7051649403a7d5f3f45f9fa93377c1119b242f578339cbd2032064d528",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d2557e15c5419fd7.npz",
+      "sha256": "79fbfbcf7fe488c7ec855029b267536771e62bfeffb31290f578ce04b08a07ae",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d2c5e1201c38f619.npz",
+      "sha256": "719851902800ba3fa926572ab4278ac3968b3cf34da11f3ef881df9799523f51",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d2e21069a6953d3c.npz",
+      "sha256": "c1d27dc21456773025fbaa8b8a596ca651bb6f0b718a8ea8e1b55f3f45f91002",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d350f659c2ccff8f.npz",
+      "sha256": "539226d68e41f7b794e31011961f9c531241b9a66269c259cb843191226238ca",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d354256d3004b2e6.npz",
+      "sha256": "d38f297e39a18a10f18904e52ee73d7f2bae26cfc06aebebc84c9466b702009b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d5bae19cbec9070b.npz",
+      "sha256": "ad36bdde85cc9e03a85390947ce86530468922c637ab6d76917fdb48f7605a8a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d5e9dfbd08a8f78b.npz",
+      "sha256": "4b7f1b903a5e76f5ffd79adc49600c2bc778186a523cf90e5c0c6be7cd02c622",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d61c3f46056254c1.npz",
+      "sha256": "4cf971b2375ce8c41d11c6e3fb7db10abd28da0d467c65e461a1e760d5e02864",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d622e723a3b14522.npz",
+      "sha256": "66a7e3fe26d9d0038ae19b0a8c4e1bb5ae3bc48b58a297e09043a625709aa009",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d69f7ada1273f4db.npz",
+      "sha256": "9e6b9449cd3c5be74a0e1a9b88da30f06385ac0a51eb76879ab4cf23bb8ef715",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d6b6968a43b94a68.npz",
+      "sha256": "b0bff5e9c632433e11c36a780ee40ac232a82a06951993c674cb38b93ae7553a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d6cddfaaf0f489d4.npz",
+      "sha256": "289953378d50f4dc6db12abbe6957e6f0739142587b8339612cfe36a87134c4e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d6f8c65aac78ac7d.npz",
+      "sha256": "44326466545520ee2f95c867caa94163aa5dc9b2646a5a743d5253a987d8cd31",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d71d005d7242937c.npz",
+      "sha256": "1f4109acc70ab276f782df92d88e136730e73164f4b14f548da682bb12d441e4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d76067df08a90743.npz",
+      "sha256": "b79182d1196f4e768500918ed21972f213fe4092db234ed306ada18e8fcf5727",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d78c7cead62616d3.npz",
+      "sha256": "2d815f7c9a484165806d5562aa887775b95f2c6a9e73c4c9cba9e3d723dae8e6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d809920858737fb2.npz",
+      "sha256": "4aacdf3a5865b55baea321c448637bb0fb6648ea27193e0506b361d14a2d631e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d80c588327ebe7d2.npz",
+      "sha256": "d8472c48913f923a4b2df1093f5f8824932fd8872a1d19b43b68cc505cb9ddda",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d92547e054b2f6fa.npz",
+      "sha256": "dfb6ce5a15babdeb2c4d4ecf517e5d7b7212a6954aad2dc86166652da2aef006",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d9684044e4f3f809.npz",
+      "sha256": "38c537b555b70c80985619d547cbd9e7bcaee5179dae8d9c048ddcb5e37f06e9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_d9bf6b6baf1452a5.npz",
+      "sha256": "bfbfb31d3b9957b3671864b2d9d401b527807ea45bbd4682aaa3ce2a94a0af06",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_db920c6da76f778e.npz",
+      "sha256": "7ad209fad632d0ea574cfccf492438473214cf481dc28d93b580cd943fa2f943",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_dbca538e8dbd0a33.npz",
+      "sha256": "e83d0dd98ec66096d47394bc096105e2e7b5d93d4ee807a120285aab159575a6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_dc463f7f25dd3240.npz",
+      "sha256": "7f8c56874a057bc6349245a40c97153637fa0d3fbc5f15b54a26498647000d69",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_dc853ae5a9da0432.npz",
+      "sha256": "2843908f6b6dc7e6472b1e801c693f44f04a3c88f9fccb09134781e5f2454780",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_dd9bdffbc6ba8ca8.npz",
+      "sha256": "8e28fdc5db8e889c2ca1b7a571ffddf8ce9efb1f51c9cd8c1c1f8cb812116950",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_dddc4a593e744c46.npz",
+      "sha256": "7e080a916e8afd70f43247140d9c2aaa70e96d70ca7354d8c48d35e5fc267ca2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_dde55fbee3b53b99.npz",
+      "sha256": "bebd8d98e7ce90bb5d130a8f03eb3220ade460d98eb3f830b4221b61c6affcfa",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_de8bb407048eac35.npz",
+      "sha256": "91539e3888c9f908871e0285c388706030b5399dd32533d3e893972fdc41a1f3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_df1d074ec14f6d4a.npz",
+      "sha256": "25f8f2eafb5d4c0973ff688e4f06b16bbaf81de87c63e5ecc4d4faa4b14978f1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_df672ac9d6d0eb2f.npz",
+      "sha256": "4b8ede960faed1d7b1b184fbf1d7abd319994eb69408cde3afaa20a21ecba096",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e136c2399e6917a4.npz",
+      "sha256": "0c0992f11094d62d4baea282e32c7afe01b0bcd14a846f6a7c282371c3604155",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e18c2b34eef4fc03.npz",
+      "sha256": "d035f042babc223d90bb1d6bb68a169ba359b115ba4e09020862970b63c7e9e6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e1e2af3c55d00423.npz",
+      "sha256": "6cbd94a94e277a086f73ba18c0db4c51dfc0c97172ff871ea867a915db2fc27e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e27425ed8b5e2a1c.npz",
+      "sha256": "59e56be3a939b1e52085705f7ed11caa239e7566cf41c65d3cd55343bed676ca",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e2df6baf79b4b9e7.npz",
+      "sha256": "1e3c5ef86f0daf4c2fb355e0fad21644c13a82f1a225c97ee3e701505e3560e7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e301853a7a9d6615.npz",
+      "sha256": "91e7e82ead7eda896ffb46e3703de9085a0bef907879f9a4d8b05c34d9a76697",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e3ef56f0d18e016a.npz",
+      "sha256": "ec2bd556d6b964bb4322aefae12f5f58e1d42ca8e876e532720bdf61718b9661",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e446bca9f38f9771.npz",
+      "sha256": "363aa030f86d08edb0f6f9d8c41f279cebadf506fef3721b3f4c6bcb9c802f00",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e449ae1968d9e8f1.npz",
+      "sha256": "038b6b7edc7f55930cd748cba07eee6e62054106d5bc9f0ad353dbc69792f194",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e4a90fd72cadf453.npz",
+      "sha256": "c441f234c60fb9ccfe33e4b8395d8421fddf16f1434f7dc145033f1e5d70e0d0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e4cdb48977e0b69e.npz",
+      "sha256": "41da692969f08d683f253e29a0bb34fd6fc466304345dbaaf8d3eafb923baf81",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e4dd168a8e91c376.npz",
+      "sha256": "acff036c9ebd395b1100c6e09e0a09f7bb1ea23bb8aa818abd771227cadd75e0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e4e581de345802b6.npz",
+      "sha256": "028ba3ba1bb417ca28ac425561109aee58398e4f7a9f10060f3b73ae56611561",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e50323e00d885802.npz",
+      "sha256": "38252bde48d5b016872da3055378d050e56bed5475a95c36a33bf03794201bcc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e6e69cce3e97dffc.npz",
+      "sha256": "448bc30df2f63394492fc8317b9f7f89c0a175a82515a11c95a31a5087018538",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e74276fd8b023a44.npz",
+      "sha256": "eba9801610ae5e87bb49bf6d00a3199601e4658c6e4b3fe1688dd716ad8bea12",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e7c79acfd7cca14b.npz",
+      "sha256": "a756c9e883c23cb3a49cb0c8ab955579c8b5bb1c85c3cb01fd28eda303d80998",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e7f08a350525e052.npz",
+      "sha256": "b972e285766135b6da23eea3f09503f149e11b77490c3731739789a77b8d515a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_e8122df825d33cc3.npz",
+      "sha256": "6071841fa3e84268dc7b203768fc8a0612a1f3db8acb0e5c27727cf0fad151fb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ea9e12471e7a654c.npz",
+      "sha256": "f5223c399db8fd556bca6bbdc85dc511c247af92191d9d6325b2f6a6537710b0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_eb4b0b128bbffe69.npz",
+      "sha256": "471dce763f245adeefe32f4c64190ec559930db3f1a97de3ef659d52bf571652",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_eb4fda7788539338.npz",
+      "sha256": "cf19f39482bc4ce735dc5013dc4a509b93a20bd24c54794ef3cefd7233f03a05",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ebcd1cc069ca4d2c.npz",
+      "sha256": "03cf972d108a7425e72fdea50b7cb082c9e70ef241fdcf76615b097c101f7362",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ebd03225646dc1bb.npz",
+      "sha256": "724681773b18b2452be9bfb191c6c973be7370b2cfb7f2d1f8bb05b678c5942d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ec49d5543af8f4ef.npz",
+      "sha256": "e05ad9ada177c4738b29c427bbf26b819e814dc5370eecfe8a7b74534fb3c605",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ed05b4bf5dc3cf85.npz",
+      "sha256": "55f9939d1fd91ad606fe4bee297eb68178d670abf935b8411e1a1278f967ddb4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_edb30b70ff9108d7.npz",
+      "sha256": "9934c2966e0a1ad064c69f139faf7373eec68095ac7cc9fb39700ccdea48bfad",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_edfe386e94509b03.npz",
+      "sha256": "d8990713ff7846c1ff3ab288a0cede9d7f133d7f5e8fc20c6389484da134cf92",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ee94935c574d73cf.npz",
+      "sha256": "ca86e53f85cff64c1176181b24f9bc0ce77afb2883475538cc3ecb9f5884822b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_eeb458176fcc1723.npz",
+      "sha256": "c6edafce991eace5535936a9b6fa1c8ce29f3c6131c59a02b336ef84487c6f86",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ef7daa1327a2abfe.npz",
+      "sha256": "c0bda2222ad59e92db4fb1ce024c12ee414c5b2be9f6511c6c75834202469d23",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ef863c5c233b50d6.npz",
+      "sha256": "ea61be88e8e892aa493b90810ec38dde6a120aeaace0a6a8150130d04d5bbf1b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f0003ad3ad3e5793.npz",
+      "sha256": "57e8ebf6bc04caf8c14c876a7293960e4640ea54d266defbabbf28e42646a952",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f0c5f9c8e66a9199.npz",
+      "sha256": "86fe887a9ce75a88f5d58c6bcaaf04d83a85946d163fc35f7152054a9815c8d6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f1e198a10b49095e.npz",
+      "sha256": "2052801ac10812218e0f3cfa57bb4a2c91b0c243d29afb5d703df52f0741293b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f1ed6f75f0f0fe55.npz",
+      "sha256": "6f66e0ba53c3d84e05e5c85f8c0b1360a9d12ca361c297c2f012cc871d1fb23c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f26d3a7c46cb9a68.npz",
+      "sha256": "bc95e7de8523283e67d48c4d90ded7f91c1d5b83dd9d4f104316191d62d5acca",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f33ee751922869ff.npz",
+      "sha256": "f79a1d246f152a090cf6d466b2ada048ea3bb8f68a44482f4cbb294069338e00",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f361208e05365619.npz",
+      "sha256": "54cb0081d102721e62dde1e305cc622b534ae76fa48d9dc39a3210713a4e3edf",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f3f1cc36fa77d8e2.npz",
+      "sha256": "a821f20cba2fd38c42707f83eeeaa07016f65240ab29ab8b35ff8625bafbaa6f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f470f38492a3e9ef.npz",
+      "sha256": "63ca8bb4e85ef8d9881d3d14249815f7024cb74c8664eff5b9c4c173f9f2a81f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f481b5883c9fe6d0.npz",
+      "sha256": "b135771df576395001752ed1a68e7509ed3c2129770b0dd4a484240f0b0d3cb6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f5b701e2a0a26016.npz",
+      "sha256": "7b9cdf7b3c689b37df4fee6af7bd7a4ae07e7d7dc0a46e8f102cacb1accb5fef",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f5dbe33f3af9fdfd.npz",
+      "sha256": "4e14937b769ed49cbfcd63933bd07853eb712d40a64f381a0b7912988b2dd9a9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f73474850e6418df.npz",
+      "sha256": "3939308ff504ede2a4ea0444afcb4aecdcf984fd17c3afd467923272417d4163",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f850348e16f9c974.npz",
+      "sha256": "f4df9f6bf1630e37eb7b0b9d6960a6485db408c70b47ac57ef3133e5465dfc2c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f94e8dbf7d9a0381.npz",
+      "sha256": "4e744ba2f6622b0373372c08fffffef994088194bfabdc499296982d79670934",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f964ef8d4189bfcc.npz",
+      "sha256": "d9f474c0246171089ad9ebbd17065e722af8af1dbb746b00e0bd6741e63b1db3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f98ba37d4499f533.npz",
+      "sha256": "fcbd734aa74e6f8aacd766ad9ff26e1dcee14cd37835ca4249f314ab9145ef73",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_f9950f30f2eaade8.npz",
+      "sha256": "dfa728650439613884803abc92cdb828573c1be5911e724d5f4ae0c33d34d031",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_fa3b439797417b02.npz",
+      "sha256": "cb2aa0861edabce171f36f3aacd1991f5729f916084d09aadd792681e6afe9e4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_fa8a2972ed05b196.npz",
+      "sha256": "f41fbbec7c55a31974c50d15a38fb7149c037c1739ba8f2855c11865e631bdaa",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_faa1c550966190d8.npz",
+      "sha256": "a4623b0a2643a141bc0c1d7b71c3cfcad5d53c653e4a5b2401b7e521d1fcdef9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_fae641863bb13060.npz",
+      "sha256": "d9e9db7507f52017aa6e0c7bcfa86d1cb63973abe0445e5b4d526907a5fb648e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_fb22eb1548a8bad4.npz",
+      "sha256": "4c50642d95159301c7dc8793d025751a0461eabb99fc179e35283d76d219243c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_fb3cc893a6061948.npz",
+      "sha256": "df0662f49fa3799e71899e7c0bc3de32bc660878c5bfc47f9dee2d8fb9a94cc0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_fcf9f2fbf9da47a8.npz",
+      "sha256": "2b292466f61cd6ea25b9f482241b74feca0dde1cd02a98494dfea751eb2f3bb5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_fe2bf13935c1cc11.npz",
+      "sha256": "dabece4f5a80d62b775e987a60afb2c93705446d416cd89599008db818d2bd79",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ff1b72758ad9f19e.npz",
+      "sha256": "374cf6b945abd89ba17cd2467a0c663365f35f994cc6391b53792e8ae3212966",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_inductance_change_recommendation.assets/waveforms/cfg_ffd92a560f2c08ef.npz",
+      "sha256": "5de87773d50c74f39375f95581ea0ee4bf49c43e16b0071fd7f904aadb1f9ac2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    }
+  ],
+  "semantic_result_sha256": "dfdfe21f7b9b0fa1f4129fd57569fbfec51e2f81304eb022b6543c27f3ade203"
+}

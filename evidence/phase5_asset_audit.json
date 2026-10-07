@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "primary_sources_preserved": [
+    {
+      "path": "clarifications.txt",
+      "bytes": 8841,
+      "sha256": "560bf7d304d141dec6bd9a42cf8794645e5acf6227363fe235bf07288056cbda",
+      "preservation": "PASS"
+    },
+    {
+      "path": "questions.txt",
+      "bytes": 15730,
+      "sha256": "31bd1a8a1e390163336be601e88a55cd88d0a6218c49ee46edee882da1af0f92",
+      "preservation": "PASS"
+    },
+    {
+      "path": "briefing.txt",
+      "bytes": 24434,
+      "sha256": "909488e111dc7e18993e53492893cfde5be4dd2579b1f597683f0abf3e79c6e6",
+      "preservation": "PASS"
+    },
+    {
+      "path": "HV IG Problem Statement.pdf",
+      "bytes": 171908,
+      "sha256": "9ab169fbda5eb612a7ff9ccfbadca8e85f5b49c2257c23388945d4e7c5532e93",
+      "preservation": "PASS"
+    },
+    {
+      "path": "Parameter values ivg.docx",
+      "bytes": 13045,
+      "sha256": "e5a1a3b523b93550687c3a077897b0e234de5ed55254546efd1a7c6d706f5608",
+      "preservation": "PASS"
+    },
+    {
+      "path": "PowerNext_Track1_PRD.docx",
+      "bytes": 43359,
+      "sha256": "d597f15f4857bee1608b8028417a661c86e661de556f90f315a771eeb71b342e",
+      "preservation": "PASS"
+    },
+    {
+      "path": "Hybrid_Physics_ML_Impulse_Generator_Optimiser.xlsx",
+      "bytes": 808682,
+      "sha256": "e855eadbe4d6da2579316e89e025e6990f9ba3c522a5af96d1dd2a5522d77480",
+      "preservation": "PASS"
+    }
+  ],
+  "phase1_frozen_files": 11,
+  "models": [
+    {
+      "route": "LI:GSHUNT_v0",
+      "model": "model_3d7f2939e0983060b100",
+      "model_sha256": "7278af4ef2d83a00874ab63ede7b04b3b2b3e713c3a741e93a606aed24652a73",
+      "card_sha256": "5c4d580fda5a1383cbc0edd65c32c0694c944a9e8104019d6c9dd6c770048e16"
+    },
+    {
+      "route": "LI:OSHUNT_v0",
+      "model": "model_772eb9870cdc64349cff",
+      "model_sha256": "a37cfc8f50aff61d2dc7e2553460eef0b69f194ffe132d11527a36d67bee7e20",
+      "card_sha256": "7db73342ddc9b5b8437f8994cd543f3bb6056f9d76f3ce09c625cf1765c49b96"
+    },
+    {
+      "route": "SI:GSHUNT_v0",
+      "model": "model_954960c4e8fe1695fbfd",
+      "model_sha256": "2f1618e21dda08c1d3670859b22114db7c887d0e4dd99ac21365e1f025d03b73",
+      "card_sha256": "b7f8ba6d5b6bca336f21b7745c6af3a30e3222f872c049563bb72c3502ee4577"
+    },
+    {
+      "route": "SI:OSHUNT_v0",
+      "model": "model_920f8e81d2279b3b8b78",
+      "model_sha256": "c124936c95e2b6b8954062bb802c286084dfb453c34efb1140277f9f2f2a71c7",
+      "card_sha256": "f9faea261ad41325f1156f20259659aa4fa201c77a08c2a8efe47b1bfdef5c06"
+    }
+  ],
+  "demos": [
+    {
+      "id": "si",
+      "compatibility": "MATCHES_CURRENT_STACK",
+      "result_sha256": "5f956fec13fcd79a03ad9973c1f774a2d2c683bd08100ba0b0bf96bb006215d2"
+    },
+    {
+      "id": "li",
+      "compatibility": "MATCHES_CURRENT_STACK",
+      "result_sha256": "ac2a558a6a9c628ede30ea48b24e83f5ba1b45ab29258537b4453984b6f6c5b6"
+    },
+    {
+      "id": "li_single",
+      "compatibility": "MATCHES_CURRENT_STACK",
+      "result_sha256": "46566ae01d96923b5475e37f0955caadf78ac800a81944852c6e677aa38c1649"
+    },
+    {
+      "id": "li_disagreement",
+      "compatibility": "MATCHES_CURRENT_STACK",
+      "result_sha256": "bfacd3900369df286cadee0051de6679311263841e0949e80726a6deb31cd916"
+    },
+    {
+      "id": "crest",
+      "compatibility": "MATCHES_CURRENT_STACK",
+      "result_sha256": "f36447ce14959f2be1a9eab72be6380232fa99c905df14858e1c20537b30bce7"
+    },
+    {
+      "id": "load",
+      "compatibility": "MATCHES_CURRENT_STACK",
+      "result_sha256": "cc5e7fec8029e05ce3798c7444d575a9f5473a055de1d034296dd96419ceaf3f"
+    },
+    {
+      "id": "ood",
+      "compatibility": "MATCHES_CURRENT_STACK",
+      "result_sha256": "27423eccae876dc45a8313acf1a04cb32ae723b4d441243d72179659f6e829a6"
+    },
+    {
+      "id": "band",
+      "compatibility": "MATCHES_CURRENT_STACK",
+      "result_sha256": "8335e13c10e50d3871ac12721c77156f2146d7f91373d4e7098dce0c4066d417"
+    },
+    {
+      "id": "infeasible",
+      "compatibility": "MATCHES_CURRENT_STACK",
+      "result_sha256": "888f86a346e712b9209025c950d04e57986998966b6f50eafb1912a4b517f238"
+    },
+    {
+      "id": "approved",
+      "compatibility": "MATCHES_CURRENT_STACK",
+      "result_sha256": "2bcd5b8e8fe047060d3d569c7d7acdbbbd770327e669fa77b3c04bcb4de02090"
+    },
+    {
+      "id": "output_shunt",
+      "compatibility": "MATCHES_CURRENT_STACK",
+      "result_sha256": "f9fbe7ef0dd60f8c2eefa2caea87c5cc298c6690b2a897e4d97e2f41479e3ae1"
+    },
+    {
+      "id": "low",
+      "compatibility": "MATCHES_CURRENT_STACK",
+      "result_sha256": "fd4906f1212a3b7ca1305bdf05c0874b765ff7103ebd2df065f012c40dedeea8"
+    }
+  ],
+  "absolute_development_paths": [],
+  "live_registry": "simulation_v2",
+  "live_dataset": "clarification_v2",
+  "historical_legacy": "Only explicitly labelled workbook evidence retained for regression; no active legacy models"
+}

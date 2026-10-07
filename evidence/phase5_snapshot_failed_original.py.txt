@@ -1,0 +1,31 @@
+"""Create and verify a clean pre-release ZIP, then extract to a new moved path."""
+from pathlib import Path
+import hashlib,json,zipfile,time,sys
+sys.stdout.reconfigure(encoding='utf-8',errors='replace')
+B=Path(__file__).resolve().parents[1];R=B/'release/PowerNext_Track1_Competition_v2'
+archive=B/'evidence/phase5_candidate_not_final.zip'
+dest=B/'acceptance/moved location with spaces'
+assert not archive.exists() and not dest.exists()
+assert dest.resolve().is_relative_to(B.resolve())
+files=[p for p in sorted(R.rglob('*')) if p.is_file() and not any(x in {'__pycache__','.pytest_cache','.git'} for x in p.relative_to(R).parts) and p.relative_to(R).parts[0] not in {'data','evidence'}]
+manifest=[];last=time.monotonic()
+with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6,allowZip64=True) as z:
+    for i,p in enumerate(files,1):
+        rel=p.relative_to(R).as_posix()
+        with p.open('rb') as f:digest=hashlib.file_digest(f,'sha256').hexdigest()
+        manifest.append(dict(path=rel,sha256=digest,bytes=p.stat().st_size))
+        z.write(p,R.name+'/'+rel)
+        if time.monotonic()-last>=20:print('SNAPSHOT',i,'/',len(files),flush=True);last=time.monotonic()
+print('ZIP WRITTEN; CHECKING CRC',flush=True)
+with zipfile.ZipFile(archive) as z:
+    assert z.testzip() is None
+    dest.mkdir(parents=True)
+    z.extractall(dest)
+root=dest/R.name
+for i,e in enumerate(manifest,1):
+    with (root/e['path']).open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==e['sha256']
+    if time.monotonic()-last>=20:print('EXTRACT CHECK',i,'/',len(manifest),flush=True);last=time.monotonic()
+assert not (root/'data').exists()
+with archive.open('rb') as f:archive_hash=hashlib.file_digest(f,'sha256').hexdigest()
+(B/'evidence/phase5_candidate_manifest.json').write_text(json.dumps(dict(status='PASS',zip_sha256=archive_hash,files=manifest,moved_root=str(root),clean_no_data=True),indent=2),encoding='utf-8')
+print(json.dumps(dict(status='PASS',files=len(manifest),bytes=archive.stat().st_size,moved_root=str(root))),flush=True)

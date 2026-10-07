@@ -1,0 +1,25 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\runtime\\python.exe",
+  "sys_path": [
+    "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\runtime\\python312.zip",
+    "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\runtime",
+    "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\runtime\\DLLs",
+    "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\runtime\\Lib",
+    "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\runtime\\Lib\\site-packages",
+    "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2",
+    "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\powernext\\physics",
+    "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\powernext\\ml",
+    "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\powernext\\optimizer"
+  ],
+  "isolated": 1,
+  "no_site": 1,
+  "outbound_socket_block": "PASS",
+  "packages": {
+    "numpy": "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\runtime\\Lib\\site-packages\\numpy\\__init__.py",
+    "scipy": "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\runtime\\Lib\\site-packages\\scipy\\__init__.py",
+    "pandas": "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\runtime\\Lib\\site-packages\\pandas\\__init__.py",
+    "sklearn": "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\runtime\\Lib\\site-packages\\sklearn\\__init__.py",
+    "matplotlib": "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\runtime\\Lib\\site-packages\\matplotlib\\__init__.py"
+  }
+}

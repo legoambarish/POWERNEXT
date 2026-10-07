@@ -1,0 +1,73 @@
+"""One-time, asserted edits of the isolated release; never edits the source release."""
+from pathlib import Path
+import json, hashlib
+
+BASE = Path(__file__).resolve().parents[1]
+ROOT = BASE / 'release' / 'PowerNext_Track1_Competition_v2'
+P = ROOT / 'powernext' / 'physics'
+
+def edit(path, old, new):
+    s = path.read_text(encoding='utf-8')
+    assert old in s, (path, old[:80])
+    path.write_text(s.replace(old, new), encoding='utf-8')
+
+edit(BASE/'CPRI_CLARIFICATION_IMPACT_REPORT.md', 'uom.lk/default/files', 'uom.lk/sites/default/files')
+edit(P/'physics_engine/__init__.py', '__version__ = "0.1.0"', '__version__ = "0.2.0"')
+e=P/'physics_engine/engine.py'
+edit(e, 'from .evaluator import evaluate', 'from .evaluator import evaluate\nfrom .recipes import resolve_recipe, PROFILE_ID')
+edit(e, 'recipe_id: str = "DEV_UNIFORM_SERIES_v1"', 'recipe_id: str = "DEV_UNIFORM_SINGLE_v2"')
+start='    if c.front_per_stage_ohm not in (30,46,3700,5000):'
+s=e.read_text(); a=s.index(start); b=s.index('    for name in [',a)
+s=s[:a]+'''    if c.topology_id not in ("GSHUNT_v0","OSHUNT_v0"):
+        raise PhysicsError("UNKNOWN_TOPOLOGY_OR_RECIPE", "Select an explicit provisional topology.")
+    resolve_recipe(c)
+'''+s[b:]; e.write_text(s,encoding='utf-8')
+edit(e, '    Rt=c.stages*c.tail_per_stage_ohm\n    elems=', '    recipe=resolve_recipe(c)\n    Rt=c.stages*recipe["tail_equivalent_per_stage_ohm"]\n    elems=')
+edit(e, '           Element("Rt","R","g" if c.topology_id=="GSHUNT_v0" else "o","0",Rt)]', '''           *[Element("Rt" if len(recipe["tail_components_ohm"])==1 else f"Rt_{r:g}",
+                     "R","g" if c.topology_id=="GSHUNT_v0" else "o","0",c.stages*r)
+             for r in recipe["tail_components_ohm"]]]''')
+edit(e, 'Rt_total_ohm=Rt,U0_V=U0)', 'Rt_total_ohm=Rt,U0_V=U0,recipe=recipe)')
+edit(e, 'n_points:int=7000)->SimulationResult:', 'n_points:int=7000,solver:str="Radau")->SimulationResult:')
+edit(e, '    traj=cn.integrate(tend,rtol=rtol,atol=atol)', '''    if solver not in ("Radau", "modal"):
+        raise PhysicsError("UNKNOWN_SOLVER", solver)
+    traj=cn.integrate_linear(tend,rtol=rtol,atol=atol) if solver=="modal" else cn.integrate(tend,rtol=rtol,atol=atol)''')
+edit(e, '"Uniform per-stage values mapped to series-equivalent resistances: unconfirmed CPRI recipe.",', 'f"Explicit {c.recipe_id}: {der[\'recipe\'][\'description\']}; unconfirmed CPRI connection and quantities.",')
+edit(e, '"schema_version":"1.0.0","model_version":"0.1.0","profile_id":"CPRI_IVG_OCT01_2026_v1"', '"schema_version":"2.0.0","model_version":"0.2.0","profile_id":PROFILE_ID')
+edit(e, '"solver":{"method":"Radau",', '"solver":{"method":getattr(traj,"method","Radau"),"requested_method":solver,')
+edit(e, '"COMPONENT_PULSE_RATINGS_UNKNOWN"],', '"COMPONENT_PULSE_RATINGS_UNKNOWN","COMPONENT_QUANTITIES_AND_SLOTS_UNKNOWN"],')
+edit(e, '"numerical_pass_is_not_IEC_certification":True}', '''"component_bill_of_materials":der["recipe"]["bill_of_materials"],
+              "tail_stress_proxies":[{
+                  "component_ohm":r,"assumed_count":c.stages,
+                  "voltage_peak_per_component_V":float(np.max(np.abs(v[0 if c.topology_id=="GSHUNT_v0" else 1]))/c.stages),
+                  "current_peak_per_branch_A":float(np.max(np.abs(v[0 if c.topology_id=="GSHUNT_v0" else 1]))/(c.stages*r)),
+                  "energy_per_component_J":loss["Rt" if len(der["recipe"]["tail_components_ohm"])==1 else f"Rt_{r:g}"]/c.stages,
+                  "status":"IDEAL_UNIFORM_SHARING_PROXY_NOT_RATING_APPROVAL"}
+                  for r in der["recipe"]["tail_components_ohm"]],
+              "numerical_pass_is_not_IEC_certification":True}''')
+edit(P/'physics_engine/reference_cases.py', 'loop_l,stage_charge):', 'loop_l,stage_charge,parallel_tail=None):')
+edit(P/'physics_engine/reference_cases.py', '    nodes.append("o"); init["o"]=0.0', '''        if parallel_tail is not None:
+            elements.append(Element(f"Rt_parallel{k}","R",a,b,parallel_tail))
+    nodes.append("o"); init["o"]=0.0''')
+edit(P/'tests/test_physics.py', "30,520,'GSHUNT_v0'", "30,521,'GSHUNT_v0'")
+
+profile=P/'CPRI_EQUIPMENT_PROFILE.json'; p=json.loads(profile.read_text(encoding='utf-8'))
+p['schema_version']='2.0.0'; p['profile_id']='CPRI_IVG_OCT04_2026_v2'; p['review_date']='2026-10-04'
+values=[30,46,180,520,3700,5000]
+items=[dict(value=x,unit='ohm',status='CONFIRMED',classification='CONFIRMED CPRI FACT',source_id='S10',locator='4 October 2026 reply; available discrete values, appropriate front/tail circuits') for x in values]
+p['resistors']['available_discrete_values_ohm']=values
+for k in ['front_per_stage','LI_tail_per_stage_confirmed','SI_tail_per_stage']: p['resistors'][k]=items
+p['resistors'].pop('LI_tail_520_candidate')
+p['resistors']['mapping_note']='These are component values, not confirmed per-stage connection allocations. Recipe metadata carries the latter assumption.'
+p['topology']['development_recipes']=[
+ dict(id='DEV_UNIFORM_SINGLE_v2',status='PROVISIONAL',front_mapping='N * r_front',tail_mapping='N * r_tail',allowed_impulse_types=['LI','SI'],allowed_topologies=['GSHUNT_v0','OSHUNT_v0'],default_enabled=True,assumptions='One chosen front and tail component on every active stage; quantities and placement unconfirmed.'),
+ dict(id='HYP_LI_TAIL_180_PAR_520_v1',status='PROVISIONAL_HYPOTHESIS',front_mapping='N * r_front',tail_mapping='N * (180 || 520)',allowed_impulse_types=['LI'],allowed_topologies=['GSHUNT_v0'],default_enabled=False,assumptions='Two explicit local parallel tail branches, 180 and 520 ohm, on every active stage. Requires N of each plus front parts; no confirmed CPRI socket/count/rating approval.')]
+p['topology']['historical_recipe']='DEV_UNIFORM_SERIES_v1 retained only for explicit historical replay, excluded from new optimizer catalog.'
+p['operational_gate']['reasons'].append('Component quantities/slots and all connection arrangements remain unconfirmed')
+p['latest_source']={'id':'S10','file':'clarifications.txt','sha256':hashlib.sha256((BASE/'evidence/sources/clarifications.txt').read_bytes()).hexdigest(),'classification':'CONFIRMED CPRI FACT'}
+profile.write_text(json.dumps(p,indent=2,ensure_ascii=False),encoding='utf-8')
+source=P/'SOURCE_REGISTER.json'; data=json.loads(source.read_text(encoding='utf-8'))
+# Keep the source register's existing structure and add the new source distinctly.
+if isinstance(data,dict): data['latest_cpri_clarification']=p['latest_source']
+else: data.append(p['latest_source'])
+source.write_text(json.dumps(data,indent=2,ensure_ascii=False),encoding='utf-8')
+print('Phase 1 isolated release edits complete')

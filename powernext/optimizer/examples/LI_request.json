@@ -1,0 +1,25 @@
+{
+  "schema_version": "test_request_v1",
+  "equipment_profile_id": "CPRI_IVG_OCT04_2026_v2",
+  "topology_id": "GSHUNT_v0",
+  "catalog_scope": "development",
+  "alternatives": 4,
+  "assumptions": [
+    "Declared development setup; no actual CPRI measured shot",
+    "Continuous charging approximation; reliable minimum and increments are unknown"
+  ],
+  "setup": {
+    "dut_capacitance_F": 8.5e-10,
+    "divider_capacitance_F": 5e-10,
+    "stray_capacitance_F": 1.5e-10,
+    "loop_inductance_H": 1.85e-05,
+    "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+    "setup_id": "ILLUSTRATIVE_FIXED_SETUP"
+  },
+  "impulse_type": "LI",
+  "target_crest_V": 1550000.0,
+  "request_id": "LI_1550_SINGLE_ONLY",
+  "recipe_ids": [
+    "DEV_UNIFORM_SINGLE_v2"
+  ]
+}

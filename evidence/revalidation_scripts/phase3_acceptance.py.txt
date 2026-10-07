@@ -1,0 +1,74 @@
+"""Regenerate examples, compare independent inverse oracle, replay saved curves."""
+from pathlib import Path
+import sys,json,time,copy
+import numpy as np
+B=Path(__file__).resolve().parents[1];R=B/'release/PowerNext_Track1_Competition_v2'
+sys.path.insert(0,str(R));import powernext_config as cfg
+sys.path.insert(0,str(cfg.OPTIMIZER/'tests'))
+from oracle import oracle
+from powernext_optimizer.service import recommend
+from powernext_optimizer.common import file_hash
+from physics_engine import Configuration,Setup,simulate
+from physics_engine.evaluator import evaluate
+
+CASES=['LI_request','LI_parallel_request','SI_request','SI_crest_change','SI_load_change','SI_ood','SI_infeasible','SI_output_shunt','SI_tolerance_band','SI_approved_only','LI_rare_timing_pass','SI_current_setting','SI_invalid_request','LI_inductance_change']
+def output_name(name):
+    return name.removesuffix('_request')+'_recommendation.json'
+
+def main():
+    cases=sys.argv[1:] or CASES
+    out=B/('evidence/phase3_supplemental' if sys.argv[1:] else 'evidence/phase3_acceptance');out.mkdir(exist_ok=True)
+    summary=[]
+    for name in cases:
+        request=json.loads((cfg.DEMOS/(name+'.json')).read_text())
+        destination=cfg.DEMOS/output_name(name)
+        print(time.strftime('%H:%M:%S'),'START CASE',name,flush=True);start=time.perf_counter()
+        if destination.exists():
+            # Interrupted validation may resume immutable generated examples,
+            # but never silently substitute results from a different stack.
+            data=json.loads(destination.read_text())
+            from powernext_optimizer.prediction import PredictionStack
+            assert data.get('stack_sha256')==PredictionStack().fingerprint or data['status']=='INVALID_REQUEST'
+        else:
+            result=recommend(request,workers=4,cache=B/'evidence/phase3_cache',progress=True)
+            data=result.save(destination)
+        check=dict(case=name,status='PASS',result_status=data['status'],output=destination.name,output_sha256=file_hash(destination),numerical_passes=data.get('search',{}).get('numeric_pass_count'),catalog_count=data.get('search',{}).get('catalog_count'))
+        if data['status']!='INVALID_REQUEST':
+            assert data['request']['setup']=={**Setup(**request['setup']).__dict__},'Setup altered'
+            assert data['search']['pruned_count']==0
+            expected=oracle(request)
+            actual=data['candidates'];assert len(actual)==len(expected)
+            assert {r['candidate_id'] for r in actual}=={r['candidate_id'] for r in expected}
+            match={r['candidate_id']:r for r in expected};maxerr=0.;wave_count=0
+            for row in actual:
+                ref=match[row['candidate_id']]
+                assert row['assessment']['compliance_status']==ref['compliance_status'],(name,row['candidate_id'],'compliance')
+                assert abs(row['configuration']['stage_charge_V']/ref['stage_charge_V']-1)<1e-7
+                if row.get('score'):
+                    e=abs(row['score']['J']-ref['score']);maxerr=max(maxerr,e)
+                    assert e<1e-5*max(1,ref['score']),(name,row['candidate_id'],e)
+                if row.get('waveform_reference'):
+                    path=cfg.DEMOS/row['waveform_reference']['path'];assert file_hash(path)==row['waveform_reference']['sha256']
+                    z=np.load(path);m=evaluate(z['time_s'],z['voltage_V'],request['impulse_type'],request.get('polarity',1),target_crest_V=request['target_crest_V'])
+                    assert m==row['prediction']['physics_reference']['metrics']
+                    wave_count+=1
+                assert not row['eligible_for_hardware_recommendation']
+            expected_order=[r['candidate_id'] for r in expected]
+            actual_order=[r['candidate_id'] for r in actual]
+            assert actual_order==expected_order,(name,'rank order')
+            check.update(independent_catalog_and_order_match=True,max_absolute_J_difference=maxerr,waveforms_replayed=wave_count)
+            # Independently re-integrate every passing recommendation, not just
+            # its saved samples. This is the slower reference Radau backend.
+            passing=[r for r in actual if r['assessment']['compliance_status']=='PASS']
+            for row in passing:
+                r=simulate(Configuration(**row['configuration']),Setup(**request['setup']),target_crest_V=request['target_crest_V'],solver='Radau',n_points=7000)
+                assert r.metadata['metrics']['compliance_status']=='PASS'
+                for k in ['crest_magnitude_V','T1_s' if request['impulse_type']=='LI' else 'Tp_s','T2_s']:
+                    assert abs(r.metadata['metrics'][k]/row['prediction']['physics_reference']['metrics'][k]-1)<1e-6
+            check['independent_radau_pass_rechecks']=len(passing)
+        check['seconds']=time.perf_counter()-start;summary.append(check)
+        (out/'progress.json').write_text(json.dumps(summary,indent=2),encoding='utf-8');print(json.dumps(check),flush=True)
+    (out/'summary.json').write_text(json.dumps(dict(status='PASS',cases=summary),indent=2),encoding='utf-8')
+    print('PHASE 3 INDEPENDENT ACCEPTANCE PASSED',flush=True)
+
+if __name__=='__main__':main()

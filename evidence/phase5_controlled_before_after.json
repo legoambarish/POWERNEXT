@@ -1,0 +1,223 @@
+[
+  {
+    "mode": "LI",
+    "request": {
+      "schema_version": "test_request_v1",
+      "request_id": "LI_1550_SINGLE_ONLY",
+      "impulse_type": "LI",
+      "target_crest_V": 1550000.0,
+      "equipment_profile_id": "CPRI_IVG_OCT04_2026_v2",
+      "topology_id": "GSHUNT_v0",
+      "setup": {
+        "dut_capacitance_F": 8.5e-10,
+        "divider_capacitance_F": 5e-10,
+        "stray_capacitance_F": 1.5e-10,
+        "loop_inductance_H": 1.85e-05,
+        "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+        "loop_resistance_ohm": 0.0,
+        "load_resistance_ohm": null,
+        "setup_id": "ILLUSTRATIVE_FIXED_SETUP",
+        "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED"
+      },
+      "polarity": 1,
+      "catalog_scope": "development",
+      "alternatives": 4,
+      "assumptions": [
+        "Declared development setup; no actual CPRI measured shot",
+        "Continuous charging approximation; reliable minimum and increments are unknown"
+      ],
+      "current_setting": null,
+      "recipe_ids": [
+        "DEV_UNIFORM_SINGLE_v2"
+      ]
+    },
+    "comparison": "Same current equations, same fixed request/load/tolerances; restrict inventory to former catalog. Not a relabelled historical run.",
+    "old_inventory_counterfactual": {
+      "candidates": 56,
+      "passes": 0,
+      "best_configuration": null,
+      "metrics": null
+    },
+    "confirmed_inventory_single_recipe": {
+      "candidates": 504,
+      "passes": 0,
+      "best_configuration": null,
+      "metrics": null
+    },
+    "explicit_parallel_hypothesis_enabled": {
+      "candidates": 588,
+      "passes": 3,
+      "best_configuration": {
+        "impulse_type": "LI",
+        "stages": 9,
+        "front_per_stage_ohm": 30,
+        "tail_per_stage_ohm": 180,
+        "topology_id": "GSHUNT_v0",
+        "recipe_id": "HYP_LI_TAIL_180_PAR_520_v1",
+        "polarity": 1,
+        "stage_charge_V": 184238.33109521092
+      },
+      "metrics": {
+        "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+        "evaluation_curve_id": "raw_clean",
+        "interpolation": "PCHIP",
+        "standards_certified": false,
+        "polarity": 1,
+        "baseline_V": 0.0,
+        "raw_crest_magnitude_V": 1550000.0,
+        "raw_signed_crest_V": 1550000.0,
+        "crest_magnitude_V": 1550000.0,
+        "t_peak_s": 2.308565722774166e-06,
+        "T1_s": 1.296890833621373e-06,
+        "Tp_s": null,
+        "T2_s": 5.090867274687165e-05,
+        "t30_s": 2.3137736120659595e-07,
+        "t90_s": 1.0095118613794197e-06,
+        "t50_falling_s": 5.075098285799184e-05,
+        "virtual_origin_s": -1.5768988887981592e-07,
+        "beginning_s": 0.0,
+        "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+        "compliance_status": "PASS",
+        "reasons": [],
+        "checks": {
+          "front_or_peak": true,
+          "tail": true,
+          "crest": true
+        },
+        "deviation_pct": {
+          "front_or_peak_pct": 8.074236135114422,
+          "tail_pct": 1.8173454937433053,
+          "crest_pct": 0.0
+        }
+      }
+    }
+  },
+  {
+    "mode": "SI",
+    "request": {
+      "schema_version": "test_request_v1",
+      "request_id": "SI_BASE",
+      "impulse_type": "SI",
+      "target_crest_V": 1300000.0,
+      "equipment_profile_id": "CPRI_IVG_OCT04_2026_v2",
+      "topology_id": "GSHUNT_v0",
+      "setup": {
+        "dut_capacitance_F": 8.5e-10,
+        "divider_capacitance_F": 5e-10,
+        "stray_capacitance_F": 1.5e-10,
+        "loop_inductance_H": 1.85e-05,
+        "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+        "loop_resistance_ohm": 0.0,
+        "load_resistance_ohm": null,
+        "setup_id": "ILLUSTRATIVE_FIXED_SETUP",
+        "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED"
+      },
+      "polarity": 1,
+      "catalog_scope": "development",
+      "alternatives": 4,
+      "assumptions": [
+        "Declared development setup; no actual CPRI measured shot",
+        "Continuous charging approximation; reliable minimum and increments are unknown"
+      ],
+      "current_setting": null,
+      "recipe_ids": [
+        "DEV_UNIFORM_SINGLE_v2"
+      ]
+    },
+    "comparison": "Same current equations, same fixed request/load/tolerances; restrict inventory to former catalog. Not a relabelled historical run.",
+    "old_inventory_counterfactual": {
+      "candidates": 56,
+      "passes": 6,
+      "best_configuration": {
+        "impulse_type": "SI",
+        "stages": 9,
+        "front_per_stage_ohm": 3700,
+        "tail_per_stage_ohm": 5000,
+        "topology_id": "GSHUNT_v0",
+        "recipe_id": "DEV_UNIFORM_SINGLE_v2",
+        "polarity": 1,
+        "stage_charge_V": 164366.29423280785
+      },
+      "metrics": {
+        "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+        "evaluation_curve_id": "raw_clean",
+        "interpolation": "PCHIP",
+        "standards_certified": false,
+        "polarity": 1,
+        "baseline_V": 0.0,
+        "raw_crest_magnitude_V": 1300000.0000000002,
+        "raw_signed_crest_V": 1300000.0000000002,
+        "crest_magnitude_V": 1300000.0000000002,
+        "t_peak_s": 0.00024174132169143924,
+        "T1_s": null,
+        "Tp_s": 0.00024174132169143924,
+        "T2_s": 0.0021023819830925834,
+        "t30_s": 2.040432007748545e-05,
+        "t90_s": 0.00011831863259666407,
+        "t50_falling_s": 0.0021023819830925834,
+        "virtual_origin_s": null,
+        "beginning_s": 0.0,
+        "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+        "compliance_status": "PASS",
+        "reasons": [],
+        "checks": {
+          "front_or_peak": true,
+          "tail": true,
+          "crest": true
+        },
+        "deviation_pct": {
+          "front_or_peak_pct": -3.303471323424312,
+          "tail_pct": -15.90472067629667,
+          "crest_pct": 2.220446049250313e-14
+        }
+      }
+    },
+    "confirmed_inventory_single_recipe": {
+      "candidates": 504,
+      "passes": 14,
+      "best_configuration": {
+        "impulse_type": "SI",
+        "stages": 9,
+        "front_per_stage_ohm": 3700,
+        "tail_per_stage_ohm": 5000,
+        "topology_id": "GSHUNT_v0",
+        "recipe_id": "DEV_UNIFORM_SINGLE_v2",
+        "polarity": 1,
+        "stage_charge_V": 164366.29423280785
+      },
+      "metrics": {
+        "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+        "evaluation_curve_id": "raw_clean",
+        "interpolation": "PCHIP",
+        "standards_certified": false,
+        "polarity": 1,
+        "baseline_V": 0.0,
+        "raw_crest_magnitude_V": 1300000.0000000002,
+        "raw_signed_crest_V": 1300000.0000000002,
+        "crest_magnitude_V": 1300000.0000000002,
+        "t_peak_s": 0.00024174132169143924,
+        "T1_s": null,
+        "Tp_s": 0.00024174132169143924,
+        "T2_s": 0.0021023819830925834,
+        "t30_s": 2.040432007748545e-05,
+        "t90_s": 0.00011831863259666407,
+        "t50_falling_s": 0.0021023819830925834,
+        "virtual_origin_s": null,
+        "beginning_s": 0.0,
+        "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+        "compliance_status": "PASS",
+        "reasons": [],
+        "checks": {
+          "front_or_peak": true,
+          "tail": true,
+          "crest": true
+        },
+        "deviation_pct": {
+          "front_or_peak_pct": -3.303471323424312,
+          "tail_pct": -15.90472067629667,
+          "crest_pct": 2.220446049250313e-14
+        }
+      }
+    }
+  }
+]

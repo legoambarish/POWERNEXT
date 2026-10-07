@@ -1,0 +1,40 @@
+from pathlib import Path
+BASE=Path(__file__).resolve().parents[1]; ROOT=BASE/'release/PowerNext_Track1_Competition_v2'; M=ROOT/'powernext/ml'
+def edit(p,old,new):
+    s=p.read_text(encoding='utf-8'); assert old in s,(p,old[:60]); p.write_text(s.replace(old,new),encoding='utf-8')
+a=M/'powernext_ml/physics_adapter.py'
+edit(a,'from physics_engine.engine import validate','from physics_engine.engine import validate\nfrom physics_engine.recipes import COMPONENTS,SINGLE,PARALLEL,resolve_recipe')
+edit(a,'assert self.fronts == [30, 46, 3700, 5000]','assert self.fronts == list(COMPONENTS)')
+edit(a,'assert self.tails == {"LI": [180], "SI": [5000]}','assert self.tails == {"LI": list(COMPONENTS), "SI": list(COMPONENTS)}')
+edit(a,'waveform_profile_id=PROFILE_ID, recipe_version=self.recipe,','waveform_profile_id=PROFILE_ID, recipe_version="OCT04_EXPLICIT_RECIPE_CATALOG_v2",')
+edit(a,'adapter_version="provisional_adapter_v1",','adapter_version="provisional_adapter_v2",')
+edit(a,'    def validate(self, configuration, setup):','''    def design_requests(self, samples_per_stratum=8, seed=20261004):
+        from .design_v2 import design_requests
+        return design_requests(self,samples_per_stratum,seed)
+
+    def validate(self, configuration, setup):''')
+edit(a,'        return simulate(c, s, **options)','        options.setdefault("solver","modal")\n        return simulate(c, s, **options)')
+edit(a,'Rt_ohm=c.stages*c.tail_per_stage_ohm, L_H=s.loop_inductance_H,','Rt_ohm=c.stages*resolve_recipe(c)["tail_equivalent_per_stage_ohm"], L_H=s.loop_inductance_H,')
+edit(a,'rf, rt = c.stages*c.front_per_stage_ohm+s.loop_resistance_ohm, c.stages*c.tail_per_stage_ohm','rf, rt = c.stages*c.front_per_stage_ohm+s.loop_resistance_ohm, c.stages*resolve_recipe(c)["tail_equivalent_per_stage_ohm"]')
+edit(a,'f = dict(stages=c.stages,','f = dict(tail_parallel=int(c.recipe_id==PARALLEL),stages=c.stages,')
+f=M/'powernext_ml/features.py';s=f.read_text();s=s.replace('SIM_DIRECT=[','SIM_DIRECT=["tail_parallel",');s=s.replace('SIM_DIRECT = [','SIM_DIRECT = ["tail_parallel",');f.write_text(s,encoding='utf-8');assert 'SIM_DIRECT' in s and 'tail_parallel' in s
+t=M/'powernext_ml/training.py'
+edit(t,'mode=c["impulse_type"],U0_V=', 'recipe_id=c["recipe_id"],mode=c["impulse_type"],U0_V=')
+edit(t,'            for i,(_,r) in enumerate(test.iterrows()):all_predictions.append(dict(mode=mode,topology=top,protocol=main,model=family,formulation=formulation,row_id=r.row_id,truth=labels(test,domain)[i].tolist(),prediction=pred[i].tolist(),ood=bool(model.ood(test.iloc[i:i+1])[0])))', '''            truth_batch=labels(test,domain); ood_batch=model.ood(test)
+            for i,(_,r) in enumerate(test.iterrows()):all_predictions.append(dict(mode=mode,topology=top,protocol=main,model=family,formulation=formulation,row_id=r.row_id,truth=truth_batch[i].tolist(),prediction=pred[i].tolist(),ood=bool(ood_batch[i])))''')
+edit(M/'powernext_ml/models.py','        return self\n','''        if self.domain!="legacy":
+            self.seen_tails=set(frame["tail_per_stage_ohm"].tolist())
+            self.seen_parallel=set(frame["tail_parallel"].tolist())
+        return self
+''')
+edit(M/'powernext_ml/models.py','        return outside|(dist>self.ood_radius)|~stage|~front','''        tail=np.ones(len(frame),dtype=bool)
+        if self.domain!="legacy":
+            tail=frame.tail_per_stage_ohm.isin(self.seen_tails).to_numpy() & frame.tail_parallel.isin(self.seen_parallel).to_numpy()
+        return outside|(dist>self.ood_radius)|~stage|~front|~tail''')
+edit(M/'powernext_ml/splits.py','    for name,mask in masks.items():','''    if domain=="simulation" and "tail_parallel" in frame and frame.tail_parallel.max()>0:
+        masks["parallel_recipe_unseen"]=frame.tail_parallel==1
+    for name,mask in masks.items():''')
+edit(M/'powernext_ml/evaluation.py','ranking_error=None,ranking_status="DEFERRED_OPTIMIZER_NOT_CONNECTED"','ranking_error=None,ranking_status="NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS"')
+edit(ROOT/'powernext_config.py',"ML / 'registry/simulation'","ML / 'registry/simulation_v2'")
+edit(ROOT/'powernext_config.py',"ML / 'results/simulation_v1/selected_models.json'","ML / 'results/simulation_v2/selected_models.json'")
+print('Phase 2 adapter and training changes applied')

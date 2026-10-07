@@ -1,0 +1,633 @@
+{
+  "application_version": "0.4.0+cpri20261004",
+  "profile": {
+    "schema_version": "2.0.0",
+    "profile_id": "CPRI_IVG_OCT04_2026_v2",
+    "review_date": "2026-10-04",
+    "equipment_identity": {
+      "model": null,
+      "manufacturer": null,
+      "status": "UNRESOLVED",
+      "note": "Do not identify the actual CPRI generator from the superseded example on original PDF page 4."
+    },
+    "limits": {
+      "active_stages_min": {
+        "value": 2,
+        "unit": "count",
+        "status": "CONFIRMED",
+        "source_id": "S3",
+        "locator": "page 4"
+      },
+      "available_stages_max": {
+        "value": 15,
+        "unit": "count",
+        "status": "CONFIRMED",
+        "source_id": "S1",
+        "locator": "section 1"
+      },
+      "stage_charge_max": {
+        "value": 200000,
+        "unit": "V",
+        "status": "CONFIRMED",
+        "source_id": "S1",
+        "locator": "sections 1\u20132"
+      },
+      "summed_stage_charge_max": {
+        "value": 3000000,
+        "unit": "V",
+        "status": "CONFIRMED",
+        "source_id": "S1",
+        "locator": "sections 1\u20132"
+      },
+      "stored_energy_per_stage_rated": {
+        "value": 10000,
+        "unit": "J",
+        "status": "CONFIRMED",
+        "source_id": "S2",
+        "locator": "stored energy for stage"
+      },
+      "stored_energy_total_rated": {
+        "value": 150000,
+        "unit": "J",
+        "status": "CONFIRMED",
+        "source_id": "S1",
+        "locator": "section 1"
+      },
+      "requested_output_crest_min_approx": {
+        "value": 50000,
+        "unit": "V",
+        "status": "CONFIRMED",
+        "source_id": "S3",
+        "locator": "page 4; S1 section 2 resolves crest, not charging voltage"
+      },
+      "requested_output_crest_max_approx": {
+        "value": 2400000,
+        "unit": "V",
+        "status": "CONFIRMED",
+        "source_id": "S3",
+        "locator": "page 4; subject to configuration feasibility"
+      },
+      "sequence_of_pulses": {
+        "value": 2,
+        "unit": "pulses/min",
+        "status": "CONFIRMED",
+        "source_id": "S2",
+        "locator": "sequence of pulses; not a complete thermal-duty envelope"
+      },
+      "stage_charge_min_reliable": {
+        "value": null,
+        "unit": "V",
+        "status": "UNRESOLVED",
+        "source_id": "S1",
+        "locator": ""
+      },
+      "stage_charge_step": {
+        "value": null,
+        "unit": "V",
+        "status": "UNRESOLVED",
+        "source_id": "S1",
+        "locator": ""
+      }
+    },
+    "capacitors": {
+      "stage_impulse_capacitance": {
+        "value": 5e-07,
+        "unit": "F",
+        "status": "CONFIRMED",
+        "source_id": "S1",
+        "locator": "section 1"
+      },
+      "basic_load_capacitance": {
+        "value": 4.8e-10,
+        "unit": "F",
+        "status": "CONFIRMED",
+        "source_id": "S1",
+        "locator": "section 8"
+      },
+      "basic_load_coverage": {
+        "value": null,
+        "status": "UNRESOLVED",
+        "source_id": "S1",
+        "locator": "section 8",
+        "note": "Exact included apparatus, node/plane, stage-count dependence and overlap with divider/DUT/stray C not specified."
+      },
+      "internal_two_capacitor_construction": {
+        "status": "PROVISIONAL_TRANSCRIPT_ONLY",
+        "source_id": "S4",
+        "statement": "Briefing mentions two 100 kV capacitors per stage; exact individual capacitances/connection are not confirmed."
+      }
+    },
+    "resistors": {
+      "front_per_stage": [
+        {
+          "value": 30,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 46,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 180,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 520,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 3700,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 5000,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        }
+      ],
+      "LI_tail_per_stage_confirmed": [
+        {
+          "value": 30,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 46,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 180,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 520,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 3700,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 5000,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        }
+      ],
+      "SI_tail_per_stage": [
+        {
+          "value": 30,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 46,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 180,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 520,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 3700,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        },
+        {
+          "value": 5000,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "classification": "CONFIRMED CPRI FACT",
+          "source_id": "S10",
+          "locator": "4 October 2026 reply; available discrete values, appropriate front/tail circuits"
+        }
+      ],
+      "charging_per_stage": {
+        "value": 135000,
+        "unit": "ohm",
+        "status": "CONFIRMED",
+        "source_id": "S1",
+        "locator": "section 3"
+      },
+      "potential": {
+        "value": 2000000,
+        "unit": "ohm",
+        "status": "CONFIRMED",
+        "source_id": "S1",
+        "locator": "section 3; no confirmed connection node"
+      },
+      "discharging": [
+        {
+          "value": 5450,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "source_id": "S2",
+          "locator": "discharging resistor 1"
+        },
+        {
+          "value": 13000,
+          "unit": "ohm",
+          "status": "CONFIRMED",
+          "source_id": "S2",
+          "locator": "discharging resistor 2"
+        }
+      ],
+      "quantities_slots_and_pulse_ratings": {
+        "status": "UNRESOLVED",
+        "value": null
+      },
+      "available_discrete_values_ohm": [
+        30,
+        46,
+        180,
+        520,
+        3700,
+        5000
+      ],
+      "mapping_note": "These are component values, not confirmed per-stage connection allocations. Recipe metadata carries the latter assumption."
+    },
+    "mechanical": {
+      "sphere_diameter": {
+        "value": 0.25,
+        "unit": "m",
+        "status": "CONFIRMED",
+        "source_id": "S2",
+        "locator": "spheres diameter"
+      },
+      "gap_spacing_and_firing_sequence": {
+        "status": "UNRESOLVED",
+        "value": null
+      }
+    },
+    "waveform_profile": {
+      "id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+      "classification": "COMPETITION_PROFILE_NOT_UNQUALIFIED_LATEST_IEC_CERTIFICATION",
+      "LI": {
+        "T1_target": {
+          "value": 1.2e-06,
+          "unit": "s",
+          "status": "CONFIRMED",
+          "source_id": "S1",
+          "locator": "section 4"
+        },
+        "T2_target": {
+          "value": 5e-05,
+          "unit": "s",
+          "status": "CONFIRMED",
+          "source_id": "S1",
+          "locator": "section 4"
+        },
+        "T1_relative_tolerance": {
+          "value": 0.3,
+          "unit": "fraction",
+          "status": "CONFIRMED",
+          "source_id": "S1",
+          "locator": "section 4"
+        },
+        "T2_relative_tolerance": {
+          "value": 0.2,
+          "unit": "fraction",
+          "status": "CONFIRMED",
+          "source_id": "S1",
+          "locator": "section 4"
+        }
+      },
+      "SI": {
+        "Tp_target": {
+          "value": 0.00025,
+          "unit": "s",
+          "status": "CONFIRMED",
+          "source_id": "S1",
+          "locator": "section 5"
+        },
+        "T2_target": {
+          "value": 0.0025,
+          "unit": "s",
+          "status": "CONFIRMED",
+          "source_id": "S1",
+          "locator": "section 5"
+        },
+        "Tp_relative_tolerance": {
+          "value": 0.2,
+          "unit": "fraction",
+          "status": "EXTERNALLY_VERIFIED_INTERPRETATION",
+          "source_id": "R4",
+          "locator": "legacy SI; compatible with S6"
+        },
+        "T2_relative_tolerance": {
+          "value": 0.6,
+          "unit": "fraction",
+          "status": "EXTERNALLY_VERIFIED_INTERPRETATION",
+          "source_id": "R4",
+          "locator": "legacy SI; compatible with S6"
+        }
+      },
+      "crest_relative_tolerance": {
+        "value": 0.03,
+        "unit": "fraction",
+        "status": "EXTERNALLY_VERIFIED_INTERPRETATION",
+        "source_id": "R11",
+        "locator": "R11 section 2.1 for LI; R4 section 1 for SI; S6 waveform table; not explicitly numeric in S1",
+        "corroborating_source_ids": [
+          "R4",
+          "S6"
+        ]
+      },
+      "current_IEC_2025_note": {
+        "source_id": "R1",
+        "value": "2025 introduces SI front-time 170/2500; do not silently substitute it for CPRI Tp=250 us."
+      }
+    },
+    "topology": {
+      "erected_schematic": null,
+      "status": "UNRESOLVED",
+      "approved_recipes": [],
+      "development_recipes": [
+        {
+          "id": "DEV_UNIFORM_SINGLE_v2",
+          "status": "PROVISIONAL",
+          "front_mapping": "N * r_front",
+          "tail_mapping": "N * r_tail",
+          "allowed_impulse_types": [
+            "LI",
+            "SI"
+          ],
+          "allowed_topologies": [
+            "GSHUNT_v0",
+            "OSHUNT_v0"
+          ],
+          "default_enabled": true,
+          "assumptions": "One chosen front and tail component on every active stage; quantities and placement unconfirmed."
+        },
+        {
+          "id": "HYP_LI_TAIL_180_PAR_520_v1",
+          "status": "PROVISIONAL_HYPOTHESIS",
+          "front_mapping": "N * r_front",
+          "tail_mapping": "N * (180 || 520)",
+          "allowed_impulse_types": [
+            "LI"
+          ],
+          "allowed_topologies": [
+            "GSHUNT_v0"
+          ],
+          "default_enabled": false,
+          "assumptions": "Two explicit local parallel tail branches, 180 and 520 ohm, on every active stage. Requires N of each plus front parts; no confirmed CPRI socket/count/rating approval."
+        }
+      ],
+      "development_topologies": [
+        "GSHUNT_v0",
+        "OSHUNT_v0"
+      ],
+      "auxiliary_firing_states": null,
+      "historical_recipe": "DEV_UNIFORM_SERIES_v1 retained only for explicit historical replay, excluded from new optimizer catalog."
+    },
+    "operational_gate": {
+      "hardware_verified": false,
+      "may_issue_operator_ready_recommendation": false,
+      "reasons": [
+        "CPRI topology/recipe/auxiliary-state confirmation absent",
+        "basic C coverage unresolved",
+        "minimum charging and component pulse ratings absent",
+        "no independent measured CPRI validation",
+        "Component quantities/slots and all connection arrangements remain unconfirmed"
+      ]
+    },
+    "source_register": "SOURCE_REGISTER.json",
+    "latest_source": {
+      "id": "S10",
+      "file": "clarifications.txt",
+      "sha256": "560bf7d304d141dec6bd9a42cf8794645e5acf6227363fe235bf07288056cbda",
+      "classification": "CONFIRMED CPRI FACT"
+    }
+  },
+  "physics_provenance": {
+    "equipment_profile_version": "CPRI_IVG_OCT04_2026_v2",
+    "equipment_profile_sha256": "90cc70fd0a86a7ecaef8510538bac31fc33e42fa6527f47afc18afd4e9964f43",
+    "simulator_version": "0.2.0",
+    "simulator_sha256": "318728555dcc028940f24e8e9a41d366a0d1bc15139de58f612db73a00395926",
+    "evaluator_version": "physics_clean_evaluator_0.1.0",
+    "evaluator_sha256": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+    "waveform_profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+    "recipe_version": "OCT04_EXPLICIT_RECIPE_CATALOG_v2",
+    "topology_spec_sha256": "cae23ca71041ff8756e8f90f90bbd25b0d2a8368d9d81d5f84424980e74b562c",
+    "topology_status": "PROVISIONAL_TOPOLOGY",
+    "evidence_domain": "PROVISIONAL_TOPOLOGY_SYNTHETIC",
+    "hardware_verified": false,
+    "baseline_version": "independent_RC_L0_v1",
+    "baseline_sha256": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+    "adapter_version": "provisional_adapter_v2"
+  },
+  "stack_sha256": "5945139ef5cc40ec1b9e0b73ca41050e92f8208062f88d735d28c9d35e324735",
+  "model_selection": {
+    "LI:GSHUNT_v0": "model_3d7f2939e0983060b100",
+    "LI:OSHUNT_v0": "model_772eb9870cdc64349cff",
+    "SI:GSHUNT_v0": "model_954960c4e8fe1695fbfd",
+    "SI:OSHUNT_v0": "model_920f8e81d2279b3b8b78"
+  },
+  "demonstrations": [
+    {
+      "id": "si",
+      "request": "SI_request.json",
+      "result": "SI_recommendation.json",
+      "title": "A compliant switching impulse",
+      "label": "SI \u00b7 1.3 MV",
+      "story": "Fourteen numerical passes. Inspect why nine stages win.",
+      "tag": "START HERE"
+    },
+    {
+      "id": "li",
+      "request": "LI_parallel_request.json",
+      "result": "LI_parallel_recommendation.json",
+      "title": "LI with an explicit circuit hypothesis",
+      "label": "LI \u00b7 1.55 MV",
+      "story": "Three conditional passes with a 180 || 520 ohm tail. Wiring remains unconfirmed.",
+      "tag": "HYPOTHESIS"
+    },
+    {
+      "id": "li_single",
+      "request": "LI_request.json",
+      "result": "LI_recommendation.json",
+      "title": "The single-resistor LI limitation",
+      "label": "LI \u00b7 1.55 MV",
+      "story": "Same fixed load and tolerances. None of the 504 single-resistor settings comply.",
+      "tag": "NO SOLUTION"
+    },
+    {
+      "id": "li_disagreement",
+      "request": "LI_disagreement_request.json",
+      "result": "LI_disagreement_recommendation.json",
+      "title": "Physics rejects an ML false acceptance",
+      "label": "LI \u00b7 marginal crest",
+      "story": "Inspect rank 8: ML scalar estimates pass, but physics rejects the crest. No ML pruning.",
+      "tag": "EVIDENCE",
+      "focus_candidate_id": "cfg_3754ce6cb55b96c7"
+    },
+    {
+      "id": "crest",
+      "request": "SI_crest_change.json",
+      "result": "SI_crest_change_recommendation.json",
+      "title": "Raise only the requested crest",
+      "label": "SI \u00b7 1.8 MV",
+      "story": "The preferred stage count moves from nine to eleven.",
+      "tag": "COMPARE"
+    },
+    {
+      "id": "load",
+      "request": "SI_load_change.json",
+      "result": "SI_load_change_recommendation.json",
+      "title": "Change the test object",
+      "label": "SI \u00b7 1.8 nF DUT",
+      "story": "A larger load changes the preferred setting to eight stages.",
+      "tag": "COMPARE"
+    },
+    {
+      "id": "ood",
+      "request": "SI_ood.json",
+      "result": "SI_ood_recommendation.json",
+      "title": "Outside learned support",
+      "label": "SI \u00b7 50 nF DUT",
+      "story": "Physics fallback for every candidate. No forced ML estimate.",
+      "tag": "FALLBACK"
+    },
+    {
+      "id": "band",
+      "request": "SI_tolerance_band.json",
+      "result": "SI_tolerance_band_recommendation.json",
+      "title": "Charge limits with alternatives",
+      "label": "SI \u00b7 charge limit",
+      "story": "Rank 2 passes at 200 kV per stage. The expanded catalog also finds an exact-crest leader.",
+      "tag": "BOUNDARY",
+      "focus_candidate_id": "cfg_1ef05d2a542a16f6"
+    },
+    {
+      "id": "infeasible",
+      "request": "SI_infeasible.json",
+      "result": "SI_infeasible_recommendation.json",
+      "title": "A defensible infeasible result",
+      "label": "SI \u00b7 2.4 MV / 50 nF",
+      "story": "Voltage and timing limits remain visible alongside the closest case.",
+      "tag": "NO SOLUTION"
+    },
+    {
+      "id": "approved",
+      "request": "SI_approved_only.json",
+      "result": "SI_approved_only_recommendation.json",
+      "title": "Require approved recipes",
+      "label": "No approved recipes",
+      "story": "Missing confirmation is an information gap, not a fabricated setting.",
+      "tag": "HARDWARE"
+    },
+    {
+      "id": "output_shunt",
+      "request": "SI_output_shunt.json",
+      "result": "SI_output_shunt_recommendation.json",
+      "title": "A different declared topology",
+      "label": "SI \u00b7 output shunt",
+      "story": "The topology is a fixed request condition, never a hidden search variable.",
+      "tag": "EXPERT"
+    },
+    {
+      "id": "low",
+      "request": "SI_low_voltage.json",
+      "result": "SI_low_voltage_recommendation.json",
+      "title": "Low voltage needs a practical check",
+      "label": "SI \u00b7 50 kV",
+      "story": "Numerical pass at about 8.103 kV per stage. Reliable firing minimum is unknown.",
+      "tag": "BOUNDARY"
+    }
+  ],
+  "default_request": {
+    "schema_version": "test_request_v1",
+    "equipment_profile_id": "CPRI_IVG_OCT04_2026_v2",
+    "topology_id": "GSHUNT_v0",
+    "catalog_scope": "development",
+    "alternatives": 4,
+    "assumptions": [
+      "Declared development setup; no actual CPRI measured shot",
+      "Continuous charging approximation; reliable minimum and increments are unknown"
+    ],
+    "setup": {
+      "dut_capacitance_F": 8.5e-10,
+      "divider_capacitance_F": 5e-10,
+      "stray_capacitance_F": 1.5e-10,
+      "loop_inductance_H": 1.85e-05,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "ILLUSTRATIVE_FIXED_SETUP"
+    },
+    "impulse_type": "SI",
+    "target_crest_V": 1300000.0,
+    "request_id": "SI_BASE",
+    "recipe_ids": [
+      "DEV_UNIFORM_SINGLE_v2"
+    ]
+  },
+  "data_directory": "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2\\data",
+  "offline": true,
+  "hardware_control": false
+}

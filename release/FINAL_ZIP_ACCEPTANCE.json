@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "zip_name": "PowerNext_Track1_Competition_v2.zip",
+  "zip_bytes": 1721822565,
+  "zip_sha256": "2b19ea4882b732fc1654ace7de2a8f7175c9f230a6f72074e424c6f8aaa8b9dd",
+  "zip_crc": "PASS",
+  "single_root": "PowerNext_Track1_Competition_v2",
+  "manifest_sha256": "d30b6f9b354d26590f4ed2e18e891b2e0b477a0fc5ac66dd2899c1110a83d0ad",
+  "files_checked": 53011,
+  "extracted_files": 53012,
+  "extracted_manifest": "PASS",
+  "clean_no_data": true,
+  "executables_models_data_and_demos_equal_tested_candidate": true,
+  "documentation_changes_after_candidate": [
+    "powernext/physics/spice/README.md",
+    "README.md"
+  ],
+  "added_documentation_evidence_files": 96,
+  "final_extraction": "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\final delivery check\\PowerNext_Track1_Competition_v2",
+  "final_exact_command": ".\\runtime\\python.exe -m powernext_app",
+  "final_application_version": "0.4.0+cpri20261004",
+  "final_models_loaded": 4,
+  "final_saved_li_current_candidates": 588,
+  "final_saved_li_numerical_passes": 3,
+  "final_nominal_target": "PASS",
+  "final_live_si_inventory_candidates": 14,
+  "final_launch_network_boundary": "Outbound socket connections denied in app/workers; loopback allowed",
+  "final_launch_seconds": 59.516,
+  "final_launch_utc": "2026-10-04T10:24:13.139726+00:00"
+}

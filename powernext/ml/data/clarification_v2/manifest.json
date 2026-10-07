@@ -1,0 +1,71 @@
+{
+  "schema_version": "ml_dataset_v1",
+  "purpose": "DEVELOPMENT_NOT_PRODUCTION_FREEZE",
+  "equipment_profile_version": "CPRI_IVG_OCT04_2026_v2",
+  "equipment_profile_sha256": "90cc70fd0a86a7ecaef8510538bac31fc33e42fa6527f47afc18afd4e9964f43",
+  "simulator_version": "0.2.0",
+  "simulator_sha256": "318728555dcc028940f24e8e9a41d366a0d1bc15139de58f612db73a00395926",
+  "evaluator_version": "physics_clean_evaluator_0.1.0",
+  "evaluator_sha256": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+  "waveform_profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+  "recipe_version": "OCT04_EXPLICIT_RECIPE_CATALOG_v2",
+  "topology_spec_sha256": "cae23ca71041ff8756e8f90f90bbd25b0d2a8368d9d81d5f84424980e74b562c",
+  "topology_status": "PROVISIONAL_TOPOLOGY",
+  "evidence_domain": "PROVISIONAL_TOPOLOGY_SYNTHETIC",
+  "hardware_verified": false,
+  "baseline_version": "independent_RC_L0_v1",
+  "baseline_sha256": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+  "adapter_version": "provisional_adapter_v2",
+  "settings": {
+    "samples_per_stratum": 8,
+    "seed": 20261004,
+    "n_points": 1600,
+    "adapter": "provisional"
+  },
+  "source_hashes": {
+    "powernext_ml\\__init__.py": "c93218b3469a400b083e988473796ca7ae52a4c002f8ddef5e38d1085149f01d",
+    "powernext_ml\\__main__.py": "7a594fea6cf2d010816f05802c2f391da3f4c6a95011a7e739ba426d35c1ed26",
+    "powernext_ml\\common.py": "f898f8fa88ffd982f80f61d0df748576aa4d9500a8f91e99e97fd2c6b9bb76f8",
+    "powernext_ml\\design_v2.py": "4aede9abadddd08136759f77209758d68d347e03a7039429382a31328ff9a9aa",
+    "powernext_ml\\evaluation.py": "ea725df8cc9980e0bceedd449504348fb87778ad6782c11162a04b85f27d6e4e",
+    "powernext_ml\\features.py": "415e0a951e295807ae47cc3be271410f88b71a13fe682d9029136ccc2dbe179c",
+    "powernext_ml\\generate.py": "b5cf3e66b1b97609c197c59d45cd69ae89e64dc4e5607ad08d225a1bf539b968",
+    "powernext_ml\\inference.py": "c7a0574f140494e681b547c565a1cb5041efd30da6c75efa33e4c98f657b313a",
+    "powernext_ml\\legacy.py": "d210daaadc8aa4d078a48a24da2e75daf9f40d6032642e63812e2b0dd03df20a",
+    "powernext_ml\\measured.py": "72bd3efd97731f166f22860d28019c634bce502181c20bf15bf87e1673fa345b",
+    "powernext_ml\\models.py": "02d3eaaea90bbceb3e6a048608ded127052675919037b91b6dc9e923948643f2",
+    "powernext_ml\\physics_adapter.py": "8857ec7f478e0e68062e16678794237dd1995c19ed49172278408a8c12ac52be",
+    "powernext_ml\\registry.py": "70eabd17ce89e3da59818447b379c39c6d00e204aa9003c2e05b681b944bf607",
+    "powernext_ml\\splits.py": "bc151213a9db2b16b431c976fa21645100f8992be07afa52d00f624c300edda1",
+    "powernext_ml\\training.py": "e5a0a1e833a6d0bbd733fcbef5c36f20467c7fd0e8d032ad804766287cade825"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.0",
+    "openpyxl": "3.1.5"
+  },
+  "design_sha256": "7b9c6185bf0db36297b752ca87b510de282dbdca4a33f2b561a7b00c499581b1",
+  "status": "COMPLETE",
+  "dataset_id": "sim_1f2992ccb93c5d9d",
+  "row_count": 18339,
+  "regression_eligible_count": 18028,
+  "status_counts": {
+    "SIMULATED": 18332,
+    "INVALID_OR_UNSUPPORTED": 7
+  },
+  "waveform_counts": {
+    "VALID_CLEAN_FULL_IMPULSE": 18028,
+    "INDETERMINATE": 304,
+    "None": 7
+  },
+  "compliance_counts": {
+    "FAIL": 18011,
+    "INDETERMINATE": 311,
+    "PASS": 17
+  },
+  "rows_sha256": "14fdf1b748d73b8e7154a501cb6f3f125c12206811de0f6eef3c3dabdd60bf71"
+}

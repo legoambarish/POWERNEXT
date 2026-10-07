@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "kind": "DOCUMENTARY_SOURCE_REGISTER_ONLY",
+  "profile_reference_resolves": true,
+  "referenced_source_ids": [
+    "S1",
+    "S10",
+    "S2",
+    "S3",
+    "S4"
+  ],
+  "provided_sources": 7,
+  "all_primary_hashes_match": true,
+  "all_11_frozen_physics_files_unchanged": true,
+  "source_register_sha256": "064942cf081f0a750b96de49e77d4a48b1bf0034e536ec16e1a4108f784eacd6",
+  "note": "Old register preserved. Current alias filenames and newest-source precedence corrected; no equations, evaluator, profile, models, optimizer or app bytes changed."
+}

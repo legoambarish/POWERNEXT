@@ -1,0 +1,24 @@
+{
+  "configuration": {
+    "impulse_type": "LI",
+    "stages": 9,
+    "front_per_stage_ohm": 30,
+    "tail_per_stage_ohm": 180,
+    "topology_id": "GSHUNT_v0",
+    "recipe_id": "HYP_LI_TAIL_180_PAR_520_v1",
+    "polarity": 1,
+    "stage_charge_V": 184238.33109521092
+  },
+  "setup": {
+    "dut_capacitance_F": 8.5e-10,
+    "divider_capacitance_F": 5e-10,
+    "stray_capacitance_F": 1.5e-10,
+    "loop_inductance_H": 1.85e-05,
+    "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+    "loop_resistance_ohm": 0.0,
+    "load_resistance_ohm": null,
+    "setup_id": "ILLUSTRATIVE_FIXED_SETUP",
+    "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED"
+  },
+  "target_crest_V": 1550000.0
+}

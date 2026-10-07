@@ -1,0 +1,87 @@
+from pathlib import Path
+import sys,json,time,statistics
+from collections import Counter,defaultdict
+import numpy as np
+BASE=Path(__file__).resolve().parents[1];ROOT=BASE/'release/PowerNext_Track1_Competition_v2'
+sys.path.insert(0,str(ROOT));import powernext_config as cfg
+from powernext_ml.physics_adapter import ProvisionalAdapter
+from powernext_ml.screening import screen_batch
+from powernext_ml.evaluation import confusion
+from powernext_ml.common import file_hash
+
+def main():
+    data=cfg.ML/'data/clarification_v2'; manifest=json.loads((data/'manifest.json').read_text())
+    assert manifest['status']=='COMPLETE' and file_hash(data/'rows.jsonl')==manifest['rows_sha256']
+    rows=[json.loads(l) for l in (data/'rows.jsonl').read_text().splitlines()]
+    counts=defaultdict(Counter)
+    for r in rows:
+        c=r['configuration']; key=f"{c['impulse_type']}:{c['topology_id']}:{c['recipe_id']}"
+        counts[key]['total']+=1;counts[key]['eligible']+=r['regression_eligible']
+        if r['regression_eligible']:
+            lo,hi,tl,th=(.84,1.56,40,60) if c['impulse_type']=='LI' else (200,300,1000,4000)
+            counts[key]['shape_pass']+=lo<=r['front_us']<=hi and tl<=r['tail_us']<=th
+        else:
+            assert all(r[x] is None for x in ['gain','front_us','tail_us','crest_V','T1_s','Tp_s','T2_s'])
+    results=json.loads((cfg.ML/'results/simulation_v2/results.json').read_text())
+    selected=[r for r in results if r['protocol']=='grouped_setup' and r['selected']]
+    baselines=[r for r in results if r['protocol']=='grouped_setup' and r['model']=='physics_only']
+    choices=json.loads(cfg.MODEL_SELECTION.read_text()); test_ids=set()
+    cards={}
+    for route,mid in choices.items():
+        card=json.loads((cfg.REGISTRY/mid/'card.json').read_text());cards[route]=card
+        assert card['provenance']==ProvisionalAdapter().provenance
+        test_ids.update(card['selection']['test_rows'])
+    rng=np.random.default_rng(997104)
+    held=[r for r in rows if r['row_id'] in test_ids]
+    idx=rng.choice(len(held),min(512,len(held)),replace=False)
+    sampled=[held[i] for i in idx]
+    # Unsupported cases were excluded from regression training. Preserve their
+    # screening behavior separately; an attractive scalar estimate is no proof
+    # that the real waveform is clean.
+    bad=[r for r in rows if r['status']=='SIMULATED' and not r['regression_eligible']]
+    badidx=rng.choice(len(bad),min(64,len(bad)),replace=False)
+    sampled += [bad[i] for i in badidx]
+    scenarios=[dict(scenario_id=r['row_id'],configuration=r['configuration'],setup=r['setup'],target_crest_V=r['target_crest_V']) for r in sampled]
+    screened=screen_batch(scenarios,cfg.REGISTRY,cfg.MODEL_SELECTION)
+    truth=np.array([r['compliance_status']=='PASS' and r['regression_eligible'] for r in sampled])
+    accepted=np.array([r.get('predicted_scalar_bands',False) for r in screened['rows']])
+    reported=np.array([r['status']=='ML_SCREEN_ONLY' for r in screened['rows']])
+    operational=dict(n=len(sampled),covered=int(reported.sum()),abstained=int((~reported).sum()),all_with_abstention_treated_as_no_accept=confusion(truth,accepted),
+                     reported_only=confusion(truth[reported],accepted[reported]),unsupported_waveforms=len(badidx),
+                     unsupported_reported=sum(r['status']=='ML_SCREEN_ONLY' for r in screened['rows'][-len(badidx):]),
+                     unsupported_predicted_in_bands=sum(r.get('predicted_scalar_bands',False) for r in screened['rows'][-len(badidx):]),
+                     warning='Surrogate status does not qualify waveform shape; final physics is mandatory.')
+    # Timing against both the current fast solver and historical reference
+    # solver. Same fixed input subset; no cached simulation labels in timing.
+    adapter=ProvisionalAdapter();timing_cases=scenarios[:128];api_times=[]
+    for _ in range(3):
+        t=time.perf_counter();out=screen_batch(timing_cases,cfg.REGISTRY,cfg.MODEL_SELECTION);json.dumps(out,allow_nan=False);api_times.append(time.perf_counter()-t)
+    analytic_times=[]
+    for _ in range(3):
+        t=time.perf_counter()
+        outputs=[adapter.features(r['configuration'],r['setup']) for r in timing_cases]
+        json.dumps(outputs,allow_nan=False);analytic_times.append(time.perf_counter()-t)
+    phys={}
+    for solver,limit in [('modal',128),('Radau',16)]:
+        times=[]
+        for i,r in enumerate(timing_cases[:limit]):
+            t=time.perf_counter();out=adapter.simulate(r['configuration'],r['setup'],target_crest_V=r['target_crest_V'],solver=solver,n_points=1600)
+            json.dumps(out.metadata,allow_nan=False);times.append(time.perf_counter()-t)
+            if (i+1)%16==0:print(time.strftime('%H:%M:%S'),'physics timing',solver,i+1,flush=True)
+        phys[solver]=dict(n=limit,total_ms=sum(times)*1000,mean_per_scenario_ms=statistics.mean(times)*1000,median_ms=statistics.median(times)*1000)
+    batch_ms=statistics.median(api_times)*1000
+    benchmark=dict(batch_scenarios=128,batch_full_api_median_ms=batch_ms,batch_full_api_repeats=3,
+                   batch_mean_per_scenario_ms=batch_ms/128,physics=phys,
+                   analytic_L0_feature_baseline_batch_median_ms=statistics.median(analytic_times)*1000,
+                   speedup_vs_current_modal=phys['modal']['total_ms']/batch_ms,
+                   speedup_vs_radau_per_scenario=phys['Radau']['mean_per_scenario_ms']/(batch_ms/128),
+                   physics_simulations_in_ml_batch=0,
+                   scope='Local warm process, artifact loading + feature construction + OOD + prediction + JSON serialization included. Physics includes simulation + metadata serialization; waveform serialization omitted.')
+    evidence=dict(dataset_manifest=manifest,counts=dict(counts),selected_models=selected,analytic_baselines=baselines,
+                  operational_screen=operational,batch_benchmark=benchmark,
+                  measured_cpri_traces=0,hardware_verified=False)
+    (BASE/'evidence/phase2_results_cached.json').write_text(json.dumps(evidence,indent=2,allow_nan=False),encoding='utf-8')
+    (BASE/'evidence/phase2_batch_screen_cached.json').write_text(json.dumps(screened,indent=2,allow_nan=False),encoding='utf-8')
+    print(json.dumps(dict(counts=dict(counts),operational_screen=operational,batch_benchmark=benchmark),indent=2),flush=True)
+
+if __name__=='__main__': main()

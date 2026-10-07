@@ -1,0 +1,5299 @@
+{
+  "status": "COMPLETE",
+  "result_id": "recommendation_f01c7816e04732c07dc1d3ca",
+  "files": [
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0095ee9bbff7270c.npz",
+      "sha256": "70415d55331fe15c08ea1d8e5cd04496a2c8f8fc38711a6b8567d0590fccf018",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_00f7d1f3fdf43de4.npz",
+      "sha256": "6b7326163caee7a5928b12bea726434fc49a868f442bc0aee43182dca9c8bdd2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_011434d7403c8865.npz",
+      "sha256": "b5ef43365ba25b5aeab4aafe59bd02c6fb8353c6520013d512410b3198c8994d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0132e05dd0e6b9c2.npz",
+      "sha256": "6dd28cb5d01a7b4ff65239a3d4d8bb155c2536ed5ea06c3123a31c827f634803",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_019cef1e06bc3709.npz",
+      "sha256": "3b91698e573f3c4c9d78dd7845d96ef7f342c18f3825e223472b625d175fd03f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_029f4d1e0f6d3f74.npz",
+      "sha256": "0374a2c185aa97fc771be1d258ef6a6cdbb6e8ce0787534c29df0ba228c6be07",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_02c6636e47eb1804.npz",
+      "sha256": "53addf19e1af9caf29668f804b5e7f545bd63b53e91f4388daf3d2d068ee9e77",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_042b70ffb20eec5e.npz",
+      "sha256": "f60370abfd99a5d0619088b84a821e835808a9c98df956d8398804057bb54f33",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_04a219034ad9cdb1.npz",
+      "sha256": "703d6e673f3a34ab44b97502d766254b16d2fbadb70d21b634d63e7364d5f357",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_05fa06ae097b6b7f.npz",
+      "sha256": "e61c341974a1213cffe965c1fed864b9ba4b2b7ef49033392c1585c280178b86",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_062d642e9a406ffa.npz",
+      "sha256": "d3e0bb83128da5a7674875e9a674840c9c85b852e5fc4deeb69f3f788d29efe6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0639be1c0de91bda.npz",
+      "sha256": "81169d288313295accc647f6cdb922360fb2df6492cb4cd7718b43b07cb1aa49",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_066564d2e5b23592.npz",
+      "sha256": "28424eded989c82d4f7b5bc3355bd1a00f588d489b8154e532ca051210f7fa9c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_06e559a661e6a7e5.npz",
+      "sha256": "5cbdc06263c6180c17403df666427860ea1cbb28118db935136ccdf845904987",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_06e9c6512dea7f45.npz",
+      "sha256": "336db520ff8eeb5d8186fe065418de30ffbd064f4f0d6eb8c6741450c2c1ef7c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_077f01c5ba600926.npz",
+      "sha256": "2202c35eba2c7c0273d0f44810944a9effb7c9a20e44048db379b3a2174ca5dd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_078543b24017d794.npz",
+      "sha256": "777cc2f836e7006512a7b61777ee11827c7ce957cfb6360d7d4083f5ec1c0028",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_079a5a52f6897600.npz",
+      "sha256": "225474303f3b323805dbfc4bd68bf3b278272685175b49450c69a5e12a514be4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_09082423fe5c79b6.npz",
+      "sha256": "df773cc749074774c8a07fc86af7303f3ee1d4f058b25bbc5c630018ee20381b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_09148fba54a6672f.npz",
+      "sha256": "d63bbd2a3edfa6dddd14740f1b32a5b314cc934261de2a8f97ae5731b532ab37",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_09277ff9623e4e66.npz",
+      "sha256": "23ba832f0a0ef8ba4378e728a7df9e00ec7b0a8d23ae3e6a4bc6f0434063d942",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0b57484a34241cba.npz",
+      "sha256": "1a64c563e76c6c9ed878a2ed389f1e37cde060164148a06a3c79853a090a91d2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0b9a6e636bade54a.npz",
+      "sha256": "b18833346a36bff7c7eae32cdc05ac1508c654db65eb6f007bdf7674ce2fcd15",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0ba2631d304cb5a4.npz",
+      "sha256": "e31b4d98fb72fe15c53ac5ba5ce95d72d3546b7d94d2d87d364d54b1e3872328",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0c125f9ddfc340de.npz",
+      "sha256": "26e3937f3140b56738fe3030cf9533c780a3d1be4150843c4647a36675413a6e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0c5b840b7ed16be5.npz",
+      "sha256": "d8307c1b292dc26326d7d7b3d2937b72f479d94ca058c18136fdd44b3da7a3ff",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0ca7ed2c137b05fa.npz",
+      "sha256": "899e43ee1578b0a9aad7fc695e6594414758805da3a9e848a0cdabc1a52a6e27",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0cfb6ac91f210d25.npz",
+      "sha256": "f9a2aa2dc7e9855374591720d5c01a44e19f2f1b0d11b1263fed7bce9aaccc7d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0d7a7725dd31efba.npz",
+      "sha256": "9c2d89d1d8cf283f99fd89a0c961dc52b129de29fa0abbdfbbb5cad5f99c0d32",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0d905047b2d57e40.npz",
+      "sha256": "13a23eab3114e3224459a407c3ec88776a7220b1ef71a32205963b88c9d443a3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0e11c05da3c9e2ed.npz",
+      "sha256": "c0cb2616edfb3c2863b39ebda7ce91ea50c7c84a9a2746cd449ccec4b2153b4a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0e334cd7b73a1531.npz",
+      "sha256": "ed03ee0d0df4459b112bc28885bbbd4bdd047aaf4def26236674577d0349feb8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0f0e780f33f1297e.npz",
+      "sha256": "c3f04f092fc4f1b4952537c6f23d8602395cec0d1d8e1eaa30cd7344af218b86",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_0f39d4e5c6abcdc6.npz",
+      "sha256": "df6f397ee849b4d1cf29fdf4cf3ebe881f0fedca36253ceed1446e375c91c5e3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_104c59e41218c545.npz",
+      "sha256": "f0300e060d46edb73bc2c796d75f137442506730ca02ab5286f92cf092b6a388",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_10b0cb379d165606.npz",
+      "sha256": "7c3f428a8a177b18c30d3c8d134f4859c2f2e4e0d8a035a2204d81dbb163a282",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_113bf5d982403ac8.npz",
+      "sha256": "59ca2cd57335c3b01ea53c58ff614589a58c29808442f461f305ec82ca2bd4a9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_118ede8ff6eea3e7.npz",
+      "sha256": "0541c1f9093070ecb9f7d3baff7a1376059f4862d031cc0727b16ef75db9f20c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_11c363387cda857e.npz",
+      "sha256": "a655c1567ce14bb31d04b4e59de148605b8efc449e8f28bd0269d38bc9124e0f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_11ef3435d1a461cd.npz",
+      "sha256": "3357a27dbe7a7b818d0130b8ecc80329494bc94b4005ef7b16a0c8637a184b3f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1236dfa9170ce73a.npz",
+      "sha256": "63919875eb7898a424430ace941735ef1c3990afb7a36d08c5910aefef40ad25",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_12abbcdf782f49d0.npz",
+      "sha256": "1a0c20282b1b98c2fcb21f367a1556923942d7f33bb2b84ebe22b01e165eaf83",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_133a15b76a11db48.npz",
+      "sha256": "71e3c7607d88942d268943c5af081cdd9f7d831dc0db114c17b18e1a2b267df8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_136e715c72c6c029.npz",
+      "sha256": "0e0cff29ec4e6ee5e1f70983867decc818c01c1603eab8d09c06fd0d49203b27",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_13c50955ba6e6713.npz",
+      "sha256": "3d8606add516e74914c5152efa6a36f24feda0892aed4fd9e16b31821051ec75",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_13f08f6831fc6578.npz",
+      "sha256": "0e8a85840dababb7cb7bd49c34a95aa8887adac02e82466b75d3d472f2aec58f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_14816df13fe9595e.npz",
+      "sha256": "30e14a10f1082d95ca0ff09e2154dd9f137d2293614a1fe397d0e60d9437223c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_15d7d372c50f4492.npz",
+      "sha256": "7ea9d69b8741c5cb28a0cdf1ce4fd46ae30aa6ef4958a38f277a002d847ea882",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_163e5249e8889026.npz",
+      "sha256": "3f755f64d2086cf847d5bf68df8525b99b26a32a0da5a8bf0147b4e30747eee1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_16584caf7a383bf1.npz",
+      "sha256": "2023a44048e4f319ef4778eeff70f2a21f2e4d11e10c90b206c15019b92cf8d8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_171a02d499044b8a.npz",
+      "sha256": "8e3cd34696c6cab314cbae88eacbd6e9f932f763e3916936a5133337ae889579",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_178c4475fb947127.npz",
+      "sha256": "e1539046e9ff48c268f2c3590ef9a3a73354dd9dc2c6947b2896f7332c9b8d7f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_184f279f13a31ee2.npz",
+      "sha256": "46c3eb756023ad793ce13f5977d015fb7cc0bffc65dcddca63d49de6fce0243b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_18796262dbdc5431.npz",
+      "sha256": "5a207ff2f5d50e0bfe31e46ab045706559339bd6f140f432fd745dc45fd430c4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_18803fbe9887e614.npz",
+      "sha256": "a2a455884544f93faa5cdd173fcf59a40b0949cd4317719d422226853c5b69c4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_18ad256a65aed8af.npz",
+      "sha256": "cfd73576f21786642867a5107600eaa8df7c0c2e97f28a4615565284b3fd19b9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_194186e3165298f9.npz",
+      "sha256": "65b040b8185342884c34030d87719ed6437d769fc8b7d48e2492897610e11b98",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1953a839f3004932.npz",
+      "sha256": "a3103f2fafbcf21de9f2a8f731fa303a45389ac8e5b4bc57da73156140f3774e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_19a1d572d8398f14.npz",
+      "sha256": "b3ed4f96a913bf6281ca5e58743f090a4bda4edbb4b0730bf5f51ecaedbc4861",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1a5756b93329de3a.npz",
+      "sha256": "a15ee0b1cb8ec2f5c776fe0d516de68ab1122a6c0032e4ce47b43dc366c95f12",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1ac34694dcdd9f75.npz",
+      "sha256": "f6ba9fa211f60b20e1e9e7c5f35211790601fe0f0079b381e815f85d555a91da",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1b549b158f52eb4d.npz",
+      "sha256": "8264b95b0ae3cf0f54daae3e98dbf01c3347b2ae6aa7606223c132c49b815291",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1b616affcac5fbb2.npz",
+      "sha256": "e0616de58afb161cf51731c82dac81f19f6abc65c545900dfd4ed71a9e8c240a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1b86a535e0c3c741.npz",
+      "sha256": "813ed59d70fb4419645898846b8c5716a99dd655798fc7763f6ce215762aa38e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1c1ab42f37363091.npz",
+      "sha256": "cdf52407a1e89cc0fbbc6bdb72e15499e45482be488c90fc1c1d937eebdbf872",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1c2e33d4d201d012.npz",
+      "sha256": "7a11d0357ae0bb16356a1d3d16009b20729515be5fd5fb4bd9c145f8cf39dfd2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1e41f1e47571a378.npz",
+      "sha256": "57bbf33f13bd5f961aa9940800d95476803bfe8f166a3c74d08429b9358f4e81",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1f13f64fda85193c.npz",
+      "sha256": "0c059de51ad1342ff22722c78d939c0118906ebd77ca3d5835142e51c9dd18aa",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1f4b5d27bb9631a4.npz",
+      "sha256": "db2849c7828a061c0d28e75fc6d0c2820ca25e7589b1587189042e658a3751f2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_1f7920fa38cd92e3.npz",
+      "sha256": "91a90d3923d3418df1e15170d264c068baf8a76f3ea1ff4de33e619dd47a75da",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_208fc51e2fd1453f.npz",
+      "sha256": "23cd7456b6e07d1b55da78b4c85a329af04bed2cbd1648545f48c2a21d73fe49",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_20d209047d4f50ed.npz",
+      "sha256": "9edbafd22815efcf30a81cdc46e5a15c5e7fff32e5818622e116361f338b2ce0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_20ef27dc1e25f42f.npz",
+      "sha256": "6f42d71b023293a6238db79d409e529afc392d0834ae560e89a552589886d303",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_212f9e742e746234.npz",
+      "sha256": "1d07327d7be359bc841e01b17c397e0d84021a818d23324b92d6825d7b9d6699",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2143b8ba01dc8c59.npz",
+      "sha256": "7fb349254ff9bcf0e5f431e70f9dbf284bf60284d67fbac55486f9cf0d6b7c57",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_21696a68244daa40.npz",
+      "sha256": "7933492c6370139afe2cece26a6ed9f3ca2872739ad2cb1642550a346744de82",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_216ca3bf306d2224.npz",
+      "sha256": "557ee752524061cb51503547941e1feb57125a0ee40a8ebb297976ea345522f2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_23204a1a8393f245.npz",
+      "sha256": "edfaae53989f7f4558aab1fa43673d07ecf966adbb2278bf47659012c7ca2439",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2389ffd13f5822e7.npz",
+      "sha256": "0b6086162dee93e4c0c56766add5d08ba035dcc27a8159dbc34b02858cb8ccab",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2406b8b34521ba62.npz",
+      "sha256": "ac34f40e8f147640b13d2881eb9a88e56111fc051e4c0ec352010d3babd83c71",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_247bbdc408724d7e.npz",
+      "sha256": "042632cf3f8fb91a2635a9c79e00ff9c2c149a51305137ec5ad9e5e466bdb3e3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_25923c4a25b7bfd4.npz",
+      "sha256": "fead4bfa07c92f0f2161a93fd7074cefb749b308db80d32778b1517b7393ce45",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_25bd427cb491db03.npz",
+      "sha256": "c773d2d0d0fe8a86921d2a7e4c2fe9e013a8754d9d00f36d0c04fffe783b38df",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2629053a22d9f179.npz",
+      "sha256": "f66ecb2e7a23d6d39781b7f76fc909b2a862fa475bc1fc735a91bc4614fffd53",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_263076d3719740c1.npz",
+      "sha256": "7c9b2859917b557f2910382443c4b02dd0a5379e20247d48f96d2e2489eea86f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_265d21a21a0d0520.npz",
+      "sha256": "4455ea41202f0390b449463cffae74a4cc3bda290ae41617d9965a533cf4f094",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_26f7ff8e811049c0.npz",
+      "sha256": "ba7e674abe467388dde861ec221c199a6f02a1c4b3d6c69dcde34e423163fd57",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_27a1943c3e30ee15.npz",
+      "sha256": "05d7abe272456fe01b28af103087da00d1b5ea5073b1b2d5b299ffcab794710f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_282df4b3ed5580c7.npz",
+      "sha256": "26bae95fbc2e3cb51f029e88d139cd0633bea35bbb4a4cdf9f0465a9cb3c0ae5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_28642f88c47da4c2.npz",
+      "sha256": "cea7bb3db9a0c93a0f24f47f14224106d650100c676ddbbc0a15940383b10207",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_289f43f54a56e2e8.npz",
+      "sha256": "b191b6169581baea39a8e8009c40abb4b0a78435a3184430fa685575ee73cbb2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2933a8fb39308d52.npz",
+      "sha256": "abdc0329456f84ec39278461cf3211b74cbd6ae9d872ee0e7c76ddc62606c0bb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_298d23550eeb0bbb.npz",
+      "sha256": "a22bc8e164cd82b6d9c498c8616d9296f1fda7bb5ad41c4daa167f442baa7948",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2a130f4606d6310c.npz",
+      "sha256": "730da95ca1b644225a4543fb4f11e1dfeede09d9b3e1e918eb29918baace50fc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2aaf53c18bbbbe1c.npz",
+      "sha256": "561d08000acbb5132b8b1d72b0d61d8a60be96470dc7d42bc7dad5dcab4ad5ad",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2b10d953950eb83c.npz",
+      "sha256": "6d90c0bf59c8879387adddb807e2acbfd15aa6f808f833343ad9788b85f5211d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2bea167a77660ccf.npz",
+      "sha256": "ddc4081b83b930f4304a4014d8a930f3a341edf98f3ff1763802aec5aaf3be6c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2c126baf2574eb33.npz",
+      "sha256": "dcc4742ce8ce84116991347acd7b3f32f6332220cea70c9ad725847c7bb9a6b3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2c80ffb0befe92d3.npz",
+      "sha256": "98e9019cb8a16bea17d90bf712e26bcf8e53a60db161528b6b7c44b7f95f2f15",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2dddaa360ea5e0b7.npz",
+      "sha256": "51c53d083ab28831984c431a595f7f5cc1298026c6143da4f05143f7deed91e6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2e0d23a06be66b97.npz",
+      "sha256": "0fa9e1d9bc2d671efd9290ec27d9cc86a0962c3a14550d67eed69a923aa1e6a7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2e75317f50e9963a.npz",
+      "sha256": "9f079e61bdf3ae2f7a6f3f9b527d51a3de6dccebe11cc98df745937761008edf",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2f07c9f1efaf10ab.npz",
+      "sha256": "591b72bf53827650c88d77d71a8a8ac1db30ae6cdf43a5f9c9b9f85e6dde3ad8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_2fb4fdb88e2cf8a1.npz",
+      "sha256": "10969a977f10bf88d4b34e5fc81fa62383baf6895e82ec99f9d217b19e388b8f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_318ca1fa563bf264.npz",
+      "sha256": "8bf02f481454fc8c91b171076e25c4a3fc291e6fdbb35240608dc32c3dd2d09b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3196d3e1c7830998.npz",
+      "sha256": "b8cbb79388eb758774456af1fcd0332c4a60121f667b7242ccdd091345b90935",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3213202e68366491.npz",
+      "sha256": "6acd437d6ccc9f5ec24b8bb835c1dde42e5b8dad9be0c9dca154960f2a307b5f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3238dd044fd28a6b.npz",
+      "sha256": "21a073c528d288f8d7cc89f9a917ac87c07a6991be55fec13445793406a1f71b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3348b1e2d8fbe520.npz",
+      "sha256": "c50d1b27102b429e5c0cc9967ea711fcc23a2f108e1f726b7d4d6a4b5ea38c71",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_34d9c63dfc2435fa.npz",
+      "sha256": "0c53892309bb887df7fefafc484e5870213067333c0d41b565a2688ecd23e4a6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_34e423df7bc79cf1.npz",
+      "sha256": "811e3096717b7ac94935c138065b334f40689c894d812e0c62102165618b3a3a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3564174aafd6fae6.npz",
+      "sha256": "9dca3752841cc159b60389fb9817f4a70a61b2d3bdabc7a588a9c46c82b4b1fa",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3626dfd55467709f.npz",
+      "sha256": "d7802a7f8b52bd0eedb39fa9d0e28c56b9cbb4337f29437105206abfae2cb641",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_36273b5d6d7aa1d9.npz",
+      "sha256": "f13948ac87e701a1b03375f1f9171b4df7293b1513a0e1eae946b4fb77eb741f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_36364cf50fc71630.npz",
+      "sha256": "e1692cb1dde94ee13b6191c2eb37b28c847e8988521b78ffbeed5f6403593f26",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3662a7c78d92be04.npz",
+      "sha256": "ddacdd96bae4b6741c453be63d693568870c4fd4c799fe5ca775d5ff671b8865",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3716382c8eff999c.npz",
+      "sha256": "b0430160cfa6662c7a4703e562e53bcf81f85d65c7b05a1f2b7f3baadfc72c7a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_372ee71e5dc5f736.npz",
+      "sha256": "8d4805f4e3188c935f48207c4a3441f309c70b2c6324e89af99de601d64f52d7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3754ce6cb55b96c7.npz",
+      "sha256": "504a011a01721ffb59d0642e5b948d80832eb1142b32ec5ab9ac0985e4bf28a6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_386337c8bc28529e.npz",
+      "sha256": "ecae1fe8718d7673b5711a940dd146f5050d61e77329e8dde9080c788d7312ff",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_38ae1226c19f4e4d.npz",
+      "sha256": "9624d70dcec5e007b1a60e54beeaa268156237f93414fa0e5d747a79582a724b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3956b17477dddaad.npz",
+      "sha256": "6e845ce77a4e6fb348fd4bce1987a28b2f91debe21558aa6c9b88d5f657e62d7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_398947b7d4492f88.npz",
+      "sha256": "a3e5bed0dd9d8ad4aea8b75916089efa43f30cad22961ae17436a96396678fd4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3992c8e0d7c6e77f.npz",
+      "sha256": "673db2171e97378aa48f61845a7713f1b0c2d791cf94520a644292a579976ec6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3a0bd606dbdecbb2.npz",
+      "sha256": "f5ab1a21688228421f0b393d4f0dc5e31cb9814b0cd2969a1dcff17bd3b34133",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3a52fcf34bd7bd2a.npz",
+      "sha256": "333fd5cb4427cf14ccd1492002310fa5080899ff90e96e765f197baec56a0037",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3a737de9171d4ff9.npz",
+      "sha256": "cd053e73fa86cd3f92dc8a7c098e033642b53d4acb506e9309f2c67a4f2c69d4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3ae4c4c5324c7978.npz",
+      "sha256": "1047e4030990e235c4db01233e9972b4fe17eca695cefa87e2412abf7d703dab",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3affd7f09cbfa7a7.npz",
+      "sha256": "3324ad2834949eeb73c4589db39cef39e02fe73f6ed6460b4763464a9e875756",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3b842286a1146192.npz",
+      "sha256": "3f2b5ef4c951052b6c3fe88d10581884a85d8cd37c781807bd15d6cddb7a3b3a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3bdc76429c3dacef.npz",
+      "sha256": "b011783732e05789cec12d49be7331a4e7528deb853e862a9166a84a9e842fe7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3c46c0f9c9adc095.npz",
+      "sha256": "973ec410acb6b34620021ffa423cd837abc7cadcd91560e1f7e7a6cdf4f1a011",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3c5deeb0a5a588a9.npz",
+      "sha256": "7145a00a0838668e71134c9d9156fc23923f5305f17226684ea4887584ff2c91",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3ccf6166cede9341.npz",
+      "sha256": "240b997a26095216aad7b16c0d7a9be214d364ec297962b7c00d53e271f7760a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3dd84e8e7770c983.npz",
+      "sha256": "e3a162eaa1f6f8ccc2d72132dcf233c7007c78962b2d5db19401a7e26b5ce99d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3ee70634769f38ef.npz",
+      "sha256": "f4022a115a4ae97c7e3a56514ad8a0da41dc4299f0ceb2ae9d7a43d712e07dfd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3f0d6f42e00616cf.npz",
+      "sha256": "9386225a8806068f00e6adc219d21fc18f4b1574aa0ef3d7e06b03fbd1c13038",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_3fd85853bd000037.npz",
+      "sha256": "6d99af0b01a74c8777790d81c682ef1a9ca411fc103527446a7173eacf6fc558",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4021d898a098ba8b.npz",
+      "sha256": "6b4a75cd38c5aad681360bfc2568b4b665f396a7797f121ffca9ff1992272a6e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_40b6221f60243351.npz",
+      "sha256": "27ffe5450c34a3da2854b23a7284cb277f9abce364025511fcd9b4571f62a385",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_412f27e05598be38.npz",
+      "sha256": "939aac8f80789f96feb00c77dfcc35654bdcdb8c9fcb479282206174e0f54a3a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_413e45180eb8207d.npz",
+      "sha256": "c0cde35656807f86727a447567a8d27f234b00382066cf6d2fc148c1912822ce",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_41a762edad9f6e4d.npz",
+      "sha256": "20b078dabe79c2d2413e45fde3905b0abfb2e6da141da74d63cb20aac1d1bbd2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_41aea6e4409e987b.npz",
+      "sha256": "2db689720c1cdf4b6cc0fb2a377f4163b316749faec6b5052217344782de979e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4392b01bfa981bfe.npz",
+      "sha256": "217adeb9f4e30f13638c262c9783a7b2384eaa4a69983bf281ff3b569c67f3ab",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_43b364fa3de261d0.npz",
+      "sha256": "dc20c74e02b6539d341c51f443ad5b8203f4560664ada3adcf4a0b32eb7ec583",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4404e32a81cbba02.npz",
+      "sha256": "a3b0aa6ab3a7627ef65fe481db0989e807fe05bb091fea163c05e608bd7de10c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_445595c505280549.npz",
+      "sha256": "5ddd115b8e218e2f0b665a3f5ff91e9243027e87458527f1c2244a618b14409d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4520d9a62993e26f.npz",
+      "sha256": "ef5b6dd61d50ceecdb6d2bf57951b799fbdcdcaec146496a0db965647875a5e4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_45fa09d6f4341bae.npz",
+      "sha256": "c34d07eb672a8ee23106848fb46d42e62656d6820daab4be84aae51d00de21fc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4691d1c85a59bf8e.npz",
+      "sha256": "e9ca204439233450e330b252b42a8648d69a570c00307fd10d2a19da2ef628b8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4718b46e59f9dd66.npz",
+      "sha256": "3b67d9a6398ca9bc51bc7cd1ca836ae37e236cc6ef96130c86659c3d890745b5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_479e6d950a7f7725.npz",
+      "sha256": "6a85ce8f2c9235a7bdd29b2d3b259ad37c072007d1e2052b3736c46c85897a6d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_47d54e5ac7a0db6a.npz",
+      "sha256": "754a2cac6540c1633e2f73c4b96b818ba3a6012fd52e4bc6e9720457f3c05c78",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_486946731d57796d.npz",
+      "sha256": "d3a0f7ab9b70982878b673e15d5e276d418c7bbabbd59925e57c01e436ae871f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_48ac590db46441a6.npz",
+      "sha256": "ed900e15081350c5831280baabca7e1b3a783bace99cdf1597d3bb1c2636fbbf",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_48aefd01dc7663a1.npz",
+      "sha256": "dac440682fe4b53bcb4d35101bd1dc349b153eb33dd4f3cbaf97b11d9821396f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_48d890e968dd9005.npz",
+      "sha256": "cd12d8ce33853e04686e5dc98823c26061eadfd5080ac99c9e31fafefe35420b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_498ee8fba58ac27f.npz",
+      "sha256": "3c56acc535cf7ec4b636e1b746584ae1912defa6670103978c29c84ec38978f8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4a112a4f932bedf2.npz",
+      "sha256": "c769493e79c17b2009e3b71f0d364f96a878bbc2456b58a13a1423596bb02baa",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4a653561cd83297e.npz",
+      "sha256": "afca31b9765ea6fc27e500d4665944b00b3cd00bda7a358d1ff777214afcfdaf",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4a69e603152a45c5.npz",
+      "sha256": "95de24d08e16dfc4a50e5d6c512de06b7a9fd58c2cd92ebf4ee8a91bba18111d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4aa9f0d92d7caea4.npz",
+      "sha256": "85ba228030deb1a1c42091c4630e62c578cf41bd0d96fc394dee2f9c43feef27",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4b21377564a4a0ea.npz",
+      "sha256": "51fe6d1a73097b5ab26a6acbd1bc1033ba6fd3befbb9e4cbf08cd5f3f1bd617a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4b648e0135497805.npz",
+      "sha256": "9fc11ebe323deda72625054a750e0e2af44c053da1d6a04d5fea5fd852380c79",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4ba20f8dd4afd4af.npz",
+      "sha256": "cadbb9ca9a7ec42b2af8363753b001fd75161b7bdb018bd6733ad17c52ff6c06",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4bcf043c73eef6c8.npz",
+      "sha256": "f01b818b8ea9e3c8d7e05bdb86c46d98aa0aec086c8d56a3905b4f11e6a63b29",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4d3e0006b66aa52f.npz",
+      "sha256": "21d0c006569d9876d2ce3cb70450158c19676b382618bedeafadc49d72f29e45",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4ddd3705dba09533.npz",
+      "sha256": "6f097dec6fa2e5a21c951255cc1b009decfa01a629e38937945e86a0945a9d85",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_4e8c82c7e9601848.npz",
+      "sha256": "c97f3ef8e0f2366508a85b62354e55166064dad854430cee59221268f78bb269",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_522c9f4bfa794528.npz",
+      "sha256": "607420b0a3ecd437d11c84fd9f3b476c2688ea7d246d3565bfe1150754788c29",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5258d9a1cb940684.npz",
+      "sha256": "cda0cbe4f2dc4623a59efac23148df76b8a3adb17098350141fc78bc168052f2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5294bc71f03c414e.npz",
+      "sha256": "d7c15416178c0e014244b6b3e6bf65e8f31b83e7f7c83818685676d6feb01b19",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_52d0374af899931d.npz",
+      "sha256": "1e606aabe6c077cce9c327fd23b68e764a4c3a6c5d19e17967be5b6a31ab011a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_53b076b25da931bd.npz",
+      "sha256": "e462bc7a42d574b6f7f9e34ebcbe397b895f5aa05dfd95199135287cbcde0f97",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_53d9fae8eba576fb.npz",
+      "sha256": "6aa4bb474daa444cd521810cbf847f83b0f7513d74601abb6538684d70a7a52a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5498fce8b6ffff14.npz",
+      "sha256": "3476f7f80f362e91155ba0ab13d016473cd04ba58204528e75265c6db87df4f3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_54e0b81dad3631ad.npz",
+      "sha256": "ab478992a070cd9d0924f406fb5a44d1fedd0eb97023708f67299adcd84b6040",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_554b7bc409b0e7b4.npz",
+      "sha256": "ea260d10a6a2b129f92054426fed447910790cf11a62cd780bee21476f5bff3f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_568f2a71209b2b04.npz",
+      "sha256": "70b9a92e3617cef63c90dcfdfd739045b6887def334793da940bed2d1a7a1657",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5732797e14af7229.npz",
+      "sha256": "6aa8b1cce4e04a705ce170b51c4f4de4b2c17b29ae8fd7b2712d77834f46148a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5760b9cd4e0f6122.npz",
+      "sha256": "737b7c2ab6d9d4c29034f66680ab35d410c2c714455bce94454e25459eba7ef1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5767afbdc83485b2.npz",
+      "sha256": "f85ac61642dea917db7a592221f03a722ba78e26aab43a16acb78759a7e97735",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_577e759101f29396.npz",
+      "sha256": "e56fb1114769a48567504455e4345e30014347c19f4f06cce686d6a132e4b1d5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5796690ce6d7f61b.npz",
+      "sha256": "0730ae7b20879bca5913c69ea8b62877c5dec093b093f9903a4756c1a403ecd7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_588058ccf9cad960.npz",
+      "sha256": "d0eb386d8b52bd827bf4a7a483d74264ec1b819533b62308d5be31f8a1dda14f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_588f6ec51970b3aa.npz",
+      "sha256": "cbe3e2cc18afc88154938fadf5aee2394e53b2b669b869a525b464ded0b08bfd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_598ad37ab100c492.npz",
+      "sha256": "2bb9192e058c10d4fedbbffb2e06368339999acb41261bcae0b94d8af0e27c0f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5993fbe22a201501.npz",
+      "sha256": "9042e6a60707c4fe596872bda42d941cc0561357256407419fd9f51e9600f045",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_59e70be78af21192.npz",
+      "sha256": "c62d280ce6c125e3bdf7cecf1ec810565a53c7a0b1c7066767ba298c2a4ad67b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5a920e31628c204b.npz",
+      "sha256": "52002bf08e142cf73062539a25444c066f246012cf49b7b6a0487c3a2100f4fb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5b867d58bf4b6fd3.npz",
+      "sha256": "f246ba0c15d8a1a16dc90d693bb02b6e82bd84d3f4b5eb4c50b579427c3b495e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5c082ffa33e8161e.npz",
+      "sha256": "501417e73f6ddd22fe0503d93064f95458a0d20816dba315b1092556a39e85b1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5c162f4c07e98107.npz",
+      "sha256": "6385a024978a3352e0b5b772dfe0c67d9df7537910eeeb8ae591b58c553d2e5f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5c9754937dec25f1.npz",
+      "sha256": "4a0a4792121dd53653e2c816f451a420f4a17a5bc926c4fda755ea2cf4fc77dd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5cb0114498367351.npz",
+      "sha256": "f3a7027d7daeefee7c92b959044eda682b2ac15f3d5d608f1f8e8837481d95cd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5d5741f6c3d6199d.npz",
+      "sha256": "96ac4d644944f7db8a5880f178c52ac817f38c01727af522697d2a2838085f13",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5e0930907e56ac47.npz",
+      "sha256": "e556e185a88d28e9bc7330a8a9366eb23f66cff9bab64cbbaa17e5f8df5edcf2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5e652060d8c9e3d3.npz",
+      "sha256": "c6d80b3c20111a109ce0b81896c35ec1788fff9af5aa7c07f661c87bc43fb84a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5eac39d2e2df8d9d.npz",
+      "sha256": "74a16361f9ae373bd77b1f2f71725b76d8f3f17cebb32adf1bbc936217ec4e95",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5eb9dd5ad2d442bb.npz",
+      "sha256": "7aff70eab73909f7af9bf17c54488fc5c3c5fc67c8180f2c38bd5e906d100c4c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5efde00ac5ac4316.npz",
+      "sha256": "b3f9297549720918ec2397fd4d135f4d225311175618a2294bda4db01166e801",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5f3c7656b5328c22.npz",
+      "sha256": "d64bf8f86ef6449423ef0ef6049c1683655e6cd868e9059d90078c594eee9e64",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_5fc01f6bdbd4e152.npz",
+      "sha256": "b1807998eedd00c5411df1875b2a7b066c5893b6f93967762b99fac5060ebf32",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_602aba4d0ef3fdf6.npz",
+      "sha256": "c2369d22ee3325aee6fcd6c49b3af32e8b677bb06a4a40ed012d440a673ac7af",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6043166dbf84c853.npz",
+      "sha256": "49f86206da22d33c4429c34e3a1a12a938877ac5b115f03b29d52e1d59ff4eb2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_61d7bc85de364e53.npz",
+      "sha256": "e0029311117625dbd8361840015d480084cc08c9378f9d45f7c0d70d05e93be7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6256a184f733d42e.npz",
+      "sha256": "e04ac30976658456d863679dae2c7455003fc08c53795bff201317c13c25d3c8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6317cf5ccbedbc55.npz",
+      "sha256": "e9e8837a263bd45daa2b50958b9ac6bcd8403928903247964f8c5fd9f9349003",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_63c461579625c4bb.npz",
+      "sha256": "5de410a7ba44f0d294fa3cc28bdad482b8bba31ecc3647359cc4a27a44ee83e7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_647a942bdd2888d9.npz",
+      "sha256": "a5454187ddd5600279a2629a3f86b460c572c94f98c4e5cc21e07c9f9d740877",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_64e1eebc7deee730.npz",
+      "sha256": "57a2a2ed687a5a21471cd6f8d4d53345698871d4d7378a93bb6f108091e4e8c9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_659e9dd91a0efcd9.npz",
+      "sha256": "7f48de9f73ed27b46e0b393586a887716f2575bf7643717ca310eddf6fe676b9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_65a0c8c041cb333a.npz",
+      "sha256": "2402936d6597d70a0774403327993a8a42515d53117dff489d2183de2dd2387c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_660742162ba1f413.npz",
+      "sha256": "ade4b8aed8346b1fe43a893948754f01b5378f16321348a9782e602e331bc5af",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_66b86f2446ba60c7.npz",
+      "sha256": "65dd2bae095ec5841211b34578b4718048b8bf5d975af1eab69571619732db8e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_673387e8362bfb5a.npz",
+      "sha256": "3088af05553758999dd0a5e2ae04e94995939a16be6f7e6662043d39956d6064",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_684fea0f1349834c.npz",
+      "sha256": "1141104a3d6e9e99de6b167ef65edb84c639af70de2874f7d34f83f4f91f6c5f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6871aad53d79b7c8.npz",
+      "sha256": "62cb2cb8a46c280dd77aac283ce1d56e39515d43d43bd2073c01254b6abb4a29",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_687485640517422f.npz",
+      "sha256": "782f99f5e28088279d24a91889929fb44a3526674e49b46ea05f31a2b715c5be",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_68cd2f4171bd4032.npz",
+      "sha256": "80d529069a6d8da000d8478a5a8f5d43de5ec42dd231336e9d90042e4a63aa3f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_68ceeccbb67c4b7a.npz",
+      "sha256": "64942ee12d6c6c8513dc2f37bab14c10cce74497747c0a3af46b67e48161f66d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_68fbc0ada250d16f.npz",
+      "sha256": "f60fad09d7f233215b63fe9e3e990e5b965ef2710e7fd7b4a7c3c9d31574d577",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_694118f41ee429c8.npz",
+      "sha256": "b209692eeb2f9f0e017f8f8496da595028681088e10b08c1bcf620225b41c87f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_698ee91dae77fedc.npz",
+      "sha256": "1d49dcb69fb7dc382c1c9bab780e1137dca389bb36ea5d01307f2eb1ab530720",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_69a8d0c2918f9392.npz",
+      "sha256": "4ecbf0303b02b30371a43cba81fb06dfd7d207639dc49615ad1d0ffe491bebf4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_69e3763cef6577b8.npz",
+      "sha256": "74e356ccfea9c1b8eeded4803b16aac8a59bf1cb5d8a2cc884e39e4e577c456d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6a5367b6b43f571c.npz",
+      "sha256": "4a2b6c0472eb920de6ce9740db75f3ecf61ae31248d25d33965779a9a7489407",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6a8bef30b4c4d636.npz",
+      "sha256": "258e4bcfa68682c799f112717ba064b3304e1a08c0cfe47e8ab34152f290738d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6afa24a7064f2012.npz",
+      "sha256": "77d0b613241d9c1b78862ea0ad6520ea204a7b4ec8e7a0e04c89136418abd7a5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6b6305a7dbbbf2b0.npz",
+      "sha256": "ff5dfcf13dfe148b10bd67dcc6a653db6b5b0e843780744e6daba29e8e5e7bef",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6c4639e0645c425e.npz",
+      "sha256": "7cff58d667c32d7648449775aa94a346cd3dde8ca4a32954414618295160f3ab",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6c85134c352245f0.npz",
+      "sha256": "20347978f90093e7615ad32a294a54ce5a4c74f7083ece8e9f4a3e4f9303b7b9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6d176069c031d169.npz",
+      "sha256": "c10355fe43e330061f798438e29c559ad24bdc795a2a9fc385bc404e062ca13b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6d6b62876be8a81e.npz",
+      "sha256": "35fa9328927e8f488a85bcd295ce0b3d61410c90a5b93663f60c40a7ad157fb1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6d8a3cb6237f37e3.npz",
+      "sha256": "552b1b1433c51bee31276d58dd62e900b6f19c8ee1b5bfa8ebf3f0c2ffcb042f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6db69f391ae9bdf8.npz",
+      "sha256": "6b298f63a475a870a770f97ed7e5f48380efeb826ae44d090e1027b432885b95",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6e05431bbf1dc7fd.npz",
+      "sha256": "aa2b9d1840dc3fb546cd8b134ccb8659eb83991399b693e50d3094f452d25235",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6e1a92d42e6a8de7.npz",
+      "sha256": "73458debda9e1080b3facfd296042b89145abee2b72a740f2db6eb5cabb1bd11",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6e91da2a41e0f725.npz",
+      "sha256": "5960d384e41c8cd382223e29acd0ae47a89591e2e555c22266fe917aa0ff0df1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6ee5ef72fd591572.npz",
+      "sha256": "0844be5d9e7a8a282ee1d131748c1196d8f90d78e96c4120ae2222cbad7f136e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6eef8ddaa9b9699d.npz",
+      "sha256": "b9d71b900f2b2b1efd57e891ef249d4631d3a49ed83029000935a3ddbbcae4c3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6f06d94fe6fdcb5e.npz",
+      "sha256": "148e008161cf5fd8e7f3fb2a0157145a57b9f1a02596f3d18b817090eac5a1e1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6f5c5638d641abe2.npz",
+      "sha256": "74b3aceceed13c455140c1cd91443ef2e5a6b9c7907d5f64bd204f0e6fdf494c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6f9997345d6cc670.npz",
+      "sha256": "dbce2383266fdec28afe01f4696de4f389c48988500d47308f7235f1ee9899fb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6fb7ccad60bbb3cd.npz",
+      "sha256": "c2284f99317bdf6baaec6ef35a7053a99fddf10a36a3ad30f2b227ff33307ee0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6fd02b223339427e.npz",
+      "sha256": "5b5b8482612c6457c9ab28c2614fd0fcae705315ce5aecadcaedecdc256e08a5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_6ffafb30c72eb36e.npz",
+      "sha256": "4280327d8c86631e21827d70cb4f83891e3a8e66db8a8532511c489958fada99",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_703eb009ffb48b2c.npz",
+      "sha256": "e33357c8716f5a2ba5125345d702464d04896ce28381eaa62f29afe9a87c1e79",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_70fc3a7076c60be0.npz",
+      "sha256": "204a23f2ea874201ef6eda5b44702b6c0bd77c05910b7812ee1c44eb87e8c29c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_70feb6382f442713.npz",
+      "sha256": "0bd7734d0fce62e21999a767a7e3fde6ddc03d319f9ada1dafd8abdccf31f048",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_71736686637cc9db.npz",
+      "sha256": "b7b46bc356b7a2511d906930e26a7d5c59923e6f093e3f52269e7770b50151aa",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_71e1aa8f015c1590.npz",
+      "sha256": "9eebe200dfa3f5a09b5dc65e77bb166ec84ecc7a297f9751f31e9741d98273ad",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_720b01e740a79db7.npz",
+      "sha256": "5e9e8b81079d4583dd0f17bcf687ae2a22d6d6656de0d70f22e91226cceba23a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_729d27c0d051805d.npz",
+      "sha256": "83d754320836c8eaf8648829b29bb2a6473dd99f5684259f7e2cb92fc37daf05",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7343c38bca302a54.npz",
+      "sha256": "ef105ed3cfcc5479f26a290c5cba32e4239253f1ae2c98be228ffb3868d20908",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_745381a902a6f95b.npz",
+      "sha256": "242edee84912bdb6d43277ec38718b1be503d0c0c43cc5b50fc8f2c45f3ca572",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_74af0363a03cfb2b.npz",
+      "sha256": "c00587ad1bd35d7632748ec12c6c94b8b33453a63306a9a3b648c3c755b90a3e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_74b8583831770f8d.npz",
+      "sha256": "530dcfc6124ff8b8219af6db256d1c0a950beeac780f5c4c41230f0f995a4009",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_74f77edd69c9731f.npz",
+      "sha256": "30b131c41adfee12a5c8dd50e52ef95183a15c90aa5daecc3bcdac4545f2edbd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_75035e7926de1b6e.npz",
+      "sha256": "a884d98a40f34e8858089a3f6eff9c95cbc113cd56524a1dcca6a4a13bc8a6f1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_75b159803a831219.npz",
+      "sha256": "6156be469668a967f24634dbdd7b01685c741697f9f6efcde1db030794d41341",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_760d885a6bd74495.npz",
+      "sha256": "60777c577f2d84ecc0a9a5a026e914dfeb85bf937f02df8d08d22fd79f568faa",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_762b91a164a939cf.npz",
+      "sha256": "284a8e31f94d7da10bd78e295513ddfde1029f35dedd2769d363b67f9c91ea07",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_77ecfe5c934a755c.npz",
+      "sha256": "a6bc881d774cbab23f7614f67d2337c53d0849605fe5e61c877556751df2225a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_78559a410fc0a00e.npz",
+      "sha256": "69956d4cc0687f04d3f02217a2d7f7c08824eb9c1729f6b2747200b3d3fd62b5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7923afc244593704.npz",
+      "sha256": "c284b8fffffcac65f1617f56a2c5b38f284850d5fec74b932a33963e135ff64f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7947b7b345030ffa.npz",
+      "sha256": "1f122fbf45905ebd092a37ae79cf9a6f63cfdc2f4b8f9408d348c3a6cdb607ed",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_796a46896a9f9a44.npz",
+      "sha256": "08dc1ef358854c94d19a2ad3620fb50401efd72485f4e3b78e4b51e0665a12ac",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7a1903e163437176.npz",
+      "sha256": "09a8f71e2d56d7d01fcc35f8af297d9d6f86fd7987e8f0442f331574251f54fe",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7a853185d4181aac.npz",
+      "sha256": "27f94e4dd10257c6caa8e0f01965bb72a4c298ed586dd60e7eb86ba892ec0186",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7ad1f03f61725814.npz",
+      "sha256": "7b6d7c62ca6a6c656714673ba4ecf09ab5995f014332f0876212e643b66e97d0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7b34fbdc14f2e99e.npz",
+      "sha256": "6291503807e7b5b3b3dc8ee71455669d2d181573e86962b3ba36382060abacbf",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7b58af316e7385e9.npz",
+      "sha256": "0d5a018f1a5e6b92e1bad79fb04ff875a02b3ccf5d95480175815af6c860cea3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7b6d00684316fbba.npz",
+      "sha256": "232115bf80eb212f63af4c4bd26e21636890ea7841b28168b883116b48f7da8a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7b8a6cae20fcbc07.npz",
+      "sha256": "806bed18b63a504cca7caef753d1d4d0e60aa60b7887ebfea34bb7006299a193",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7bac297fb6120a5b.npz",
+      "sha256": "a6fd6df34190bea0ac97532aa079a473fd3ae64bf5e1692a5a5c88a1cfc339f1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7be222fe3482f1e5.npz",
+      "sha256": "36effa5faab30ab49d8ee0722c71c0db742a68404f30c6f72128c1f5975d8cb6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7c713c77e28bb27c.npz",
+      "sha256": "b8212d7e84ce3df7187ef248d0dd4c778d482e8189a70af56d004ae4ea8cec88",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7d1d3c6abf2e872e.npz",
+      "sha256": "800e5c784255713a67e60d2ea1fd2147d1cf6746254d8819461b3e8086c508cc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7d9de85111288a2d.npz",
+      "sha256": "84befc67150b8b4bbbc8980e0da049821eb854e5fbc3116d63c2126147b1d8d5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7e6acde42a985b46.npz",
+      "sha256": "4f97f7815d50c0cf4fcea738ddfdff2e8661cf113184d88d1bfb6898f47b63b8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7f6d0daef5224c3e.npz",
+      "sha256": "f014f9ddc0f0690fab01536f353f2d50549ab1ac3799345195d0fa7e3a63975e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_7f9b76b88c2cc643.npz",
+      "sha256": "094a530286b5b512197e944634a5cb2f558d67989d39437c665ac9b86741f156",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_802b9419c61b0434.npz",
+      "sha256": "c7c2494cbe2955e8261d88e30f745d6cc608bdc95c8fb4998a4c6574422764cc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8032ad67df5f0910.npz",
+      "sha256": "abf28692e6c4f492f539f09c37f3e34ce4c109a225710352e74fc7153f561028",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_822aeacd077a3c06.npz",
+      "sha256": "17fef2b9308c8d99b851fd887b2c4f9a89d596e51fe936f72eed78daf15d81bd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_82bc387662edcd97.npz",
+      "sha256": "97864978cd14f0050d2560e0eed68d32c9faf91ee781b06e2ced2a77d3d2eb57",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8343facc48f81c88.npz",
+      "sha256": "9bffe3485a3fdc4481dec84d1769993860dc5a88caa16a035e09503b67beb857",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_83d1a8d183711c19.npz",
+      "sha256": "0339d161e80d540c651ae02e73f721e5ff822bd56f02f15219a51a490ae5c654",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_842745fe09fc706a.npz",
+      "sha256": "2bf6ceb6620117f13796682c841367697902e4621df0c852765b359ef480a7cb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_844eac8219da6a3b.npz",
+      "sha256": "60fdfb1a005641fbbb6de04aa94ffbb8c19db3c1cad81242c9e1cfe3f2bd35b9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_846a1ab60a2c2e85.npz",
+      "sha256": "c201b38bc3b403eaa3b536eef686da8761e0e6250b66bca780dd2df4cd78a512",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_85ce5e72c4431d50.npz",
+      "sha256": "5e0885b96212a77121365d55ea7bfda5f7e519caee37c3c33bad466d03c1bb52",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_888b76e89475451c.npz",
+      "sha256": "cf14ef6642464b3cc9e4c971b6a5ab81d2a1f801e61ae8b93ebc1e4caa939a64",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_88c76b10534ea6c5.npz",
+      "sha256": "f57794ba84b0b11842842fe39c7819063a69cbd813a5716899933c149e11faa0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_88c87ea09b342fb4.npz",
+      "sha256": "40dc54779c5a4b003f1dd019ae22ca2a984069d02e346a742a2e2060ed777c72",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_89183961329e5314.npz",
+      "sha256": "97ff6a84ad685610ff255d635fb4dd9320bec960c6f6e1866628b9b0be344e92",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_89738776133a0c8d.npz",
+      "sha256": "751dd2b1c30f8db4181921b4a6e6282880f89cc2f01a7fd656eff5bf353e9cd2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_89831ecdf38d8494.npz",
+      "sha256": "8ab98fd3ce17d9399dc32969b83f7aee9cac21fef01af7a3fe51f818d6489ab1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8a264918c82f6ab1.npz",
+      "sha256": "94b666357dbd3a58fac97c469b211c1c280b4695140286ff9f547b2d7a1d179c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8a39e12d66e3ab4a.npz",
+      "sha256": "16e6a207ceffe2edc86f1f0ba8b82ee4d77f56571dbc71bbba808f691af91517",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8bbc81c3f78c8b7f.npz",
+      "sha256": "9e0951e68ab8d3c010ba1ea897cda657d22aa803735e1318461e6ee06eeb5594",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8ca6f2b9fe04b47e.npz",
+      "sha256": "cd192f47c3f246beae2e00e0572e71f8687cfdfe3e37e0592ee09adb2279dd00",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8cc64ca0232f46b5.npz",
+      "sha256": "13a8785fdbe81f995361b36880a74c25b400f02f41c77b110f39d9315a6e060f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8cdc0cee7e5e1105.npz",
+      "sha256": "9c7ee01957431a2f9a03c6d80d0f15bff7f6468155936cb76d7d3b92b35a9c7c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8d1afdf113e26bce.npz",
+      "sha256": "d2e772e63042397e4c957018508f3f93af61467cd7b8a5de3544137ee5db10d3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8d1db5a5262c312d.npz",
+      "sha256": "210ec0d6c42fa035d370401fcb1cff8ba3583b859edec7b398f807626e21e880",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8d86c438a3fa552e.npz",
+      "sha256": "8dd223548dfd93543a2618e76d9907cb67c2eecc2f92fdb49eb123b97aae922a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8df0ea85ec0d0c5d.npz",
+      "sha256": "22ba4b0bba064bc02fb5b812c494815f812a642cbb2bcba8c6c4385fa7f66002",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8e45d0ef76a0f00d.npz",
+      "sha256": "cf57c618581ff50da6a6ba12d429ba3c7958701a2bf278aedc0771650df61401",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8e6577236a07447a.npz",
+      "sha256": "6ca15ba589ad06913156d7eb08d261e689bea5ab39b9c5727e0abf35ad7554ec",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8e79e0d63345992c.npz",
+      "sha256": "5d50676c31f71983d5d53e9a66c5fa5cce4f6f001dd9c2782f8cf22b0ada1889",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8eacc1922c5837a9.npz",
+      "sha256": "5c32ef294c75bcbf8c9cda2f03837ea5456f0811dfde79ab68d926e1d085b47a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8f89e9729b515c5f.npz",
+      "sha256": "a9c9ff3b0697f3b30c679e45b846eed14520ef320b71b80ad9cf2e5d9689da9f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8f8e9f037ec5b865.npz",
+      "sha256": "3d9db6a4342c3bc908664e1059d8fa7e85512555853584c0455faf6147bcd33a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_8fae260b6b13ba88.npz",
+      "sha256": "cd34c8474f33f9c8f918de646fb02f4704966b8ec87096ee90348f4c47594bad",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_90bf3a3890dcce71.npz",
+      "sha256": "7931c39477b5a360c63f87795f1166f9a1ed2d0fd0a41977515285eeb35d50e0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9112a006049d3cea.npz",
+      "sha256": "dfe16e5d3e2501718e228ff48e25629dfc68c9838a5f772c4f30df8121ca691a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_91ff035987e84faa.npz",
+      "sha256": "9779fe84e7f4c72b058f1b20503a46fc1999eb56016cf377928a50547bb1e6df",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9218f4287e572864.npz",
+      "sha256": "42cb895b3da8f170983983ab03e6a71baa08bdbdfccebd99d83a5cccda3a5411",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_922d4c70b9dcbbbd.npz",
+      "sha256": "11fccdb6dc5b553bd7178e35a283281c2641b383ad8c5c2900c785587ae661b7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_925bee8aa2dde92f.npz",
+      "sha256": "ea58ba0da285d8cec8ebb5ba58d86c4ece02e7e6a563babe71610ba18ad7f661",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_926652ecc1de0ca6.npz",
+      "sha256": "38391c954056e14e3d3ced57beedf0a20e8275a69f58f41611ffc479e17f4809",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_94089e92ca515c61.npz",
+      "sha256": "fd6e38b34fc08f6e8ca7a31846769559300bd78e60a269b46946c46e61f491dc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_944b2a72f37fd6b5.npz",
+      "sha256": "b61d7f66cb47968d8520e373ca199d246ad553f05f5f5322195db4398ab979ea",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9495383413b89ede.npz",
+      "sha256": "3c07f27f49db7f79de18577009e9d78f73ea0079a071605fc4f0e9e5462698df",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9495e22c03e061a4.npz",
+      "sha256": "0e76a8bfffdb8d0b90f9a5cd5171654b2f86bb00b7e0ce967af5aaca446cbb5f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_94a589d00f8ec50d.npz",
+      "sha256": "7b95cae352d6862516a3506bc4079ea7052ac21a3981dab37de094e9ed7a1893",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9514522c4cf26cea.npz",
+      "sha256": "a8a076411d3708317afcabd3f2814abdb2f68b44694195bced95535e2af30ca0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_95e78680148902e7.npz",
+      "sha256": "871585d5c397a9f49900d02a957c855eb4d67b8049fbda5d025f990639fa3561",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_96c78982c03db427.npz",
+      "sha256": "57c73cdbd2da287a387eccd31cc494d4c51ca6e6c27df840ab6ba3aca6bb8f91",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_976e553c4b973774.npz",
+      "sha256": "50ea665794c5926f072faf6c8988e98ea0807170162fce9596db0ae488733eea",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_978ce86222432916.npz",
+      "sha256": "399949952b38b5bd5aae45e49d6ab4bc75dfdc5102548cf9049312c03b1053c2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_97e69693d420a907.npz",
+      "sha256": "f1517c214f8d30cacc08b230e059188ca7c88b00fa888f8f8401a94a1c7e164e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9867755476a815d0.npz",
+      "sha256": "4381bcfe41c2c66628df05a2ca78e794abb737565dca312bd09d5e088ccd85d2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_98ee4e2a2f778125.npz",
+      "sha256": "b3f9aa4fa954e6559ca3056c381cb1f73a9a2328f55be292ea3f9a9e77053094",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_990444072ab868c8.npz",
+      "sha256": "e398b73e1762be09df128a811bb5b96393860b51492d4a05f5a1a15d097aa3ae",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9907078b94df72a4.npz",
+      "sha256": "8191ac17d65e09668cbe00d9b1731f9aecd6df3de8d8dc361742047bc72644d9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_99183b49244f9a83.npz",
+      "sha256": "ae60c7cde1ba7ae7d4b29ee8f12f90a525f2ddbbf3bc5a92f2ce626b9998e89d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_996f1bd9c300ddcc.npz",
+      "sha256": "ee6cc5bd46e2338c27e29b209075326e35f3aed17d2c2e2acae6fe5a78a8c3a8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_99d87d49a56b33c1.npz",
+      "sha256": "1e512b87828cbb8a8bef79a89f58034e15fa5ecde58da76d740d699e2b45d78a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9a0bf655c548e45a.npz",
+      "sha256": "3f45ab4907e71c29432debcee7945c852e726449560b3ba2f971b7d98b9091df",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9bec6195d2cd859b.npz",
+      "sha256": "d3a06710a7ba18b6092c65ea0f20ed0a0d02fde298bba51fba25d240b5a86627",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9c1c243d14aa9150.npz",
+      "sha256": "ef6ce2eab8d7bf0c3d92cba7b3fcf204617d91726dec2af151c6f40ffe0c303f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9c2781fb41d5363f.npz",
+      "sha256": "0be8880cbf7ba3d9f0a01a6f1eb7c07223c0ac1023efd2d9e8ddc4616fdd88cc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9ccddaf20872907f.npz",
+      "sha256": "cef22c128727861a49270888920b36a8139d06eb159e98e71fc405bc26ce93e9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9cfe39e7068db530.npz",
+      "sha256": "ded336de27df1b1fee70e9998b5ddc6cd6987fb6c9d55270fed6e6d0d5a0a84d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9e2bd93546a38954.npz",
+      "sha256": "2f4c51ef5268ed816bc1b7fa9d4d3ef76792a30a7ef2a6f1f4edd2248bbfa35e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9e5d0da5f456d2de.npz",
+      "sha256": "f25541c08642445a3f8db739c0992b858c92340e95bf810c0f46a545a87c1453",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9f4ce3d07ea7846d.npz",
+      "sha256": "896e2bd1e38489bb19283b8d260926e172e1a9d684c1fa754aae2ba49b09a70b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9f4fb95593e9dda0.npz",
+      "sha256": "96a671095ac8fa30b294ec4f189bf0f56a0ef18cd1064a06093362c060b89f59",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9f57a081c4f315ac.npz",
+      "sha256": "2bc4674cb8e969196d19ae5549fdaf1ce58b5c6f59a26fb79b922b718d269bb6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9f783cabd814c1fe.npz",
+      "sha256": "693a700bba0d1882e85d35b8fa7738f2366fbeeca844ce71b074e156adee1f4d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_9fa8af6b18c4c6dc.npz",
+      "sha256": "86f679beb591059bde046e83f15d87a3d619ec2130a8c28549a27d62537f56a5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a0065c2ef6bd64bb.npz",
+      "sha256": "324d03cf3e033bd9ff9878228e6c250edc6d772b37ac40ad86f2701ff8bd4e71",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a0331d5a95c629fa.npz",
+      "sha256": "91efe0bb7463239a5ceded7da71747b6c267d237234507e2ef0fd4ce72936344",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a03f879740dc1c70.npz",
+      "sha256": "5461f57e01b0b8537fb00b5220ecc4ddb58e6743676dee598e3aae2cd580dbc1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a068e56c300931a9.npz",
+      "sha256": "4e6c04a2e978876f34145abc760ba8fb004ca53b2ae1914d977266dc3efce244",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a14b0e4b9666a2ef.npz",
+      "sha256": "a94ae6d3b53db760e7b719bf109c64eb1f45a62e38a707bb9549d2c58ce42124",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a196acc99eaf7b39.npz",
+      "sha256": "b7d91d0c630965249ce540bdc457d51346c571ba4b84600b83c439349caa4f7a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a1be10dd9cac1e4e.npz",
+      "sha256": "b2926ffbe1fa28a9277e522df068b9b3b366d580ca78c55b5fd78d9ea20f7cb5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a210e8594d0ff5e0.npz",
+      "sha256": "d9ce25ca117af42d1dc9fef7117aab1abe76c73da18baa8eef7e4698cccdb34f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a23043fe131e5c90.npz",
+      "sha256": "000d9b9984cd4c238e8875b796086f58fd0466da1b6f640ea589797fbed5f2f1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a2a49cb3e4ceb91e.npz",
+      "sha256": "9ff05eea59ac40a98c8ced9c5bfea350d6dd7497cfc3614dc90f019e18f133a8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a2ec04cea506fae2.npz",
+      "sha256": "0a87168f9a7691d2b6dc3f043f603b7f6ce942fd9675f0f04f1d06abb6f738f6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a39a269d89bd8c9b.npz",
+      "sha256": "9766789d3ebbb1f45f9f1a88e19faa1597b20bf00d66afca3d55f22f7620e260",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a3a549042c1f8feb.npz",
+      "sha256": "54d4f713b6ffeb2879871fd6f1462cc9ba4d39b89cf57543c6d486028b489a70",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a3ad665daa823a62.npz",
+      "sha256": "dba35acfb4683d9094fb00cafe370db5e02b32d647afbbfba71d5ce728aa9e8e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a53c43371b0ec446.npz",
+      "sha256": "a2bc442f71331fb63b15d5c8d621a80d0b4402466bf0ba6d2a4f4f1b8aa58468",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a583448581e9fd9d.npz",
+      "sha256": "dcb05fcb0acd886e75e134cb2d51bbd3e8af3d9e388dd1b1e6b457fa557bfde2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a7aa8afa4cd9f08a.npz",
+      "sha256": "b72f1b353f0e2954fc3459c8e55a995a143a260e11fbf79d29d3202fb6af0eb8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a7e003fdb57fb68e.npz",
+      "sha256": "cfe7015da6ebe393ae8b34ec1ab1be5b1ccb70cece174af45f8945a758a98954",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a85149cb3b5aa187.npz",
+      "sha256": "010f807ce6b9ef11b1c0112cf4223fdd2a28df85e8065e27b4227400c3055805",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a85370cfe74a7707.npz",
+      "sha256": "e2a0d09e4206eda3c687dfa3a67c8e824f2dc04cdf94d4c9daec2ae1b32bf496",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a8673c2a357db646.npz",
+      "sha256": "310b16a8d3fcdfbff29c2247798e9520aa0c38a951eeb04c7ee541a479effa83",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a8dbfe80fd92c750.npz",
+      "sha256": "daf19987cb5f9e948d478135be8ea2a3fd2c51c4622bb5a3c86c5946c1156ece",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_a9379374776b47ca.npz",
+      "sha256": "a5d8feaa31926b7c8686454d105a4e7874aab383ef4040160834d7c06dab4e48",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_aa3458ce353d6297.npz",
+      "sha256": "d97927acebe792fb1a5abf2d7ce114062a34fd5624d0390dae1477b59ec46bcb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_aa3ade849c525d7d.npz",
+      "sha256": "25c0a0d6097a52c243724bf360655f02178195f8e54dab4e20fdbff99683491b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_aaa4e53b6e947e40.npz",
+      "sha256": "9bf6ec8f1816c69ca72771ef01f85918ba9f878ba715ec3ddfdfe5e47064bf74",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ab3d91f577892693.npz",
+      "sha256": "ca34f7418ff78fbc1fc71da5ff692e9d8d4c95faa815aa4c5a52b4ba8d5dc17d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ab7242c3f8360d12.npz",
+      "sha256": "0e62b374f62e54adcc49cb82a2c0b8274819bb6b4a183a214fe5ca867135bc9e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_abfab17459a75c1e.npz",
+      "sha256": "9887b8299ecf7837d8579de5407411960072636e085f0f0308106a977bfd8335",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_acfd3f14129009b8.npz",
+      "sha256": "ce0d8a157e06db9708ecd6ff33183b3a42088faa54d4ebb0461e427bcd74026a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ad767930b87cdb30.npz",
+      "sha256": "b9b25e74558d91b61a7b621139f120c3baf60c1b4578a39f07c8a34f161552cb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_adeac02407d92697.npz",
+      "sha256": "0bc74c11e2d778774d4dbcaa92cc46e2e5c5217eeb2e8c01885af69f9f752003",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ae065eddeec33a6f.npz",
+      "sha256": "379093c523675ba805c1d18cec82248cd4367ea6bc5ecb4d3dd90427ee271f95",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ae771ee436aebf8a.npz",
+      "sha256": "53d9a8c7763f0741c78918ff6cbaa1a86d0fe876dc844bfe8d5135f5b3d74c54",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_aec3f799484e90d7.npz",
+      "sha256": "83c97173bff20d2661cffce4a3a6bfbbfec6522863a8884a4cc5ed16a30457f2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_aed65a46673c09af.npz",
+      "sha256": "407f51937ad7d91d0d3c47a8ece4fe1533c93af79f44a9035e045e75992d3e21",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_af079cd34bc7a762.npz",
+      "sha256": "c195d0b53eac639b5ae21353cba927697433575b812229a90678fd474bc45530",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_afbc8950d7662535.npz",
+      "sha256": "7244a776c4211433729df1d64357d4b1535a40a22910be2f3f046ab2f9307be9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b159c42a677176e2.npz",
+      "sha256": "aee97e36ddf908deacf3f1acaa72212b995e276a2716051cfd215f5edab42000",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b1d1191644286da8.npz",
+      "sha256": "88478938cd2166ad21654697f71f365a4bb55ded24fc61a2578fdcfd92c074b1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b2f3aa1bebb2e36c.npz",
+      "sha256": "3bf50fa9f0615067cbc872919438b73f0541d2fffb0a41412770c72ef0290fba",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b32ed02e645e7b84.npz",
+      "sha256": "b35d0ea05dbd7bfd312246649ea4734e62398dbc985c24f89f57c2b026188303",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b38edcd529cea115.npz",
+      "sha256": "e0a4477d32716c366741583e3fa08d06dc859a1d89b588219f49fbcedf122ed0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b3b555538ed6a039.npz",
+      "sha256": "500d46fd42eed60818acfb91e8a644fc99a5f71feb1c65e49f4489b12f8d5960",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b419bf1fea870cab.npz",
+      "sha256": "904f1eddec38cc1ca9d26c02e1ff40adebf880bb9046ea479a49d70a4cbe4f8d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b4773d8d04b765f0.npz",
+      "sha256": "19e8c2f2787c5886789e8fb95a7ed399fa4b59487475f3e5ffb60a5cfb1f297f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b499ac91887525c9.npz",
+      "sha256": "671dee6d7477d6eae1c26b0ce2a717b690b59e015a414ce105b007993414a170",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b49ae41cf287d635.npz",
+      "sha256": "879e3814cab871480dde6fef38042422a68c6422bb774b40bc344a20a980ed62",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b4c930a83f5bdd6f.npz",
+      "sha256": "161bd4723ce70c1487048fc2b77b9cfeec7f3d22753f14ef357db3a75444dbb0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b4d7be2e640b853c.npz",
+      "sha256": "dfc28413cfbec56a35cc5ae0fd86065d03191ca6f052a90ad9aeb12ad2c31568",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b5338e79337c935e.npz",
+      "sha256": "28fcc7bab5c418a713fe851f05f3032ca4a2a03d3f1c66f95b748cace7ebebeb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b550e9accd6cc73a.npz",
+      "sha256": "d23dc740edacbd205973ea611574627ffa09bb4877ecbdb9c44529e2daf8e353",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b5b650cf58f34fbc.npz",
+      "sha256": "98c578b19b2041688d8e798d434ce9cca6d6c07521b7ba8f512b8bc5240b5954",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b5f5328c96685d9e.npz",
+      "sha256": "59193a51c23bbc34bf12143c76053b6e233c5cccdaa69afdffd2fd4566b0068e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b5f5e4aba5a7ad6a.npz",
+      "sha256": "bd98aa364655ad4dae6acc7c35c72f2de39b7dc76f671d16668c96820682efed",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b6113afb6541c19f.npz",
+      "sha256": "a00b971108ef2f8c16d8c065ceb0b3ee87e294ace8974cbc107562b52b013bfa",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b6781e210477eadc.npz",
+      "sha256": "fcd4d5a9087c091f3305afad37d74a98d326ab9e81b153a76c642ee56ee61371",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b68735d88465b290.npz",
+      "sha256": "a78433656aa31526ff08c97685106c142923ac6873814a4293df955d8165cac9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b6f077f061638ba8.npz",
+      "sha256": "013875d164ab8cef3b62379362377faf5f7466fc84a541aa99544b0e3411b05f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b7a6ef823dbd8ace.npz",
+      "sha256": "714371a28e04d5f98e8a778bb0540fd43c02fb4d3bb9b59f684d3e7d215e6378",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b7b5a254ced7f7a8.npz",
+      "sha256": "4c6255969f02630870f2faac9b23adb8101003e860aca451bb7af5e8083c09cd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b7dbb40a7195cedf.npz",
+      "sha256": "18a73f45e422233ff8dcad97a8718c315523d97b2e5176f6b95296f6ef16e84c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b8334fca3d1e791f.npz",
+      "sha256": "b594e99e9b1d3f22f5c9b8fd654f12b65f4c29444bacb1df43aea24cde860e90",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_b9dd0d786904ff7d.npz",
+      "sha256": "97c825f352dd712d2283d3964bee5471fe33abc2bd22774ca9bf62d847e87ada",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ba7dca38d31a322d.npz",
+      "sha256": "9650e5c6510f02ed4c13db703834053b2eed931921b3f0071695dace7e71e8d8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ba8b18f16ff95e59.npz",
+      "sha256": "5ff71706c916222ab3a70b9a0af6d021bec267172ca4deaf6e43727288f1c1f2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_bbded66b68133ba4.npz",
+      "sha256": "e074716281b7adb8ce36658ed67fb45a998c936d6e651e9ed62e1669026ff88d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_bc146bb9ffe1704a.npz",
+      "sha256": "676ba6cfe91e409230c050f9a8c28e00f007e0fb606793ff6a97e975ab1d6beb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_bc7e682cdfe31a68.npz",
+      "sha256": "9e3c8679003b9c56c62e0b4e0834580af8df7ea5f7b62711726da0613af4a0d7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_bca553595dac7a85.npz",
+      "sha256": "513ba73e3f2815cda426be97d47a7c04fd5c7a31ff684e36e7446562d49cad84",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_bdb1e7cdec27e0f6.npz",
+      "sha256": "24772987350b3d03b4956aab31895c49bc62c59f271d5ab497657d42c75533f7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_bdc109c94092f6f8.npz",
+      "sha256": "2e8be0a3d28d6300074294886e4110530037c2ffb6a7f66888a627c43dd8c0e5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_be3d08bc91c794ad.npz",
+      "sha256": "1bb330a1b923b24c06091d8f0c456b6ed847eb6ed079d4f620a4d89883ab7713",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_be6c22cf08181834.npz",
+      "sha256": "37ee1e85b4ba715e84e8a3187202a1c1bebf31191a554113923cfe3c8f3f4e6e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_bf61df42bde5cef8.npz",
+      "sha256": "917d5135107ef36cde5a0adab953eef8176770ba4be4899376e132c3a57cf497",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_bffa1bd76f1d9669.npz",
+      "sha256": "bad42ab096afa09de41f7cf5d40a704b52970e1ffdfa95fe405ccf480319ed7e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c07d5a7a586026ec.npz",
+      "sha256": "da6f59587ecb6e27ce367da1404201747dd1e554a2033c1bef91825918c0d7c9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c0d247914da899fa.npz",
+      "sha256": "bc965193458fcac434c755642554789b7b5b68be1f8571070b24643778a84af9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c0dca94ba25d47f2.npz",
+      "sha256": "155340b655f171b8c061cae294d4c22ede6d8046f10f5d067e4db5dcf0e212b6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c0f0d7902fb0f57a.npz",
+      "sha256": "21f66f7e2b65af64918f03a583ced317d14af541ef8a2bfd540f0db999857db6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c0f8759818c1bef3.npz",
+      "sha256": "8189839b11dc3fbad2e6e01224be1ec040388d00902425ec5818280e48145cbe",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c136806415ca0873.npz",
+      "sha256": "5342046a5154684dd031617b5854c6bd9f8adf88c13d8e56b41949f04274c23e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c204fa4c1efd993b.npz",
+      "sha256": "5a22ed09bf74b140c7a0195b7715b495f5b79926cfd54cb8bbf4ef620a87db85",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c211b27140c040c8.npz",
+      "sha256": "62b27c87a3fc5969f030319469e96e6304f7e10410889c0f07ac2b988e8c340c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c25124642671fcfe.npz",
+      "sha256": "fe91f0da59697c4bbf6ed5706d61de6bb7e62eae382a09551a22423ba20b3672",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c293658c90b22fec.npz",
+      "sha256": "38da417afb8f5b06edf2a2ff48198ad00dc00c149f0c8ac686395acdb9aa1dbc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c2b8b65fe5be9dad.npz",
+      "sha256": "43ee18ca8f3a97c5a1fa7bf33ed79712c313cc05b0dee821405ec69e933f324b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c33f3b908e8a2e40.npz",
+      "sha256": "aaee3d32f385549b397ba50d1363061ee87b32503bf3beef44ef34b2dc1d6a11",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c409207b8893fe60.npz",
+      "sha256": "3b85a755219109fcdd4a2859a8e0e07255028c3df8176085070a1a41c52d4321",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c44f2f3d183b693b.npz",
+      "sha256": "95c82fd3549e47433e536787de400de076fbc56935325a1cee8e6163c5df3770",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c4de055aec77a7e2.npz",
+      "sha256": "2f537ea73c858421dd04bb2bbe6cac25d10aab22841b15d16fdcff2bcdd22f56",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c5131bd03b85142d.npz",
+      "sha256": "60d70a35f1932470b66abf7bcd01abbe5d9864507bf327f69a3ec04223844dd7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c65bfc2ee09ef6ca.npz",
+      "sha256": "9bfbc76d4b3db44d76132d4db311bd62d3b46c127c95868336f887c9e2b61278",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c65e52b1373ec5ef.npz",
+      "sha256": "0e15c6c610a014b7d602bffe891dbcd0fd259b0820286886f8aac46edaf15e68",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c69eaf14e55f425e.npz",
+      "sha256": "c0dd7a83f3e9023138d7c9e4ce426138f5796540acbb604e8823f981a1c423af",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c71525b85fb595db.npz",
+      "sha256": "e76039846eba59981c5418b815348a04fb890f6913a6d4fe70d8d781a4dfb124",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c71c6c06d6facafa.npz",
+      "sha256": "a0d7a486c11aa5de2d839c7f76b031fb3707762572db1bed68e3fdf831c5c7b3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c760ab347d080d34.npz",
+      "sha256": "6a8c00fb2fd06791320e6b57344ef35322f5cea9bee28539d6be2a9eaa6456f1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c810aee34bea06a4.npz",
+      "sha256": "da7bd70b8c54fa4b46038f4ddaa307c309e422e9d89b4dd45dc0fec346341a4e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c8fb81edc9a33532.npz",
+      "sha256": "a499626cc89d11136b3fbc5587d500a41d9a30f9cf7d268262f5afe5a9c72446",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c9235c2400e8d219.npz",
+      "sha256": "cbce76c069c506ecd176d7769be48f5b91fd619e19eafd4a6591d362b758ad8d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c9af0944aea8c16a.npz",
+      "sha256": "61fa33fba02ffff64c6e672afa83218a78f1578e71adea1e418305214810f53b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c9c0030e8a1119f5.npz",
+      "sha256": "995e41420bdbf5e04a1c78e6e42d26023ef944ed2400555368e7fc8500dd2452",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_c9c61e8e3e9e537c.npz",
+      "sha256": "2c54f227b2414a962eb55eab5e8ba9031ba6ac643e2658e2b023311bb0ea68fe",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ca7d840451f50790.npz",
+      "sha256": "4ccddab74bd6ac1de3b02999176553576077e6d22901ab66425a9bb422d80c92",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_cab8010baa93f5a9.npz",
+      "sha256": "775e3005198c5903b1f90e447cf01710776717ea8ac67b783f8051719cb9a50b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_cb66a9c9bc8b31e1.npz",
+      "sha256": "0a34ef78f7204d17b02f48085998a518cf1fe05b766b6dd67a8416bd9c407626",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_cb76814ebb721370.npz",
+      "sha256": "2d864645845062fd77e554ea6e79a5f99818182995c05bc43839c64220155145",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_cbf1ae19d1dd1c28.npz",
+      "sha256": "b3d3923dddaa9825b5b72a47613e166ecf5f88a700a537bd947a23106a4e6726",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_cc3af014fc05e971.npz",
+      "sha256": "44b1ce7d47d7f422c73e269a66173f4b00c8a0c4c5395a1b8450a702b9078e9f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ccbe291b0f6a0577.npz",
+      "sha256": "dce791aaa7f673fbbca0d800541c5952318b61ba840fdf59e368133110e7dcac",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_cd514a0521fd5529.npz",
+      "sha256": "10d3d1547a4b77e2e983cd4f69e31388ca2817b000ffc64f084d5ed92da6f70b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_cdef9105daf07b40.npz",
+      "sha256": "f579d25fe5d929587aa6d20fa80eb84e7cc5246ee3ec9a88d288fed912e9b86b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ce251edbb964cf55.npz",
+      "sha256": "c117405cdc43ff69ae43a7ae2ca2671680a4c534e6e27298e26672d891312da0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ced2de46ea5e91eb.npz",
+      "sha256": "2ae439928eb9736ece5b82d6e9704493c68146c026424d8ae0e84dffa0842a43",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_cf071193c41dc7eb.npz",
+      "sha256": "6242a1a668451a53d6d8c8893b974248202f52339298b62f6a4540653da7cae8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_cfb030a55ca4fb18.npz",
+      "sha256": "2b42ed8f274c13c79a8e6dae48cb81269cf11bfaad6ea5b7ca3e1b24d24757d2",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_cfcac6bb0c72997a.npz",
+      "sha256": "63a07531f093fd91ff156e013c996580616a2f6cae0050d0e9a30d602b5fa51a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d02b17f5d6797d69.npz",
+      "sha256": "ceddc7d5375896c4a6ddd21d7d08c2f9a7994cc2458e9983e318d351acd1f66a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d06aa29239e25c16.npz",
+      "sha256": "04932b68b84e31014073da81692d7ab451d3de4f00c7180a0e67e953786f626b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d0bd40bb01e95ac7.npz",
+      "sha256": "76e2938e17e3931ba9293926492e0ef5f0936549e6d43678d0e56c6055a55ea8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d0f01f74cc77623b.npz",
+      "sha256": "87810e5ffd4183d56a9f20291a625bf13639fd6371b923b31b36231462282a7d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d11eff44ec02d05d.npz",
+      "sha256": "b740b67de54bbb9df4b509e69fd890abb97a77c1de8506632a834681108b790f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d172f5abdd9b52d0.npz",
+      "sha256": "7b3ec15e8d59fd92cab12adea406a9aa628b9ad965d0e8dafcaaa64f463eac1a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d177464b67a39107.npz",
+      "sha256": "fc44724971b237a6570b2b93061cf47f8fe63c382e2b70f54535092df7891b66",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d2557e15c5419fd7.npz",
+      "sha256": "43660e6b51ebcb942131b1be747fab2d254a0c696ee0070e26e0d53c988529ad",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d2c5e1201c38f619.npz",
+      "sha256": "f8c55b5e33a93913c30730d90ff59ca131d9d460224530d371a875f9e927e420",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d2e21069a6953d3c.npz",
+      "sha256": "7f74d105c9c07bc8db06d963cf5c6c5aa5ed679ea27627f5287a6f1d394fcc56",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d350f659c2ccff8f.npz",
+      "sha256": "09aa3ef2054e69c9a0a4d8c586e8af0eb8a5f76b5734492e1ca1a4f3183fd52a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d354256d3004b2e6.npz",
+      "sha256": "6a7f2ff34c6fbd8e9174cb50ebb922c6a5179256700ab1f7ad06021d8e805eba",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d50019e06f0ab6d3.npz",
+      "sha256": "788f3825ad68aa0693a4d7d23f6de5d1152e20fe300f483213f3dd776a798c20",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d5bae19cbec9070b.npz",
+      "sha256": "13be56b29808c71279b16272a834b056d9fe1aad3b710fc6e0771e6a0ac40383",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d5e9dfbd08a8f78b.npz",
+      "sha256": "128afa196b62c22ce586de42f5d22c00223ba74188d083375a2faeca800b7cc0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d61c3f46056254c1.npz",
+      "sha256": "96c10de7a82d141f8fb75fecf7eb74dca35798779cfc8a958076dee954ddd742",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d622e723a3b14522.npz",
+      "sha256": "826190ba2a9a08c9e46407cdffb40923fe1c165dae6aaf15ac7ae5827aa2e8b6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d69f7ada1273f4db.npz",
+      "sha256": "55a236dd19cefe89a758ff9567da6b70d29e9ddece266b979d26ea1cac429cb5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d6b6968a43b94a68.npz",
+      "sha256": "3218287c46b574791871949d254308a6d14ce59097c01b4782cfa8f80dd5a906",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d6cddfaaf0f489d4.npz",
+      "sha256": "af0964bb5e824c250ac28965c63c51e8c86d875525a26a16482f7dedfc10be2f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d6f8c65aac78ac7d.npz",
+      "sha256": "69c499ba5ea938656a5c24e76bb5ff16ce435ab18af1beeb0e827f06ee20e42e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d71d005d7242937c.npz",
+      "sha256": "35630389ad488d75db8084d6df4cc7c956666707a99adf954684a32b37153095",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d76067df08a90743.npz",
+      "sha256": "8081c43f417d35d7c5c839913835d1b108808462d8435a9cd1c3947c94305977",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d78c7cead62616d3.npz",
+      "sha256": "cda9b5ca84ca91f7865390efabe082391b7324b7a80c0530902b41ce76039573",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d809920858737fb2.npz",
+      "sha256": "1aa556066eb7030bd3d8e153667a108ed6156fce3cd52a3c983c2ef8effd2df1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d80c588327ebe7d2.npz",
+      "sha256": "d0d1ff2db9c92e882ba028e4b3272e7fb6ffffbd24dc7a2a4b09d723b6798432",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d92547e054b2f6fa.npz",
+      "sha256": "297acce8f89654310034844170c8ef67a7f8622986ea112388d7bf30066bdee6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d9684044e4f3f809.npz",
+      "sha256": "4f9f637aabe55986fea7bbd7f05af156b840205a3d726b131234cccb3ac81028",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_d9bf6b6baf1452a5.npz",
+      "sha256": "b773cc484a132f5af0fdff29442dcd123001f8e9c009c823c63bbf0f4e532883",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_db920c6da76f778e.npz",
+      "sha256": "83c2a4e7c8aa33f2f10ca5c05a25f16193090c6849e4b9b8f59425a44f53414e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_db9b90da528f361a.npz",
+      "sha256": "5900c4ad52080613e71b5427503d42d5c7e4718d023ab9447a7bf7216d74550b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_dbca538e8dbd0a33.npz",
+      "sha256": "c4446d15e63647d881164931f3723931aaab6edae0ed8fce15e506de2a279cda",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_dc463f7f25dd3240.npz",
+      "sha256": "a3801248a6e4f489d31715d2ad3556c0dc396753b2e65c5d0ae75cc18f1fb918",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_dc853ae5a9da0432.npz",
+      "sha256": "e246fc8683941579bc5b07b23015d4ce9e34bd65d81a519430910fdedc322ff4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_dd9bdffbc6ba8ca8.npz",
+      "sha256": "2f3b8876a2d2843db9f1780215d351a6c0eef2ae4e14aff7f27f1332f7c7685a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_dddc4a593e744c46.npz",
+      "sha256": "50858baa8b0e9f289732215662b29b23a56417858df63f10146897910dfaf23f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_dde55fbee3b53b99.npz",
+      "sha256": "c4d6adb2367ee0aa8d797cdf9c962ab0aabfa33b7649bbff463399678e4acbd4",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_de8bb407048eac35.npz",
+      "sha256": "15cf8eae737940c4a3bbbc30f6fd59af12f1e3d93a53585557b1c33e37f48fc6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_df1d074ec14f6d4a.npz",
+      "sha256": "b67d52d04318d2247cc92cf7bf0cb3e288dc3d6b214db92e5ca240d55a73b6b9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_df672ac9d6d0eb2f.npz",
+      "sha256": "2a42d927dd18432e484fb25f4f3e5e0e0c1f5ab96953604f26c30c6398604361",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_dfaf0ea2f11747ce.npz",
+      "sha256": "106962ed26ddacb0967f8efd891cc55104f481eee5b2c30d505b64ce508c5584",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e136c2399e6917a4.npz",
+      "sha256": "690a4f8ee0e92293a2db60e83047fdb035f5a1ad94593731d65b5db9bf810196",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e18c2b34eef4fc03.npz",
+      "sha256": "b6fc3ad97f08cc90e575a48a330b3c50b6fb7423cc4bd206502995a70c0a8cbc",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e1e2af3c55d00423.npz",
+      "sha256": "82e053b5d1ff73ef57315a4ecf4a5079688daec7aa5e1bbd9c367d592b84b884",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e27425ed8b5e2a1c.npz",
+      "sha256": "280a47c60effe44ec740c23f0c88a1c0ab52fa84b0f43e1fc74cad5e971adf31",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e2df6baf79b4b9e7.npz",
+      "sha256": "602f77af33f4b5fd0ab925e8ad2cdbf4be68b4884a4af07ffbe50cec154bbf34",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e301853a7a9d6615.npz",
+      "sha256": "56f0f5cf41c4c1b5ed9ff6e51b0721202218a1bebdacdc534133fdd26d5c695f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e3ef56f0d18e016a.npz",
+      "sha256": "59aa3ff84ac6418af709a8ab176197085bcc9b13205b9b34054f257f99204eb5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e446bca9f38f9771.npz",
+      "sha256": "c32cd70019d20c10400c782ed971930e5179bbda9ee12953e9c40e92e8a40d07",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e449ae1968d9e8f1.npz",
+      "sha256": "b35ef3ecb538352cba653d21a2812d59f9798e661279b91bd618601719cc1b1c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e4a90fd72cadf453.npz",
+      "sha256": "4d52f19ca7be03c433fb1d8403c4087895420d12cdb4a2c363a8a7e5cef38bdb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e4cdb48977e0b69e.npz",
+      "sha256": "3233f2b656ccb5547b1cb4f6c123bae82d0249ce3eea73416e5680f622ef0854",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e4dd168a8e91c376.npz",
+      "sha256": "b71b045b2348d9527d8a171a1fbd38e7bd8749bfac4a7cbc79e7919a8efdc180",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e4e581de345802b6.npz",
+      "sha256": "a9114e4bb7037b490b62a77a8a1a3d973ffb175c386bab9826c9896f72b569ba",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e50323e00d885802.npz",
+      "sha256": "5de79da768bd39ea08bc587f7b95b549692ac0c9370dcb645038a1783ae1cd26",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e6bed437c6df2f7b.npz",
+      "sha256": "9122801ee07b9890c2dcb1a4f26e6646cd4f703dff4e9719f099243030c728e1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e6e69cce3e97dffc.npz",
+      "sha256": "3ddf18c0a8ce0cdf48efc72b7dbd11cd5f5e17002a1640523fde3e00f55915a3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e74276fd8b023a44.npz",
+      "sha256": "0d706f54a7e20152db68a848d8fbbfc480a2de70bfe58b1191580b7e08b7fdf7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e74e66c79169a480.npz",
+      "sha256": "a5596ede49390f9e29d034a586307f49f0d1dcc42b686cd03afd516d74deffe1",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e7c79acfd7cca14b.npz",
+      "sha256": "1d3d4e91ce2004689da74afa6b311b7b0140cc3b2d2d83f22b08d2fd7470599d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e7f08a350525e052.npz",
+      "sha256": "bda1c7f929dc22eb62158d1ab5706f59d833d53b1aa81845bb63395400c0cbe6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e8122df825d33cc3.npz",
+      "sha256": "770a9db872a47173a09e736d605a5c3085a41b0c228f4994f3626e2cf225ff9e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_e8134999796a8f96.npz",
+      "sha256": "1541eb7f9ed48a7944c878710332861b588e972fac16753e16676c5716252b52",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ea9e12471e7a654c.npz",
+      "sha256": "d208fa3c49ebcb73f8b5ad0f93359f2100b734b35c2e7698f45eed17827233dd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_eacf80b4b70281e3.npz",
+      "sha256": "53cbe61d9c1028dac1db2d7d6e6087d0d31d63a0d9429daadc455a669d23ddd8",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_eb4b0b128bbffe69.npz",
+      "sha256": "e368f4a043ef50ff4390ae584f59081cd805112e7ff449cf0c6504680b73476f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_eb4fda7788539338.npz",
+      "sha256": "551c06dfa4b431f9518b4da773e58975c247b411a37101679c69f4498becaf77",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ebcd1cc069ca4d2c.npz",
+      "sha256": "c5a37fab7dd7110a3c1de4a0e98177846d217e6f8dcf7b643f11ee6e2b694a09",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ebd03225646dc1bb.npz",
+      "sha256": "a5f4781f83c4696ebcd2a21c863c24992d752cd95d208f77c11440049812339b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ec49d5543af8f4ef.npz",
+      "sha256": "a1acd0c3a3fa6ffb0c9894665c650bf099b8e447c19dd4d9b5b03388021f99a7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ed05b4bf5dc3cf85.npz",
+      "sha256": "10197ff496e74356e6d56909cd13b8376e0fe022d723eb6d9b15dabdc212a73f",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_edb30b70ff9108d7.npz",
+      "sha256": "ddc02c5ad7024b3a38bfd27db67b45344ed6956bd7e6ed02695d74da0ec5eb49",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_edfe386e94509b03.npz",
+      "sha256": "6d865489ecee1a622455f45503afb346775fab91091e7417ac17e34f285ffe6a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ee94935c574d73cf.npz",
+      "sha256": "117455ce85ad218e8f086b6ab9b8ce7409c4611e30984b7358f1249017e23a55",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_eeb458176fcc1723.npz",
+      "sha256": "ed9789babad284d7209a79698200168e0fd8ed8b72cbdf33b9e160f40a0049fb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ef0912dc28c936bc.npz",
+      "sha256": "bb1bff53ac360308310de538a15719aa296229982df42ab22dadbfdc9408575d",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ef7daa1327a2abfe.npz",
+      "sha256": "a78dda562aa983c0eb0b68dade508db66c2711d9458ed0602ef19d5eb720291a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ef863c5c233b50d6.npz",
+      "sha256": "4c6d1de7091323621bd22ea4570ecd0f3d6e5b243a97aa996c32ca1a485ec1e5",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f0003ad3ad3e5793.npz",
+      "sha256": "85a41bd09610110aa13300eada30f04d2c99f188314ee30a3eac4fd0e870984c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f07fd4b6538b20e3.npz",
+      "sha256": "4508e9a072b68a4b0959d54e84c68e23d0e055648bc7a3d4e9d879a84dc3d94c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f0c5f9c8e66a9199.npz",
+      "sha256": "01a5ee9f69324813751f62e87b20c8e6264f13e0c892ab5b3c27c8ed99097dd6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f1e198a10b49095e.npz",
+      "sha256": "00868344409cbdd9e013142fbfa4a910ad103db51785e117d86920bda359b20e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f1ed6f75f0f0fe55.npz",
+      "sha256": "92270347ded5c73f934ace062d5d4c8938e8bccc74279d6d26a89cf84340b118",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f26d3a7c46cb9a68.npz",
+      "sha256": "266eb5d5f68a66641ff39ff8ffe4f29673f9c79750ca5dc4259801a41da5dd60",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f33ee751922869ff.npz",
+      "sha256": "5b8f4f9e073c708b6cc8a014645e65617c75442aa36f7b31fbd701bab3a60fbd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f361208e05365619.npz",
+      "sha256": "60ec5e5fa3b9103ef1c0ad3e676866c5607c21817c5167401af836fb333c49b0",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f3f1cc36fa77d8e2.npz",
+      "sha256": "94d023f322b4f5c7916a6ae8bd7976d26720fcc5d41aba17946e39e4d4dcf056",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f470f38492a3e9ef.npz",
+      "sha256": "41a475fe1f657b3e85f3d7a722a8fed0a8d27d663bc9159f20907469f529a116",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f481b5883c9fe6d0.npz",
+      "sha256": "1c53243be230f74d70cae7707e034e1dd78a5518cce2e9f286edec5109024f46",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f543c73221a895dc.npz",
+      "sha256": "c90565fbfbcd76246a83d15b193ad7988025186c7cf52368f5e310e85ac979f3",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f5b701e2a0a26016.npz",
+      "sha256": "99fa30221f78af9b1328da8f425694dcd8dab0836070e25b66d29abe3fd481ad",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f5dbe33f3af9fdfd.npz",
+      "sha256": "ece3939b3e7b6efaca76ec684229f0db5106f302e60ea2a467f982e054fc4454",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f600701eb7fab6e8.npz",
+      "sha256": "57f598d135509177fdcfbd00660ff02c55df87dd7b8f95eb96479eb6b57ae97c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f6dd9cee69d27773.npz",
+      "sha256": "42fa2a20b50c1b4ec7aed17bd95a1579358669206c94a04bc686aa6216068151",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f70f868e7b99d8a9.npz",
+      "sha256": "01fb770ee1bb6edf6af72388b275eae5533be11b9905a49f2699a02fe99c84bb",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f73474850e6418df.npz",
+      "sha256": "85c6c80bbc066c6c29a4c00184985e2cdef0a6ba7bbb1e0df4333df6db1c8a8a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f7cf7672a4d8015e.npz",
+      "sha256": "79d001d7c547e74f23d178e79c0ccc74df186eb26bafcec12705c73155f06486",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f850348e16f9c974.npz",
+      "sha256": "ada775aa4a4748ed6287ab0a32c32df8a0dff952a33eee08b0e24b93ea7d8114",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f94e8dbf7d9a0381.npz",
+      "sha256": "db053941ad8e513a33e54fb27236a8fb237c6e3465720b5520ece20a98970d5e",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f964ef8d4189bfcc.npz",
+      "sha256": "145e12f6c79c18ea89f612f0c7aa7f47a6da641f5a2fa5817a9da6568789ab88",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f98ba37d4499f533.npz",
+      "sha256": "0a70779642f31c84c843b54bdf7da45164b902be0d961c06e01b5e5c95016dff",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_f9950f30f2eaade8.npz",
+      "sha256": "5269b604ed3429cc7c5d425657053cc409c8e72cf6db0758d66f1675aaeeb5c6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_fa3b439797417b02.npz",
+      "sha256": "532f2a59931d8ad7ed1e2ed2d2d4b86ceeb99b156ff1398431c3563ea2bbc246",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_fa8a2972ed05b196.npz",
+      "sha256": "99703e194daabf33780d0f0e8028f88dc6d5b621b30a36c1ff3ca3a4bf7f6591",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_faa1c550966190d8.npz",
+      "sha256": "5753a23c5e707668d3a495393ece721b5598de268d0310eca69e17e8d0259663",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_fae641863bb13060.npz",
+      "sha256": "050132fa48bdff69a207fb2c15f449aaabf6ec818788cf6d175f5c7739f19fe9",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_fb22eb1548a8bad4.npz",
+      "sha256": "cbfb730c3e7d8d6d87edaf0fd9a31fa3c3b22fbbd7ef4d002424715abe814da6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_fb3cc893a6061948.npz",
+      "sha256": "34739859c1375b852e6fb3f3a21f482cb3eda8e163b012fae98402dbc505b13b",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_fcf9f2fbf9da47a8.npz",
+      "sha256": "12a25622ea6e96e97502b09eb8790bc63519785950e7deac0ad411e414d5474a",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_fd9032f1615622b8.npz",
+      "sha256": "1dffded3715a5459e688c21b41824ec99331acd1a54461938989a2e8a3716108",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_fe2bf13935c1cc11.npz",
+      "sha256": "8db16d7a88703c8421d708c99451f7ff3eec60a92fb5f7b8f7b474f31a4930c6",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_fe4a30ea3b10bc35.npz",
+      "sha256": "86484658fefaf0f5d5b756ab9b7526ca2f012212dbee5bb801058b574f0d63cf",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ff1b72758ad9f19e.npz",
+      "sha256": "ec2124d0bd3fba0e378ae57f15e273c6992778e033c677e0d001d378c1cbcab7",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ffc6e434b9c643ac.npz",
+      "sha256": "7d9e1a6d33b3567f0df4f455b6d07a2f74edcfb1910c070af310bd6fe2280fdd",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    },
+    {
+      "path": "LI_parallel_recommendation.assets/waveforms/cfg_ffd92a560f2c08ef.npz",
+      "sha256": "cf412a865e4df774bce0a17b12034adbe3b2bc6a09454fd6bdd9f4b843afa76c",
+      "curve_id": "raw_clean",
+      "array_units": {
+        "time_s": "s",
+        "voltage_V": "V"
+      }
+    }
+  ],
+  "semantic_result_sha256": "88c4ceae7a3e825be242d5a1b307add153b1f2a14d80965359a51ee06fa231b2"
+}

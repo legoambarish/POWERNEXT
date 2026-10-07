@@ -1,0 +1,1388 @@
+{
+  "dataset_manifest": {
+    "schema_version": "ml_dataset_v1",
+    "purpose": "DEVELOPMENT_NOT_PRODUCTION_FREEZE",
+    "equipment_profile_version": "CPRI_IVG_OCT04_2026_v2",
+    "equipment_profile_sha256": "90cc70fd0a86a7ecaef8510538bac31fc33e42fa6527f47afc18afd4e9964f43",
+    "simulator_version": "0.2.0",
+    "simulator_sha256": "318728555dcc028940f24e8e9a41d366a0d1bc15139de58f612db73a00395926",
+    "evaluator_version": "physics_clean_evaluator_0.1.0",
+    "evaluator_sha256": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+    "waveform_profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+    "recipe_version": "OCT04_EXPLICIT_RECIPE_CATALOG_v2",
+    "topology_spec_sha256": "cae23ca71041ff8756e8f90f90bbd25b0d2a8368d9d81d5f84424980e74b562c",
+    "topology_status": "PROVISIONAL_TOPOLOGY",
+    "evidence_domain": "PROVISIONAL_TOPOLOGY_SYNTHETIC",
+    "hardware_verified": false,
+    "baseline_version": "independent_RC_L0_v1",
+    "baseline_sha256": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+    "adapter_version": "provisional_adapter_v2",
+    "settings": {
+      "samples_per_stratum": 8,
+      "seed": 20261004,
+      "n_points": 1600,
+      "adapter": "provisional"
+    },
+    "source_hashes": {
+      "powernext_ml\\__init__.py": "c93218b3469a400b083e988473796ca7ae52a4c002f8ddef5e38d1085149f01d",
+      "powernext_ml\\__main__.py": "7a594fea6cf2d010816f05802c2f391da3f4c6a95011a7e739ba426d35c1ed26",
+      "powernext_ml\\common.py": "f898f8fa88ffd982f80f61d0df748576aa4d9500a8f91e99e97fd2c6b9bb76f8",
+      "powernext_ml\\design_v2.py": "4aede9abadddd08136759f77209758d68d347e03a7039429382a31328ff9a9aa",
+      "powernext_ml\\evaluation.py": "ea725df8cc9980e0bceedd449504348fb87778ad6782c11162a04b85f27d6e4e",
+      "powernext_ml\\features.py": "415e0a951e295807ae47cc3be271410f88b71a13fe682d9029136ccc2dbe179c",
+      "powernext_ml\\generate.py": "b5cf3e66b1b97609c197c59d45cd69ae89e64dc4e5607ad08d225a1bf539b968",
+      "powernext_ml\\inference.py": "c7a0574f140494e681b547c565a1cb5041efd30da6c75efa33e4c98f657b313a",
+      "powernext_ml\\legacy.py": "d210daaadc8aa4d078a48a24da2e75daf9f40d6032642e63812e2b0dd03df20a",
+      "powernext_ml\\measured.py": "72bd3efd97731f166f22860d28019c634bce502181c20bf15bf87e1673fa345b",
+      "powernext_ml\\models.py": "02d3eaaea90bbceb3e6a048608ded127052675919037b91b6dc9e923948643f2",
+      "powernext_ml\\physics_adapter.py": "8857ec7f478e0e68062e16678794237dd1995c19ed49172278408a8c12ac52be",
+      "powernext_ml\\registry.py": "70eabd17ce89e3da59818447b379c39c6d00e204aa9003c2e05b681b944bf607",
+      "powernext_ml\\splits.py": "bc151213a9db2b16b431c976fa21645100f8992be07afa52d00f624c300edda1",
+      "powernext_ml\\training.py": "e5a0a1e833a6d0bbd733fcbef5c36f20467c7fd0e8d032ad804766287cade825"
+    },
+    "runtime": {
+      "python": "3.12.14",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pandas": "2.3.3",
+      "sklearn": "1.9.0",
+      "openpyxl": "3.1.5"
+    },
+    "design_sha256": "7b9c6185bf0db36297b752ca87b510de282dbdca4a33f2b561a7b00c499581b1",
+    "status": "COMPLETE",
+    "dataset_id": "sim_1f2992ccb93c5d9d",
+    "row_count": 18339,
+    "regression_eligible_count": 18028,
+    "status_counts": {
+      "SIMULATED": 18332,
+      "INVALID_OR_UNSUPPORTED": 7
+    },
+    "waveform_counts": {
+      "VALID_CLEAN_FULL_IMPULSE": 18028,
+      "INDETERMINATE": 304,
+      "None": 7
+    },
+    "compliance_counts": {
+      "FAIL": 18011,
+      "INDETERMINATE": 311,
+      "PASS": 17
+    },
+    "rows_sha256": "14fdf1b748d73b8e7154a501cb6f3f125c12206811de0f6eef3c3dabdd60bf71"
+  },
+  "counts": {
+    "LI:GSHUNT_v0:DEV_UNIFORM_SINGLE_v2": {
+      "total": 4617,
+      "eligible": 4510,
+      "shape_pass": 1
+    },
+    "LI:OSHUNT_v0:DEV_UNIFORM_SINGLE_v2": {
+      "total": 4032,
+      "eligible": 3976,
+      "shape_pass": 0
+    },
+    "SI:GSHUNT_v0:DEV_UNIFORM_SINGLE_v2": {
+      "total": 4365,
+      "eligible": 4291,
+      "shape_pass": 215
+    },
+    "SI:OSHUNT_v0:DEV_UNIFORM_SINGLE_v2": {
+      "total": 4344,
+      "eligible": 4280,
+      "shape_pass": 209
+    },
+    "LI:GSHUNT_v0:HYP_LI_TAIL_180_PAR_520_v1": {
+      "total": 981,
+      "eligible": 971,
+      "shape_pass": 166
+    }
+  },
+  "selected_models": [
+    {
+      "mode": "LI",
+      "topology": "GSHUNT_v0",
+      "protocol": "grouped_setup",
+      "model": "extra_trees",
+      "formulation": "residual",
+      "selected": true,
+      "fit_seconds": 3.720345699999598,
+      "validation": {
+        "gain": {
+          "MAE": 0.00034662940541006787,
+          "RMSE": 0.0018610579497918987,
+          "P95_absolute_error": 0.0014904939036205428,
+          "tolerance_normalized_MAE": 0.012390429838958142,
+          "tolerance_normalized_P95": 0.05304571807585545
+        },
+        "front_us": {
+          "MAE": 0.006875518841595603,
+          "RMSE": 0.02056643677279085,
+          "P95_absolute_error": 0.03279468211729825,
+          "tolerance_normalized_MAE": 0.01909866344887668,
+          "tolerance_normalized_P95": 0.09109633921471735
+        },
+        "tail_us": {
+          "MAE": 0.09302272203636108,
+          "RMSE": 0.6220313887960365,
+          "P95_absolute_error": 0.32259659715626043,
+          "tolerance_normalized_MAE": 0.009302272203636108,
+          "tolerance_normalized_P95": 0.03225965971562604
+        },
+        "crest_kV": {
+          "MAE": 0.2591859807781291,
+          "RMSE": 1.0388632452591517,
+          "P95_absolute_error": 1.4501407247218994
+        },
+        "n": 890,
+        "selection_score": 0.013597121830490309,
+        "full_compliance": {
+          "true_pass": 1,
+          "true_fail": 889,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": 0.0
+        },
+        "shape_compliance": {
+          "true_pass": 24,
+          "true_fail": 866,
+          "false_accept": 2,
+          "false_reject": 0,
+          "false_accept_rate": 0.0023094688221709007,
+          "false_reject_rate": 0.0
+        },
+        "ranking_error": null,
+        "ranking_status": "NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS",
+        "evaluation_only_crest_boundary_probes": [
+          {
+            "actual_crest_over_request": 0.96,
+            "true_pass": 0,
+            "true_fail": 890,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 0.9701,
+            "true_pass": 24,
+            "true_fail": 866,
+            "false_accept": 2,
+            "false_reject": 7,
+            "false_accept_rate": 0.0023094688221709007,
+            "false_reject_rate": 0.2916666666666667
+          },
+          {
+            "actual_crest_over_request": 1.0,
+            "true_pass": 24,
+            "true_fail": 866,
+            "false_accept": 2,
+            "false_reject": 0,
+            "false_accept_rate": 0.0023094688221709007,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.0299,
+            "true_pass": 24,
+            "true_fail": 866,
+            "false_accept": 1,
+            "false_reject": 9,
+            "false_accept_rate": 0.0011547344110854503,
+            "false_reject_rate": 0.375
+          },
+          {
+            "actual_crest_over_request": 1.04,
+            "true_pass": 0,
+            "true_fail": 890,
+            "false_accept": 1,
+            "false_reject": 0,
+            "false_accept_rate": 0.0011235955056179776,
+            "false_reject_rate": null
+          }
+        ]
+      },
+      "test": {
+        "gain": {
+          "MAE": 0.0006616986605440756,
+          "RMSE": 0.004096231932342909,
+          "P95_absolute_error": 0.0023896472639698303,
+          "tolerance_normalized_MAE": 0.02271089768921667,
+          "tolerance_normalized_P95": 0.0869256076399495
+        },
+        "front_us": {
+          "MAE": 0.008343225266530072,
+          "RMSE": 0.025587344227599756,
+          "P95_absolute_error": 0.034410303441352985,
+          "tolerance_normalized_MAE": 0.023175625740361305,
+          "tolerance_normalized_P95": 0.09558417622598052
+        },
+        "tail_us": {
+          "MAE": 0.18212968792523804,
+          "RMSE": 1.0966416393338712,
+          "P95_absolute_error": 0.4960999200004646,
+          "tolerance_normalized_MAE": 0.0182129687925238,
+          "tolerance_normalized_P95": 0.04960999200004646
+        },
+        "crest_kV": {
+          "MAE": 0.5997668800735966,
+          "RMSE": 4.685468398016201,
+          "P95_absolute_error": 1.9487778311410557
+        },
+        "n": 1020,
+        "selection_score": 0.021366497407367263,
+        "full_compliance": {
+          "true_pass": 1,
+          "true_fail": 1019,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": 0.0
+        },
+        "shape_compliance": {
+          "true_pass": 31,
+          "true_fail": 989,
+          "false_accept": 1,
+          "false_reject": 0,
+          "false_accept_rate": 0.0010111223458038423,
+          "false_reject_rate": 0.0
+        },
+        "ranking_error": null,
+        "ranking_status": "NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS",
+        "evaluation_only_crest_boundary_probes": [
+          {
+            "actual_crest_over_request": 0.96,
+            "true_pass": 0,
+            "true_fail": 1020,
+            "false_accept": 1,
+            "false_reject": 0,
+            "false_accept_rate": 0.000980392156862745,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 0.9701,
+            "true_pass": 31,
+            "true_fail": 989,
+            "false_accept": 1,
+            "false_reject": 0,
+            "false_accept_rate": 0.0010111223458038423,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.0,
+            "true_pass": 31,
+            "true_fail": 989,
+            "false_accept": 1,
+            "false_reject": 0,
+            "false_accept_rate": 0.0010111223458038423,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.0299,
+            "true_pass": 31,
+            "true_fail": 989,
+            "false_accept": 1,
+            "false_reject": 20,
+            "false_accept_rate": 0.0010111223458038423,
+            "false_reject_rate": 0.6451612903225806
+          },
+          {
+            "actual_crest_over_request": 1.04,
+            "true_pass": 0,
+            "true_fail": 1020,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          }
+        ]
+      },
+      "latency": {
+        "single_median_ms": 23.7472999979218,
+        "single_p95_ms": 27.50208000106795,
+        "repeats": 15
+      },
+      "ood_count": 1
+    },
+    {
+      "mode": "LI",
+      "topology": "OSHUNT_v0",
+      "protocol": "grouped_setup",
+      "model": "extra_trees",
+      "formulation": "residual",
+      "selected": true,
+      "fit_seconds": 2.656051899997692,
+      "validation": {
+        "gain": {
+          "MAE": 0.0002993876096462888,
+          "RMSE": 0.0014061079178860575,
+          "P95_absolute_error": 0.0015111625554903984,
+          "tolerance_normalized_MAE": 0.015134188563653457,
+          "tolerance_normalized_P95": 0.0677032421045941
+        },
+        "front_us": {
+          "MAE": 0.009719211024526175,
+          "RMSE": 0.029138054344198257,
+          "P95_absolute_error": 0.056823887151427235,
+          "tolerance_normalized_MAE": 0.026997808401461598,
+          "tolerance_normalized_P95": 0.15784413097618674
+        },
+        "tail_us": {
+          "MAE": 0.23733657099391867,
+          "RMSE": 1.2548627559831271,
+          "P95_absolute_error": 0.7643611089733922,
+          "tolerance_normalized_MAE": 0.023733657099391865,
+          "tolerance_normalized_P95": 0.07643611089733922
+        },
+        "crest_kV": {
+          "MAE": 0.318787111810625,
+          "RMSE": 1.9732837632186964,
+          "P95_absolute_error": 1.0138932193804515
+        },
+        "n": 629,
+        "selection_score": 0.021955218021502305,
+        "full_compliance": {
+          "true_pass": 0,
+          "true_fail": 629,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": null
+        },
+        "shape_compliance": {
+          "true_pass": 0,
+          "true_fail": 629,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": null
+        },
+        "ranking_error": null,
+        "ranking_status": "NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS",
+        "evaluation_only_crest_boundary_probes": [
+          {
+            "actual_crest_over_request": 0.96,
+            "true_pass": 0,
+            "true_fail": 629,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 0.9701,
+            "true_pass": 0,
+            "true_fail": 629,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 1.0,
+            "true_pass": 0,
+            "true_fail": 629,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 1.0299,
+            "true_pass": 0,
+            "true_fail": 629,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 1.04,
+            "true_pass": 0,
+            "true_fail": 629,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          }
+        ]
+      },
+      "test": {
+        "gain": {
+          "MAE": 0.0002990524475072991,
+          "RMSE": 0.0019118574129377282,
+          "P95_absolute_error": 0.0009934980147467706,
+          "tolerance_normalized_MAE": 0.013925743655407287,
+          "tolerance_normalized_P95": 0.053480768652932435
+        },
+        "front_us": {
+          "MAE": 0.009269525036777774,
+          "RMSE": 0.030785630044970803,
+          "P95_absolute_error": 0.050211370151417724,
+          "tolerance_normalized_MAE": 0.025748680657716037,
+          "tolerance_normalized_P95": 0.13947602819838256
+        },
+        "tail_us": {
+          "MAE": 0.1821034811337608,
+          "RMSE": 1.008768159519968,
+          "P95_absolute_error": 0.39014063849771324,
+          "tolerance_normalized_MAE": 0.018210348113376084,
+          "tolerance_normalized_P95": 0.039014063849771324
+        },
+        "crest_kV": {
+          "MAE": 0.2268258660924485,
+          "RMSE": 1.2658658224217885,
+          "P95_absolute_error": 0.7426159693733342
+        },
+        "n": 697,
+        "selection_score": 0.019294924142166468,
+        "full_compliance": {
+          "true_pass": 0,
+          "true_fail": 697,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": null
+        },
+        "shape_compliance": {
+          "true_pass": 0,
+          "true_fail": 697,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": null
+        },
+        "ranking_error": null,
+        "ranking_status": "NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS",
+        "evaluation_only_crest_boundary_probes": [
+          {
+            "actual_crest_over_request": 0.96,
+            "true_pass": 0,
+            "true_fail": 697,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 0.9701,
+            "true_pass": 0,
+            "true_fail": 697,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 1.0,
+            "true_pass": 0,
+            "true_fail": 697,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 1.0299,
+            "true_pass": 0,
+            "true_fail": 697,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 1.04,
+            "true_pass": 0,
+            "true_fail": 697,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          }
+        ]
+      },
+      "latency": {
+        "single_median_ms": 20.313100001658313,
+        "single_p95_ms": 22.234619999289862,
+        "repeats": 15
+      },
+      "ood_count": 15
+    },
+    {
+      "mode": "SI",
+      "topology": "GSHUNT_v0",
+      "protocol": "grouped_setup",
+      "model": "extra_trees",
+      "formulation": "residual",
+      "selected": true,
+      "fit_seconds": 2.82969139999841,
+      "validation": {
+        "gain": {
+          "MAE": 0.000579199222164591,
+          "RMSE": 0.004325858303730965,
+          "P95_absolute_error": 0.0017407538883047024,
+          "tolerance_normalized_MAE": 0.020033861034655306,
+          "tolerance_normalized_P95": 0.061928631757463236
+        },
+        "front_us": {
+          "MAE": 0.01749331006550144,
+          "RMSE": 0.06922530608152554,
+          "P95_absolute_error": 0.08834934768395657,
+          "tolerance_normalized_MAE": 0.0003498662013100289,
+          "tolerance_normalized_P95": 0.0017669869536791323
+        },
+        "tail_us": {
+          "MAE": 0.21323572916876407,
+          "RMSE": 1.4290188902056897,
+          "P95_absolute_error": 0.573554134249548,
+          "tolerance_normalized_MAE": 0.00014215715277917604,
+          "tolerance_normalized_P95": 0.000382369422833032
+        },
+        "crest_kV": {
+          "MAE": 0.3693243303362078,
+          "RMSE": 2.227837423755967,
+          "P95_absolute_error": 1.5592709463563257
+        },
+        "n": 733,
+        "selection_score": 0.006841961462914836,
+        "full_compliance": {
+          "true_pass": 2,
+          "true_fail": 731,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": 0.0
+        },
+        "shape_compliance": {
+          "true_pass": 40,
+          "true_fail": 693,
+          "false_accept": 1,
+          "false_reject": 2,
+          "false_accept_rate": 0.001443001443001443,
+          "false_reject_rate": 0.05
+        },
+        "ranking_error": null,
+        "ranking_status": "NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS",
+        "evaluation_only_crest_boundary_probes": [
+          {
+            "actual_crest_over_request": 0.96,
+            "true_pass": 0,
+            "true_fail": 733,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 0.9701,
+            "true_pass": 40,
+            "true_fail": 693,
+            "false_accept": 1,
+            "false_reject": 2,
+            "false_accept_rate": 0.001443001443001443,
+            "false_reject_rate": 0.05
+          },
+          {
+            "actual_crest_over_request": 1.0,
+            "true_pass": 40,
+            "true_fail": 693,
+            "false_accept": 1,
+            "false_reject": 2,
+            "false_accept_rate": 0.001443001443001443,
+            "false_reject_rate": 0.05
+          },
+          {
+            "actual_crest_over_request": 1.0299,
+            "true_pass": 40,
+            "true_fail": 693,
+            "false_accept": 1,
+            "false_reject": 2,
+            "false_accept_rate": 0.001443001443001443,
+            "false_reject_rate": 0.05
+          },
+          {
+            "actual_crest_over_request": 1.04,
+            "true_pass": 0,
+            "true_fail": 733,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          }
+        ]
+      },
+      "test": {
+        "gain": {
+          "MAE": 0.000367735740424465,
+          "RMSE": 0.0026982121303209708,
+          "P95_absolute_error": 0.001188357760448583,
+          "tolerance_normalized_MAE": 0.012802761005930806,
+          "tolerance_normalized_P95": 0.0432861615537818
+        },
+        "front_us": {
+          "MAE": 0.02087574780086595,
+          "RMSE": 0.11250472731251379,
+          "P95_absolute_error": 0.08408553591016442,
+          "tolerance_normalized_MAE": 0.00041751495601731925,
+          "tolerance_normalized_P95": 0.001681710718203289
+        },
+        "tail_us": {
+          "MAE": 0.15440508323039662,
+          "RMSE": 1.0437230509814384,
+          "P95_absolute_error": 0.2638067696162573,
+          "tolerance_normalized_MAE": 0.00010293672215359774,
+          "tolerance_normalized_P95": 0.00017587117974417156
+        },
+        "crest_kV": {
+          "MAE": 0.21176162548986593,
+          "RMSE": 1.141510223139722,
+          "P95_absolute_error": 0.7968180118309751
+        },
+        "n": 769,
+        "selection_score": 0.004441070894700574,
+        "full_compliance": {
+          "true_pass": 2,
+          "true_fail": 767,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": 0.0
+        },
+        "shape_compliance": {
+          "true_pass": 50,
+          "true_fail": 719,
+          "false_accept": 1,
+          "false_reject": 1,
+          "false_accept_rate": 0.0013908205841446453,
+          "false_reject_rate": 0.02
+        },
+        "ranking_error": null,
+        "ranking_status": "NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS",
+        "evaluation_only_crest_boundary_probes": [
+          {
+            "actual_crest_over_request": 0.96,
+            "true_pass": 0,
+            "true_fail": 769,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 0.9701,
+            "true_pass": 50,
+            "true_fail": 719,
+            "false_accept": 1,
+            "false_reject": 1,
+            "false_accept_rate": 0.0013908205841446453,
+            "false_reject_rate": 0.02
+          },
+          {
+            "actual_crest_over_request": 1.0,
+            "true_pass": 50,
+            "true_fail": 719,
+            "false_accept": 1,
+            "false_reject": 1,
+            "false_accept_rate": 0.0013908205841446453,
+            "false_reject_rate": 0.02
+          },
+          {
+            "actual_crest_over_request": 1.0299,
+            "true_pass": 50,
+            "true_fail": 719,
+            "false_accept": 1,
+            "false_reject": 1,
+            "false_accept_rate": 0.0013908205841446453,
+            "false_reject_rate": 0.02
+          },
+          {
+            "actual_crest_over_request": 1.04,
+            "true_pass": 0,
+            "true_fail": 769,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          }
+        ]
+      },
+      "latency": {
+        "single_median_ms": 22.277500000200234,
+        "single_p95_ms": 26.37154999865743,
+        "repeats": 15
+      },
+      "ood_count": 2
+    },
+    {
+      "mode": "SI",
+      "topology": "OSHUNT_v0",
+      "protocol": "grouped_setup",
+      "model": "extra_trees",
+      "formulation": "residual",
+      "selected": true,
+      "fit_seconds": 2.936124199997721,
+      "validation": {
+        "gain": {
+          "MAE": 0.00039590942315301334,
+          "RMSE": 0.0035255688318828146,
+          "P95_absolute_error": 0.001088062980679402,
+          "tolerance_normalized_MAE": 0.01940862325591932,
+          "tolerance_normalized_P95": 0.04174215421447014
+        },
+        "front_us": {
+          "MAE": 0.02360855337525935,
+          "RMSE": 0.10010350814161835,
+          "P95_absolute_error": 0.10761479633358442,
+          "tolerance_normalized_MAE": 0.0004721710675051871,
+          "tolerance_normalized_P95": 0.0021522959266716893
+        },
+        "tail_us": {
+          "MAE": 0.15142941858169837,
+          "RMSE": 0.9617507185301456,
+          "P95_absolute_error": 0.45251513981122554,
+          "tolerance_normalized_MAE": 0.00010095294572113223,
+          "tolerance_normalized_P95": 0.0003016767598741504
+        },
+        "crest_kV": {
+          "MAE": 0.19718155582906652,
+          "RMSE": 1.1647658232016247,
+          "P95_absolute_error": 0.6786684062715777
+        },
+        "n": 755,
+        "selection_score": 0.0066605824230485475,
+        "full_compliance": {
+          "true_pass": 0,
+          "true_fail": 755,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": null
+        },
+        "shape_compliance": {
+          "true_pass": 44,
+          "true_fail": 711,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": 0.0
+        },
+        "ranking_error": null,
+        "ranking_status": "NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS",
+        "evaluation_only_crest_boundary_probes": [
+          {
+            "actual_crest_over_request": 0.96,
+            "true_pass": 0,
+            "true_fail": 755,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 0.9701,
+            "true_pass": 44,
+            "true_fail": 711,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.0,
+            "true_pass": 44,
+            "true_fail": 711,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.0299,
+            "true_pass": 44,
+            "true_fail": 711,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.04,
+            "true_pass": 0,
+            "true_fail": 755,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          }
+        ]
+      },
+      "test": {
+        "gain": {
+          "MAE": 0.0002329272894856805,
+          "RMSE": 0.001704268399514916,
+          "P95_absolute_error": 0.000681112054988725,
+          "tolerance_normalized_MAE": 0.011944514300389685,
+          "tolerance_normalized_P95": 0.03338993680338724
+        },
+        "front_us": {
+          "MAE": 0.014734022753830836,
+          "RMSE": 0.06136293279644014,
+          "P95_absolute_error": 0.08879964482744683,
+          "tolerance_normalized_MAE": 0.00029468045507661687,
+          "tolerance_normalized_P95": 0.0017759928965489374
+        },
+        "tail_us": {
+          "MAE": 0.10258901901078063,
+          "RMSE": 0.7583880171518929,
+          "P95_absolute_error": 0.3026499177209933,
+          "tolerance_normalized_MAE": 6.839267934052042e-05,
+          "tolerance_normalized_P95": 0.00020176661181399552
+        },
+        "crest_kV": {
+          "MAE": 0.1686403424389806,
+          "RMSE": 1.00524789129712,
+          "P95_absolute_error": 0.606960005181339
+        },
+        "n": 742,
+        "selection_score": 0.004102529144935608,
+        "full_compliance": {
+          "true_pass": 1,
+          "true_fail": 741,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": 0.0
+        },
+        "shape_compliance": {
+          "true_pass": 32,
+          "true_fail": 710,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": 0.0
+        },
+        "ranking_error": null,
+        "ranking_status": "NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS",
+        "evaluation_only_crest_boundary_probes": [
+          {
+            "actual_crest_over_request": 0.96,
+            "true_pass": 0,
+            "true_fail": 742,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 0.9701,
+            "true_pass": 32,
+            "true_fail": 710,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.0,
+            "true_pass": 32,
+            "true_fail": 710,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.0299,
+            "true_pass": 32,
+            "true_fail": 710,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.04,
+            "true_pass": 0,
+            "true_fail": 742,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          }
+        ]
+      },
+      "latency": {
+        "single_median_ms": 22.89550000205054,
+        "single_p95_ms": 26.572420001321007,
+        "repeats": 15
+      },
+      "ood_count": 5
+    }
+  ],
+  "analytic_baselines": [
+    {
+      "mode": "LI",
+      "topology": "GSHUNT_v0",
+      "protocol": "grouped_setup",
+      "model": "physics_only",
+      "formulation": "baseline",
+      "selected": false,
+      "test": {
+        "gain": {
+          "MAE": 0.0021634407628685084,
+          "RMSE": 0.010609171350763833,
+          "P95_absolute_error": 0.008416432245021204,
+          "tolerance_normalized_MAE": 0.07596630293206132,
+          "tolerance_normalized_P95": 0.3171095185959342
+        },
+        "front_us": {
+          "MAE": 0.06214609583624226,
+          "RMSE": 0.1427978878429526,
+          "P95_absolute_error": 0.3374125827838951,
+          "tolerance_normalized_MAE": 0.17262804398956183,
+          "tolerance_normalized_P95": 0.9372571743997083
+        },
+        "tail_us": {
+          "MAE": 0.21428794031428072,
+          "RMSE": 0.6777589565969266,
+          "P95_absolute_error": 1.1347621924034754,
+          "tolerance_normalized_MAE": 0.021428794031428076,
+          "tolerance_normalized_P95": 0.11347621924034755
+        },
+        "crest_kV": {
+          "MAE": 1.9174987095485636,
+          "RMSE": 8.6432972453584,
+          "P95_absolute_error": 7.854118181643068
+        },
+        "n": 1020,
+        "selection_score": 0.09000771365101705,
+        "full_compliance": {
+          "true_pass": 1,
+          "true_fail": 1019,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": 0.0
+        },
+        "shape_compliance": {
+          "true_pass": 31,
+          "true_fail": 989,
+          "false_accept": 5,
+          "false_reject": 6,
+          "false_accept_rate": 0.005055611729019211,
+          "false_reject_rate": 0.1935483870967742
+        },
+        "ranking_error": null,
+        "ranking_status": "NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS",
+        "evaluation_only_crest_boundary_probes": [
+          {
+            "actual_crest_over_request": 0.96,
+            "true_pass": 0,
+            "true_fail": 1020,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 0.9701,
+            "true_pass": 31,
+            "true_fail": 989,
+            "false_accept": 1,
+            "false_reject": 24,
+            "false_accept_rate": 0.0010111223458038423,
+            "false_reject_rate": 0.7741935483870968
+          },
+          {
+            "actual_crest_over_request": 1.0,
+            "true_pass": 31,
+            "true_fail": 989,
+            "false_accept": 4,
+            "false_reject": 6,
+            "false_accept_rate": 0.004044489383215369,
+            "false_reject_rate": 0.1935483870967742
+          },
+          {
+            "actual_crest_over_request": 1.0299,
+            "true_pass": 31,
+            "true_fail": 989,
+            "false_accept": 5,
+            "false_reject": 6,
+            "false_accept_rate": 0.005055611729019211,
+            "false_reject_rate": 0.1935483870967742
+          },
+          {
+            "actual_crest_over_request": 1.04,
+            "true_pass": 0,
+            "true_fail": 1020,
+            "false_accept": 9,
+            "false_reject": 0,
+            "false_accept_rate": 0.008823529411764706,
+            "false_reject_rate": null
+          }
+        ]
+      }
+    },
+    {
+      "mode": "LI",
+      "topology": "OSHUNT_v0",
+      "protocol": "grouped_setup",
+      "model": "physics_only",
+      "formulation": "baseline",
+      "selected": false,
+      "test": {
+        "gain": {
+          "MAE": 0.0005760855812594864,
+          "RMSE": 0.0033334990767660694,
+          "P95_absolute_error": 0.0014346807814613746,
+          "tolerance_normalized_MAE": 0.030786410151614815,
+          "tolerance_normalized_P95": 0.08267500627925305
+        },
+        "front_us": {
+          "MAE": 0.03332547044127645,
+          "RMSE": 0.11033862144060422,
+          "P95_absolute_error": 0.18190043771169323,
+          "tolerance_normalized_MAE": 0.09257075122576788,
+          "tolerance_normalized_P95": 0.5052789936435923
+        },
+        "tail_us": {
+          "MAE": 0.1813470939733809,
+          "RMSE": 1.5225204150713672,
+          "P95_absolute_error": 0.5704158030458345,
+          "tolerance_normalized_MAE": 0.01813470939733809,
+          "tolerance_normalized_P95": 0.05704158030458346
+        },
+        "crest_kV": {
+          "MAE": 0.47112027687037134,
+          "RMSE": 2.6135432881513467,
+          "P95_absolute_error": 1.6194019185973354
+        },
+        "n": 697,
+        "selection_score": 0.047163956924906936,
+        "full_compliance": {
+          "true_pass": 0,
+          "true_fail": 697,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": null
+        },
+        "shape_compliance": {
+          "true_pass": 0,
+          "true_fail": 697,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": null
+        },
+        "ranking_error": null,
+        "ranking_status": "NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS",
+        "evaluation_only_crest_boundary_probes": [
+          {
+            "actual_crest_over_request": 0.96,
+            "true_pass": 0,
+            "true_fail": 697,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 0.9701,
+            "true_pass": 0,
+            "true_fail": 697,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 1.0,
+            "true_pass": 0,
+            "true_fail": 697,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 1.0299,
+            "true_pass": 0,
+            "true_fail": 697,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 1.04,
+            "true_pass": 0,
+            "true_fail": 697,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          }
+        ]
+      }
+    },
+    {
+      "mode": "SI",
+      "topology": "GSHUNT_v0",
+      "protocol": "grouped_setup",
+      "model": "physics_only",
+      "formulation": "baseline",
+      "selected": false,
+      "test": {
+        "gain": {
+          "MAE": 0.0007653558045686803,
+          "RMSE": 0.0059198642573678505,
+          "P95_absolute_error": 0.0021768778029266776,
+          "tolerance_normalized_MAE": 0.027375679589735056,
+          "tolerance_normalized_P95": 0.08812889242920553
+        },
+        "front_us": {
+          "MAE": 0.04368935058097133,
+          "RMSE": 0.18944393070537222,
+          "P95_absolute_error": 0.1621093867256883,
+          "tolerance_normalized_MAE": 0.000873787011619427,
+          "tolerance_normalized_P95": 0.0032421877345137676
+        },
+        "tail_us": {
+          "MAE": 0.08467806340396056,
+          "RMSE": 0.5091737162240391,
+          "P95_absolute_error": 0.24327144832028236,
+          "tolerance_normalized_MAE": 5.645204226930704e-05,
+          "tolerance_normalized_P95": 0.0001621809655468549
+        },
+        "crest_kV": {
+          "MAE": 0.4461940819478895,
+          "RMSE": 2.8938356182623743,
+          "P95_absolute_error": 1.596724460981171
+        },
+        "n": 769,
+        "selection_score": 0.009435306214541262,
+        "full_compliance": {
+          "true_pass": 2,
+          "true_fail": 767,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": 0.0
+        },
+        "shape_compliance": {
+          "true_pass": 50,
+          "true_fail": 719,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": 0.0
+        },
+        "ranking_error": null,
+        "ranking_status": "NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS",
+        "evaluation_only_crest_boundary_probes": [
+          {
+            "actual_crest_over_request": 0.96,
+            "true_pass": 0,
+            "true_fail": 769,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 0.9701,
+            "true_pass": 50,
+            "true_fail": 719,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.0,
+            "true_pass": 50,
+            "true_fail": 719,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.0299,
+            "true_pass": 50,
+            "true_fail": 719,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.04,
+            "true_pass": 0,
+            "true_fail": 769,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          }
+        ]
+      }
+    },
+    {
+      "mode": "SI",
+      "topology": "OSHUNT_v0",
+      "protocol": "grouped_setup",
+      "model": "physics_only",
+      "formulation": "baseline",
+      "selected": false,
+      "test": {
+        "gain": {
+          "MAE": 0.00046928750684022824,
+          "RMSE": 0.0029914453401749526,
+          "P95_absolute_error": 0.0009791774499813021,
+          "tolerance_normalized_MAE": 0.026926278725962222,
+          "tolerance_normalized_P95": 0.056084784393738506
+        },
+        "front_us": {
+          "MAE": 0.03796362013614533,
+          "RMSE": 0.16259935817852464,
+          "P95_absolute_error": 0.20217417082517522,
+          "tolerance_normalized_MAE": 0.0007592724027229069,
+          "tolerance_normalized_P95": 0.004043483416503507
+        },
+        "tail_us": {
+          "MAE": 0.0733732039413151,
+          "RMSE": 0.3584252292260002,
+          "P95_absolute_error": 0.3415493530436484,
+          "tolerance_normalized_MAE": 4.891546929421006e-05,
+          "tolerance_normalized_P95": 0.00022769956869576563
+        },
+        "crest_kV": {
+          "MAE": 0.33920278510138224,
+          "RMSE": 2.1183945339005934,
+          "P95_absolute_error": 0.9799062024624355
+        },
+        "n": 742,
+        "selection_score": 0.009244822199326446,
+        "full_compliance": {
+          "true_pass": 1,
+          "true_fail": 741,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": 0.0
+        },
+        "shape_compliance": {
+          "true_pass": 32,
+          "true_fail": 710,
+          "false_accept": 0,
+          "false_reject": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_rate": 0.0
+        },
+        "ranking_error": null,
+        "ranking_status": "NOT_USED_FOR_FINAL_OPTIMIZER_RANKING_EXHAUSTIVE_PHYSICS",
+        "evaluation_only_crest_boundary_probes": [
+          {
+            "actual_crest_over_request": 0.96,
+            "true_pass": 0,
+            "true_fail": 742,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          },
+          {
+            "actual_crest_over_request": 0.9701,
+            "true_pass": 32,
+            "true_fail": 710,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.0,
+            "true_pass": 32,
+            "true_fail": 710,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.0299,
+            "true_pass": 32,
+            "true_fail": 710,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": 0.0
+          },
+          {
+            "actual_crest_over_request": 1.04,
+            "true_pass": 0,
+            "true_fail": 742,
+            "false_accept": 0,
+            "false_reject": 0,
+            "false_accept_rate": 0.0,
+            "false_reject_rate": null
+          }
+        ]
+      }
+    }
+  ],
+  "operational_screen": {
+    "n": 576,
+    "covered": 566,
+    "abstained": 10,
+    "all_with_abstention_treated_as_no_accept": {
+      "true_pass": 0,
+      "true_fail": 576,
+      "false_accept": 0,
+      "false_reject": 0,
+      "false_accept_rate": 0.0,
+      "false_reject_rate": null
+    },
+    "reported_only": {
+      "true_pass": 0,
+      "true_fail": 566,
+      "false_accept": 0,
+      "false_reject": 0,
+      "false_accept_rate": 0.0,
+      "false_reject_rate": null
+    },
+    "unsupported_waveforms": 64,
+    "unsupported_reported": 61,
+    "unsupported_predicted_in_bands": 0,
+    "warning": "Surrogate status does not qualify waveform shape; final physics is mandatory."
+  },
+  "batch_benchmark": {
+    "batch_scenarios": 128,
+    "batch_full_api_median_ms": 446.4599000020826,
+    "batch_full_api_repeats": 3,
+    "batch_mean_per_scenario_ms": 3.48796796876627,
+    "physics": {
+      "modal": {
+        "n": 128,
+        "total_ms": 1454.6151999929862,
+        "mean_per_scenario_ms": 11.364181249945204,
+        "median_ms": 10.905499999353196
+      },
+      "Radau": {
+        "n": 16,
+        "total_ms": 6910.428700000921,
+        "mean_per_scenario_ms": 431.90179375005755,
+        "median_ms": 444.654349999837
+      }
+    },
+    "analytic_L0_feature_baseline_batch_median_ms": 29.44519999800832,
+    "speedup_vs_current_modal": 3.2581094068833525,
+    "speedup_vs_radau_per_scenario": 123.82619267654158,
+    "physics_simulations_in_ml_batch": 0,
+    "scope": "Local warm process, artifact loading + feature construction + OOD + prediction + JSON serialization included. Physics includes simulation + metadata serialization; waveform serialization omitted."
+  },
+  "measured_cpri_traces": 0,
+  "hardware_verified": false
+}

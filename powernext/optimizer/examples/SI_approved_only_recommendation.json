@@ -1,0 +1,172 @@
+{
+  "schema_version": "recommendation_result_v1",
+  "optimizer_version": "0.1.1+redteam",
+  "request": {
+    "schema_version": "test_request_v1",
+    "request_id": "APPROVED_CATALOG_EMPTY",
+    "impulse_type": "SI",
+    "target_crest_V": 1300000.0,
+    "equipment_profile_id": "CPRI_IVG_OCT04_2026_v2",
+    "topology_id": "GSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 8.5e-10,
+      "divider_capacitance_F": 5e-10,
+      "stray_capacitance_F": 1.5e-10,
+      "loop_inductance_H": 1.85e-05,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "loop_resistance_ohm": 0.0,
+      "load_resistance_ohm": null,
+      "setup_id": "ILLUSTRATIVE_FIXED_SETUP",
+      "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED"
+    },
+    "polarity": 1,
+    "catalog_scope": "approved",
+    "alternatives": 4,
+    "assumptions": [
+      "Declared development setup; no actual CPRI measured shot",
+      "Continuous charging approximation; reliable minimum and increments are unknown"
+    ],
+    "current_setting": null,
+    "recipe_ids": [
+      "DEV_UNIFORM_SINGLE_v2"
+    ]
+  },
+  "request_sha256": "3f767eb27f35f51bb76739872bff440f3521a3123851426eefa0782faeea3c50",
+  "status": "NO_COMPLIANT_CONFIGURATION",
+  "eligible_for_hardware_recommendation": false,
+  "hardware_approval_status": "NOT_ESTABLISHED",
+  "standards_certified": false,
+  "search": {
+    "strategy": "EXHAUSTIVE_CATALOG_ANALYTIC_AMPLITUDE",
+    "catalog_count": 0,
+    "evaluated_count": 0,
+    "pruned_count": 0,
+    "numeric_pass_count": 0,
+    "evaluable_count": 0,
+    "unsupported_count": 0,
+    "approved_recipe_count": 0,
+    "catalog_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "ranking_policy": {
+    "version": "reference_conformity_v1",
+    "primary": "Physics-reference compliance then J=eV^2+eFront^2+eTail^2",
+    "tie_breakers": [
+      "greater minimum normalized margin",
+      "fewer supplied current-setting hardware-field changes",
+      "lower stored energy",
+      "fewer stages",
+      "component values",
+      "stable ID"
+    ],
+    "ML_role": "Trained residual estimate and separate score; batch scenario screening is available separately. No pruning or override of physics compliance."
+  },
+  "provenance": {
+    "physics": {
+      "equipment_profile_version": "CPRI_IVG_OCT04_2026_v2",
+      "equipment_profile_sha256": "90cc70fd0a86a7ecaef8510538bac31fc33e42fa6527f47afc18afd4e9964f43",
+      "simulator_version": "0.2.0",
+      "simulator_sha256": "318728555dcc028940f24e8e9a41d366a0d1bc15139de58f612db73a00395926",
+      "evaluator_version": "physics_clean_evaluator_0.1.0",
+      "evaluator_sha256": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+      "waveform_profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+      "recipe_version": "OCT04_EXPLICIT_RECIPE_CATALOG_v2",
+      "topology_spec_sha256": "cae23ca71041ff8756e8f90f90bbd25b0d2a8368d9d81d5f84424980e74b562c",
+      "topology_status": "PROVISIONAL_TOPOLOGY",
+      "evidence_domain": "PROVISIONAL_TOPOLOGY_SYNTHETIC",
+      "hardware_verified": false,
+      "baseline_version": "independent_RC_L0_v1",
+      "baseline_sha256": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+      "adapter_version": "provisional_adapter_v2"
+    },
+    "model_selection": {
+      "LI:GSHUNT_v0": "model_3d7f2939e0983060b100",
+      "LI:OSHUNT_v0": "model_772eb9870cdc64349cff",
+      "SI:GSHUNT_v0": "model_954960c4e8fe1695fbfd",
+      "SI:OSHUNT_v0": "model_920f8e81d2279b3b8b78"
+    },
+    "model_artifacts": {
+      "model_3d7f2939e0983060b100": {
+        "card.json": "5c4d580fda5a1383cbc0edd65c32c0694c944a9e8104019d6c9dd6c770048e16",
+        "model.joblib": "7278af4ef2d83a00874ab63ede7b04b3b2b3e713c3a741e93a606aed24652a73"
+      },
+      "model_772eb9870cdc64349cff": {
+        "card.json": "7db73342ddc9b5b8437f8994cd543f3bb6056f9d76f3ce09c625cf1765c49b96",
+        "model.joblib": "a37cfc8f50aff61d2dc7e2553460eef0b69f194ffe132d11527a36d67bee7e20"
+      },
+      "model_920f8e81d2279b3b8b78": {
+        "card.json": "f9faea261ad41325f1156f20259659aa4fa201c77a08c2a8efe47b1bfdef5c06",
+        "model.joblib": "c124936c95e2b6b8954062bb802c286084dfb453c34efb1140277f9f2f2a71c7"
+      },
+      "model_954960c4e8fe1695fbfd": {
+        "card.json": "b7f8ba6d5b6bca336f21b7745c6af3a30e3222f872c049563bb72c3502ee4577",
+        "model.joblib": "2f1618e21dda08c1d3670859b22114db7c887d0e4dd99ac21365e1f025d03b73"
+      }
+    },
+    "serving_source_hashes": {
+      "powernext_ml/__init__.py": "c93218b3469a400b083e988473796ca7ae52a4c002f8ddef5e38d1085149f01d",
+      "powernext_ml/common.py": "f898f8fa88ffd982f80f61d0df748576aa4d9500a8f91e99e97fd2c6b9bb76f8",
+      "powernext_ml/features.py": "415e0a951e295807ae47cc3be271410f88b71a13fe682d9029136ccc2dbe179c",
+      "powernext_ml/inference.py": "023165ac9f2d7c7afc9db9b3aa5b359c15df0ce470b61f6bcda857753057e77d",
+      "powernext_ml/models.py": "02d3eaaea90bbceb3e6a048608ded127052675919037b91b6dc9e923948643f2",
+      "powernext_ml/physics_adapter.py": "8857ec7f478e0e68062e16678794237dd1995c19ed49172278408a8c12ac52be",
+      "powernext_ml/registry.py": "0bf068d4da0cfd760bce384fe0c4ef8ebdbf5dd06e6522440f019e161e47a288",
+      "physics_engine/__init__.py": "683fe3921cea615ff7efdb9bf1f7aab5c423c83e6e0c7de6ceac9b0e1f0d759a",
+      "physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+      "physics_engine/dataset.py": "bcea18c44b005a9c1636491d2dde97c38ca1a37759de35ac68ff4bb0e186cf5e",
+      "physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+      "physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+      "physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+      "physics_engine/recipes.py": "1d67b54c07faef6afee97ab68e7c33ec63257ffdcb9eb910d7377e10eeff3853",
+      "physics_engine/reference_cases.py": "fe3f9de685ba374e6372411d23af1de16b3477a1d5111479eb24313ff684d78b",
+      "physics_engine/target.py": "ac0b2a31335d802eaacedab2b2c586ae99f66e95277659da277420cfdc26c3ca"
+    },
+    "fingerprint_policy": "TRANSITIVE_FORWARD_SERVING_v2",
+    "runtime": {
+      "python": "3.12.14",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pandas": "2.3.3",
+      "sklearn": "1.9.0",
+      "openpyxl": "3.1.5"
+    },
+    "adapter_name": "provisional"
+  },
+  "stack_sha256": "5945139ef5cc40ec1b9e0b73ca41050e92f8208062f88d735d28c9d35e324735",
+  "configuration_catalog": [],
+  "optimizer_source_hashes": {
+    "__init__.py": "58270314786409da5fe71e19abd03b03c0bdc7fafb7071984f92090bb57215f8",
+    "__main__.py": "395ed94b1b352df03e1bdfc630b218601df9a078727fff6d43aa0a08bf28695e",
+    "assessment.py": "4f6964e758e883895e3042c9e33fbc86d49cd1240e26bf8c17a6572c2374067e",
+    "catalog.py": "560968a72bc3334e2be2aec435494b0c03cd8b3901f1eaa9dcd3529b2179c691",
+    "charge.py": "bdc1bfa1f0c4b9849e4cc64bd46e6917b63fa98762630e426a6b77fd3d35cdb7",
+    "common.py": "409663949ea1830cf97897cdb8596224d0d63c700c96eb2345a15726b05302fc",
+    "prediction.py": "657d49ad7c3b46144c2b152df4943da2e3ecc3ece011b6ed55630e405139a49d",
+    "service.py": "26c5803586e98ff524bcc5cfba03528053e81a9b9c93eb2624fb35e69895e258",
+    "storage.py": "734daf9811d91497c2e4943f3f9ec21653c3ccd34eeafe563b8cd8c6bb1b33a0"
+  },
+  "best_configuration": null,
+  "ranked_alternatives": [],
+  "closest_noncompliant": null,
+  "no_solution": {
+    "message": "NO COMPLIANT CONFIGURATION FOUND IN THE DECLARED CATALOG",
+    "categories": [
+      "MISSING_APPROVED_RECIPE_INFORMATION",
+      "MISSING_HARDWARE_CONFIRMATION"
+    ],
+    "closest_candidate_id": null,
+    "limiting_parameters": [],
+    "scope": "Only this catalog, fixed topology and declared setup; not proof of physical impossibility for actual CPRI hardware"
+  },
+  "candidates": [],
+  "reason_codes": [
+    "MISSING_APPROVED_RECIPE_INFORMATION",
+    "MISSING_HARDWARE_CONFIRMATION"
+  ],
+  "previous_exact_case_matches": [],
+  "result_id": "recommendation_b119edf6561313b03045ef44",
+  "artifact_manifest": {
+    "path": "SI_approved_only_recommendation.assets/manifest.json",
+    "sha256": "f729f453cd6a026a0779391c2f6c96711809fa8e07e6410dbc10e68d8d93d0e4"
+  }
+}

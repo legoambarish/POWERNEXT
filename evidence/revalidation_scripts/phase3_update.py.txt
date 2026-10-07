@@ -1,0 +1,53 @@
+from pathlib import Path
+import json
+B=Path(__file__).resolve().parents[1];R=B/'release/PowerNext_Track1_Competition_v2';P=R/'powernext/optimizer';M=R/'powernext/ml'
+def edit(p,old,new):
+ s=p.read_text(encoding='utf-8');assert old in s,(p,old[:70]);p.write_text(s.replace(old,new),encoding='utf-8')
+c=P/'powernext_optimizer/catalog.py'
+edit(c,'from physics_engine import Setup','from physics_engine import Setup,Configuration\nfrom physics_engine.recipes import SINGLE,PARALLEL,resolve_recipe')
+edit(c,'    def entries(self, mode, topology, scope="development"):', '    def entries(self, mode, topology, scope="development", recipe_ids=None):')
+start='        recipes = self.profile["topology"]["development_recipes"]';s=c.read_text();a=s.index(start);b=s.index('        self._validate_entries(entries, mode, topology)',a)
+s=s[:a]+'''        recipes = self.profile["topology"]["development_recipes"]
+        selected=set(recipe_ids) if recipe_ids is not None else {r["id"] for r in recipes if r.get("default_enabled",False)}
+        entries = []
+        for recipe in recipes:
+            if recipe["id"] not in selected or mode not in recipe["allowed_impulse_types"] or topology not in recipe["allowed_topologies"]:
+                continue
+            if recipe["id"] not in (SINGLE,PARALLEL):
+                raise RequestError("CATALOG_ADAPTER_REQUIRED", "Do not guess a connection mapping")
+            tails=[180] if recipe["id"]==PARALLEL else self.adapter.tails[mode]
+            for n, front, tail in itertools.product(self.adapter.stages, self.adapter.fronts, tails):
+                c = dict(impulse_type=mode, stages=n, front_per_stage_ohm=front,
+                         tail_per_stage_ohm=tail, topology_id=topology, recipe_id=recipe["id"])
+                physical=resolve_recipe(Configuration(**c,stage_charge_V=100000))
+                eq=physical["tail_equivalent_per_stage_ohm"]
+                entries.append(dict(candidate_id="cfg_" + digest(c)[:16], configuration=c,
+                    series_sections=n, amplitude_law="LINEAR_EQUAL_STAGE_CHARGE",
+                    recipe_status=recipe["status"], exact_module_allocation=None,
+                    allocation_status="UNKNOWN_CPRI_PLACEMENTS", recipe_source=recipe,
+                    component_bill_of_materials=physical["bill_of_materials"],
+                    front_recipe=dict(recipe_id=recipe["id"], per_stage_ohm=front, assumed_total_ohm=n*front,component_values_ohm=[front],connection="SINGLE"),
+                    tail_recipe=dict(recipe_id=recipe["id"], per_stage_ohm=eq, equivalent_per_stage_ohm=eq, assumed_total_ohm=n*eq,component_values_ohm=physical["tail_components_ohm"],connection=physical["tail_connection"])))
+'''+s[b:];c.write_text(s,encoding='utf-8')
+edit(c,"        entries=self.entries(request['impulse_type'],request['topology_id'],request['catalog_scope'])\n        return [e for e in entries if all(key not in request or e['configuration'][field] in request[key]\n            for key,field in [('available_front_per_stage_ohm','front_per_stage_ohm'),('available_tail_per_stage_ohm','tail_per_stage_ohm')])]",'''        entries=self.entries(request['impulse_type'],request['topology_id'],request['catalog_scope'],request.get('recipe_ids'))
+        return [e for e in entries if all(key not in request or set(e[field].get('component_values_ohm',[e['configuration'][fallback]]))<=set(request[key])
+            for key,field,fallback in [('available_front_per_stage_ohm','front_recipe','front_per_stage_ohm'),('available_tail_per_stage_ohm','tail_recipe','tail_per_stage_ohm')])]''')
+edit(c,'"available_front_per_stage_ohm","available_tail_per_stage_ohm"}', '"available_front_per_stage_ohm","available_tail_per_stage_ohm","recipe_ids"}')
+edit(c,'    availability={}\n','''    valid_recipes={r['id'] for r in catalog.profile['topology']['development_recipes'] if mode in r.get('allowed_impulse_types',[mode]) and raw['topology_id'] in r.get('allowed_topologies',[raw['topology_id']])}
+    recipe_ids=raw.get('recipe_ids',[r['id'] for r in catalog.profile['topology']['development_recipes'] if r.get('default_enabled',r['id']==getattr(catalog.adapter,'recipe',None)) and r['id'] in valid_recipes])
+    if not isinstance(recipe_ids,list) or any(not isinstance(r,str) or r not in valid_recipes for r in recipe_ids) or len(set(recipe_ids))!=len(recipe_ids):
+        raise RequestError('INVALID_RECIPE_SELECTION','Select explicitly documented recipes supported for this impulse and topology')
+    availability={}
+''')
+edit(c,'alternatives=number, assumptions=assumptions, current_setting=current,**availability)', 'alternatives=number, assumptions=assumptions, current_setting=current,recipe_ids=sorted(recipe_ids),**availability)')
+edit(P/'powernext_optimizer/service.py','        exact_module_allocation=entry["exact_module_allocation"],', '        component_bill_of_materials=entry.get("component_bill_of_materials",[]),\n        exact_module_allocation=entry["exact_module_allocation"],')
+edit(P/'powernext_optimizer/service.py','ML_role="Unchanged serving forecast, domain/fallback status and separate score; cannot override reference compliance or attach scalar metrics to its curve"', 'ML_role="Trained residual estimate and separate score; batch scenario screening is available separately. No pruning or override of physics compliance."')
+edit(M/'powernext_ml/inference.py','result=adapter.simulate(c,s,target_crest_V=request.get("target_crest_V"))','result=adapter.simulate(c,s,target_crest_V=request.get("target_crest_V"),n_points=1600)')
+for f in (P/'examples').glob('*request.json'):
+ raw=json.loads(f.read_text());raw['equipment_profile_id']='CPRI_IVG_OCT04_2026_v2';raw['recipe_ids']=[SINGLE] if False else ['DEV_UNIFORM_SINGLE_v2']
+ if raw.get('current_setting',{}):raw['current_setting']['recipe_id']='DEV_UNIFORM_SINGLE_v2'
+ if f.name=='LI_request.json':raw.update(request_id='LI_1550_SINGLE_ONLY',target_crest_V=1550e3)
+ f.write_text(json.dumps(raw,indent=2),encoding='utf-8')
+li=json.loads((P/'examples/LI_request.json').read_text());li.update(request_id='LI_1550_PARALLEL_HYPOTHESIS',recipe_ids=['DEV_UNIFORM_SINGLE_v2','HYP_LI_TAIL_180_PAR_520_v1'])
+(P/'examples/LI_parallel_request.json').write_text(json.dumps(li,indent=2),encoding='utf-8')
+print('Current catalog and examples updated')

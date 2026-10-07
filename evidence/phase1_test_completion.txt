@@ -1,0 +1,10 @@
+Command: bundled runtime python -B -m unittest discover -s powernext/physics/tests -v
+Scope: 34 retained physics tests (520 rejection corrected to unlisted 521) and 11 new clarification tests.
++ok
+test_34_capacitive_energy_bound (test_physics.TestPhysics.test_34_capacitive_energy_bound) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 13.580s
+
+OK
+

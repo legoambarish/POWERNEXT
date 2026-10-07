@@ -1,0 +1,6 @@
+release/*.zip filter=lfs diff=lfs merge=lfs -text
+training-data/*.zip filter=lfs diff=lfs merge=lfs -text
+powernext/ml/data/**/*.jsonl filter=lfs diff=lfs merge=lfs -text
+powernext/ml/registry/**/*.joblib filter=lfs diff=lfs merge=lfs -text
+models/**/*.joblib filter=lfs diff=lfs merge=lfs -text
+

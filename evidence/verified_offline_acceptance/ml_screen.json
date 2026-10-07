@@ -1,0 +1,76 @@
+{
+  "schema_version": "ml_scenario_screen_v1",
+  "purpose": "EXPLORATION_NOT_FINAL_RECOMMENDATION",
+  "provenance": {
+    "equipment_profile_version": "CPRI_IVG_OCT04_2026_v2",
+    "equipment_profile_sha256": "90cc70fd0a86a7ecaef8510538bac31fc33e42fa6527f47afc18afd4e9964f43",
+    "simulator_version": "0.2.0",
+    "simulator_sha256": "318728555dcc028940f24e8e9a41d366a0d1bc15139de58f612db73a00395926",
+    "evaluator_version": "physics_clean_evaluator_0.1.0",
+    "evaluator_sha256": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+    "waveform_profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+    "recipe_version": "OCT04_EXPLICIT_RECIPE_CATALOG_v2",
+    "topology_spec_sha256": "cae23ca71041ff8756e8f90f90bbd25b0d2a8368d9d81d5f84424980e74b562c",
+    "topology_status": "PROVISIONAL_TOPOLOGY",
+    "evidence_domain": "PROVISIONAL_TOPOLOGY_SYNTHETIC",
+    "hardware_verified": false,
+    "baseline_version": "independent_RC_L0_v1",
+    "baseline_sha256": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+    "adapter_version": "provisional_adapter_v2"
+  },
+  "model_artifacts": {
+    "model_3d7f2939e0983060b100": {
+      "model.joblib": "7278af4ef2d83a00874ab63ede7b04b3b2b3e713c3a741e93a606aed24652a73",
+      "card.json": "5c4d580fda5a1383cbc0edd65c32c0694c944a9e8104019d6c9dd6c770048e16"
+    }
+  },
+  "selection_sha256": "984200f3f760f186cbbb399ab9e12d8d4c0c6665d3bbc81c031501eff4574e1e",
+  "input_sha256": "511368e4268c3a5a93037db627162a804c5cb6b911f76bdd43cb4c33eedbf880",
+  "scenario_count": 2,
+  "physics_simulations": 0,
+  "final_optimizer_pruning": false,
+  "hardware_verified": false,
+  "rows": [
+    {
+      "index": 0,
+      "scenario_id": "offline_in_domain",
+      "status": "ML_SCREEN_ONLY",
+      "prediction": {
+        "gain": 0.9349231987696757,
+        "crest_V": 1550238.2085916905,
+        "front_us": 1.2812756986414722,
+        "tail_us": 50.89714634546048
+      },
+      "reason_codes": [],
+      "requires_physics_verification": true,
+      "numerical_compliance_verified": false,
+      "eligible_for_hardware_recommendation": false,
+      "predicted_scalar_bands": true,
+      "model_id": "model_3d7f2939e0983060b100",
+      "empirical_validation_error_p95": [
+        0.0014904939036205428,
+        0.03279468211729825,
+        0.32259659715626043
+      ],
+      "uncertainty_status": "EMPIRICAL_ERROR_ENVELOPE_NOT_CALIBRATED_CONFIDENCE"
+    },
+    {
+      "index": 1,
+      "scenario_id": "offline_ood",
+      "status": "ABSTAIN",
+      "prediction": null,
+      "reason_codes": [
+        "OUTSIDE_TRAINING_SUPPORT"
+      ],
+      "requires_physics_verification": true,
+      "numerical_compliance_verified": false,
+      "eligible_for_hardware_recommendation": false
+    }
+  ],
+  "elapsed_ms": 581.0950999984925,
+  "limitations": [
+    "Scalar surrogate cannot establish waveform quality or hardware feasibility.",
+    "Empirical error envelope is not a calibrated confidence interval.",
+    "Every final recommendation requires complete physics evaluation."
+  ]
+}

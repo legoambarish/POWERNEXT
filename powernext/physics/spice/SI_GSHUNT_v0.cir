@@ -1,0 +1,19 @@
+* PowerNext SI_GSHUNT_v0: PROVISIONAL mathematical circuit, not CPRI hardware approval
+* N=10, Cs=0.5uF/stage, Us=150kV/stage, CL=1.98nF, L=18.5uH
+* Capacitor/inductor initial conditions represent the declared post-erection state.
+Cg g 0 50n ic=1500000
+CL o 0 1.98n ic=0
+Rf g mid 37000
+Lpath mid o 18.5u ic=0
+Rt g 0 50000
+.ic v(g)=1500000 v(mid)=1500000 v(o)=0
+.options method=gear reltol=1e-8 abstol=1e-8 vntol=1e-5
+.tran 100n 20m 0 1u uic
+.control
+run
+set wr_singlescale
+set wr_vecnames
+wrdata SI_GSHUNT_v0_trace.txt v(o) v(g) i(Lpath)
+quit
+.endc
+.end

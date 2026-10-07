@@ -1,0 +1,66 @@
+from pathlib import Path
+R=Path(__file__).resolve().parents[1]/'release/PowerNext_Track1_Competition_v2'
+def edit(name,fn):
+    p=R/name;s=p.read_text(encoding='utf-8');p.write_text(fn(s),encoding='utf-8')
+def one(s,a,b):
+    assert a in s,a[:100]
+    return s.replace(a,b)
+
+def format_ui(s):
+    s += "\nexport const tailLabel=row=>{const c=row?.configuration??row;const values=row?.tail_recipe?.component_values_ohm??(c?.recipe_id==='HYP_LI_TAIL_180_PAR_520_v1'?[180,520]:[c?.tail_per_stage_ohm]);return values.map(v=>fmt(v)).join(values.length>1?' || ':'');};\n"
+    return one(s,"  const value_provenance=", "  if(document.getElementById('recipe-controls'))q.recipe_ids=[...document.querySelectorAll('[data-recipe]')].filter(el=>el.checked&&!el.disabled).map(el=>el.value);\n  const value_provenance=")
+edit('ui/format.js',format_ui)
+
+def views(s):
+    s=one(s,'{esc,fmt,fixed,','{tailLabel,esc,fmt,fixed,')
+    s=one(s,'${inventoryControls(q,p)}</section>','${inventoryControls(q,p)}${recipeControls(q,p)}</section>')
+    s=one(s,"['search','Complete search','grid']","['search','Complete search','grid'],['screening','ML scenarios','cpu']")
+    s=s.replace('VALIDATED_DEMO','SYNTHETIC_DEMO').replace('Validated demo','Synthetic demo').replace('Validated scenarios','Synthetic scenarios').replace('validated scenario','synthetic scenario').replace('exact validated optimizer bytes','exact synthetic optimizer bytes')
+    s=s.replace('All 10 ${icon',"All ${s.meta.demonstrations.length} ${icon")
+    s=s.replace('Front resistors / stage','Confirmed resistor components').replace('Tail / stage (LI · SI)','Candidate tail components (LI · SI)').replace('Available fronts / stage','Available front components').replace('Available tails / stage','Available tail components')
+    s=s.replace('${fmt(value)} Ω / stage','${fmt(value)} Ω component')
+    s=s.replace('fmt(c.tail_per_stage_ohm)','tailLabel(c)')
+    for var in ['r','x']:
+        s=s.replace('${'+var+'.configuration.tail_per_stage_ohm}', '${tailLabel('+var+')}')
+    s=one(s,'<div class="recipe">${icon(\'warn\',13)}','${componentBill(row)}<div class="recipe">${icon(\'warn\',13)}')
+    s=s.replace("['Core decision',['si','crest','load']]","['Core decision',['si','li','crest','load']]")
+    s=s.replace("['Honest failure',['li','infeasible','approved']]","['Honest failure',['li_single','infeasible','approved']]")
+    s=s.replace("['Boundaries & topology',['band','output_shunt']]","['Boundaries & topology',['band','low','output_shunt']]")
+    s=s.replace('Future workflow: attach a genuine digitiser export to a saved run and compare it with the predicted reference. Raw evidence stays separate from simulation.','Import a declared CPRI export, bench experiment or synthetic test. Clean-trace diagnostics and matching model comparisons remain unqualified.')
+    s=one(s,'<h3>Acquisition metadata</h3>','<h3>Acquisition metadata</h3><div class="field"><label for="evidence-kind">Template evidence kind</label><select id="evidence-kind"><option value="SYNTHETIC_TEST">Synthetic test / simulator export</option><option value="BENCH_EXPERIMENT">Bench experiment (unverified)</option><option value="ACTUAL_LABORATORY_EXPORT">CPRI export (user claim)</option></select></div>')
+    s=s.replace('Saved reference</span>','Saved reference</span><span><i class="ln target"></i>Mathematical nominal target</span>')
+    s += '''
+export function recipeControls(q,p){const active=q.recipe_ids??['DEV_UNIFORM_SINGLE_v2'];return `<div id="recipe-controls"><h3>Equivalent-circuit hypotheses</h3><p class="small muted">CPRI confirms the six component values, not these connections. The parallel-tail hypothesis is off by default and requires both parts for every stage.</p>${p.topology.development_recipes.filter(r=>['DEV_UNIFORM_SINGLE_v2','HYP_LI_TAIL_180_PAR_520_v1'].includes(r.id)).map(r=>{const allowed=r.allowed_impulse_types.includes(q.impulse_type)&&r.allowed_topologies.includes(q.topology_id);return `<label class="check-row"><input type="checkbox" data-recipe value="${esc(r.id)}" ${allowed&&active.includes(r.id)?'checked':''} ${allowed?'':'disabled'}> ${r.id==='DEV_UNIFORM_SINGLE_v2'?'One front and one tail component per active stage':'LI tail: 180 || 520 Ω per stage (GSHUNT only)'} <code>${esc(r.id)}</code></label>`;}).join('')}<p class="micro">No selected hypotheses means an empty catalog. Required quantities are calculated; available quantities and physical holders remain unconfirmed.</p></div>`;}
+export function componentBill(row){return `<div class="note caution"><div><b>Required components under this hypothesis</b><p>${(row.component_bill_of_materials??[]).map(x=>`${fmt(x.required_count)} × ${fmt(x.component_ohm)} Ω`).join(' · ')||'Not recorded'}</p><p>Tail equivalent: ${fmt(row.tail_recipe?.equivalent_per_stage_ohm??row.tail_recipe?.per_stage_ohm)} Ω/stage. This is a derived value, not another inventory part. Quantities, placement and pulse ratings are unverified.</p></div></div>`;}
+'''
+    return s
+edit('ui/views.js',views)
+
+def charts(s):
+    s=one(s,'{esc,fmt,','{tailLabel,esc,fmt,')
+    s=one(s,'${r.configuration.front_per_stage_ohm}|${r.configuration.tail_per_stage_ohm}','${r.configuration.front_per_stage_ohm}|${r.configuration.tail_per_stage_ohm}|${r.configuration.recipe_id}')
+    s=one(s,"const [f,t]=p.split('|');", "const [f,t,recipe]=p.split('|');")
+    s=one(s,'${fmt(Number(t))} Ω</small>','${tailLabel({tail_per_stage_ohm:Number(t),recipe_id:recipe})} Ω</small>')
+    s=s.replace('${r.configuration.tail_per_stage_ohm} Ω','${tailLabel(r)} Ω')
+    return s
+edit('ui/charts.js',charts)
+
+def app(s):
+    s=one(s,"import {drawWaveform} from './waveform.js';","import {drawWaveform} from './waveform.js';\nimport {mountScenarioScreen} from './scenarios.js';\nimport {renderImported} from './imports.js';")
+    s=one(s,"const UI_VERSION='0.3.0';","const UI_VERSION='0.4.0';")
+    s=one(s,"'evidence','search'];","'evidence','search','screening'];")
+    s=one(s,"    if(state.screen==='search'){", "    if(state.screen==='screening'){main.innerHTML=frame+'<div id=\"scenario-screen\"></div>';mountScenarioScreen(document.getElementById('scenario-screen'),{row:state.row,request:result.request,api,isCurrent:()=>token===renderToken});return;}\n    if(state.screen==='search'){")
+    s=one(s,"  if(extra)series.push(...extra);", "  if(wave.target)series.push({wave:wave.target,label:'Mathematical nominal target',kind:'target'});\n  if(extra)series.push(...extra);")
+    s=one(s,"if(state.draft.impulse_type!==b.dataset.mode)delete state.draft.available_tail_per_stage_ohm;state.draft.impulse_type=b.dataset.mode;render();", "if(state.draft.impulse_type!==b.dataset.mode){delete state.draft.available_tail_per_stage_ohm;state.draft.recipe_ids=['DEV_UNIFORM_SINGLE_v2'];state.draft.request_id=state.draft.request_id.replace(/^(LI|SI)_/,b.dataset.mode+'_');}state.draft.impulse_type=b.dataset.mode;render();")
+    s=one(s,"  document.querySelectorAll('[data-polarity]')", "  document.getElementById('topology').addEventListener('change',()=>{preserveDraft();if(state.draft.topology_id!=='GSHUNT_v0')state.draft.recipe_ids=(state.draft.recipe_ids??[]).filter(x=>x!=='HYP_LI_TAIL_180_PAR_520_v1');render();});\n  document.querySelectorAll('[data-polarity]')")
+    s=one(s,"const d=state.meta.demonstrations.find(x=>x.id===id);toast", "const d=state.meta.demonstrations.find(x=>x.id===id);if(d?.focus_candidate_id){selectRow(d.focus_candidate_id);navigate(id==='li_disagreement'?'evidence':'result');}toast")
+    s=s.replace('the validated saved artifact','the saved synthetic artifact').replace('Validated scenarios','Synthetic scenarios')
+    s=one(s,"source_organization:'CPRI'","source_organization:document.getElementById('evidence-kind')?.value==='ACTUAL_LABORATORY_EXPORT'?'CPRI':'REPLACE_WITH_SOURCE'")
+    s=one(s,"evidence_kind:'ACTUAL_LABORATORY_EXPORT'","evidence_kind:document.getElementById('evidence-kind')?.value??'SYNTHETIC_TEST'")
+    begin=s.index('async function showMeasurement(){');end=s.index('async function savedMeasurements()',begin)
+    s=s[:begin]+"async function showMeasurement(){const el=document.getElementById('measurement-result');if(el&&state.measurement)renderImported(el,{measurement:state.measurement,drawWaveform});}\n"+s[end:]
+    return s
+edit('ui/app.js',app)
+edit('ui/waveform.js',lambda s:one(s,"const SERIES={reference:","const SERIES={target:{color:'#63758b',width:1.7,dash:'3 5'},reference:"))
+edit('ui/styles.css',lambda s:s+'\n.ln.target,.sw.target{background:#63758b;border-top:2px dashed #63758b}.scenario-grid{display:grid;gap:3px;min-width:480px}.scenario-cell{min-height:23px;border:1px solid #d3dbe4;border-radius:3px;background:#edf0f4;color:#455569;font-size:11px;cursor:pointer}.scenario-cell.inside{background:#d6e4fb;color:#234d8a}.scenario-cell.abstain{background:#fff0d6;color:#875b16}.scenario-cell:focus{outline:2px solid #2c62c7}.scenario-scroll{overflow-x:auto;padding:12px 0}.scenario-axis{display:flex;justify-content:space-between;font-size:12px;color:#596b80}.subnav{flex-wrap:wrap}\n')
+print('UI migrations applied')

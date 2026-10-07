@@ -1,0 +1,59 @@
+[
+  {
+    "sheet": "Hybrid Calculator",
+    "rows": 21,
+    "columns": 8,
+    "formula_count": 29,
+    "state": "visible",
+    "merged_ranges": [
+      "A2:H2",
+      "A1:H1"
+    ]
+  },
+  {
+    "sheet": "Resistor Inventory",
+    "rows": 15,
+    "columns": 7,
+    "formula_count": 0,
+    "state": "visible",
+    "merged_ranges": [
+      "A1:G1"
+    ]
+  },
+  {
+    "sheet": "Synthetic Dataset",
+    "rows": 2001,
+    "columns": 22,
+    "formula_count": 0,
+    "state": "visible",
+    "merged_ranges": []
+  },
+  {
+    "sheet": "ML Helper",
+    "rows": 1401,
+    "columns": 17,
+    "formula_count": 7000,
+    "state": "visible",
+    "merged_ranges": []
+  },
+  {
+    "sheet": "Model Validation",
+    "rows": 16,
+    "columns": 6,
+    "formula_count": 0,
+    "state": "visible",
+    "merged_ranges": [
+      "A1:F1"
+    ]
+  },
+  {
+    "sheet": "Model Card",
+    "rows": 12,
+    "columns": 6,
+    "formula_count": 0,
+    "state": "visible",
+    "merged_ranges": [
+      "A1:F1"
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>PowerNext · Impulse test planning</title><link rel="icon" href="/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/app.css"><script type="module" src="/app.js"></script></head>
+<body>
+<a class="skip" href="#main">Skip to workspace</a>
+<header class="top">
+  <a href="#plan" class="brand" data-screen="plan" aria-label="PowerNext — plan a test"><img src="/mark.svg" alt="" width="30" height="30"><span>PowerNext<small>Impulse test planning · CPRI Track 1</small></span></a>
+  <nav class="mainnav" aria-label="Primary">
+    <button type="button" data-nav="plan" data-screen="plan">Plan test</button>
+    <button type="button" data-nav="run">Results<span class="nav-dot" hidden></span></button>
+    <button type="button" data-nav="history" data-screen="history">Saved runs</button>
+    <button type="button" data-nav="measured" data-screen="measured">Lab data</button>
+  </nav>
+  <div class="top-tools">
+    <label class="scenario"><span class="sr">Open a synthetic scenario</span><select id="scenario-jump"><option value="">Scenarios…</option></select></label>
+    <button type="button" class="btn ghost sm" id="open-demos">Library</button>
+    <label class="switch" title="Show raw codes, hashes and full JSON records"><input type="checkbox" id="expert-toggle"><span class="track"></span>Expert</label>
+    <button type="button" class="btn dark sm" id="export-button" disabled>Export</button>
+  </div>
+</header>
+<div class="boundary" role="note"><span class="b-ic" aria-hidden="true">!</span><span><b>Provisional topology and recipes.</b> A numerical pass is not hardware verification or operational approval. Offline · no hardware control.</span><button type="button" id="show-boundaries">Evidence limits</button></div>
+<main id="main" tabindex="-1"><div class="loading"><span class="spinner"></span>Loading local engineering artifacts…</div></main>
+<footer><span>PowerNext engineering workbench · local processing</span><span id="footer-version">Local application</span></footer>
+<dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+</body></html>

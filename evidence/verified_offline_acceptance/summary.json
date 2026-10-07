@@ -1,0 +1,172 @@
+{
+  "status": "PASS",
+  "root": "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\acceptance\\moved location with spaces\\PowerNext_Track1_Competition_v2",
+  "command": ".\\runtime\\python.exe -m powernext_app",
+  "network_boundary": "Application and optimizer workers deny outbound socket connects; loopback allowed. OS adapter not disabled.",
+  "runtime": "Bundled isolated Python 3.12.14 x64; PATH limited to Windows; invalid external PYTHONPATH and PYTHONHOME ignored",
+  "models_loaded": 4,
+  "demos": [
+    {
+      "demo": "si",
+      "status": "PASS",
+      "result_status": "NUMERICALLY_COMPLIANT_PROVISIONAL",
+      "candidates": 504,
+      "waveforms": 504,
+      "numerical_pass_count": 14,
+      "exact_scientific_comparison": true,
+      "seconds": 191.141,
+      "live_run": "run_f6232285b2764c8a88c5",
+      "saved_demo_run": "run_f6501894d7f14d79a9d2"
+    },
+    {
+      "demo": "li",
+      "status": "PASS",
+      "result_status": "NUMERICALLY_COMPLIANT_PROVISIONAL",
+      "candidates": 588,
+      "waveforms": 588,
+      "numerical_pass_count": 3,
+      "exact_scientific_comparison": true,
+      "seconds": 185.406,
+      "live_run": "run_9adfb3b2f8204aa29450",
+      "saved_demo_run": "run_6683f072bffb4b819b43"
+    },
+    {
+      "demo": "li_single",
+      "status": "PASS",
+      "result_status": "NO_COMPLIANT_CONFIGURATION",
+      "candidates": 504,
+      "waveforms": 504,
+      "numerical_pass_count": 0,
+      "exact_scientific_comparison": true,
+      "seconds": 110.609,
+      "live_run": "run_fc7be1a9ffe34f99b38f",
+      "saved_demo_run": "run_77f43e27e7374cc59f6e"
+    },
+    {
+      "demo": "li_disagreement",
+      "status": "PASS",
+      "result_status": "NUMERICALLY_COMPLIANT_PROVISIONAL",
+      "candidates": 84,
+      "waveforms": 84,
+      "numerical_pass_count": 6,
+      "exact_scientific_comparison": true,
+      "seconds": 44.891,
+      "live_run": "run_65167a30ac5a425d862a",
+      "saved_demo_run": "run_24c6eff7d0c8401c97d6"
+    },
+    {
+      "demo": "crest",
+      "status": "PASS",
+      "result_status": "NUMERICALLY_COMPLIANT_PROVISIONAL",
+      "candidates": 504,
+      "waveforms": 504,
+      "numerical_pass_count": 5,
+      "exact_scientific_comparison": true,
+      "seconds": 138.828,
+      "live_run": "run_4b573249547d443bb381",
+      "saved_demo_run": "run_def1df7a5fc54b8c9d05"
+    },
+    {
+      "demo": "load",
+      "status": "PASS",
+      "result_status": "NUMERICALLY_COMPLIANT_PROVISIONAL",
+      "candidates": 504,
+      "waveforms": 504,
+      "numerical_pass_count": 3,
+      "exact_scientific_comparison": true,
+      "seconds": 167.391,
+      "live_run": "run_908dfa38ece849d8a783",
+      "saved_demo_run": "run_2fcb1edd4d394987b8c7"
+    },
+    {
+      "demo": "ood",
+      "status": "PASS",
+      "result_status": "NO_COMPLIANT_CONFIGURATION",
+      "candidates": 504,
+      "waveforms": 504,
+      "numerical_pass_count": 0,
+      "exact_scientific_comparison": true,
+      "seconds": 176.703,
+      "live_run": "run_46dcc052f40447a08087",
+      "saved_demo_run": "run_6de3c23f980f4f03ba3e"
+    },
+    {
+      "demo": "band",
+      "status": "PASS",
+      "result_status": "NUMERICALLY_COMPLIANT_PROVISIONAL",
+      "candidates": 504,
+      "waveforms": 504,
+      "numerical_pass_count": 2,
+      "exact_scientific_comparison": true,
+      "seconds": 137.985,
+      "live_run": "run_125230169ca3457d83c2",
+      "saved_demo_run": "run_35ccba303c064c22be7a"
+    },
+    {
+      "demo": "infeasible",
+      "status": "PASS",
+      "result_status": "NO_COMPLIANT_CONFIGURATION",
+      "candidates": 504,
+      "waveforms": 504,
+      "numerical_pass_count": 0,
+      "exact_scientific_comparison": true,
+      "seconds": 135.406,
+      "live_run": "run_b7f42dcdb34844568852",
+      "saved_demo_run": "run_89494d97a6a84b02a0d3"
+    },
+    {
+      "demo": "approved",
+      "status": "PASS",
+      "result_status": "NO_COMPLIANT_CONFIGURATION",
+      "candidates": 0,
+      "waveforms": 0,
+      "numerical_pass_count": 0,
+      "exact_scientific_comparison": true,
+      "seconds": 9.859,
+      "live_run": "run_ee065f1e107d4039b809",
+      "saved_demo_run": "run_4d25d82d4f4b435f85f7"
+    },
+    {
+      "demo": "output_shunt",
+      "status": "PASS",
+      "result_status": "NUMERICALLY_COMPLIANT_PROVISIONAL",
+      "candidates": 504,
+      "waveforms": 504,
+      "numerical_pass_count": 7,
+      "exact_scientific_comparison": true,
+      "seconds": 160.688,
+      "live_run": "run_27f9f32f1ff24c2e816c",
+      "saved_demo_run": "run_25467371ee354e45a5ef"
+    },
+    {
+      "demo": "low",
+      "status": "PASS",
+      "result_status": "NUMERICALLY_COMPLIANT_PROVISIONAL",
+      "candidates": 504,
+      "waveforms": 504,
+      "numerical_pass_count": 19,
+      "exact_scientific_comparison": true,
+      "seconds": 156.578,
+      "live_run": "run_b323a8a722c44d6180e3",
+      "saved_demo_run": "run_f1690f1f34d34306bb71"
+    }
+  ],
+  "fresh_inventory_runs": 2,
+  "persisted_runs": 26,
+  "restart": "PASS",
+  "sqlite_quick_check": "PASS",
+  "exports": "JSON + HTML + ZIP; strict finite JSON; ZIP CRC checked",
+  "screening": [
+    "PASS: real trained screening plus OOD, zero physics"
+  ],
+  "imports": [
+    {
+      "run_id": "run_9adfb3b2f8204aa29450",
+      "measurement_id": "shot_2a44d05974954971817f",
+      "status": "PASS",
+      "source": "SYNTHETIC_QA_NOT_A_MEASUREMENT"
+    }
+  ],
+  "nominal_targets": "PASS for every returned current waveform",
+  "presentation_laptop": "Not physically available"
+}

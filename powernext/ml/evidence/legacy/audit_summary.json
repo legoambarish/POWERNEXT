@@ -1,0 +1,71 @@
+{
+  "domain": "LEGACY_SYNTHETIC_3uF",
+  "source_sha256": "e855eadbe4d6da2579316e89e025e6990f9ba3c522a5af96d1dd2a5522d77480",
+  "rows": 2000,
+  "rules": {
+    "crest_equals_requested": true,
+    "stage_C_implied_F": [
+      2.9999999999999992e-06,
+      3.000000000000001e-06
+    ],
+    "max_front_formula_error_us": 2.220446049250313e-16,
+    "max_charge_formula_error_kV": 0.0,
+    "max_stage_selection_error": 0.0,
+    "residual_identity_error": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "eda": {
+    "Lightning": {
+      "n": 1000,
+      "split_counts": {
+        "Train": 700,
+        "Validation": 150,
+        "Hidden Test": 150
+      },
+      "constant_columns": [
+        "Tail_R_Stage"
+      ],
+      "exact_feature_duplicates": 0,
+      "nearest_normalized_rms_quantiles": [
+        0.022595669161960288,
+        0.05607327360744357,
+        0.08517166922427308,
+        0.1180345665033738,
+        0.17356713928368003
+      ],
+      "near_duplicate_count_at_rms_0p02": 0,
+      "compliant_count": 1000,
+      "noncompliant_count": 0,
+      "front_catalog_match_fraction": 0.023,
+      "tail_catalog_match_fraction": 0.0
+    },
+    "Switching": {
+      "n": 1000,
+      "split_counts": {
+        "Train": 700,
+        "Validation": 150,
+        "Hidden Test": 150
+      },
+      "constant_columns": [],
+      "exact_feature_duplicates": 0,
+      "nearest_normalized_rms_quantiles": [
+        0.02767716446256364,
+        0.05652637854270123,
+        0.08482082607066042,
+        0.12041100520052356,
+        0.17319481418429736
+      ],
+      "near_duplicate_count_at_rms_0p02": 0,
+      "compliant_count": 1000,
+      "noncompliant_count": 0,
+      "front_catalog_match_fraction": 0.0,
+      "tail_catalog_match_fraction": 0.0
+    }
+  },
+  "formula_count": 7029,
+  "source_unmodified": true,
+  "baseline_reproduced": true
+}

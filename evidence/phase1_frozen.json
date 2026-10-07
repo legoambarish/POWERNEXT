@@ -1,0 +1,17 @@
+{
+  "status": "PHASE_1_PASSED",
+  "test_count": 47,
+  "files": {
+    "CPRI_EQUIPMENT_PROFILE.json": "90cc70fd0a86a7ecaef8510538bac31fc33e42fa6527f47afc18afd4e9964f43",
+    "CIRCUIT_TOPOLOGY_SPEC.md": "cae23ca71041ff8756e8f90f90bbd25b0d2a8368d9d81d5f84424980e74b562c",
+    "physics_engine\\__init__.py": "683fe3921cea615ff7efdb9bf1f7aab5c423c83e6e0c7de6ceac9b0e1f0d759a",
+    "physics_engine\\analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+    "physics_engine\\dataset.py": "bcea18c44b005a9c1636491d2dde97c38ca1a37759de35ac68ff4bb0e186cf5e",
+    "physics_engine\\engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+    "physics_engine\\evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+    "physics_engine\\network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+    "physics_engine\\recipes.py": "1d67b54c07faef6afee97ab68e7c33ec63257ffdcb9eb910d7377e10eeff3853",
+    "physics_engine\\reference_cases.py": "fe3f9de685ba374e6372411d23af1de16b3477a1d5111479eb24313ff684d78b",
+    "physics_engine\\target.py": "ac0b2a31335d802eaacedab2b2c586ae99f66e95277659da277420cfdc26c3ca"
+  }
+}

@@ -1,0 +1,154 @@
+[
+  {
+    "name": "LI",
+    "metrics": {
+      "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+      "evaluation_curve_id": "raw_clean",
+      "interpolation": "PCHIP",
+      "standards_certified": false,
+      "polarity": 1,
+      "baseline_V": 0.0,
+      "raw_crest_magnitude_V": 1549999.999994203,
+      "raw_signed_crest_V": 1549999.999994203,
+      "crest_magnitude_V": 1549999.999994203,
+      "t_peak_s": 2.434896012167398e-06,
+      "T1_s": 1.3204101398293917e-06,
+      "Tp_s": null,
+      "T2_s": 6.765354667152304e-05,
+      "t30_s": 2.3266787684260988e-07,
+      "t90_s": 1.024913960740245e-06,
+      "t50_falling_s": 6.749009150641683e-05,
+      "virtual_origin_s": -1.6345516510620763e-07,
+      "beginning_s": 0.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+      "compliance_status": "FAIL",
+      "reasons": [],
+      "checks": {
+        "front_or_peak": true,
+        "tail": false,
+        "crest": true
+      },
+      "deviation_pct": {
+        "front_or_peak_pct": 10.034178319115972,
+        "tail_pct": 35.30709334304607,
+        "crest_pct": -3.740008303054765e-10
+      }
+    },
+    "evidence_domain": "SYNTHETIC_CURRENT_PROFILE",
+    "hardware_verified": false
+  },
+  {
+    "name": "LI_parallel",
+    "metrics": {
+      "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+      "evaluation_curve_id": "raw_clean",
+      "interpolation": "PCHIP",
+      "standards_certified": false,
+      "polarity": 1,
+      "baseline_V": 0.0,
+      "raw_crest_magnitude_V": 1549999.999982702,
+      "raw_signed_crest_V": 1549999.999982702,
+      "crest_magnitude_V": 1549999.999982702,
+      "t_peak_s": 2.3085657235470093e-06,
+      "T1_s": 1.2968908333789243e-06,
+      "Tp_s": null,
+      "T2_s": 5.090867273997252e-05,
+      "t30_s": 2.3137736121022276e-07,
+      "t90_s": 1.0095118612375772e-06,
+      "t50_falling_s": 5.075098285116907e-05,
+      "virtual_origin_s": -1.5768988880345455e-07,
+      "beginning_s": 0.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+      "compliance_status": "PASS",
+      "reasons": [],
+      "checks": {
+        "front_or_peak": true,
+        "tail": true,
+        "crest": true
+      },
+      "deviation_pct": {
+        "front_or_peak_pct": 8.07423611491036,
+        "tail_pct": 1.8173454799450317,
+        "crest_pct": -1.1159961843532074e-09
+      }
+    },
+    "evidence_domain": "SYNTHETIC_CURRENT_PROFILE",
+    "hardware_verified": false
+  },
+  {
+    "name": "SI",
+    "metrics": {
+      "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+      "evaluation_curve_id": "raw_clean",
+      "interpolation": "PCHIP",
+      "standards_certified": false,
+      "polarity": 1,
+      "baseline_V": 0.0,
+      "raw_crest_magnitude_V": 1299999.999999846,
+      "raw_signed_crest_V": 1299999.999999846,
+      "crest_magnitude_V": 1299999.999999846,
+      "t_peak_s": 0.00024174132169161623,
+      "T1_s": null,
+      "Tp_s": 0.00024174132169161623,
+      "T2_s": 0.002102381983336577,
+      "t30_s": 2.0404320075427517e-05,
+      "t90_s": 0.00011831863256534838,
+      "t50_falling_s": 0.002102381983336577,
+      "virtual_origin_s": null,
+      "beginning_s": 0.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+      "compliance_status": "PASS",
+      "reasons": [],
+      "checks": {
+        "front_or_peak": true,
+        "tail": true,
+        "crest": true
+      },
+      "deviation_pct": {
+        "front_or_peak_pct": -3.303471323353513,
+        "tail_pct": -15.904720666536921,
+        "crest_pct": -1.1834977442504169e-11
+      }
+    },
+    "evidence_domain": "SYNTHETIC_CURRENT_PROFILE",
+    "hardware_verified": false
+  },
+  {
+    "name": "SI_output_shunt",
+    "metrics": {
+      "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+      "evaluation_curve_id": "raw_clean",
+      "interpolation": "PCHIP",
+      "standards_certified": false,
+      "polarity": 1,
+      "baseline_V": 0.0,
+      "raw_crest_magnitude_V": 1299999.999902389,
+      "raw_signed_crest_V": 1299999.999902389,
+      "crest_magnitude_V": 1299999.999902389,
+      "t_peak_s": 0.0002328458340302873,
+      "T1_s": null,
+      "Tp_s": 0.0002328458340302873,
+      "T2_s": 0.0028906636249023915,
+      "t30_s": 1.7983715868720375e-05,
+      "t90_s": 0.00010713584485599279,
+      "t50_falling_s": 0.0028906636249023915,
+      "virtual_origin_s": null,
+      "beginning_s": 0.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+      "compliance_status": "PASS",
+      "reasons": [],
+      "checks": {
+        "front_or_peak": true,
+        "tail": true,
+        "crest": true
+      },
+      "deviation_pct": {
+        "front_or_peak_pct": -6.861666387885079,
+        "tail_pct": 15.62654499609566,
+        "crest_pct": -7.50853823561215e-09
+      }
+    },
+    "evidence_domain": "SYNTHETIC_CURRENT_PROFILE",
+    "hardware_verified": false
+  }
+]
