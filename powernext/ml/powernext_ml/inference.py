@@ -2,6 +2,7 @@
 from pathlib import Path
 import json
 import time
+from powernext_integrity import artifact_bytes
 import numpy as np
 import pandas as pd
 from .physics_adapter import load_adapter
@@ -40,7 +41,7 @@ def predict(request,registry,selection=None,adapter_name="provisional"):
     if selection is None:
         selection=registry/"selected_models.json"
     try:
-        ids=json.loads(Path(selection).read_text())
+        ids=json.loads(artifact_bytes(selection))
         model_id=ids[f"{c['impulse_type']}:{c['topology_id']}"]
         if not isinstance(model_id,str) or Path(model_id).name!=model_id or model_id in ('.','..'):
             raise ValueError("Invalid registry model ID")

@@ -30,7 +30,7 @@ sys.dont_write_bytecode = True
 
 def validate_assets():
     import json
-    required=[PROFILE, MODEL_SELECTION, DEMOS/'SI_request.json']+[UI/name for name in ['index.html','app.js','app.css','views.js','format.js','charts.js','waveform.js','scenarios.js','imports.js']]
+    required=[PROFILE, MODEL_SELECTION, ROOT/'powernext_integrity.py',DEMOS/'SI_request.json']+[UI/name for name in ['index.html','app.js','app.css','views.js','format.js','charts.js','waveform.js','scenarios.js','imports.js','discovery.js','adjustment.js','equipment.js']]
     missing=[str(p.relative_to(ROOT)) for p in required if not p.is_file()]
     if missing: raise RuntimeError('Incomplete release: missing '+', '.join(missing))
     selection=json.loads(MODEL_SELECTION.read_text(encoding='utf-8'))

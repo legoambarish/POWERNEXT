@@ -15,7 +15,7 @@ test('matrix retains every single and parallel candidate independently',()=>{
 });
 test('parallel label and component counts are visible',()=>{
   const r=result.best_configuration;assert.equal(tailLabel(r),'180 || 520');
-  const html=componentBill(r);for(const v of ['9 × 30','9 × 180','9 × 520','133.714','unverified'])assert.ok(html.includes(v));
+  const html=componentBill(r);for(const v of ['9 × 30','9 × 180','9 × 520','133.714','Configuration component list'])assert.ok(html.includes(v));
 });
 test('parallel recipe is not enabled by default and wrong domain is disabled',()=>{
   const q=structuredClone(result.request);delete q.recipe_ids;
@@ -33,7 +33,7 @@ test('what-if grids are explicit, bounded, and leave the fixed request unchanged
 test('an ML scalar-band estimate never uses the verified pass presentation',()=>{
   const grid=scenarioGrid(result.request,result.best_configuration,{dutMin:800,dutMax:1000,lMin:10,lMax:20,steps:2});
   const response={scenario_count:4,elapsed_ms:1,physics_simulations:0,rows:grid.map((x,i)=>({status:i?'ML_SCREEN_ONLY':'ABSTAIN',predicted_scalar_bands:true}))};
-  const html=screenResults(response,grid,2);assert.ok(!html.includes('chip pass'));assert.ok(html.includes('Every cell is unverified'));assert.ok(html.includes('No catalog pruning'));
+  const html=screenResults(response,grid,2);assert.ok(!html.includes('chip pass'));assert.ok(html.includes('ML exploration only'));assert.ok(html.includes('detailed Physics verification'));
 });
 test('disagreement explanation supports ML false acceptance and false rejection',()=>{
   for(const [name,id] of [['LI_disagreement_recommendation.json','cfg_3754ce6cb55b96c7'],['LI_rare_timing_pass_recommendation.json',null]]){

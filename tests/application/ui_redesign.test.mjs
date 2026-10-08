@@ -31,7 +31,7 @@ for(const d of DEMOS)test(`${d.id}: no-solution is never presented as a recommen
     if(p.closest_noncompliant)assert.ok(html.includes('NOT a recommendation'));
   }else{
     assert.ok(html.includes('Recommended numerical setting'));
-    for(const label of ['Numerically compliant','Recipe provisional','Not approved for operation'])assert.ok(html.includes(label),label);
+    for(const label of ['Numerically compliant','Model prediction','Declared circuit'])assert.ok(html.includes(label),label);
   }
 });
 
@@ -121,8 +121,8 @@ test('schematic places the tail resistor according to the declared topology',()=
 
 test('measured-data screen states provenance and never implies calibration',()=>{
   const html=views.measuredView({bundle:null,row:null});
-  assert.ok(html.includes('No genuine CPRI measurement is included in this release'));
-  assert.ok(html.includes('Calibration is not fitted'));assert.ok(/id="import-measurement"[^>]*disabled/.test(html));
+  assert.ok(html.includes('Template evidence kind')); assert.ok(html.includes('Synthetic test / simulator export')); assert.ok(!html.includes('Calibrated measurement')); 
+  assert.ok(html.includes('Clean-trace diagnostics') || html.includes('Raw traces'));assert.ok(/id="import-measurement"[^>]*disabled/.test(html));
 });
 
 test('score bar decomposes J with the saved squared contributions',()=>{
@@ -136,4 +136,14 @@ test('user text is escaped in every new surface',()=>{
   const html=views.runFrame(state(p));assert.ok(!html.includes('<img src=x'));assert.ok(html.includes('&lt;img'));
   const h=views.historyRows([{run_id:'r',created_at:'2026-10-03T00:00:00Z',status:'COMPLETED',source:'LIVE_OPTIMIZATION',result_status:'NO_COMPLIANT_CONFIGURATION',application_version:'0.1.0',request:{...p.request}}],null);
   assert.ok(!h.includes('<img src=x'));
+});
+
+
+test('core workflows use concise model labels without repeated approval warnings',()=>{
+  const app=fs.readFileSync(new URL('../../ui/app.js',import.meta.url),'utf8');
+  assert.ok(!app.includes('No current recipe is hardware-approved'));
+  for(const d of DEMOS){const html=views.resultView(state(load(d.result)));
+    assert.ok(!html.includes('Recipe provisional · not hardware-verified'));
+    assert.ok(!html.includes('Not approved for operation'));
+  }
 });

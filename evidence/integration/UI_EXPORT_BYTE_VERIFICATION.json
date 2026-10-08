@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "raw_files": 1,
+  "metadata_files": 1,
+  "raw_and_metadata_byte_identical": true,
+  "download_sha256": "7a588b6b26e68b8b4fdf8b50a0479de686c5215b9a47b0ef8c935dcf86ad2f9e",
+  "predecessor_issue": "Unchanged textarea metadata CRLF normalized; original text retention corrected and browser export repeated"
+}

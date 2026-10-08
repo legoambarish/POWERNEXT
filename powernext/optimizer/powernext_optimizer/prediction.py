@@ -8,6 +8,7 @@ from powernext_config import REGISTRY, MODEL_SELECTION
 from powernext_ml.inference import predict
 from powernext_ml.physics_adapter import load_adapter
 from powernext_ml.common import runtime_versions
+from powernext_integrity import verified_snapshot,active_for
 
 
 def serving_files():
@@ -17,7 +18,8 @@ def serving_files():
     prediction path. Their edits must not relabel or invalidate its results.
     """
     names=['__init__.py','common.py','features.py','inference.py','models.py','physics_adapter.py','registry.py']
-    return [ML/'powernext_ml'/name for name in names]+sorted((PHYSICS/'physics_engine').glob('*.py'))
+    from powernext_config import ROOT
+    return [ROOT/'powernext_integrity.py']+[ML/'powernext_ml'/name for name in names]+sorted((PHYSICS/'physics_engine').glob('*.py'))
 
 
 class PredictionStack:
@@ -33,7 +35,7 @@ class PredictionStack:
             artifacts[model_id] = {name:file_hash(self.registry/model_id/name) if (self.registry/model_id/name).exists() else None
                                   for name in ["card.json","model.joblib"]}
         self.provenance = dict(physics=self.adapter.provenance, model_selection=self.models, model_artifacts=artifacts,
-            serving_source_hashes={f"{p.parent.name}/{p.name}":file_hash(p) for p in serving_files()},
+            serving_source_hashes={(f"application/{p.name}" if p.name=='powernext_integrity.py' else f"{p.parent.name}/{p.name}"):file_hash(p) for p in serving_files()},
             fingerprint_policy='TRANSITIVE_FORWARD_SERVING_v2',runtime=runtime_versions(), adapter_name=adapter_name)
         self.fingerprint = digest(self.provenance)
         self._tracked = {self.selection: file_hash(self.selection) if self.selection.exists() else None}
@@ -46,11 +48,18 @@ class PredictionStack:
 
     def assert_unchanged(self):
         """Never serve mutable artifacts under the identity captured at startup."""
+        if active_for(self._tracked):return
         for path,expected in self._tracked.items():
             current=file_hash(path) if path.exists() else None
             if current!=expected:raise ValueError('Prediction artifacts changed; restart the stack before another request')
 
+    def batch(self):
+        return verified_snapshot(self._tracked)
+
     def call(self, configuration, setup, target=None, use_cache=True):
+        if not active_for(self._tracked):
+            with self.batch():
+                return self.call(configuration,setup,target,use_cache)
         self.assert_unchanged()
         request=dict(configuration=configuration,setup=setup,target_crest_V=target)
         key=digest(dict(request=request,stack=self.fingerprint))

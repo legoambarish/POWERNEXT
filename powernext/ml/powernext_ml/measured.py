@@ -18,7 +18,7 @@ def trace_diagnostics(t,v,meta):
     clean-curve assumption allows useful timing extraction without asserting
     that preprocessing, instruments, or standards qualification were verified.
     """
-    c=meta['configuration'];m=meta['measurement']
+    c=dict(meta['configuration']);m=meta['measurement']
     clean=evaluate(t,v,c['impulse_type'],m['polarity'],beginning_s=m['beginning_s'],baseline_V=m['baseline_V'],source_kind='simulation_clean',curve_id='import_clean_assumption_diagnostic')
     keys=['crest_magnitude_V','T1_s','Tp_s','T2_s','t_peak_s','t30_s','t90_s','t50_falling_s','virtual_origin_s','beginning_s']
     diagnostic=dict(status='UNQUALIFIED_CLEAN_TRACE_DIAGNOSTIC' if clean['waveform_status']=='VALID_CLEAN_FULL_IMPULSE' else 'UNSUPPORTED_TRACE',
@@ -27,6 +27,9 @@ def trace_diagnostics(t,v,meta):
                     compliance_status='NOT_QUALIFIED',regression_eligible=False,standards_certified=False)
     comparison=dict(status='UNAVAILABLE',reason=None,calibration_fitted=False,hardware_verified=False)
     try:
+        if c.get('polarity',m['polarity'])!=m['polarity']:
+            raise ValueError('Configuration and measurement polarity disagree; no overlay produced')
+        c['polarity']=m['polarity']
         from .physics_adapter import load_adapter
         adapter=load_adapter();prediction=adapter.simulate(c,meta['setup'],n_points=2000)
         w=prediction.arrays;pt=w['time_s']+m['beginning_s'];pv=w['voltage_V']
@@ -108,9 +111,11 @@ def ingest_measurement(raw_csv,metadata_path,output):
         # Uploaded claims are not an independent qualification decision. This
         # release has no verified analyzer/evaluation-curve review workflow.
     diagnostics,comparison=trace_diagnostics(t,v,meta)
+    from .measurement_quality import inspect_trace
+    quality=inspect_trace(t,v,meta)
     record=dict(schema_version="measured_import_v3",evidence_domain=domains[kind],metadata=meta,raw_sha256=file_hash(raw_csv),metadata_sha256=file_hash(metadata_path),
                 local_evaluation=met,analyzer_labels=analyzer,regression_eligible=qualified,split_group=digest(meta["setup_id"]),
-                clean_trace_diagnostics=diagnostics,predicted_comparison=comparison,
+                clean_trace_diagnostics=diagnostics,predicted_comparison=comparison,measurement_quality=quality,
                 calibration_status="NOT_FITTED",physical_profile_verified=False,
                 qualification_status='PENDING_INDEPENDENT_REVIEW',source_identity_policy='USER_SUPPLIED_NOT_AUTHENTICATED',
                 qualification_reason_codes=['ANALYZER_CLAIMS_NOT_INDEPENDENTLY_VERIFIED','MEASURED_EVALUATOR_NOT_QUALIFIED'])

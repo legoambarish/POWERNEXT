@@ -6,6 +6,7 @@ exhaustive physics optimizer, including any scenario the surrogate dislikes.
 """
 from pathlib import Path
 import json,time
+from powernext_integrity import artifact_bytes
 import numpy as np
 import pandas as pd
 from .common import digest,file_hash
@@ -18,7 +19,7 @@ def screen_batch(scenarios,registry,selection,adapter_name='provisional'):
     if not isinstance(scenarios,list) or not 1<=len(scenarios)<=4096:
         raise ValueError('Provide 1 through 4096 explicit scenarios')
     adapter=load_adapter(adapter_name); registry=Path(registry); selection=Path(selection)
-    selection_hash=file_hash(selection); routes=json.loads(selection.read_text(encoding='utf-8'))
+    selection_hash=file_hash(selection); routes=json.loads(artifact_bytes(selection))
     rows=[]; groups={}; artifacts={}
     for i,request in enumerate(scenarios):
         row=dict(index=i,scenario_id=request.get('scenario_id',str(i)) if isinstance(request,dict) else str(i),

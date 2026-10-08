@@ -6,6 +6,7 @@ must be independently reviewed; setting a boolean cannot promote this adapter.
 from __future__ import annotations
 import importlib
 import json
+from powernext_integrity import artifact_bytes
 from dataclasses import asdict
 import numpy as np
 from .common import PHYSICS, digest, file_hash
@@ -19,7 +20,7 @@ from physics_engine.analytic import rates, double_exponential_metrics
 
 class ProvisionalAdapter:
     def __init__(self):
-        self.profile = json.loads((PHYSICS / "CPRI_EQUIPMENT_PROFILE.json").read_text(encoding="utf-8"))
+        self.profile = json.loads(artifact_bytes(PHYSICS / "CPRI_EQUIPMENT_PROFILE.json"))
         p = self.profile
         # Fail closed if source profile and immutable reference backend diverge.
         assert p["capacitors"]["stage_impulse_capacitance"]["value"] == .5e-6

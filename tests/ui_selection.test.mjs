@@ -5,6 +5,37 @@ import {inventoryControls,inventorySummary,runFrame} from '../ui/views.js';
 import {readForm,fromDisplay} from '../ui/format.js';
 import fs from 'node:fs';
 
+test('late evidence import preserves a newer navigation choice',async()=>{
+  const h=harness();let submit,resolveImport;
+  h.element('reopen-bundle').addEventListener=(_,callback)=>submit=callback;
+  h.element('reopen-file').files=[{size:10}];
+  h.context.fetch=()=>new Promise(resolve=>resolveImport=resolve);
+  h.context.bindReopen();const importing=submit({currentTarget:h.element('reopen-bundle')});
+  h.state.screen='measured';h.context.renderToken++;
+  resolveImport({ok:true,json:async()=>({run_id:'reopened'})});await importing;
+  assert.equal(h.state.screen,'measured');assert.equal(h.state.bundle.run.run_id,'old');
+  assert.equal(h.pending.has('/api/runs/reopened'),false);
+});
+
+test('navigation during a selected run fetch is not overwritten on completion',async()=>{
+  const h=harness();const opening=h.context.openRun('reopened');
+  h.state.screen='measured';h.context.renderToken++;
+  h.finish('/api/runs/reopened',bundle('reopened'));await opening;
+  assert.equal(h.state.screen,'measured');assert.equal(h.state.bundle.run.run_id,'reopened');
+  assert.equal(h.state.opening,null);
+});
+
+test('navigation during scenario creation and live-search creation remains active',async()=>{
+  for(const kind of ['scenario','search']){
+    const h=harness(),opening=kind==='scenario'?h.context.openDemo('si'):h.context.startRun();
+    h.state.screen='measured';h.context.renderToken++;
+    if(kind==='scenario'){
+      h.finish('/api/demos/si',{run_id:'si'});await tick();h.finish('/api/runs/si',bundle('si'));
+    }else h.finish('/api/runs',{run_id:'new',status:'RUNNING'});
+    await opening;assert.equal(h.state.screen,'measured');
+  }
+});
+
 test('original RT-08: late earlier scenario POST cannot open its result',async()=>{
   const h=harness();const first=h.context.openDemo('si'),last=h.context.openDemo('approved');
   assert.equal(h.state.bundle,null);assert.equal(h.context.main.innerHTML,'<loading>');
@@ -58,4 +89,6 @@ test('blank numeric draft is unknown instead of a manufactured zero',()=>assert.
 test('historical status remains visible in the result frame',()=>{
   const p=JSON.parse(fs.readFileSync(new URL('../powernext/optimizer/examples/SI_recommendation.json',import.meta.url)));
   assert.ok(runFrame({bundle:{result:p,run:{},artifact_compatibility:'RECORDED_ARTIFACT_DIFFERENT_OR_UNAVAILABLE_STACK'}}).includes('data-historical-status'));
+  const reopened=runFrame({bundle:{result:p,run:{source:'REOPENED_EVIDENCE',status:'COMPLETED'},artifact_compatibility:'MATCHES_CURRENT_STACK'}});
+  assert.ok(reopened.includes('Reopened evidence'));assert.ok(!reopened.includes('Computed locally'));
 });

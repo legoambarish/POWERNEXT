@@ -1,0 +1,115 @@
+{
+  "paragraphs": [
+    "",
+    "Note: If it is switching impulse 250/2500 and check the IEC 60060-1 tolerance limits are there in the specification."
+  ],
+  "tables": [
+    [
+      [
+        "Parameter",
+        "Symbol",
+        "Value"
+      ],
+      [
+        "Max. charging voltage",
+        "ΣU",
+        "3000 kV"
+      ],
+      [
+        "Max. stored energy at rated voltage",
+        "W",
+        "150 kJ"
+      ],
+      [
+        "Number of stages",
+        "S",
+        "15"
+      ],
+      [
+        "Stage voltage",
+        "U",
+        "200 kV"
+      ],
+      [
+        "Stored energy for stage",
+        "Wₛ",
+        "10 kJ"
+      ],
+      [
+        "Impulse capacitance per stage",
+        "Cₛ",
+        "0.5 µF"
+      ],
+      [
+        "Wave form according to IEC 60-1 ",
+        "—",
+        "1.2/50 µs"
+      ],
+      [
+        " Front resistor per stage",
+        "Rₛ1",
+        "30 Ω"
+      ],
+      [
+        "Front resistor per stage",
+        "Rₛ2",
+        "46 Ω"
+      ],
+      [
+        "Front resistor per stage",
+        "Rₛ3",
+        "3700 Ω"
+      ],
+      [
+        "Front resistor per stage",
+        "Rₛ4",
+        "5000 Ω"
+      ],
+      [
+        "Tail resistor per stage for lightning impulses",
+        "Rₚ1",
+        "180 Ω"
+      ],
+      [
+        "Tail resistor per stage for switching impulses",
+        "Rₚ2",
+        "5 kΩ"
+      ],
+      [
+        "Charging resistor per stage",
+        "Rᴸ",
+        "135 kΩ"
+      ],
+      [
+        "Potential resistor",
+        "Rₚₒₜ",
+        "2 MΩ"
+      ],
+      [
+        "Discharging resistor",
+        "Rₑᵣd1",
+        "5.45 kΩ"
+      ],
+      [
+        "Discharging resistor",
+        "Rₑᵣd2",
+        "13 kΩ"
+      ],
+      [
+        "Sequence of pulses",
+        "k",
+        "2/min"
+      ],
+      [
+        "Basic load capacitance",
+        "Cᵦₒ",
+        "480 pF"
+      ],
+      [
+        "Spheres diameter",
+        "—",
+        "25 cm"
+      ]
+    ]
+  ]
+}

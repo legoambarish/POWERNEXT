@@ -1,7 +1,16 @@
 release/*.zip filter=lfs diff=lfs merge=lfs -text
+archive/**/*.zip filter=lfs diff=lfs merge=lfs -text
+archive/**/*.joblib filter=lfs diff=lfs merge=lfs -text
 training-data/*.zip filter=lfs diff=lfs merge=lfs -text
 powernext/ml/data/**/*.jsonl filter=lfs diff=lfs merge=lfs -text
 powernext/ml/registry/**/*.joblib filter=lfs diff=lfs merge=lfs -text
 models/**/*.joblib filter=lfs diff=lfs merge=lfs -text
 competition-materials/*.txt -text
 evidence/sources/*.txt -text
+powernext/physics/physics_engine/*.py -text
+powernext/physics/CPRI_EQUIPMENT_PROFILE.json -text
+powernext/physics/CIRCUIT_TOPOLOGY_SPEC.md -text
+powernext/ml/powernext_ml/*.py -text
+powernext/optimizer/powernext_optimizer/*.py -text
+powernext_integrity.py -text
+powernext_app/*.py -text

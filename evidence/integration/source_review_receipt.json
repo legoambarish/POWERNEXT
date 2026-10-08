@@ -1,0 +1,202 @@
+{
+  "source_precedence": [
+    "Original PS",
+    "CPRI clarifications and actual IVG sheet",
+    "Declared assumptions",
+    "Secondary audits"
+  ],
+  "files": [
+    {
+      "name": "briefing.txt",
+      "bytes": 24434,
+      "sha256": "909488e111dc7e18993e53492893cfde5be4dd2579b1f597683f0abf3e79c6e6"
+    },
+    {
+      "name": "clarifications.txt",
+      "bytes": 8841,
+      "sha256": "560bf7d304d141dec6bd9a42cf8794645e5acf6227363fe235bf07288056cbda"
+    },
+    {
+      "name": "HV IG Problem Statement.pdf",
+      "bytes": 171908,
+      "sha256": "9ab169fbda5eb612a7ff9ccfbadca8e85f5b49c2257c23388945d4e7c5532e93"
+    },
+    {
+      "name": "Hybrid_Physics_ML_Impulse_Generator_Optimiser.xlsx",
+      "bytes": 808682,
+      "sha256": "e855eadbe4d6da2579316e89e025e6990f9ba3c522a5af96d1dd2a5522d77480"
+    },
+    {
+      "name": "Parameter values ivg.docx",
+      "bytes": 13045,
+      "sha256": "e5a1a3b523b93550687c3a077897b0e234de5ed55254546efd1a7c6d706f5608"
+    },
+    {
+      "name": "PowerNext_Track1_PRD.docx",
+      "bytes": 43359,
+      "sha256": "d597f15f4857bee1608b8028417a661c86e661de556f90f315a771eeb71b342e"
+    },
+    {
+      "name": "questions.txt",
+      "bytes": 15730,
+      "sha256": "31bd1a8a1e390163336be601e88a55cd88d0a6218c49ee46edee882da1af0f92"
+    }
+  ],
+  "problem_statement": {
+    "pages": 4,
+    "visual_review": "All four pages including diagrams, page-4 illustrative nameplate and table reviewed in the integration session"
+  },
+  "workbook": [
+    {
+      "sheet": "Hybrid Calculator",
+      "rows_read": 21,
+      "columns": null,
+      "nonempty_cells": 92,
+      "formulas": 29,
+      "ordered_nonempty_cell_sha256": "8fe283ab7129c5b8d2cc17a5f931e7d137eb8930e3612ee11f8b3d7d10d79578"
+    },
+    {
+      "sheet": "Resistor Inventory",
+      "rows_read": 15,
+      "columns": null,
+      "nonempty_cells": 49,
+      "formulas": 0,
+      "ordered_nonempty_cell_sha256": "207ce557f65a26017e58421ad49f52a3133b3daf52f2d5122ec74255d3d72fac"
+    },
+    {
+      "sheet": "Synthetic Dataset",
+      "rows_read": 2001,
+      "columns": null,
+      "nonempty_cells": 44022,
+      "formulas": 0,
+      "ordered_nonempty_cell_sha256": "db1ec6272eaae96388c5496a51c0b75c8579208959ab2a99c3532bf28f030205"
+    },
+    {
+      "sheet": "ML Helper",
+      "rows_read": 1401,
+      "columns": null,
+      "nonempty_cells": 23817,
+      "formulas": 7000,
+      "ordered_nonempty_cell_sha256": "40357cf4d6c2ae4b83a5334a928f48d0999c05b9e1d857c360f6c62fc3e5e20d"
+    },
+    {
+      "sheet": "Model Validation",
+      "rows_read": 16,
+      "columns": null,
+      "nonempty_cells": 41,
+      "formulas": 0,
+      "ordered_nonempty_cell_sha256": "485528fe0b48bed3a8b7399e4ca150fd30d1fdf498cbfddf788b0dc2f1c46023"
+    },
+    {
+      "sheet": "Model Card",
+      "rows_read": 12,
+      "columns": null,
+      "nonempty_cells": 21,
+      "formulas": 0,
+      "ordered_nonempty_cell_sha256": "4ff4d42b8e58b3c8002cb3f077e4683919257ab546f354ab05b9438f9015ea6e"
+    }
+  ],
+  "independent_audit": {
+    "pages": 70,
+    "sha256": "565f222c1d9ec8131c813f6f19609acd07f996be316fac6d3a9e1df234fffbc4",
+    "original_location": "C:/Users/User/Downloads/RoTrail Web/PowerNext_Independent_Audit_2026-10-07.pdf",
+    "preserved_copy": "C:\\Users\\User\\Downloads\\Powernext\\archive\\audits\\PowerNext_Independent_Audit_2026-10-07.pdf"
+  },
+  "model_and_physics_preservation": [
+    {
+      "path": "powernext/physics/physics_engine/analytic.py",
+      "sha256": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/physics/physics_engine/dataset.py",
+      "sha256": "bcea18c44b005a9c1636491d2dde97c38ca1a37759de35ac68ff4bb0e186cf5e",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/physics/physics_engine/engine.py",
+      "sha256": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/physics/physics_engine/evaluator.py",
+      "sha256": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/physics/physics_engine/network.py",
+      "sha256": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/physics/physics_engine/recipes.py",
+      "sha256": "1d67b54c07faef6afee97ab68e7c33ec63257ffdcb9eb910d7377e10eeff3853",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/physics/physics_engine/reference_cases.py",
+      "sha256": "fe3f9de685ba374e6372411d23af1de16b3477a1d5111479eb24313ff684d78b",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/physics/physics_engine/target.py",
+      "sha256": "ac0b2a31335d802eaacedab2b2c586ae99f66e95277659da277420cfdc26c3ca",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/physics/physics_engine/__init__.py",
+      "sha256": "683fe3921cea615ff7efdb9bf1f7aab5c423c83e6e0c7de6ceac9b0e1f0d759a",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/physics/CPRI_EQUIPMENT_PROFILE.json",
+      "sha256": "90cc70fd0a86a7ecaef8510538bac31fc33e42fa6527f47afc18afd4e9964f43",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/physics/CIRCUIT_TOPOLOGY_SPEC.md",
+      "sha256": "cae23ca71041ff8756e8f90f90bbd25b0d2a8368d9d81d5f84424980e74b562c",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/ml/registry/simulation_v2/model_3d7f2939e0983060b100/model.joblib",
+      "sha256": "7278af4ef2d83a00874ab63ede7b04b3b2b3e713c3a741e93a606aed24652a73",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/ml/registry/simulation_v2/model_772eb9870cdc64349cff/model.joblib",
+      "sha256": "a37cfc8f50aff61d2dc7e2553460eef0b69f194ffe132d11527a36d67bee7e20",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/ml/registry/simulation_v2/model_920f8e81d2279b3b8b78/model.joblib",
+      "sha256": "c124936c95e2b6b8954062bb802c286084dfb453c34efb1140277f9f2f2a71c7",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/ml/registry/simulation_v2/model_954960c4e8fe1695fbfd/model.joblib",
+      "sha256": "2f1618e21dda08c1d3670859b22114db7c887d0e4dd99ac21365e1f025d03b73",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/ml/registry/simulation_v2/model_3d7f2939e0983060b100/card.json",
+      "sha256": "5c4d580fda5a1383cbc0edd65c32c0694c944a9e8104019d6c9dd6c770048e16",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/ml/registry/simulation_v2/model_772eb9870cdc64349cff/card.json",
+      "sha256": "7db73342ddc9b5b8437f8994cd543f3bb6056f9d76f3ce09c625cf1765c49b96",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/ml/registry/simulation_v2/model_920f8e81d2279b3b8b78/card.json",
+      "sha256": "f9faea261ad41325f1156f20259659aa4fa201c77a08c2a8efe47b1bfdef5c06",
+      "identical_to_October4": true
+    },
+    {
+      "path": "powernext/ml/registry/simulation_v2/model_954960c4e8fe1695fbfd/card.json",
+      "sha256": "b7f8ba6d5b6bca336f21b7745c6af3a30e3222f872c049563bb72c3502ee4577",
+      "identical_to_October4": true
+    }
+  ]
+}

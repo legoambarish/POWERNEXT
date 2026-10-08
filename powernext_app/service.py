@@ -43,7 +43,9 @@ class Application:
         return result.get('optimizer_source_hashes')==current
 
     def metadata(self):
+        from .equipment import coverage
         return dict(application_version=__version__,profile=self.catalog.profile,physics_provenance=self.catalog.adapter.provenance,
+            parameter_coverage=coverage(),technical_documents=['IEC_AND_PS_COMPLIANCE_VERIFICATION.md','IVG_PARAMETER_COVERAGE.md','INTEGRATION_AND_REGRESSION_REPORT.md','PERFORMANCE_REPORT.md'],
             stack_sha256=self.stack.fingerprint,model_selection=self.stack.models,demonstrations=DEMOS,
             default_request=read_json(DEMO_DIR/'SI_request.json'),
             data_directory=str(self.store.root),offline=True,hardware_control=False)
@@ -56,7 +58,13 @@ class Application:
         fields={'target_crest_V','dut_capacitance_F','divider_capacitance_F','stray_capacitance_F','loop_inductance_H','loop_resistance_ohm','load_resistance_ohm'}
         provenance=annotations.get('value_provenance',{})
         if not isinstance(provenance,dict) or set(provenance)-fields or any(v not in ['known','measured','estimated','assumed'] for v in provenance.values()):raise ValueError('Invalid value provenance')
-        matches=[dict(run_id=m['run_id'],created_at=m['created_at'],source=m['source'],same_stack=m.get('stack_sha256')==self.stack.fingerprint and self._compatible(self.store.result(m['run_id']))) for m in self.store.list() if m.get('request_sha256')==digest(request) and m.get('status')=='COMPLETED']
+        def electrical_identity(q):
+            try:q=normalize_request(q,self.catalog)
+            except (ValueError,KeyError,TypeError):q=copy.deepcopy(q)
+            q.pop('request_id',None)
+            q.get('setup',{}).pop('setup_id',None)
+            return digest(q)
+        matches=[dict(run_id=m['run_id'],created_at=m['created_at'],source=m['source'],same_stack=m.get('stack_sha256')==self.stack.fingerprint and self._compatible(self.store.result(m['run_id']))) for m in self.store.list() if m.get('status')=='COMPLETED' and electrical_identity(m.get('request',{}))==electrical_identity(request)]
         return dict(request=request,annotations=annotations,catalog_count=len(self.catalog.entries_for_request(request)),previous_exact_cases=matches)
 
     def optimize(self,request,annotations=None):
@@ -70,7 +78,12 @@ class Application:
     def _run(self,data):
         folder=self.store.directory(data['run_id']);start=time.perf_counter()
         data.update(status='RUNNING',progress='Starting the versioned Physics + ML stack');self.store.update(data)
-        command=[sys.executable,'-m','powernext_optimizer','recommend','--request',str(folder/'request.json'),'--output',str(folder/'result.json'),'--workers',str(self.workers),'--cache',str(self.store.root/'prediction_cache'),'--history',str(self.history.path),'--adapter',self.adapter_name,'--registry',str(self.stack.registry),'--selection',str(self.stack.selection)]
+        # The final result already persists every evaluated waveform as hashed
+        # NPZ evidence. Serializing both gain-probe and charged waveforms again
+        # into a JSON cache made a cold one-worker UI search ~4x slower. Exact
+        # request reuse is provided by immutable history; CLI caching remains
+        # available explicitly for research workloads.
+        command=[sys.executable,'-m','powernext_optimizer','recommend','--request',str(folder/'request.json'),'--output',str(folder/'result.json'),'--workers',str(self.workers),'--history',str(self.history.path),'--adapter',self.adapter_name,'--registry',str(self.stack.registry),'--selection',str(self.stack.selection)]
         env=dict(os.environ,OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',PYTHONIOENCODING='utf-8')
         try:
             with (folder/'execution.log').open('w',encoding='utf-8') as output:
@@ -122,7 +135,8 @@ class Application:
                     target_unavailable_reason=None if same else 'Historical physics provenance differs; current target not attached.')
 
     def screen_scenarios(self,scenarios):
-        return screen_batch(scenarios,self.stack.registry,self.stack.selection,self.adapter_name)
+        with self.stack.batch():
+            return screen_batch(scenarios,self.stack.registry,self.stack.selection,self.adapter_name)
 
     def evidence(self,run_id,candidate_id):
         result,row=self.candidate(run_id,candidate_id);prediction=row.get('prediction') or {}
@@ -154,13 +168,16 @@ class Application:
         decisive=next((name for name,x,y in zip(names,ka,kb) if x!=y),'identical ranking keys')
         return dict(left_id=left_id,right_id=right_id,preferred_id=left_id if ka<kb else right_id if kb<ka else None,decisive_factor=decisive,policy='Original optimizer lexicographic ordering; no UI reranking')
 
-    def import_measurement(self,run_id,raw_csv,metadata):
+    def import_measurement(self,run_id,raw_csv,metadata,metadata_text=None):
         self.store.result(run_id)
         if not isinstance(raw_csv,(str,bytes)) or not isinstance(metadata,dict):raise ValueError('CSV bytes/text and source metadata are required')
         measurement_id='shot_'+uuid.uuid4().hex[:20]
         folder=self.store.directory(run_id)/'measurements';folder.mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir=self.store.root) as temporary:
             temporary=Path(temporary);(temporary/'raw.csv').write_bytes(raw_csv if isinstance(raw_csv,bytes) else raw_csv.encode('utf-8'));write_json(temporary/'metadata.json',metadata)
+            if metadata_text is not None:
+                if not isinstance(metadata_text,str) or json.loads(metadata_text)!=metadata:raise ValueError('Metadata text and object differ')
+                (temporary/'metadata.json').write_bytes(metadata_text.encode('utf-8'))
             record=ingest_measurement(temporary/'raw.csv',temporary/'metadata.json',folder/measurement_id)
         write_json(folder/measurement_id/'application_integrity.json',{name:file_hash(folder/measurement_id/name) for name in ['raw_export.csv','source_metadata.json','waveform_SI.npz','record.json']})
         return dict(measurement_id=measurement_id,record=record,source_identity_policy='User-declared evidence kind; not independently authenticated')

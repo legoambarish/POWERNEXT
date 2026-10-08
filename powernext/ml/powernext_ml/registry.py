@@ -2,6 +2,8 @@
 from pathlib import Path
 import json
 import joblib
+import io
+from powernext_integrity import artifact_bytes
 from functools import lru_cache
 from .common import digest,file_hash,write_json,runtime_versions,source_hashes
 
@@ -23,13 +25,13 @@ def register(model,card,root):
 
 def load_model(folder,expected_provenance=None):
     folder=Path(folder)
-    card=json.loads((folder/"card.json").read_text(encoding="utf-8"))
+    card=json.loads(artifact_bytes(folder/"card.json"))
     if file_hash(folder/"model.joblib")!=card["model_sha256"]:raise ValueError("Model hash mismatch")
     installed=runtime_versions()
     for name in ["python","numpy","scipy","sklearn"]:
         if installed[name]!=card["runtime"][name]:raise ValueError(f"Model runtime mismatch: {name}")
     if expected_provenance is not None and card["provenance"]!=expected_provenance:raise ValueError("Model/physics provenance mismatch; regenerate and retrain")
-    return joblib.load(folder/"model.joblib"),card
+    return joblib.load(io.BytesIO(artifact_bytes(folder/"model.joblib"))),card
 
 
 @lru_cache(maxsize=8)

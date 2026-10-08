@@ -1,0 +1,248 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-08T03:47:37.733284+00:00",
+  "application_version": "1.0.0+integration20261008",
+  "release_folder": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext_Track1_Offline",
+  "archive": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext_Track1_Offline.zip",
+  "archive_bytes": 395384078,
+  "archive_sha256": "297c6b3530f7933436ce2daf4b503ea5307873d291884e5f45ae2cc1ef047f98",
+  "immutable_files": 16417,
+  "automated_checks": 405,
+  "complete_suite_logs": "PowerNext_Track1_Offline/evidence/integration/portable_tests",
+  "final_frontend_checks": 66,
+  "full_application_acceptance": {
+    "root": "C:\\Users\\User\\Downloads\\Powernext\\archive\\acceptance\\Moved Folder With Spaces\\PowerNext_Track1_Offline",
+    "runtime": "C:\\Users\\User\\Downloads\\Powernext\\archive\\acceptance\\Moved Folder With Spaces\\PowerNext_Track1_Offline\\runtime\\python.exe",
+    "port": 8771,
+    "gates": [
+      {
+        "name": "launch_from_foreign_working_directory",
+        "stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28",
+        "application_version": "1.0.0+integration20261008"
+      },
+      {
+        "name": "SI_complete_504",
+        "run_id": "run_b3982e20fb304221afe3",
+        "seconds": 26.903768800000762,
+        "application_elapsed_seconds": 25.976353000000017,
+        "search": {
+          "strategy": "EXHAUSTIVE_CATALOG_ANALYTIC_AMPLITUDE",
+          "catalog_count": 504,
+          "evaluated_count": 504,
+          "pruned_count": 0,
+          "numeric_pass_count": 14,
+          "evaluable_count": 477,
+          "unsupported_count": 27,
+          "approved_recipe_count": 0,
+          "catalog_sha256": "0774fc34457fccf711e4bc8d3c210a5fcc163b61a6df707ca60519411f19efe6"
+        }
+      },
+      {
+        "name": "single_ML_Physics_prediction",
+        "metrics": {
+          "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+          "evaluation_curve_id": "raw_clean",
+          "interpolation": "PCHIP",
+          "standards_certified": false,
+          "polarity": 1,
+          "baseline_V": 0.0,
+          "raw_crest_magnitude_V": 1300000.0000000002,
+          "raw_signed_crest_V": 1300000.0000000002,
+          "crest_magnitude_V": 1300000.0000000002,
+          "t_peak_s": 0.00024174132169143924,
+          "T1_s": null,
+          "Tp_s": 0.00024174132169143924,
+          "T2_s": 0.0021023819830925834,
+          "t30_s": 2.040432007748545e-05,
+          "t90_s": 0.00011831863259666407,
+          "t50_falling_s": 0.0021023819830925834,
+          "virtual_origin_s": null,
+          "beginning_s": 0.0,
+          "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+          "compliance_status": "PASS",
+          "reasons": [],
+          "checks": {
+            "front_or_peak": true,
+            "tail": true,
+            "crest": true
+          },
+          "deviation_pct": {
+            "front_or_peak_pct": -3.303471323424312,
+            "tail_pct": -15.90472067629667,
+            "crest_pct": 2.220446049250313e-14
+          }
+        }
+      },
+      {
+        "name": "289_fixed_setting_scenarios_and_boundary_Physics",
+        "discovery_id": "explore_29cc6bad3f394aa18845",
+        "batch_ms": 89.17690000089351,
+        "physics_checks": 6
+      },
+      {
+        "name": "OOD_abstention"
+      },
+      {
+        "name": "next_legal_adjustment_and_measurement_guidance",
+        "adjustment": [
+          {
+            "field": "stage_charge_V",
+            "before": 100000,
+            "after": 164366.29423280785
+          }
+        ]
+      },
+      {
+        "name": "raw_bytes_metadata_analysis_export_reopen",
+        "run_id": "run_99df96bb94264be9b329",
+        "measurement_id": "shot_ebd585743daa40189f6c",
+        "bundle_sha256": "f9b1c8607b62d4bfa5bfb5c42bf3242604c8bc67e136d02fa02904f967768e04"
+      },
+      {
+        "name": "semantic_history_matching"
+      },
+      {
+        "name": "isolated_bench_and_trace_comparison"
+      },
+      {
+        "name": "LI_complete_588_explicit_parallel",
+        "run_id": "run_8fde6b4803fb48aa91f9",
+        "seconds": 31.016792899999928,
+        "application_elapsed_seconds": 29.600393499998972,
+        "search": {
+          "strategy": "EXHAUSTIVE_CATALOG_ANALYTIC_AMPLITUDE",
+          "catalog_count": 588,
+          "evaluated_count": 588,
+          "pruned_count": 0,
+          "numeric_pass_count": 3,
+          "evaluable_count": 557,
+          "unsupported_count": 31,
+          "approved_recipe_count": 0,
+          "catalog_sha256": "bd0b49f9f8b1ac03ab1fdaec6f8c47e5db87cef62024c5751c91d2aee229aec6"
+        }
+      },
+      {
+        "name": "LI_588_identical_to_previous_application"
+      },
+      {
+        "name": "no_solution_complete_504",
+        "run_id": "run_27dbcc96bd204215b32a",
+        "seconds": 24.225826300000335,
+        "application_elapsed_seconds": 23.025368999999046,
+        "search": {
+          "strategy": "EXHAUSTIVE_CATALOG_ANALYTIC_AMPLITUDE",
+          "catalog_count": 504,
+          "evaluated_count": 504,
+          "pruned_count": 0,
+          "numeric_pass_count": 0,
+          "evaluable_count": 504,
+          "unsupported_count": 0,
+          "approved_recipe_count": 0,
+          "catalog_sha256": "0774fc34457fccf711e4bc8d3c210a5fcc163b61a6df707ca60519411f19efe6"
+        }
+      },
+      {
+        "name": "technical_reports_accessible"
+      },
+      {
+        "name": "Windows_stop_launcher"
+      },
+      {
+        "name": "restart_preserves_history_discovery_and_raw_measurements"
+      },
+      {
+        "name": "immutable_manifest_after_actual_application_use"
+      }
+    ],
+    "status": "PASS",
+    "offline_boundary": "Python non-loopback socket connects blocked in server and spawned workers; browser used only local assets"
+  },
+  "fresh_zip_extraction": {
+    "root": "C:\\Users\\User\\Downloads\\Powernext\\archive\\acceptance\\Fresh Extraction With Spaces\\PowerNext_Track1_Offline",
+    "runtime": "C:\\Users\\User\\Downloads\\Powernext\\archive\\acceptance\\Fresh Extraction With Spaces\\PowerNext_Track1_Offline\\runtime\\python.exe",
+    "gates": [
+      {
+        "name": "fresh_extraction_foreign_cwd_default_data_empty_history"
+      },
+      {
+        "name": "new_restricted_catalog_request",
+        "seconds": 16.936883899999884
+      },
+      {
+        "name": "ML_single_discovery_fixed_charge_Physics"
+      },
+      {
+        "name": "exports_reopen_and_imported_waveform_evidence"
+      },
+      {
+        "name": "stop_restart_persists_all_records"
+      }
+    ],
+    "status": "PASS"
+  },
+  "ui_acceptance": {
+    "status": "PASS",
+    "tested_url": "http://127.0.0.1:8771/",
+    "viewports": [
+      {
+        "width": 390,
+        "height": 844,
+        "document_width": 375,
+        "configuration_columns": 1
+      },
+      {
+        "width": 1366,
+        "height": 900,
+        "document_width": 1351
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "document_width": 1905
+      }
+    ],
+    "console_errors": [],
+    "gates": [
+      "Repeated provisional and approval panels removed from review/recommendation/history/discovery",
+      "Review dialog keyboard Escape",
+      "Full SI recommendation loaded from computed run",
+      "Next adjustment: 100 kV to 164.366 kV; crest 790.916 to 1300 kV with fixed timing",
+      "Single ML versus Physics prediction shows actual returned scalars",
+      "289 explicitly ranged ML scenarios; fixed nine stages and 164.366 kV charge",
+      "Selected 700 pF / 0 microhenry scenario verified without retuning",
+      "Scenario handoff creates separate 700 pF / 0 microhenry draft",
+      "Synthetic CSV and metadata imported using native file chooser",
+      "Complete evidence ZIP downloaded and reopened using UI",
+      "Reopened waveform diagnostics loaded from saved measurement",
+      "Original CSV and metadata CRLF bytes preserved after correction",
+      "Late evidence completion no longer replaces newer navigation",
+      "Isolated bench: 5 V charge yields 4.179 V crest; plot uses V"
+    ],
+    "screenshots": [
+      "configuration_1366.jpg",
+      "configuration_mobile_390.jpg",
+      "recommendation_1366.jpg",
+      "recommendation_1920.jpg",
+      "review_without_warnings.jpg"
+    ]
+  },
+  "ui_byte_roundtrip": {
+    "status": "PASS",
+    "raw_files": 1,
+    "metadata_files": 1,
+    "raw_and_metadata_byte_identical": true,
+    "download_sha256": "7a588b6b26e68b8b4fdf8b50a0479de686c5215b9a47b0ef8c935dcf86ad2f9e",
+    "predecessor_issue": "Unchanged textarea metadata CRLF normalized; original text retention corrected and browser export repeated"
+  },
+  "final_launch": {
+    "command": "& \"C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext_Track1_Offline\\Launch_PowerNext.cmd\"",
+    "url": "http://127.0.0.1:8765/",
+    "default_browser_open_requested": true,
+    "stop_launcher_tested": true,
+    "restart_tested": true,
+    "history_preserved": 2,
+    "currently_running": true
+  },
+  "source_preservation": "All seven original root materials retain exact SHA-256; previous packages archived; Git history retained; no remote changes",
+  "external_qualification": "See IEC_AND_PS_COMPLIANCE_VERIFICATION.md and IVG_PARAMETER_COVERAGE.md; no hardware or IEC certification invented"
+}

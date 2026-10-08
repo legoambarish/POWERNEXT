@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "tested_url": "http://127.0.0.1:8771/",
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844,
+      "document_width": 375,
+      "configuration_columns": 1
+    },
+    {
+      "width": 1366,
+      "height": 900,
+      "document_width": 1351
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "document_width": 1905
+    }
+  ],
+  "console_errors": [],
+  "gates": [
+    "Repeated provisional and approval panels removed from review/recommendation/history/discovery",
+    "Review dialog keyboard Escape",
+    "Full SI recommendation loaded from computed run",
+    "Next adjustment: 100 kV to 164.366 kV; crest 790.916 to 1300 kV with fixed timing",
+    "Single ML versus Physics prediction shows actual returned scalars",
+    "289 explicitly ranged ML scenarios; fixed nine stages and 164.366 kV charge",
+    "Selected 700 pF / 0 microhenry scenario verified without retuning",
+    "Scenario handoff creates separate 700 pF / 0 microhenry draft",
+    "Synthetic CSV and metadata imported using native file chooser",
+    "Complete evidence ZIP downloaded and reopened using UI",
+    "Reopened waveform diagnostics loaded from saved measurement",
+    "Original CSV and metadata CRLF bytes preserved after correction",
+    "Late evidence completion no longer replaces newer navigation",
+    "Isolated bench: 5 V charge yields 4.179 V crest; plot uses V"
+  ],
+  "screenshots": [
+    "configuration_1366.jpg",
+    "configuration_mobile_390.jpg",
+    "recommendation_1366.jpg",
+    "recommendation_1920.jpg",
+    "review_without_warnings.jpg"
+  ]
+}

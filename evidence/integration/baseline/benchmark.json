@@ -1,0 +1,54 @@
+{
+  "application_root": "C:\\Users\\User\\Downloads\\Powernext\\PowerNext_CPRI_Revalidation_2026-10-04\\release\\PowerNext_Track1_Competition_v2",
+  "workers": 1,
+  "cases": [
+    {
+      "mode": "SI",
+      "seconds": 288.08771650000017,
+      "search": {
+        "strategy": "EXHAUSTIVE_CATALOG_ANALYTIC_AMPLITUDE",
+        "catalog_count": 504,
+        "evaluated_count": 504,
+        "pruned_count": 0,
+        "numeric_pass_count": 14,
+        "evaluable_count": 477,
+        "unsupported_count": 27,
+        "approved_recipe_count": 0,
+        "catalog_sha256": "0774fc34457fccf711e4bc8d3c210a5fcc163b61a6df707ca60519411f19efe6"
+      },
+      "hash_work": {
+        "calls": 71439,
+        "bytes": 116860453153,
+        "seconds": 248.25377529995603
+      }
+    },
+    {
+      "mode": "LI",
+      "seconds": 270.23072170000023,
+      "search": {
+        "strategy": "EXHAUSTIVE_CATALOG_ANALYTIC_AMPLITUDE",
+        "catalog_count": 504,
+        "evaluated_count": 504,
+        "pruned_count": 0,
+        "numeric_pass_count": 0,
+        "evaluable_count": 477,
+        "unsupported_count": 27,
+        "approved_recipe_count": 0,
+        "catalog_sha256": "c248fac070fb07fdb9a09b11d50ba3360c747fffd0c3ef9ac4f5105807acf9c5"
+      },
+      "hash_work": {
+        "calls": 71439,
+        "bytes": 123396848675,
+        "seconds": 238.2106528000313
+      }
+    }
+  ],
+  "batch_128_first": {
+    "seconds": 0.13021949999983917,
+    "estimates": 128
+  },
+  "batch_128_warm": {
+    "seconds": 0.12648360000002867,
+    "estimates": 128
+  }
+}

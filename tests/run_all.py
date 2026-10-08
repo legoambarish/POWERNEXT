@@ -17,6 +17,7 @@ def main():
             ('frontend',[str(config.ROOT/'runtime/tools/node.exe'),'--test','tests/application/frontend.test.mjs','tests/application/ui_redesign.test.mjs','tests/application/clarification.test.mjs','tests/ui_selection.test.mjs']),
             ('redteam',[sys.executable,'-m','pytest','tests/redteam','-q','-p','no:cacheprovider']),
             ('ui_race',[str(config.ROOT/'runtime/tools/node.exe'),'tests/redteam/ui_scenario_race.mjs']),
+            ('integration',[sys.executable,'-m','pytest','tests/integration','-q','-p','no:cacheprovider']),
             ('final_release',[sys.executable,'-m','pytest','tests/test_final_release.py','-q','-p','no:cacheprovider'])]
     results=[]
     for name,cmd in suites:

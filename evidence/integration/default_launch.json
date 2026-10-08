@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:8765",
+  "root": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext_Track1_Offline\\data",
+  "history_ids": [
+    "run_d5581f6d8f964f9ca9f7",
+    "run_1a379fe40906491ea0ff"
+  ],
+  "command": "& \"C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext_Track1_Offline\\Launch_PowerNext.cmd\""
+}

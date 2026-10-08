@@ -11,11 +11,15 @@ from .storage import RecommendationResult
 
 _STACK = None
 _CATALOG = None
+_BATCH = None
 
 
-def _initialize(options):
-    global _STACK, _CATALOG
+def _initialize(options,expected_fingerprint=None):
+    global _STACK, _CATALOG, _BATCH
     _STACK=PredictionStack(**options)
+    if expected_fingerprint and _STACK.fingerprint!=expected_fingerprint:
+        raise ValueError('Worker artifact identity differs from parent')
+    _BATCH=_STACK.batch();_BATCH.__enter__()
     _CATALOG=Catalog(options["adapter_name"])
 
 
@@ -94,6 +98,12 @@ def evaluate_candidate(request, entry, catalog, stack):
 
 
 def recommend(raw, *, workers=1, cache=None, registry=None, selection=None, adapter_name="provisional", history=None, progress=True):
+    stack=PredictionStack(registry,selection,cache,adapter_name)
+    with stack.batch():
+        return _recommend(raw,workers=workers,stack=stack,adapter_name=adapter_name,history=history,progress=progress)
+
+
+def _recommend(raw, *, workers,stack,adapter_name,history,progress):
     from . import __version__
     if type(workers) is not int or not 1 <= workers <= 16:
         raise ValueError("workers must be 1 through 16")
@@ -104,7 +114,6 @@ def recommend(raw, *, workers=1, cache=None, registry=None, selection=None, adap
         return RecommendationResult(dict(schema_version="recommendation_result_v1",optimizer_version=__version__,
             status="INVALID_REQUEST",reason_codes=[exc.code],detail=str(exc),best_configuration=None,
             ranked_alternatives=[],candidates=[],eligible_for_hardware_recommendation=False),{})
-    stack=PredictionStack(registry,selection,cache,adapter_name)
     entries=catalog.entries_for_request(request)
     request_hash=digest(request)
     prior=history.lookup(request_hash,stack.fingerprint) if history else []
@@ -117,7 +126,7 @@ def recommend(raw, *, workers=1, cache=None, registry=None, selection=None, adap
             if wave is not None:waves[row["candidate_id"]]=wave
             if progress and (index+1)%8==0:log(f"Evaluated {index+1}/{len(entries)} configurations")
     else:
-        with ProcessPoolExecutor(max_workers=workers,initializer=_initialize,initargs=(stack.options(),)) as pool:
+        with ProcessPoolExecutor(max_workers=workers,initializer=_initialize,initargs=(stack.options(),stack.fingerprint)) as pool:
             futures=[pool.submit(_worker,(request,entry)) for entry in entries]
             for index,future in enumerate(as_completed(futures)):
                 row,wave=future.result();rows.append(row)

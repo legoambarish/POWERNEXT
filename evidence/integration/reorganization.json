@@ -1,0 +1,252 @@
+[
+  {
+    "from": "HV IG Problem Statement.pdf",
+    "to": "sources\\original\\HV IG Problem Statement.pdf",
+    "kind": "file"
+  },
+  {
+    "from": "Parameter values ivg.docx",
+    "to": "sources\\original\\Parameter values ivg.docx",
+    "kind": "file"
+  },
+  {
+    "from": "Hybrid_Physics_ML_Impulse_Generator_Optimiser.xlsx",
+    "to": "sources\\original\\Hybrid_Physics_ML_Impulse_Generator_Optimiser.xlsx",
+    "kind": "file"
+  },
+  {
+    "from": "questions.txt",
+    "to": "sources\\original\\questions.txt",
+    "kind": "file"
+  },
+  {
+    "from": "clarifications.txt",
+    "to": "sources\\original\\clarifications.txt",
+    "kind": "file"
+  },
+  {
+    "from": "briefing.txt",
+    "to": "sources\\original\\briefing.txt",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_PRD.docx",
+    "to": "sources\\original\\PowerNext_Track1_PRD.docx",
+    "kind": "file"
+  },
+  {
+    "from": "_ui_redesign_backup",
+    "to": "archive\\_ui_redesign_backup",
+    "kind": "directory"
+  },
+  {
+    "from": "PowerNext_Application_Package",
+    "to": "archive\\PowerNext_Application_Package",
+    "kind": "directory"
+  },
+  {
+    "from": "PowerNext_CPRI_Revalidation_2026-10-04",
+    "to": "archive\\PowerNext_CPRI_Revalidation_2026-10-04",
+    "kind": "directory"
+  },
+  {
+    "from": "PowerNext_ML_Package",
+    "to": "archive\\PowerNext_ML_Package",
+    "kind": "directory"
+  },
+  {
+    "from": "PowerNext_Optimizer_Package",
+    "to": "archive\\PowerNext_Optimizer_Package",
+    "kind": "directory"
+  },
+  {
+    "from": "PowerNext_Physics_Package",
+    "to": "archive\\PowerNext_Physics_Package",
+    "kind": "directory"
+  },
+  {
+    "from": "PowerNext_Track1_Final",
+    "to": "archive\\PowerNext_Track1_Final",
+    "kind": "directory"
+  },
+  {
+    "from": "RedTeam_2026-10-03",
+    "to": "archive\\RedTeam_2026-10-03",
+    "kind": "directory"
+  },
+  {
+    "from": "release_tools",
+    "to": "archive\\release_tools",
+    "kind": "directory"
+  },
+  {
+    "from": "PowerNext_Training_Docs",
+    "to": "documentation\\training",
+    "kind": "directory"
+  },
+  {
+    "from": "PowerNext_Application_Preview.jpg",
+    "to": "archive\\previews\\PowerNext_Application_Preview.jpg",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Final_Preview.png",
+    "to": "archive\\previews\\PowerNext_Final_Preview.png",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_Application_Package_UI_0.2.0.receipt.json",
+    "to": "archive\\packages\\PowerNext_Track1_Application_Package_UI_0.2.0.receipt.json",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_Application_Package_UI_0.2.0.smoke.json",
+    "to": "archive\\packages\\PowerNext_Track1_Application_Package_UI_0.2.0.smoke.json",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_Application_Package_UI_0.2.0.zip",
+    "to": "archive\\packages\\PowerNext_Track1_Application_Package_UI_0.2.0.zip",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_Application_Package.receipt.json",
+    "to": "archive\\packages\\PowerNext_Track1_Application_Package.receipt.json",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_Application_Package.smoke.json",
+    "to": "archive\\packages\\PowerNext_Track1_Application_Package.smoke.json",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_Application_Package.zip",
+    "to": "archive\\packages\\PowerNext_Track1_Application_Package.zip",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_Final.receipt.json",
+    "to": "archive\\packages\\PowerNext_Track1_Final.receipt.json",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_Final.zip",
+    "to": "archive\\packages\\PowerNext_Track1_Final.zip",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_Final.zip.sha256",
+    "to": "archive\\packages\\PowerNext_Track1_Final.zip.sha256",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_ML_Engineering_Package.receipt.json",
+    "to": "archive\\packages\\PowerNext_Track1_ML_Engineering_Package.receipt.json",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_ML_Engineering_Package.zip",
+    "to": "archive\\packages\\PowerNext_Track1_ML_Engineering_Package.zip",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_Optimizer_Engineering_Package.receipt.json",
+    "to": "archive\\packages\\PowerNext_Track1_Optimizer_Engineering_Package.receipt.json",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_Optimizer_Engineering_Package.zip",
+    "to": "archive\\packages\\PowerNext_Track1_Optimizer_Engineering_Package.zip",
+    "kind": "file"
+  },
+  {
+    "from": "PowerNext_Track1_Physics_Engineering_Package.zip",
+    "to": "archive\\packages\\PowerNext_Track1_Physics_Engineering_Package.zip",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\docs\\CPRI_CLARIFICATION_IMPACT_REPORT.md",
+    "to": "POWERNEXT\\docs\\archive\\2026-10-04\\CPRI_CLARIFICATION_IMPACT_REPORT.md",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\docs\\FINAL_CLAIMS_AND_LIMITATIONS.md",
+    "to": "POWERNEXT\\docs\\archive\\2026-10-04\\FINAL_CLAIMS_AND_LIMITATIONS.md",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\docs\\FINAL_COMPETITION_READINESS.md",
+    "to": "POWERNEXT\\docs\\archive\\2026-10-04\\FINAL_COMPETITION_READINESS.md",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\docs\\FINAL_REGRESSION_REPORT.md",
+    "to": "POWERNEXT\\docs\\archive\\2026-10-04\\FINAL_REGRESSION_REPORT.md",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\docs\\FINAL_RELEASE_NOTES.md",
+    "to": "POWERNEXT\\docs\\archive\\2026-10-04\\FINAL_RELEASE_NOTES.md",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\docs\\PHASE_1_PHYSICS_UPDATE_REPORT.md",
+    "to": "POWERNEXT\\docs\\archive\\2026-10-04\\PHASE_1_PHYSICS_UPDATE_REPORT.md",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\docs\\PHASE_2_ML_RETRAIN_REPORT.md",
+    "to": "POWERNEXT\\docs\\archive\\2026-10-04\\PHASE_2_ML_RETRAIN_REPORT.md",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\docs\\PHASE_3_OPTIMIZER_UPDATE_REPORT.md",
+    "to": "POWERNEXT\\docs\\archive\\2026-10-04\\PHASE_3_OPTIMIZER_UPDATE_REPORT.md",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\docs\\PHASE_4_APPLICATION_UPDATE_REPORT.md",
+    "to": "POWERNEXT\\docs\\archive\\2026-10-04\\PHASE_4_APPLICATION_UPDATE_REPORT.md",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\docs\\UPDATED_JUDGE_QA.md",
+    "to": "POWERNEXT\\docs\\archive\\2026-10-04\\UPDATED_JUDGE_QA.md",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\release",
+    "to": "POWERNEXT\\archive\\release-2026-10-04",
+    "kind": "directory"
+  },
+  {
+    "from": "POWERNEXT\\models",
+    "to": "POWERNEXT\\archive\\model-mirror-2026-10-04",
+    "kind": "directory"
+  },
+  {
+    "from": "POWERNEXT\\FINAL_FILE_MANIFEST.json",
+    "to": "POWERNEXT\\archive\\release-2026-10-04\\SOURCE_FILE_MANIFEST.json",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\RELEASE_METADATA.json",
+    "to": "POWERNEXT\\archive\\release-2026-10-04\\SOURCE_RELEASE_METADATA.json",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\tools\\integrate_ui.py",
+    "to": "POWERNEXT\\archive\\integration-edit-scripts\\integrate_ui.py",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\tools\\refine_ui.py",
+    "to": "POWERNEXT\\archive\\integration-edit-scripts\\refine_ui.py",
+    "kind": "file"
+  },
+  {
+    "from": "POWERNEXT\\tools\\finish_presentation.py",
+    "to": "POWERNEXT\\archive\\integration-edit-scripts\\finish_presentation.py",
+    "kind": "file"
+  }
+]

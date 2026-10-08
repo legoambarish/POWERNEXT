@@ -1,0 +1,19 @@
+{
+  "release_id": "PowerNext_Track1_Competition_v2_CPRI_20261004",
+  "application_version": "0.4.0+cpri20261004",
+  "ui_version": "0.4.0",
+  "profile": "CPRI_IVG_OCT04_2026_v2",
+  "physics_version": "0.2.0",
+  "dataset": "sim_1f2992ccb93c5d9d",
+  "active_registry": "simulation_v2",
+  "readiness": "READY_WITH_CONDITIONS",
+  "evidence_domain": "PROVISIONAL_NUMERICAL_SOFTWARE",
+  "hardware_verified": false,
+  "operationally_approved": false,
+  "laboratory_validated": false,
+  "suite_checks": 383,
+  "phase3_requests": 16,
+  "phase3_waveform_replays": 6720,
+  "phase3_radau_positive_rechecks": 63,
+  "offline_demo_count": 12
+}

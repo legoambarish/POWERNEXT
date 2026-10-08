@@ -2,7 +2,8 @@
 export const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const fmt=(value,scale=1,digits=3)=>value===null||value===undefined||!Number.isFinite(value)?'—':(value/scale).toLocaleString('en-US',{maximumFractionDigits:digits});
 export const fixed=(value,scale=1,digits=3)=>value===null||value===undefined||!Number.isFinite(value)?'—':(value/scale).toLocaleString('en-US',{minimumFractionDigits:digits,maximumFractionDigits:digits});
-export const signed=(v,digits=2)=>v===null||v===undefined||!Number.isFinite(v)?'—':`${v>0?'+':v<0?'−':''}${fmt(Math.abs(v),1,digits)}`;
+// A value that rounds to zero at the shown precision carries no sign (never "−0").
+export const signed=(v,digits=2)=>{if(v===null||v===undefined||!Number.isFinite(v))return '—';const text=fmt(Math.abs(v),1,digits);return `${Number(text.replaceAll(',',''))===0?'':v>0?'+':'−'}${text}`;};
 export const frontKey=p=>p?.request?.impulse_type==='LI'?'T1_s':'Tp_s';
 export const frontName=p=>p?.request?.impulse_type==='LI'?'T1':'Tp';
 export const metrics=row=>row?.prediction?.physics_reference?.metrics??{};
@@ -17,6 +18,8 @@ export const fromDisplay=(value,scale,original)=>String(value).trim()===''?null:
 // Display-only unit helpers. The stored SI value is never modified.
 export const MV=v=>v===null||v===undefined||!Number.isFinite(v)?'—':`${fixed(v,1e6,3)} MV`;
 export const ohm=v=>v===null||v===undefined||!Number.isFinite(v)?'—':v>=1000?`${fmt(v,1000,3)} kΩ`:`${fmt(v,1,3)} Ω`;
+// Changed-setting values (stages, charge, resistors) in display units; stored values are untouched.
+export const changeValue=(field,v)=>typeof v!=='number'?esc(v):field==='stage_charge_V'?`${fmt(v,1000)} kV`:field.endsWith('_ohm')?`${fmt(v)} Ω`:fmt(v);
 export const paramLabel=key=>key==='crest'?'Crest':key==='T1_s'?'T1':key==='Tp_s'?'Tp':key==='T2_s'?'T2':key.replace('_s','');
 export const paramLong=key=>({crest:'Crest voltage',T1_s:'T1 · front time',Tp_s:'Tp · time to peak',T2_s:'T2 · time to half-value'})[key]??key;
 export const paramUnit=key=>key==='crest'?['kV',1000]:['µs',1e-6];

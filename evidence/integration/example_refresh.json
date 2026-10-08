@@ -1,0 +1,107 @@
+[
+  {
+    "file": "LI_disagreement_recommendation.json",
+    "candidates": 84,
+    "seconds": 5.189200900000287,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "LI_inductance_change_recommendation.json",
+    "candidates": 504,
+    "seconds": 22.876129999999648,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "LI_parallel_recommendation.json",
+    "candidates": 588,
+    "seconds": 26.923079500000313,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "LI_rare_timing_pass_recommendation.json",
+    "candidates": 504,
+    "seconds": 25.921104200000627,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "LI_recommendation.json",
+    "candidates": 504,
+    "seconds": 25.66527760000008,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "SI_approved_only_recommendation.json",
+    "candidates": 0,
+    "seconds": 0.3325423000005685,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "SI_crest_change_recommendation.json",
+    "candidates": 504,
+    "seconds": 23.14708100000007,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "SI_current_setting_recommendation.json",
+    "candidates": 504,
+    "seconds": 23.662014599999566,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "SI_infeasible_recommendation.json",
+    "candidates": 504,
+    "seconds": 16.37594799999988,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "SI_load_change_recommendation.json",
+    "candidates": 504,
+    "seconds": 23.320571899999777,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "SI_low_voltage_recommendation.json",
+    "candidates": 504,
+    "seconds": 22.94088440000087,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "SI_ood_recommendation.json",
+    "candidates": 504,
+    "seconds": 16.485884499999884,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "SI_output_shunt_recommendation.json",
+    "candidates": 504,
+    "seconds": 23.16578229999959,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "SI_recommendation.json",
+    "candidates": 504,
+    "seconds": 23.74973350000073,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  },
+  {
+    "file": "SI_tolerance_band_recommendation.json",
+    "candidates": 504,
+    "seconds": 24.217530599999918,
+    "all_configurations_metrics_ranking_unchanged": true,
+    "new_stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28"
+  }
+]

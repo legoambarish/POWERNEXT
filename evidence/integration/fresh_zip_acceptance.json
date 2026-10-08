@@ -1,0 +1,23 @@
+{
+  "root": "C:\\Users\\User\\Downloads\\Powernext\\archive\\acceptance\\Fresh Extraction With Spaces\\PowerNext_Track1_Offline",
+  "runtime": "C:\\Users\\User\\Downloads\\Powernext\\archive\\acceptance\\Fresh Extraction With Spaces\\PowerNext_Track1_Offline\\runtime\\python.exe",
+  "gates": [
+    {
+      "name": "fresh_extraction_foreign_cwd_default_data_empty_history"
+    },
+    {
+      "name": "new_restricted_catalog_request",
+      "seconds": 16.936883899999884
+    },
+    {
+      "name": "ML_single_discovery_fixed_charge_Physics"
+    },
+    {
+      "name": "exports_reopen_and_imported_waveform_evidence"
+    },
+    {
+      "name": "stop_restart_persists_all_records"
+    }
+  ],
+  "status": "PASS"
+}

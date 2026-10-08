@@ -1,0 +1,13 @@
+"""Display coverage for confirmed values without inventing fired connections."""
+def coverage():
+    return [
+      dict(parameter='15 stages / 200 kV per stage / 3 MV summed charge',value='CPRI confirmed',use='Stage catalog and charge/energy constraints',connection='Erected equivalent Cg = Cs/N is a declared circuit assumption'),
+      dict(parameter='0.5 µF per stage / 10 kJ per stage / 150 kJ total',value='CPRI confirmed',use='Circuit storage, stored energy, charge ceiling, ML capacitance features',connection='Ideal identical stages; not an internal spark-gap or lead model'),
+      dict(parameter='30, 46, 180, 520, 3700, 5000 Ω components',value='All six confirmed on October 4',use='Exhaustive catalog, explicit single/parallel BOM, circuit R and ML features',connection='Component availability confirmed; exact stage placement, quantities and pulse ratings unconfirmed'),
+      dict(parameter='135 kΩ charging resistor per stage',value='Confirmed',use='Charging-path evidence; omitted from fired-waveform equations until its firing state is established',connection='Unknown. Not arbitrarily connected across Cg or load'),
+      dict(parameter='2 MΩ potential resistor',value='Confirmed',use='Possible divider/balancing/leakage influence requires schematic; no fabricated load shunt',connection='Unknown nodes, number and fired state'),
+      dict(parameter='5.45 kΩ / 13 kΩ discharge resistors',value='Confirmed',use='Discharge/earthing evidence; cannot calculate residual-voltage or pulse loss without switch states',connection='Unknown. No automatic discharge or safety timer'),
+      dict(parameter='480 pF basic load',value='Confirmed, coverage unresolved',use='Explicit additional/included choice in every setup, Physics Cload and ML features',connection='Terminal-lumped assumption; avoid counting divider/stray capacitance twice'),
+      dict(parameter='25 cm spheres',value='Confirmed diameter',use='Equipment reference only',connection='Spacing, air conditions, arrangement and trigger behaviour absent; no breakdown/firing voltage inferred'),
+      dict(parameter='2 pulses / minute',value='Confirmed nominal sequence',use='Planning reference: average interval 30 s; not a dynamic waveform input or guaranteed recovery time',connection='Thermal duty, charging supply and safe interlocks unqualified'),
+      dict(parameter='LI 1.2/50 µs; SI Tp 250/2500 µs',value='CPRI competition convention',use='Evaluator, target, rank and ML targets share the frozen timing definitions',connection='LI ±30/±20% confirmed; crest ±3% and SI ±20/±60% are documented legacy-standard interpretations')]

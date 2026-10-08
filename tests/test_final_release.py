@@ -80,6 +80,7 @@ def test_restricted_inventory_reaches_live_recommendation(tmp_path):
         b=app.get_run(r['run_id']);assert b['run']['status']=='COMPLETED',b['run'].get('error')
         assert b['artifact_compatibility']=='MATCHES_CURRENT_STACK'
         assert len(b['result']['candidates'])==14
+        assert not (app.store.root/'prediction_cache').exists()
         assert {c['configuration']['front_per_stage_ohm'] for c in b['result']['candidates']}=={3700}
         assert {c['configuration']['tail_per_stage_ohm'] for c in b['result']['candidates']}=={5000}
     finally:app.close()

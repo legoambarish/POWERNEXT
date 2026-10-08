@@ -1,4 +1,4 @@
-import argparse,os,webbrowser,threading
+import argparse,os,webbrowser,threading,json,secrets
 import powernext_config as config
 from pathlib import Path
 from .common import PACKAGE
@@ -30,6 +30,8 @@ def main():
         config.validate_models(app)
         print('[READY] Physics, all four ML routes, Optimizer and local database loaded.',flush=True)
         server=make_server(app,args.port)
+        app.shutdown_token=secrets.token_hex(32)
+        (app.store.root/'server_connection.json').write_text(json.dumps(dict(port=server.server_port,token=app.shutdown_token,pid=os.getpid())),encoding='utf-8')
     except Exception as exc:
         if app is not None:app.close()
         if lock is not None:lock.close()
@@ -40,6 +42,10 @@ def main():
         opener=threading.Timer(.5,lambda:webbrowser.open(url));opener.daemon=True;opener.start()
     try:server.serve_forever()
     except KeyboardInterrupt:pass
-    finally:server.server_close();app.close();lock.close()
+    finally:
+        server.server_close();app.close()
+        connection=app.store.root/'server_connection.json'
+        if connection.exists():connection.unlink()
+        lock.close()
 
 if __name__=='__main__':main()

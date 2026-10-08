@@ -1,0 +1,147 @@
+{
+  "root": "C:\\Users\\User\\Downloads\\Powernext\\archive\\acceptance\\Moved Folder With Spaces\\PowerNext_Track1_Offline",
+  "runtime": "C:\\Users\\User\\Downloads\\Powernext\\archive\\acceptance\\Moved Folder With Spaces\\PowerNext_Track1_Offline\\runtime\\python.exe",
+  "port": 8771,
+  "gates": [
+    {
+      "name": "launch_from_foreign_working_directory",
+      "stack": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28",
+      "application_version": "1.0.0+integration20261008"
+    },
+    {
+      "name": "SI_complete_504",
+      "run_id": "run_b3982e20fb304221afe3",
+      "seconds": 26.903768800000762,
+      "application_elapsed_seconds": 25.976353000000017,
+      "search": {
+        "strategy": "EXHAUSTIVE_CATALOG_ANALYTIC_AMPLITUDE",
+        "catalog_count": 504,
+        "evaluated_count": 504,
+        "pruned_count": 0,
+        "numeric_pass_count": 14,
+        "evaluable_count": 477,
+        "unsupported_count": 27,
+        "approved_recipe_count": 0,
+        "catalog_sha256": "0774fc34457fccf711e4bc8d3c210a5fcc163b61a6df707ca60519411f19efe6"
+      }
+    },
+    {
+      "name": "single_ML_Physics_prediction",
+      "metrics": {
+        "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+        "evaluation_curve_id": "raw_clean",
+        "interpolation": "PCHIP",
+        "standards_certified": false,
+        "polarity": 1,
+        "baseline_V": 0.0,
+        "raw_crest_magnitude_V": 1300000.0000000002,
+        "raw_signed_crest_V": 1300000.0000000002,
+        "crest_magnitude_V": 1300000.0000000002,
+        "t_peak_s": 0.00024174132169143924,
+        "T1_s": null,
+        "Tp_s": 0.00024174132169143924,
+        "T2_s": 0.0021023819830925834,
+        "t30_s": 2.040432007748545e-05,
+        "t90_s": 0.00011831863259666407,
+        "t50_falling_s": 0.0021023819830925834,
+        "virtual_origin_s": null,
+        "beginning_s": 0.0,
+        "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+        "compliance_status": "PASS",
+        "reasons": [],
+        "checks": {
+          "front_or_peak": true,
+          "tail": true,
+          "crest": true
+        },
+        "deviation_pct": {
+          "front_or_peak_pct": -3.303471323424312,
+          "tail_pct": -15.90472067629667,
+          "crest_pct": 2.220446049250313e-14
+        }
+      }
+    },
+    {
+      "name": "289_fixed_setting_scenarios_and_boundary_Physics",
+      "discovery_id": "explore_29cc6bad3f394aa18845",
+      "batch_ms": 89.17690000089351,
+      "physics_checks": 6
+    },
+    {
+      "name": "OOD_abstention"
+    },
+    {
+      "name": "next_legal_adjustment_and_measurement_guidance",
+      "adjustment": [
+        {
+          "field": "stage_charge_V",
+          "before": 100000,
+          "after": 164366.29423280785
+        }
+      ]
+    },
+    {
+      "name": "raw_bytes_metadata_analysis_export_reopen",
+      "run_id": "run_99df96bb94264be9b329",
+      "measurement_id": "shot_ebd585743daa40189f6c",
+      "bundle_sha256": "f9b1c8607b62d4bfa5bfb5c42bf3242604c8bc67e136d02fa02904f967768e04"
+    },
+    {
+      "name": "semantic_history_matching"
+    },
+    {
+      "name": "isolated_bench_and_trace_comparison"
+    },
+    {
+      "name": "LI_complete_588_explicit_parallel",
+      "run_id": "run_8fde6b4803fb48aa91f9",
+      "seconds": 31.016792899999928,
+      "application_elapsed_seconds": 29.600393499998972,
+      "search": {
+        "strategy": "EXHAUSTIVE_CATALOG_ANALYTIC_AMPLITUDE",
+        "catalog_count": 588,
+        "evaluated_count": 588,
+        "pruned_count": 0,
+        "numeric_pass_count": 3,
+        "evaluable_count": 557,
+        "unsupported_count": 31,
+        "approved_recipe_count": 0,
+        "catalog_sha256": "bd0b49f9f8b1ac03ab1fdaec6f8c47e5db87cef62024c5751c91d2aee229aec6"
+      }
+    },
+    {
+      "name": "LI_588_identical_to_previous_application"
+    },
+    {
+      "name": "no_solution_complete_504",
+      "run_id": "run_27dbcc96bd204215b32a",
+      "seconds": 24.225826300000335,
+      "application_elapsed_seconds": 23.025368999999046,
+      "search": {
+        "strategy": "EXHAUSTIVE_CATALOG_ANALYTIC_AMPLITUDE",
+        "catalog_count": 504,
+        "evaluated_count": 504,
+        "pruned_count": 0,
+        "numeric_pass_count": 0,
+        "evaluable_count": 504,
+        "unsupported_count": 0,
+        "approved_recipe_count": 0,
+        "catalog_sha256": "0774fc34457fccf711e4bc8d3c210a5fcc163b61a6df707ca60519411f19efe6"
+      }
+    },
+    {
+      "name": "technical_reports_accessible"
+    },
+    {
+      "name": "Windows_stop_launcher"
+    },
+    {
+      "name": "restart_preserves_history_discovery_and_raw_measurements"
+    },
+    {
+      "name": "immutable_manifest_after_actual_application_use"
+    }
+  ],
+  "status": "PASS",
+  "offline_boundary": "Python non-loopback socket connects blocked in server and spawned workers; browser used only local assets"
+}

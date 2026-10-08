@@ -103,13 +103,14 @@
       }
     },
     "serving_source_hashes": {
+      "application/powernext_integrity.py": "6c2efac467ba356483b2c4770b9a2d758ce96b052aeaf898b07ce4bdee3ef3ac",
       "powernext_ml/__init__.py": "c93218b3469a400b083e988473796ca7ae52a4c002f8ddef5e38d1085149f01d",
-      "powernext_ml/common.py": "f898f8fa88ffd982f80f61d0df748576aa4d9500a8f91e99e97fd2c6b9bb76f8",
+      "powernext_ml/common.py": "d237cdf3ca9d772e9ec0b81dbbd72f30d71d394652ba659b07960195deeb67a2",
       "powernext_ml/features.py": "415e0a951e295807ae47cc3be271410f88b71a13fe682d9029136ccc2dbe179c",
-      "powernext_ml/inference.py": "023165ac9f2d7c7afc9db9b3aa5b359c15df0ce470b61f6bcda857753057e77d",
+      "powernext_ml/inference.py": "ce369b620c6809080d18207be3c2e532a8c8e00981fb1865c30148be67270407",
       "powernext_ml/models.py": "02d3eaaea90bbceb3e6a048608ded127052675919037b91b6dc9e923948643f2",
-      "powernext_ml/physics_adapter.py": "8857ec7f478e0e68062e16678794237dd1995c19ed49172278408a8c12ac52be",
-      "powernext_ml/registry.py": "0bf068d4da0cfd760bce384fe0c4ef8ebdbf5dd06e6522440f019e161e47a288",
+      "powernext_ml/physics_adapter.py": "f50bc6bbdcdfc58d68c537b0138cb4b6940e9e4cfff4b9a33c05ee6e2905c12a",
+      "powernext_ml/registry.py": "0a328a372b8431ef933c9ff9e44fac6e391acbd1530096f527263bb247e423ff",
       "physics_engine/__init__.py": "683fe3921cea615ff7efdb9bf1f7aab5c423c83e6e0c7de6ceac9b0e1f0d759a",
       "physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
       "physics_engine/dataset.py": "bcea18c44b005a9c1636491d2dde97c38ca1a37759de35ac68ff4bb0e186cf5e",
@@ -132,7 +133,7 @@
     },
     "adapter_name": "provisional"
   },
-  "stack_sha256": "5945139ef5cc40ec1b9e0b73ca41050e92f8208062f88d735d28c9d35e324735",
+  "stack_sha256": "1cb54795385e9990d1961316f906a5766cfe2714c557ae9a0ffebfeffdc6ce28",
   "configuration_catalog": [],
   "optimizer_source_hashes": {
     "__init__.py": "58270314786409da5fe71e19abd03b03c0bdc7fafb7071984f92090bb57215f8",
@@ -140,9 +141,9 @@
     "assessment.py": "4f6964e758e883895e3042c9e33fbc86d49cd1240e26bf8c17a6572c2374067e",
     "catalog.py": "560968a72bc3334e2be2aec435494b0c03cd8b3901f1eaa9dcd3529b2179c691",
     "charge.py": "bdc1bfa1f0c4b9849e4cc64bd46e6917b63fa98762630e426a6b77fd3d35cdb7",
-    "common.py": "409663949ea1830cf97897cdb8596224d0d63c700c96eb2345a15726b05302fc",
-    "prediction.py": "657d49ad7c3b46144c2b152df4943da2e3ecc3ece011b6ed55630e405139a49d",
-    "service.py": "26c5803586e98ff524bcc5cfba03528053e81a9b9c93eb2624fb35e69895e258",
+    "common.py": "25953ec09dcfd7bca0cfc0c4edf7317022f02bc2cd9165654f4418cbebdf1f66",
+    "prediction.py": "c079aa23d46155d53e6516241292f83ec9416b0c6ac95b12192966d4f1c95dd2",
+    "service.py": "2c55a171e34b8ac79f2243c0d428fffb48debab5721b5934a6cdb683aa0043ed",
     "storage.py": "734daf9811d91497c2e4943f3f9ec21653c3ccd34eeafe563b8cd8c6bb1b33a0"
   },
   "best_configuration": null,
@@ -164,9 +165,9 @@
     "MISSING_HARDWARE_CONFIRMATION"
   ],
   "previous_exact_case_matches": [],
-  "result_id": "recommendation_b119edf6561313b03045ef44",
+  "result_id": "recommendation_836fa76c166796fd15e66d62",
   "artifact_manifest": {
     "path": "SI_approved_only_recommendation.assets/manifest.json",
-    "sha256": "f729f453cd6a026a0779391c2f6c96711809fa8e07e6410dbc10e68d8d93d0e4"
+    "sha256": "8a7561601e0fb06efe84264f8f67abe28c4311903fb9524f963d30adfdd7dec5"
   }
 }

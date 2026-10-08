@@ -1,1 +1,1 @@
-__version__ = '0.4.0+cpri20261004'
+__version__ = '1.0.0+integration20261008'

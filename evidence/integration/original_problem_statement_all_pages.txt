@@ -1,0 +1,140 @@
+PAGE 1
+Hybrid Physics + Machine Learning for Optimizing High-Voltage Impulse Generator Settings 
+Problem Overview 
+High-voltage insulators used in power transmission systems must undergo impulse testing to 
+verify their ability to withstand lightning strikes and switching surges. During these tests, engineers 
+use a multi-stage impulse generator to produce standard lightning and switching impulse 
+waveforms. 
+A major challenge is selecting the correct generator settings. The required resistor values, 
+charging voltages, and stage configurations depend on several factors such as: 
+• Insulator capacitance 
+• Measuring system capacitance 
+• Stray capacitances in the test setup 
+• Physical arrangement of the test equipment 
+ 
+Currently, engineers often rely on calculations followed by multiple trial runs to obtain a waveform 
+that satisfies standard requirements. This process can be time-consuming and may require 
+repeated adjustments. 
+The goal of this challenge is to develop an intelligent software tool that combines engineering 
+calculations with machine learning to recommend suitable generator settings before physical 
+testing begins.  
+Challenge Statement 
+Develop a software solution that predicts and recommends suitable impulse generator settings 
+for high-voltage insulator testing. 
+The solution should: 
+• Support both lightning impulses (1.2/50 µs) and switching impulses (250/2500 µs). 
+• Estimate suitable:  
+o Front resistance 
+o Tail resistance 
+o Charging voltage 
+o Number of active generator stages 
+• Predict expected waveform characteristics. 
+• Verify whether predicted waveforms satisfy specified tolerance limits. 
+• Rank multiple feasible settings and recommend the best options. 
+• Provide engineers with a reliable starting point before conducting actual tests.  
+ 
+Expected Solution 
+Participants are expected to build a software proof-of-concept, preferably a web application. 
+The system should include: 
+1. Engineering Calculation Module 
+Uses circuit equations and input parameters to identify physically feasible operating conditions. 
+
+PAGE 2
+2. Machine Learning Engine 
+Learns the relationship between: 
+• Generator settings 
+• Load characteristics 
+• Waveform outputs 
+and predicts the resulting impulse waveform parameters. 
+3. Recommendation Engine 
+Suggests the most appropriate generator settings and ranks them based on performance and 
+compliance. 
+4. Visualization Dashboard 
+Displays: 
+• Recommended settings 
+• Predicted waveform parameters 
+• Compliance status 
+• Waveform comparison plots 
+• Performance metrics 
+ 
+Inputs to the System 
+The user should be able to specify: 
+• Impulse type (Lightning / Switching) 
+• Desired crest voltage 
+• Insulator capacitance 
+• Measurement-system capacitance 
+• Estimated stray capacitance 
+• Available front resistor values 
+• Available tail resistor values 
+Expected Outputs 
+The solution should provide: 
+Recommended Settings 
+• Number of generator stages 
+• Charging voltage per stage 
+• Front resistance 
+• Tail resistance 
+ 
+Predicted Waveform Characteristics 
+• Front time 
+• Peak time (for switching impulses) 
+• Tail time 
+• Crest voltage 
+ 
+
+PAGE 3
+Compliance Information 
+• Percentage deviation from target values 
+• Within-limit / Outside-limit indication 
+• Ranking of alternative solutions 
+Visualization 
+• Target waveform vs Predicted waveform 
+• Summary dashboard for decision-making 
+ 
+Suggested Technical Approach 
+Teams may consider the following workflow: 
+1. Generate or use the provided dataset. 
+2. Perform exploratory data analysis. 
+3. Develop physics-based calculations for waveform estimation. 
+4. Train machine-learning models to predict waveform parameters. 
+5. Compare multiple algorithms. 
+6. Implement a recommendation engine. 
+7. Create a user-friendly dashboard. 
+8. Validate recommendations against tolerance requirements. 
+ 
+Additional Guidance: 
+In practical impulse testing, the electrical parameters of the test circuit are not fixed. The test-
+object/load capacitance, measuring-system/divider capacitance, stray capacitance, 
+stray/connection inductance, connecting leads, physical arrangement and grounding/return-path 
+configuration may vary depending on the test object and test setup. These variations can 
+significantly influence the generated impulse waveform and, consequently, the optimum 
+generator settings. 
+Therefore, the proposed software should consider these variable and configuration-dependent 
+parameters while recommending the generator configuration. 
+In addition, the optimization should consider the actual available impulse-generator parameters 
+and operating constraints, including: 
+• Maximum charging voltage 
+• Number of available stages 
+• Stage voltage 
+• Stored energy per stage and total stored energy 
+• Impulse capacitance per stage 
+• Available front resistors 
+• Tail resistors for lightning and switching impulses 
+• Charging resistor 
+• External front/tail resistors, wherever applicable 
+• Potential and discharging resistors 
+• Basic/load capacitance of the generator 
+• Sphere-gap dimensions and configuration 
+• Available generator connection/configuration possibilities 
+
+PAGE 4
+For our impulse generator, the software should support the required impulse test voltage range of 
+approximately 50 kV to 2400 kV , with a minimum of two active generator stages, subject to the 
+applicable generator configuration and operating limits. 
+It would also be important to use actual measured impulse-waveform data from different test 
+objects and test configurations for calibration and validation of the ML model, in addition to the 
+physics-based calculations. This will help improve the accuracy and reliability of the 
+recommended settings under actual laboratory conditions. 
+The figure below would help distinguish between fixed generator parameters/constraints and 
+variable test-circuit parameters, such as test-object capacitance, measuring-system 
+capacitance, stray capacitance, stray inductance and physical test configuration. 
+ 
