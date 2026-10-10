@@ -25,5 +25,6 @@ runtime/
 /powernext/ml/data/networks_v3_pilot_splitfix2/
 /powernext/ml/data/networks_v3_r2/
 /powernext/ml/data/networks_v3_validation_oracles/
+/powernext/ml/data/networks_v3_validation_oracles_v2/
 *.tmp
 ~$*

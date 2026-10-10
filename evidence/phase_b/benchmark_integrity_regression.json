@@ -1,0 +1,8 @@
+{
+  "schema_version": "targeted_regression_v3",
+  "command": ".\\runtime\\python.exe -B -m pytest tests/test_v3_benchmark.py tests/test_v3_optimizer.py -q",
+  "exit_code": 0,
+  "passed": 17,
+  "elapsed_seconds": 21.28,
+  "scope": "Current strict oracle execution contract, full catalog index/configuration binding, ranking integrity, and optimizer regressions. Overlaps integrated suites; do not add counts."
+}

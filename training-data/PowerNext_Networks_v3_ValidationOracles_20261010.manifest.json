@@ -1,0 +1,104 @@
+{
+  "schema_version": "network_oracle_archive_v3",
+  "status": "VERIFIED",
+  "created_at": "2026-10-10T12:53:28.679562+00:00",
+  "archive": "PowerNext_Networks_v3_ValidationOracles_20261010.zip",
+  "archive_bytes": 22115615,
+  "archive_sha256": "3f073dc61ba63aaffb0f3ce66bde4949496c85cac1556c3630f1c68967d4b4c2",
+  "files": [
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_cpri_0p5uf_LI_GSHUNT_v0_0.json",
+      "bytes": 9251875,
+      "sha256": "67959c2326ff6e8d55f7b6a12655de7f5296310dfb0838416aea0d298a08ea47"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_cpri_0p5uf_LI_GSHUNT_v0_1.json",
+      "bytes": 9453100,
+      "sha256": "1cf93c4918b12c6c725c841ec534e73d959cd01f156dfc7ced13c8b483606211"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_cpri_0p5uf_LI_OSHUNT_v0_0.json",
+      "bytes": 9334661,
+      "sha256": "c1e58a77649ca06ca4cb68b74be4c7dd0c272c67d4b94f0c85e08be21216fb90"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_cpri_0p5uf_LI_OSHUNT_v0_1.json",
+      "bytes": 9517576,
+      "sha256": "542ced6dae6eae5897acb5e219e19e5f2aef207c50c7d0dd2fe23360252de012"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_cpri_0p5uf_SI_GSHUNT_v0_0.json",
+      "bytes": 9546648,
+      "sha256": "55fb785cafae2404a7259b4d039d85f7d33415c9dd29269badb7ec52c0cfb2b1"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_cpri_0p5uf_SI_GSHUNT_v0_1.json",
+      "bytes": 9616142,
+      "sha256": "0a5aa6c9d0c527d4b7a32ae6c039aa3696c5a9a0c760547dbaaee8c691068d2d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_cpri_0p5uf_SI_OSHUNT_v0_0.json",
+      "bytes": 9701956,
+      "sha256": "4b5b062a49f2b181196416cc5040eb0530e2dbd130360160c9fba3dfce9f93f2"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_cpri_0p5uf_SI_OSHUNT_v0_1.json",
+      "bytes": 9619287,
+      "sha256": "1bb5c104e46145e2efc2bdee6e1d812185665ac417b1111a07c190665c1db6bb"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_research_3uf_LI_GSHUNT_v0_0.json",
+      "bytes": 9133394,
+      "sha256": "0e9f638cf86172d78d5d736cbad12932dfa595568c2faa2bb4d95803bd74bd47"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_research_3uf_LI_GSHUNT_v0_1.json",
+      "bytes": 8609084,
+      "sha256": "e5aa4ed3cf51f96ddcdd883215db79a0099a6c716da0b640044765f6f8490479"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_research_3uf_LI_OSHUNT_v0_0.json",
+      "bytes": 8136414,
+      "sha256": "8f5ad9638de70140ecfc5f80fdef05524b73e566b1cb2082f444353bcad45fe1"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_research_3uf_LI_OSHUNT_v0_1.json",
+      "bytes": 8258452,
+      "sha256": "de44ba2f9fc1ba7488337a05807781aa8d0633879710a6a631bf3559c1166cb5"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_research_3uf_SI_GSHUNT_v0_0.json",
+      "bytes": 8963194,
+      "sha256": "d1f58bbd62eb7f217167c2fa87518b94903cb7ee4ad0331e4294dc3200e15321"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_research_3uf_SI_GSHUNT_v0_1.json",
+      "bytes": 9177668,
+      "sha256": "46f67e4254d3947c9f08cf509fbfea2a030bc624522871ed6ec2ac3ef6b79aec"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_research_3uf_SI_OSHUNT_v0_0.json",
+      "bytes": 8098935,
+      "sha256": "ff9d14f342be6a952b8ea79a121d229b627a402782854cc5e35d3b6d454b929d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/FROZEN_validation_research_3uf_SI_OSHUNT_v0_1.json",
+      "bytes": 7741258,
+      "sha256": "7f039dd7dfa4a218f767706c3040f2889cb3483ac6458048d7141f6269cbf197"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/manifest.json",
+      "bytes": 6243,
+      "sha256": "687b421b9aab3ff5b676beef69bb2fdac4ab18e03036cf7b46b2c551345d2343"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles_v2/requests.json",
+      "bytes": 14933,
+      "sha256": "68fb2e93a5e255c12b865fd960b10d20dda221424c4cfaf6d17f3af93ff06c34"
+    }
+  ],
+  "source_folder": "powernext/ml/data/networks_v3_validation_oracles_v2",
+  "training_role": "NOT_TRAINING_DATA",
+  "validation_role": "INDEPENDENT_MODEL_SELECTION_ORACLES_ONLY",
+  "note": "This archive contains complete Physics validation oracles for model selection. It is not a training dataset and is not final test evidence."
+}

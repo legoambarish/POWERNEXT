@@ -1,0 +1,328 @@
+{
+  "schema_version": "lead_validation_decision_v3",
+  "partition": "validation",
+  "final_test_metrics_inspected": false,
+  "policy_sha256": "b102e98731e29a09058aa0096b3ab29d23cbedbb06588ddc01a4d3c68c90dce3",
+  "rows_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+  "routes": [
+    {
+      "route": "cpri_0p5uf:LI:GSHUNT_v0",
+      "model_id": "model_50ce98bc7b25be230187",
+      "selected": [
+        "residual",
+        "extra_trees"
+      ],
+      "validation_rows": 1354,
+      "curve_normalized_error": {
+        "0.25": 0.08583084298820273,
+        "0.5": 0.0774529715233454,
+        "1.0": 0.055455585960928054
+      },
+      "relative_improvement_50_to_100": 0.2840095754852612,
+      "near_boundary_prediction_error": {
+        "front_us": {
+          "count": 39,
+          "P95_absolute_error": 0.09101564667467028,
+          "P95_tolerance_normalized": 0.252821240762973,
+          "max_absolute_error": 0.11658136162696686
+        },
+        "tail_us": {
+          "count": 101,
+          "P95_absolute_error": 0.7579731285660998,
+          "P95_tolerance_normalized": 0.07579731285660998,
+          "max_absolute_error": 1.128812662776788
+        }
+      },
+      "selection_evidence": {
+        "feasible_request_count": 2,
+        "feasible_retention_status": "AVAILABLE",
+        "mean_regret_at_25": 0.0,
+        "missed_feasible_at_5": 0,
+        "request_count": 2,
+        "request_level_oracle_status": "COMPLETE_INDEPENDENT_PHYSICS_ORACLE_VALIDATION",
+        "selection_basis": "INDEPENDENT_REQUEST_ORACLE",
+        "selection_uses_feasible_retention": true
+      },
+      "expand_dataset": false
+    },
+    {
+      "route": "cpri_0p5uf:LI:OSHUNT_v0",
+      "model_id": "model_daa2cbadea54a3c3ef40",
+      "selected": [
+        "residual",
+        "extra_trees"
+      ],
+      "validation_rows": 1394,
+      "curve_normalized_error": {
+        "0.25": 0.0866458925683775,
+        "0.5": 0.07246518551283314,
+        "1.0": 0.05282139276843041
+      },
+      "relative_improvement_50_to_100": 0.27107903754588375,
+      "near_boundary_prediction_error": {
+        "front_us": {
+          "count": 69,
+          "P95_absolute_error": 0.06515823412896697,
+          "P95_tolerance_normalized": 0.180995094802686,
+          "max_absolute_error": 0.4361575845489172
+        },
+        "tail_us": {
+          "count": 87,
+          "P95_absolute_error": 0.5836435514642645,
+          "P95_tolerance_normalized": 0.058364355146426454,
+          "max_absolute_error": 1.9210200952569565
+        }
+      },
+      "selection_evidence": {
+        "feasible_request_count": 2,
+        "feasible_retention_status": "AVAILABLE",
+        "mean_regret_at_25": 0.0,
+        "missed_feasible_at_5": 0,
+        "request_count": 2,
+        "request_level_oracle_status": "COMPLETE_INDEPENDENT_PHYSICS_ORACLE_VALIDATION",
+        "selection_basis": "INDEPENDENT_REQUEST_ORACLE",
+        "selection_uses_feasible_retention": true
+      },
+      "expand_dataset": false
+    },
+    {
+      "route": "cpri_0p5uf:SI:GSHUNT_v0",
+      "model_id": "model_ecc53338e57d65f8e1c2",
+      "selected": [
+        "residual",
+        "hist_gradient_boosting"
+      ],
+      "validation_rows": 1328,
+      "curve_normalized_error": {
+        "0.25": 0.01402504803012343,
+        "0.5": 0.009869859520728217,
+        "1.0": 0.006881953553832205
+      },
+      "relative_improvement_50_to_100": 0.3027303438940496,
+      "near_boundary_prediction_error": {
+        "front_us": {
+          "count": 69,
+          "P95_absolute_error": 0.05332873802868786,
+          "P95_tolerance_normalized": 0.001066574760573757,
+          "max_absolute_error": 0.05967924574889594
+        },
+        "tail_us": {
+          "count": 213,
+          "P95_absolute_error": 1.1694671591211763,
+          "P95_tolerance_normalized": 0.0007796447727474508,
+          "max_absolute_error": 9.382284068379477
+        }
+      },
+      "selection_evidence": {
+        "feasible_request_count": 2,
+        "feasible_retention_status": "AVAILABLE",
+        "mean_regret_at_25": 0.0,
+        "missed_feasible_at_5": 0,
+        "request_count": 2,
+        "request_level_oracle_status": "COMPLETE_INDEPENDENT_PHYSICS_ORACLE_VALIDATION",
+        "selection_basis": "INDEPENDENT_REQUEST_ORACLE",
+        "selection_uses_feasible_retention": true
+      },
+      "expand_dataset": false
+    },
+    {
+      "route": "cpri_0p5uf:SI:OSHUNT_v0",
+      "model_id": "model_993e9005005e76a1836b",
+      "selected": [
+        "residual",
+        "hist_gradient_boosting"
+      ],
+      "validation_rows": 1321,
+      "curve_normalized_error": {
+        "0.25": 0.012967021601250631,
+        "0.5": 0.008805368836897668,
+        "1.0": 0.0067643966147207515
+      },
+      "relative_improvement_50_to_100": 0.23178724934547976,
+      "near_boundary_prediction_error": {
+        "front_us": {
+          "count": 103,
+          "P95_absolute_error": 0.060461153535885596,
+          "P95_tolerance_normalized": 0.001209223070717712,
+          "max_absolute_error": 0.9167991284414541
+        },
+        "tail_us": {
+          "count": 247,
+          "P95_absolute_error": 0.4310445681355292,
+          "P95_tolerance_normalized": 0.0002873630454236862,
+          "max_absolute_error": 10.438524693107183
+        }
+      },
+      "selection_evidence": {
+        "feasible_request_count": 2,
+        "feasible_retention_status": "AVAILABLE",
+        "mean_regret_at_25": 0.0,
+        "missed_feasible_at_5": 0,
+        "request_count": 2,
+        "request_level_oracle_status": "COMPLETE_INDEPENDENT_PHYSICS_ORACLE_VALIDATION",
+        "selection_basis": "INDEPENDENT_REQUEST_ORACLE",
+        "selection_uses_feasible_retention": true
+      },
+      "expand_dataset": false
+    },
+    {
+      "route": "research_3uf:LI:GSHUNT_v0",
+      "model_id": "model_550d023662e4e2021bd3",
+      "selected": [
+        "residual",
+        "extra_trees"
+      ],
+      "validation_rows": 1434,
+      "curve_normalized_error": {
+        "0.25": 0.09152666095261383,
+        "0.5": 0.07568505599316387,
+        "1.0": 0.05257591993764866
+      },
+      "relative_improvement_50_to_100": 0.3053328791565208,
+      "near_boundary_prediction_error": {
+        "front_us": {
+          "count": 46,
+          "P95_absolute_error": 0.05275904466571943,
+          "P95_tolerance_normalized": 0.14655290184922062,
+          "max_absolute_error": 0.06624892018115602
+        },
+        "tail_us": {
+          "count": 129,
+          "P95_absolute_error": 0.6458096052062373,
+          "P95_tolerance_normalized": 0.06458096052062373,
+          "max_absolute_error": 1.322031336110733
+        }
+      },
+      "selection_evidence": {
+        "feasible_request_count": 2,
+        "feasible_retention_status": "AVAILABLE",
+        "mean_regret_at_25": 0.0,
+        "missed_feasible_at_5": 0,
+        "request_count": 2,
+        "request_level_oracle_status": "COMPLETE_INDEPENDENT_PHYSICS_ORACLE_VALIDATION",
+        "selection_basis": "INDEPENDENT_REQUEST_ORACLE",
+        "selection_uses_feasible_retention": true
+      },
+      "expand_dataset": false
+    },
+    {
+      "route": "research_3uf:LI:OSHUNT_v0",
+      "model_id": "model_a1588a432ca30b4eebdd",
+      "selected": [
+        "residual",
+        "extra_trees"
+      ],
+      "validation_rows": 1394,
+      "curve_normalized_error": {
+        "0.25": 0.10260036482275722,
+        "0.5": 0.09536626074242416,
+        "1.0": 0.0675542728114642
+      },
+      "relative_improvement_50_to_100": 0.29163341117124936,
+      "near_boundary_prediction_error": {
+        "front_us": {
+          "count": 115,
+          "P95_absolute_error": 0.08445244421197208,
+          "P95_tolerance_normalized": 0.23459012281103353,
+          "max_absolute_error": 0.3447356484212818
+        },
+        "tail_us": {
+          "count": 26,
+          "P95_absolute_error": 1.9830045947543748,
+          "P95_tolerance_normalized": 0.19830045947543748,
+          "max_absolute_error": 3.286795336135505
+        }
+      },
+      "selection_evidence": {
+        "feasible_request_count": 0,
+        "feasible_retention_status": "UNAVAILABLE_NO_TRUE_FEASIBLE_REQUESTS",
+        "reason": "Oracle requests completed but none had a true feasible candidate; feasible retention and regret are undefined.",
+        "request_count": 2,
+        "request_level_oracle_status": "COMPLETE_INDEPENDENT_PHYSICS_ORACLE_VALIDATION",
+        "selection_basis": "REGRESSION_VALIDATION_FALLBACK",
+        "selection_uses_feasible_retention": false
+      },
+      "expand_dataset": false
+    },
+    {
+      "route": "research_3uf:SI:GSHUNT_v0",
+      "model_id": "model_298ce67feab06f9bc47c",
+      "selected": [
+        "residual",
+        "extra_trees"
+      ],
+      "validation_rows": 1365,
+      "curve_normalized_error": {
+        "0.25": 0.006999334890548039,
+        "0.5": 0.004653816275266962,
+        "1.0": 0.0032935487973980715
+      },
+      "relative_improvement_50_to_100": 0.2922907561044317,
+      "near_boundary_prediction_error": {
+        "front_us": {
+          "count": 78,
+          "P95_absolute_error": 0.00243260705192084,
+          "P95_tolerance_normalized": 4.865214103841679e-05,
+          "max_absolute_error": 0.008331391022352364
+        },
+        "tail_us": {
+          "count": 302,
+          "P95_absolute_error": 0.5198385384346691,
+          "P95_tolerance_normalized": 0.0003465590256231127,
+          "max_absolute_error": 12.341558121547564
+        }
+      },
+      "selection_evidence": {
+        "feasible_request_count": 2,
+        "feasible_retention_status": "AVAILABLE",
+        "mean_regret_at_25": 0.0,
+        "missed_feasible_at_5": 0,
+        "request_count": 2,
+        "request_level_oracle_status": "COMPLETE_INDEPENDENT_PHYSICS_ORACLE_VALIDATION",
+        "selection_basis": "INDEPENDENT_REQUEST_ORACLE",
+        "selection_uses_feasible_retention": true
+      },
+      "expand_dataset": false
+    },
+    {
+      "route": "research_3uf:SI:OSHUNT_v0",
+      "model_id": "model_2846ce76b0e0873a5c17",
+      "selected": [
+        "residual",
+        "hist_gradient_boosting"
+      ],
+      "validation_rows": 1702,
+      "curve_normalized_error": {
+        "0.25": 0.005907602042909925,
+        "0.5": 0.004000525960220503,
+        "1.0": 0.003132118337034548
+      },
+      "relative_improvement_50_to_100": 0.21707336280804687,
+      "near_boundary_prediction_error": {
+        "front_us": {
+          "count": 140,
+          "P95_absolute_error": 0.10138999629436668,
+          "P95_tolerance_normalized": 0.0020277999258873337,
+          "max_absolute_error": 0.18996741413764084
+        },
+        "tail_us": {
+          "count": 206,
+          "P95_absolute_error": 0.9857719822423405,
+          "P95_tolerance_normalized": 0.0006571813214948937,
+          "max_absolute_error": 23.482872003469538
+        }
+      },
+      "selection_evidence": {
+        "feasible_request_count": 0,
+        "feasible_retention_status": "UNAVAILABLE_NO_TRUE_FEASIBLE_REQUESTS",
+        "reason": "Oracle requests completed but none had a true feasible candidate; feasible retention and regret are undefined.",
+        "request_count": 2,
+        "request_level_oracle_status": "COMPLETE_INDEPENDENT_PHYSICS_ORACLE_VALIDATION",
+        "selection_basis": "REGRESSION_VALIDATION_FALLBACK",
+        "selection_uses_feasible_retention": false
+      },
+      "expand_dataset": false
+    }
+  ],
+  "decision": "FREEZE_INITIAL_DATA_STAGE_AND_SELECTED_MODELS"
+}

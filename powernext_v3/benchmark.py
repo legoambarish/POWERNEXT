@@ -16,6 +16,16 @@ from . import ROOT
 from .optimizer import recommend, _scalar_scores, load_predictor
 from .physics import source_fingerprint
 from .profiles import get_profile
+from .catalog import Catalog
+
+
+def execution_contract():
+    """Bind oracle labels/indexing/scoring and their numerical runtime."""
+    from .registry import runtime_versions
+    runtime=runtime_versions()
+    return dict(sources={name:hashlib.sha256((ROOT/"powernext_v3"/name).read_bytes()).hexdigest()
+        for name in ("optimizer.py","catalog.py","features.py","benchmark.py")},
+        runtime={name:runtime[name] for name in ("python","numpy","scipy")})
 
 
 def log(message):
@@ -65,8 +75,10 @@ def generate_oracles(output,purpose="validation",max_modules=2,cases_per_route=2
     output.mkdir(parents=True,exist_ok=False)
     (output/"requests.json").write_text(json.dumps(requests,indent=2),encoding="utf-8")
     fingerprint=source_fingerprint()
+    contract=execution_contract()
     manifest=dict(schema_version="optimization_oracles_v3",purpose=purpose,status="IN_PROGRESS",
-        physics=fingerprint,requests_sha256=hashlib.sha256((output/"requests.json").read_bytes()).hexdigest(),cases=[])
+        physics=fingerprint,execution_contract=contract,
+        requests_sha256=hashlib.sha256((output/"requests.json").read_bytes()).hexdigest(),cases=[])
     (output/"manifest.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
     log(f"Generating {len(requests)} complete declared-catalog {purpose} oracles with {workers} workers")
     with ProcessPoolExecutor(max_workers=workers) as pool:
@@ -89,6 +101,7 @@ def generate_oracles(output,purpose="validation",max_modules=2,cases_per_route=2
                 log(f"Oracle jobs live: {len(futures)} remaining")
                 time.sleep(15)
     if source_fingerprint()!=fingerprint:raise RuntimeError("Physics source changed during oracle generation")
+    if execution_contract()!=contract:raise RuntimeError("Oracle execution contract changed during generation")
     manifest["status"]="COMPLETE"
     manifest["cases"].sort(key=lambda c:c["path"])
     (output/"manifest.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
@@ -102,6 +115,8 @@ class OracleValidation:
         self.manifest=json.loads((self.directory/"manifest.json").read_text())
         if self.manifest["purpose"]!="validation" or self.manifest["status"]!="COMPLETE":raise ValueError("Require complete validation-only oracles")
         if self.manifest["physics"]!=source_fingerprint():raise ValueError("Oracle Physics sources differ")
+        if self.manifest.get("execution_contract")!=execution_contract():
+            raise ValueError("Oracle execution contract missing or incompatible; preserve historical evidence and regenerate a new oracle version")
         requests_bytes=(self.directory/"requests.json").read_bytes()
         if hashlib.sha256(requests_bytes).hexdigest()!=self.manifest["requests_sha256"]:
             raise ValueError("Frozen oracle requests changed")
@@ -123,6 +138,16 @@ class OracleValidation:
                 rows=sorted(case["candidates"],key=lambda row: row["catalog_index"])
                 case["candidates"]=rows
                 configs=[r["configuration"] for r in rows]
+                catalog=Catalog(q["max_modules"],q["stages"])
+                if case.get("search",{}).get("catalog_sha256")!=catalog.identity:
+                    raise ValueError("Oracle catalog identity differs")
+                if [r["catalog_index"] for r in rows]!=list(range(catalog.count)):
+                    raise ValueError("Oracle does not cover its complete declared catalog exactly once")
+                expected_n,expected_f,expected_t=catalog.decode(np.arange(catalog.count))
+                if not (np.array_equal(expected_n,[c["stages"] for c in configs]) and
+                    np.allclose(expected_f,[c["front_per_stage_ohm"] for c in configs],rtol=1e-12,atol=0) and
+                    np.allclose(expected_t,[c["tail_per_stage_ohm"] for c in configs],rtol=1e-12,atol=0)):
+                    raise ValueError("Oracle configurations disagree with catalog indices")
                 n=np.array([c["stages"] for c in configs])
                 features=feature_matrix(n,[c["front_per_stage_ohm"] for c in configs],[c["tail_per_stage_ohm"] for c in configs],
                     q["setup"],q["domain_id"],q["impulse_type"],q["topology_id"])
@@ -198,17 +223,30 @@ def run_policy_benchmarks(output, registry=None, selection=None, cases_per_route
     (output / "requests.json").write_text(json.dumps(requests, indent=2), encoding="utf-8")
     pinned = source_fingerprint()
     manifest = dict(schema_version="search_policy_benchmark_v3", purpose="test", status="IN_PROGRESS",
-        physics=pinned, requests_sha256=hashlib.sha256((output/"requests.json").read_bytes()).hexdigest(),
-        timing_protocol="Sequential policies; loaded models; loading separately measured; no concurrent benchmark workers",
+        physics=pinned, execution_contract=execution_contract(), requests_sha256=hashlib.sha256((output/"requests.json").read_bytes()).hexdigest(),
+        timing_protocol="Sequential policies in declared order after explicit shared catalog/feature/model warm-up; loaded-model search latency; first-route/reused-route loading separately labeled; not cold application startup; no concurrent benchmark workers",
         memory_protocol="Cumulative OS process peak working set including native arrays; not per-policy incremental allocation",
         physics_budget=physics_budget, pool_budget=pool_budget, cases=[])
     manifest_path=output/"manifest.json"
     manifest_path.write_text(json.dumps(manifest,indent=2),encoding="utf-8")
+    seen_routes=set()
     for q in requests:
         log(f"Benchmark starting {q['request_id']}")
         load_start=time.perf_counter()
         model,card=load_predictor(q,registry,selection)
         load_seconds=time.perf_counter()-load_start
+        route=(q["domain_id"],q["impulse_type"],q["topology_id"])
+        load_state="ROUTE_PREVIOUSLY_LOADED" if route in seen_routes else "FIRST_REQUEST_FOR_ROUTE"
+        seen_routes.add(route)
+        # Pay shared import/catalog construction and initial native prediction
+        # setup before any timed policy, instead of favoring later policies.
+        from .features import feature_matrix
+        warm_start=time.perf_counter()
+        warm_catalog=Catalog(q["max_modules"],q.get("stages"))
+        warm_n,warm_f,warm_t=warm_catalog.decode(np.arange(min(32,warm_catalog.count)))
+        warm_x=feature_matrix(warm_n,warm_f,warm_t,q["setup"],*route)
+        model.predict(warm_x);model.ood(warm_x)
+        warm_seconds=time.perf_counter()-warm_start
         policies=[]; oracle_passes=None; oracle_best=None
         for policy in ("complete_physics","analytical","ml","combined"):
             request=dict(q, priority=policy, search_mode="complete" if policy=="complete_physics" else "adaptive",
@@ -235,6 +273,8 @@ def run_policy_benchmarks(output, registry=None, selection=None, cases_per_route
                 regret=None if best_j is None or oracle_best is None else best_j-oracle_best,
                 process_peak_memory_bytes=_peak_memory_bytes(),
                 model_loading_seconds=load_seconds if policy in ("ml","combined") else 0,
+                model_loading_cache_context=load_state,shared_warmup_seconds=warm_seconds,
+                model_loading_shared_between_ml_and_combined=True,
                 ml_candidates_per_scoring_second=None if not result["search"]["ml_predicted_count"] else
                     result["search"]["ml_predicted_count"]/max(result["search"]["scoring_seconds"],1e-12))
             policies.append(metrics)
@@ -246,6 +286,7 @@ def run_policy_benchmarks(output, registry=None, selection=None, cases_per_route
             route=f"{q['domain_id']}:{q['impulse_type']}:{q['topology_id']}",known_regression=q["request_id"].startswith("KNOWN_")))
         manifest_path.write_text(json.dumps(manifest,indent=2),encoding="utf-8")
     if source_fingerprint()!=pinned:raise RuntimeError("Physics changed during benchmarks")
+    if execution_contract()!=manifest["execution_contract"]:raise RuntimeError("Benchmark execution contract changed")
     manifest["status"]="COMPLETE"
     manifest_path.write_text(json.dumps(manifest,indent=2),encoding="utf-8")
     write_policy_report(output)
@@ -313,7 +354,7 @@ def run_four_module_smoke(output, registry=None, selection=None, physics_budget=
     payload=json.dumps(requests,indent=2)
     (output/"requests.json").write_text(payload,encoding="utf-8")
     manifest=dict(schema_version="four_module_acceptance_v3",status="IN_PROGRESS",purpose="test",
-        physics=source_fingerprint(),requests_sha256=hashlib.sha256(payload.encode()).hexdigest(),cases=[])
+        physics=source_fingerprint(),execution_contract=execution_contract(),requests_sha256=hashlib.sha256(payload.encode()).hexdigest(),cases=[])
     for q in requests:
         log("Four-module acceptance "+q["request_id"])
         result,_=recommend(q,registry=registry,selection=selection,retain_waveforms=False)
@@ -329,6 +370,7 @@ def run_four_module_smoke(output, registry=None, selection=None, physics_budget=
         (output/"manifest.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
         log(f"Four-module result {result['status']}: {search['ml_predicted_count']} ML predictions, {search['physics_evaluated_count']} Physics evaluations")
     if source_fingerprint()!=manifest["physics"]:raise RuntimeError("Physics changed during acceptance")
+    if execution_contract()!=manifest["execution_contract"]:raise RuntimeError("Acceptance execution contract changed")
     manifest["status"]="COMPLETE"
     (output/"manifest.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
     return manifest

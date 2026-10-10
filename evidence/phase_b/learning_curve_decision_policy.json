@@ -1,0 +1,13 @@
+{
+  "schema_version": "validation_learning_curve_decision_v3",
+  "declared_before_lead_inspected_validation_metrics": true,
+  "final_test_performance_must_remain_uninspected": true,
+  "decision_unit": "domain:impulse:topology route",
+  "candidate": "Selected 100-percent train-only candidate, using validation-only selection",
+  "metric": "Mean absolute prediction error normalized by the target gain/front/tail tolerance scales (validation selection_score)",
+  "expansion_rule": "Expand a route if relative normalized-error improvement from the 50-percent to the 100-percent grouped subset is at least 10 percent AND (the final normalized score exceeds 0.25 OR validation boundary timing P95 exceeds half a tolerance width). Also expand if a feasible independent validation request is missed at top-5 AND normalized-error improvement is at least 5 percent. Undefined feasible retention is not treated as perfect retention.",
+  "expansion_size": "Increase only triggered route prefixes to min(30000, ceil(1.5 * current_attempt_prefix)) inside the already frozen input design, preserving the initial archive and all initial model evidence. Recheck coverage, all split identities and duplicate-label consistency before fitting.",
+  "stop_rule": "After any justified expansion, review validation again; use the full frozen capacity when another material improvement remains plausible. Stop at the frozen capacity or diminishing returns, report persistent errors, and do not retune using final test metrics.",
+  "limitations": "These are engineering study gates, not calibrated confidence intervals or guarantees of laboratory accuracy. The 0.25 and half-width gates tie data effort to conformity tolerances; measured optimization retention remains separately required. Only four approved model formulations/families are eligible.",
+  "boundary_metric_clarification": "Use actual absolute prediction-minus-truth error on validation cases whose true timing is within 0.25 tolerance half-width of either conformity boundary. Existing training boundary_errors fields describe predicted distance outside the band, not near-boundary prediction error, and are excluded from this decision. This correction changes no fitted model or primary selection metric."
+}

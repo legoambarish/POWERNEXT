@@ -54,3 +54,34 @@ Each production route has a frozen 30,000-input capacity. The accepted archive
 contains the initial prefixes, not labels for the unexecuted remainder. Any
 later validation-driven extension requires another immutable archive identity.
 The original workbook and all historical training archives remain unchanged.
+
+## Network v3 validation-oracle archive — 10 October 2026
+
+`PowerNext_Networks_v3_ValidationOracles_20261010.zip` is an immutable
+oracle-only archive containing the completed v2 validation-oracle directory:
+16 complete Physics cases plus `requests.json` and `manifest.json` (18 files,
+22,115,615 compressed bytes). SHA-256:
+`3f073dc61ba63aaffb0f3ce66bde4949496c85cac1556c3630f1c68967d4b4c2`.
+The adjacent `.manifest.json` records every member's size and SHA-256, and
+the `.zip.sha256` sidecar records the archive hash. Every member was reread
+from the ZIP and matched both the manifest and its retained extracted source.
+
+This archive is marked `training_role: NOT_TRAINING_DATA` and
+`validation_role: INDEPENDENT_MODEL_SELECTION_ORACLES_ONLY`. It contains
+complete Physics labels used for model-selection validation; it is not a
+training dataset and is not final test evidence. The retained extracted copy
+is `powernext/ml/data/networks_v3_validation_oracles_v2/`, and the original
+oracle folders and accepted production archive remain unchanged.
+
+After `git lfs pull`, verify and recover the oracle files into a separate
+checkout root without overwriting existing evidence:
+
+```powershell
+Get-FileHash .\training-data\PowerNext_Networks_v3_ValidationOracles_20261010.zip -Algorithm SHA256
+Get-Content .\training-data\PowerNext_Networks_v3_ValidationOracles_20261010.zip.sha256
+Expand-Archive .\training-data\PowerNext_Networks_v3_ValidationOracles_20261010.zip -DestinationPath <separate-checkout-root>
+```
+
+The catalog reconciliation and old/new scientific replay comparison are
+recorded in `evidence/phase_b/oracle_catalog_reconciliation.json` and
+`evidence/phase_b/oracle_scientific_comparison.json`.

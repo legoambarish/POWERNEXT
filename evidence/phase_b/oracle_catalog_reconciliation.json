@@ -1,0 +1,930 @@
+{
+  "all_checks_passed_including_git_history": false,
+  "case_count": 16,
+  "cases": [
+    {
+      "case_hash_match": true,
+      "case_sha256": "09fbf9fda490dbebb52a08d587f4a5d89ed1b9ef4ca91ec2d54653c8dd88915d",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "09fbf9fda490dbebb52a08d587f4a5d89ed1b9ef4ca91ec2d54653c8dd88915d",
+      "max_modules": 2,
+      "path": "FROZEN_validation_cpri_0p5uf_LI_GSHUNT_v0_0.json",
+      "request_id": "FROZEN_validation_cpri_0p5uf_LI_GSHUNT_v0_0",
+      "route": "cpri_0p5uf:LI:GSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "1494bf8b9e0909c9c0a4fcc9f6d3680e28e52ecb4402d086471bb71600266684",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "1494bf8b9e0909c9c0a4fcc9f6d3680e28e52ecb4402d086471bb71600266684",
+      "max_modules": 2,
+      "path": "FROZEN_validation_cpri_0p5uf_LI_GSHUNT_v0_1.json",
+      "request_id": "FROZEN_validation_cpri_0p5uf_LI_GSHUNT_v0_1",
+      "route": "cpri_0p5uf:LI:GSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "b5d8537614640cea1ee66ecb476b9676431c9b2c244d25324b6351dca403a9d7",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "b5d8537614640cea1ee66ecb476b9676431c9b2c244d25324b6351dca403a9d7",
+      "max_modules": 2,
+      "path": "FROZEN_validation_cpri_0p5uf_LI_OSHUNT_v0_0.json",
+      "request_id": "FROZEN_validation_cpri_0p5uf_LI_OSHUNT_v0_0",
+      "route": "cpri_0p5uf:LI:OSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "de93a382cb8aae3ab2e5f99f21cad3fff70186db8bb65b8f827bcd12cfb22f1e",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "de93a382cb8aae3ab2e5f99f21cad3fff70186db8bb65b8f827bcd12cfb22f1e",
+      "max_modules": 2,
+      "path": "FROZEN_validation_cpri_0p5uf_LI_OSHUNT_v0_1.json",
+      "request_id": "FROZEN_validation_cpri_0p5uf_LI_OSHUNT_v0_1",
+      "route": "cpri_0p5uf:LI:OSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "8bbf8969a6d188c324069d238e0546ee55810907fa108de20d5a16ffba11d93b",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "8bbf8969a6d188c324069d238e0546ee55810907fa108de20d5a16ffba11d93b",
+      "max_modules": 2,
+      "path": "FROZEN_validation_cpri_0p5uf_SI_GSHUNT_v0_0.json",
+      "request_id": "FROZEN_validation_cpri_0p5uf_SI_GSHUNT_v0_0",
+      "route": "cpri_0p5uf:SI:GSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "db87a8a3f32b004d50be16046a5302593e294fb4e1109a3d6071ff52c325e307",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "db87a8a3f32b004d50be16046a5302593e294fb4e1109a3d6071ff52c325e307",
+      "max_modules": 2,
+      "path": "FROZEN_validation_cpri_0p5uf_SI_GSHUNT_v0_1.json",
+      "request_id": "FROZEN_validation_cpri_0p5uf_SI_GSHUNT_v0_1",
+      "route": "cpri_0p5uf:SI:GSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "224e4f6b08af90db1a7426ffc1c3596d5ae17189e18af72d999dc1ef76066511",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "224e4f6b08af90db1a7426ffc1c3596d5ae17189e18af72d999dc1ef76066511",
+      "max_modules": 2,
+      "path": "FROZEN_validation_cpri_0p5uf_SI_OSHUNT_v0_0.json",
+      "request_id": "FROZEN_validation_cpri_0p5uf_SI_OSHUNT_v0_0",
+      "route": "cpri_0p5uf:SI:OSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "c6b12a6755c54f5b8e6dd3e85a5d0c919ead18c5805a96226f30b7febe20e490",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "c6b12a6755c54f5b8e6dd3e85a5d0c919ead18c5805a96226f30b7febe20e490",
+      "max_modules": 2,
+      "path": "FROZEN_validation_cpri_0p5uf_SI_OSHUNT_v0_1.json",
+      "request_id": "FROZEN_validation_cpri_0p5uf_SI_OSHUNT_v0_1",
+      "route": "cpri_0p5uf:SI:OSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "e34dc3ee906331f84dd168a06c647226ba189110f132f8d7e55a9f3e52a64743",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "e34dc3ee906331f84dd168a06c647226ba189110f132f8d7e55a9f3e52a64743",
+      "max_modules": 2,
+      "path": "FROZEN_validation_research_3uf_LI_GSHUNT_v0_0.json",
+      "request_id": "FROZEN_validation_research_3uf_LI_GSHUNT_v0_0",
+      "route": "research_3uf:LI:GSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "6f0f8ac4a2609a1bcd0e17bb2d203ceac125f968c85915f1881f256199d15fd9",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "6f0f8ac4a2609a1bcd0e17bb2d203ceac125f968c85915f1881f256199d15fd9",
+      "max_modules": 2,
+      "path": "FROZEN_validation_research_3uf_LI_GSHUNT_v0_1.json",
+      "request_id": "FROZEN_validation_research_3uf_LI_GSHUNT_v0_1",
+      "route": "research_3uf:LI:GSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "734a82c2508dc084a9d7b03685269cebcba2f745db9e5f1ff7a8592ea7697823",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "734a82c2508dc084a9d7b03685269cebcba2f745db9e5f1ff7a8592ea7697823",
+      "max_modules": 2,
+      "path": "FROZEN_validation_research_3uf_LI_OSHUNT_v0_0.json",
+      "request_id": "FROZEN_validation_research_3uf_LI_OSHUNT_v0_0",
+      "route": "research_3uf:LI:OSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "526b3addadc3e5d7948a46d6efef620280ccd0dff8259dd146fb5d26a5bc5f89",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "526b3addadc3e5d7948a46d6efef620280ccd0dff8259dd146fb5d26a5bc5f89",
+      "max_modules": 2,
+      "path": "FROZEN_validation_research_3uf_LI_OSHUNT_v0_1.json",
+      "request_id": "FROZEN_validation_research_3uf_LI_OSHUNT_v0_1",
+      "route": "research_3uf:LI:OSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "2df33b3b19fa833b7564e9fbbc566df9503c3eb67e390a8535a6a0ecde1200cd",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "2df33b3b19fa833b7564e9fbbc566df9503c3eb67e390a8535a6a0ecde1200cd",
+      "max_modules": 2,
+      "path": "FROZEN_validation_research_3uf_SI_GSHUNT_v0_0.json",
+      "request_id": "FROZEN_validation_research_3uf_SI_GSHUNT_v0_0",
+      "route": "research_3uf:SI:GSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "0d7001b602bdb2e1eab3d4381404dbc77015508b8cc0a95b0552d8b161ab96df",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "0d7001b602bdb2e1eab3d4381404dbc77015508b8cc0a95b0552d8b161ab96df",
+      "max_modules": 2,
+      "path": "FROZEN_validation_research_3uf_SI_GSHUNT_v0_1.json",
+      "request_id": "FROZEN_validation_research_3uf_SI_GSHUNT_v0_1",
+      "route": "research_3uf:SI:GSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "f5d849734e11844f88a113629729e0f99491ffb68a7f05e7a5b94799f23ae7f8",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "f5d849734e11844f88a113629729e0f99491ffb68a7f05e7a5b94799f23ae7f8",
+      "max_modules": 2,
+      "path": "FROZEN_validation_research_3uf_SI_OSHUNT_v0_0.json",
+      "request_id": "FROZEN_validation_research_3uf_SI_OSHUNT_v0_0",
+      "route": "research_3uf:SI:OSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "case_hash_match": true,
+      "case_sha256": "6f3031e7ce6d3bcfb651143779b11a638cf80be08a94ebf114f3eef7c8459bdd",
+      "catalog": {
+        "catalog_complete": true,
+        "count_match": true,
+        "current_count": 6912,
+        "current_distinct_resistances_per_branch": 48,
+        "current_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "current_recipe_configurations": 6912,
+        "current_recipes_per_branch": 48,
+        "identity_match": true,
+        "stored_distinct_resistances_per_branch": 48,
+        "stored_distinct_response_candidates": 6912,
+        "stored_identity": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "stored_recipe_configurations": 6912,
+        "stored_recipes_per_branch": 48
+      },
+      "configuration_decode": {
+        "all_match": true,
+        "examples": [],
+        "front_per_stage_ohm_mismatches": 0,
+        "max_abs_front_per_stage_ohm_delta": 0.0,
+        "max_abs_tail_per_stage_ohm_delta": 0.0,
+        "stage_mismatches": 0,
+        "tail_per_stage_ohm_mismatches": 0,
+        "tolerance": {
+          "abs": 1e-12,
+          "rel": 1e-12
+        }
+      },
+      "indices": {
+        "full_0_through_count_minus_1": true,
+        "max": 6911,
+        "min": 0,
+        "stored_count": 6912,
+        "unique": true
+      },
+      "manifest_case_sha256": "6f3031e7ce6d3bcfb651143779b11a638cf80be08a94ebf114f3eef7c8459bdd",
+      "max_modules": 2,
+      "path": "FROZEN_validation_research_3uf_SI_OSHUNT_v0_1.json",
+      "request_id": "FROZEN_validation_research_3uf_SI_OSHUNT_v0_1",
+      "route": "research_3uf:SI:OSHUNT_v0",
+      "stages": [
+        6,
+        9,
+        12
+      ]
+    }
+  ],
+  "checks": {
+    "all_16_case_hashes_match_manifest": true,
+    "all_16_cases_complete_declared_catalog": true,
+    "all_16_catalog_counts_match_current_catalog": true,
+    "all_16_catalog_identities_match_current_catalog": true,
+    "all_16_full_index_coverage_0_through_count_minus_1": true,
+    "all_16_indices_unique": true,
+    "all_16_stored_configuration_stage_front_tail_match_decoded_catalog": true,
+    "current_features_sha256_matches_frozen_production_manifest": true,
+    "legacy_oracle_physics_fingerprint_matches_current": true
+  },
+  "current_frozen_production_manifest": {
+    "dataset_id": "v3_37efa30cfc8f8006a483",
+    "features_source_sha256_current": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+    "features_source_sha256_recorded": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+    "manifest_sha256": "93f3d521d171559d2b6bd9f30d657fb98d56a1922e53d6ca627805b83df4ebc4",
+    "path": "powernext/ml/data/networks_v3_r2/manifest.json",
+    "rows_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+    "source_hashes": {
+      "powernext_v3/dataset.py": "7d6bcd573dbabbf6c4a6eff4d1a7c35cb420a0028878e9d3adb20861c27f13ee",
+      "powernext_v3/features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+      "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+      "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+      "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+    }
+  },
+  "generated_at_utc": "2026-10-10T12:46:17.299674+00:00",
+  "legacy_oracle_directory": "powernext/ml/data/networks_v3_validation_oracles",
+  "legacy_oracle_manifest_sha256": "f2bcd929acf30a16a273bb68b1266800183643d68233b458a3135e83c59ebcf6",
+  "legacy_oracle_provenance": {
+    "current_physics": {
+      "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+      "sources": {
+        "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+        "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+        "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+        "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+        "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "git_history_by_source": {
+      "powernext_v3/catalog.py": {
+        "current_sha256": "ebb5f1b3c24a2739f7eba3b3ba7729bebc77fcc4e771f43aa66d18566414d7f3",
+        "first_git_commit_after_observed_generation_end": null,
+        "history_records": [
+          {
+            "author_date": "2026-10-10T17:13:19+05:30",
+            "commit": "f5fc8a17d1db6d7d655b89778bd4b5a4b2b2a471",
+            "subject": "Implement four-module network catalog and Physics-verified adaptive search"
+          }
+        ],
+        "latest_before_file_sha256": "ebb5f1b3c24a2739f7eba3b3ba7729bebc77fcc4e771f43aa66d18566414d7f3",
+        "latest_git_commit_at_or_before_observed_generation_end": {
+          "author_date": "2026-10-10T17:13:19+05:30",
+          "commit": "f5fc8a17d1db6d7d655b89778bd4b5a4b2b2a471",
+          "subject": "Implement four-module network catalog and Physics-verified adaptive search"
+        },
+        "path": "powernext_v3/catalog.py",
+        "unchanged_in_git_history_since_observed_generation": true,
+        "working_tree_modified": false,
+        "working_tree_status": ""
+      },
+      "powernext_v3/optimizer.py": {
+        "current_sha256": "7e22bc708f17ae8e8448668de095ed6ce751277d2c78731662a8435b191679a0",
+        "first_git_commit_after_observed_generation_end": {
+          "author_date": "2026-10-10T17:41:43+05:30",
+          "commit": "efe42f7979b0430f57df9cbd7be5b65cc743e11d",
+          "subject": "Integrate versioned dataset, ML, benchmark and offline network workflows"
+        },
+        "history_records": [
+          {
+            "author_date": "2026-10-10T17:41:43+05:30",
+            "commit": "efe42f7979b0430f57df9cbd7be5b65cc743e11d",
+            "subject": "Integrate versioned dataset, ML, benchmark and offline network workflows"
+          },
+          {
+            "author_date": "2026-10-10T17:13:19+05:30",
+            "commit": "f5fc8a17d1db6d7d655b89778bd4b5a4b2b2a471",
+            "subject": "Implement four-module network catalog and Physics-verified adaptive search"
+          }
+        ],
+        "latest_before_file_sha256": "89140998ca5b09ed83c3b61ff6ef2b604bdaabb9510104625b0074d321b8a0f1",
+        "latest_git_commit_at_or_before_observed_generation_end": {
+          "author_date": "2026-10-10T17:13:19+05:30",
+          "commit": "f5fc8a17d1db6d7d655b89778bd4b5a4b2b2a471",
+          "subject": "Implement four-module network catalog and Physics-verified adaptive search"
+        },
+        "path": "powernext_v3/optimizer.py",
+        "unchanged_in_git_history_since_observed_generation": false,
+        "working_tree_modified": false,
+        "working_tree_status": ""
+      }
+    },
+    "history_check": {
+      "both_unchanged_in_git_history_since_observed_generation": false,
+      "catalog_unchanged_in_git_history_since_observed_generation": true,
+      "optimizer_unchanged_in_git_history_since_observed_generation": false
+    },
+    "manifest_recorded_physics": {
+      "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+      "sources": {
+        "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+        "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+        "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+        "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+        "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "observed_filesystem_mtime_window_utc": {
+      "end": "2026-10-10T11:54:00.664624+00:00",
+      "files_considered": 18,
+      "start": "2026-10-10T11:45:39.501317+00:00"
+    }
+  },
+  "legacy_oracle_requests_hash_match": true,
+  "legacy_oracle_requests_sha256_actual": "68fb2e93a5e255c12b865fd960b10d20dda221424c4cfaf6d17f3af93ff06c34",
+  "legacy_oracle_requests_sha256_recorded": "68fb2e93a5e255c12b865fd960b10d20dda221424c4cfaf6d17f3af93ff06c34",
+  "provenance_limitations": [
+    "The old oracle manifest records Physics sources and requests/case hashes, but does not record catalog.py, optimizer.py, features.py, benchmark.py execution-contract hashes or a catalog identity per manifest-level contract.",
+    "The legacy directory has no generation timestamp; the source-history comparison uses filesystem mtimes of its manifest, requests, and 16 case files as an observed generation window, so it cannot prove the exact working-tree snapshot used during generation.",
+    "Git history shows catalog.py unchanged after the observed window, while optimizer.py changed in commit efe42f7979b0430f57df9cbd7be5b65cc743e11 after that window; therefore the historical old-oracle source-identity check is not fully clean even though all current catalog/configuration reconciliation checks pass.",
+    "The current features.py SHA matches the frozen production dataset manifest, but the old oracle manifest did not capture that feature SHA; this is current compatibility evidence, not historical feature-source proof."
+  ],
+  "purpose": "Read-only reconciliation of the legacy 16-case validation-oracle directory against the current v3 catalog and frozen production-data provenance.",
+  "reconciliation_passed": true,
+  "route_case_counts": {
+    "cpri_0p5uf:LI:GSHUNT_v0": 2,
+    "cpri_0p5uf:LI:OSHUNT_v0": 2,
+    "cpri_0p5uf:SI:GSHUNT_v0": 2,
+    "cpri_0p5uf:SI:OSHUNT_v0": 2,
+    "research_3uf:LI:GSHUNT_v0": 2,
+    "research_3uf:LI:OSHUNT_v0": 2,
+    "research_3uf:SI:GSHUNT_v0": 2,
+    "research_3uf:SI:OSHUNT_v0": 2
+  },
+  "schema_version": "phase_b_oracle_catalog_reconciliation_1.0"
+}
