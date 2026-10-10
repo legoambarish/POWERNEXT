@@ -49,6 +49,9 @@ def test_metadata_and_validation_expose_declared_catalog(tmp_path):
         assert metadata["offline"] is True
         assert metadata["hardware_control"] is False
         assert metadata["components_ohm"] == [30, 46, 180, 520, 3700, 5000]
+        assert metadata["max_modules"] == 3
+        assert metadata["supported_module_bounds"] == [2, 3]
+        assert V3Application.default_request()["max_modules"] == 3
         checked = app.validate(request())
         assert checked["valid"] is True
         assert checked["request"]["stages"] == [2]
@@ -57,6 +60,57 @@ def test_metadata_and_validation_expose_declared_catalog(tmp_path):
         assert checked["model"]["fallback"].startswith("PHYSICS_L0_BASELINE")
     finally:
         app.close()
+
+
+@pytest.mark.parametrize("max_modules", [2, 3])
+def test_current_application_scope_accepts_two_and_three_module_requests(tmp_path, max_modules):
+    app = V3Application(tmp_path / "v3")
+    try:
+        checked = app.validate(request(max_modules=max_modules))
+        assert checked["valid"] is True
+        assert checked["request"]["max_modules"] == max_modules
+    finally:
+        app.close()
+
+
+def test_four_module_search_is_rejected_before_job_creation(tmp_path):
+    app = V3Application(tmp_path / "v3")
+    try:
+        with pytest.raises(ValueError, match="UNSUPPORTED_CURRENT_SCOPE"):
+            app.start_search(request(max_modules=4))
+        assert not list((tmp_path / "v3" / "jobs").glob("v3_*/state.json"))
+    finally:
+        app.close()
+
+
+def test_four_module_fixed_recipe_is_rejected_before_prediction_artifact(tmp_path):
+    app = V3Application(tmp_path / "v3")
+    try:
+        four = {"op": "S", "children": [{"op": "R", "ohm": 30}, {"op": "R", "ohm": 46}, {"op": "R", "ohm": 180}, {"op": "R", "ohm": 520}]}
+        with pytest.raises(ValueError, match="UNSUPPORTED_CURRENT_SCOPE"):
+            app.predict_fixed({
+                "request": request(max_modules=3),
+                "configuration": {
+                    "stages": 2,
+                    "stage_charge_V": 50_000.0,
+                    "front_network": four,
+                    "tail_network": {"op": "R", "ohm": 30},
+                },
+            })
+        assert not list((tmp_path / "v3" / "predictions").glob("pred_v3_*"))
+    finally:
+        app.close()
+
+
+def test_cli_four_module_request_is_rejected_before_destination_creation(tmp_path):
+    from powernext_v3.__main__ import main
+
+    request_path = tmp_path / "request.json"
+    output_path = tmp_path / "result"
+    request_path.write_text(json.dumps(request(max_modules=4)), encoding="utf-8")
+    with pytest.raises(ValueError, match="UNSUPPORTED_CURRENT_SCOPE"):
+        main(["optimize", "--request", str(request_path), "--output", str(output_path)])
+    assert not output_path.exists()
 
 
 def test_search_job_publishes_only_complete_result_and_waveform_integrity(tmp_path):

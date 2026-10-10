@@ -1,0 +1,388 @@
+{
+  "baseline_columns": [
+    "baseline_gain",
+    "baseline_front_us",
+    "baseline_tail_us"
+  ],
+  "data_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+  "feature_order": [
+    "stages",
+    "front_per_stage_ohm",
+    "tail_per_stage_ohm",
+    "dut_nF",
+    "divider_nF",
+    "stray_nF",
+    "basic_additional_nF",
+    "loop_uH",
+    "loop_ohm",
+    "load_kohm",
+    "Cg_nF",
+    "CL_nF",
+    "Rf_ohm",
+    "Rt_ohm",
+    "CL_over_Cg",
+    "Rf_CL_us",
+    "Rt_Cg_us",
+    "LC_us",
+    "zero_L",
+    "baseline_gain",
+    "baseline_front_us",
+    "baseline_tail_us"
+  ],
+  "hardware_recommendations_enabled": false,
+  "metrics": {
+    "validation": {
+      "boundary_errors": {
+        "crest_boundary_error_max_V": 2293079.8014718015,
+        "crest_false_accept": 3,
+        "crest_false_reject": 0,
+        "front_boundary_error_max_us": 486.8120143189246,
+        "front_outside_rate": 0.8321377331420373,
+        "front_tolerance_normalized_boundary_error_P95": 189.61984001933288,
+        "front_tolerance_normalized_boundary_error_max": 1352.2555953303458,
+        "shape_false_accept": 1,
+        "shape_false_reject": 0,
+        "shape_mismatch_rate": 0.0007173601147776184,
+        "shape_predicted_pass": 7,
+        "shape_truth_pass": 6,
+        "tail_boundary_error_max_us": 12088.972563285006,
+        "tail_outside_rate": 0.9799139167862266,
+        "tail_tolerance_normalized_boundary_error_P95": 896.4219771657889,
+        "tail_tolerance_normalized_boundary_error_max": 1208.8972563285006
+      },
+      "front_us": {
+        "MAE": 0.6515354089129924,
+        "P95_absolute_error": 1.4471229416757494,
+        "RMSE": 6.540730540900666,
+        "max_absolute_error": 159.35772166736047,
+        "tolerance_normalized_MAE": 1.8098205803138674,
+        "tolerance_normalized_P95": 4.019785949099303
+      },
+      "gain": {
+        "MAE": 0.0027873155367256503,
+        "P95_absolute_error": 0.008908422888915527,
+        "RMSE": 0.004402689532584234,
+        "max_absolute_error": 0.03652988701136928,
+        "tolerance_normalized_MAE": 0.29460316326971897,
+        "tolerance_normalized_P95": 1.0553363354882752
+      },
+      "n": 1394,
+      "ood_count": 0,
+      "optimization_validation": {
+        "candidate_count": 1394,
+        "charge_cap_V": {
+          "max": 200000.0,
+          "mean": 200000.0,
+          "min": 200000.0
+        },
+        "feasible_group_count": 4,
+        "feasible_hit@1": 1.0,
+        "feasible_hit@1_count": 4,
+        "feasible_hit@1_rate": 1.0,
+        "feasible_hit@3": 1.0,
+        "feasible_hit@3_count": 4,
+        "feasible_hit@3_rate": 1.0,
+        "feasible_hit@5": 1.0,
+        "feasible_hit@5_count": 4,
+        "feasible_hit@5_rate": 1.0,
+        "feasible_hit_at_5": 1.0,
+        "feasiblehit@1": 1.0,
+        "feasiblehit@3": 1.0,
+        "feasiblehit@5": 1.0,
+        "group_count": 234,
+        "group_key_policy": "request_group_id/request_id/group_id/setup_family_id/row_id",
+        "group_summaries": [
+          {
+            "candidate_count": 6,
+            "first_true_feasible_rank": 1,
+            "group_id": "1e4f541e5171cd3ca4f750bf05a26ccc202e36e5efb294e5e494a6147b1fd2be",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 5,
+            "first_true_feasible_rank": 1,
+            "group_id": "30374a9f1a932847cef6c8b7e1ece3970e94f36ad360461bc0648056c7a9c9dc",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 7,
+            "first_true_feasible_rank": 1,
+            "group_id": "5923e1eb0380a49a1efff4a57ad0ea497fab78a5b8b13a262179f96628b7a4d6",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 6,
+            "first_true_feasible_rank": 1,
+            "group_id": "c11e8a47206d17e3fe7c79b0dc4e058d13909739ef12d39b92917098a67bd158",
+            "true_feasible_count": 1
+          }
+        ],
+        "group_summaries_truncated": false,
+        "group_summary_count": 4,
+        "groups_coverage_insufficient": false,
+        "groups_coverage_status": "AVAILABLE",
+        "mean_predicted_J": 129185.94561631126,
+        "mean_regret_at_5": 0.0,
+        "mean_true_J": 130633.4935049903,
+        "minimum_group_coverage": 5,
+        "missed_feasible@1": 0.0,
+        "missed_feasible@1_count": 0,
+        "missed_feasible@1_rate": 0.0,
+        "missed_feasible@3": 0.0,
+        "missed_feasible@3_count": 0,
+        "missed_feasible@3_rate": 0.0,
+        "missed_feasible@5": 0.0,
+        "missed_feasible@5_count": 0,
+        "missed_feasible@5_rate": 0.0,
+        "missed_feasible_at_5": 0,
+        "predicted_J": 129185.94561631126,
+        "predicted_pass_candidate_count": 5,
+        "predicted_pass_rate": 0.003586800573888092,
+        "prefix_first_pass": {
+          "count": 4,
+          "mean_rank": 1.0,
+          "median_rank": 1.0
+        },
+        "regret_besttrueJ@1": 0.0,
+        "regret_besttrueJ@1_count": 4,
+        "regret_besttrueJ@1_mean": 0.0,
+        "regret_besttrueJ@1_raw_mean": 0.0,
+        "regret_besttrueJ@1_unavailable_count": 0,
+        "regret_besttrueJ@3": 0.0,
+        "regret_besttrueJ@3_count": 4,
+        "regret_besttrueJ@3_mean": 0.0,
+        "regret_besttrueJ@3_raw_mean": 0.0,
+        "regret_besttrueJ@3_unavailable_count": 0,
+        "regret_besttrueJ@5": 0.0,
+        "regret_besttrueJ@5_count": 4,
+        "regret_besttrueJ@5_mean": 0.0,
+        "regret_besttrueJ@5_raw_mean": 0.0,
+        "regret_besttrueJ@5_unavailable_count": 0,
+        "request_level_hook": {
+          "cases": [
+            {
+              "candidate_count": 6912,
+              "candidates_per_second": 48381.03424219537,
+              "feasible_count": 0,
+              "first_feasible_rank": null,
+              "hit_at_k": {
+                "1": false,
+                "10": false,
+                "100": false,
+                "25": false,
+                "3": false,
+                "5": false,
+                "50": false
+              },
+              "predict_seconds": 0.1428659000011976,
+              "regret_at_k": {
+                "1": null,
+                "10": null,
+                "100": null,
+                "25": null,
+                "3": null,
+                "5": null,
+                "50": null
+              },
+              "request_id": "FROZEN_validation_research_3uf_LI_OSHUNT_v0_0"
+            },
+            {
+              "candidate_count": 6912,
+              "candidates_per_second": 48492.50197320258,
+              "feasible_count": 0,
+              "first_feasible_rank": null,
+              "hit_at_k": {
+                "1": false,
+                "10": false,
+                "100": false,
+                "25": false,
+                "3": false,
+                "5": false,
+                "50": false
+              },
+              "predict_seconds": 0.1425374999998894,
+              "regret_at_k": {
+                "1": null,
+                "10": null,
+                "100": null,
+                "25": null,
+                "3": null,
+                "5": null,
+                "50": null
+              },
+              "request_id": "FROZEN_validation_research_3uf_LI_OSHUNT_v0_1"
+            }
+          ],
+          "feasible_hit_at_5": null,
+          "feasible_request_count": 0,
+          "feasible_retention_status": "UNAVAILABLE_NO_TRUE_FEASIBLE_REQUESTS",
+          "mean_regret_at_25": null,
+          "missed_feasible_at_5": 0,
+          "request_count": 2,
+          "retention": null,
+          "selection_fallback": "REGRESSION_VALIDATION",
+          "selection_fallback_reason": "Oracle requests completed but none had a true feasible candidate; feasible retention and regret are undefined.",
+          "selection_usable": false,
+          "status": "COMPLETE_INDEPENDENT_PHYSICS_ORACLE_VALIDATION"
+        },
+        "secondary_gain_order_proxy": {
+          "algorithm": "fenwick_exact_non_tied_pairs",
+          "pair_count": 3692,
+          "retention": 0.9956663055254604,
+          "scope": "within_request_group",
+          "status": "SECONDARY_GAIN_ORDER_PROXY"
+        },
+        "status": "FIXED_SETUP_WAVEFORM_RANKING",
+        "target_crest_V": 1000000.0,
+        "target_policy": "FIXED_1MV",
+        "true_J": 130633.4935049903,
+        "true_feasible_candidate_count": 4,
+        "true_pass_rate": 0.0028694404591104736,
+        "valid_group_count": 234
+      },
+      "prediction_rows_per_second": 39266.61014480608,
+      "prediction_seconds": 0.03550089999771444,
+      "selection_score": 1.1315377117147862,
+      "tail_us": {
+        "MAE": 12.901893915607722,
+        "P95_absolute_error": 67.14744901082884,
+        "RMSE": 34.43710943062061,
+        "max_absolute_error": 464.7615810202933,
+        "tolerance_normalized_MAE": 1.2901893915607723,
+        "tolerance_normalized_P95": 6.714744901082884
+      }
+    }
+  },
+  "model_artifact_bytes": 1142247,
+  "model_id": "model_847d3e07dfc569d09bf2",
+  "model_sha256": "b0a3d58f6abc1d36492194d298652ac94cb6e92019a6efa0788fca01c316265f",
+  "persistence": "joblib; load only trusted locally produced artifacts",
+  "provenance": {
+    "benchmark_hook_source_sha256": "d01c0ad8cbc4eb1116aad3b8b727d6075158747b91ea532529fea03e1deaa4ef",
+    "data_manifest_sha256": "93f3d521d171559d2b6bd9f30d657fb98d56a1922e53d6ca627805b83df4ebc4",
+    "data_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+    "optimization_oracles_manifest_sha256": "f2bcd929acf30a16a273bb68b1266800183643d68233b458a3135e83c59ebcf6",
+    "optimization_oracles_purpose": "validation",
+    "optimization_oracles_status": "COMPLETE",
+    "optimization_validation_hook": "powernext_v3.benchmark.OracleValidation",
+    "optimization_validation_hook_source_path": "powernext_v3/benchmark.py",
+    "optimization_validation_hook_source_sha256": "d01c0ad8cbc4eb1116aad3b8b727d6075158747b91ea532529fea03e1deaa4ef",
+    "physics_source_fingerprint": {
+      "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+      "sources": {
+        "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+        "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+        "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+        "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+        "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "predictive_contract_source_fingerprint": {
+      "physics": {
+        "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+        "sources": {
+          "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+          "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+          "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+          "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+          "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+          "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+          "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+        }
+      },
+      "sha256": "6a2eb965676b1952d7fd04711535f16fdff98092867fbd22ff0c7c0f17e6b082",
+      "sources": {
+        "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+        "models.py": "0178427a3849b4b4286b17e77e9eaf7a969bc493fcdffb3f09746caaeed55b12",
+        "networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "registry_code_sha256": "e9360b272a2a4c26bef18261e94826775b40012d486293401a389b65fa8af4e9",
+    "runtime": {
+      "joblib": "1.5.3",
+      "numpy": "2.4.6",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.14",
+      "scipy": "1.17.1",
+      "sklearn": "1.9.0"
+    },
+    "training_code_sha256": "239fd66df2e58dbb781a9abae4edcdd93b3b6d758173647c27013d454e001121"
+  },
+  "real_data_calibrated": false,
+  "route": {
+    "baseline_columns": [
+      "baseline_gain",
+      "baseline_front_us",
+      "baseline_tail_us"
+    ],
+    "domain": "research_3uf",
+    "domain_id": "research_3uf",
+    "family": "hist_gradient_boosting",
+    "feature_order": [
+      "stages",
+      "front_per_stage_ohm",
+      "tail_per_stage_ohm",
+      "dut_nF",
+      "divider_nF",
+      "stray_nF",
+      "basic_additional_nF",
+      "loop_uH",
+      "loop_ohm",
+      "load_kohm",
+      "Cg_nF",
+      "CL_nF",
+      "Rf_ohm",
+      "Rt_ohm",
+      "CL_over_Cg",
+      "Rf_CL_us",
+      "Rt_Cg_us",
+      "LC_us",
+      "zero_L",
+      "baseline_gain",
+      "baseline_front_us",
+      "baseline_tail_us"
+    ],
+    "formulation": "physics_guided",
+    "mode": "LI",
+    "route_id": "research_3uf:LI:OSHUNT_v0",
+    "topology": "OSHUNT_v0",
+    "topology_id": "OSHUNT_v0"
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.4.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0"
+  },
+  "schema_version": "model_registry_v3",
+  "source_fingerprint": {
+    "physics": {
+      "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+      "sources": {
+        "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+        "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+        "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+        "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+        "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "sha256": "6a2eb965676b1952d7fd04711535f16fdff98092867fbd22ff0c7c0f17e6b082",
+    "sources": {
+      "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+      "models.py": "0178427a3849b4b4286b17e77e9eaf7a969bc493fcdffb3f09746caaeed55b12",
+      "networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+      "physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+      "profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+    }
+  },
+  "training_code_sha256": "239fd66df2e58dbb781a9abae4edcdd93b3b6d758173647c27013d454e001121",
+  "training_rows": 7532
+}

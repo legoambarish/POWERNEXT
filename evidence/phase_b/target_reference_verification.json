@@ -1,0 +1,102 @@
+[
+  {
+    "parameters": {
+      "mode": "LI",
+      "family": "NON_UNIQUE_DOUBLE_EXPONENTIAL_REFERENCE",
+      "fast_tau_s": 4.050343086387411e-07,
+      "slow_tau_s": 6.821697156035137e-05,
+      "unscaled_peak": 0.9640856865905344,
+      "peak_time_s": 2.0888011571014365e-06,
+      "virtual_origin_s": -2.2055581613321695e-07,
+      "nominal_front_s": 1.2e-06,
+      "nominal_tail_s": 5e-05,
+      "analytic_front_s": 1.2e-06,
+      "analytic_tail_s": 5.000000000000002e-05,
+      "alignment": "Physical firing t=0; no shift of simulated traces",
+      "qualification": "Plotting reference only; three scalar requirements do not uniquely specify a waveform"
+    },
+    "evaluated": {
+      "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+      "evaluation_curve_id": "raw_clean",
+      "interpolation": "PCHIP",
+      "standards_certified": false,
+      "polarity": 1,
+      "baseline_V": 0.0,
+      "raw_crest_magnitude_V": 999999.9883772412,
+      "raw_signed_crest_V": 999999.9883772412,
+      "crest_magnitude_V": 999999.9883772412,
+      "t_peak_s": 2.088e-06,
+      "T1_s": 1.1999999433715494e-06,
+      "Tp_s": null,
+      "T2_s": 5.00000007781939e-05,
+      "t30_s": 1.3944418155376675e-07,
+      "t90_s": 8.594441475766964e-07,
+      "t50_falling_s": 4.97794449767362e-05,
+      "virtual_origin_s": -2.2055580145769804e-07,
+      "beginning_s": 0.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+      "compliance_status": "PASS",
+      "reasons": [],
+      "checks": {
+        "front_or_peak": true,
+        "tail": true,
+        "crest": true
+      },
+      "deviation_pct": {
+        "front_or_peak_pct": -4.719037549616445e-06,
+        "tail_pct": 1.5563877964197559e-06,
+        "crest_pct": -1.1622758866458582e-06
+      }
+    }
+  },
+  {
+    "parameters": {
+      "mode": "SI",
+      "family": "NON_UNIQUE_DOUBLE_EXPONENTIAL_REFERENCE",
+      "fast_tau_s": 6.248290042186293e-05,
+      "slow_tau_s": 0.003155015490913454,
+      "unscaled_peak": 0.905523584845703,
+      "peak_time_s": 0.00025,
+      "virtual_origin_s": -2.9172219863636772e-05,
+      "nominal_front_s": 0.00025,
+      "nominal_tail_s": 0.0025,
+      "analytic_front_s": 0.00025,
+      "analytic_tail_s": 0.0024999999999999996,
+      "alignment": "Physical firing t=0; no shift of simulated traces",
+      "qualification": "Plotting reference only; three scalar requirements do not uniquely specify a waveform"
+    },
+    "evaluated": {
+      "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+      "evaluation_curve_id": "raw_clean",
+      "interpolation": "PCHIP",
+      "standards_certified": false,
+      "polarity": 1,
+      "baseline_V": 0.0,
+      "raw_crest_magnitude_V": 1000000.0,
+      "raw_signed_crest_V": 1000000.0,
+      "crest_magnitude_V": 1000000.0,
+      "t_peak_s": 0.00025,
+      "T1_s": null,
+      "Tp_s": 0.00025,
+      "T2_s": 0.0025,
+      "t30_s": 2.036031988564401e-05,
+      "t90_s": 0.00011942539939099184,
+      "t50_falling_s": 0.0025,
+      "virtual_origin_s": null,
+      "beginning_s": 0.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+      "compliance_status": "PASS",
+      "reasons": [],
+      "checks": {
+        "front_or_peak": true,
+        "tail": true,
+        "crest": true
+      },
+      "deviation_pct": {
+        "front_or_peak_pct": 0.0,
+        "tail_pct": 0.0,
+        "crest_pct": 0.0
+      }
+    }
+  }
+]

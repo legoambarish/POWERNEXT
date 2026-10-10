@@ -39,6 +39,26 @@ function parseStages(value) {
   return [...new Set(values)].sort((a, b) => a - b);
 }
 
+function networkModuleCount(tree) {
+  if (!tree || typeof tree !== 'object' || Array.isArray(tree)) throw new Error('Network tree must be a JSON object.');
+  if (tree.op === 'R') return 1;
+  if (tree.op !== 'S' && tree.op !== 'P' || !Array.isArray(tree.children)) throw new Error('Network tree must use R, S, or P with children.');
+  return tree.children.reduce((total, child) => {
+    const next = total + networkModuleCount(child);
+    if (next > 3) throw new Error('UNSUPPORTED_CURRENT_SCOPE: fixed network trees support at most 3 resistor modules; four-module historical trees are retained but unavailable here.');
+    return next;
+  }, 0);
+}
+
+function enforceNetworkScope(tree, label) {
+  try {
+    return networkModuleCount(tree);
+  } catch (error) {
+    if (String(error.message || '').startsWith('UNSUPPORTED_CURRENT_SCOPE')) throw new Error(`${label}: ${error.message}`);
+    throw error;
+  }
+}
+
 function buildRequest() {
   return {
     schema_version: 'network_request_v3',
@@ -229,6 +249,8 @@ async function fixedPredict(event) {
     const request = currentRequest();
     const front = JSON.parse(document.getElementById('v3-front-network').value);
     const tail = JSON.parse(document.getElementById('v3-tail-network').value);
+    enforceNetworkScope(front, 'Front network');
+    enforceNetworkScope(tail, 'Tail network');
     const record = await api('/api/v3/predict', {method: 'POST', body: JSON.stringify({request, configuration: {
       impulse_type: request.impulse_type, topology_id: request.topology_id, polarity: request.polarity,
       stages: Math.round(number('v3-fixed-stages')), stage_charge_V: number('v3-stage-charge'), front_network: front, tail_network: tail,
@@ -343,4 +365,4 @@ document.addEventListener('click', event => {
 
 // Expose only pure-ish helpers for a small offline browser harness; the page
 // remains usable without this object.
-window.PowerNextV3 = Object.freeze({buildRequest, parseStages, showWorkspace});
+window.PowerNextV3 = Object.freeze({buildRequest, parseStages, networkModuleCount, enforceNetworkScope, showWorkspace});

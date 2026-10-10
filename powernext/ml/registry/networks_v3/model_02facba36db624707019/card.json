@@ -1,0 +1,554 @@
+{
+  "baseline_columns": [
+    "baseline_gain",
+    "baseline_front_us",
+    "baseline_tail_us"
+  ],
+  "data_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+  "feature_order": [
+    "stages",
+    "front_per_stage_ohm",
+    "tail_per_stage_ohm",
+    "dut_nF",
+    "divider_nF",
+    "stray_nF",
+    "basic_additional_nF",
+    "loop_uH",
+    "loop_ohm",
+    "load_kohm",
+    "Cg_nF",
+    "CL_nF",
+    "Rf_ohm",
+    "Rt_ohm",
+    "CL_over_Cg",
+    "Rf_CL_us",
+    "Rt_Cg_us",
+    "LC_us",
+    "zero_L",
+    "baseline_gain",
+    "baseline_front_us",
+    "baseline_tail_us"
+  ],
+  "hardware_recommendations_enabled": false,
+  "metrics": {
+    "validation": {
+      "boundary_errors": {
+        "crest_boundary_error_max_V": 2784275.5357067604,
+        "crest_false_accept": 0,
+        "crest_false_reject": 0,
+        "front_boundary_error_max_us": 4913.699799336591,
+        "front_outside_rate": 0.8776556776556776,
+        "front_tolerance_normalized_boundary_error_P95": 19.63854372217989,
+        "front_tolerance_normalized_boundary_error_max": 98.27399598673182,
+        "shape_false_accept": 0,
+        "shape_false_reject": 0,
+        "shape_mismatch_rate": 0.0,
+        "shape_predicted_pass": 89,
+        "shape_truth_pass": 89,
+        "tail_boundary_error_max_us": 14032.346404521453,
+        "tail_outside_rate": 0.610989010989011,
+        "tail_tolerance_normalized_boundary_error_P95": 4.839911905049407,
+        "tail_tolerance_normalized_boundary_error_max": 9.354897603014303
+      },
+      "front_us": {
+        "MAE": 0.06459201504675387,
+        "P95_absolute_error": 0.23874630077583683,
+        "RMSE": 0.1566192983948085,
+        "max_absolute_error": 2.241340427283996,
+        "tolerance_normalized_MAE": 0.0012918403009350773,
+        "tolerance_normalized_P95": 0.004774926015516737
+      },
+      "gain": {
+        "MAE": 0.00026454127555517604,
+        "P95_absolute_error": 0.0005163391989409182,
+        "RMSE": 0.0020026578814278215,
+        "max_absolute_error": 0.031972130778149754,
+        "tolerance_normalized_MAE": 0.009290622170378895,
+        "tolerance_normalized_P95": 0.019610529555898256
+      },
+      "n": 1365,
+      "ood_count": 0,
+      "optimization_validation": {
+        "candidate_count": 1365,
+        "charge_cap_V": {
+          "max": 200000.0,
+          "mean": 200000.0,
+          "min": 200000.0
+        },
+        "feasible_group_count": 47,
+        "feasible_hit@1": 1.0,
+        "feasible_hit@1_count": 47,
+        "feasible_hit@1_rate": 1.0,
+        "feasible_hit@3": 1.0,
+        "feasible_hit@3_count": 47,
+        "feasible_hit@3_rate": 1.0,
+        "feasible_hit@5": 1.0,
+        "feasible_hit@5_count": 47,
+        "feasible_hit@5_rate": 1.0,
+        "feasible_hit_at_5": 1.0,
+        "feasiblehit@1": 1.0,
+        "feasiblehit@3": 1.0,
+        "feasiblehit@5": 1.0,
+        "group_count": 204,
+        "group_key_policy": "request_group_id/request_id/group_id/setup_family_id/row_id",
+        "group_summaries": [
+          {
+            "candidate_count": 6,
+            "first_true_feasible_rank": 1,
+            "group_id": "005c459b76373560318d37bbd861f2927afcc79bb13b29d3e1e1abed500905ab",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 7,
+            "first_true_feasible_rank": 1,
+            "group_id": "0229633b2d1425c6c8c63486f8c3bc93234ca4a2c76e597b70d31ecf1df0de57",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 8,
+            "first_true_feasible_rank": 1,
+            "group_id": "0d9113cf75ab4fd9829af569f0745147e8c0ca2ebeab174fa3328e10125f9e49",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 7,
+            "first_true_feasible_rank": 1,
+            "group_id": "1256f20d15f31e78c85cfa14d3f40813a1bb177b8196784a7d8b08358b718c88",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 5,
+            "first_true_feasible_rank": 1,
+            "group_id": "12bde50f970d1ac8ed8213cc6da45ac34ec574ac2e70fea23da61f07baafb20d",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 7,
+            "first_true_feasible_rank": 1,
+            "group_id": "1675ba2b7e1b556c4d4ba97260078efe19a1274ba72bf29bf702ff40b91fd163",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 8,
+            "first_true_feasible_rank": 1,
+            "group_id": "1a40854a4dc0b3429df78e4b1c2be68fb250b499f0ef8d2603eb5341b9e90b0a",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 7,
+            "first_true_feasible_rank": 1,
+            "group_id": "2404f5f02c4ab896576392959d110350b4d9d57860fbc2f0d3841a74e6fed1ed",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 8,
+            "first_true_feasible_rank": 1,
+            "group_id": "289d069319e39c4bf548a800f9dfa252f37bd72819368296b91d7a31a872f017",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 6,
+            "first_true_feasible_rank": 1,
+            "group_id": "2bfa0c332b0014e2bcafc31e7d6c7e5f4f4c16e3e8f81cdc39a842b3dd2284fa",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 7,
+            "first_true_feasible_rank": 1,
+            "group_id": "32b3901f19c573869c5347dfa70561fa33841fc7f24d32648fe27752273ccd5d",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 8,
+            "first_true_feasible_rank": 1,
+            "group_id": "3be1c36a26b1f86a3ce0aa9d1aabac7d4e8adc1addd1594eab5c044e1d3bedf3",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 7,
+            "first_true_feasible_rank": 1,
+            "group_id": "41d6ce8634c42b697fc44f89b72a4521fe9deff39807f1f23b8b4ab6939771fb",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 8,
+            "first_true_feasible_rank": 1,
+            "group_id": "4753cbc3e850bb27dce9f7744235d15da4a3e1140b98cd1e4685cf1f79d2c559",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 8,
+            "first_true_feasible_rank": 1,
+            "group_id": "4eb8caadbcfb25f8050b6dfda98537b8c2ea2313a2563fa0fe95f77bcc9e3261",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 7,
+            "first_true_feasible_rank": 1,
+            "group_id": "4f53d49bea57e705682e5c1ff6bcd239a5f3383f549c829b902a6afb05e52010",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 7,
+            "first_true_feasible_rank": 1,
+            "group_id": "554a6d9e604168e5c6c5e2a91f09c92f8723a19b16772d0b95bc819c5c96c0a4",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 7,
+            "first_true_feasible_rank": 1,
+            "group_id": "657cc54e67f42e9ef482a90f08432e6497d6d8c91bddd1e88ee5fe76b88e3733",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 5,
+            "first_true_feasible_rank": 1,
+            "group_id": "6652f3a904bd0692421cc346898a5aa6fc7095eefe346a3e8c4c8fe2ccdc8866",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 6,
+            "first_true_feasible_rank": 1,
+            "group_id": "6888936eb3822474552c8df64c64ce1206272fbd426ed960097f7b556a96cf12",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 8,
+            "first_true_feasible_rank": 1,
+            "group_id": "6e1dc9fb6779da093d19eec9ffdb9225e30b568d46f0f0274d273fcff4e201b9",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 8,
+            "first_true_feasible_rank": 1,
+            "group_id": "737d01d6ee01ddebfa9992591bd590a1072fb9e8b5bbab99f251131a39c657f7",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 6,
+            "first_true_feasible_rank": 1,
+            "group_id": "73a29b29cf5663e5d33192d8bb6dfdc401ac495f6e81b7db005b88e609c63f5e",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 8,
+            "first_true_feasible_rank": 1,
+            "group_id": "742fce937eda8bf925da7b235ac595149e80ce6a073dd594b19c77a0a8d5a104",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 8,
+            "first_true_feasible_rank": 1,
+            "group_id": "7819d3a40813a55f1afe4c36d369c15a52dcf6b26a5ed573011a60bb876167c6",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 7,
+            "first_true_feasible_rank": 1,
+            "group_id": "7df2f6231e1c7fe7dd82f6dfe9f3aa2f881ccaa29b0e566a664500266bc4df7a",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 6,
+            "first_true_feasible_rank": 1,
+            "group_id": "7ef2d8bbdc9a33057048405b992b9bd4be7101b78f011d4ab44ed61a5c63d769",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 8,
+            "first_true_feasible_rank": 1,
+            "group_id": "824dc5ed63dd1eafb11b437a3e61afedc8c767d3cc4b403a09e5de3993ca5cde",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 5,
+            "first_true_feasible_rank": 1,
+            "group_id": "86ba4b1c07eac3f462590b85bee7c08ba05a27ac7791bc3e809eac4dfc2bd52e",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 8,
+            "first_true_feasible_rank": 1,
+            "group_id": "8971d00ae964db9c83cd89956d4f957b0b5b848b470edea73c70760ac972d1f7",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 7,
+            "first_true_feasible_rank": 1,
+            "group_id": "8f1a5e1965bc55b522010d9a377534c08bd2e5ead3d3adcf0dbd00980e34037d",
+            "true_feasible_count": 1
+          },
+          {
+            "candidate_count": 6,
+            "first_true_feasible_rank": 1,
+            "group_id": "90416f9b0346be012e386520d45e3f3924dae76d626f7dd45c7084defcdc9cc1",
+            "true_feasible_count": 1
+          }
+        ],
+        "group_summaries_truncated": true,
+        "group_summary_count": 47,
+        "groups_coverage_insufficient": false,
+        "groups_coverage_status": "AVAILABLE",
+        "mean_predicted_J": 222.56927317612133,
+        "mean_regret_at_5": 0.0,
+        "mean_true_J": 222.59102096314024,
+        "minimum_group_coverage": 5,
+        "missed_feasible@1": 0.0,
+        "missed_feasible@1_count": 0,
+        "missed_feasible@1_rate": 0.0,
+        "missed_feasible@3": 0.0,
+        "missed_feasible@3_count": 0,
+        "missed_feasible@3_rate": 0.0,
+        "missed_feasible@5": 0.0,
+        "missed_feasible@5_count": 0,
+        "missed_feasible@5_rate": 0.0,
+        "missed_feasible_at_5": 0,
+        "predicted_J": 222.56927317612133,
+        "predicted_pass_candidate_count": 50,
+        "predicted_pass_rate": 0.03663003663003663,
+        "prefix_first_pass": {
+          "count": 47,
+          "mean_rank": 1.0,
+          "median_rank": 1.0
+        },
+        "regret_besttrueJ@1": 0.0,
+        "regret_besttrueJ@1_count": 47,
+        "regret_besttrueJ@1_mean": 0.0,
+        "regret_besttrueJ@1_raw_mean": 0.0,
+        "regret_besttrueJ@1_unavailable_count": 0,
+        "regret_besttrueJ@3": 0.0,
+        "regret_besttrueJ@3_count": 47,
+        "regret_besttrueJ@3_mean": 0.0,
+        "regret_besttrueJ@3_raw_mean": 0.0,
+        "regret_besttrueJ@3_unavailable_count": 0,
+        "regret_besttrueJ@5": 0.0,
+        "regret_besttrueJ@5_count": 47,
+        "regret_besttrueJ@5_mean": 0.0,
+        "regret_besttrueJ@5_raw_mean": 0.0,
+        "regret_besttrueJ@5_unavailable_count": 0,
+        "request_level_hook": {
+          "cases": [
+            {
+              "candidate_count": 6912,
+              "candidates_per_second": 22287.607516204742,
+              "feasible_count": 124,
+              "first_feasible_rank": 1,
+              "hit_at_k": {
+                "1": true,
+                "10": true,
+                "100": true,
+                "25": true,
+                "3": true,
+                "5": true,
+                "50": true
+              },
+              "predict_seconds": 0.31012750000081724,
+              "regret_at_k": {
+                "1": 0.0,
+                "10": 0.0,
+                "100": 0.0,
+                "25": 0.0,
+                "3": 0.0,
+                "5": 0.0,
+                "50": 0.0
+              },
+              "request_id": "FROZEN_validation_research_3uf_SI_GSHUNT_v0_0"
+            },
+            {
+              "candidate_count": 6912,
+              "candidates_per_second": 23900.56369674687,
+              "feasible_count": 113,
+              "first_feasible_rank": 1,
+              "hit_at_k": {
+                "1": true,
+                "10": true,
+                "100": true,
+                "25": true,
+                "3": true,
+                "5": true,
+                "50": true
+              },
+              "predict_seconds": 0.2891981999964628,
+              "regret_at_k": {
+                "1": 0.0,
+                "10": 0.0,
+                "100": 0.0,
+                "25": 0.0,
+                "3": 0.0,
+                "5": 0.0,
+                "50": 0.0
+              },
+              "request_id": "FROZEN_validation_research_3uf_SI_GSHUNT_v0_1"
+            }
+          ],
+          "feasible_hit_at_5": 1.0,
+          "feasible_request_count": 2,
+          "feasible_retention_status": "AVAILABLE",
+          "mean_regret_at_25": 0.0,
+          "missed_feasible_at_5": 0,
+          "request_count": 2,
+          "retention": 1.0,
+          "selection_usable": true,
+          "status": "COMPLETE_INDEPENDENT_PHYSICS_ORACLE_VALIDATION"
+        },
+        "secondary_gain_order_proxy": {
+          "algorithm": "fenwick_exact_non_tied_pairs",
+          "pair_count": 4007,
+          "retention": 0.9987521836785626,
+          "scope": "within_request_group",
+          "status": "SECONDARY_GAIN_ORDER_PROXY"
+        },
+        "status": "FIXED_SETUP_WAVEFORM_RANKING",
+        "target_crest_V": 1000000.0,
+        "target_policy": "FIXED_1MV",
+        "true_J": 222.59102096314024,
+        "true_feasible_candidate_count": 50,
+        "true_pass_rate": 0.03663003663003663,
+        "valid_group_count": 204
+      },
+      "prediction_rows_per_second": 19598.637141399595,
+      "prediction_seconds": 0.06964769999831333,
+      "selection_score": 0.003579539036244646,
+      "tail_us": {
+        "MAE": 0.2342319561299474,
+        "P95_absolute_error": 0.5015525207679727,
+        "RMSE": 1.2274753527049056,
+        "max_absolute_error": 22.659631273067134,
+        "tolerance_normalized_MAE": 0.00015615463741996494,
+        "tolerance_normalized_P95": 0.00033436834717864844
+      }
+    }
+  },
+  "model_artifact_bytes": 1116832,
+  "model_id": "model_02facba36db624707019",
+  "model_sha256": "f93f47d33e3a8e7ff54ff8f2fd9c80c9e99b95cd758bf47c4777e13fcf075993",
+  "persistence": "joblib; load only trusted locally produced artifacts",
+  "provenance": {
+    "benchmark_hook_source_sha256": "d01c0ad8cbc4eb1116aad3b8b727d6075158747b91ea532529fea03e1deaa4ef",
+    "data_manifest_sha256": "93f3d521d171559d2b6bd9f30d657fb98d56a1922e53d6ca627805b83df4ebc4",
+    "data_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+    "optimization_oracles_manifest_sha256": "f2bcd929acf30a16a273bb68b1266800183643d68233b458a3135e83c59ebcf6",
+    "optimization_oracles_purpose": "validation",
+    "optimization_oracles_status": "COMPLETE",
+    "optimization_validation_hook": "powernext_v3.benchmark.OracleValidation",
+    "optimization_validation_hook_source_path": "powernext_v3/benchmark.py",
+    "optimization_validation_hook_source_sha256": "d01c0ad8cbc4eb1116aad3b8b727d6075158747b91ea532529fea03e1deaa4ef",
+    "physics_source_fingerprint": {
+      "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+      "sources": {
+        "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+        "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+        "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+        "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+        "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "predictive_contract_source_fingerprint": {
+      "physics": {
+        "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+        "sources": {
+          "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+          "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+          "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+          "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+          "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+          "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+          "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+        }
+      },
+      "sha256": "6a2eb965676b1952d7fd04711535f16fdff98092867fbd22ff0c7c0f17e6b082",
+      "sources": {
+        "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+        "models.py": "0178427a3849b4b4286b17e77e9eaf7a969bc493fcdffb3f09746caaeed55b12",
+        "networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "registry_code_sha256": "e9360b272a2a4c26bef18261e94826775b40012d486293401a389b65fa8af4e9",
+    "runtime": {
+      "joblib": "1.5.3",
+      "numpy": "2.4.6",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.14",
+      "scipy": "1.17.1",
+      "sklearn": "1.9.0"
+    },
+    "training_code_sha256": "239fd66df2e58dbb781a9abae4edcdd93b3b6d758173647c27013d454e001121"
+  },
+  "real_data_calibrated": false,
+  "route": {
+    "baseline_columns": [
+      "baseline_gain",
+      "baseline_front_us",
+      "baseline_tail_us"
+    ],
+    "domain": "research_3uf",
+    "domain_id": "research_3uf",
+    "family": "hist_gradient_boosting",
+    "feature_order": [
+      "stages",
+      "front_per_stage_ohm",
+      "tail_per_stage_ohm",
+      "dut_nF",
+      "divider_nF",
+      "stray_nF",
+      "basic_additional_nF",
+      "loop_uH",
+      "loop_ohm",
+      "load_kohm",
+      "Cg_nF",
+      "CL_nF",
+      "Rf_ohm",
+      "Rt_ohm",
+      "CL_over_Cg",
+      "Rf_CL_us",
+      "Rt_Cg_us",
+      "LC_us",
+      "zero_L",
+      "baseline_gain",
+      "baseline_front_us",
+      "baseline_tail_us"
+    ],
+    "formulation": "residual",
+    "mode": "SI",
+    "route_id": "research_3uf:SI:GSHUNT_v0",
+    "topology": "GSHUNT_v0",
+    "topology_id": "GSHUNT_v0"
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.4.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0"
+  },
+  "schema_version": "model_registry_v3",
+  "source_fingerprint": {
+    "physics": {
+      "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+      "sources": {
+        "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+        "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+        "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+        "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+        "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "sha256": "6a2eb965676b1952d7fd04711535f16fdff98092867fbd22ff0c7c0f17e6b082",
+    "sources": {
+      "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+      "models.py": "0178427a3849b4b4286b17e77e9eaf7a969bc493fcdffb3f09746caaeed55b12",
+      "networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+      "physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+      "profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+    }
+  },
+  "training_code_sha256": "239fd66df2e58dbb781a9abae4edcdd93b3b6d758173647c27013d454e001121",
+  "training_rows": 7695
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "scope_regression_v3",
+  "command": ".\\runtime\\python.exe -B -m pytest tests/test_v3_application.py -q",
+  "exit_code": 0,
+  "passed": 22,
+  "elapsed_seconds": 12.56,
+  "scope": "Application and CLI two/three-module boundaries, four-module rejection, fixed prediction, reference integrity and application regressions. Timing observed during concurrent work."
+}

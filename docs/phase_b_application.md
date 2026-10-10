@@ -93,6 +93,13 @@ The UI is available from the `Network optimizer` navigation item. The research
 3 µF/stage profile is marked in the page and in every saved request as a
 research comparison domain.
 
+The current active application scope exposes maximum branch bounds of 2 or 3
+modules, defaulting to 3; each bound includes single-part recipes in its
+catalogue. The application and CLI reject explicit four-module search requests
+and fixed network trees with `UNSUPPORTED_CURRENT_SCOPE` before creating a job
+or prediction artifact. The historical four-module enumerator, Physics paths,
+model artifacts and evidence remain retained for archival and low-level replay.
+
 ## Extracted release acceptance
 
 `tests/verify_networks_release.py` is the read-only acceptance harness for a
@@ -115,13 +122,15 @@ fixture over stages 2 through 15 with one module per branch: 504 theoretical
 recipes, 504 distinct response candidates, and 504 Physics evaluations per
 fixture.
 
-Before trained v3 artifacts and a v3 package manifest exist, the normal exit
-status is `BLOCKED` (exit code 2). `--allow-pending` returns zero only to make
-the Physics fallback smoke and catalogue checks usable during development; it
-does not convert `PHYSICS_FALLBACK` into an ML acceptance. The current source
-checkout is intentionally in that pending state: it has the legacy v2
-manifest and no `powernext/ml/registry/networks_v3` or selected-model file.
-The release builder's route selection now applies the strict card gate before
-copying selected models. The acceptance harness independently requires both
-`card.json` and `model.joblib`, then performs registry card/hash/route checks;
-it does not modify the builder.
+Selected v3 artifacts and the serving mapping now exist in the current
+checkout. Normal selected-model acceptance is therefore current: the harness
+must load eight cards/models and perform route, hash and fixed-prediction checks
+without `--allow-pending`. The final extracted package and immutable package
+manifest gate remain pending until the lead-owned builder produces that package.
+`--allow-pending` remains useful only for a checkout or extraction intentionally
+missing the final model or package gate; it keeps the Physics fallback and
+catalog smoke checks usable, but it never converts `PHYSICS_FALLBACK` into an ML
+acceptance. The release builder's route selection now applies the strict card
+gate before copying selected models. The acceptance harness independently
+requires both `card.json` and `model.joblib`, then performs registry card/hash/route
+checks; it does not modify the builder.

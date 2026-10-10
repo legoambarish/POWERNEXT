@@ -1,31 +1,105 @@
 # PowerNext — offline impulse engineering workbench
 
-Current integration: **1.0.0+integration20261008**. The application combines exhaustive Physics-authoritative recommendations with trained ML prediction, rapid scenario discovery and complete waveform evidence review. LI uses virtual T1 1.2/50 µs; SI uses the CPRI-requested physical time-to-peak 250/2500 µs profile.
+Current implementation: **3.0.0+networks20261010**. The Network optimizer uses
+route-specific ML to prioritize bounded resistor-network configurations, then
+verifies recommendations with the detailed RLC Physics engine. The original
+recommendation, rapid-discovery and waveform-evidence workspaces remain available.
 
-Double-click **Launch_PowerNext.cmd**, then use **http://127.0.0.1:8765/**. All required runtimes, models and dependencies are local. Stop with **Stop_PowerNext.cmd** or Ctrl+C in the launcher console.
+Double-click **Launch_PowerNext.cmd**, open **http://127.0.0.1:8765/**, and choose
+**Network optimizer**. The packaged application uses its local Python, Node,
+scientific dependencies and model artifacts. Stop with **Stop_PowerNext.cmd**
+or Ctrl+C in the launcher console.
 
 ```powershell
 .\Launch_PowerNext.cmd
-.\runtime\python.exe tests\verify_manifest.py
-.\runtime\python.exe tests\run_all.py
+.\runtime\python.exe -B tests\verify_networks_release.py
+.\runtime\python.exe -B tests\run_all.py
 .\Stop_PowerNext.cmd
 ```
 
-See [complete run and presentation instructions](docs/integration/RUN_INSTRUCTIONS.md), [project structure](docs/integration/PROJECT_STRUCTURE.md), [PS and IEC verification](docs/integration/IEC_AND_PS_COMPLIANCE_VERIFICATION.md), [IVG parameter coverage](docs/integration/IVG_PARAMETER_COVERAGE.md), [changes](docs/integration/CHANGELOG.md), [performance](docs/integration/PERFORMANCE_REPORT.md), and [integration/acceptance evidence](docs/integration/INTEGRATION_AND_REGRESSION_REPORT.md).
+The release verifier checks immutable assets and selected models, blocks outbound
+network use during its execution checks, and exercises frozen predictions and
+small complete catalogs. Run it from the new extracted release. The development
+checkout's in-progress acceptance ledger is [Phase B acceptance](docs/PHASE_B_ACCEPTANCE.md);
+an implementation or a fallback smoke test alone is not release acceptance.
 
 ## Engineering workflows
 
-- **Configuration & Recommendations:** fixed engineer-entered setup, real confirmed resistor values, exhaustive declared catalog, charge/energy constraints, waveform comparison, per-parameter conformity, BOM, alternatives and Next Legal Adjustment.
-- **ML Prediction & Discovery:** actual single-configuration predictions alongside detailed Physics; explicit batches and fixed-charge sensitivity grids; support/abstention; selected/boundary Physics checks; saved explorations; explicit handoff to a new optimization draft.
-- **Waveform Review & Evidence:** raw trace and actual configuration/metadata, quality diagnostics, prediction comparison, history, complete ZIP export and verified reopen. Uploads do not train models or change ranking authority.
+- **Network optimizer:** choose CPRI 0.5 uF or the separate research 3 uF profile,
+  LI or SI, explicit requested impulse crest, and a fixed electrical setup.
+  Select up-to-two or up-to-three modules per front/tail branch from
+  30, 46, 180, 520, 3700 and 5000 ohms. All active stages use the same recipes.
+  Results show exact composition, component demand, charge, individual conformity,
+  ML predictions, detailed Physics and search coverage.
+- **Fixed settings and unseen reference:** save a prediction before importing
+  later scalar reference values or a supported raw waveform. Original inputs,
+  model identity and prediction remain frozen. Comparisons do not retrain models.
+- **Original workspaces:** retain the prior small-catalog recommendations, rapid
+  scenario discovery, waveform review, history and evidence export. Their
+  historical models and source contracts remain separate from v3.
 
-The equipment profile is `powernext/physics/CPRI_EQUIPMENT_PROFILE.json`. The four selected ExtraTrees models are in `powernext/ml/registry/simulation_v2/`; their cards and validation evidence are retained. Physics equations, waveform definitions, training labels and model binaries were preserved. ML never prunes the final catalog.
+The supported three-module catalog has 412 physical recipes and 407 exact
+resistance groups per branch: 2,319,086 electrical configurations across stages
+2–15. Two-module mode has 48 recipes/groups and 32,256 configurations over the
+same stages. Each mode includes simpler networks.
+The controller indexes and streams this space. Small catalogs use complete
+Physics verification; bounded large searches report partial coverage and the
+best verified candidate found. They do not establish a global optimum or prove
+that an unexplored catalog has no solution. Failed diagnostics are marked
+**NOT RECOMMENDED** and never substituted for a passing recommendation.
+
+Eight ML routes keep capacitance domain, impulse type and topology separate.
+Each compares Physics-guided and residual formulations using ExtraTrees and
+HistGradientBoosting. The serving selection is
+`powernext/ml/results/networks_v3/selected_models.json`; versioned cards and
+binaries are in `powernext/ml/registry/networks_v3/`. Detailed Physics remains the
+final authority for simulated conformity. Missing/incompatible models and
+unsupported ML inputs produce explicit fallback/support status.
+
+The supported scope was revised to two/three modules after the initial dataset
+and model training completed. Existing models were trained on electrical shapes
+from one through four modules; those immutable artifacts are preserved and this
+provenance is disclosed. Four-module application work and further data generation
+or training are stopped. See the [scope revision](docs/PHASE_B_SCOPE_REVISION.md)
+and [model evaluation](docs/PHASE_B_MODEL_REPORT.md). No dedicated two/three-only
+retraining is implied by restricting the application's search scope.
 
 ## Evidence and limits
 
-Numerical conformity is a model result under a declared circuit recipe. No recipe is labelled approved CPRI hardware. Auxiliary resistor connectivity, the 480 pF inclusion boundary, resistor quantities/pulse ratings and reliable charge adjustment limits remain external confirmation items. The supplied 2 pulses/minute is a planning reference, not a timing controller or thermal qualification. Full licensed IEC normative text and reference evaluation tests were unavailable; formal IEC measurement/software certification is not claimed.
+The confirmed parameter profile is 0.5 uF per stage, 200 kV/stage and 15 stages,
+with 10 kJ/stage and 150 kJ total rated stored energy. The 3 uF profile is a
+hypothetical research comparison environment with separately derived energy
+limits. It is not a second confirmed CPRI machine. The supplied Excel is an
+independent synthetic reference, not measured laboratory truth.
 
-All historical sources and releases were preserved. In the development workspace, the single current release is `../release/PowerNext_Track1_Offline/`, original root sources are `../sources/original/`, and prior packages are `../archive/`. This Git checkout also retains historical reports/assets under `docs/archive/` and `archive/`; no remote or Git history changes were made. Complete training waveform archives remain in `training-data/` and the previous full release, while the portable application includes the operational dataset records and all inference/test dependencies.
+LI uses virtual T1 1.2/50 us; SI uses the competition's physical time-to-peak
+250/2500 us convention. Equipment voltage class is distinct from requested
+impulse crest. An allowed 50–2400 kV input does not guarantee an achievable
+waveform. DUT and setup parameters remain fixed during each search.
 
-`data/` contains writable local evidence. Move the whole folder after stopping the server to retain it. Never overwrite primary sources, original result identities, or historical manifests. Current run ZIPs preserve raw measurement bytes and configuration provenance.
+Numerical conformity is conditional on the declared ideal linear circuit.
+Tail connectivity, auxiliary branches, mounting, actual resistor quantities,
+pulse ratings, parasitics and charge adjustment limits need external
+confirmation. The 480 pF inclusion boundary is explicit. No real-machine
+calibration, laboratory approval, formal IEC measurement-software qualification
+or high-voltage actuation is claimed. The supplied two-pulses/minute value is a
+planning reference, not a thermal or timing controller.
 
+Use the [demonstration guide](docs/PHASE_B_DEMONSTRATION_GUIDE.md),
+[data contract](docs/phase_b_data.md), [ML contract](docs/phase_b_ml.md),
+[network representation](docs/phase_b_networks.md), and
+[application workflow](docs/phase_b_application.md).
+The [Excel comparison](evidence/phase_b/excel_comparison.md) separates equation
+reproduction from detailed-transient discrepancies. Earlier source and standards
+assessments remain in [integration documentation](docs/integration/IEC_AND_PS_COMPLIANCE_VERIFICATION.md).
+
+The original accepted `../release/PowerNext_Track1_Offline/` package and ZIP are
+preserved as rollback artifacts. The new release uses a separate name and
+manifest. Training corpora, rejected attempts, pilots, validation oracles and
+unselected models are reproducibility artifacts; the portable package excludes
+new corpora and includes all eight selected routes. Large JSONL and model files
+use the repository's Git LFS rules. No remote push is part of this work.
+
+`data/` holds writable local evidence. Stop the server before moving the whole
+application folder, and retain that directory to preserve saved runs. Never
+overwrite original source documents, historical results or frozen predictions.

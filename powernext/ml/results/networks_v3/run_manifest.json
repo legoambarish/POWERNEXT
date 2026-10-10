@@ -1,0 +1,191 @@
+{
+  "data_manifest_sha256": "93f3d521d171559d2b6bd9f30d657fb98d56a1922e53d6ca627805b83df4ebc4",
+  "data_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+  "deduplication": {
+    "canonical_policy": "lexicographically_smallest_row_id_per_route_response_group_key",
+    "canonical_rows": 92662,
+    "duplicate_group_count": 971,
+    "duplicate_groups_by_route": {
+      "cpri_0p5uf:LI:GSHUNT_v0": 135,
+      "cpri_0p5uf:LI:OSHUNT_v0": 149,
+      "cpri_0p5uf:SI:GSHUNT_v0": 81,
+      "cpri_0p5uf:SI:OSHUNT_v0": 84,
+      "research_3uf:LI:GSHUNT_v0": 156,
+      "research_3uf:LI:OSHUNT_v0": 179,
+      "research_3uf:SI:GSHUNT_v0": 77,
+      "research_3uf:SI:OSHUNT_v0": 110
+    },
+    "duplicates_removed": 7190,
+    "duplicates_removed_by_route": {
+      "cpri_0p5uf:LI:GSHUNT_v0": 982,
+      "cpri_0p5uf:LI:OSHUNT_v0": 1059,
+      "cpri_0p5uf:SI:GSHUNT_v0": 789,
+      "cpri_0p5uf:SI:OSHUNT_v0": 780,
+      "research_3uf:LI:GSHUNT_v0": 1215,
+      "research_3uf:LI:OSHUNT_v0": 1277,
+      "research_3uf:SI:GSHUNT_v0": 910,
+      "research_3uf:SI:OSHUNT_v0": 178
+    },
+    "input_eligible_rows": 99852,
+    "label_tolerance": {
+      "atol": {
+        "front_us": 1e-07,
+        "gain": 1e-10,
+        "tail_us": 1e-05
+      },
+      "rtol": 1e-08
+    },
+    "unkeyed_rows_retained": 0
+  },
+  "load_rows_per_second": 7452.346777903435,
+  "load_seconds": 16.370682099997794,
+  "provenance": {
+    "benchmark_hook_source_sha256": "d01c0ad8cbc4eb1116aad3b8b727d6075158747b91ea532529fea03e1deaa4ef",
+    "data_manifest_sha256": "93f3d521d171559d2b6bd9f30d657fb98d56a1922e53d6ca627805b83df4ebc4",
+    "data_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+    "optimization_oracles_manifest_sha256": "f2bcd929acf30a16a273bb68b1266800183643d68233b458a3135e83c59ebcf6",
+    "optimization_oracles_purpose": "validation",
+    "optimization_oracles_status": "COMPLETE",
+    "optimization_validation_hook": "powernext_v3.benchmark.OracleValidation",
+    "optimization_validation_hook_source_path": "powernext_v3/benchmark.py",
+    "optimization_validation_hook_source_sha256": "d01c0ad8cbc4eb1116aad3b8b727d6075158747b91ea532529fea03e1deaa4ef",
+    "physics_source_fingerprint": {
+      "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+      "sources": {
+        "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+        "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+        "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+        "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+        "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "predictive_contract_source_fingerprint": {
+      "physics": {
+        "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+        "sources": {
+          "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+          "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+          "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+          "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+          "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+          "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+          "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+        }
+      },
+      "sha256": "6a2eb965676b1952d7fd04711535f16fdff98092867fbd22ff0c7c0f17e6b082",
+      "sources": {
+        "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+        "models.py": "0178427a3849b4b4286b17e77e9eaf7a969bc493fcdffb3f09746caaeed55b12",
+        "networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "registry_code_sha256": "e9360b272a2a4c26bef18261e94826775b40012d486293401a389b65fa8af4e9",
+    "runtime": {
+      "joblib": "1.5.3",
+      "numpy": "2.4.6",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.14",
+      "scipy": "1.17.1",
+      "sklearn": "1.9.0"
+    },
+    "training_code_sha256": "239fd66df2e58dbb781a9abae4edcdd93b3b6d758173647c27013d454e001121"
+  },
+  "registry_dir": "C:\\Users\\User\\Downloads\\Powernext\\POWERNEXT\\powernext\\ml\\registry\\networks_v3",
+  "result_sha256": "15defa0844585080b5b3a55fcf03c7328d938adf004df7cdf153beabf657d024",
+  "route_count": 8,
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.4.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0"
+  },
+  "schema_version": "ml_run_manifest_v3",
+  "scope": {
+    "actual_route_count": 8,
+    "expected_route_count": 8,
+    "fixture": false,
+    "kind": "PRODUCTION_8_ROUTE",
+    "partition_counts": {
+      "cpri_0p5uf:LI:GSHUNT_v0": {
+        "test": 2236,
+        "train": 7348,
+        "validation": 1354
+      },
+      "cpri_0p5uf:LI:OSHUNT_v0": {
+        "test": 2369,
+        "train": 7300,
+        "validation": 1394
+      },
+      "cpri_0p5uf:SI:GSHUNT_v0": {
+        "test": 2304,
+        "train": 6940,
+        "validation": 1328
+      },
+      "cpri_0p5uf:SI:OSHUNT_v0": {
+        "test": 2337,
+        "train": 6905,
+        "validation": 1321
+      },
+      "research_3uf:LI:GSHUNT_v0": {
+        "test": 2383,
+        "train": 7855,
+        "validation": 1434
+      },
+      "research_3uf:LI:OSHUNT_v0": {
+        "test": 2557,
+        "train": 7532,
+        "validation": 1394
+      },
+      "research_3uf:SI:GSHUNT_v0": {
+        "test": 2550,
+        "train": 7695,
+        "validation": 1365
+      },
+      "research_3uf:SI:OSHUNT_v0": {
+        "test": 3413,
+        "train": 9646,
+        "validation": 1702
+      }
+    },
+    "routes": [
+      "cpri_0p5uf:LI:GSHUNT_v0",
+      "cpri_0p5uf:LI:OSHUNT_v0",
+      "cpri_0p5uf:SI:GSHUNT_v0",
+      "cpri_0p5uf:SI:OSHUNT_v0",
+      "research_3uf:LI:GSHUNT_v0",
+      "research_3uf:LI:OSHUNT_v0",
+      "research_3uf:SI:GSHUNT_v0",
+      "research_3uf:SI:OSHUNT_v0"
+    ]
+  },
+  "source_fingerprint": {
+    "physics": {
+      "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+      "sources": {
+        "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+        "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+        "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+        "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+        "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "sha256": "6a2eb965676b1952d7fd04711535f16fdff98092867fbd22ff0c7c0f17e6b082",
+    "sources": {
+      "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+      "models.py": "0178427a3849b4b4286b17e77e9eaf7a969bc493fcdffb3f09746caaeed55b12",
+      "networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+      "physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+      "profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+    }
+  },
+  "split_sha256": "b455b2d490944a5ea3995e7094d55cb316e42ee299aeb7cec8d0e8beaf45d058",
+  "status": "COMPLETE"
+}

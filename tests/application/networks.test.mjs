@@ -21,6 +21,9 @@ for (const id of [
   'v3-reference-metadata', 'v3-reference-submit', 'v3-ref-crest', 'v3-ref-front', 'v3-ref-tail', 'v3-reference-metrics-submit',
 ]) assert.match(html, new RegExp(`id="${id}"`), `missing ${id}`);
 assert.match(html, /id="v3-stage-charge"[^>]*step="any"/, 'fixed prediction accepts fractional stage charge');
+assert.match(html, /<option value="2"[^>]*>/, 'active module bound 2 is selectable');
+assert.match(html, /<option value="3" selected>/, 'active module bound 3 is the default');
+assert.doesNotMatch(html, /<option value="4"/, 'four-module bound is not an active UI selection');
 
 for (const phrase of ['Research comparison domain', 'Physics-compliant numerical candidate', 'Passed alternatives', 'Failed alternatives', 'not recommended', 'Raw CSV bytes', 'immutable', 'ML and Physics']) {
   assert.match(`${html}\n${js}`, new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'), `missing UI copy: ${phrase}`);
@@ -32,6 +35,8 @@ for (const route of ['/api/v3/meta', '/api/v3/validate', '/api/v3/runs', '/api/v
 for (const contract of ['failed_alternatives', 'catalog_complete', 'physics_evaluated_count', 'PHYSICS_FALLBACK', 'DETAILED_PHYSICS', 'ML OOD status', 'Detailed Physics', 'OUT_OF_DOMAIN', 'Load computed Physics waveform', 'csv_base64', 'input_sha256', 'raw_sha256']) {
   assert.match(`${html}\n${js}`, new RegExp(contract), `missing contract field ${contract}`);
 }
+assert.match(js, /UNSUPPORTED_CURRENT_SCOPE/, 'fixed recipe scope rejection is visible before API submission');
+assert.match(js, /networkModuleCount/, 'fixed trees are counted at the UI boundary');
 assert.match(js, /recipe\?\.id/, 'renders canonical recipe identifiers from result rows');
 assert.match(js, /component_ohm/, 'renders component BOM values from result rows');
 

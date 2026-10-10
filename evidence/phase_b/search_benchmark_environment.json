@@ -1,0 +1,10 @@
+{
+  "schema_version": "benchmark_environment_note_v1",
+  "benchmark": "search_benchmark",
+  "classification": "SHARED_MACHINE_LOAD_OBSERVATIONS",
+  "scope_revision": "User requested a parallel Physics-only two-versus-three study while preserving ongoing two/three work.",
+  "concurrent_work": ["Preliminary Physics waveform comparisons", "Target-reference evaluator verification", "Application scope regression tests", "Eight-route bounded three-module functional acceptance", "Saved model-prediction scope aggregation"],
+  "interpretation": "Numerical feasibility, coverage and objective comparisons remain valid. Wall times and timing ratios are observations from this shared-load run, not isolated performance estimates or general speedup claims. Preserve the original run and collect an isolated follow-up sample before quantitative speed claims.",
+  "four_module_jobs_running_at_revision": 0,
+  "planned_four_module_acceptance_cancelled": true
+}

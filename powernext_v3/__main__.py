@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 import json
 from pathlib import Path
 import sys
+from .application import normalize_public_request
 from .optimizer import recommend, save_result
 
 
@@ -18,8 +19,12 @@ def main(argv=None):
     args=parser.parse_args(argv)
     if hasattr(sys.stdout,"reconfigure"):sys.stdout.reconfigure(encoding="utf-8",errors="replace")
     def progress(message):print(f"[{datetime.now(timezone.utc).isoformat()}] {message}",flush=True)
-    if args.output.exists():raise FileExistsError("Result directory already exists; preserve immutable evidence")
     request=json.loads(args.request.read_text(encoding="utf-8"))
+    # Validate the public active scope before touching the destination or
+    # starting the optimizer.  Historical four-module artifacts remain usable
+    # through their low-level APIs but are not a live CLI request shape.
+    request,_=normalize_public_request(request)
+    if args.output.exists():raise FileExistsError("Result directory already exists; preserve immutable evidence")
     progress("Starting network search")
     result,waveforms=recommend(request,registry=args.registry,selection=args.selection,progress=progress)
     save_result(result,waveforms,args.output)

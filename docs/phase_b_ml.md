@@ -76,9 +76,16 @@ as immutable cards before the held-out test is read, so an independent
 request-level oracle can choose among them without retraining.  The selected
 winner is then compared with the other train-only candidates on the untouched
 test rows.  Reports include MAE, RMSE,
-P95, maximum error, tolerance-normalized errors, timing and crest boundary
-errors, staged 25/50/100% learning curves, fit/predict throughput, and artifact
-size.  The built-in request proxy evaluates one deterministic 1 MV target per
+P95, maximum error, tolerance-normalized errors, staged 25/50/100% learning
+curves, fit/predict throughput, and artifact size.  The legacy
+`boundary_errors` fields are conformity-distance diagnostics: they measure how
+far a prediction lies outside a timing band.  They are not actual prediction
+error for cases near a boundary.  The corrected near-boundary metric selects
+truth cases within 25% of either tolerance half-width and reports absolute
+prediction-minus-truth error; see
+[`production_validation_report.json`](../evidence/phase_b/production_validation_report.json)
+and the final frozen evaluation in
+[`PHASE_B_MODEL_REPORT.md`](PHASE_B_MODEL_REPORT.md).  The built-in request proxy evaluates one deterministic 1 MV target per
 fixed-setup validation group using profile charge/energy caps and the legacy
 waveform limits.  It reports feasible misses/hits at top-1/3/5, first feasible
 prefix rank, true-J regret, and group coverage status.  Gain-order concordance
@@ -119,10 +126,10 @@ run the versioned command:
 ```powershell
 $python = ".\runtime\python.exe"
 & $python -B -m powernext_v3.training train `
-  --data-dir .\path\to\generated_v3_dataset `
-  --output-dir .\powernext\ml\results\networks_v3_YYYYMMDDTHHMMSSZ `
+  --data-dir .\powernext\ml\data\networks_v3_r2 `
+  --output-dir .\powernext\ml\results\networks_v3 `
   --registry-dir .\powernext\ml\registry\networks_v3 `
-  --optimization-oracles .\powernext\ml\data\networks_v3_validation_oracles
+  --optimization-oracles .\powernext\ml\data\networks_v3_validation_oracles_v2
 ```
 
 `--optimization-oracles` is optional until the independent complete-catalog
@@ -131,11 +138,20 @@ validation oracle is ready.  When supplied, the trainer constructs the
 oracle requests; the oracle is validation-only and is never read for the
 held-out test report.
 
-The command has intentionally not been launched by the Phase B ML worker;
-dataset generation and readiness are coordinated separately.  Registry cards
+The recorded production run used the completed initial validation-oracle
+directory `powernext/ml/data/networks_v3_validation_oracles`.  The strict v2
+directory shown in the command was generated afterward for an
+execution-contract-aware re-evaluation; exact request/candidate scientific
+replay confirmed that it does not change the frozen selection.  It must not be
+described as the oracle used during the original training run.  Registry cards
 bind the route, feature order, model hash, data hash, v3 source/physics
 fingerprints, and runtime versions.  Model loading verifies those hashes and
 rejects modified artifacts or incompatible runtime/provenance information.
+The [R2 manifest](../powernext/ml/data/networks_v3_r2/manifest.json),
+[training results](../powernext/ml/results/networks_v3/results.json),
+[selection decision](../evidence/phase_b/lead_validation_decision.json), and
+[final four-candidate report](PHASE_B_MODEL_REPORT.md) are retained as the
+production evidence set.
 
 `selected_models.json` is the serving handoff: each key is
 `domain_id:mode:topology` and each value is the selected immutable model
@@ -147,3 +163,9 @@ The tests in `tests/test_v3_ml.py` use a tiny explicit fixture to verify the
 API, scalar L0 agreement, candidate restrictions, OOD interpolation,
 artifact-integrity checks, and validation/test ordering.  They are contract
 tests only and make no training acceptance claim.
+
+### Supported 2/3-module held-out scope
+
+The supplemental held-out table in [the final model report](PHASE_B_MODEL_REPORT.md) and [`evidence/phase_b/two_three_model_scope.json`](../evidence/phase_b/two_three_model_scope.json) stratifies the frozen canonical test rows by `max(front_network_module_count, tail_network_module_count) <= 2` versus exactly `== 3`, separately for all eight routes. It reuses original selected-model predictions from the production `results.json`; it does not retrain or run new inference. The trained artifacts remain mixed 1–4-module models, and rows with maximum count 4 are historical/excluded from the two active strata.
+
+The exact count fields are `front_network_module_count` and `tail_network_module_count` in immutable `design.jsonl`; each test row is joined by `row_id` and checked against the leaf count of the equivalent-resistance trees stored in `rows.jsonl`. v3 features use equivalent resistance and physics baseline columns while excluding recipe/tree identity, so this is a scope diagnostic for the existing mixed models rather than evidence from a dedicated 2/3-only fit.

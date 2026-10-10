@@ -1,0 +1,10 @@
+{
+  "cpri_0p5uf:LI:GSHUNT_v0": "model_50ce98bc7b25be230187",
+  "cpri_0p5uf:LI:OSHUNT_v0": "model_daa2cbadea54a3c3ef40",
+  "cpri_0p5uf:SI:GSHUNT_v0": "model_ecc53338e57d65f8e1c2",
+  "cpri_0p5uf:SI:OSHUNT_v0": "model_993e9005005e76a1836b",
+  "research_3uf:LI:GSHUNT_v0": "model_550d023662e4e2021bd3",
+  "research_3uf:LI:OSHUNT_v0": "model_a1588a432ca30b4eebdd",
+  "research_3uf:SI:GSHUNT_v0": "model_298ce67feab06f9bc47c",
+  "research_3uf:SI:OSHUNT_v0": "model_2846ce76b0e0873a5c17"
+}
