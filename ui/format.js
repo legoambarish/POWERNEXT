@@ -63,10 +63,10 @@ export const tierName=row=>!row.hard_constraints?.declared_constraints_satisfied
 
 export function readForm(template){
   const q=structuredClone(template);q.schema_version='test_request_v1';
-  q.request_id=domValue('request-id').trim()||'LOCAL_TEST';q.impulse_type=domValue('mode');q.target_crest_V=fromDisplay(domValue('target'),1000,q.target_crest_V);
-  q.equipment_profile_id=domValue('profile');q.topology_id=domValue('topology');q.catalog_scope=domValue('scope');q.polarity=Number(domValue('polarity'));
+  q.request_id=(domValue('request-id')??q.request_id??'').trim()||'LOCAL_TEST';q.impulse_type=domValue('mode');q.target_crest_V=fromDisplay(domValue('target'),1000,q.target_crest_V);
+  q.equipment_profile_id=domValue('profile')??q.equipment_profile_id;q.topology_id=domValue('topology')??q.topology_id;q.catalog_scope=domValue('scope')??q.catalog_scope;q.polarity=Number(domValue('polarity'));
   Object.assign(q.setup,{dut_capacitance_F:fromDisplay(domValue('dut'),1e-12,q.setup.dut_capacitance_F),divider_capacitance_F:fromDisplay(domValue('divider'),1e-12,q.setup.divider_capacitance_F),stray_capacitance_F:fromDisplay(domValue('stray'),1e-12,q.setup.stray_capacitance_F),loop_inductance_H:fromDisplay(domValue('inductance'),1e-6,q.setup.loop_inductance_H),
-    basic_coverage_assumption:domValue('coverage'),loop_resistance_ohm:numberValue('loop-r'),load_resistance_ohm:domValue('load-r').trim()===''?null:fromDisplay(domValue('load-r'),1e6,q.setup.load_resistance_ohm),setup_id:domValue('setup-id').trim()||'DECLARED_LOCAL_SETUP',auxiliary_assumption:domValue('auxiliary')});
+    basic_coverage_assumption:domValue('coverage'),loop_resistance_ohm:numberValue('loop-r'),load_resistance_ohm:domValue('load-r').trim()===''?null:fromDisplay(domValue('load-r'),1e6,q.setup.load_resistance_ohm),setup_id:(domValue('setup-id')??q.setup.setup_id??'').trim()||'DECLARED_LOCAL_SETUP',auxiliary_assumption:domValue('auxiliary')??q.setup.auxiliary_assumption});
   q.assumptions=domValue('assumptions').split('\n').map(s=>s.trim()).filter(Boolean);
   q.current_setting=document.getElementById('use-current').checked?{stages:numberValue('current-stages'),stage_charge_V:fromDisplay(domValue('current-charge'),1000,q.current_setting?.stage_charge_V),front_per_stage_ohm:numberValue('current-front'),tail_per_stage_ohm:numberValue('current-tail'),recipe_id:domValue('current-recipe')}:null;
   if(document.getElementById('inventory-controls')?.hasAttribute?.('data-resistor-inventory')){
