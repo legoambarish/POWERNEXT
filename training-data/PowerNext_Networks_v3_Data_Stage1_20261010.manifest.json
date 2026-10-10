@@ -1,0 +1,1873 @@
+{
+  "schema_version": "network_data_archive_v3",
+  "status": "VERIFIED",
+  "created_at": "2026-10-10T12:34:02.719660+00:00",
+  "archive": "PowerNext_Networks_v3_Data_Stage1_20261010.zip",
+  "archive_bytes": 230728065,
+  "archive_sha256": "a7700247013cec245ccee4d8f02cfd7b813e99b82934f5bb4394c993c46bb817",
+  "files": [
+    {
+      "path": "powernext/ml/data/networks_v3/ABORTED_SPLIT_AUDIT.json",
+      "bytes": 2209,
+      "sha256": "45afd18f3ba45a097b2eefb85ed0f963f26130247d004f20b2d0eea1f556d250"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3/design.jsonl",
+      "bytes": 523460647,
+      "sha256": "2fe94559f7029630b5c4dbe46874d00276829a453865c8795d8d7ace337b771d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3/manifest.json",
+      "bytes": 5559,
+      "sha256": "58294df2ea5cd32602e6256e27983f8e327b99583458731deb671864afc588c4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3/progress.json",
+      "bytes": 328,
+      "sha256": "9e955a2c480511a5d6f02bba8f9ad50c1263b9c8488bdcde316209df80d416f4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3/rows.jsonl",
+      "bytes": 20855497,
+      "sha256": "5578d1a36a34192612a88f55f1c366cf8c56e32578749bec2b57ee5a24b1c495"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3/waveforms/v3_case_00000000.npz",
+      "bytes": 69581,
+      "sha256": "0b9f9923d49a4ce42b0ed874cd24e7410d400d13ce12f27ed918b32c17a2f7fc"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3/waveforms/v3_case_00000001.npz",
+      "bytes": 70376,
+      "sha256": "e9b3871d718edc1fe485907ca5b395272be1302d66af68427d73acc2fdb9bab8"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3/waveforms/v3_case_00000002.npz",
+      "bytes": 69758,
+      "sha256": "3a2e8b3089829de9df63c1537bcf747471a0626668b5a33ec9fb3e388f074f47"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3/waveforms/v3_case_00000003.npz",
+      "bytes": 69715,
+      "sha256": "76a591c6b066c09bf6f198bd34152ad6b2d68bdbbbc137164d54e0d093e3ceba"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3/waveforms/v3_case_00000004.npz",
+      "bytes": 70133,
+      "sha256": "cfdf3f1af2a9d02fecbba9cb157bc438b7d2ebcba340f56dfc577316823c4243"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3/waveforms/v3_case_00000005.npz",
+      "bytes": 70106,
+      "sha256": "cbe575ce18e8858f207293b4b1f693d10a0102b8dc57934e3e69ca3c8b6be7ae"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3/waveforms/v3_case_00000006.npz",
+      "bytes": 69519,
+      "sha256": "02591085d539d0255f517dd966f73e78a7cdf98bf76d7ed6520a24a89f5d0d32"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3/waveforms/v3_case_00000007.npz",
+      "bytes": 69504,
+      "sha256": "42c66d993e1643795fc5dd48c6292fec1f1b46fa38a3597537f5d5b9fce9df5c"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/design.jsonl",
+      "bytes": 4473824,
+      "sha256": "740458195024900c4fa6c97a648479a9453277f24cd0ccad6b34490f7cba74f5"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/manifest.json",
+      "bytes": 6324,
+      "sha256": "52829153d36683995729329af5ef80798a07a80e6c701916c0540f84f13a3c23"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/progress.json",
+      "bytes": 573,
+      "sha256": "ec0e442d28e7eb1cd57ea5aa795ecedd74259acae03b889ac5220eaa15b3e154"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/rows.jsonl",
+      "bytes": 8771898,
+      "sha256": "7051808ca09455f220746c08efb87f00914e088f4d2a5eef34c6515463ef573c"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000000.npz",
+      "bytes": 44072,
+      "sha256": "735799da86cfc993459575cf64a93b341dea89437ddb1549c44de54097e4eceb"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000001.npz",
+      "bytes": 44947,
+      "sha256": "1d90ce285bd9405a255aa9f7cf40e68fc328f8474aaaedc68fa4ca2799f9bed4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000002.npz",
+      "bytes": 44461,
+      "sha256": "91dc3656dc4550d30d07ebec804da1970f6ecfacb0c579ecdbd1dd968e3b7ca8"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000003.npz",
+      "bytes": 44455,
+      "sha256": "3fffa0c2debcf05d938adc65608256ce1f8945296e6e467aaeae1f61ef3e2986"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000004.npz",
+      "bytes": 44737,
+      "sha256": "245f18632d1b2fe6ae7ea4cdb2fecd511775995e1d2d2cf0334e46ab46a87192"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000005.npz",
+      "bytes": 44473,
+      "sha256": "381be4f12530798b82c3d95a421df81bcd511776741aeedef1bfd3937755f6b1"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000006.npz",
+      "bytes": 44299,
+      "sha256": "fcd3bd5f14a147ee47e1481739ab8a4eedb942d6cde77a759e144480e02b6a84"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000007.npz",
+      "bytes": 44414,
+      "sha256": "c433cbce550f76b166e432c95990acc42b131442a0156dc057a624f742b116e7"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000256.npz",
+      "bytes": 44365,
+      "sha256": "8b569337b00e905a9c77a539a9907f142da508e958d138dadb14328db27e3398"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000257.npz",
+      "bytes": 44663,
+      "sha256": "c75c44b885503aaf6687aadea96e9559436afd3020530d7272d15bce61e7e459"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000258.npz",
+      "bytes": 43796,
+      "sha256": "550dce25685cd70c8f462785b3fe8aa43a6aa3ed7a1cf8741f3662d145df8a3b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000259.npz",
+      "bytes": 43903,
+      "sha256": "c90c8b79f921d8805a0387e3e71b0e0cd38c0f802b3c22ca7bcb7be51e6fb3ad"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000260.npz",
+      "bytes": 44280,
+      "sha256": "43c39d296ef214825cfc24d62c5b9e247fb1b9803558438bf385ce9ba1880cd5"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000261.npz",
+      "bytes": 44805,
+      "sha256": "ad42e5054540f914995c8bb0cc3d406a4f55eb5d6d50836fddf8c05e2a2e75b3"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000262.npz",
+      "bytes": 44741,
+      "sha256": "e4a0b121908b034bc137a7ee884484db4afee9c82a01d24dcbd82349db4993ac"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000263.npz",
+      "bytes": 44186,
+      "sha256": "f67e35886cf3ae8b5b1ecd9cdf2b07f22609c0ebd6d6115dc4d04f6b06ad3beb"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000512.npz",
+      "bytes": 44274,
+      "sha256": "3900010531b5ac297f3af09cb92649ce2b7d17c8d84f25de0fbbbae4b85277fa"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000513.npz",
+      "bytes": 45623,
+      "sha256": "fa571221b318b2e60dbde5ab0ad1f1c1677a7667214380fc13e542cf39528537"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000514.npz",
+      "bytes": 44840,
+      "sha256": "a32487060205ad24eddd66fb15d302b72fb33f58e2c5c65cb8b2132729cb2491"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000515.npz",
+      "bytes": 44763,
+      "sha256": "3467aff7f97dc7ab632e88fbe5ad2e4b65e6e829d036bcb836a3b15c71b51e2e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000516.npz",
+      "bytes": 44619,
+      "sha256": "198552a201602bb9a945e5791d907a7f8a757ecd4fb2720a4fbe3c0a0d44c52d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000517.npz",
+      "bytes": 44808,
+      "sha256": "e7936edeb905368a5e75250898508b960616f4ed2ed0163f95f4f23c855d3488"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000518.npz",
+      "bytes": 44623,
+      "sha256": "464bf2a520fb831a9d1fd195e53a6d3906e5be712d0d8243e7d479089a69b446"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000519.npz",
+      "bytes": 44272,
+      "sha256": "c0e08ffdfac03cc0e9a6b9908cca357df6bd5fbdb6e74d295330ebd500f7b1b2"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000768.npz",
+      "bytes": 44246,
+      "sha256": "58d694494e6ee97eb9d79417ac08888c25e47a991af4b0420ac201dee0be45b8"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000769.npz",
+      "bytes": 44483,
+      "sha256": "87b8590b1990a24000b11bb8b614c61b9feedb5352c3baa529f1a5e557e49688"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000770.npz",
+      "bytes": 44780,
+      "sha256": "b832b9e25969a43a640e43c86dc5f1a7a5e5acb3586416b610e45c7221378965"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000771.npz",
+      "bytes": 44683,
+      "sha256": "75702d6c295c7900128f474392a7f002eeb0eed63e1075fd9e1189928a15fe4b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000772.npz",
+      "bytes": 44553,
+      "sha256": "9512e48ef5a206772389b28c4d2f05bd4851e4afb08a46982abe7aea546e5868"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000773.npz",
+      "bytes": 44400,
+      "sha256": "ab84319b95b546429e00c2a31e5e1779427a1c9aea1c24d860cdd3425326a591"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000774.npz",
+      "bytes": 44371,
+      "sha256": "cdbd32f4e2187ee44f3f222dcfc2a465418d57165dc582bd1d31905e7d8fbcd1"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00000775.npz",
+      "bytes": 43781,
+      "sha256": "e95bce0e48758161e0e9bd4905b389259562f0306d27589bb985703ddb539fe3"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001024.npz",
+      "bytes": 43438,
+      "sha256": "da2b5e2bfcd33242994240f803fe3a528cee8ad814544fe0f45fce8e19fb5a55"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001025.npz",
+      "bytes": 45646,
+      "sha256": "f9a9373b4d746ff1e0d11ac395f92287d13a47cdb865a18f8ddb535447774e73"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001026.npz",
+      "bytes": 44745,
+      "sha256": "dff602e35f26ff8b2be3f74e8e5c9a571705cb1e489ce2ff2ecd7aa5143d9727"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001027.npz",
+      "bytes": 44560,
+      "sha256": "a6dd674e836ace8b7960d806df278fc7759aa4a46e95dd19f2e35b07be50428a"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001028.npz",
+      "bytes": 44840,
+      "sha256": "3e02677a4f8918c93993d37e479fee5bf43d1db5446c3de1ff944bb4761f60e3"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001029.npz",
+      "bytes": 44319,
+      "sha256": "a1ba6c2f3bac263559e4085f430ac1ca8d34845fc37b27f39e01c4ae36b85a20"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001030.npz",
+      "bytes": 45543,
+      "sha256": "7bc432c2a7fedde08e7ce4b7a1eec27f5a41b3e518b2603870b7e9e30e140de9"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001031.npz",
+      "bytes": 45629,
+      "sha256": "344f211d078a95e7ad4c206c39837354ceabe674988f595ff0aae69b163e9364"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001280.npz",
+      "bytes": 44098,
+      "sha256": "5d1037cf4a03d22d9129ea2b916769f9fc6293955d565a05e5ccece729ca4a7f"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001281.npz",
+      "bytes": 44971,
+      "sha256": "e440ae3ef031915ee0d62f3735bf18d10886ae1a6482e06b26bb9b82d3b1a2c8"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001282.npz",
+      "bytes": 44325,
+      "sha256": "02cebd87ccf53166477f09d78c726768dd887a26f9649647db06200960ee5fdb"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001283.npz",
+      "bytes": 44151,
+      "sha256": "1527dad561e85573a1cb700e299f26fe82b851a9c3b7fd70f29c3a325bc8d123"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001284.npz",
+      "bytes": 44557,
+      "sha256": "75438a88ee61a25600c01502228a34679176b05c58ec5ba61856a56c998c1e5f"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001285.npz",
+      "bytes": 43787,
+      "sha256": "b250dc63d4788cd1475cb68e7327047389574be86a197f46c6af470834d3cf20"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001286.npz",
+      "bytes": 44027,
+      "sha256": "b870708b8d1e8bd094856b1d9d679f584bf64e06a7694c7611afab205ce4d4c4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001287.npz",
+      "bytes": 44379,
+      "sha256": "857bd71cfb145be17a4d963595446ea00a7779c2cd80dbd747abe081c18d50d5"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001536.npz",
+      "bytes": 44285,
+      "sha256": "119515f978060e702910649735115eec7a3ebe965fe28aef604858e04be1ba5a"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001537.npz",
+      "bytes": 44535,
+      "sha256": "ebed5b21843e3b7da5a2129b38755bebacea9e1f68f4cb11c3f8527c67ca0604"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001538.npz",
+      "bytes": 44756,
+      "sha256": "cf11efcd3afbcc4f2330c986fde64159d3204e0a75fc9dac793946fa1efe7150"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001539.npz",
+      "bytes": 44671,
+      "sha256": "f3df1e8f90dfaaf169b1f6591a7a9d56e6b5aa9673ca0df715abd267f294e851"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001540.npz",
+      "bytes": 44629,
+      "sha256": "a0f339f296c9bbbf7d77116515c767507153da3cf24d8fc22086179ecc04225e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001541.npz",
+      "bytes": 45334,
+      "sha256": "43f864a8d3d8d2d28f323454e16968a9fabcbc6271392c1f2a4a91ca61355b26"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001542.npz",
+      "bytes": 44996,
+      "sha256": "eb44b50e9ce2ec1dadc20bbe7d5e0c72a15b06e91448c9731bf53dc59c7a7787"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001543.npz",
+      "bytes": 45231,
+      "sha256": "e615d94e7acbda7c300b52d7eac257527ad7b41598a904bbf6554ff49c191fc4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001797.npz",
+      "bytes": 45182,
+      "sha256": "9aebf71ae561ccdb0ecf191a69d1a85295474ad1ac99be6d002408ffc2e9d08b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001799.npz",
+      "bytes": 43846,
+      "sha256": "3ae74156ce0c31e5cfac034a7a73ba4af82eb187ac371a9d7a6e43f4ad72337d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001801.npz",
+      "bytes": 45326,
+      "sha256": "3a32dcac3ae23ea39ab057ed6fada8e8ad972025d3c3611712d75b07d5eafbef"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001802.npz",
+      "bytes": 44765,
+      "sha256": "a1de3eaff3c3e81fd06a4fc2ea1494f278ffe336a7163c4ecae0d6d98c58ccca"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001803.npz",
+      "bytes": 45181,
+      "sha256": "5da4a19be4d8a3cd94f47df47e3c631846ae1076d82bf595f69cff273ea26734"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001804.npz",
+      "bytes": 44923,
+      "sha256": "2c3dd6906c68d52ebfc311290bfc8a35db1c9777653498c15496037f0f268ace"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001807.npz",
+      "bytes": 44392,
+      "sha256": "f9f1d7da5a12fb06b54deca20396f2d32cef61b9a05b09ccf09f63b8d07e7b4b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot/waveforms/v3_case_00001808.npz",
+      "bytes": 45091,
+      "sha256": "2a53583147be1d9ee93f626860646f4f428a036303941e8ca0e62594bafd8d54"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/design.jsonl",
+      "bytes": 4503809,
+      "sha256": "eb7d0b0dc5b72093c3eb307f0a7bbd5e88d64d5d0991452371b127592ae62c25"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/manifest.json",
+      "bytes": 7012,
+      "sha256": "ed29f92453ec7e0cb589d6e7202a605603073dc7ddc57c0f3dfc7664dd1f4109"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/progress.json",
+      "bytes": 610,
+      "sha256": "c987e96def7fb8a3ca3c85a5adc11bdc4a02518253de934580bd08be91895aff"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/rows.jsonl",
+      "bytes": 9076681,
+      "sha256": "eb8d2a717c93a7e18ef1eb4cce7c1006a870e8e064da4e773a9def4e142cd615"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000000.npz",
+      "bytes": 44474,
+      "sha256": "5efef5c34c1809483cb169d9eddb624365bd155b2e3c02e7be755daf070cbc18"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000001.npz",
+      "bytes": 44908,
+      "sha256": "da0c72d389f6ca77d4fa89917b99978f0bdeda431bd82d5a04f410566615201e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000002.npz",
+      "bytes": 44461,
+      "sha256": "91dc3656dc4550d30d07ebec804da1970f6ecfacb0c579ecdbd1dd968e3b7ca8"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000003.npz",
+      "bytes": 44455,
+      "sha256": "55ac5b63827b5d113ac09b5e9f0e66118e6faa8528a26117173fd3b14af01fbb"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000004.npz",
+      "bytes": 44699,
+      "sha256": "2c3ea2802780670e16e1dcec75549c4925b297c538e529c76d5100bd7c69f861"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000005.npz",
+      "bytes": 44734,
+      "sha256": "f6f3d818cb0b5e0328606ca1105d9ee454788bee620d2bf9a6945d9d1f590058"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000006.npz",
+      "bytes": 44416,
+      "sha256": "5b39fc62f4b6241c0dc8c7ee499d6c81adedcde3203868b0692f5f007ddf955f"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000007.npz",
+      "bytes": 44350,
+      "sha256": "f66b1a3cd0ef34f365c95233c57ddf51decb1d157156d34fe87e79c952475cad"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000256.npz",
+      "bytes": 44371,
+      "sha256": "f204e2c567a2911888202f34b6f9299fe6b4b13fe8a7124b84e2cabd3f30adc0"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000257.npz",
+      "bytes": 44557,
+      "sha256": "5d352d67206ca9ecd1e691944a8fb75298e1d3628d4566dcb25ad25c319c446e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000258.npz",
+      "bytes": 43796,
+      "sha256": "550dce25685cd70c8f462785b3fe8aa43a6aa3ed7a1cf8741f3662d145df8a3b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000259.npz",
+      "bytes": 43894,
+      "sha256": "ea9bb7a92cb83c0680104a62efdea491f8af6ce6481bf2b6d919b801791f752a"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000260.npz",
+      "bytes": 44312,
+      "sha256": "d419e5a7462bac66f94a7b5c0b075bb8ed1928beee0a313b2ba37cf0c7bf6214"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000261.npz",
+      "bytes": 43833,
+      "sha256": "864c0c586d8363ce517c1a93cc3d85c3ef4b30441946c5b290c3efcd8b19e11f"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000262.npz",
+      "bytes": 43709,
+      "sha256": "5a5a1d047e57aecd2bb31dc4b8057633beb48b7d881199fe4e4734e85a7cbc30"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000263.npz",
+      "bytes": 44364,
+      "sha256": "ba0dd5098453075cb54d98341d4580deabbc3a70ba6033085e62013ea7989c6a"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000512.npz",
+      "bytes": 44188,
+      "sha256": "ff76a304184e64fb0b511427848e6d18b1fd66f2b9a6e3c450725f13238d996c"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000513.npz",
+      "bytes": 44728,
+      "sha256": "e521adb3f5f5170cdd7afdbed71db31ce8b370833e9809a262e017e690366be0"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000514.npz",
+      "bytes": 44840,
+      "sha256": "a32487060205ad24eddd66fb15d302b72fb33f58e2c5c65cb8b2132729cb2491"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000515.npz",
+      "bytes": 44761,
+      "sha256": "9afff6f478c233e37646ab4faecdeefc9ff8e4f2d4a0a0180380441c77c487a4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000516.npz",
+      "bytes": 44632,
+      "sha256": "005edc722e22cb593274ed67e99b1bd31bfd3448ab5a5ed5f494911f56ef6540"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000517.npz",
+      "bytes": 45634,
+      "sha256": "46144c4104db24657599ed6a20cf5e06b29efa3117df7b0fcf4a9ac06504ba73"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000518.npz",
+      "bytes": 45636,
+      "sha256": "464eae0eee9f11422c8da813e77fcd82efa4e164c186e7306fed46e029b78288"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000519.npz",
+      "bytes": 44954,
+      "sha256": "dccfdb301bd9a33e33ef0da20b63134abe18147720ccd39bf72823e67909f938"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000768.npz",
+      "bytes": 44220,
+      "sha256": "008e8538eadf77c63953d6418722f6770545dd3fc373115ff3b211ca1fefbad6"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000769.npz",
+      "bytes": 44447,
+      "sha256": "84e3dd8c44502e83bbabb6ba1026185f17569d401406f586654bb2153cd50add"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000770.npz",
+      "bytes": 44780,
+      "sha256": "b832b9e25969a43a640e43c86dc5f1a7a5e5acb3586416b610e45c7221378965"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000771.npz",
+      "bytes": 44665,
+      "sha256": "36bca4af9152dc258d810ff465dcc6e503ba79d4eadce597e4733dfd8d85cac6"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000772.npz",
+      "bytes": 44585,
+      "sha256": "b2c32bb85f26c513bff1c25c74172546ba9c9004dcda2f6add5979f1a8867486"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000773.npz",
+      "bytes": 44450,
+      "sha256": "c9d03cecd523ad50ac5a1e84f0e1e844ca7636c65ad57d3de9d0aa4dac5335c3"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000774.npz",
+      "bytes": 45141,
+      "sha256": "9263f4b490f758a9cc9a906fada1179ab2ffdb6b7e4497ee1be153ca523d2a95"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00000775.npz",
+      "bytes": 44599,
+      "sha256": "1f4ebd85c28d7dc81882172c04c9265ba06a7ea4731e8694e629b094663f83fe"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001024.npz",
+      "bytes": 43779,
+      "sha256": "1d822edea1b3f78b329850c39eea17d20cecfde328747125a1a1af7dca0d2439"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001025.npz",
+      "bytes": 44917,
+      "sha256": "5a2326300ade890ba98d9e18edfefd0a8eb19e1800e5a90ab3d82921eed6e3c6"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001026.npz",
+      "bytes": 44745,
+      "sha256": "dff602e35f26ff8b2be3f74e8e5c9a571705cb1e489ce2ff2ecd7aa5143d9727"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001027.npz",
+      "bytes": 44544,
+      "sha256": "d786c5be751a0201c78f0542b99e4454cbedd8ba5c898f1073a9bc7d24cd4eb6"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001028.npz",
+      "bytes": 44851,
+      "sha256": "24a614c62934b73410bad2722a111093a3fa8e883b843090fcf47a7787570221"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001029.npz",
+      "bytes": 45229,
+      "sha256": "8094900759d41c575b6248ce4b9d7e857911da13099631403cdfcb60117c48df"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001030.npz",
+      "bytes": 44411,
+      "sha256": "1bb03d407ea7ada2f5997647d935bdc43bf116d7cb3932c6c2373243a56585c1"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001031.npz",
+      "bytes": 44200,
+      "sha256": "3ccb0c69dc437a4324474d7577a52bb91abf909eb4b2d8e1c64f04f4fae3279c"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001280.npz",
+      "bytes": 44138,
+      "sha256": "5ae72407ab5b424e5818dd783c3441968df819dbdac37f0bc6fca7ca9fee704b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001281.npz",
+      "bytes": 44908,
+      "sha256": "caae7fe68688a762f87fd6e66ca979e657c4981885fb766f22764ed32f03c175"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001282.npz",
+      "bytes": 44325,
+      "sha256": "02cebd87ccf53166477f09d78c726768dd887a26f9649647db06200960ee5fdb"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001283.npz",
+      "bytes": 44160,
+      "sha256": "f491f9426b404d0f24380d768e9837be5a4ffe6caed365ad51c06972a28ee462"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001284.npz",
+      "bytes": 44560,
+      "sha256": "03ae9c66fb356e69d558283de6b6e22e78010346a45b17a4b1e4d8e3b710b21a"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001285.npz",
+      "bytes": 45138,
+      "sha256": "79851855b772459d5dc46dd9d4d18eb8ae786be88d501e129dcf19fb6116278c"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001286.npz",
+      "bytes": 43444,
+      "sha256": "1259fbc1b15301a119033c488e231d7f3d42fde00ffdc965fc6eb11140315a9d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001288.npz",
+      "bytes": 43672,
+      "sha256": "721d56f2a26704ff29a95c96d97d7a0fbd8a4a4a3d3af3f5101211baa5b07c29"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001536.npz",
+      "bytes": 44302,
+      "sha256": "f22e5f8ddd1ed0119605e3d3fd00e7eafecb0debb7bbdc0b506bda80126d8465"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001537.npz",
+      "bytes": 44565,
+      "sha256": "d275188d965051095554bd383113e275456ae3796bbb405335c46b334e79507d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001538.npz",
+      "bytes": 44756,
+      "sha256": "cf11efcd3afbcc4f2330c986fde64159d3204e0a75fc9dac793946fa1efe7150"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001539.npz",
+      "bytes": 44674,
+      "sha256": "04778b7b71098b8a6ae5d4f76ba194d54002cacdc4338cff36efac0ec370ec7f"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001540.npz",
+      "bytes": 44645,
+      "sha256": "5dad331a897384f5285a55dcb3344e4aab1460484dddf4a3f430ed0c4016c4c7"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001541.npz",
+      "bytes": 44272,
+      "sha256": "81f84d29305294c747d61f497857a35f230cee628523488655c2c00d0f5a665a"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001542.npz",
+      "bytes": 44633,
+      "sha256": "c94deb5dd2c8479523d52ae99039f227681ba6df4d72f0eaa46def8a51602a60"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001543.npz",
+      "bytes": 44333,
+      "sha256": "0a7ac5a0b49826652682177936ff59133fa5f9e74e7d901f28cd92930ee085cf"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001797.npz",
+      "bytes": 44770,
+      "sha256": "b5148946c7af01f89f5ee642b6098a02b3b2ed302139bded662f6d10d67ee22d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001798.npz",
+      "bytes": 44582,
+      "sha256": "3577a0ee2341134ca9aa15eee12e437534fb02d5c789208ed9957f8f301611fa"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001799.npz",
+      "bytes": 44531,
+      "sha256": "af5debcac62de39e862fb765e651df2bd0ec77cb776baf87a45e3914b888ce3e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001801.npz",
+      "bytes": 45174,
+      "sha256": "98266812a366dbab2dd9d13d487ca017921d08a2745df225e2de76d7753abb66"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001802.npz",
+      "bytes": 44622,
+      "sha256": "4b57fc569d3135440b071ddd1272479d14b29ff20cfe95fba2ee8e90a954b1c1"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001803.npz",
+      "bytes": 44446,
+      "sha256": "26a7ff5b5c5e854f5c66d8a7e2fba85b857b73993edab38e478f443cdfe40ef6"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001804.npz",
+      "bytes": 44861,
+      "sha256": "5d0ca73c0f50b3d8527cc42dc264a3f0c4f9008163069ff834142737a4bd512e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_v2/waveforms/v3_case_00001805.npz",
+      "bytes": 45118,
+      "sha256": "14fa7e069419fc55e2b3e3cdc9e6b37549365d5eacff493e119bf5ea3f444560"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/design.jsonl",
+      "bytes": 4506811,
+      "sha256": "0589abf4de6f0e98712ff285b4aa6f7f4ecc81e4a7a9e1c6ee391a1b4a23476a"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/manifest.json",
+      "bytes": 7013,
+      "sha256": "614e565d76850634bd7191584af7cc9693ca67f6771d10db8b1f88aace2b560f"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/progress.json",
+      "bytes": 610,
+      "sha256": "9a777ef0a34eb2e45db080d8c3f7007ca7d86b750bd10e30adcab55398932b4c"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/rows.jsonl",
+      "bytes": 9079760,
+      "sha256": "8c12b1ef4c4f74bd464d00d794a2d5da2ad0e151de54afdc9af8071ad0a231b3"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000000.npz",
+      "bytes": 69581,
+      "sha256": "0b9f9923d49a4ce42b0ed874cd24e7410d400d13ce12f27ed918b32c17a2f7fc"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000001.npz",
+      "bytes": 70376,
+      "sha256": "e9b3871d718edc1fe485907ca5b395272be1302d66af68427d73acc2fdb9bab8"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000002.npz",
+      "bytes": 69758,
+      "sha256": "3a2e8b3089829de9df63c1537bcf747471a0626668b5a33ec9fb3e388f074f47"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000003.npz",
+      "bytes": 69715,
+      "sha256": "76a591c6b066c09bf6f198bd34152ad6b2d68bdbbbc137164d54e0d093e3ceba"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000004.npz",
+      "bytes": 70133,
+      "sha256": "cfdf3f1af2a9d02fecbba9cb157bc438b7d2ebcba340f56dfc577316823c4243"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000005.npz",
+      "bytes": 70106,
+      "sha256": "cbe575ce18e8858f207293b4b1f693d10a0102b8dc57934e3e69ca3c8b6be7ae"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000006.npz",
+      "bytes": 69519,
+      "sha256": "02591085d539d0255f517dd966f73e78a7cdf98bf76d7ed6520a24a89f5d0d32"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000007.npz",
+      "bytes": 69504,
+      "sha256": "42c66d993e1643795fc5dd48c6292fec1f1b46fa38a3597537f5d5b9fce9df5c"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000256.npz",
+      "bytes": 69411,
+      "sha256": "3caed394a9ef3a91ea3fa8d49626c4672ea95e307975cd4386240783fd0c5995"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000257.npz",
+      "bytes": 69823,
+      "sha256": "c341fa44c92b7deb28ee1ea65d3a6f2ba237c40f2bc8c9aa5393883e1e104631"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000258.npz",
+      "bytes": 68722,
+      "sha256": "b1f6b627223de5ee11d6417d21066f93887d3888c3ada69e4828973ef5d8f9cc"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000259.npz",
+      "bytes": 68854,
+      "sha256": "32a49bb4e2e009d103ba6b26076ad24a2b7879e0ee7b0348a063f83320171c46"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000260.npz",
+      "bytes": 69448,
+      "sha256": "464c7a0fb07bed7fdc6c960ac3b7b89346228d69e86acfa75065aa3976fd917e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000261.npz",
+      "bytes": 68779,
+      "sha256": "a020a4bb1301b85d7623503fb2059ada04480c9b3a881a9fc5d841a2fb85afa6"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000262.npz",
+      "bytes": 68574,
+      "sha256": "94280a2c09cef599416e00ef2ec33866399fae303a817cbc49c1ce6578c5e9bc"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000263.npz",
+      "bytes": 69505,
+      "sha256": "0f875f9c81ad16a7ea092bd7d2064154ec77201bb1059aeab54fa9e28f3e736b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000512.npz",
+      "bytes": 69121,
+      "sha256": "bf903f7cba084e7af438de29dc03f02751a0761fa4d26414a60d5f185d947c36"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000513.npz",
+      "bytes": 70114,
+      "sha256": "06a47f7e123d5082cbb23104d702b5dd040a2bbf5b6c3f3a951e0572b846bdfa"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000514.npz",
+      "bytes": 70255,
+      "sha256": "771ae3494fd5cdc4b0d359d4f8989383072ed9f2615d356d4789c722a960eba1"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000515.npz",
+      "bytes": 70181,
+      "sha256": "101fb4da322fe2f21b4c03d8fd774b19d726a4195f0d9dd5cb467cbc41cd3eed"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000516.npz",
+      "bytes": 69880,
+      "sha256": "91a114bb369dcfd234aa52a1aeb917b0caf37ca6dde1eecdc22b5e826abf9333"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000517.npz",
+      "bytes": 71573,
+      "sha256": "23253010fd8e6bc361ce780abe80cc8b7eeadb1c0396b26d919ef16b002aa4a9"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000518.npz",
+      "bytes": 71602,
+      "sha256": "0477406bd1fd1ab52be15516646ada304444cbe78b02b8c67c5631c51340c351"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000519.npz",
+      "bytes": 70596,
+      "sha256": "117e353e1fd00aec7390f31a1dee3cdb08849f89ec6a31b003c8328dac4c69b0"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000768.npz",
+      "bytes": 69238,
+      "sha256": "6bc7e71aa35fca8411b0544152ada53753a1d1f0874aa0484617b8c1eff4f010"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000769.npz",
+      "bytes": 69671,
+      "sha256": "281c5802706594968cff80c85d1a5c198c0ce96b60d3c7bafd9bd13900837415"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000770.npz",
+      "bytes": 70182,
+      "sha256": "9daa9653c29bf2d5ad4b5de2e593975566f9d2aefa6c33f99ad3dff382461f01"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000771.npz",
+      "bytes": 69967,
+      "sha256": "5f9311872f83d26bbf4e325fce76d9edebe0b6ab321f914d1132d19a3f5a765e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000772.npz",
+      "bytes": 69811,
+      "sha256": "47e776999002ff59601d2d821e3da33c0866cfbf78324fc49aa652e45425dd4b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000773.npz",
+      "bytes": 69822,
+      "sha256": "99000820a66df78d32b6b19df96e031b5fda2a00f2e652179270c0d8fd44ab7d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000774.npz",
+      "bytes": 70828,
+      "sha256": "d126fdf462f1bbf9a4c03cb202f8108750fcd0bfebe5e8c5a96b06914862c335"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00000775.npz",
+      "bytes": 69904,
+      "sha256": "22b7e1a0a02a28c5820be0d602f64c1ee7522d2a6345e81214db7b8286364441"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001024.npz",
+      "bytes": 68456,
+      "sha256": "40014596ebde7f69f81dd7bc7b95f19b84a9177b526b0f608dfeed3593450f20"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001025.npz",
+      "bytes": 70369,
+      "sha256": "6e5cb069b9e28ad042e949886c20c66dca3bf25d4b95dced27aad1dd34bf6c87"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001026.npz",
+      "bytes": 70091,
+      "sha256": "1a70b75257fb58aabc05a8a6ff07c699f318b481a559d40212dfdd4395d0d325"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001027.npz",
+      "bytes": 69810,
+      "sha256": "91ce5a1ef26e9ebb63282fe0c5d928a8b05429f3cdfced95fb90a3cc34f248f4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001028.npz",
+      "bytes": 70182,
+      "sha256": "741ebe4ffaa84cf5b8b5ed35363f49b533b62a241a02876ab1759a930a82766e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001029.npz",
+      "bytes": 70915,
+      "sha256": "c892d80bc8693b3141a1390fec7b3480955b610a32bd28775ff1ccc48fae0234"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001030.npz",
+      "bytes": 69633,
+      "sha256": "d15f7b518c9baa9464eebf85bd7b4b23ebeb4aa1df502017aa1cfc7a212288b1"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001031.npz",
+      "bytes": 69190,
+      "sha256": "7795d12f5e03675886d0af9409abd1d285699f22c2a0b32c06d7f42d6c0c9ebb"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001280.npz",
+      "bytes": 69031,
+      "sha256": "c4151060e362455ec0d9e0e0825e3b4cb8cd9ff59b3133e800117221f230ed4d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001281.npz",
+      "bytes": 70501,
+      "sha256": "78a8bf2b72ca69a5bddc91381dfbbafd51c1fd6497dfa800b42d84c1f3ae15c7"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001282.npz",
+      "bytes": 69398,
+      "sha256": "6511d5d6808fb6b6cde15d57920a5851939f951cbdb20ed7680c0e26da30f297"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001283.npz",
+      "bytes": 69187,
+      "sha256": "0cb90701ae7f2d67bff560fe98a6b388ea255cf16c4f55b236c97e551f698442"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001284.npz",
+      "bytes": 69774,
+      "sha256": "1ab29a10449402603ddba6b11fa86569a7998b1761856a17d15b8e4451a9d9af"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001285.npz",
+      "bytes": 70656,
+      "sha256": "6a76f3a41750455818a470d9317a84ff8ae972917b07bc2b76a88645bf240550"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001286.npz",
+      "bytes": 68173,
+      "sha256": "cfafaddf487b0879e7cba0c0541243a96a6924dd571b65590e281dfbce7a5341"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001288.npz",
+      "bytes": 68533,
+      "sha256": "3a100cacebd48646001877113f9a2ff5878a720f59430841f13748fa4edb6981"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001536.npz",
+      "bytes": 69265,
+      "sha256": "535ffd7ec1b7e65d54647762940dc9f3786b69400bca079e632fa84b665d353d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001537.npz",
+      "bytes": 69814,
+      "sha256": "64b69a998a0bfeb63b4e930ad6ba780afddb70fa5f2a3985a096070432a22f5b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001538.npz",
+      "bytes": 70059,
+      "sha256": "51a051e2b78ef8126e71480167cac84c7424c5293beb4aecbd8144bdcc77f99d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001539.npz",
+      "bytes": 69972,
+      "sha256": "b5ff9aac8315b981fee121fef02f28631babe6efc458a00b2e4797edae4d9623"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001540.npz",
+      "bytes": 69900,
+      "sha256": "ed83d345c9903399500a6c996983fc6dbbe7b60fee09394b40d9bea6ecf434b4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001541.npz",
+      "bytes": 69373,
+      "sha256": "db8aead8635ee336a2ad4fcc63b113c4c03829f95e13db7d659dd26ca9766560"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001542.npz",
+      "bytes": 69906,
+      "sha256": "62b2fd66b49ab2f7e190cebfe52775f41faadeafba57e6da1790aecd8d0f9184"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001543.npz",
+      "bytes": 69368,
+      "sha256": "6151b3326c59df42e688cee92dca58c45ee350dd21917402bd17d4cb704f2fbb"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001797.npz",
+      "bytes": 70188,
+      "sha256": "49f1085a1a0277dc525decf92182767caa93908a2dbdf3e6b11923e4d3fb54e4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001798.npz",
+      "bytes": 69875,
+      "sha256": "e231a4af080d177983e3a25b1d133070ea26ffdb969084d123168a9ce5339d57"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001799.npz",
+      "bytes": 69700,
+      "sha256": "bd7b1151da68abcc0cfaa97d89b7292bdd916bb0c6214c289a6d2a6376f84edd"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001801.npz",
+      "bytes": 70682,
+      "sha256": "123618f30d31fc954e708083141c38531ce30d42f28a2ae9921d21b252441c29"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001802.npz",
+      "bytes": 69873,
+      "sha256": "bbb3a19a98f8d22e29d3907fd8852a04498c4725bc773ff75cf59130aca22dbe"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001803.npz",
+      "bytes": 69565,
+      "sha256": "910c81a354f8c80499e6024a45f49786fdbfdb2482deb15a9e4a90ed70ab02c3"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001804.npz",
+      "bytes": 70349,
+      "sha256": "c975d61c26a809e7dec7ac2b8c6873e06f4f077d2d09fbd195e20858b70eb506"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix/waveforms/v3_case_00001805.npz",
+      "bytes": 70723,
+      "sha256": "0b6c992bc8c0267d3e56ca9b75c52787409892602bf65c435b7d7f520ee33fe9"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/design.jsonl",
+      "bytes": 4506811,
+      "sha256": "0589abf4de6f0e98712ff285b4aa6f7f4ecc81e4a7a9e1c6ee391a1b4a23476a"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/manifest.json",
+      "bytes": 7029,
+      "sha256": "903100fa5e0c297483e502f35c689bf8807584967f9e50efc21d59e508c151f5"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/progress.json",
+      "bytes": 610,
+      "sha256": "b4e746ed2bb83c441a3c39b644b8cd757b34ac3bbda0e3134939d18a725ed025"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/rows.jsonl",
+      "bytes": 9079793,
+      "sha256": "ef6a7c895e5cdc36843d4670529040a4829c602c12f61eddb8e07aa3fa61e9ef"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000000.npz",
+      "bytes": 69581,
+      "sha256": "0b9f9923d49a4ce42b0ed874cd24e7410d400d13ce12f27ed918b32c17a2f7fc"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000001.npz",
+      "bytes": 70376,
+      "sha256": "e9b3871d718edc1fe485907ca5b395272be1302d66af68427d73acc2fdb9bab8"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000002.npz",
+      "bytes": 69758,
+      "sha256": "3a2e8b3089829de9df63c1537bcf747471a0626668b5a33ec9fb3e388f074f47"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000003.npz",
+      "bytes": 69715,
+      "sha256": "76a591c6b066c09bf6f198bd34152ad6b2d68bdbbbc137164d54e0d093e3ceba"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000004.npz",
+      "bytes": 70133,
+      "sha256": "cfdf3f1af2a9d02fecbba9cb157bc438b7d2ebcba340f56dfc577316823c4243"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000005.npz",
+      "bytes": 70106,
+      "sha256": "cbe575ce18e8858f207293b4b1f693d10a0102b8dc57934e3e69ca3c8b6be7ae"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000006.npz",
+      "bytes": 69519,
+      "sha256": "02591085d539d0255f517dd966f73e78a7cdf98bf76d7ed6520a24a89f5d0d32"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000007.npz",
+      "bytes": 69504,
+      "sha256": "42c66d993e1643795fc5dd48c6292fec1f1b46fa38a3597537f5d5b9fce9df5c"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000256.npz",
+      "bytes": 69411,
+      "sha256": "3caed394a9ef3a91ea3fa8d49626c4672ea95e307975cd4386240783fd0c5995"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000257.npz",
+      "bytes": 69823,
+      "sha256": "c341fa44c92b7deb28ee1ea65d3a6f2ba237c40f2bc8c9aa5393883e1e104631"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000258.npz",
+      "bytes": 68722,
+      "sha256": "b1f6b627223de5ee11d6417d21066f93887d3888c3ada69e4828973ef5d8f9cc"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000259.npz",
+      "bytes": 68854,
+      "sha256": "32a49bb4e2e009d103ba6b26076ad24a2b7879e0ee7b0348a063f83320171c46"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000260.npz",
+      "bytes": 69448,
+      "sha256": "464c7a0fb07bed7fdc6c960ac3b7b89346228d69e86acfa75065aa3976fd917e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000261.npz",
+      "bytes": 68779,
+      "sha256": "a020a4bb1301b85d7623503fb2059ada04480c9b3a881a9fc5d841a2fb85afa6"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000262.npz",
+      "bytes": 68574,
+      "sha256": "94280a2c09cef599416e00ef2ec33866399fae303a817cbc49c1ce6578c5e9bc"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000263.npz",
+      "bytes": 69505,
+      "sha256": "0f875f9c81ad16a7ea092bd7d2064154ec77201bb1059aeab54fa9e28f3e736b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000512.npz",
+      "bytes": 69121,
+      "sha256": "bf903f7cba084e7af438de29dc03f02751a0761fa4d26414a60d5f185d947c36"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000513.npz",
+      "bytes": 70114,
+      "sha256": "06a47f7e123d5082cbb23104d702b5dd040a2bbf5b6c3f3a951e0572b846bdfa"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000514.npz",
+      "bytes": 70255,
+      "sha256": "771ae3494fd5cdc4b0d359d4f8989383072ed9f2615d356d4789c722a960eba1"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000515.npz",
+      "bytes": 70181,
+      "sha256": "101fb4da322fe2f21b4c03d8fd774b19d726a4195f0d9dd5cb467cbc41cd3eed"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000516.npz",
+      "bytes": 69880,
+      "sha256": "91a114bb369dcfd234aa52a1aeb917b0caf37ca6dde1eecdc22b5e826abf9333"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000517.npz",
+      "bytes": 71573,
+      "sha256": "23253010fd8e6bc361ce780abe80cc8b7eeadb1c0396b26d919ef16b002aa4a9"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000518.npz",
+      "bytes": 71602,
+      "sha256": "0477406bd1fd1ab52be15516646ada304444cbe78b02b8c67c5631c51340c351"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000519.npz",
+      "bytes": 70596,
+      "sha256": "117e353e1fd00aec7390f31a1dee3cdb08849f89ec6a31b003c8328dac4c69b0"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000768.npz",
+      "bytes": 69238,
+      "sha256": "6bc7e71aa35fca8411b0544152ada53753a1d1f0874aa0484617b8c1eff4f010"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000769.npz",
+      "bytes": 69671,
+      "sha256": "281c5802706594968cff80c85d1a5c198c0ce96b60d3c7bafd9bd13900837415"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000770.npz",
+      "bytes": 70182,
+      "sha256": "9daa9653c29bf2d5ad4b5de2e593975566f9d2aefa6c33f99ad3dff382461f01"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000771.npz",
+      "bytes": 69967,
+      "sha256": "5f9311872f83d26bbf4e325fce76d9edebe0b6ab321f914d1132d19a3f5a765e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000772.npz",
+      "bytes": 69811,
+      "sha256": "47e776999002ff59601d2d821e3da33c0866cfbf78324fc49aa652e45425dd4b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000773.npz",
+      "bytes": 69822,
+      "sha256": "99000820a66df78d32b6b19df96e031b5fda2a00f2e652179270c0d8fd44ab7d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000774.npz",
+      "bytes": 70828,
+      "sha256": "d126fdf462f1bbf9a4c03cb202f8108750fcd0bfebe5e8c5a96b06914862c335"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00000775.npz",
+      "bytes": 69904,
+      "sha256": "22b7e1a0a02a28c5820be0d602f64c1ee7522d2a6345e81214db7b8286364441"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001024.npz",
+      "bytes": 68456,
+      "sha256": "40014596ebde7f69f81dd7bc7b95f19b84a9177b526b0f608dfeed3593450f20"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001025.npz",
+      "bytes": 70369,
+      "sha256": "6e5cb069b9e28ad042e949886c20c66dca3bf25d4b95dced27aad1dd34bf6c87"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001026.npz",
+      "bytes": 70091,
+      "sha256": "1a70b75257fb58aabc05a8a6ff07c699f318b481a559d40212dfdd4395d0d325"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001027.npz",
+      "bytes": 69810,
+      "sha256": "91ce5a1ef26e9ebb63282fe0c5d928a8b05429f3cdfced95fb90a3cc34f248f4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001028.npz",
+      "bytes": 70182,
+      "sha256": "741ebe4ffaa84cf5b8b5ed35363f49b533b62a241a02876ab1759a930a82766e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001029.npz",
+      "bytes": 70915,
+      "sha256": "c892d80bc8693b3141a1390fec7b3480955b610a32bd28775ff1ccc48fae0234"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001030.npz",
+      "bytes": 69633,
+      "sha256": "d15f7b518c9baa9464eebf85bd7b4b23ebeb4aa1df502017aa1cfc7a212288b1"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001031.npz",
+      "bytes": 69190,
+      "sha256": "7795d12f5e03675886d0af9409abd1d285699f22c2a0b32c06d7f42d6c0c9ebb"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001280.npz",
+      "bytes": 69031,
+      "sha256": "c4151060e362455ec0d9e0e0825e3b4cb8cd9ff59b3133e800117221f230ed4d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001281.npz",
+      "bytes": 70501,
+      "sha256": "78a8bf2b72ca69a5bddc91381dfbbafd51c1fd6497dfa800b42d84c1f3ae15c7"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001282.npz",
+      "bytes": 69398,
+      "sha256": "6511d5d6808fb6b6cde15d57920a5851939f951cbdb20ed7680c0e26da30f297"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001283.npz",
+      "bytes": 69187,
+      "sha256": "0cb90701ae7f2d67bff560fe98a6b388ea255cf16c4f55b236c97e551f698442"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001284.npz",
+      "bytes": 69774,
+      "sha256": "1ab29a10449402603ddba6b11fa86569a7998b1761856a17d15b8e4451a9d9af"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001285.npz",
+      "bytes": 70656,
+      "sha256": "6a76f3a41750455818a470d9317a84ff8ae972917b07bc2b76a88645bf240550"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001286.npz",
+      "bytes": 68173,
+      "sha256": "cfafaddf487b0879e7cba0c0541243a96a6924dd571b65590e281dfbce7a5341"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001288.npz",
+      "bytes": 68533,
+      "sha256": "3a100cacebd48646001877113f9a2ff5878a720f59430841f13748fa4edb6981"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001536.npz",
+      "bytes": 69265,
+      "sha256": "535ffd7ec1b7e65d54647762940dc9f3786b69400bca079e632fa84b665d353d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001537.npz",
+      "bytes": 69814,
+      "sha256": "64b69a998a0bfeb63b4e930ad6ba780afddb70fa5f2a3985a096070432a22f5b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001538.npz",
+      "bytes": 70059,
+      "sha256": "51a051e2b78ef8126e71480167cac84c7424c5293beb4aecbd8144bdcc77f99d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001539.npz",
+      "bytes": 69972,
+      "sha256": "b5ff9aac8315b981fee121fef02f28631babe6efc458a00b2e4797edae4d9623"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001540.npz",
+      "bytes": 69900,
+      "sha256": "ed83d345c9903399500a6c996983fc6dbbe7b60fee09394b40d9bea6ecf434b4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001541.npz",
+      "bytes": 69373,
+      "sha256": "db8aead8635ee336a2ad4fcc63b113c4c03829f95e13db7d659dd26ca9766560"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001542.npz",
+      "bytes": 69906,
+      "sha256": "62b2fd66b49ab2f7e190cebfe52775f41faadeafba57e6da1790aecd8d0f9184"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001543.npz",
+      "bytes": 69368,
+      "sha256": "6151b3326c59df42e688cee92dca58c45ee350dd21917402bd17d4cb704f2fbb"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001797.npz",
+      "bytes": 70188,
+      "sha256": "49f1085a1a0277dc525decf92182767caa93908a2dbdf3e6b11923e4d3fb54e4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001798.npz",
+      "bytes": 69875,
+      "sha256": "e231a4af080d177983e3a25b1d133070ea26ffdb969084d123168a9ce5339d57"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001799.npz",
+      "bytes": 69700,
+      "sha256": "bd7b1151da68abcc0cfaa97d89b7292bdd916bb0c6214c289a6d2a6376f84edd"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001801.npz",
+      "bytes": 70682,
+      "sha256": "123618f30d31fc954e708083141c38531ce30d42f28a2ae9921d21b252441c29"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001802.npz",
+      "bytes": 69873,
+      "sha256": "bbb3a19a98f8d22e29d3907fd8852a04498c4725bc773ff75cf59130aca22dbe"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001803.npz",
+      "bytes": 69565,
+      "sha256": "910c81a354f8c80499e6024a45f49786fdbfdb2482deb15a9e4a90ed70ab02c3"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001804.npz",
+      "bytes": 70349,
+      "sha256": "c975d61c26a809e7dec7ac2b8c6873e06f4f077d2d09fbd195e20858b70eb506"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_pilot_splitfix2/waveforms/v3_case_00001805.npz",
+      "bytes": 70723,
+      "sha256": "0b6c992bc8c0267d3e56ca9b75c52787409892602bf65c435b7d7f520ee33fe9"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/design.jsonl",
+      "bytes": 523865675,
+      "sha256": "d6498b8bce3bc62b47dd166e8a755d2b38289696bdacc0709e5586498784c880"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/manifest.json",
+      "bytes": 7117,
+      "sha256": "93f3d521d171559d2b6bd9f30d657fb98d56a1922e53d6ca627805b83df4ebc4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/progress.json",
+      "bytes": 626,
+      "sha256": "36934a5d28788a90e2354ad6fac9a73f1f0cc094dc85ec8544ab9b77759f43dd"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/rows.jsonl",
+      "bytes": 540964265,
+      "sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00000000.npz",
+      "bytes": 69581,
+      "sha256": "0b9f9923d49a4ce42b0ed874cd24e7410d400d13ce12f27ed918b32c17a2f7fc"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00000001.npz",
+      "bytes": 70376,
+      "sha256": "e9b3871d718edc1fe485907ca5b395272be1302d66af68427d73acc2fdb9bab8"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00000002.npz",
+      "bytes": 69758,
+      "sha256": "3a2e8b3089829de9df63c1537bcf747471a0626668b5a33ec9fb3e388f074f47"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00000003.npz",
+      "bytes": 69715,
+      "sha256": "76a591c6b066c09bf6f198bd34152ad6b2d68bdbbbc137164d54e0d093e3ceba"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00000004.npz",
+      "bytes": 70133,
+      "sha256": "cfdf3f1af2a9d02fecbba9cb157bc438b7d2ebcba340f56dfc577316823c4243"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00000005.npz",
+      "bytes": 70106,
+      "sha256": "cbe575ce18e8858f207293b4b1f693d10a0102b8dc57934e3e69ca3c8b6be7ae"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00000006.npz",
+      "bytes": 69519,
+      "sha256": "02591085d539d0255f517dd966f73e78a7cdf98bf76d7ed6520a24a89f5d0d32"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00000007.npz",
+      "bytes": 69504,
+      "sha256": "42c66d993e1643795fc5dd48c6292fec1f1b46fa38a3597537f5d5b9fce9df5c"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00030000.npz",
+      "bytes": 69411,
+      "sha256": "17e90e10be0972e289a2fd03cdb4ae57b7546eef21fb9b398e3106ea7abfc8c7"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00030001.npz",
+      "bytes": 70000,
+      "sha256": "50451d192083e0571f6fb10ef751b640343f81464b17c7771c9136866a29cf6d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00030002.npz",
+      "bytes": 68722,
+      "sha256": "b1f6b627223de5ee11d6417d21066f93887d3888c3ada69e4828973ef5d8f9cc"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00030003.npz",
+      "bytes": 68854,
+      "sha256": "32a49bb4e2e009d103ba6b26076ad24a2b7879e0ee7b0348a063f83320171c46"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00030004.npz",
+      "bytes": 69448,
+      "sha256": "464c7a0fb07bed7fdc6c960ac3b7b89346228d69e86acfa75065aa3976fd917e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00030005.npz",
+      "bytes": 69415,
+      "sha256": "e260eb2f356cd1fc199e65de87f136083b0f1298e2c28971633cbbd2bab70dc6"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00030006.npz",
+      "bytes": 68587,
+      "sha256": "17775e19f280d02b270ea0b5e22fecb8d321554a551a544afcbb1d360d042a9f"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00030007.npz",
+      "bytes": 68227,
+      "sha256": "879af8c753e8da102f33182dbc4fa4b8f426af477672aa54185fc65804bf8021"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00060000.npz",
+      "bytes": 69311,
+      "sha256": "8951191645bc11024ecdc6c6b27552d0a8cbbff355190748d759138f10e89b0b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00060001.npz",
+      "bytes": 70114,
+      "sha256": "06a47f7e123d5082cbb23104d702b5dd040a2bbf5b6c3f3a951e0572b846bdfa"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00060002.npz",
+      "bytes": 70255,
+      "sha256": "771ae3494fd5cdc4b0d359d4f8989383072ed9f2615d356d4789c722a960eba1"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00060003.npz",
+      "bytes": 70181,
+      "sha256": "101fb4da322fe2f21b4c03d8fd774b19d726a4195f0d9dd5cb467cbc41cd3eed"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00060004.npz",
+      "bytes": 69880,
+      "sha256": "91a114bb369dcfd234aa52a1aeb917b0caf37ca6dde1eecdc22b5e826abf9333"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00060005.npz",
+      "bytes": 71351,
+      "sha256": "26cb5618d230dc168597107ecef08dc51bd1928fe36f022c94a149f9941aceb7"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00060006.npz",
+      "bytes": 70226,
+      "sha256": "da4c56bb0e65e0c212e0b6b27abdac061aed002a77c35fc07fc59a6a6a21d0cd"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00060007.npz",
+      "bytes": 69566,
+      "sha256": "332eec56e4144b64a07c1ef221f39d472a6b05cf89fabf90f33a598c714f6bdb"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00090000.npz",
+      "bytes": 69262,
+      "sha256": "01775ce23f59d985d522798a7f49379d889309361b72520162b9fafa7832c6fe"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00090001.npz",
+      "bytes": 69755,
+      "sha256": "06c8bfb40e7bd13ef8df9cb5dd48927c2fe2e28f751340d01ee7c3f9ed1ada7f"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00090002.npz",
+      "bytes": 70182,
+      "sha256": "9daa9653c29bf2d5ad4b5de2e593975566f9d2aefa6c33f99ad3dff382461f01"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00090003.npz",
+      "bytes": 69967,
+      "sha256": "5f9311872f83d26bbf4e325fce76d9edebe0b6ab321f914d1132d19a3f5a765e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00090004.npz",
+      "bytes": 69811,
+      "sha256": "47e776999002ff59601d2d821e3da33c0866cfbf78324fc49aa652e45425dd4b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00090005.npz",
+      "bytes": 69031,
+      "sha256": "04eb80702c542e4e6c3a36fd99719a77e8b38ebe2bea2ed58df6486aca09cfaa"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00090006.npz",
+      "bytes": 70908,
+      "sha256": "ef59881e929c5f50fb6bda1f80f2ba79379440ea3de2fcd956c3452bb9802ea0"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00090007.npz",
+      "bytes": 68832,
+      "sha256": "9151d810c1f1cf4d18021671736b5c8b7d7fddf31cd5a1c2369287899bd6e038"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00120000.npz",
+      "bytes": 68588,
+      "sha256": "610551daa8eb1ea5258fba5d71a4991341ef4c006e0719d92bd340548cc3c366"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00120001.npz",
+      "bytes": 70393,
+      "sha256": "491685c5fde5f005fdfd4a92e9b75bbb95fe7e68d33d285b29562210d693bbdb"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00120002.npz",
+      "bytes": 70091,
+      "sha256": "1a70b75257fb58aabc05a8a6ff07c699f318b481a559d40212dfdd4395d0d325"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00120003.npz",
+      "bytes": 69810,
+      "sha256": "91ce5a1ef26e9ebb63282fe0c5d928a8b05429f3cdfced95fb90a3cc34f248f4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00120004.npz",
+      "bytes": 70182,
+      "sha256": "741ebe4ffaa84cf5b8b5ed35363f49b533b62a241a02876ab1759a930a82766e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00120005.npz",
+      "bytes": 71112,
+      "sha256": "2bdb59d27a6558ab831faa7a7243d253fb9c3e32cb67a06b7fc676002c2e8c66"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00120006.npz",
+      "bytes": 69346,
+      "sha256": "dd349919ffc3e54cb75f0ce8291de8069595730fd3efc7887c409f7643767a1c"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00120007.npz",
+      "bytes": 71692,
+      "sha256": "2c11fe9bf10633aa7ee5f166bc40a7c49f19446bec10214eb711f7ab8627c76c"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00150000.npz",
+      "bytes": 69110,
+      "sha256": "b2d0235539c097c586d71f12f2889961708e32da3bcec3670091dfc74f72f619"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00150001.npz",
+      "bytes": 69966,
+      "sha256": "ec22d8d76c22a116c5fab92acb16a4b10a39d0c7689f48aff42fe8d899f90875"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00150002.npz",
+      "bytes": 69398,
+      "sha256": "6511d5d6808fb6b6cde15d57920a5851939f951cbdb20ed7680c0e26da30f297"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00150003.npz",
+      "bytes": 69187,
+      "sha256": "0cb90701ae7f2d67bff560fe98a6b388ea255cf16c4f55b236c97e551f698442"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00150004.npz",
+      "bytes": 69774,
+      "sha256": "1ab29a10449402603ddba6b11fa86569a7998b1761856a17d15b8e4451a9d9af"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00150006.npz",
+      "bytes": 68011,
+      "sha256": "d0630e5071ea200a79e410d3096f359ce00f0e5ced4e621231a38b7f2e5e6f89"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00150008.npz",
+      "bytes": 68571,
+      "sha256": "78e97adf69b4ee016d1996a8752c325be2d7eaf851004b4950bfecddee04c8e2"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00150010.npz",
+      "bytes": 68713,
+      "sha256": "9656b943c7f4e442bd96903c1e026933cc92a5bab7c9e2065827e6357f63c6f9"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00150015.npz",
+      "bytes": 69919,
+      "sha256": "39ba6c4e133b6453a3bed451fa00fb40d717b370203c9ee2c5501b5c43af56d5"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00180000.npz",
+      "bytes": 69268,
+      "sha256": "7ff249bf2b712e44985043da5c6822892447a45abb40cbe1d7c7ea9b120a62bc"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00180001.npz",
+      "bytes": 69814,
+      "sha256": "2c1afd93f688a0032ec05fd16a18de35f96e585635d491643aa93575f849115f"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00180002.npz",
+      "bytes": 70059,
+      "sha256": "51a051e2b78ef8126e71480167cac84c7424c5293beb4aecbd8144bdcc77f99d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00180003.npz",
+      "bytes": 69972,
+      "sha256": "b5ff9aac8315b981fee121fef02f28631babe6efc458a00b2e4797edae4d9623"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00180004.npz",
+      "bytes": 69900,
+      "sha256": "ed83d345c9903399500a6c996983fc6dbbe7b60fee09394b40d9bea6ecf434b4"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00180006.npz",
+      "bytes": 70766,
+      "sha256": "8324556e023875ab6e8ff228e96c347b6146c9a787deb5371656eceb6b1f79b8"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00180007.npz",
+      "bytes": 70207,
+      "sha256": "2ffa36f8774777eaec9946f2652b3a7cf23e76ffd970e3d26415af4125267292"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00180008.npz",
+      "bytes": 69643,
+      "sha256": "6b5e1911f68f2a6121994632050a558340e0abf9cefc53ee9a2a85c6564a1c37"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00210005.npz",
+      "bytes": 68659,
+      "sha256": "f8867ca5c8f24e6efa7047012d32dffc9c1001967a54881a4b0c72431fe6b0b2"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00210006.npz",
+      "bytes": 70481,
+      "sha256": "5cacb322f50252b30607806dbeb1532a8b88323353d21aa4ff5112bed8e7c66e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00210008.npz",
+      "bytes": 69996,
+      "sha256": "cf1aee3e92f72bda4d2e77d93cc1281709c2940e9a16eb8585f2c3cd201234b5"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00210009.npz",
+      "bytes": 70806,
+      "sha256": "2a3851a2939d86dc80688c26d0ce60ae88624b9432e2d9b54d11a2893b093d50"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00210010.npz",
+      "bytes": 69946,
+      "sha256": "e298e4bfe7fb5e5dd3a072cdd142c14d8fe6230ae25507ad77899012545515a9"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00210011.npz",
+      "bytes": 69499,
+      "sha256": "c570ac92474923268410956383aaf2ebe9d960dafefc900582d12e2b4709bbfc"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00210012.npz",
+      "bytes": 70122,
+      "sha256": "5f9889800f1e300e0c4e9efb0cd98d07adf7f3c55c1d51c4ad9b1fceceb658a2"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_r2/waveforms/v3_case_00210014.npz",
+      "bytes": 69865,
+      "sha256": "716a64b8b22d32f0d078a7dd98df0252d110a8792f3b14930abb600038145618"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_cpri_0p5uf_LI_GSHUNT_v0_0.json",
+      "bytes": 9251871,
+      "sha256": "09fbf9fda490dbebb52a08d587f4a5d89ed1b9ef4ca91ec2d54653c8dd88915d"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_cpri_0p5uf_LI_GSHUNT_v0_1.json",
+      "bytes": 9453098,
+      "sha256": "1494bf8b9e0909c9c0a4fcc9f6d3680e28e52ecb4402d086471bb71600266684"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_cpri_0p5uf_LI_OSHUNT_v0_0.json",
+      "bytes": 9334662,
+      "sha256": "b5d8537614640cea1ee66ecb476b9676431c9b2c244d25324b6351dca403a9d7"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_cpri_0p5uf_LI_OSHUNT_v0_1.json",
+      "bytes": 9517575,
+      "sha256": "de93a382cb8aae3ab2e5f99f21cad3fff70186db8bb65b8f827bcd12cfb22f1e"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_cpri_0p5uf_SI_GSHUNT_v0_0.json",
+      "bytes": 9546648,
+      "sha256": "8bbf8969a6d188c324069d238e0546ee55810907fa108de20d5a16ffba11d93b"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_cpri_0p5uf_SI_GSHUNT_v0_1.json",
+      "bytes": 9616141,
+      "sha256": "db87a8a3f32b004d50be16046a5302593e294fb4e1109a3d6071ff52c325e307"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_cpri_0p5uf_SI_OSHUNT_v0_0.json",
+      "bytes": 9701940,
+      "sha256": "224e4f6b08af90db1a7426ffc1c3596d5ae17189e18af72d999dc1ef76066511"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_cpri_0p5uf_SI_OSHUNT_v0_1.json",
+      "bytes": 9619289,
+      "sha256": "c6b12a6755c54f5b8e6dd3e85a5d0c919ead18c5805a96226f30b7febe20e490"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_research_3uf_LI_GSHUNT_v0_0.json",
+      "bytes": 9133397,
+      "sha256": "e34dc3ee906331f84dd168a06c647226ba189110f132f8d7e55a9f3e52a64743"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_research_3uf_LI_GSHUNT_v0_1.json",
+      "bytes": 8609082,
+      "sha256": "6f0f8ac4a2609a1bcd0e17bb2d203ceac125f968c85915f1881f256199d15fd9"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_research_3uf_LI_OSHUNT_v0_0.json",
+      "bytes": 8136416,
+      "sha256": "734a82c2508dc084a9d7b03685269cebcba2f745db9e5f1ff7a8592ea7697823"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_research_3uf_LI_OSHUNT_v0_1.json",
+      "bytes": 8258452,
+      "sha256": "526b3addadc3e5d7948a46d6efef620280ccd0dff8259dd146fb5d26a5bc5f89"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_research_3uf_SI_GSHUNT_v0_0.json",
+      "bytes": 8963193,
+      "sha256": "2df33b3b19fa833b7564e9fbbc566df9503c3eb67e390a8535a6a0ecde1200cd"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_research_3uf_SI_GSHUNT_v0_1.json",
+      "bytes": 9177669,
+      "sha256": "0d7001b602bdb2e1eab3d4381404dbc77015508b8cc0a95b0552d8b161ab96df"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_research_3uf_SI_OSHUNT_v0_0.json",
+      "bytes": 8098937,
+      "sha256": "f5d849734e11844f88a113629729e0f99491ffb68a7f05e7a5b94799f23ae7f8"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/FROZEN_validation_research_3uf_SI_OSHUNT_v0_1.json",
+      "bytes": 7741260,
+      "sha256": "6f3031e7ce6d3bcfb651143779b11a638cf80be08a94ebf114f3eef7c8459bdd"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/manifest.json",
+      "bytes": 5721,
+      "sha256": "f2bcd929acf30a16a273bb68b1266800183643d68233b458a3135e83c59ebcf6"
+    },
+    {
+      "path": "powernext/ml/data/networks_v3_validation_oracles/requests.json",
+      "bytes": 14933,
+      "sha256": "68fb2e93a5e255c12b865fd960b10d20dda221424c4cfaf6d17f3af93ff06c34"
+    }
+  ],
+  "accepted_training_dataset": "powernext/ml/data/networks_v3_r2",
+  "rejected_training_dataset": "powernext/ml/data/networks_v3",
+  "note": "Other pilot folders are diagnostic development evidence, not production training data. Validation oracles select models; they are not final test requests."
+}

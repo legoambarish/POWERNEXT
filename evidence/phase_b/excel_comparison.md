@@ -13,6 +13,18 @@ efficiency input) and the ML Helper calculations.  Formula reproduction is
 kept separate from the model comparison and does not fit corrections to the
 workbook values.
 
+An independent all-row static check then rebuilt the historical 3-uF equations
+from every one of the 2,000 `Synthetic Dataset` inputs.  The front equation is
+`1.67 sqrt((Front_R_Stage * Stages * CL)^2 + 2.5 L CL)`, the tail equation is
+`0.693 Tail_R_Stage * Stages * (3 uF / Stages + CL)`, crest is `Test_kV`, and
+stage charge is `Test_kV / (Stages * Efficiency)`.  All 2,000 rows passed each
+check and all stored residuals equal observed minus their corresponding
+theoretical value.  Both relative and absolute tolerances were `1e-12`; the
+maximum absolute errors were `2.22e-16 us` for front timing and `4.55e-13 us`
+for tail timing, with zero error for crest, charge, and all three residual
+identities.  This verifies the static workbook construction without using its
+observed values to fit any correction.
+
 The comparison sampled 12 original synthetic inputs stratified by impulse,
 workbook split, and stage band, then evaluated each input under both
 `GSHUNT_v0` and `OSHUNT_v0` using the research 3-uF detailed RLC model.  Each

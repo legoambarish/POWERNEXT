@@ -32,6 +32,20 @@ def test_zip_xml_fallback_reproduces_formula_cells():
     assert report["status_counts"] == {"REPRODUCED": 7026}
 
 
+def test_all_static_synthetic_theory_and_residual_identities_are_verified():
+    path = comparison.locate_workbook()
+    before = comparison._sha256(path)
+    report = comparison.verify_static_synthetic_dataset(path)
+    after = comparison._sha256(path)
+    assert before == comparison.EXPECTED_SOURCE_SHA256 == after
+    assert report["row_count"] == report["expected_row_count"] == 2000
+    assert report["all_rows_checked"] is True
+    assert report["id_check"]["expected_sequence"] is True
+    assert report["generator_stage_capacitance_F"] == 3.0e-6
+    assert report["all_checks_passed"] is True
+    assert all(check["count"] == 2000 and check["mismatch_count"] == 0 for check in report["checks"].values())
+
+
 def test_detailed_rlc_comparison_keeps_theoretical_and_observed_separate():
     path = comparison.locate_workbook()
     report = comparison.compare_detailed_rlc(path, sample_per_stratum=1, seed=11, n_points=1_000)

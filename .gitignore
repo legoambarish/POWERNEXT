@@ -15,5 +15,15 @@ runtime/
 *.db
 
 *.log
+/evidence/test_logs/
+# Immutable v3 data are versioned in training-data/PowerNext_Networks_v3_Data_Stage1_20261010.zip.
+# Keep these extracted working copies; they are not a second Git artifact.
+/powernext/ml/data/networks_v3/
+/powernext/ml/data/networks_v3_pilot/
+/powernext/ml/data/networks_v3_pilot_v2/
+/powernext/ml/data/networks_v3_pilot_splitfix/
+/powernext/ml/data/networks_v3_pilot_splitfix2/
+/powernext/ml/data/networks_v3_r2/
+/powernext/ml/data/networks_v3_validation_oracles/
 *.tmp
 ~$*

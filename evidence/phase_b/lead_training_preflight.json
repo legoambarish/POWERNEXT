@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "dataset": "powernext\\ml\\data\\networks_v3_r2",
+  "rows": 122000,
+  "eligible_rows": 99852,
+  "canonical_eligible": 92662,
+  "row_splits": {
+    "test": 29507,
+    "validation": 17479,
+    "train": 75014
+  },
+  "canonical_route_splits": {
+    "cpri_0p5uf:LI:GSHUNT_v0": {
+      "test": 2236,
+      "validation": 1354,
+      "train": 7348
+    },
+    "cpri_0p5uf:LI:OSHUNT_v0": {
+      "test": 2369,
+      "validation": 1394,
+      "train": 7300
+    },
+    "cpri_0p5uf:SI:GSHUNT_v0": {
+      "test": 2304,
+      "validation": 1328,
+      "train": 6940
+    },
+    "cpri_0p5uf:SI:OSHUNT_v0": {
+      "test": 2337,
+      "validation": 1321,
+      "train": 6905
+    },
+    "research_3uf:LI:GSHUNT_v0": {
+      "test": 2383,
+      "validation": 1434,
+      "train": 7855
+    },
+    "research_3uf:LI:OSHUNT_v0": {
+      "test": 2557,
+      "validation": 1394,
+      "train": 7532
+    },
+    "research_3uf:SI:GSHUNT_v0": {
+      "test": 2550,
+      "validation": 1365,
+      "train": 7695
+    },
+    "research_3uf:SI:OSHUNT_v0": {
+      "train": 9646,
+      "test": 3413,
+      "validation": 1702
+    }
+  },
+  "rows_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+  "manifest_sha256": "93f3d521d171559d2b6bd9f30d657fb98d56a1922e53d6ca627805b83df4ebc4",
+  "seconds": 27.18699999999808,
+  "scope": "Actual production loader source/hash gate, all-row split identities, eligible canonical duplicate-label consistency and 8-route nonempty split coverage. No predictive test metrics inspected."
+}

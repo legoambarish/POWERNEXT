@@ -93,6 +93,15 @@ formula cells in the source workbook: the calculator's 1.67 front heuristic,
 and weighted corrections.  The XML reader provides the same check when
 `openpyxl` is unavailable.
 
+The same report independently checks every 2,000 `Synthetic Dataset` rows.
+It rebuilds the 3-uF front, tail, crest, and stage-charge values and verifies
+the three observed-minus-theoretical residual identities.  All checks pass
+with absolute and relative tolerances of `1e-12`; the largest absolute
+reconstruction errors are `2.22e-16 us` for front timing and `4.55e-13 us`
+for tail timing, with zero crest, charge, or residual error.  These static
+checks are formula reconstruction evidence and do not fit workbook
+observations.
+
 The stratified RLC report samples original synthetic inputs by impulse type,
 workbook split, and stage band.  It maps those inputs into the 3-uF research
 profile and runs both graph assumptions.  Workbook physics values are stored
@@ -105,16 +114,39 @@ The final sample report is written to
 `evidence/phase_b/excel_comparison.json`, with an explanatory summary in
 `evidence/phase_b/excel_comparison.md`.
 
-The corrected 256-attempt-per-route pilot is retained at
-`powernext/ml/data/networks_v3_pilot_v2`.  It produced 2,048 rows, 1,684
-eligible rows, and 1,654 unique eligible response shapes.  Route unique
-eligible counts are `219, 206, 241, 237, 194, 198, 224, 135`; the research
-3-uF SI/OSHUNT route is intentionally a sparse pilot and is the first route
-for a capacity extension.  The pilot retained 156 explicit time-scope
-unsupported rows and 64 explicit 5-MV target-domain failures.  All 14 stage
-counts and all 16 one-through-four-module front/tail pair strata occur in each
-route; 220 distinct requested front/tail pairs occur per route.  The pilot
-saved 8 representative waveforms per route under the configured bound and
-completed in about 18 seconds on the bounded two-worker run.  The manifest's
-unique response-key counts, raw eligible-row count, split audits, source
-hashes, and network catalogue provenance are the gate evidence.
+The first prototype pilot at `powernext/ml/data/networks_v3_pilot` is retained
+as historical negative evidence.  Its split contract was superseded by the
+declared setup-family and normalized setup-key union fix; it is not an
+accepted training input.  The interrupted first production attempt at
+`powernext/ml/data/networks_v3` is likewise retained.  Its
+`ABORTED_SPLIT_AUDIT.json` records the explicit setup-family split violation;
+it is not resumed or used for training.
+
+The accepted corrected 256-attempt-per-route pilot is
+`powernext/ml/data/networks_v3_pilot_splitfix2`.  It produced 2,048 rows,
+1,684 eligible rows, and 1,654 unique eligible response shapes.  Actual
+`powernext_v3.training.load_rows` plus `assign_splits` accepts every explicit
+partition with zero identity collisions.  Route unique eligible counts are
+`219, 206, 241, 237, 194, 198, 224, 135`; the research 3-uF SI/OSHUNT route
+is intentionally sparse in the pilot and receives the larger production
+prefix.  The pilot retained explicit time-scope unsupported rows and target
+domain failures with null labels.  All 14 stage counts and all 16
+one-through-four-module front/tail pair strata occur in each route.  Its
+source contract is frozen by the pilot manifest; the similarly named
+`networks_v3_pilot_v2` directory remains historical until separately audited
+against the current source contract.
+
+The accepted staged production dataset is
+`powernext/ml/data/networks_v3_r2`.  The complete frozen design has 30,000
+requests per route; this first learning-curve stage evaluates the configured
+122,000-attempt prefix and ends at `STAGE_COMPLETE`.  It contains 122,000
+rows, 99,852 eligible rows, and 92,662 canonical eligible response shapes.
+Unique eligible counts by route are `10,938, 11,063, 10,572, 10,563, 11,672,
+11,483, 11,610, 14,761` in the route order listed above, so every route clears
+the 10,000-shape gate without an extension.  The independent acceptance
+record is `evidence/phase_b/production_dataset_audit.json`: it verifies the
+actual training loader/splitter, zero split identity collisions, label/null
+handling, source and row/design hashes, all 14 stages, all 16 module pairs,
+the 4,192-recipe network catalogue, and all 65 representative waveform hashes
+under the per-route cap.  No workbook observations were used for these labels
+or for request selection.

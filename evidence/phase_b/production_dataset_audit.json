@@ -1,0 +1,719 @@
+{
+  "audit_utc": "2026-10-10T12:31:33Z",
+  "checks": {
+    "all_routes_reach_target": true,
+    "design_coverage": {
+      "active_total": 122000,
+      "expected_active_total": 122000,
+      "routes": {
+        "cpri_0p5uf::LI::GSHUNT_v0": {
+          "active_attempts": 14000,
+          "active_count_match_limit": true,
+          "all_14_stages_2_to_15": true,
+          "all_16_module_pairs": true,
+          "boundary_attempts": 876,
+          "case_kind_counts": {
+            "boundary_high_capacitance": 438,
+            "boundary_low_capacitance": 438,
+            "broad_log_resistance": 6117,
+            "infeasible_target_boundary": 437,
+            "inverse_guided_probe": 6546,
+            "rare_feasible_neighborhood": 24
+          },
+          "configured_limit": 14000,
+          "front_request_unique_count": 13103,
+          "full_capacity_match_30000": true,
+          "full_capacity_rows": 30000,
+          "local_index_count": 30000,
+          "local_index_full_0_to_29999": true,
+          "module_pairs": [
+            "1x1",
+            "1x2",
+            "1x3",
+            "1x4",
+            "2x1",
+            "2x2",
+            "2x3",
+            "2x4",
+            "3x1",
+            "3x2",
+            "3x3",
+            "3x4",
+            "4x1",
+            "4x2",
+            "4x3",
+            "4x4"
+          ],
+          "rare_neighborhood_attempts": 24,
+          "stages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "tail_request_unique_count": 13102,
+          "target_crest_max_V": 5000000.0,
+          "target_crest_min_V": 50000.0,
+          "target_crest_unique_count": 17
+        },
+        "cpri_0p5uf::LI::OSHUNT_v0": {
+          "active_attempts": 14000,
+          "active_count_match_limit": true,
+          "all_14_stages_2_to_15": true,
+          "all_16_module_pairs": true,
+          "boundary_attempts": 876,
+          "case_kind_counts": {
+            "boundary_high_capacitance": 438,
+            "boundary_low_capacitance": 438,
+            "broad_log_resistance": 6117,
+            "infeasible_target_boundary": 437,
+            "inverse_guided_probe": 6546,
+            "rare_feasible_neighborhood": 24
+          },
+          "configured_limit": 14000,
+          "front_request_unique_count": 13103,
+          "full_capacity_match_30000": true,
+          "full_capacity_rows": 30000,
+          "local_index_count": 30000,
+          "local_index_full_0_to_29999": true,
+          "module_pairs": [
+            "1x1",
+            "1x2",
+            "1x3",
+            "1x4",
+            "2x1",
+            "2x2",
+            "2x3",
+            "2x4",
+            "3x1",
+            "3x2",
+            "3x3",
+            "3x4",
+            "4x1",
+            "4x2",
+            "4x3",
+            "4x4"
+          ],
+          "rare_neighborhood_attempts": 24,
+          "stages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "tail_request_unique_count": 13102,
+          "target_crest_max_V": 5000000.0,
+          "target_crest_min_V": 50000.0,
+          "target_crest_unique_count": 17
+        },
+        "cpri_0p5uf::SI::GSHUNT_v0": {
+          "active_attempts": 12000,
+          "active_count_match_limit": true,
+          "all_14_stages_2_to_15": true,
+          "all_16_module_pairs": true,
+          "boundary_attempts": 750,
+          "case_kind_counts": {
+            "boundary_high_capacitance": 375,
+            "boundary_low_capacitance": 375,
+            "broad_log_resistance": 5242,
+            "infeasible_target_boundary": 375,
+            "inverse_guided_probe": 5609,
+            "rare_feasible_neighborhood": 24
+          },
+          "configured_limit": 12000,
+          "front_request_unique_count": 11228,
+          "full_capacity_match_30000": true,
+          "full_capacity_rows": 30000,
+          "local_index_count": 30000,
+          "local_index_full_0_to_29999": true,
+          "module_pairs": [
+            "1x1",
+            "1x2",
+            "1x3",
+            "1x4",
+            "2x1",
+            "2x2",
+            "2x3",
+            "2x4",
+            "3x1",
+            "3x2",
+            "3x3",
+            "3x4",
+            "4x1",
+            "4x2",
+            "4x3",
+            "4x4"
+          ],
+          "rare_neighborhood_attempts": 24,
+          "stages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "tail_request_unique_count": 11228,
+          "target_crest_max_V": 5000000.0,
+          "target_crest_min_V": 50000.0,
+          "target_crest_unique_count": 17
+        },
+        "cpri_0p5uf::SI::OSHUNT_v0": {
+          "active_attempts": 12000,
+          "active_count_match_limit": true,
+          "all_14_stages_2_to_15": true,
+          "all_16_module_pairs": true,
+          "boundary_attempts": 750,
+          "case_kind_counts": {
+            "boundary_high_capacitance": 375,
+            "boundary_low_capacitance": 375,
+            "broad_log_resistance": 5242,
+            "infeasible_target_boundary": 375,
+            "inverse_guided_probe": 5609,
+            "rare_feasible_neighborhood": 24
+          },
+          "configured_limit": 12000,
+          "front_request_unique_count": 11228,
+          "full_capacity_match_30000": true,
+          "full_capacity_rows": 30000,
+          "local_index_count": 30000,
+          "local_index_full_0_to_29999": true,
+          "module_pairs": [
+            "1x1",
+            "1x2",
+            "1x3",
+            "1x4",
+            "2x1",
+            "2x2",
+            "2x3",
+            "2x4",
+            "3x1",
+            "3x2",
+            "3x3",
+            "3x4",
+            "4x1",
+            "4x2",
+            "4x3",
+            "4x4"
+          ],
+          "rare_neighborhood_attempts": 24,
+          "stages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "tail_request_unique_count": 11228,
+          "target_crest_max_V": 5000000.0,
+          "target_crest_min_V": 50000.0,
+          "target_crest_unique_count": 17
+        },
+        "research_3uf::LI::GSHUNT_v0": {
+          "active_attempts": 16000,
+          "active_count_match_limit": true,
+          "all_14_stages_2_to_15": true,
+          "all_16_module_pairs": true,
+          "boundary_attempts": 1000,
+          "case_kind_counts": {
+            "boundary_high_capacitance": 500,
+            "boundary_low_capacitance": 500,
+            "broad_log_resistance": 6992,
+            "infeasible_target_boundary": 500,
+            "inverse_guided_probe": 7484,
+            "rare_feasible_neighborhood": 24
+          },
+          "configured_limit": 16000,
+          "front_request_unique_count": 14979,
+          "full_capacity_match_30000": true,
+          "full_capacity_rows": 30000,
+          "local_index_count": 30000,
+          "local_index_full_0_to_29999": true,
+          "module_pairs": [
+            "1x1",
+            "1x2",
+            "1x3",
+            "1x4",
+            "2x1",
+            "2x2",
+            "2x3",
+            "2x4",
+            "3x1",
+            "3x2",
+            "3x3",
+            "3x4",
+            "4x1",
+            "4x2",
+            "4x3",
+            "4x4"
+          ],
+          "rare_neighborhood_attempts": 24,
+          "stages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "tail_request_unique_count": 14978,
+          "target_crest_max_V": 5000000.0,
+          "target_crest_min_V": 50000.0,
+          "target_crest_unique_count": 17
+        },
+        "research_3uf::LI::OSHUNT_v0": {
+          "active_attempts": 16000,
+          "active_count_match_limit": true,
+          "all_14_stages_2_to_15": true,
+          "all_16_module_pairs": true,
+          "boundary_attempts": 1000,
+          "case_kind_counts": {
+            "boundary_high_capacitance": 500,
+            "boundary_low_capacitance": 500,
+            "broad_log_resistance": 6992,
+            "infeasible_target_boundary": 500,
+            "inverse_guided_probe": 7484,
+            "rare_feasible_neighborhood": 24
+          },
+          "configured_limit": 16000,
+          "front_request_unique_count": 14979,
+          "full_capacity_match_30000": true,
+          "full_capacity_rows": 30000,
+          "local_index_count": 30000,
+          "local_index_full_0_to_29999": true,
+          "module_pairs": [
+            "1x1",
+            "1x2",
+            "1x3",
+            "1x4",
+            "2x1",
+            "2x2",
+            "2x3",
+            "2x4",
+            "3x1",
+            "3x2",
+            "3x3",
+            "3x4",
+            "4x1",
+            "4x2",
+            "4x3",
+            "4x4"
+          ],
+          "rare_neighborhood_attempts": 24,
+          "stages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "tail_request_unique_count": 14978,
+          "target_crest_max_V": 5000000.0,
+          "target_crest_min_V": 50000.0,
+          "target_crest_unique_count": 17
+        },
+        "research_3uf::SI::GSHUNT_v0": {
+          "active_attempts": 14000,
+          "active_count_match_limit": true,
+          "all_14_stages_2_to_15": true,
+          "all_16_module_pairs": true,
+          "boundary_attempts": 876,
+          "case_kind_counts": {
+            "boundary_high_capacitance": 438,
+            "boundary_low_capacitance": 438,
+            "broad_log_resistance": 6117,
+            "infeasible_target_boundary": 437,
+            "inverse_guided_probe": 6546,
+            "rare_feasible_neighborhood": 24
+          },
+          "configured_limit": 14000,
+          "front_request_unique_count": 13102,
+          "full_capacity_match_30000": true,
+          "full_capacity_rows": 30000,
+          "local_index_count": 30000,
+          "local_index_full_0_to_29999": true,
+          "module_pairs": [
+            "1x1",
+            "1x2",
+            "1x3",
+            "1x4",
+            "2x1",
+            "2x2",
+            "2x3",
+            "2x4",
+            "3x1",
+            "3x2",
+            "3x3",
+            "3x4",
+            "4x1",
+            "4x2",
+            "4x3",
+            "4x4"
+          ],
+          "rare_neighborhood_attempts": 24,
+          "stages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "tail_request_unique_count": 13102,
+          "target_crest_max_V": 5000000.0,
+          "target_crest_min_V": 50000.0,
+          "target_crest_unique_count": 17
+        },
+        "research_3uf::SI::OSHUNT_v0": {
+          "active_attempts": 24000,
+          "active_count_match_limit": true,
+          "all_14_stages_2_to_15": true,
+          "all_16_module_pairs": true,
+          "boundary_attempts": 1500,
+          "case_kind_counts": {
+            "boundary_high_capacitance": 750,
+            "boundary_low_capacitance": 750,
+            "broad_log_resistance": 10492,
+            "infeasible_target_boundary": 750,
+            "inverse_guided_probe": 11234,
+            "rare_feasible_neighborhood": 24
+          },
+          "configured_limit": 24000,
+          "front_request_unique_count": 22478,
+          "full_capacity_match_30000": true,
+          "full_capacity_rows": 30000,
+          "local_index_count": 30000,
+          "local_index_full_0_to_29999": true,
+          "module_pairs": [
+            "1x1",
+            "1x2",
+            "1x3",
+            "1x4",
+            "2x1",
+            "2x2",
+            "2x3",
+            "2x4",
+            "3x1",
+            "3x2",
+            "3x3",
+            "3x4",
+            "4x1",
+            "4x2",
+            "4x3",
+            "4x4"
+          ],
+          "rare_neighborhood_attempts": 24,
+          "stages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "tail_request_unique_count": 22478,
+          "target_crest_max_V": 5000000.0,
+          "target_crest_min_V": 50000.0,
+          "target_crest_unique_count": 17
+        }
+      },
+      "unknown_route_count": 0,
+      "unknown_route_rows": []
+    },
+    "design_file_hash": {
+      "actual": "d6498b8bce3bc62b47dd166e8a755d2b38289696bdacc0709e5586498784c880",
+      "expected": "d6498b8bce3bc62b47dd166e8a755d2b38289696bdacc0709e5586498784c880",
+      "match": true
+    },
+    "eligible_rows_match_progress": true,
+    "label_consistency": {
+      "eligible_label_null_or_nonfinite_count": 0,
+      "eligible_row_count": 99852,
+      "eligible_status_mismatch_count": 0,
+      "examples": {
+        "eligible_label": [],
+        "eligible_status": [],
+        "invalid_label": []
+      },
+      "invalid_or_noneligible_nonnull_label_count": 0,
+      "invalid_or_noneligible_rows": 22148,
+      "numeric_status_counts": {
+        "None": 15056,
+        "VALID": 106944
+      },
+      "status_counts": {
+        "INVALID_OR_UNSUPPORTED": 15056,
+        "SIMULATED": 106944
+      },
+      "waveform_status_counts": {
+        "INDETERMINATE": 7092,
+        "None": 15056,
+        "VALID_CLEAN_FULL_IMPULSE": 99852
+      }
+    },
+    "network_catalog": {
+      "manifest_provenance": {
+        "api": "powernext_v3.networks.enumerate_networks",
+        "fallback_single_resistor": false,
+        "max_modules": 4,
+        "module_counts": {
+          "1": 6,
+          "2": 42,
+          "3": 364,
+          "4": 3780
+        },
+        "recipe_count": 4192
+      },
+      "module_counts": {
+        "1": 6,
+        "2": 42,
+        "3": 364,
+        "4": 3780
+      },
+      "recipe_count": 4192
+    },
+    "overall_pass": true,
+    "physics_source_fingerprint_current": {
+      "current": {
+        "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+        "sources": {
+          "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+          "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+          "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+          "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+          "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+          "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+          "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+        }
+      },
+      "match": true,
+      "recorded": {
+        "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+        "sources": {
+          "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+          "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+          "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+          "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+          "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+          "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+          "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+        }
+      }
+    },
+    "progress_complete": true,
+    "raw_eligible_route_rows": {
+      "cpri_0p5uf::LI::GSHUNT_v0": 11920,
+      "cpri_0p5uf::LI::OSHUNT_v0": 12122,
+      "cpri_0p5uf::SI::GSHUNT_v0": 11361,
+      "cpri_0p5uf::SI::OSHUNT_v0": 11343,
+      "research_3uf::LI::GSHUNT_v0": 12887,
+      "research_3uf::LI::OSHUNT_v0": 12760,
+      "research_3uf::SI::GSHUNT_v0": 12520,
+      "research_3uf::SI::OSHUNT_v0": 14939
+    },
+    "response_group_missing_eligible": 0,
+    "row_count": true,
+    "rows_hash": {
+      "actual": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+      "expected": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+      "match": true
+    },
+    "source_hashes_current": {
+      "powernext_v3/dataset.py": {
+        "actual": "7d6bcd573dbabbf6c4a6eff4d1a7c35cb420a0028878e9d3adb20861c27f13ee",
+        "expected": "7d6bcd573dbabbf6c4a6eff4d1a7c35cb420a0028878e9d3adb20861c27f13ee",
+        "match": true
+      },
+      "powernext_v3/features.py": {
+        "actual": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+        "expected": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+        "match": true
+      },
+      "powernext_v3/networks.py": {
+        "actual": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "expected": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "match": true
+      },
+      "powernext_v3/physics.py": {
+        "actual": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "expected": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "match": true
+      },
+      "powernext_v3/profiles.py": {
+        "actual": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6",
+        "expected": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6",
+        "match": true
+      }
+    },
+    "split_counts_match_manifest": true,
+    "split_identity_collisions": {
+      "collision_count": 0,
+      "examples": [],
+      "identity_token_count": 296886
+    },
+    "status_complete": true,
+    "training_dedup": {
+      "canonical_count_match_manifest": true,
+      "canonical_policy": "lexicographically_smallest_row_id_per_route_response_group_key",
+      "canonical_rows": 92662,
+      "canonical_split_counts": {
+        "test": 20149,
+        "train": 61221,
+        "validation": 11292
+      },
+      "duplicate_group_count": 971,
+      "duplicate_groups_by_route": {
+        "cpri_0p5uf:LI:GSHUNT_v0": 135,
+        "cpri_0p5uf:LI:OSHUNT_v0": 149,
+        "cpri_0p5uf:SI:GSHUNT_v0": 81,
+        "cpri_0p5uf:SI:OSHUNT_v0": 84,
+        "research_3uf:LI:GSHUNT_v0": 156,
+        "research_3uf:LI:OSHUNT_v0": 179,
+        "research_3uf:SI:GSHUNT_v0": 77,
+        "research_3uf:SI:OSHUNT_v0": 110
+      },
+      "duplicates_removed": 7190,
+      "duplicates_removed_by_route": {
+        "cpri_0p5uf:LI:GSHUNT_v0": 982,
+        "cpri_0p5uf:LI:OSHUNT_v0": 1059,
+        "cpri_0p5uf:SI:GSHUNT_v0": 789,
+        "cpri_0p5uf:SI:OSHUNT_v0": 780,
+        "research_3uf:LI:GSHUNT_v0": 1215,
+        "research_3uf:LI:OSHUNT_v0": 1277,
+        "research_3uf:SI:GSHUNT_v0": 910,
+        "research_3uf:SI:OSHUNT_v0": 178
+      },
+      "input_eligible_rows": 99852,
+      "label_tolerance": {
+        "atol": {
+          "front_us": 1e-07,
+          "gain": 1e-10,
+          "tail_us": 1e-05
+        },
+        "rtol": 1e-08
+      },
+      "manifest_canonical_count": 92662,
+      "unkeyed_rows_retained": 0
+    },
+    "training_split": {
+      "assignment_counts": {
+        "test": 29507,
+        "train": 75014,
+        "validation": 17479
+      },
+      "assignment_matches_explicit_rows": true,
+      "manifest_counts": {
+        "test": 29507,
+        "train": 75014,
+        "validation": 17479
+      },
+      "mismatch_count": 0
+    },
+    "unique_route_shapes": {
+      "cpri_0p5uf::LI::GSHUNT_v0": 10938,
+      "cpri_0p5uf::LI::OSHUNT_v0": 11063,
+      "cpri_0p5uf::SI::GSHUNT_v0": 10572,
+      "cpri_0p5uf::SI::OSHUNT_v0": 10563,
+      "research_3uf::LI::GSHUNT_v0": 11672,
+      "research_3uf::LI::OSHUNT_v0": 11483,
+      "research_3uf::SI::GSHUNT_v0": 11610,
+      "research_3uf::SI::OSHUNT_v0": 14761
+    },
+    "unique_route_shapes_match_manifest": true,
+    "waveforms": {
+      "all_within_cap": true,
+      "bad_count": 0,
+      "configured_per_route_cap": 32,
+      "counts_by_route": {
+        "cpri_0p5uf::LI::GSHUNT_v0": 8,
+        "cpri_0p5uf::LI::OSHUNT_v0": 8,
+        "cpri_0p5uf::SI::GSHUNT_v0": 8,
+        "cpri_0p5uf::SI::OSHUNT_v0": 8,
+        "research_3uf::LI::GSHUNT_v0": 8,
+        "research_3uf::LI::OSHUNT_v0": 9,
+        "research_3uf::SI::GSHUNT_v0": 8,
+        "research_3uf::SI::OSHUNT_v0": 8
+      },
+      "examples": [],
+      "file_count": 65,
+      "max_route_count": 9,
+      "referenced_path_count": 65,
+      "unreferenced_files": []
+    }
+  },
+  "dataset": "powernext\\ml\\data\\networks_v3_r2",
+  "dataset_id": "v3_37efa30cfc8f8006a483",
+  "errors": [],
+  "schema_version": "powernext_v3_production_quality_audit_1.0",
+  "status": "STAGE_COMPLETE"
+}

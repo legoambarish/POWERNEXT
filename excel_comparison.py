@@ -31,7 +31,7 @@ import xml.etree.ElementTree as ET
 
 WORKBOOK_NAME = "Hybrid_Physics_ML_Impulse_Generator_Optimiser.xlsx"
 EXPECTED_SOURCE_SHA256 = "e855eadbe4d6da2579316e89e025e6990f9ba3c522a5af96d1dd2a5522d77480"
-COMPARISON_SCHEMA_VERSION = "powernext_v3_excel_comparison_1.0"
+COMPARISON_SCHEMA_VERSION = "powernext_v3_excel_comparison_1.1"
 
 
 def _finite(value: Any) -> float | None:
@@ -399,6 +399,164 @@ def _synthetic_rows(book: Mapping[str, Any]) -> list[dict[str, Any]]:
     return records
 
 
+_STATIC_SYNTHETIC_REL_TOLERANCE = 1.0e-12
+_STATIC_SYNTHETIC_ABS_TOLERANCE = 1.0e-12
+
+
+def _static_check(
+    values: Sequence[tuple[Any, Any, Any]],
+    *,
+    unit: str,
+    tolerance: float = _STATIC_SYNTHETIC_ABS_TOLERANCE,
+    relative_tolerance: float = _STATIC_SYNTHETIC_REL_TOLERANCE,
+    mismatch_limit: int = 20,
+) -> dict[str, Any]:
+    """Summarize an independent all-row identity check.
+
+    ``values`` contains ``(row_id, expected, actual)`` triples.  Keeping the
+    mismatch sample small makes the report compact while the counts and
+    maxima still cover every static workbook row.
+    """
+
+    mismatch_count = 0
+    missing_count = 0
+    max_absolute_error = 0.0
+    max_relative_error = 0.0
+    worst_row_id: Any = None
+    mismatches: list[dict[str, Any]] = []
+    checked = 0
+    for row_id, expected_raw, actual_raw in values:
+        expected = _finite(expected_raw)
+        actual = _finite(actual_raw)
+        if expected is None or actual is None:
+            missing_count += 1
+            mismatch_count += 1
+            if len(mismatches) < mismatch_limit:
+                mismatches.append({"row_id": row_id, "expected": expected, "actual": actual, "reason": "missing_or_nonfinite"})
+            continue
+        checked += 1
+        absolute_error = abs(actual - expected)
+        relative_error = absolute_error / abs(expected) if expected != 0.0 else (0.0 if absolute_error == 0.0 else math.inf)
+        if absolute_error > max_absolute_error:
+            max_absolute_error = absolute_error
+            worst_row_id = row_id
+        max_relative_error = max(max_relative_error, relative_error)
+        if not math.isclose(actual, expected, rel_tol=relative_tolerance, abs_tol=tolerance):
+            mismatch_count += 1
+            if len(mismatches) < mismatch_limit:
+                mismatches.append({"row_id": row_id, "expected": expected, "actual": actual, "absolute_error": absolute_error, "relative_error": relative_error, "reason": "outside_tolerance"})
+    return {
+        "count": len(values),
+        "finite_count": checked,
+        "missing_or_nonfinite_count": missing_count,
+        "mismatch_count": mismatch_count,
+        "max_absolute_error": max_absolute_error,
+        "max_relative_error": max_relative_error,
+        "worst_row_id": worst_row_id,
+        "unit": unit,
+        "absolute_tolerance": tolerance,
+        "relative_tolerance": relative_tolerance,
+        "all_passed": mismatch_count == 0,
+        "mismatch_examples": mismatches,
+    }
+
+
+def verify_static_synthetic_dataset(path: str | Path) -> dict[str, Any]:
+    """Verify all 2,000 static workbook theoretical and residual identities.
+
+    This pass is independent of the formula-cell reproduction and the sampled
+    v3 transient comparison.  It rebuilds the historical 3-uF equations from
+    each row's visible inputs, then checks the stored theoretical columns,
+    charge column, and observed-minus-theory residual columns.  The workbook's
+    observed values remain diagnostic source values; this function does not
+    fit or alter them.
+    """
+
+    source = Path(path)
+    book = read_workbook(source)
+    records = _synthetic_rows(book)
+    row_ids = [_finite(record.get("ID")) for record in records]
+    expected_ids = list(range(1, len(records) + 1))
+    id_values = [int(value) for value in row_ids if value is not None and float(value).is_integer()]
+    id_check = {
+        "count": len(records),
+        "unique_count": len(set(id_values)),
+        "expected_sequence": id_values == expected_ids,
+        "all_rows_have_integer_id": len(id_values) == len(records),
+    }
+
+    front_formula: list[tuple[Any, Any, Any]] = []
+    tail_formula: list[tuple[Any, Any, Any]] = []
+    crest_formula: list[tuple[Any, Any, Any]] = []
+    charge_formula: list[tuple[Any, Any, Any]] = []
+    residual_front: list[tuple[Any, Any, Any]] = []
+    residual_tail: list[tuple[Any, Any, Any]] = []
+    residual_crest: list[tuple[Any, Any, Any]] = []
+    static_rows: list[dict[str, Any]] = []
+    for record in records:
+        row_id = record.get("ID")
+        stages = _finite(record.get("Stages"))
+        test_kV = _finite(record.get("Test_kV"))
+        efficiency = _finite(record.get("Efficiency"))
+        front_resistance = _finite(record.get("Front_R_Stage"))
+        tail_resistance = _finite(record.get("Tail_R_Stage"))
+        inductance_uH = _finite(record.get("L_uH"))
+        capacitance_pF = [_finite(record.get(name)) for name in ("Load_C_pF", "Divider_C_pF", "Stray_C_pF")]
+        charge_expected = None
+        front_expected = None
+        tail_expected = None
+        crest_expected = test_kV
+        if stages is not None and test_kV is not None and efficiency not in (None, 0.0):
+            charge_expected = test_kV / (stages * efficiency)
+        if stages not in (None, 0.0) and all(value is not None for value in (front_resistance, inductance_uH, *capacitance_pF)):
+            cl_F = sum(float(value) for value in capacitance_pF) * 1e-12
+            front_expected = 1.67 * math.sqrt((front_resistance * stages * cl_F) ** 2 + 2.5 * inductance_uH * 1e-6 * cl_F) * 1e6
+        if stages not in (None, 0.0) and all(value is not None for value in (tail_resistance, *capacitance_pF)):
+            cl_F = sum(float(value) for value in capacitance_pF) * 1e-12
+            # The workbook's static synthetic generator uses a 3-uF bank,
+            # split over its declared number of stages.
+            generator_stage_capacitance_F = 3.0e-6 / stages
+            tail_expected = 0.693 * tail_resistance * stages * (generator_stage_capacitance_F + cl_F) * 1e6
+        front_formula.append((row_id, front_expected, record.get("Physics_FrontPeak_us")))
+        tail_formula.append((row_id, tail_expected, record.get("Physics_Tail_us")))
+        crest_formula.append((row_id, crest_expected, record.get("Physics_Crest_kV")))
+        charge_formula.append((row_id, charge_expected, record.get("Charge_kV_Stage")))
+        residual_front.append((row_id, _finite(record.get("Observed_FrontPeak_us")) - _finite(record.get("Physics_FrontPeak_us")) if _finite(record.get("Observed_FrontPeak_us")) is not None and _finite(record.get("Physics_FrontPeak_us")) is not None else None, record.get("Residual_FrontPeak")))
+        residual_tail.append((row_id, _finite(record.get("Observed_Tail_us")) - _finite(record.get("Physics_Tail_us")) if _finite(record.get("Observed_Tail_us")) is not None and _finite(record.get("Physics_Tail_us")) is not None else None, record.get("Residual_Tail")))
+        residual_crest.append((row_id, _finite(record.get("Observed_Crest_kV")) - _finite(record.get("Physics_Crest_kV")) if _finite(record.get("Observed_Crest_kV")) is not None and _finite(record.get("Physics_Crest_kV")) is not None else None, record.get("Residual_Crest")))
+        static_rows.append({"row_id": row_id, "expected_front_us": front_expected, "expected_tail_us": tail_expected, "expected_crest_kV": crest_expected, "expected_charge_kV_stage": charge_expected})
+
+    checks = {
+        "physics_front_us": _static_check(front_formula, unit="us"),
+        "physics_tail_us": _static_check(tail_formula, unit="us"),
+        "physics_crest_kV": _static_check(crest_formula, unit="kV"),
+        "charge_kV_stage": _static_check(charge_formula, unit="kV"),
+        "residual_front_us": _static_check(residual_front, unit="us"),
+        "residual_tail_us": _static_check(residual_tail, unit="us"),
+        "residual_crest_kV": _static_check(residual_crest, unit="kV"),
+    }
+    return {
+        "sheet": "Synthetic Dataset",
+        "row_count": len(records),
+        "expected_row_count": 2000,
+        "all_rows_checked": len(records) == 2000,
+        "id_check": id_check,
+        "generator_stage_capacitance_F": 3.0e-6,
+        "equations": {
+            "front_us": "1.67 * sqrt((Front_R_Stage * Stages * CL_F)^2 + 2.5 * L_uH * 1e-6 * CL_F) * 1e6",
+            "tail_us": "0.693 * Tail_R_Stage * Stages * (3e-6 / Stages + CL_F) * 1e6",
+            "crest_kV": "Test_kV",
+            "charge_kV_stage": "Test_kV / (Stages * Efficiency)",
+            "residual_front_us": "Observed_FrontPeak_us - Physics_FrontPeak_us",
+            "residual_tail_us": "Observed_Tail_us - Physics_Tail_us",
+            "residual_crest_kV": "Observed_Crest_kV - Physics_Crest_kV",
+        },
+        "checks": checks,
+        "all_checks_passed": len(records) == 2000 and id_check["expected_sequence"] and all(check["all_passed"] for check in checks.values()),
+        "static_rows": static_rows,
+    }
+
+
 def representative_inputs(path: str | Path, *, sample_per_stratum: int = 2, seed: int = 20261010) -> list[dict[str, Any]]:
     """Select original inputs by impulse type, split, and stage band."""
 
@@ -568,7 +726,8 @@ def compare_detailed_rlc(path: str | Path, *, sample_per_stratum: int = 2, seed:
 def compare_workbook(path: str | Path | None = None, *, sample_per_stratum: int = 2, seed: int = 20261010, n_points: int = 1_600, include_rlc: bool = True) -> dict[str, Any]:
     source = locate_workbook(path) if path is None else Path(path)
     formula_report = reproduce_numeric_formulas(source)
-    report: dict[str, Any] = {"schema_version": COMPARISON_SCHEMA_VERSION, "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "source": {"path": str(source), "sha256": _sha256(source), "expected_sha256": EXPECTED_SOURCE_SHA256, "unchanged_check": _sha256(source) == EXPECTED_SOURCE_SHA256}, "formula_reproduction": formula_report, "calculator_method": {"front_heuristic": 1.67, "tail_heuristic": 0.693, "efficiency_input": 0.82, "crest_rule": "Physics crest equals workbook Test_kV target; no observed crest is inferred."}}
+    static_verification = verify_static_synthetic_dataset(source)
+    report: dict[str, Any] = {"schema_version": COMPARISON_SCHEMA_VERSION, "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "source": {"path": str(source), "sha256": _sha256(source), "expected_sha256": EXPECTED_SOURCE_SHA256, "unchanged_check": _sha256(source) == EXPECTED_SOURCE_SHA256}, "formula_reproduction": formula_report, "static_synthetic_verification": static_verification, "calculator_method": {"front_heuristic": 1.67, "tail_heuristic": 0.693, "efficiency_input": 0.82, "crest_rule": "Physics crest equals workbook Test_kV target; no observed crest is inferred."}}
     if include_rlc:
         report["detailed_rlc_comparison"] = compare_detailed_rlc(source, sample_per_stratum=sample_per_stratum, seed=seed, n_points=n_points)
     return report
@@ -586,7 +745,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     report = compare_workbook(args.workbook, sample_per_stratum=args.sample_per_stratum, seed=args.seed, n_points=args.n_points, include_rlc=not args.formula_only)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(__import__("json").dumps(report, indent=2, sort_keys=True, allow_nan=False), encoding="utf-8")
-    print(__import__("json").dumps({"output": str(args.output), "formula_status": report["formula_reproduction"]["status_counts"], "source_unchanged": report["source"]["unchanged_check"], "comparison_count": report.get("detailed_rlc_comparison", {}).get("comparison_count", 0)}, indent=2, sort_keys=True))
+    print(__import__("json").dumps({"output": str(args.output), "formula_status": report["formula_reproduction"]["status_counts"], "static_synthetic_verification": report["static_synthetic_verification"]["all_checks_passed"], "source_unchanged": report["source"]["unchanged_check"], "comparison_count": report.get("detailed_rlc_comparison", {}).get("comparison_count", 0)}, indent=2, sort_keys=True))
     return 0
 
 
