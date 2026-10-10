@@ -14,3 +14,4 @@ powernext/ml/powernext_ml/*.py -text
 powernext/optimizer/powernext_optimizer/*.py -text
 powernext_integrity.py -text
 powernext_app/*.py -text
+powernext_v3/*.py -text

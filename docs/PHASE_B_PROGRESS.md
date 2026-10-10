@@ -48,3 +48,24 @@ manifests and commit. Nothing in this file claims those gates already passed.
 
 Profile-aware Physics integration: seven new tests passed (legacy single-response equivalence in both modes/topologies, two-domain energy, independent zero-L oracle, full-stage GSHUNT reduction, exact charge/polarity reuse, invalid constraints). Legacy scientific files remain unchanged.
 
+## Network and search increment
+
+- Exact canonical enumeration: 6 / 48 / 412 / 4192 physical recipes through
+  one / two / three / four modules; 6 / 48 / 407 / 4080 exact resistance groups.
+- Full four-module space: 233,049,600 electrical response configurations across
+  fourteen stage counts. Integer indexing and streamed deterministic traversal
+  avoid materializing this Cartesian product.
+- New network + Physics unit tests: 22 passed. Optimizer tests: 10 passed.
+- New complete-Physics SI replay: all 504 settings, 14 passes, 27 unsupported;
+  same best N=9, Rf=3700, Rt=5000, charge=164366.2942328 V as legacy evidence.
+  One development run took 6.40 seconds; this is not a controlled speedup claim.
+- Rare LI test: deliberately wrong ML timing predictions still retain the sole
+  passing setting via the complete small-catalog fallback.
+- Search results structurally separate passing alternatives and failed
+  diagnostics; partial catalog and partial Physics coverage are explicit.
+- Dataset review identified sampling correlation, stage coverage, split-identity,
+  and exception-handling issues before any full generation. Worker corrections
+  are required before freezing the dataset design.
+- Model selection must include waveform-feasibility ranking metrics; gain-order
+  correlation alone is not acceptable evidence of candidate retention.
+
