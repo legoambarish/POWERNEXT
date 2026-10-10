@@ -1,38 +1,27 @@
-# Phase B completion gates
+# Exact-two production acceptance
 
-**Current gate: EXACTLY TWO resistors on EACH front and tail branch.** The historical table below records the completed 1–4 dataset/model campaign and prior scope, not acceptance of the new exact-two release. New data, 32 fits, eight selected models, exact-two joint search, fresh benchmarks and extracted release acceptance must all pass before final completion. Active paths are `networks_exact2_v5`; original and intermediate artifacts remain historical.
+Final scope: exactly two physical resistors in each front and tail branch, either series or parallel. Both branches are optimized together. Single-, three- and four-module recipes are excluded from the final public optimizer and new training set. The original workspaces and older artifacts remain historical compatibility features.
 
-New exact-two acceptance evidence is collected under `evidence/exact2_v5`.
-
-This is a completion ledger, not a claim that pending items have passed.
-The full approved scope remains active until every required deliverable has
-current evidence. The original accepted release and its ZIP are unchanged.
-
-| Requirement | Current evidence/status |
+| Gate | Evidence / status |
 |---|---|
-| Supported two/three-module canonical networks | Two: 48 recipes/groups; three: 412 recipes/407 groups. Historical four-module artifacts preserved; further work stopped by scope revision |
-| Uniform stage configuration and BOM | Implemented; unknown inventory remains explicit |
-| Both separate capacitance profiles | Implemented; energy-domain and numerical tests pass |
-| Preserve legacy numerical behavior | 504-case SI reproduced; all 506 integrated checks passed, including 100 v3 tests |
-| Optimized detailed Physics verification | Linear response reuse tested against independent solves |
-| ML operational ranking and adaptive expansion | Eight selected models load; production API/browser audit passes; 17-case four-policy benchmark is complete, with ML operationally exercised but no incremental retention/regret benefit over analytical demonstrated; shared-load timing caveat applies |
-| Complete declared-catalog capability | 504 regression and sixteen 6912-candidate validation oracles complete |
-| Accurate no-solution and partial-search semantics | New optimizer unit tests pass |
-| Comprehensive separate datasets | R2 complete before scope revision: 122000 attempts / 92662 canonical eligible shapes, including historical one-through-four-module shapes; new work restricted to two/three |
-| Leakage and source integrity | Worker and lead actual-loader audits pass; zero split identity collisions; initial stage archived and verified |
-| Four-model comparison for all eight routes | All 32 train-only candidates evaluated; eight selections frozen; final held-out errors/OOD/throughput in PHASE_B_MODEL_REPORT.md |
-| Selection using independent optimization validation | Strict v2 replay reproduces all 32 candidate ranking results and all eight selections; six routes use feasible-request retention/regret and two research OSHUNT routes explicitly use regression fallback |
-| Learning curves and generalization evidence | 25/50/100% curves complete; preregistered validation gate freezes initial data stage; curves still improve and do not establish a plateau |
-| Independent Excel reproduction and 3 uF replay | 7026 numeric formula cells and all 2000 static rows reproduced; 24 transient comparisons with 6 explicit unsupported cases |
-| UI domain/network/coverage distinctions | Production eight-route API audit and rendered selected-model browser audit pass |
-| Fixed-setting forward prediction | Eight actual selected routes pass; route mismatch rejected; ML and Physics values/support remain separate |
-| Frozen prediction and later scalar reference | Implemented; hash integrity and later reference tests pass |
-| Raw-waveform evidence preservation and qualified limits | Implemented and API tested; qualified scope retained |
-| Four-policy performance benchmarks | 17 hashed case summaries complete: 12/12 feasible-request retention for analytical/ML/combined, 1,019/1,019 analytical and ML passing alternatives, 1,014/1,019 combined, zero observed regret; timings are shared-load observations, not controlled speedup evidence |
-| Rare feasible retention | Deliberately wrong ML still retains sole LI pass in small-catalog fallback |
-| Offline extracted release, manifests, source identity | New builder prepared; final packaging pending |
-| Documentation, artifacts, commits and handoff | Benchmark evidence and handoff documentation recorded; extracted-package acceptance and package manifest checks remain pending |
+| Exact-two joint catalog | PASS: 42 recipes per branch, 1,764 front/tail pairs per stage, 24,696 candidates over stages 2–15 |
+| Dataset scope and integrity | PASS: 78,244 raw / 66,682 eligible / 66,244 canonical records; actual tree validation, hashes, grouped splits and deduplication pass |
+| Joint front/tail coverage | PASS: every route attempts all 1,764 pairs in all four series/parallel combinations; unsupported labels remain excluded and documented |
+| Separate domains | PASS: separate domain/mode/topology fitting and serving; the tagged storage container does not pool domains in an estimator |
+| Four approaches on eight routes | PASS: 32 final candidates plus nested learning curves; eight selections frozen from validation |
+| Independent selection Physics | PASS: 16 request oracles, 84,672 candidate evaluations; six routes have feasible retention/regret evidence, two research OSHUNT routes use declared regression fallback |
+| Actual serving models | PASS: all eight selected exact-two models load and produce application predictions; six residual ExtraTrees, two residual HistGradientBoosting |
+| Full catalog serving | PASS: all eight routes score 24,696 joint candidates and verify 256 with Physics; bounded results are labelled partial |
+| Public UI / fixed settings | PASS: browser scope/count/model smoke, exact-two trees on both branches, separate ML and detailed Physics display |
+| Source regression | PASS: 523 counted tests plus UI race check across ten suites; post-digest-fix ML tests separately pass 29/29 |
+| Fresh four-policy final benchmark | PASS: 16 fresh requests plus one known regression; 12/12 feasible requests retained, zero observed best-score regret; ML finds 732/732 reference alternatives, combined 715/732; no test-driven selection/refit |
+| Extracted offline release | PASS: extracted bundled runtime, all eight gates, no pending reasons; 16,737 immutable files verified before and after execution; [companion receipt](../evidence/exact2_v5/offline_release_acceptance.json) |
+| Original accepted release | PRESERVED: original ZIP SHA256 297c6b3530f7933436ce2daf4b503ea5307873d291884e5f45ae2cc1ef047f98 verified unchanged |
+| Original CPRI workbook | Independent comparison only; never used for training labels; prior formula and transient comparison evidence retained |
+| Independent two-versus-three study | COMPLETE: five actual-waveform comparisons, full overlays and fixed-stage/fixed-charge diagnostics; no failed baseline becomes passing in the sample |
 
-No real-machine calibration, laboratory mounting approval, or IEC measurement
-software qualification is claimed. Neither a time-limited search nor an
-unsupported waveform constitutes proof of unrestricted infeasibility.
+The active dataset is `powernext/ml/data/networks_exact2_v5_aug1`; active model and result directories are `networks_exact2_v5`. Original v3 and intermediate filter artifacts are historical. New evidence is under `evidence/exact2_v5`.
+
+See [data report](EXACT2_DATASET_REPORT.md), [model report](EXACT2_MODEL_REPORT.md), [scope decision](FINAL_RESISTOR_SCOPE_DECISION.md), [waveform comparison](TWO_VS_THREE_PRELIMINARY.md), and the [actual-model audit](../evidence/exact2_v5/actual_model_integration.json).
+
+Dataset rows within a setup family are correlated. The five-context supplement covers every resistor pair with stages distributed across 2–15; it does not simulate every pair at every stage and every possible setup. Numerical unsupported results and a bounded search without a pass are not proof of unrestricted infeasibility. Hardware inventory, mounting, pulse ratings and laboratory validation remain unverified. The 3 µF profile is a separate research domain, not a confirmed second CPRI machine.

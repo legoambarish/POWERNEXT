@@ -2,6 +2,12 @@
 
 This report covers the active exact-two serving scope: exactly two resistor leaves in each front and tail branch, with canonical series or parallel (`S/P`) roots. All 32 candidates (four candidates across eight routes) were fit from the immutable composite Physics dataset. Candidate selection used validation partitions and the independent request oracle; held-out test predictions were generated afterward with no refit or tuning.
 
+The 0.5 µF and 3 µF records share one tagged storage container, but every fit, split audit, selected artifact and serving route is isolated by capacitance domain, impulse type and topology. No model pools the two capacitance domains. Both front and tail resistance features are present in every candidate feature vector.
+
+The original CPRI Excel records were used only for independent comparison, never as training labels. Training labels come from the unchanged detailed Physics engine. Historical mixed-count models used the same electrical feature definitions and could rank in-domain two-resistor inputs, but their mixed-count training provenance does not meet the final exact-two contract. The new fits satisfy that contract and replace the sparse filtered coverage with the complete sampled front/tail pair grid; the older artifacts remain historical.
+
+Gain errors below are dimensionless; front (LI T1 / SI Tp) and tail T2 errors are in microseconds. All results are conditional on the declared Physics model and support window.
+
 ## Scope and provenance
 
 - Dataset: `networks_exact2_v5_aug1_936a80511a31`, 78244 raw rows, 66682 eligible, 66244 canonical; 438 response-equivalent duplicates removed.

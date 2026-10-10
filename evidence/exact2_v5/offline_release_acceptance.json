@@ -1,0 +1,421 @@
+{
+  "schema_version": "powernext_exact2_offline_release_receipt_v1",
+  "created_at_utc": "2026-10-10T14:50:05.6945497Z",
+  "source_root": "C:\\Users\\User\\Downloads\\Powernext\\POWERNEXT",
+  "build_command": ".\\runtime\\python.exe -B tools\\build_networks_release.py ..\\release\\PowerNext_Track1_Exact2 --zip",
+  "acceptance_command": "runtime\\python.exe -B tests\\verify_networks_release.py --output C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext_Track1_Exact2_acceptance.json",
+  "package": {
+    "path": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext_Track1_Exact2.zip",
+    "size_bytes": 526806027,
+    "sha256_pre_harness": "b79580fd774560ac1125712d0a6127fde862dcf24089fd0b1e15287b5eafacb2",
+    "sha256_post_harness": "b79580fd774560ac1125712d0a6127fde862dcf24089fd0b1e15287b5eafacb2",
+    "sidecar": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext_Track1_Exact2.zip.sha256",
+    "sidecar_matches": true,
+    "expected_sha256": "b79580fd774560ac1125712d0a6127fde862dcf24089fd0b1e15287b5eafacb2"
+  },
+  "extracted_root": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2",
+  "original_release": {
+    "path": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext_Track1_Offline.zip",
+    "size_bytes": 395384078,
+    "sha256_pre_harness": "297c6b3530f7933436ce2daf4b503ea5307873d291884e5f45ae2cc1ef047f98",
+    "sha256_post_harness": "297c6b3530f7933436ce2daf4b503ea5307873d291884e5f45ae2cc1ef047f98",
+    "sidecar": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext_Track1_Offline.zip.sha256",
+    "sidecar_matches": true,
+    "expected_sha256": "297c6b3530f7933436ce2daf4b503ea5307873d291884e5f45ae2cc1ef047f98",
+    "preserved": true
+  },
+  "acceptance_report": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext_Track1_Exact2_acceptance.json",
+  "acceptance_status": "PASS",
+  "pending_reasons": [],
+  "harness_checks": [
+    {
+      "bad_modules": {},
+      "bad_paths": [],
+      "elapsed_seconds": 4.953,
+      "executable": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\runtime\\python.exe",
+      "isolated": true,
+      "module_files": {
+        "joblib": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\runtime\\Lib\\site-packages\\joblib\\__init__.py",
+        "numpy": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\runtime\\Lib\\site-packages\\numpy\\__init__.py",
+        "powernext_v3": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\powernext_v3\\__init__.py",
+        "powernext_v3.application": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\powernext_v3\\application.py",
+        "scipy": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\runtime\\Lib\\site-packages\\scipy\\__init__.py",
+        "sklearn": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\runtime\\Lib\\site-packages\\sklearn\\__init__.py"
+      },
+      "name": "bundled_runtime_isolation",
+      "no_site": true,
+      "outbound_socket_block": true,
+      "outbound_socket_error": "PowerNext offline acceptance: outbound network disabled",
+      "prefix": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\runtime",
+      "status": "PASS",
+      "sys_path": [
+        "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\runtime\\python312.zip",
+        "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\runtime",
+        "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\runtime\\DLLs",
+        "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\runtime\\Lib",
+        "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\runtime\\Lib\\site-packages",
+        "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2",
+        "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\powernext\\physics",
+        "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\powernext\\ml",
+        "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\powernext\\optimizer"
+      ]
+    },
+    {
+      "application_version": "3.2.0+exact2_20261010",
+      "hash_mismatch_count": 0,
+      "hash_mismatches": [],
+      "manifest_path": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\FINAL_FILE_MANIFEST.json",
+      "manifest_sha256": "b0cf98c53d55bb0e687011f499a297bec463953be21cfd40de3859a3e2658576",
+      "name": "package_manifest",
+      "rows_checked": 16737,
+      "status": "PASS",
+      "unexpected_file_count": 0,
+      "unexpected_files": []
+    },
+    {
+      "active_model_files": 16,
+      "asset_set": "networks_exact2_v5",
+      "dataset_id": "networks_exact2_v5_aug1_936a80511a31",
+      "dataset_rows_sha256": "57145d51b3a7d7e7b5e0e165c68bee53cbc074e367619bc2b8bd148b73ddf3eb",
+      "name": "active_exact_two_package_scope",
+      "registry_path": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\powernext\\ml\\registry\\networks_exact2_v5",
+      "scope_metadata_path": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\powernext\\ml\\results\\networks_exact2_v5\\release_scope.json",
+      "selected_model_ids": [
+        "model_1c991302020290fa0b4b",
+        "model_363a62ea485011c25683",
+        "model_52b124f6ac1345d233d2",
+        "model_84fe522ca453b26ee7c8",
+        "model_9d48f5370f8d2d4e549a",
+        "model_b93a212a9e99fc3b67ca",
+        "model_e8344e41ca77cf6429b1",
+        "model_f61024e3ebff070740f2"
+      ],
+      "selected_route_count": 8,
+      "selection_path": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\powernext\\ml\\results\\networks_exact2_v5\\selected_models.json",
+      "status": "PASS"
+    },
+    {
+      "all_ml_pools_complete": true,
+      "all_physics_budgets_exact": true,
+      "model_ids": {
+        "cpri_0p5uf:LI:GSHUNT_v0": "model_b93a212a9e99fc3b67ca",
+        "cpri_0p5uf:LI:OSHUNT_v0": "model_f61024e3ebff070740f2",
+        "cpri_0p5uf:SI:GSHUNT_v0": "model_84fe522ca453b26ee7c8",
+        "cpri_0p5uf:SI:OSHUNT_v0": "model_363a62ea485011c25683",
+        "research_3uf:LI:GSHUNT_v0": "model_e8344e41ca77cf6429b1",
+        "research_3uf:LI:OSHUNT_v0": "model_9d48f5370f8d2d4e549a",
+        "research_3uf:SI:GSHUNT_v0": "model_1c991302020290fa0b4b",
+        "research_3uf:SI:OSHUNT_v0": "model_52b124f6ac1345d233d2"
+      },
+      "name": "exact2_full_catalog_serving_benchmark",
+      "note": "Results cover all ML candidates; Physics coverage is intentionally bounded and does not establish global no-solution claims.",
+      "path": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\evidence\\exact2_v5\\serving_benchmark.json",
+      "physics_budget_per_route": 256,
+      "required_routes": [
+        "cpri_0p5uf:LI:GSHUNT_v0",
+        "cpri_0p5uf:LI:OSHUNT_v0",
+        "cpri_0p5uf:SI:GSHUNT_v0",
+        "cpri_0p5uf:SI:OSHUNT_v0",
+        "research_3uf:LI:GSHUNT_v0",
+        "research_3uf:LI:OSHUNT_v0",
+        "research_3uf:SI:GSHUNT_v0",
+        "research_3uf:SI:OSHUNT_v0"
+      ],
+      "route_count": 8,
+      "status": "PASS",
+      "theoretical_candidates_per_route": 24696
+    },
+    {
+      "elapsed_seconds": 8.484,
+      "loaded": [
+        {
+          "card_schema": "model_registry_v3",
+          "model_id": "model_b93a212a9e99fc3b67ca",
+          "route": "cpri_0p5uf:LI:GSHUNT_v0"
+        },
+        {
+          "card_schema": "model_registry_v3",
+          "model_id": "model_f61024e3ebff070740f2",
+          "route": "cpri_0p5uf:LI:OSHUNT_v0"
+        },
+        {
+          "card_schema": "model_registry_v3",
+          "model_id": "model_84fe522ca453b26ee7c8",
+          "route": "cpri_0p5uf:SI:GSHUNT_v0"
+        },
+        {
+          "card_schema": "model_registry_v3",
+          "model_id": "model_363a62ea485011c25683",
+          "route": "cpri_0p5uf:SI:OSHUNT_v0"
+        },
+        {
+          "card_schema": "model_registry_v3",
+          "model_id": "model_e8344e41ca77cf6429b1",
+          "route": "research_3uf:LI:GSHUNT_v0"
+        },
+        {
+          "card_schema": "model_registry_v3",
+          "model_id": "model_9d48f5370f8d2d4e549a",
+          "route": "research_3uf:LI:OSHUNT_v0"
+        },
+        {
+          "card_schema": "model_registry_v3",
+          "model_id": "model_1c991302020290fa0b4b",
+          "route": "research_3uf:SI:GSHUNT_v0"
+        },
+        {
+          "card_schema": "model_registry_v3",
+          "model_id": "model_52b124f6ac1345d233d2",
+          "route": "research_3uf:SI:OSHUNT_v0"
+        }
+      ],
+      "name": "selected_route_models",
+      "registry_path": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\powernext\\ml\\registry\\networks_exact2_v5",
+      "required_routes": [
+        "cpri_0p5uf:LI:GSHUNT_v0",
+        "cpri_0p5uf:LI:OSHUNT_v0",
+        "cpri_0p5uf:SI:GSHUNT_v0",
+        "cpri_0p5uf:SI:OSHUNT_v0",
+        "research_3uf:LI:GSHUNT_v0",
+        "research_3uf:LI:OSHUNT_v0",
+        "research_3uf:SI:GSHUNT_v0",
+        "research_3uf:SI:OSHUNT_v0"
+      ],
+      "selection_path": "C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted\\PowerNext_Track1_Exact2\\powernext\\ml\\results\\networks_exact2_v5\\selected_models.json",
+      "status": "PASS"
+    },
+    {
+      "elapsed_seconds": 10.688,
+      "fallback_used": false,
+      "mode": "ML_ACCEPTANCE",
+      "name": "fixed_prediction_and_scalar_reference",
+      "records": [
+        {
+          "comparison_id": "ref_v3_88189b9cc9264c5095cb",
+          "model_status": "LOADED",
+          "physics_status": "PHYSICS_VERIFIED",
+          "prediction_id": "pred_v3_f1659517d59f4923baf6",
+          "prediction_status": "ML_PREDICTION",
+          "qualification": "NUMERICAL_SCALAR_REFERENCE_ONLY",
+          "raw_sha256": null,
+          "route": "cpri_0p5uf:LI:GSHUNT_v0"
+        },
+        {
+          "comparison_id": "ref_v3_726944b8d82749109fa2",
+          "model_status": "LOADED",
+          "physics_status": "PHYSICS_VERIFIED",
+          "prediction_id": "pred_v3_182a0bf0a6804d3586ea",
+          "prediction_status": "ML_PREDICTION",
+          "qualification": "NUMERICAL_SCALAR_REFERENCE_ONLY",
+          "raw_sha256": null,
+          "route": "cpri_0p5uf:LI:OSHUNT_v0"
+        },
+        {
+          "comparison_id": "ref_v3_7c8079c6be2c40e280e5",
+          "model_status": "LOADED",
+          "physics_status": "PHYSICS_VERIFIED",
+          "prediction_id": "pred_v3_d18f8d6bf5de4649b472",
+          "prediction_status": "ML_PREDICTION",
+          "qualification": "NUMERICAL_SCALAR_REFERENCE_ONLY",
+          "raw_sha256": null,
+          "route": "cpri_0p5uf:SI:GSHUNT_v0"
+        },
+        {
+          "comparison_id": "ref_v3_2ad2f5e77ef94e7b9f01",
+          "model_status": "LOADED",
+          "physics_status": "PHYSICS_VERIFIED",
+          "prediction_id": "pred_v3_139d99a4c52d410490ce",
+          "prediction_status": "ML_PREDICTION",
+          "qualification": "NUMERICAL_SCALAR_REFERENCE_ONLY",
+          "raw_sha256": null,
+          "route": "cpri_0p5uf:SI:OSHUNT_v0"
+        },
+        {
+          "comparison_id": "ref_v3_9eb6c2f3da414f81a267",
+          "model_status": "LOADED",
+          "physics_status": "PHYSICS_VERIFIED",
+          "prediction_id": "pred_v3_e2fba8259c934669818d",
+          "prediction_status": "ML_PREDICTION",
+          "qualification": "NUMERICAL_SCALAR_REFERENCE_ONLY",
+          "raw_sha256": null,
+          "route": "research_3uf:LI:GSHUNT_v0"
+        },
+        {
+          "comparison_id": "ref_v3_6cb675c3592e4044a08b",
+          "model_status": "LOADED",
+          "physics_status": "PHYSICS_VERIFIED",
+          "prediction_id": "pred_v3_eb8ce93bd62c4263b3ba",
+          "prediction_status": "ML_PREDICTION",
+          "qualification": "NUMERICAL_SCALAR_REFERENCE_ONLY",
+          "raw_sha256": null,
+          "route": "research_3uf:LI:OSHUNT_v0"
+        },
+        {
+          "comparison_id": "ref_v3_de137a86be75418391d7",
+          "model_status": "LOADED",
+          "physics_status": "PHYSICS_VERIFIED",
+          "prediction_id": "pred_v3_0b3d18166c124583a084",
+          "prediction_status": "ML_PREDICTION",
+          "qualification": "NUMERICAL_SCALAR_REFERENCE_ONLY",
+          "raw_sha256": null,
+          "route": "research_3uf:SI:GSHUNT_v0"
+        },
+        {
+          "comparison_id": "ref_v3_4abbc8fe72e9409691f1",
+          "model_status": "LOADED",
+          "physics_status": "PHYSICS_VERIFIED",
+          "prediction_id": "pred_v3_5b9c5245c17743578335",
+          "prediction_status": "ML_PREDICTION",
+          "qualification": "NUMERICAL_SCALAR_REFERENCE_ONLY",
+          "raw_sha256": null,
+          "route": "research_3uf:SI:OSHUNT_v0"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "catalogues": [
+        {
+          "best_compliant": true,
+          "best_configuration": {
+            "front_network": {
+              "children": [
+                {
+                  "ohm": 30,
+                  "op": "R"
+                },
+                {
+                  "ohm": 520,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            },
+            "front_per_stage_ohm": 28.363636363636363,
+            "impulse_type": "LI",
+            "polarity": 1,
+            "stage_charge_V": 115232.56953692973,
+            "stages": 9,
+            "tail_network": {
+              "children": [
+                {
+                  "ohm": 180,
+                  "op": "R"
+                },
+                {
+                  "ohm": 520,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            },
+            "tail_per_stage_ohm": 133.71428571428572,
+            "topology_id": "GSHUNT_v0"
+          },
+          "best_recipes_exact_two": true,
+          "catalog_complete": false,
+          "considered_count": 1764,
+          "distinct_response_candidates": 1764,
+          "expected_model_id": "model_b93a212a9e99fc3b67ca",
+          "expected_stage": 9,
+          "ml_pool_complete": true,
+          "ml_predicted_count": 1764,
+          "model_id": "model_b93a212a9e99fc3b67ca",
+          "model_loaded": true,
+          "name": "LI_N9",
+          "passing_count": 8,
+          "physics_evaluated_count": 512,
+          "result_status": "VERIFIED_COMPLIANT",
+          "source_case": "evidence/two_vs_three/preliminary_v4/cases/cpri_0p5uf_LI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_0/case.json",
+          "source_case_sha256": "2036daa5016a27015cbcec328c3cb0ca8f6256192ad432a58182668ba56fe26e",
+          "status": "PASS",
+          "theoretical_recipe_configurations": 1764,
+          "unsupported_count": 54
+        },
+        {
+          "best_compliant": true,
+          "best_configuration": {
+            "front_network": {
+              "children": [
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                },
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            },
+            "front_per_stage_ohm": 2500.0,
+            "impulse_type": "SI",
+            "polarity": 1,
+            "stage_charge_V": 126245.83800048548,
+            "stages": 12,
+            "tail_network": {
+              "children": [
+                {
+                  "ohm": 180,
+                  "op": "R"
+                },
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                }
+              ],
+              "op": "S"
+            },
+            "tail_per_stage_ohm": 5180.0,
+            "topology_id": "GSHUNT_v0"
+          },
+          "best_recipes_exact_two": true,
+          "catalog_complete": false,
+          "considered_count": 1764,
+          "distinct_response_candidates": 1764,
+          "expected_model_id": "model_84fe522ca453b26ee7c8",
+          "expected_stage": 12,
+          "ml_pool_complete": true,
+          "ml_predicted_count": 1764,
+          "model_id": "model_84fe522ca453b26ee7c8",
+          "model_loaded": true,
+          "name": "SI_N12",
+          "passing_count": 41,
+          "physics_evaluated_count": 512,
+          "result_status": "VERIFIED_COMPLIANT",
+          "source_case": "evidence/two_vs_three/preliminary_v4/cases/cpri_0p5uf_SI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0/case.json",
+          "source_case_sha256": "0937a21443948c7cbadeb5c40b27c2e23b1bf7019034878b4d2aa3c8206995ca",
+          "status": "PASS",
+          "theoretical_recipe_configurations": 1764,
+          "unsupported_count": 0
+        }
+      ],
+      "elapsed_seconds": 20.438,
+      "name": "bounded_exact2_searches",
+      "status": "PASS"
+    },
+    {
+      "changed_file_count": 0,
+      "changed_files": [],
+      "manifest_sha256_after": "b0cf98c53d55bb0e687011f499a297bec463953be21cfd40de3859a3e2658576",
+      "manifest_sha256_before": "b0cf98c53d55bb0e687011f499a297bec463953be21cfd40de3859a3e2658576",
+      "name": "package_immutability_after_execution",
+      "rows_rechecked": 16737,
+      "status": "PASS"
+    }
+  ],
+  "all_harness_gates_passed": true,
+  "manifest_hash_gate": {
+    "rows_checked": 16737,
+    "hash_mismatch_count": 0,
+    "unexpected_file_count": 0,
+    "manifest_sha256_before": "b0cf98c53d55bb0e687011f499a297bec463953be21cfd40de3859a3e2658576",
+    "manifest_sha256_after": "b0cf98c53d55bb0e687011f499a297bec463953be21cfd40de3859a3e2658576",
+    "changed_file_count": 0
+  },
+  "package_immutable_after_harness": true,
+  "source_docs_models_data_frozen": true,
+  "original_release_preserved": true,
+  "extraction_command": "Expand-Archive -LiteralPath C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext_Track1_Exact2.zip -DestinationPath C:\\Users\\User\\Downloads\\Powernext\\release\\PowerNext Track1 Exact2 Extracted"
+}
+

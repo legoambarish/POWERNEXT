@@ -1,0 +1,140 @@
+{
+  "schema_version": "search_policy_benchmark_v3",
+  "purpose": "test",
+  "status": "COMPLETE",
+  "physics": {
+    "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+    "sources": {
+      "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6",
+      "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+      "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+      "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+      "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+      "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+      "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d"
+    }
+  },
+  "execution_contract": {
+    "sources": {
+      "optimizer.py": "c63abeb31b576a7f0f606a394643dc3206ee476ef9401804da47faf162dcf8b2",
+      "catalog.py": "ef7b565e120455691c6bc076ebb13b0b109c7c5aefea7f25597abb38b62c84b1",
+      "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+      "benchmark.py": "4f34c54412f35c7fc53b75f19a48c7e5bc85a75b7febede3545a0b9ce6c79520"
+    },
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    }
+  },
+  "request_seed": 20261202,
+  "requests_sha256": "778dd0307be2c4cad643fbf42ff437c3385002833e8509772778481636a38a61",
+  "timing_protocol": "Sequential policies in declared order after explicit shared catalog/feature/model warm-up; loaded-model search latency; first-route/reused-route loading separately labeled; not cold application startup; no concurrent benchmark workers",
+  "memory_protocol": "Cumulative OS process peak working set including native arrays; not per-policy incremental allocation",
+  "physics_budget": 256,
+  "pool_budget": 65536,
+  "cases": [
+    {
+      "path": "FROZEN_test_seed20261202_cpri_0p5uf_LI_GSHUNT_v0_0.json",
+      "sha256": "ee6783b28b0115db7ac0a503f05ae8f57659496d5ea7391751a73b77955fb85e",
+      "route": "cpri_0p5uf:LI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_cpri_0p5uf_LI_GSHUNT_v0_1.json",
+      "sha256": "c5cc19832338dae49e1a3b22eff56f2e813e92bf0c245566773893917e9182cc",
+      "route": "cpri_0p5uf:LI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_cpri_0p5uf_LI_OSHUNT_v0_0.json",
+      "sha256": "2aa0fb27698d57a17e8a07549c0fc6614285592802f422c3300976aef49abfce",
+      "route": "cpri_0p5uf:LI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_cpri_0p5uf_LI_OSHUNT_v0_1.json",
+      "sha256": "1631797f4656b742b38a84b49f78bb26472adb14cdc2997dd30ff5856747ee62",
+      "route": "cpri_0p5uf:LI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_cpri_0p5uf_SI_GSHUNT_v0_0.json",
+      "sha256": "27383af4b95871803b01770fe035d3c9f7839693093d38f62bcf0d5763794f17",
+      "route": "cpri_0p5uf:SI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_cpri_0p5uf_SI_GSHUNT_v0_1.json",
+      "sha256": "e08972412afa6a31016c76e4129e926b31000fc53ef0591e7673ef7b90501cb0",
+      "route": "cpri_0p5uf:SI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_cpri_0p5uf_SI_OSHUNT_v0_0.json",
+      "sha256": "f954f53914971c6aa911090edde27142e803c88bfd5b46e862207b6f88857161",
+      "route": "cpri_0p5uf:SI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_cpri_0p5uf_SI_OSHUNT_v0_1.json",
+      "sha256": "529daba0658bfea1402b6b39ee5d3532266238b8e8fc3c4faf54e665ff6b36de",
+      "route": "cpri_0p5uf:SI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_research_3uf_LI_GSHUNT_v0_0.json",
+      "sha256": "42e6db7886586efafcd3cd1af50078982b2d665b49fcddce0e87a38f6782fa00",
+      "route": "research_3uf:LI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_research_3uf_LI_GSHUNT_v0_1.json",
+      "sha256": "e1cead1888757807a0aa763a3d5dbc5dba85502a99a2d778096b034f0a548b1b",
+      "route": "research_3uf:LI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_research_3uf_LI_OSHUNT_v0_0.json",
+      "sha256": "129b5e0dfc9159b05737c53fbcc615247c615836c42a34f2e09e20d6dbf3fec8",
+      "route": "research_3uf:LI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_research_3uf_LI_OSHUNT_v0_1.json",
+      "sha256": "2e867a3b48b364e86893e6a473dfe4e0135241354a80e89c8842cdc0b6c7480f",
+      "route": "research_3uf:LI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_research_3uf_SI_GSHUNT_v0_0.json",
+      "sha256": "84b98b69489a12beaf0c0e54cb45c62a409bab0fa40a05746cd64825f27fbc26",
+      "route": "research_3uf:SI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_research_3uf_SI_GSHUNT_v0_1.json",
+      "sha256": "f30fad02b193eb0c3760aaa4f1a0e82a9516c5262e993c0c8ac93e804b47c930",
+      "route": "research_3uf:SI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_research_3uf_SI_OSHUNT_v0_0.json",
+      "sha256": "079c4844aae6b35e9ff3dc61a55a2431f6df11c771f9d56980aef29cf70d649a",
+      "route": "research_3uf:SI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_seed20261202_research_3uf_SI_OSHUNT_v0_1.json",
+      "sha256": "66d920f4e612d20286d5e5ee3b44d7ddffa7ef1d5e9692e575ad89ce5aef5b4c",
+      "route": "research_3uf:SI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "KNOWN_RARE_LI_SETUP_EXACT2.json",
+      "sha256": "a04a86a9a5c61c78e74ba162c794e34e9b51b35416373fc0fd5ed08c86a42eba",
+      "route": "cpri_0p5uf:LI:GSHUNT_v0",
+      "known_regression": true
+    }
+  ]
+}

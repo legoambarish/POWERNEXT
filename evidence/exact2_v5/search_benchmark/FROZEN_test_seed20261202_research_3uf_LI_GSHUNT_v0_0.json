@@ -1,0 +1,771 @@
+{
+  "request": {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_seed20261202_research_3uf_LI_GSHUNT_v0_0",
+    "domain_id": "research_3uf",
+    "impulse_type": "LI",
+    "topology_id": "GSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.4576197454002592e-09,
+      "divider_capacitance_F": 4.467554028116165e-10,
+      "stray_capacitance_F": 2.4023902286018145e-10,
+      "loop_inductance_H": 2.1903770500511304e-05,
+      "loop_resistance_ohm": 2.3596454714771102,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_seed20261202_research_3uf_LI_GSHUNT_v0_0"
+    },
+    "target_crest_V": 750000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "min_modules": 2,
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  "model": {
+    "baseline_columns": [
+      "baseline_gain",
+      "baseline_front_us",
+      "baseline_tail_us"
+    ],
+    "data_sha256": "57145d51b3a7d7e7b5e0e165c68bee53cbc074e367619bc2b8bd148b73ddf3eb",
+    "feature_order": [
+      "stages",
+      "front_per_stage_ohm",
+      "tail_per_stage_ohm",
+      "dut_nF",
+      "divider_nF",
+      "stray_nF",
+      "basic_additional_nF",
+      "loop_uH",
+      "loop_ohm",
+      "load_kohm",
+      "Cg_nF",
+      "CL_nF",
+      "Rf_ohm",
+      "Rt_ohm",
+      "CL_over_Cg",
+      "Rf_CL_us",
+      "Rt_Cg_us",
+      "LC_us",
+      "zero_L",
+      "baseline_gain",
+      "baseline_front_us",
+      "baseline_tail_us"
+    ],
+    "hardware_recommendations_enabled": false,
+    "metrics": {
+      "validation": {
+        "boundary_errors": {
+          "crest_boundary_error_max_V": 2458198.8953174953,
+          "crest_false_accept": 0,
+          "crest_false_reject": 0,
+          "front_boundary_error_max_us": 2549.016001173459,
+          "front_outside_rate": 0.9987593052109182,
+          "front_tolerance_normalized_boundary_error_P95": 2699.189721238787,
+          "front_tolerance_normalized_boundary_error_max": 7080.600003259607,
+          "shape_false_accept": 1,
+          "shape_false_reject": 0,
+          "shape_mismatch_rate": 0.0006203473945409429,
+          "shape_predicted_pass": 1,
+          "shape_truth_pass": 0,
+          "tail_boundary_error_max_us": 15465.470792834942,
+          "tail_outside_rate": 0.9739454094292804,
+          "tail_tolerance_normalized_boundary_error_P95": 1111.8691700712511,
+          "tail_tolerance_normalized_boundary_error_max": 1546.5470792834942
+        },
+        "front_us": {
+          "MAE": 0.053007776022084306,
+          "P95_absolute_error": 0.25852788778872143,
+          "RMSE": 0.09986966547185809,
+          "max_absolute_error": 0.6185144235929938,
+          "tolerance_normalized_MAE": 0.14724382228356747,
+          "tolerance_normalized_P95": 0.7181330216353372
+        },
+        "gain": {
+          "MAE": 0.0010828102622562634,
+          "P95_absolute_error": 0.005448523250623741,
+          "RMSE": 0.0031865012457227603,
+          "max_absolute_error": 0.03520087356777901,
+          "tolerance_normalized_MAE": 0.037650468917796685,
+          "tolerance_normalized_P95": 0.1863253685976795
+        },
+        "n": 1612,
+        "ood_count": 2,
+        "optimization_validation": {
+          "candidate_count": 1612,
+          "charge_cap_V": {
+            "max": 200000.0,
+            "mean": 200000.0,
+            "min": 200000.0
+          },
+          "feasible_group_count": 0,
+          "feasible_hit@1": null,
+          "feasible_hit@1_count": 0,
+          "feasible_hit@1_rate": null,
+          "feasible_hit@3": null,
+          "feasible_hit@3_count": 0,
+          "feasible_hit@3_rate": null,
+          "feasible_hit@5": null,
+          "feasible_hit@5_count": 0,
+          "feasible_hit@5_rate": null,
+          "feasible_hit_at_5": null,
+          "feasiblehit@1": null,
+          "feasiblehit@3": null,
+          "feasiblehit@5": null,
+          "group_count": 78,
+          "group_key_policy": "request_group_id/request_id/group_id/setup_family_id/row_id",
+          "group_summaries": [],
+          "group_summaries_truncated": false,
+          "group_summary_count": 0,
+          "groups_coverage_insufficient": true,
+          "groups_coverage_status": "NO_TRUE_FEASIBLE_GROUPS",
+          "mean_predicted_J": 1413732.7168624504,
+          "mean_regret_at_5": null,
+          "mean_true_J": 1414206.7696926603,
+          "minimum_group_coverage": 5,
+          "missed_feasible@1": null,
+          "missed_feasible@1_count": 0,
+          "missed_feasible@1_rate": null,
+          "missed_feasible@3": null,
+          "missed_feasible@3_count": 0,
+          "missed_feasible@3_rate": null,
+          "missed_feasible@5": null,
+          "missed_feasible@5_count": 0,
+          "missed_feasible@5_rate": null,
+          "missed_feasible_at_5": 0,
+          "predicted_J": 1413732.7168624504,
+          "predicted_pass_candidate_count": 1,
+          "predicted_pass_rate": 0.0006203473945409429,
+          "prefix_first_pass": {
+            "count": 0,
+            "mean_rank": null,
+            "median_rank": null
+          },
+          "regret_besttrueJ@1": null,
+          "regret_besttrueJ@1_count": 0,
+          "regret_besttrueJ@1_mean": null,
+          "regret_besttrueJ@1_raw_mean": null,
+          "regret_besttrueJ@1_unavailable_count": 0,
+          "regret_besttrueJ@3": null,
+          "regret_besttrueJ@3_count": 0,
+          "regret_besttrueJ@3_mean": null,
+          "regret_besttrueJ@3_raw_mean": null,
+          "regret_besttrueJ@3_unavailable_count": 0,
+          "regret_besttrueJ@5": null,
+          "regret_besttrueJ@5_count": 0,
+          "regret_besttrueJ@5_mean": null,
+          "regret_besttrueJ@5_raw_mean": null,
+          "regret_besttrueJ@5_unavailable_count": 0,
+          "request_level_hook": {
+            "cases": [
+              {
+                "candidate_count": 5292,
+                "candidates_per_second": 77950.42812298465,
+                "feasible_count": 34,
+                "first_feasible_rank": 1,
+                "hit_at_k": {
+                  "1": true,
+                  "10": true,
+                  "100": true,
+                  "25": true,
+                  "3": true,
+                  "5": true,
+                  "50": true
+                },
+                "predict_seconds": 0.06788930000038818,
+                "regret_at_k": {
+                  "1": 0.012757247050959458,
+                  "10": 0.0,
+                  "100": 0.0,
+                  "25": 0.0,
+                  "3": 0.0006729306718442386,
+                  "5": 0.0,
+                  "50": 0.0
+                },
+                "request_id": "FROZEN_validation_seed20261201_research_3uf_LI_GSHUNT_v0_0"
+              },
+              {
+                "candidate_count": 5292,
+                "candidates_per_second": 82379.73446063073,
+                "feasible_count": 40,
+                "first_feasible_rank": 1,
+                "hit_at_k": {
+                  "1": true,
+                  "10": true,
+                  "100": true,
+                  "25": true,
+                  "3": true,
+                  "5": true,
+                  "50": true
+                },
+                "predict_seconds": 0.06423910000012256,
+                "regret_at_k": {
+                  "1": 0.09331217608805531,
+                  "10": 0.0,
+                  "100": 0.0,
+                  "25": 0.0,
+                  "3": 0.09331217608805531,
+                  "5": 0.0,
+                  "50": 0.0
+                },
+                "request_id": "FROZEN_validation_seed20261201_research_3uf_LI_GSHUNT_v0_1"
+              }
+            ],
+            "feasible_hit_at_5": 1.0,
+            "feasible_request_count": 2,
+            "feasible_retention_status": "AVAILABLE",
+            "mean_regret_at_25": 0.0,
+            "missed_feasible_at_5": 0,
+            "request_count": 2,
+            "retention": 1.0,
+            "selection_usable": true,
+            "status": "COMPLETE_INDEPENDENT_PHYSICS_ORACLE_VALIDATION"
+          },
+          "secondary_gain_order_proxy": {
+            "algorithm": "fenwick_exact_non_tied_pairs",
+            "pair_count": 1165110,
+            "retention": 0.9960578829466745,
+            "scope": "within_request_group",
+            "status": "SECONDARY_GAIN_ORDER_PROXY"
+          },
+          "status": "FIXED_SETUP_WAVEFORM_RANKING",
+          "target_crest_V": 1000000.0,
+          "target_policy": "FIXED_1MV",
+          "true_J": 1414206.7696926603,
+          "true_feasible_candidate_count": 0,
+          "true_pass_rate": 0.0,
+          "valid_group_count": 78
+        },
+        "prediction_rows_per_second": 38407.197301499386,
+        "prediction_seconds": 0.04197129999738536,
+        "selection_score": 0.16293293876248405,
+        "tail_us": {
+          "MAE": 3.03904525086088,
+          "P95_absolute_error": 12.379850491801818,
+          "RMSE": 15.137468745959993,
+          "max_absolute_error": 242.29595489535131,
+          "tolerance_normalized_MAE": 0.30390452508608795,
+          "tolerance_normalized_P95": 1.2379850491801816
+        }
+      }
+    },
+    "model_artifact_bytes": 21155970,
+    "model_id": "model_e8344e41ca77cf6429b1",
+    "model_sha256": "2cceb95d07008a42376b4411acf050ae1eaa35c9c17f1001aac86993533eace1",
+    "persistence": "joblib; load only trusted locally produced artifacts",
+    "provenance": {
+      "benchmark_hook_source_sha256": "4f34c54412f35c7fc53b75f19a48c7e5bc85a75b7febede3545a0b9ce6c79520",
+      "data_manifest_sha256": "4359870424ba6b5b2464264b4b80cbb5cb22d1c9a3c1f9baf030754436b718f6",
+      "data_sha256": "57145d51b3a7d7e7b5e0e165c68bee53cbc074e367619bc2b8bd148b73ddf3eb",
+      "optimization_oracles_manifest_sha256": "f5954a764088fdf298b4e1927e5197e0e3323ed891d0ecfebc1a9edf8a9da71a",
+      "optimization_oracles_purpose": "validation",
+      "optimization_oracles_status": "COMPLETE",
+      "optimization_validation_hook": "powernext_v3.benchmark.OracleValidation",
+      "optimization_validation_hook_source_path": "powernext_v3/benchmark.py",
+      "optimization_validation_hook_source_sha256": "4f34c54412f35c7fc53b75f19a48c7e5bc85a75b7febede3545a0b9ce6c79520",
+      "physics_source_fingerprint": {
+        "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+        "sources": {
+          "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+          "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+          "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+          "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+          "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+          "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+          "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+        }
+      },
+      "predictive_contract_source_fingerprint": {
+        "physics": {
+          "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+          "sources": {
+            "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+            "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+            "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+            "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+            "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+            "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+            "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+          }
+        },
+        "sha256": "6a2eb965676b1952d7fd04711535f16fdff98092867fbd22ff0c7c0f17e6b082",
+        "sources": {
+          "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+          "models.py": "0178427a3849b4b4286b17e77e9eaf7a969bc493fcdffb3f09746caaeed55b12",
+          "networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+          "physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+          "profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+        }
+      },
+      "registry_code_sha256": "a2cf1a94cf005566db27c25428174c567a8d1fbb5c2a38f70499e0ca4dc7b2f9",
+      "runtime": {
+        "joblib": "1.5.3",
+        "numpy": "2.4.6",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "python": "3.12.14",
+        "scipy": "1.17.1",
+        "sklearn": "1.9.0"
+      },
+      "training_code_sha256": "cbb948914dba15e372e2a6d1c896a75f0c563a9b8af96c836e10ffaeeb161b61",
+      "training_dataset_scope": {
+        "dataset_id": "networks_exact2_v5_aug1_936a80511a31",
+        "exact_modules_per_branch": 2,
+        "parent_dataset_id": "networks_exact2_v5_a620bc6a3215",
+        "parent_design_file_sha256": "b4c70e369a778393643bb96144253ad5a6d77cba2844ad3815d16371127cac9c",
+        "parent_design_sha256": "bc9dae2d381fdbf31274435b8713b02b2074249df8636f9c88ad9b70d91d2026",
+        "parent_manifest_sha256": "966966dd6f74b93d969774b39869bf8cc5eb4fe3c7cd027f4df609f864268c2c",
+        "parent_rows_sha256": "f1d349ff2470453f17ddb6105715c164fea3f1d54c12e7eff5c505a3e44112d6",
+        "rule": "front_network_module_count == 2 and tail_network_module_count == 2",
+        "scope_contract": "EXACT_MODULES_PER_BRANCH_V5",
+        "scope_filter_sha256": "558ac674756b5e8ce0b22c62fcc95b26595ab943ba8319696d67891cd2e63e75"
+      }
+    },
+    "real_data_calibrated": false,
+    "route": {
+      "baseline_columns": [
+        "baseline_gain",
+        "baseline_front_us",
+        "baseline_tail_us"
+      ],
+      "domain": "research_3uf",
+      "domain_id": "research_3uf",
+      "family": "extra_trees",
+      "feature_order": [
+        "stages",
+        "front_per_stage_ohm",
+        "tail_per_stage_ohm",
+        "dut_nF",
+        "divider_nF",
+        "stray_nF",
+        "basic_additional_nF",
+        "loop_uH",
+        "loop_ohm",
+        "load_kohm",
+        "Cg_nF",
+        "CL_nF",
+        "Rf_ohm",
+        "Rt_ohm",
+        "CL_over_Cg",
+        "Rf_CL_us",
+        "Rt_Cg_us",
+        "LC_us",
+        "zero_L",
+        "baseline_gain",
+        "baseline_front_us",
+        "baseline_tail_us"
+      ],
+      "formulation": "residual",
+      "mode": "LI",
+      "route_id": "research_3uf:LI:GSHUNT_v0",
+      "topology": "GSHUNT_v0",
+      "topology_id": "GSHUNT_v0"
+    },
+    "runtime": {
+      "joblib": "1.5.3",
+      "numpy": "2.4.6",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.14",
+      "scipy": "1.17.1",
+      "sklearn": "1.9.0"
+    },
+    "schema_version": "model_registry_v3",
+    "source_fingerprint": {
+      "physics": {
+        "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+        "sources": {
+          "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+          "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+          "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+          "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+          "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+          "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+          "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+        }
+      },
+      "sha256": "6a2eb965676b1952d7fd04711535f16fdff98092867fbd22ff0c7c0f17e6b082",
+      "sources": {
+        "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+        "models.py": "0178427a3849b4b4286b17e77e9eaf7a969bc493fcdffb3f09746caaeed55b12",
+        "networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "training_code_sha256": "cbb948914dba15e372e2a6d1c896a75f0c563a9b8af96c836e10ffaeeb161b61",
+    "training_rows": 4923
+  },
+  "policies": [
+    {
+      "policy": "complete_physics",
+      "status": "VERIFIED_COMPLIANT",
+      "search": {
+        "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+        "min_modules_per_branch": 2,
+        "max_modules_per_branch": 2,
+        "network_scope": "EXACTLY_TWO_SERIES_OR_PARALLEL",
+        "uniform_stages": true,
+        "recipes_per_branch": 42,
+        "distinct_resistances_per_branch": 42,
+        "theoretical_recipe_configurations": 5292,
+        "distinct_response_candidates": 5292,
+        "stages": [
+          6,
+          9,
+          12
+        ],
+        "catalog_sha256": "b35569f79aa899c3af82d378a264ba86b37e0f3cb5964c9400130ced62d12eb1",
+        "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED",
+        "requested_strategy": "complete_physics",
+        "effective_strategy": "complete_physics",
+        "catalog_complete": true,
+        "ml_pool_complete": false,
+        "considered_count": 5292,
+        "ml_predicted_count": 0,
+        "physics_evaluated_count": 5292,
+        "evaluated_or_legally_excluded_count": 5292,
+        "passing_count": 27,
+        "unsupported_count": 574,
+        "known_constraint_excluded_count": 0,
+        "ml_ood_count": null,
+        "termination_reason": "DECLARED_CATALOG_COMPLETED",
+        "time_to_first_pass_seconds": 1.35922379999829,
+        "time_to_alternatives_seconds": 2.0032409000014013,
+        "total_seconds": 66.77075849999892,
+        "scoring_seconds": 0.0,
+        "verification_seconds": 66.77075849999892,
+        "optimality": "BEST_VERIFIED_EVALUATED_SUBSET",
+        "candidate_order_policy": "DETERMINISTIC_PROGRESSIVE_GUIDES_AND_FULL_CYCLE_COVERAGE_v3"
+      },
+      "best_objective": 0.04569505042355022,
+      "best_candidate_id": "net_b35569f79aa8_1850",
+      "best_configuration": {
+        "impulse_type": "LI",
+        "stages": 9,
+        "stage_charge_V": 86600.21875037167,
+        "front_per_stage_ohm": 23.0,
+        "tail_per_stage_ohm": 23.0,
+        "front_network": {
+          "op": "P",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 46
+            }
+          ]
+        },
+        "tail_network": {
+          "op": "P",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 46
+            }
+          ]
+        },
+        "topology_id": "GSHUNT_v0",
+        "polarity": 1
+      },
+      "oracle_feasible_count": 27,
+      "feasible_candidates_found": 27,
+      "feasible_candidate_retention": 1.0,
+      "feasible_request_retained": true,
+      "missed_feasible_request": false,
+      "regret": 0.0,
+      "process_peak_memory_bytes": 526323712,
+      "model_loading_seconds": 0,
+      "model_loading_cache_context": "FIRST_REQUEST_FOR_ROUTE",
+      "shared_warmup_seconds": 0.027818799997476162,
+      "model_loading_shared_between_ml_and_combined": true,
+      "ml_candidates_per_scoring_second": null
+    },
+    {
+      "policy": "analytical",
+      "status": "VERIFIED_COMPLIANT",
+      "search": {
+        "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+        "min_modules_per_branch": 2,
+        "max_modules_per_branch": 2,
+        "network_scope": "EXACTLY_TWO_SERIES_OR_PARALLEL",
+        "uniform_stages": true,
+        "recipes_per_branch": 42,
+        "distinct_resistances_per_branch": 42,
+        "theoretical_recipe_configurations": 5292,
+        "distinct_response_candidates": 5292,
+        "stages": [
+          6,
+          9,
+          12
+        ],
+        "catalog_sha256": "b35569f79aa899c3af82d378a264ba86b37e0f3cb5964c9400130ced62d12eb1",
+        "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED",
+        "requested_strategy": "analytical",
+        "effective_strategy": "analytical",
+        "catalog_complete": false,
+        "ml_pool_complete": true,
+        "considered_count": 5292,
+        "ml_predicted_count": 0,
+        "physics_evaluated_count": 256,
+        "evaluated_or_legally_excluded_count": 256,
+        "passing_count": 27,
+        "unsupported_count": 20,
+        "known_constraint_excluded_count": 0,
+        "ml_ood_count": null,
+        "termination_reason": "PHYSICS_EVALUATION_BUDGET",
+        "time_to_first_pass_seconds": 0.0722957999969367,
+        "time_to_alternatives_seconds": 0.14572190000035334,
+        "total_seconds": 3.6981697999981407,
+        "scoring_seconds": 0.050472099996113684,
+        "verification_seconds": 3.647697700002027,
+        "optimality": "BEST_VERIFIED_EVALUATED_SUBSET",
+        "candidate_order_policy": "DETERMINISTIC_PROGRESSIVE_GUIDES_AND_FULL_CYCLE_COVERAGE_v3"
+      },
+      "best_objective": 0.04569505042355022,
+      "best_candidate_id": "net_b35569f79aa8_1850",
+      "best_configuration": {
+        "impulse_type": "LI",
+        "stages": 9,
+        "stage_charge_V": 86600.21875037167,
+        "front_per_stage_ohm": 23.0,
+        "tail_per_stage_ohm": 23.0,
+        "front_network": {
+          "op": "P",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 46
+            }
+          ]
+        },
+        "tail_network": {
+          "op": "P",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 46
+            }
+          ]
+        },
+        "topology_id": "GSHUNT_v0",
+        "polarity": 1
+      },
+      "oracle_feasible_count": 27,
+      "feasible_candidates_found": 27,
+      "feasible_candidate_retention": 1.0,
+      "feasible_request_retained": true,
+      "missed_feasible_request": false,
+      "regret": 0.0,
+      "process_peak_memory_bytes": 526323712,
+      "model_loading_seconds": 0,
+      "model_loading_cache_context": "FIRST_REQUEST_FOR_ROUTE",
+      "shared_warmup_seconds": 0.027818799997476162,
+      "model_loading_shared_between_ml_and_combined": true,
+      "ml_candidates_per_scoring_second": null
+    },
+    {
+      "policy": "ml",
+      "status": "VERIFIED_COMPLIANT",
+      "search": {
+        "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+        "min_modules_per_branch": 2,
+        "max_modules_per_branch": 2,
+        "network_scope": "EXACTLY_TWO_SERIES_OR_PARALLEL",
+        "uniform_stages": true,
+        "recipes_per_branch": 42,
+        "distinct_resistances_per_branch": 42,
+        "theoretical_recipe_configurations": 5292,
+        "distinct_response_candidates": 5292,
+        "stages": [
+          6,
+          9,
+          12
+        ],
+        "catalog_sha256": "b35569f79aa899c3af82d378a264ba86b37e0f3cb5964c9400130ced62d12eb1",
+        "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED",
+        "requested_strategy": "ml",
+        "effective_strategy": "ml",
+        "catalog_complete": false,
+        "ml_pool_complete": true,
+        "considered_count": 5292,
+        "ml_predicted_count": 5292,
+        "physics_evaluated_count": 256,
+        "evaluated_or_legally_excluded_count": 256,
+        "passing_count": 27,
+        "unsupported_count": 20,
+        "known_constraint_excluded_count": 0,
+        "ml_ood_count": 378,
+        "termination_reason": "PHYSICS_EVALUATION_BUDGET",
+        "time_to_first_pass_seconds": 0.3250709000021743,
+        "time_to_alternatives_seconds": 0.3674547000009625,
+        "total_seconds": 3.7059629000032146,
+        "scoring_seconds": 0.30379760000141687,
+        "verification_seconds": 3.4021653000017977,
+        "optimality": "BEST_VERIFIED_EVALUATED_SUBSET",
+        "candidate_order_policy": "DETERMINISTIC_PROGRESSIVE_GUIDES_AND_FULL_CYCLE_COVERAGE_v3"
+      },
+      "best_objective": 0.04569505042355022,
+      "best_candidate_id": "net_b35569f79aa8_1850",
+      "best_configuration": {
+        "impulse_type": "LI",
+        "stages": 9,
+        "stage_charge_V": 86600.21875037167,
+        "front_per_stage_ohm": 23.0,
+        "tail_per_stage_ohm": 23.0,
+        "front_network": {
+          "op": "P",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 46
+            }
+          ]
+        },
+        "tail_network": {
+          "op": "P",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 46
+            }
+          ]
+        },
+        "topology_id": "GSHUNT_v0",
+        "polarity": 1
+      },
+      "oracle_feasible_count": 27,
+      "feasible_candidates_found": 27,
+      "feasible_candidate_retention": 1.0,
+      "feasible_request_retained": true,
+      "missed_feasible_request": false,
+      "regret": 0.0,
+      "process_peak_memory_bytes": 526323712,
+      "model_loading_seconds": 0.47131720000106725,
+      "model_loading_cache_context": "FIRST_REQUEST_FOR_ROUTE",
+      "shared_warmup_seconds": 0.027818799997476162,
+      "model_loading_shared_between_ml_and_combined": true,
+      "ml_candidates_per_scoring_second": 17419.49245147203
+    },
+    {
+      "policy": "combined",
+      "status": "VERIFIED_COMPLIANT",
+      "search": {
+        "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+        "min_modules_per_branch": 2,
+        "max_modules_per_branch": 2,
+        "network_scope": "EXACTLY_TWO_SERIES_OR_PARALLEL",
+        "uniform_stages": true,
+        "recipes_per_branch": 42,
+        "distinct_resistances_per_branch": 42,
+        "theoretical_recipe_configurations": 5292,
+        "distinct_response_candidates": 5292,
+        "stages": [
+          6,
+          9,
+          12
+        ],
+        "catalog_sha256": "b35569f79aa899c3af82d378a264ba86b37e0f3cb5964c9400130ced62d12eb1",
+        "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED",
+        "requested_strategy": "combined",
+        "effective_strategy": "combined",
+        "catalog_complete": false,
+        "ml_pool_complete": true,
+        "considered_count": 5292,
+        "ml_predicted_count": 5292,
+        "physics_evaluated_count": 256,
+        "evaluated_or_legally_excluded_count": 256,
+        "passing_count": 27,
+        "unsupported_count": 48,
+        "known_constraint_excluded_count": 0,
+        "ml_ood_count": 378,
+        "termination_reason": "PHYSICS_EVALUATION_BUDGET",
+        "time_to_first_pass_seconds": 0.34359480000057374,
+        "time_to_alternatives_seconds": 0.38819339999827207,
+        "total_seconds": 3.5516984999994747,
+        "scoring_seconds": 0.3144423000012466,
+        "verification_seconds": 3.237256199998228,
+        "optimality": "BEST_VERIFIED_EVALUATED_SUBSET",
+        "candidate_order_policy": "DETERMINISTIC_PROGRESSIVE_GUIDES_AND_FULL_CYCLE_COVERAGE_v3"
+      },
+      "best_objective": 0.04569505042355022,
+      "best_candidate_id": "net_b35569f79aa8_1850",
+      "best_configuration": {
+        "impulse_type": "LI",
+        "stages": 9,
+        "stage_charge_V": 86600.21875037167,
+        "front_per_stage_ohm": 23.0,
+        "tail_per_stage_ohm": 23.0,
+        "front_network": {
+          "op": "P",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 46
+            }
+          ]
+        },
+        "tail_network": {
+          "op": "P",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 46
+            }
+          ]
+        },
+        "topology_id": "GSHUNT_v0",
+        "polarity": 1
+      },
+      "oracle_feasible_count": 27,
+      "feasible_candidates_found": 27,
+      "feasible_candidate_retention": 1.0,
+      "feasible_request_retained": true,
+      "missed_feasible_request": false,
+      "regret": 0.0,
+      "process_peak_memory_bytes": 526323712,
+      "model_loading_seconds": 0.47131720000106725,
+      "model_loading_cache_context": "FIRST_REQUEST_FOR_ROUTE",
+      "shared_warmup_seconds": 0.027818799997476162,
+      "model_loading_shared_between_ml_and_combined": true,
+      "ml_candidates_per_scoring_second": 16829.796754377574
+    }
+  ]
+}

@@ -19,9 +19,11 @@ or Ctrl+C in the launcher console.
 
 The release verifier checks immutable assets and selected models, blocks outbound
 network use during its execution checks, and exercises frozen predictions and
-small complete catalogs. Run it from the new extracted release. The development
-checkout's in-progress acceptance ledger is [Phase B acceptance](docs/PHASE_B_ACCEPTANCE.md);
+small complete catalogs. Run it from the new extracted release. The current
+acceptance ledger is [Phase B acceptance](docs/PHASE_B_ACCEPTANCE.md);
 an implementation or a fallback smoke test alone is not release acceptance.
+
+The [exact-two final report](docs/EXACT2_FINAL_REPORT.md) records training counts, selected-model errors, actual serving checks and final search benchmarks.
 
 ## Engineering workflows
 

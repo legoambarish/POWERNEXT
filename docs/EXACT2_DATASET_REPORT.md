@@ -3,14 +3,14 @@
 The final exact scope is the immutable composite dataset at
 `powernext/ml/data/networks_exact2_v5_aug1`.  Every front and tail branch is a
 canonical series or parallel tree with exactly two leaves, selected from the
-42 recipe catalogue.  The supplement covers the complete 42 Ã— 42 Cartesian
+42 recipe catalogue.  The supplement covers the complete 42 × 42 Cartesian
 pair grid for each of the eight domain/mode/topology routes.  The original
 filtered rows remain in the same artifact with their original split labels
 and statuses.
 
 The composite has 78,244 raw rows: 7,684 rows copied from the exact2 filter
-and 70,560 deterministic Physics simulations (1,764 pairs Ã— five setup
-contexts Ã— eight routes).  The five contexts are `train_a`, `train_b`, and
+and 70,560 deterministic Physics simulations (1,764 pairs × five setup
+contexts × eight routes).  The five contexts are `train_a`, `train_b`, and
 `train_c` (three independent train setup groups), plus independent
 `validation` and `test` setup groups.  Setup groups and explicit split labels
 were frozen before simulation.  No ML predictions, workbook observations, or
@@ -18,7 +18,7 @@ waveform files were used; worker waveform arrays were discarded after each
 bounded result.
 
 Within each context, stages are distributed deterministically across the
-approved 2â€“15 range.  This is complete pair coverage in every context, with
+approved 2–15 range.  This is complete pair coverage in every context, with
 stage variation across the grid; it is not 1,764 pairs repeated at every
 stage.  Rows sharing a setup context are intentionally correlated Physics
 experiments, so canonical row counts do not imply the same number of
@@ -45,7 +45,7 @@ All eight routes contain all 42 front recipes, all 42 tail recipes, and all
 with at least one valid labelled row; the pair grid itself remains complete
 even when a pair has no eligible Physics result.
 
-The 1,122 unsupported pairs are confined to the research 3 ÂµF domain.  The
+The 1,122 route/pair combinations with no usable label in the sampled conditions are confined to the research 3 µF domain. This count is summed across routes; it is not a proof that those physical pairs are unsupported under every setup.  The
 dominant retained error is `TIME_DOMAIN_OUTSIDE_REFERENCE_SCOPE`, meaning the
 reduced detailed Physics trace would exceed the 200 ms reference window.  The
 rows remain present with `INVALID_OR_UNSUPPORTED` status and null regression

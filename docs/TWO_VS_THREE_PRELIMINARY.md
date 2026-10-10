@@ -75,6 +75,8 @@ The rows below compare the selected ≤2 waveform with a separate **post-selecti
 | SI GSHUNT 1.3 MV | 257.5354 / 2,226.8556; 0.056745 | 6,906 / 0.005312 | 525 / 0.000404 | 7.0293 |
 | SI OSHUNT 0.75 MV | 244.3042 / 2,932.3111; 0.096303 | 412 / 0.000549 | 144 / 0.000192 | 3.4901 |
 
+For the first LI controlled experiment, both circuits use N=9 and q=115,232.57 V. The actual crest changes from 1,000.000 kV to 1,001.860 kV while front/tail timing changes from 1.2117/48.5052 µs to 1.2071/49.9039 µs. Both waveforms pass; the controlled three-resistor J is 0.004323. Only the two resistor-network recipes change.
+
 The main best-found ≤3 versus ≤2 common-grid RMSE values are 4,292 V (0.004292 normalized), 0 V (the exact-baseline row), 0 V (the exact-baseline row), 637 V (0.000490 normalized), and 78 V (0.000104 normalized), respectively. The post-selection replay row is kept separate because it answers a different question from the legal-charge best-found row.
 
 ## Reference waveform and metric definitions

@@ -1,0 +1,175 @@
+{
+  "status": "COMPLETE",
+  "manifest_sha256": "6fd2976c3bb0e77d81da1e5f83944daa8579322f45ef0818f332ee7d989979c1",
+  "request_seed": 20261202,
+  "selection_sha256": "7e9fc4472cd25bf4c3a233dbf5c8a152ff047fec71a2b57dd52a9daac859a9d8",
+  "fresh": {
+    "complete_physics": {
+      "request_count": 16,
+      "feasible_request_count": 11,
+      "retained_feasible_requests": 11,
+      "missed_feasible_requests": 0,
+      "verified_passing_candidates": 670,
+      "reference_passing_candidates": 670,
+      "max_regret": 0.0,
+      "physics_candidate_checks": 84672,
+      "ml_predictions": 0,
+      "total_seconds": 1121.5910441999986,
+      "median_search_seconds": 68.52010569999948
+    },
+    "analytical": {
+      "request_count": 16,
+      "feasible_request_count": 11,
+      "retained_feasible_requests": 11,
+      "missed_feasible_requests": 0,
+      "verified_passing_candidates": 670,
+      "reference_passing_candidates": 670,
+      "max_regret": 0.0,
+      "physics_candidate_checks": 4096,
+      "ml_predictions": 0,
+      "total_seconds": 61.469273999995494,
+      "median_search_seconds": 3.7150290999979916
+    },
+    "ml": {
+      "request_count": 16,
+      "feasible_request_count": 11,
+      "retained_feasible_requests": 11,
+      "missed_feasible_requests": 0,
+      "verified_passing_candidates": 670,
+      "reference_passing_candidates": 670,
+      "max_regret": 0.0,
+      "physics_candidate_checks": 4096,
+      "ml_predictions": 84672,
+      "total_seconds": 63.57588040000701,
+      "median_search_seconds": 3.9366429500005324
+    },
+    "combined": {
+      "request_count": 16,
+      "feasible_request_count": 11,
+      "retained_feasible_requests": 11,
+      "missed_feasible_requests": 0,
+      "verified_passing_candidates": 653,
+      "reference_passing_candidates": 670,
+      "max_regret": 0.0,
+      "physics_candidate_checks": 4096,
+      "ml_predictions": 84672,
+      "total_seconds": 60.192609599995194,
+      "median_search_seconds": 3.8387361000004603
+    }
+  },
+  "known_regression": {
+    "complete_physics": {
+      "request_count": 1,
+      "feasible_request_count": 1,
+      "retained_feasible_requests": 1,
+      "missed_feasible_requests": 0,
+      "verified_passing_candidates": 62,
+      "reference_passing_candidates": 62,
+      "max_regret": 0.0,
+      "physics_candidate_checks": 24696,
+      "ml_predictions": 0,
+      "total_seconds": 329.1514003000011,
+      "median_search_seconds": 329.1514003000011
+    },
+    "analytical": {
+      "request_count": 1,
+      "feasible_request_count": 1,
+      "retained_feasible_requests": 1,
+      "missed_feasible_requests": 0,
+      "verified_passing_candidates": 45,
+      "reference_passing_candidates": 62,
+      "max_regret": 0.0,
+      "physics_candidate_checks": 256,
+      "ml_predictions": 0,
+      "total_seconds": 3.406301099999837,
+      "median_search_seconds": 3.406301099999837
+    },
+    "ml": {
+      "request_count": 1,
+      "feasible_request_count": 1,
+      "retained_feasible_requests": 1,
+      "missed_feasible_requests": 0,
+      "verified_passing_candidates": 62,
+      "reference_passing_candidates": 62,
+      "max_regret": 0.0,
+      "physics_candidate_checks": 256,
+      "ml_predictions": 24696,
+      "total_seconds": 4.4223259999998845,
+      "median_search_seconds": 4.4223259999998845
+    },
+    "combined": {
+      "request_count": 1,
+      "feasible_request_count": 1,
+      "retained_feasible_requests": 1,
+      "missed_feasible_requests": 0,
+      "verified_passing_candidates": 62,
+      "reference_passing_candidates": 62,
+      "max_regret": 0.0,
+      "physics_candidate_checks": 256,
+      "ml_predictions": 24696,
+      "total_seconds": 4.333222400000523,
+      "median_search_seconds": 4.333222400000523
+    }
+  },
+  "all": {
+    "complete_physics": {
+      "request_count": 17,
+      "feasible_request_count": 12,
+      "retained_feasible_requests": 12,
+      "missed_feasible_requests": 0,
+      "verified_passing_candidates": 732,
+      "reference_passing_candidates": 732,
+      "max_regret": 0.0,
+      "physics_candidate_checks": 109368,
+      "ml_predictions": 0,
+      "total_seconds": 1450.7424444999997,
+      "median_search_seconds": 70.2361576000003
+    },
+    "analytical": {
+      "request_count": 17,
+      "feasible_request_count": 12,
+      "retained_feasible_requests": 12,
+      "missed_feasible_requests": 0,
+      "verified_passing_candidates": 715,
+      "reference_passing_candidates": 732,
+      "max_regret": 0.0,
+      "physics_candidate_checks": 4352,
+      "ml_predictions": 0,
+      "total_seconds": 64.87557509999533,
+      "median_search_seconds": 3.6981697999981407
+    },
+    "ml": {
+      "request_count": 17,
+      "feasible_request_count": 12,
+      "retained_feasible_requests": 12,
+      "missed_feasible_requests": 0,
+      "verified_passing_candidates": 732,
+      "reference_passing_candidates": 732,
+      "max_regret": 0.0,
+      "physics_candidate_checks": 4352,
+      "ml_predictions": 109368,
+      "total_seconds": 67.9982064000069,
+      "median_search_seconds": 3.945741600000474
+    },
+    "combined": {
+      "request_count": 17,
+      "feasible_request_count": 12,
+      "retained_feasible_requests": 12,
+      "missed_feasible_requests": 0,
+      "verified_passing_candidates": 715,
+      "reference_passing_candidates": 732,
+      "max_regret": 0.0,
+      "physics_candidate_checks": 4352,
+      "ml_predictions": 109368,
+      "total_seconds": 64.52583199999572,
+      "median_search_seconds": 3.8442876000008255
+    }
+  },
+  "limitations": [
+    "Fresh requests use stages 6/9/12; the known regression uses stages 2 through 15.",
+    "All policies use identical conditions within each request.",
+    "Complete enumeration does not remove numerical support limitations; optima are relative to supported verified outputs.",
+    "Timings were measured on a shared machine, with concurrent audit and upload activity; they do not establish a controlled general speedup.",
+    "Final tests did not change model selection or trigger fitting."
+  ]
+}
