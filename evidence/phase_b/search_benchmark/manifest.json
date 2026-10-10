@@ -1,0 +1,139 @@
+{
+  "schema_version": "search_policy_benchmark_v3",
+  "purpose": "test",
+  "status": "COMPLETE",
+  "physics": {
+    "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+    "sources": {
+      "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6",
+      "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+      "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+      "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+      "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+      "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+      "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d"
+    }
+  },
+  "execution_contract": {
+    "sources": {
+      "optimizer.py": "7e22bc708f17ae8e8448668de095ed6ce751277d2c78731662a8435b191679a0",
+      "catalog.py": "ebb5f1b3c24a2739f7eba3b3ba7729bebc77fcc4e771f43aa66d18566414d7f3",
+      "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+      "benchmark.py": "31b0dbbfdfb33cbb08cfb30d7949eb7df1f3fdd8cd2cbbfb0d5da980a3f2b960"
+    },
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    }
+  },
+  "requests_sha256": "4a8e393643454ae8c25cedf6d30b261432ce5c05b8e5c8278bbeabbf15e57506",
+  "timing_protocol": "Sequential policies in declared order after explicit shared catalog/feature/model warm-up; loaded-model search latency; first-route/reused-route loading separately labeled; not cold application startup; no concurrent benchmark workers",
+  "memory_protocol": "Cumulative OS process peak working set including native arrays; not per-policy incremental allocation",
+  "physics_budget": 256,
+  "pool_budget": 65536,
+  "cases": [
+    {
+      "path": "FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_0.json",
+      "sha256": "d3cc36b2fd85bcaa33af4dc8c8e61c3715e01e7c13350d2b068daabcfa8578f1",
+      "route": "cpri_0p5uf:LI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_1.json",
+      "sha256": "e8f55a1907736694deb2576e14a603c7e7f4e5183ce043e440a11d693b5fe2fb",
+      "route": "cpri_0p5uf:LI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_0.json",
+      "sha256": "cf2a33a2ca48c9a102bd9a6c7e1fc95d6d0d04ce0ad5e13faae5a246d74eec14",
+      "route": "cpri_0p5uf:LI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_1.json",
+      "sha256": "7f8b86090052a8f00503f695a0bcb6319a5735b7a8248bd6739e89fa0e534c5d",
+      "route": "cpri_0p5uf:LI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0.json",
+      "sha256": "749d696dec734fe41655f21c0f68d963e577568a669d8d3e489db118a331663c",
+      "route": "cpri_0p5uf:SI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_1.json",
+      "sha256": "e97d36137d66365c805f5130017ef37a843c1df78c509262cb3cbdfce067fda5",
+      "route": "cpri_0p5uf:SI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_cpri_0p5uf_SI_OSHUNT_v0_0.json",
+      "sha256": "18ea5c51c7fcb60a474f5ac3a5b56257579f6c8293d0143c02d1cca09135e589",
+      "route": "cpri_0p5uf:SI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_cpri_0p5uf_SI_OSHUNT_v0_1.json",
+      "sha256": "1ea64ec6746ff190222296df45359545fc61f8d5e64ed3a2d9ead199839b14f7",
+      "route": "cpri_0p5uf:SI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_research_3uf_LI_GSHUNT_v0_0.json",
+      "sha256": "6c23bb4d16cada950a7d22da127d9c443fbe6f16fb6e9ca8c5025b75c288d2b7",
+      "route": "research_3uf:LI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_research_3uf_LI_GSHUNT_v0_1.json",
+      "sha256": "1321a426321ddffc1117821e154a4c409b76c5a819dcf8d18dec82a7039386a5",
+      "route": "research_3uf:LI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_research_3uf_LI_OSHUNT_v0_0.json",
+      "sha256": "e0a35a2b704f58cd0d426a8684279fade23bf42e64e5a57ca5d010b9b9508938",
+      "route": "research_3uf:LI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_research_3uf_LI_OSHUNT_v0_1.json",
+      "sha256": "d14000d36bd81bc88c9da9d5ec24b74499b7ac75767253ec503589cd78c24488",
+      "route": "research_3uf:LI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_research_3uf_SI_GSHUNT_v0_0.json",
+      "sha256": "30e666fbeba4a1749f5f9dcaffbacde65c39b2e7894227cbd9b2fd9262439066",
+      "route": "research_3uf:SI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_research_3uf_SI_GSHUNT_v0_1.json",
+      "sha256": "740bf222574a2b63cce4bcf90e6b6a488ae680d3e180ba9075487b6b97afaa14",
+      "route": "research_3uf:SI:GSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_research_3uf_SI_OSHUNT_v0_0.json",
+      "sha256": "822c0dd33c5da732f6c09c988a8acfedbeb1c4ab31102a7a37d0b81f8e521a3d",
+      "route": "research_3uf:SI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "FROZEN_test_research_3uf_SI_OSHUNT_v0_1.json",
+      "sha256": "7d7721748d60724101e0460acec259fd08b7e6895df4ad5ee2e1e911cbc92856",
+      "route": "research_3uf:SI:OSHUNT_v0",
+      "known_regression": false
+    },
+    {
+      "path": "KNOWN_RARE_LI_REGRESSION.json",
+      "sha256": "7e4617f20686821d03865622fd0a198491bd427ad88366cb157612a276edaf7c",
+      "route": "cpri_0p5uf:LI:GSHUNT_v0",
+      "known_regression": true
+    }
+  ]
+}

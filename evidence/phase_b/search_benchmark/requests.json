@@ -1,0 +1,492 @@
+[
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_0",
+    "domain_id": "cpri_0p5uf",
+    "impulse_type": "LI",
+    "topology_id": "GSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.1987431791557394e-09,
+      "divider_capacitance_F": 4.21687057355031e-10,
+      "stray_capacitance_F": 2.5295564868662685e-10,
+      "loop_inductance_H": 6.313198519691094e-05,
+      "loop_resistance_ohm": 1.9904126809016436,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_0"
+    },
+    "target_crest_V": 1000000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_1",
+    "domain_id": "cpri_0p5uf",
+    "impulse_type": "LI",
+    "topology_id": "GSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.008053153261094e-09,
+      "divider_capacitance_F": 6.278851341656671e-10,
+      "stray_capacitance_F": 1.6572606087431433e-10,
+      "loop_inductance_H": 4.258014715549113e-05,
+      "loop_resistance_ohm": 3.322304103237241,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_1"
+    },
+    "target_crest_V": 750000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_0",
+    "domain_id": "cpri_0p5uf",
+    "impulse_type": "LI",
+    "topology_id": "OSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 9.763631417395038e-10,
+      "divider_capacitance_F": 3.3823326022688466e-10,
+      "stray_capacitance_F": 1.030498609368811e-10,
+      "loop_inductance_H": 3.4819453909992485e-05,
+      "loop_resistance_ohm": 4.887464759317714,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_0"
+    },
+    "target_crest_V": 1550000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_1",
+    "domain_id": "cpri_0p5uf",
+    "impulse_type": "LI",
+    "topology_id": "OSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.0237351273483047e-09,
+      "divider_capacitance_F": 5.824993063291626e-10,
+      "stray_capacitance_F": 2.7014793311629333e-10,
+      "loop_inductance_H": 5.192186877508209e-05,
+      "loop_resistance_ohm": 4.453245503252231,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_1"
+    },
+    "target_crest_V": 750000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0",
+    "domain_id": "cpri_0p5uf",
+    "impulse_type": "SI",
+    "topology_id": "GSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.1014886013914275e-09,
+      "divider_capacitance_F": 5.647757401530103e-10,
+      "stray_capacitance_F": 2.854613338243485e-10,
+      "loop_inductance_H": 3.898308871082481e-05,
+      "loop_resistance_ohm": 2.418134535251869,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0"
+    },
+    "target_crest_V": 1300000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_1",
+    "domain_id": "cpri_0p5uf",
+    "impulse_type": "SI",
+    "topology_id": "GSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.410494015520933e-09,
+      "divider_capacitance_F": 3.73035023166103e-10,
+      "stray_capacitance_F": 2.025590340474431e-10,
+      "loop_inductance_H": 7.371650565625832e-05,
+      "loop_resistance_ohm": 2.643384973739436,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_1"
+    },
+    "target_crest_V": 1300000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_cpri_0p5uf_SI_OSHUNT_v0_0",
+    "domain_id": "cpri_0p5uf",
+    "impulse_type": "SI",
+    "topology_id": "OSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.5654681940278886e-09,
+      "divider_capacitance_F": 4.688019770126365e-10,
+      "stray_capacitance_F": 8.749596834373588e-11,
+      "loop_inductance_H": 2.2138876584277713e-05,
+      "loop_resistance_ohm": 0.7470653965642632,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_cpri_0p5uf_SI_OSHUNT_v0_0"
+    },
+    "target_crest_V": 750000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_cpri_0p5uf_SI_OSHUNT_v0_1",
+    "domain_id": "cpri_0p5uf",
+    "impulse_type": "SI",
+    "topology_id": "OSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.5838263081498522e-09,
+      "divider_capacitance_F": 3.1445401586339673e-10,
+      "stray_capacitance_F": 5.312917906952511e-11,
+      "loop_inductance_H": 6.134516998524391e-05,
+      "loop_resistance_ohm": 1.7741698494495357,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_cpri_0p5uf_SI_OSHUNT_v0_1"
+    },
+    "target_crest_V": 750000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_research_3uf_LI_GSHUNT_v0_0",
+    "domain_id": "research_3uf",
+    "impulse_type": "LI",
+    "topology_id": "GSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.2530279752651272e-09,
+      "divider_capacitance_F": 6.34650441913172e-10,
+      "stray_capacitance_F": 1.5539529823973352e-10,
+      "loop_inductance_H": 5.8570310348534276e-05,
+      "loop_resistance_ohm": 1.5595594328696927,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_research_3uf_LI_GSHUNT_v0_0"
+    },
+    "target_crest_V": 750000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_research_3uf_LI_GSHUNT_v0_1",
+    "domain_id": "research_3uf",
+    "impulse_type": "LI",
+    "topology_id": "GSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 4.668219118708941e-10,
+      "divider_capacitance_F": 3.3786563313930233e-10,
+      "stray_capacitance_F": 1.9447160058557017e-10,
+      "loop_inductance_H": 1.9409572013234044e-05,
+      "loop_resistance_ohm": 1.213551304475378,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_research_3uf_LI_GSHUNT_v0_1"
+    },
+    "target_crest_V": 1300000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_research_3uf_LI_OSHUNT_v0_0",
+    "domain_id": "research_3uf",
+    "impulse_type": "LI",
+    "topology_id": "OSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.5947054241246317e-09,
+      "divider_capacitance_F": 5.628892133671595e-10,
+      "stray_capacitance_F": 2.3114893191256019e-10,
+      "loop_inductance_H": 6.933514086616723e-06,
+      "loop_resistance_ohm": 0.4977251496983348,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_research_3uf_LI_OSHUNT_v0_0"
+    },
+    "target_crest_V": 1300000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_research_3uf_LI_OSHUNT_v0_1",
+    "domain_id": "research_3uf",
+    "impulse_type": "LI",
+    "topology_id": "OSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.5259993685527824e-09,
+      "divider_capacitance_F": 4.3526489140687775e-10,
+      "stray_capacitance_F": 7.709772971946611e-11,
+      "loop_inductance_H": 1.0585238728034358e-05,
+      "loop_resistance_ohm": 2.655653275085516,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_research_3uf_LI_OSHUNT_v0_1"
+    },
+    "target_crest_V": 750000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_research_3uf_SI_GSHUNT_v0_0",
+    "domain_id": "research_3uf",
+    "impulse_type": "SI",
+    "topology_id": "GSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 6.186740422297364e-10,
+      "divider_capacitance_F": 4.245515609542268e-10,
+      "stray_capacitance_F": 7.10810141015638e-11,
+      "loop_inductance_H": 3.629599437141371e-05,
+      "loop_resistance_ohm": 3.391922539585046,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_research_3uf_SI_GSHUNT_v0_0"
+    },
+    "target_crest_V": 1000000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_research_3uf_SI_GSHUNT_v0_1",
+    "domain_id": "research_3uf",
+    "impulse_type": "SI",
+    "topology_id": "GSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 6.154748904628815e-10,
+      "divider_capacitance_F": 3.7494344657373236e-10,
+      "stray_capacitance_F": 1.9955609083373983e-10,
+      "loop_inductance_H": 4.004512439842087e-05,
+      "loop_resistance_ohm": 1.5884669783036376,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_research_3uf_SI_GSHUNT_v0_1"
+    },
+    "target_crest_V": 1550000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_research_3uf_SI_OSHUNT_v0_0",
+    "domain_id": "research_3uf",
+    "impulse_type": "SI",
+    "topology_id": "OSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 4.203412863070818e-10,
+      "divider_capacitance_F": 6.094942902114973e-10,
+      "stray_capacitance_F": 1.4534697854506376e-10,
+      "loop_inductance_H": 5.586071132998791e-05,
+      "loop_resistance_ohm": 2.799549691706508,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_research_3uf_SI_OSHUNT_v0_0"
+    },
+    "target_crest_V": 1000000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_research_3uf_SI_OSHUNT_v0_1",
+    "domain_id": "research_3uf",
+    "impulse_type": "SI",
+    "topology_id": "OSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 5.067333231985421e-10,
+      "divider_capacitance_F": 3.70827550535615e-10,
+      "stray_capacitance_F": 2.8999097207880443e-10,
+      "loop_inductance_H": 6.905698301582402e-06,
+      "loop_resistance_ohm": 3.4669352809279523,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_research_3uf_SI_OSHUNT_v0_1"
+    },
+    "target_crest_V": 1000000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  {
+    "schema_version": "network_request_v3",
+    "request_id": "KNOWN_RARE_LI_REGRESSION",
+    "domain_id": "cpri_0p5uf",
+    "impulse_type": "LI",
+    "topology_id": "GSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.5865149975765164e-09,
+      "divider_capacitance_F": 1.9226432423478522e-10,
+      "stray_capacitance_F": 4.793975242274987e-10,
+      "loop_inductance_H": 8.06921038140428e-05,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "loop_resistance_ohm": 4.010301291302698,
+      "load_resistance_ohm": null,
+      "setup_id": "DEV_LI_N7_R30_2",
+      "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED"
+    },
+    "target_crest_V": 1000000.0,
+    "max_modules": 1,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 65536,
+    "max_physics_evaluations": 256
+  }
+]

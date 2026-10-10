@@ -11,7 +11,7 @@ current evidence. The original accepted release and its ZIP are unchanged.
 | Both separate capacitance profiles | Implemented; energy-domain and numerical tests pass |
 | Preserve legacy numerical behavior | 504-case SI reproduced; all 506 integrated checks passed, including 100 v3 tests |
 | Optimized detailed Physics verification | Linear response reuse tested against independent solves |
-| ML operational ranking and adaptive expansion | Eight selected models load; production API/browser audit passes; controlled benchmark pending |
+| ML operational ranking and adaptive expansion | Eight selected models load; production API/browser audit passes; 17-case four-policy benchmark is complete, with ML operationally exercised but no incremental retention/regret benefit over analytical demonstrated; shared-load timing caveat applies |
 | Complete declared-catalog capability | 504 regression and sixteen 6912-candidate validation oracles complete |
 | Accurate no-solution and partial-search semantics | New optimizer unit tests pass |
 | Comprehensive separate datasets | R2 complete before scope revision: 122000 attempts / 92662 canonical eligible shapes, including historical one-through-four-module shapes; new work restricted to two/three |
@@ -24,10 +24,10 @@ current evidence. The original accepted release and its ZIP are unchanged.
 | Fixed-setting forward prediction | Eight actual selected routes pass; route mismatch rejected; ML and Physics values/support remain separate |
 | Frozen prediction and later scalar reference | Implemented; hash integrity and later reference tests pass |
 | Raw-waveform evidence preservation and qualified limits | Implemented and API tested; qualified scope retained |
-| Four-policy performance benchmarks | Separate held-out request evaluation pending |
+| Four-policy performance benchmarks | 17 hashed case summaries complete: 12/12 feasible-request retention for analytical/ML/combined, 1,019/1,019 analytical and ML passing alternatives, 1,014/1,019 combined, zero observed regret; timings are shared-load observations, not controlled speedup evidence |
 | Rare feasible retention | Deliberately wrong ML still retains sole LI pass in small-catalog fallback |
 | Offline extracted release, manifests, source identity | New builder prepared; final packaging pending |
-| Documentation, artifacts, commits and handoff | Tested source/data increments committed; final benchmark/release evidence pending |
+| Documentation, artifacts, commits and handoff | Benchmark evidence and handoff documentation recorded; extracted-package acceptance and package manifest checks remain pending |
 
 No real-machine calibration, laboratory mounting approval, or IEC measurement
 software qualification is claimed. Neither a time-limited search nor an

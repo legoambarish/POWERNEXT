@@ -1,0 +1,853 @@
+{
+  "request": {
+    "schema_version": "network_request_v3",
+    "request_id": "FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_1",
+    "domain_id": "cpri_0p5uf",
+    "impulse_type": "LI",
+    "topology_id": "OSHUNT_v0",
+    "setup": {
+      "dut_capacitance_F": 1.0237351273483047e-09,
+      "divider_capacitance_F": 5.824993063291626e-10,
+      "stray_capacitance_F": 2.7014793311629333e-10,
+      "loop_inductance_H": 5.192186877508209e-05,
+      "loop_resistance_ohm": 4.453245503252231,
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "setup_id": "FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_1"
+    },
+    "target_crest_V": 750000.0,
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "max_modules": 2,
+    "search_mode": "complete",
+    "priority": "complete_physics",
+    "budget_seconds": 7200,
+    "alternatives": 4,
+    "max_ml_candidates": 100000,
+    "max_physics_evaluations": 100000
+  },
+  "model": {
+    "baseline_columns": [
+      "baseline_gain",
+      "baseline_front_us",
+      "baseline_tail_us"
+    ],
+    "data_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+    "feature_order": [
+      "stages",
+      "front_per_stage_ohm",
+      "tail_per_stage_ohm",
+      "dut_nF",
+      "divider_nF",
+      "stray_nF",
+      "basic_additional_nF",
+      "loop_uH",
+      "loop_ohm",
+      "load_kohm",
+      "Cg_nF",
+      "CL_nF",
+      "Rf_ohm",
+      "Rt_ohm",
+      "CL_over_Cg",
+      "Rf_CL_us",
+      "Rt_Cg_us",
+      "LC_us",
+      "zero_L",
+      "baseline_gain",
+      "baseline_front_us",
+      "baseline_tail_us"
+    ],
+    "hardware_recommendations_enabled": false,
+    "metrics": {
+      "validation": {
+        "boundary_errors": {
+          "crest_boundary_error_max_V": 2230847.7522016177,
+          "crest_false_accept": 1,
+          "crest_false_reject": 2,
+          "front_boundary_error_max_us": 1875.0957089745807,
+          "front_outside_rate": 0.8938307030129125,
+          "front_tolerance_normalized_boundary_error_P95": 459.5165035823661,
+          "front_tolerance_normalized_boundary_error_max": 5208.599191596057,
+          "shape_false_accept": 0,
+          "shape_false_reject": 1,
+          "shape_mismatch_rate": 0.0007173601147776184,
+          "shape_predicted_pass": 33,
+          "shape_truth_pass": 34,
+          "tail_boundary_error_max_us": 12393.255365801744,
+          "tail_outside_rate": 0.830703012912482,
+          "tail_tolerance_normalized_boundary_error_P95": 389.0292409271455,
+          "tail_tolerance_normalized_boundary_error_max": 1239.3255365801745
+        },
+        "front_us": {
+          "MAE": 0.019467395234288278,
+          "P95_absolute_error": 0.0683430991859345,
+          "RMSE": 0.040795125974783575,
+          "max_absolute_error": 0.6422790719619932,
+          "tolerance_normalized_MAE": 0.054076097873022984,
+          "tolerance_normalized_P95": 0.18984194218315137
+        },
+        "gain": {
+          "MAE": 0.0013990396381710216,
+          "P95_absolute_error": 0.007167592910609143,
+          "RMSE": 0.0035949844605886625,
+          "max_absolute_error": 0.03704009411315168,
+          "tolerance_normalized_MAE": 0.06278314008360551,
+          "tolerance_normalized_P95": 0.3151817963355751
+        },
+        "n": 1394,
+        "ood_count": 1,
+        "optimization_validation": {
+          "candidate_count": 1394,
+          "charge_cap_V": {
+            "max": 200000.0,
+            "mean": 200000.0,
+            "min": 200000.0
+          },
+          "feasible_group_count": 17,
+          "feasible_hit@1": 1.0,
+          "feasible_hit@1_count": 17,
+          "feasible_hit@1_rate": 1.0,
+          "feasible_hit@3": 1.0,
+          "feasible_hit@3_count": 17,
+          "feasible_hit@3_rate": 1.0,
+          "feasible_hit@5": 1.0,
+          "feasible_hit@5_count": 17,
+          "feasible_hit@5_rate": 1.0,
+          "feasible_hit_at_5": 1.0,
+          "feasiblehit@1": 1.0,
+          "feasiblehit@3": 1.0,
+          "feasiblehit@5": 1.0,
+          "group_count": 217,
+          "group_key_policy": "request_group_id/request_id/group_id/setup_family_id/row_id",
+          "group_summaries": [
+            {
+              "candidate_count": 7,
+              "first_true_feasible_rank": 1,
+              "group_id": "095870c781701173a7e3c1f0f8decf673d303bfce5e03195d1eab0723d673e88",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 6,
+              "first_true_feasible_rank": 1,
+              "group_id": "1a67e491c26824e656eacd53a7b3db7db0d01b248dee6da80d2c09f30c68dcf8",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 6,
+              "first_true_feasible_rank": 1,
+              "group_id": "2ffc45aed5c955a9e29e22d9dcd9a4ac8a18fb81f871bee749e483a60ec4cce9",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 7,
+              "first_true_feasible_rank": 1,
+              "group_id": "303f993ba2f8b5cbfeae4ba2c13681069983cdba1c93e5e935740358e9ba13e0",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 7,
+              "first_true_feasible_rank": 1,
+              "group_id": "3a39e5ae2e9a9dfcea977be6b3c98a606b6cd072fee24c460c9198231f2b961d",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 8,
+              "first_true_feasible_rank": 1,
+              "group_id": "3fc290b7e3f0193092f5095861ba81f705d62f0d35acd313163f9cd65771d5ff",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 6,
+              "first_true_feasible_rank": 1,
+              "group_id": "4352c10ce54e7f1a7584be811f0182001caa2e3700df42151e11cc8f81329bce",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 6,
+              "first_true_feasible_rank": 1,
+              "group_id": "57d0297a28ecd0be6155385f0bda91a7929201b35db1ff337ba745a30274ec2b",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 7,
+              "first_true_feasible_rank": 1,
+              "group_id": "5896e772a725483f8018d26ea9393ff23dec7a932636573cc164d7d44ac36259",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 6,
+              "first_true_feasible_rank": 1,
+              "group_id": "600c32127ca4a1642d311675cb6cc354186abc3e39f1d2d732c4b2314bf9e9be",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 5,
+              "first_true_feasible_rank": 1,
+              "group_id": "60d80193760c8d4b186d4876489285926f0e12273b1b72901d440cf82f2518df",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 5,
+              "first_true_feasible_rank": 1,
+              "group_id": "a10edb31286e6fd2f28063815aac7119ddb5698f38c025a41f84b84234a1a3c3",
+              "true_feasible_count": 2
+            },
+            {
+              "candidate_count": 7,
+              "first_true_feasible_rank": 1,
+              "group_id": "ab95e3f4868cac12eaa54142b516097a59e5bd9982b22131a996d35c991d0088",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 6,
+              "first_true_feasible_rank": 1,
+              "group_id": "ac3267f4c21cb488d293a45959cc99c1b126144e74fed7dbc5c5152fdab37c28",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 7,
+              "first_true_feasible_rank": 1,
+              "group_id": "c8eb16a9a1b7f49b558602185e6b9490ffc226dc7ee57a2a8976b15d942a090f",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 8,
+              "first_true_feasible_rank": 1,
+              "group_id": "e8f2364efefaa60ba613f5c3cccecf194697bd3be16758411109c60ca74c3bb6",
+              "true_feasible_count": 1
+            },
+            {
+              "candidate_count": 6,
+              "first_true_feasible_rank": 1,
+              "group_id": "fb637075825f699f577668a881403d5720f335c75b9189b3541dac134322281c",
+              "true_feasible_count": 1
+            }
+          ],
+          "group_summaries_truncated": false,
+          "group_summary_count": 17,
+          "groups_coverage_insufficient": false,
+          "groups_coverage_status": "AVAILABLE",
+          "mean_predicted_J": 144920.22446909486,
+          "mean_regret_at_5": 0.0,
+          "mean_true_J": 144936.98768363125,
+          "minimum_group_coverage": 5,
+          "missed_feasible@1": 0.0,
+          "missed_feasible@1_count": 0,
+          "missed_feasible@1_rate": 0.0,
+          "missed_feasible@3": 0.0,
+          "missed_feasible@3_count": 0,
+          "missed_feasible@3_rate": 0.0,
+          "missed_feasible@5": 0.0,
+          "missed_feasible@5_count": 0,
+          "missed_feasible@5_rate": 0.0,
+          "missed_feasible_at_5": 0,
+          "predicted_J": 144920.22446909486,
+          "predicted_pass_candidate_count": 17,
+          "predicted_pass_rate": 0.012195121951219513,
+          "prefix_first_pass": {
+            "count": 17,
+            "mean_rank": 1.0,
+            "median_rank": 1.0
+          },
+          "regret_besttrueJ@1": 0.0,
+          "regret_besttrueJ@1_count": 17,
+          "regret_besttrueJ@1_mean": 0.0,
+          "regret_besttrueJ@1_raw_mean": 0.0,
+          "regret_besttrueJ@1_unavailable_count": 0,
+          "regret_besttrueJ@3": 0.0,
+          "regret_besttrueJ@3_count": 17,
+          "regret_besttrueJ@3_mean": 0.0,
+          "regret_besttrueJ@3_raw_mean": 0.0,
+          "regret_besttrueJ@3_unavailable_count": 0,
+          "regret_besttrueJ@5": 0.0,
+          "regret_besttrueJ@5_count": 17,
+          "regret_besttrueJ@5_mean": 0.0,
+          "regret_besttrueJ@5_raw_mean": 0.0,
+          "regret_besttrueJ@5_unavailable_count": 0,
+          "request_level_hook": {
+            "cases": [
+              {
+                "candidate_count": 6912,
+                "candidates_per_second": 129183.46406287035,
+                "feasible_count": 38,
+                "first_feasible_rank": 1,
+                "hit_at_k": {
+                  "1": true,
+                  "10": true,
+                  "100": true,
+                  "25": true,
+                  "3": true,
+                  "5": true,
+                  "50": true
+                },
+                "predict_seconds": 0.053505300002143485,
+                "regret_at_k": {
+                  "1": 0.0,
+                  "10": 0.0,
+                  "100": 0.0,
+                  "25": 0.0,
+                  "3": 0.0,
+                  "5": 0.0,
+                  "50": 0.0
+                },
+                "request_id": "FROZEN_validation_cpri_0p5uf_LI_OSHUNT_v0_0"
+              },
+              {
+                "candidate_count": 6912,
+                "candidates_per_second": 172517.07199338786,
+                "feasible_count": 19,
+                "first_feasible_rank": 1,
+                "hit_at_k": {
+                  "1": true,
+                  "10": true,
+                  "100": true,
+                  "25": true,
+                  "3": true,
+                  "5": true,
+                  "50": true
+                },
+                "predict_seconds": 0.04006560000198078,
+                "regret_at_k": {
+                  "1": 0.0,
+                  "10": 0.0,
+                  "100": 0.0,
+                  "25": 0.0,
+                  "3": 0.0,
+                  "5": 0.0,
+                  "50": 0.0
+                },
+                "request_id": "FROZEN_validation_cpri_0p5uf_LI_OSHUNT_v0_1"
+              }
+            ],
+            "feasible_hit_at_5": 1.0,
+            "feasible_request_count": 2,
+            "feasible_retention_status": "AVAILABLE",
+            "mean_regret_at_25": 0.0,
+            "missed_feasible_at_5": 0,
+            "request_count": 2,
+            "retention": 1.0,
+            "selection_usable": true,
+            "status": "COMPLETE_INDEPENDENT_PHYSICS_ORACLE_VALIDATION"
+          },
+          "secondary_gain_order_proxy": {
+            "algorithm": "fenwick_exact_non_tied_pairs",
+            "pair_count": 3986,
+            "retention": 0.9962368289011541,
+            "scope": "within_request_group",
+            "status": "SECONDARY_GAIN_ORDER_PROXY"
+          },
+          "status": "FIXED_SETUP_WAVEFORM_RANKING",
+          "target_crest_V": 1000000.0,
+          "target_policy": "FIXED_1MV",
+          "true_J": 144936.98768363125,
+          "true_feasible_candidate_count": 18,
+          "true_pass_rate": 0.01291248206599713,
+          "valid_group_count": 217
+        },
+        "prediction_rows_per_second": 20624.413742639576,
+        "prediction_seconds": 0.06758980000086012,
+        "selection_score": 0.05338603569234848,
+        "tail_us": {
+          "MAE": 0.43298869120416933,
+          "P95_absolute_error": 1.2894765549314218,
+          "RMSE": 2.079913513885897,
+          "max_absolute_error": 35.691404226675786,
+          "tolerance_normalized_MAE": 0.04329886912041694,
+          "tolerance_normalized_P95": 0.1289476554931422
+        }
+      }
+    },
+    "model_artifact_bytes": 32418650,
+    "model_id": "model_daa2cbadea54a3c3ef40",
+    "model_sha256": "3e2a84fd0141c3096d52b6de94722e86968659f959c1a3e3677829c63ffb5c1c",
+    "persistence": "joblib; load only trusted locally produced artifacts",
+    "provenance": {
+      "benchmark_hook_source_sha256": "d01c0ad8cbc4eb1116aad3b8b727d6075158747b91ea532529fea03e1deaa4ef",
+      "data_manifest_sha256": "93f3d521d171559d2b6bd9f30d657fb98d56a1922e53d6ca627805b83df4ebc4",
+      "data_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+      "optimization_oracles_manifest_sha256": "f2bcd929acf30a16a273bb68b1266800183643d68233b458a3135e83c59ebcf6",
+      "optimization_oracles_purpose": "validation",
+      "optimization_oracles_status": "COMPLETE",
+      "optimization_validation_hook": "powernext_v3.benchmark.OracleValidation",
+      "optimization_validation_hook_source_path": "powernext_v3/benchmark.py",
+      "optimization_validation_hook_source_sha256": "d01c0ad8cbc4eb1116aad3b8b727d6075158747b91ea532529fea03e1deaa4ef",
+      "physics_source_fingerprint": {
+        "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+        "sources": {
+          "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+          "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+          "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+          "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+          "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+          "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+          "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+        }
+      },
+      "predictive_contract_source_fingerprint": {
+        "physics": {
+          "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+          "sources": {
+            "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+            "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+            "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+            "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+            "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+            "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+            "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+          }
+        },
+        "sha256": "6a2eb965676b1952d7fd04711535f16fdff98092867fbd22ff0c7c0f17e6b082",
+        "sources": {
+          "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+          "models.py": "0178427a3849b4b4286b17e77e9eaf7a969bc493fcdffb3f09746caaeed55b12",
+          "networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+          "physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+          "profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+        }
+      },
+      "registry_code_sha256": "e9360b272a2a4c26bef18261e94826775b40012d486293401a389b65fa8af4e9",
+      "runtime": {
+        "joblib": "1.5.3",
+        "numpy": "2.4.6",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "python": "3.12.14",
+        "scipy": "1.17.1",
+        "sklearn": "1.9.0"
+      },
+      "training_code_sha256": "239fd66df2e58dbb781a9abae4edcdd93b3b6d758173647c27013d454e001121"
+    },
+    "real_data_calibrated": false,
+    "route": {
+      "baseline_columns": [
+        "baseline_gain",
+        "baseline_front_us",
+        "baseline_tail_us"
+      ],
+      "domain": "cpri_0p5uf",
+      "domain_id": "cpri_0p5uf",
+      "family": "extra_trees",
+      "feature_order": [
+        "stages",
+        "front_per_stage_ohm",
+        "tail_per_stage_ohm",
+        "dut_nF",
+        "divider_nF",
+        "stray_nF",
+        "basic_additional_nF",
+        "loop_uH",
+        "loop_ohm",
+        "load_kohm",
+        "Cg_nF",
+        "CL_nF",
+        "Rf_ohm",
+        "Rt_ohm",
+        "CL_over_Cg",
+        "Rf_CL_us",
+        "Rt_Cg_us",
+        "LC_us",
+        "zero_L",
+        "baseline_gain",
+        "baseline_front_us",
+        "baseline_tail_us"
+      ],
+      "formulation": "residual",
+      "mode": "LI",
+      "route_id": "cpri_0p5uf:LI:OSHUNT_v0",
+      "topology": "OSHUNT_v0",
+      "topology_id": "OSHUNT_v0"
+    },
+    "runtime": {
+      "joblib": "1.5.3",
+      "numpy": "2.4.6",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.14",
+      "scipy": "1.17.1",
+      "sklearn": "1.9.0"
+    },
+    "schema_version": "model_registry_v3",
+    "source_fingerprint": {
+      "physics": {
+        "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+        "sources": {
+          "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+          "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+          "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+          "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+          "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+          "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+          "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+        }
+      },
+      "sha256": "6a2eb965676b1952d7fd04711535f16fdff98092867fbd22ff0c7c0f17e6b082",
+      "sources": {
+        "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+        "models.py": "0178427a3849b4b4286b17e77e9eaf7a969bc493fcdffb3f09746caaeed55b12",
+        "networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "training_code_sha256": "239fd66df2e58dbb781a9abae4edcdd93b3b6d758173647c27013d454e001121",
+    "training_rows": 7300
+  },
+  "policies": [
+    {
+      "policy": "complete_physics",
+      "status": "VERIFIED_COMPLIANT",
+      "search": {
+        "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+        "max_modules_per_branch": 2,
+        "uniform_stages": true,
+        "recipes_per_branch": 48,
+        "distinct_resistances_per_branch": 48,
+        "theoretical_recipe_configurations": 6912,
+        "distinct_response_candidates": 6912,
+        "stages": [
+          6,
+          9,
+          12
+        ],
+        "catalog_sha256": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED",
+        "requested_strategy": "complete_physics",
+        "effective_strategy": "complete_physics",
+        "catalog_complete": true,
+        "ml_pool_complete": false,
+        "considered_count": 6912,
+        "ml_predicted_count": 0,
+        "physics_evaluated_count": 6912,
+        "evaluated_or_legally_excluded_count": 6912,
+        "passing_count": 66,
+        "unsupported_count": 419,
+        "known_constraint_excluded_count": 0,
+        "ml_ood_count": null,
+        "termination_reason": "DECLARED_CATALOG_COMPLETED",
+        "time_to_first_pass_seconds": 2.6679817000003823,
+        "time_to_alternatives_seconds": 3.855520900000556,
+        "total_seconds": 93.42314270000134,
+        "scoring_seconds": 0.0,
+        "verification_seconds": 93.42314270000134,
+        "optimality": "BEST_VERIFIED_EVALUATED_SUBSET",
+        "candidate_order_policy": "DETERMINISTIC_PROGRESSIVE_GUIDES_AND_FULL_CYCLE_COVERAGE_v3"
+      },
+      "best_objective": 0.09299065193339624,
+      "best_candidate_id": "net_ce230a317712_2704",
+      "best_configuration": {
+        "impulse_type": "LI",
+        "stages": 9,
+        "stage_charge_V": 123083.3319599576,
+        "front_per_stage_ohm": 36.63716814159292,
+        "tail_per_stage_ohm": 92.0,
+        "front_network": {
+          "op": "P",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 180
+            }
+          ]
+        },
+        "tail_network": {
+          "op": "S",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 46
+            }
+          ]
+        },
+        "topology_id": "OSHUNT_v0",
+        "polarity": 1
+      },
+      "oracle_feasible_count": 66,
+      "feasible_candidates_found": 66,
+      "feasible_candidate_retention": 1.0,
+      "feasible_request_retained": true,
+      "missed_feasible_request": false,
+      "regret": 0.0,
+      "process_peak_memory_bytes": 507949056,
+      "model_loading_seconds": 0,
+      "model_loading_cache_context": "ROUTE_PREVIOUSLY_LOADED",
+      "shared_warmup_seconds": 0.0202969000019948,
+      "model_loading_shared_between_ml_and_combined": true,
+      "ml_candidates_per_scoring_second": null
+    },
+    {
+      "policy": "analytical",
+      "status": "VERIFIED_COMPLIANT",
+      "search": {
+        "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+        "max_modules_per_branch": 2,
+        "uniform_stages": true,
+        "recipes_per_branch": 48,
+        "distinct_resistances_per_branch": 48,
+        "theoretical_recipe_configurations": 6912,
+        "distinct_response_candidates": 6912,
+        "stages": [
+          6,
+          9,
+          12
+        ],
+        "catalog_sha256": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED",
+        "requested_strategy": "analytical",
+        "effective_strategy": "analytical",
+        "catalog_complete": false,
+        "ml_pool_complete": true,
+        "considered_count": 6912,
+        "ml_predicted_count": 0,
+        "physics_evaluated_count": 256,
+        "evaluated_or_legally_excluded_count": 256,
+        "passing_count": 66,
+        "unsupported_count": 27,
+        "known_constraint_excluded_count": 0,
+        "ml_ood_count": null,
+        "termination_reason": "PHYSICS_EVALUATION_BUDGET",
+        "time_to_first_pass_seconds": 0.104362800000672,
+        "time_to_alternatives_seconds": 0.16714240000146674,
+        "total_seconds": 4.868586200002028,
+        "scoring_seconds": 0.07619099999647005,
+        "verification_seconds": 4.792395200005558,
+        "optimality": "BEST_VERIFIED_EVALUATED_SUBSET",
+        "candidate_order_policy": "DETERMINISTIC_PROGRESSIVE_GUIDES_AND_FULL_CYCLE_COVERAGE_v3"
+      },
+      "best_objective": 0.09299065193339624,
+      "best_candidate_id": "net_ce230a317712_2704",
+      "best_configuration": {
+        "impulse_type": "LI",
+        "stages": 9,
+        "stage_charge_V": 123083.3319599576,
+        "front_per_stage_ohm": 36.63716814159292,
+        "tail_per_stage_ohm": 92.0,
+        "front_network": {
+          "op": "P",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 180
+            }
+          ]
+        },
+        "tail_network": {
+          "op": "S",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 46
+            }
+          ]
+        },
+        "topology_id": "OSHUNT_v0",
+        "polarity": 1
+      },
+      "oracle_feasible_count": 66,
+      "feasible_candidates_found": 66,
+      "feasible_candidate_retention": 1.0,
+      "feasible_request_retained": true,
+      "missed_feasible_request": false,
+      "regret": 0.0,
+      "process_peak_memory_bytes": 507949056,
+      "model_loading_seconds": 0,
+      "model_loading_cache_context": "ROUTE_PREVIOUSLY_LOADED",
+      "shared_warmup_seconds": 0.0202969000019948,
+      "model_loading_shared_between_ml_and_combined": true,
+      "ml_candidates_per_scoring_second": null
+    },
+    {
+      "policy": "ml",
+      "status": "VERIFIED_COMPLIANT",
+      "search": {
+        "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+        "max_modules_per_branch": 2,
+        "uniform_stages": true,
+        "recipes_per_branch": 48,
+        "distinct_resistances_per_branch": 48,
+        "theoretical_recipe_configurations": 6912,
+        "distinct_response_candidates": 6912,
+        "stages": [
+          6,
+          9,
+          12
+        ],
+        "catalog_sha256": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED",
+        "requested_strategy": "ml",
+        "effective_strategy": "ml",
+        "catalog_complete": false,
+        "ml_pool_complete": true,
+        "considered_count": 6912,
+        "ml_predicted_count": 6912,
+        "physics_evaluated_count": 256,
+        "evaluated_or_legally_excluded_count": 256,
+        "passing_count": 66,
+        "unsupported_count": 45,
+        "known_constraint_excluded_count": 0,
+        "ml_ood_count": 0,
+        "termination_reason": "PHYSICS_EVALUATION_BUDGET",
+        "time_to_first_pass_seconds": 0.6905656000017188,
+        "time_to_alternatives_seconds": 0.7557510000006005,
+        "total_seconds": 4.433986600000935,
+        "scoring_seconds": 0.6612440999997489,
+        "verification_seconds": 3.7727425000011863,
+        "optimality": "BEST_VERIFIED_EVALUATED_SUBSET",
+        "candidate_order_policy": "DETERMINISTIC_PROGRESSIVE_GUIDES_AND_FULL_CYCLE_COVERAGE_v3"
+      },
+      "best_objective": 0.09299065193339624,
+      "best_candidate_id": "net_ce230a317712_2704",
+      "best_configuration": {
+        "impulse_type": "LI",
+        "stages": 9,
+        "stage_charge_V": 123083.3319599576,
+        "front_per_stage_ohm": 36.63716814159292,
+        "tail_per_stage_ohm": 92.0,
+        "front_network": {
+          "op": "P",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 180
+            }
+          ]
+        },
+        "tail_network": {
+          "op": "S",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 46
+            }
+          ]
+        },
+        "topology_id": "OSHUNT_v0",
+        "polarity": 1
+      },
+      "oracle_feasible_count": 66,
+      "feasible_candidates_found": 66,
+      "feasible_candidate_retention": 1.0,
+      "feasible_request_retained": true,
+      "missed_feasible_request": false,
+      "regret": 0.0,
+      "process_peak_memory_bytes": 507949056,
+      "model_loading_seconds": 0.08630130000165082,
+      "model_loading_cache_context": "ROUTE_PREVIOUSLY_LOADED",
+      "shared_warmup_seconds": 0.0202969000019948,
+      "model_loading_shared_between_ml_and_combined": true,
+      "ml_candidates_per_scoring_second": 10453.02332376595
+    },
+    {
+      "policy": "combined",
+      "status": "VERIFIED_COMPLIANT",
+      "search": {
+        "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+        "max_modules_per_branch": 2,
+        "uniform_stages": true,
+        "recipes_per_branch": 48,
+        "distinct_resistances_per_branch": 48,
+        "theoretical_recipe_configurations": 6912,
+        "distinct_response_candidates": 6912,
+        "stages": [
+          6,
+          9,
+          12
+        ],
+        "catalog_sha256": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+        "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED",
+        "requested_strategy": "combined",
+        "effective_strategy": "combined",
+        "catalog_complete": false,
+        "ml_pool_complete": true,
+        "considered_count": 6912,
+        "ml_predicted_count": 6912,
+        "physics_evaluated_count": 256,
+        "evaluated_or_legally_excluded_count": 256,
+        "passing_count": 66,
+        "unsupported_count": 40,
+        "known_constraint_excluded_count": 0,
+        "ml_ood_count": 0,
+        "termination_reason": "PHYSICS_EVALUATION_BUDGET",
+        "time_to_first_pass_seconds": 0.5452810000024328,
+        "time_to_alternatives_seconds": 0.6126947000011569,
+        "total_seconds": 4.928628300000128,
+        "scoring_seconds": 0.5118016999986139,
+        "verification_seconds": 4.416826600001514,
+        "optimality": "BEST_VERIFIED_EVALUATED_SUBSET",
+        "candidate_order_policy": "DETERMINISTIC_PROGRESSIVE_GUIDES_AND_FULL_CYCLE_COVERAGE_v3"
+      },
+      "best_objective": 0.09299065193339624,
+      "best_candidate_id": "net_ce230a317712_2704",
+      "best_configuration": {
+        "impulse_type": "LI",
+        "stages": 9,
+        "stage_charge_V": 123083.3319599576,
+        "front_per_stage_ohm": 36.63716814159292,
+        "tail_per_stage_ohm": 92.0,
+        "front_network": {
+          "op": "P",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 180
+            }
+          ]
+        },
+        "tail_network": {
+          "op": "S",
+          "children": [
+            {
+              "op": "R",
+              "ohm": 46
+            },
+            {
+              "op": "R",
+              "ohm": 46
+            }
+          ]
+        },
+        "topology_id": "OSHUNT_v0",
+        "polarity": 1
+      },
+      "oracle_feasible_count": 66,
+      "feasible_candidates_found": 66,
+      "feasible_candidate_retention": 1.0,
+      "feasible_request_retained": true,
+      "missed_feasible_request": false,
+      "regret": 0.0,
+      "process_peak_memory_bytes": 507949056,
+      "model_loading_seconds": 0.08630130000165082,
+      "model_loading_cache_context": "ROUTE_PREVIOUSLY_LOADED",
+      "shared_warmup_seconds": 0.0202969000019948,
+      "model_loading_shared_between_ml_and_combined": true,
+      "ml_candidates_per_scoring_second": 13505.23063916888
+    }
+  ]
+}

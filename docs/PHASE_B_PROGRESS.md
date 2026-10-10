@@ -40,9 +40,12 @@ do not create physical resistor parts. Optimizer recommendations require recipes
 ## Acceptance still outstanding
 
 New scientific regression, generated dataset coverage and split integrity,
-eight trained routes with selection evidence, rare-feasible retention, benchmark
-comparisons, UI and unseen-reference workflow, full regression, release extraction,
-manifests and commit. Nothing in this file claims those gates already passed.
+eight trained routes with selection evidence, rare-feasible retention, UI and
+unseen-reference workflow, full regression, release extraction, manifests and
+commit remain tracked gates. The 17-case four-policy search benchmark is now
+complete and documented, but its shared-load timings are not controlled speedup
+evidence and it does not demonstrate incremental ML benefit over analytical.
+Nothing in this file claims package acceptance has passed.
 
 ## First verified increment
 
@@ -173,6 +176,20 @@ fixed prediction and subsequent reference import without changing its hash,
 and verifies separate ML/Physics/OOD presentation in the browser. A bounded
 four-module API check verifies actual ML participation and honest partial
 coverage; it is not the final controlled performance benchmark.
+
+The separate four-policy search benchmark is complete across 17 hashed case
+summaries: 16 held-out frozen requests plus the labelled rare-LI regression.
+Across the 12 feasible frozen requests, analytical and ML retain all 1,019
+passing alternatives with zero observed regret; combined retains 1,014/1,019,
+losing five alternatives in one request while retaining its best objective.
+The four no-feasible requests have complete declared-catalog no-solution
+results only for `complete_physics`; adaptive policies are budget-limited and
+remain `NO_COMPLIANT_CONFIGURATION_YET`. ML was operationally used, but this
+sample does not establish incremental benefit over analytical. See
+[`docs/PHASE_B_SEARCH_BENCHMARK.md`](PHASE_B_SEARCH_BENCHMARK.md) and the
+machine-readable [manifest](../evidence/phase_b/search_benchmark/manifest.json).
+The run used shared machine load, so its timing ratios are observations rather
+than controlled speedup claims.
 
 ## Final model evaluation checkpoint
 

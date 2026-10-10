@@ -53,10 +53,16 @@ scientific front/tail timing fields and reason codes. Process scheduling and
 instrumentation timing are intentionally outside this equality check. The receipt is
 [`evidence/phase_b/oracle_scientific_comparison.json`](../evidence/phase_b/oracle_scientific_comparison.json).
 
-The four-policy performance benchmark and extracted-package acceptance remain
-pending. Do not use the current checkout as evidence of package-manifest or
-moved-folder acceptance until the lead records those results. No claim here is
-a global optimizer proof, hardware approval, laboratory calibration or IEC
+The 17-case four-policy search benchmark is complete and documented in
+[`docs/PHASE_B_SEARCH_BENCHMARK.md`](PHASE_B_SEARCH_BENCHMARK.md). It records
+retention, regret, partial-coverage and no-solution bounds. ML was operationally
+used, but the benchmark does not demonstrate incremental benefit over the
+analytical policy; its five combined-policy alternative misses are documented.
+The run used shared machine load, so its timing ratios are observations rather
+than controlled speedup claims. Extracted-package acceptance remains pending;
+do not use the current checkout as evidence of package-manifest or moved-folder
+acceptance until the lead records those results. No claim here is a global
+optimizer proof, hardware approval, laboratory calibration or IEC
 measurement-software qualification.
 
 ## Current active application scope
@@ -344,6 +350,11 @@ immutable release root.
 - `evidence/phase_b/production_application_audit.json` — fresh selected-model
   API and browser evidence, fixed-reference immutability and bounded async
   search.
+- [`docs/PHASE_B_SEARCH_BENCHMARK.md`](PHASE_B_SEARCH_BENCHMARK.md) and
+  [`evidence/phase_b/search_benchmark/manifest.json`](../evidence/phase_b/search_benchmark/manifest.json)
+  — complete 17-case four-policy retention/regret review; the per-case report
+  and [shared-load environment note](../evidence/phase_b/search_benchmark_environment.json)
+  bound timing interpretation and no-solution claims.
 - `training-data/PowerNext_Networks_v3_Data_Stage1_20261010.zip` and its
   adjacent manifest — preserved data-stage archive and recovery hashes.
 
@@ -366,8 +377,10 @@ remain outside the current evidence.
 
 1. Keep the selected mapping, model cards, registry artifacts, R2 data and
    validation/oracle directories immutable while reviewing the pending gates.
-2. Run the separate held-out four-policy benchmark and record its timing
-   protocol, route/model loading state and no-global-speedup limitations.
+2. Preserve and review the complete four-policy benchmark receipt and its
+   shared-load limitation; do not convert its timing ratios into speedup
+   claims. Continue with the lead-owned extracted-package acceptance and
+   moved-folder manifest checks.
 3. Build the extracted release with the lead-owned builder, verify the manifest
    and run `tests/verify_networks_release.py` from a moved extraction.
 4. Preserve the existing accepted release and historical negative evidence;
