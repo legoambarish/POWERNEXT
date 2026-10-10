@@ -9,7 +9,7 @@ import pytest
 from powernext_v3.features import BASELINE_COLUMNS, FEATURE_COLUMNS, feature_matrix, feature_rows
 from powernext_v3.models import NetworkModel, make_candidates
 from powernext_v3.registry import load_model, register_model
-from powernext_v3.training import _deduplicate_training_rows, _pairwise_rank_accuracy, _selection_key, assign_splits, load_rows, optimization_validation_metrics, train, write_rows_jsonl
+from powernext_v3.training import _deduplicate_training_rows, _pairwise_rank_accuracy, _selection_key, _validate_training_scope, assign_splits, load_rows, optimization_validation_metrics, train, write_rows_jsonl
 
 
 SETUP = {
@@ -257,6 +257,8 @@ def test_fixture_training_selects_validation_only_and_writes_route_artifact(tmp_
     assert len(route["candidates"]) == 4
     assert sum(candidate["selected"] for candidate in route["candidates"]) == 1
     assert route["selected_test"]["n"] == 3
+    assert result["status"] == "COMPLETE_FIXTURE"
+    assert result["scope"]["kind"] == "EXPLICIT_TEST_FIXTURE"
     for stage_index in range(3):
         row_hashes = {candidate["learning_curve"][stage_index]["training_row_ids_sha256"] for candidate in route["candidates"]}
         group_hashes = {candidate["learning_curve"][stage_index]["training_group_ids_sha256"] for candidate in route["candidates"]}
@@ -265,6 +267,25 @@ def test_fixture_training_selects_validation_only_and_writes_route_artifact(tmp_
     manifest = json.loads((result_dir / "run_manifest.json").read_text(encoding="utf-8"))
     assert manifest["data_sha256"] == result["data_manifest"]["rows_sha256"]
     assert (registry_dir / route["selected_model_id"] / "card.json").is_file()
+
+
+def test_production_scope_requires_all_routes_and_three_partitions():
+    one_route = {
+        ("cpri_0p5uf", "LI", "GSHUNT_v0"): [
+            {"split": "train"},
+            {"split": "validation"},
+            {"split": "test"},
+        ]
+    }
+    with pytest.raises(ValueError, match="exactly eight routes"):
+        _validate_training_scope(one_route, fixture=False)
+
+
+def test_fixture_scope_allows_scoped_route():
+    route = {("cpri_0p5uf", "LI", "GSHUNT_v0"): [{"split": "train"}]}
+    scope = _validate_training_scope(route, fixture=True)
+    assert scope["kind"] == "EXPLICIT_TEST_FIXTURE"
+    assert scope["actual_route_count"] == 1
 
 
 def test_load_rows_requires_completed_manifest_and_row_hash(tmp_path):

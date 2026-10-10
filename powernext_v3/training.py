@@ -407,6 +407,52 @@ def _deduplicate_training_rows(
     return canonical_rows, canonical_assignments, report, audit
 
 
+def _validate_training_scope(
+    grouped: Mapping[tuple[str, str, str], Sequence[Mapping[str, Any]]],
+    *,
+    fixture: bool,
+) -> dict[str, Any]:
+    """Validate route/partition coverage before any estimator is fitted."""
+
+    actual_routes = set(grouped)
+    expected_routes = set(ROUTES)
+    counts = {
+        ":".join(route): {
+            split: sum(1 for row in rows if row.get("split") == split)
+            for split in SPLITS
+        }
+        for route, rows in sorted(grouped.items())
+    }
+    scope = {
+        "kind": "EXPLICIT_TEST_FIXTURE" if fixture else "PRODUCTION_8_ROUTE",
+        "fixture": fixture,
+        "expected_route_count": 1 if fixture else len(ROUTES),
+        "actual_route_count": len(actual_routes),
+        "routes": [":".join(route) for route in sorted(actual_routes)],
+        "partition_counts": counts,
+    }
+    if fixture:
+        return scope
+    missing = sorted(expected_routes - actual_routes)
+    extra = sorted(actual_routes - expected_routes)
+    incomplete = {
+        ":".join(route): counts.get(":".join(route), {split: 0 for split in SPLITS})
+        for route in sorted(expected_routes & actual_routes)
+        if any(counts.get(":".join(route), {}).get(split, 0) <= 0 for split in SPLITS)
+    }
+    if missing or extra or incomplete:
+        details = {
+            "missing_routes": [":".join(route) for route in missing],
+            "unexpected_routes": [":".join(route) for route in extra],
+            "incomplete_routes": incomplete,
+        }
+        raise ValueError(
+            "Production v3 training requires exactly eight routes with non-empty train/validation/test partitions: "
+            + json.dumps(details, sort_keys=True)
+        )
+    return scope
+
+
 def assign_splits(rows: Sequence[Mapping[str, Any]], seed: int = 20261010) -> list[str]:
     """Use a checked explicit split or make deterministic identity groups.
 
@@ -1219,7 +1265,6 @@ def train(
         output = Path(output_dir)
     if output.exists():
         raise FileExistsError(f"Versioned results directory exists: {output}")
-    output.mkdir(parents=True)
     registry = Path(registry_dir) if registry_dir is not None else Path(__file__).resolve().parent.parent / "powernext" / "ml" / "registry" / "networks_v3"
     # Validate all explicit split identities before deduplication so a
     # repeated response shape cannot hide a train/validation crossing.
@@ -1237,7 +1282,6 @@ def train(
         )
         for i, row in enumerate(eligible_rows)
     ]
-    _json_write(output / "split_assignments.json", split_records)
     grouped: dict[tuple[str, str, str], list[dict[str, Any]]] = defaultdict(list)
     for row, assignment in zip(rows, assignments):
         copy = dict(row)
@@ -1245,6 +1289,10 @@ def train(
         route = _route(copy)
         if None not in route:
             grouped[route].append(copy)
+    fixture = data_manifest.get("fixture_only") is True and data_manifest.get("dataset_kind") == "EXPLICIT_TEST_FIXTURE"
+    scope = _validate_training_scope(grouped, fixture=fixture)
+    output.mkdir(parents=True)
+    _json_write(output / "split_assignments.json", split_records)
     route_results: list[dict[str, Any]] = []
     selections: dict[str, str] = {}
     selected_models: dict[str, str] = {}
@@ -1374,13 +1422,15 @@ def train(
         )
         _json_write(output / f"checkpoint_{domain}_{mode}_{topology}.json", route_results[-1])
         _progress(f"route={route_id} complete selected={best['formulation']}/{best['family']} model={best['model_id']}")
-    result = dict(schema_version="ml_results_v3", status="COMPLETE", data_manifest=data_manifest, provenance=provenance, deduplication=deduplication, routes=route_results, selected_models=selected_models)
+    result_status = "COMPLETE_FIXTURE" if fixture else "COMPLETE"
+    result = dict(schema_version="ml_results_v3", status=result_status, scope=scope, data_manifest=data_manifest, provenance=provenance, deduplication=deduplication, routes=route_results, selected_models=selected_models)
     _json_write(output / "results.json", result)
     _json_write(output / "selections.json", selections)
     _json_write(output / "selected_models.json", selected_models)
     run_manifest = dict(
         schema_version="ml_run_manifest_v3",
-        status="COMPLETE",
+        status=result_status,
+        scope=scope,
         data_sha256=data_manifest.get("rows_sha256"),
         data_manifest_sha256=data_manifest.get("manifest_sha256"),
         deduplication=deduplication,

@@ -107,6 +107,12 @@ plain `group_id`
 is not used for this deduplication because distinct shapes may carry different
 group identifiers.
 
+Production training performs a preflight before fitting: all eight route keys
+must be present, and every route must have nonempty train, validation, and test
+partitions.  A missing or partial route fails before model artifacts are
+created.  Explicit fixture runs are scoped in their result and run manifests
+as `COMPLETE_FIXTURE` and do not establish production coverage.
+
 Once the generated v3 dataset is complete and its manifest hash is recorded,
 run the versioned command:
 
