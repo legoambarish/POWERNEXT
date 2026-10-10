@@ -9,7 +9,7 @@ from powernext_v3 import benchmark
 def _oracles(tmp_path):
     request=benchmark.frozen_requests(cases_per_route=1)[0]
     request["target_crest_V"]=1000000.
-    request.update(max_modules=1,stages=[9])
+    request.update(min_modules=1,max_modules=1,stages=[9])
     catalog=benchmark.Catalog(1,[9])
     rows=[]
     # Stored truth order deliberately has the passing candidate first.
@@ -73,6 +73,19 @@ def test_frozen_validation_and_test_setups_are_distinct():
     assert len(validation)==len(test)==16
     assert {q["setup"]["dut_capacitance_F"] for q in validation}.isdisjoint(
         q["setup"]["dut_capacitance_F"] for q in test)
+
+
+def test_new_scope_request_seeds_preserve_reproducibility_and_holdout_separation():
+    validation=benchmark.frozen_requests("validation",2,2,seed=20261201)
+    test=benchmark.frozen_requests("test",2,2,seed=20261202)
+    historical=benchmark.frozen_requests("test",2,2)
+    assert validation==benchmark.frozen_requests("validation",2,2,seed=20261201)
+    assert {q["request_id"] for q in validation}.isdisjoint(q["request_id"] for q in test)
+    def identities(requests):
+        return {tuple(q["setup"][key] for key in ("dut_capacitance_F","divider_capacitance_F","stray_capacitance_F","loop_inductance_H","loop_resistance_ohm")) for q in requests}
+    assert identities(validation).isdisjoint(identities(test)|identities(historical))
+    assert identities(test).isdisjoint(identities(historical))
+    assert all(q["max_modules"]==2 for q in validation+test)
 
 
 def test_oracle_execution_contract_is_required(tmp_path):

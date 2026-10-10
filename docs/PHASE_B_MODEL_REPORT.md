@@ -1,5 +1,7 @@
 # Phase B v3 ML model evaluation
 
+> Historical Phase B v3 evidence (one through four modules). This report is preserved for provenance and is not the final exact-two training or release acceptance. The current scope is exactly two resistors in each front and tail branch; see [final scope](FINAL_RESISTOR_SCOPE_DECISION.md), [exact-two model report](EXACT2_MODEL_REPORT.md), and [acceptance ledger](PHASE_B_ACCEPTANCE.md).
+
 This report evaluates the frozen train-only artifacts from the Phase B v3 run. Selection was frozen from validation evidence before the held-out test partition was read. No estimator was retrained or tuned for this report.
 
 The registry loader checked each model's card hash, route metadata, runtime, and current predictive-source fingerprint. The strict v2 request oracle was then run for all 32 candidates. Its scientific fields match the earlier validation-oracle results; timing fields are reported separately because they depend on the evaluation process.

@@ -1,0 +1,311 @@
+{
+  "audit_summary": {
+    "eligible_rows": 66682,
+    "potential_unsupported_pair_count": 1122,
+    "raw_retained_rows": 78244
+  },
+  "augmentation": {
+    "bounded_inflight": 12,
+    "completed_supplement_rows": 70560,
+    "completion": "COMPLETE",
+    "contexts": [
+      {
+        "name": "train_a",
+        "split": "train"
+      },
+      {
+        "name": "train_b",
+        "split": "train"
+      },
+      {
+        "name": "train_c",
+        "split": "train"
+      },
+      {
+        "name": "validation",
+        "split": "validation"
+      },
+      {
+        "name": "test",
+        "split": "test"
+      }
+    ],
+    "n_points": 1600,
+    "pairs_per_route": 1764,
+    "recipes_per_branch": 42,
+    "routes": [
+      [
+        "cpri_0p5uf",
+        "LI",
+        "GSHUNT_v0"
+      ],
+      [
+        "cpri_0p5uf",
+        "LI",
+        "OSHUNT_v0"
+      ],
+      [
+        "cpri_0p5uf",
+        "SI",
+        "GSHUNT_v0"
+      ],
+      [
+        "cpri_0p5uf",
+        "SI",
+        "OSHUNT_v0"
+      ],
+      [
+        "research_3uf",
+        "LI",
+        "GSHUNT_v0"
+      ],
+      [
+        "research_3uf",
+        "LI",
+        "OSHUNT_v0"
+      ],
+      [
+        "research_3uf",
+        "SI",
+        "GSHUNT_v0"
+      ],
+      [
+        "research_3uf",
+        "SI",
+        "OSHUNT_v0"
+      ]
+    ],
+    "seed": 20261011,
+    "supplement_rows_per_route": 8820,
+    "supplement_rows_total": 70560,
+    "workers": 6
+  },
+  "completed_at": "2026-10-10T14:02:17+00:00",
+  "coverage_audit": "coverage_audit.json",
+  "coverage_audit_sha256": "286f6e05e01a8180aec380704710b10ee599dca9e4c46f0e858083dd950bdb19",
+  "created_at": "2026-10-10T14:02:16+00:00",
+  "dataset_id": "networks_exact2_v5_aug1_936a80511a31",
+  "dataset_kind": "FILTERED_SUBSET_WITH_EXACT2_FULL_PAIR_AUGMENTATION",
+  "design_file_sha256": "264d85045213467a6f5a22b0c5696409ddd99a16603bec5b01b3f5d18c27f47c",
+  "design_row_count": 78244,
+  "design_sha256": "1c979fce928808b76bafdce49ed9a0568ed96b4f62e00117156c96051a5f9d97",
+  "design_sha256_algorithm": "powernext_v3.dataset.digest",
+  "exact_modules_per_branch": 2,
+  "label_rule": "Only numeric_status=VALID and waveform_status=VALID_CLEAN_FULL_IMPULSE rows with complete metrics are regression eligible; invalid or unsupported rows retain null labels.",
+  "observed_data_used_for_training": false,
+  "parent_dataset_id": "networks_exact2_v5_a620bc6a3215",
+  "parent_design_file_sha256": "b4c70e369a778393643bb96144253ad5a6d77cba2844ad3815d16371127cac9c",
+  "parent_design_sha256": "bc9dae2d381fdbf31274435b8713b02b2074249df8636f9c88ad9b70d91d2026",
+  "parent_manifest_sha256": "966966dd6f74b93d969774b39869bf8cc5eb4fe3c7cd027f4df609f864268c2c",
+  "parent_path": "powernext/ml/data/networks_exact2_v5",
+  "parent_rows_sha256": "f1d349ff2470453f17ddb6105715c164fea3f1d54c12e7eff5c505a3e44112d6",
+  "physics_source_fingerprint": {
+    "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+    "sources": {
+      "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+      "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+      "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+      "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+      "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+      "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+      "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+    }
+  },
+  "post_write_validation": {
+    "assign_splits": true,
+    "deduplication": true,
+    "design_sha256_algorithm": "powernext_v3.dataset.digest",
+    "design_sha256_verified": true,
+    "load_rows": true,
+    "row_count": 78244,
+    "rows_sha256": "57145d51b3a7d7e7b5e0e165c68bee53cbc074e367619bc2b8bd148b73ddf3eb",
+    "source_contract": true,
+    "split_collision_count": 0,
+    "validation_replayed_after_loader_digest_fix": true
+  },
+  "provenance": {
+    "augmentation": {
+      "contexts": [
+        {
+          "name": "train_a",
+          "split": "train"
+        },
+        {
+          "name": "train_b",
+          "split": "train"
+        },
+        {
+          "name": "train_c",
+          "split": "train"
+        },
+        {
+          "name": "validation",
+          "split": "validation"
+        },
+        {
+          "name": "test",
+          "split": "test"
+        }
+      ],
+      "n_points": 1600,
+      "observed_data_used": false,
+      "physics_only": true,
+      "seed": 20261011,
+      "setup_groups_frozen_before_labels": true,
+      "tool": "tools/augment_exact2_dataset.py",
+      "tool_sha256": "a006029a845b14153e7d1cf665179f816d460b80618df4d2c2f9d1d730c0e077",
+      "workers": 6
+    },
+    "dataset_module": "powernext_v3_dataset_1.0",
+    "filter": {
+      "filter_before_eligibility_and_response_dedup": true,
+      "parent_dataset_id": "v3_37efa30cfc8f8006a483",
+      "parent_path": "powernext/ml/data/networks_v3_r2",
+      "physics_simulation_performed": false,
+      "predicate": "front and tail canonical trees each exactly two resistor leaves; root operation P or S",
+      "tool": "tools/filter_exact2_dataset.py",
+      "tool_sha256": "0d70a590a5ed1838e6c1777de7058252acdc5ea2bd9c24f0bd6bb86b1bdf2316"
+    },
+    "network_catalog": {
+      "api": "powernext_v3.networks.enumerate_networks",
+      "fallback_single_resistor": false,
+      "max_modules": 2,
+      "module_count": 2,
+      "parent_catalog_max_modules_4": {
+        "api": "powernext_v3.networks.enumerate_networks",
+        "fallback_single_resistor": false,
+        "max_modules": 4,
+        "module_counts": {
+          "1": 6,
+          "2": 42,
+          "3": 364,
+          "4": 3780
+        },
+        "recipe_count": 4192
+      },
+      "recipe_count": 42,
+      "root_operations": [
+        "P",
+        "S"
+      ]
+    },
+    "networks_module": "C:\\Users\\User\\Downloads\\Powernext\\POWERNEXT\\powernext_v3\\networks.py",
+    "parent_filter": {
+      "dataset_id": "networks_exact2_v5_a620bc6a3215",
+      "design_sha256": "bc9dae2d381fdbf31274435b8713b02b2074249df8636f9c88ad9b70d91d2026",
+      "manifest_sha256": "966966dd6f74b93d969774b39869bf8cc5eb4fe3c7cd027f4df609f864268c2c",
+      "path": "powernext/ml/data/networks_exact2_v5",
+      "rows_sha256": "f1d349ff2470453f17ddb6105715c164fea3f1d54c12e7eff5c505a3e44112d6"
+    },
+    "physics_module": "unknown",
+    "physics_source_fingerprint": {
+      "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+      "sources": {
+        "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+        "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+        "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+        "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+        "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "profile_ids": {
+      "cpri_0p5uf": "CPRI_0p5uF_NETWORKS_v3",
+      "research_3uf": "RESEARCH_3uF_NETWORKS_v3"
+    },
+    "profiles_module": "C:\\Users\\User\\Downloads\\Powernext\\POWERNEXT\\powernext_v3\\profiles.py"
+  },
+  "regression_eligible_count": 66244,
+  "regression_eligible_row_count": 66682,
+  "route_eligible_counts": {
+    "cpri_0p5uf::LI::GSHUNT_v0": 8913,
+    "cpri_0p5uf::LI::OSHUNT_v0": 9043,
+    "cpri_0p5uf::SI::GSHUNT_v0": 8898,
+    "cpri_0p5uf::SI::OSHUNT_v0": 9032,
+    "research_3uf::LI::GSHUNT_v0": 8225,
+    "research_3uf::LI::OSHUNT_v0": 6877,
+    "research_3uf::SI::GSHUNT_v0": 8192,
+    "research_3uf::SI::OSHUNT_v0": 7064
+  },
+  "route_request_counts": {
+    "cpri_0p5uf::LI::GSHUNT_v0": 9652,
+    "cpri_0p5uf::LI::OSHUNT_v0": 9726,
+    "cpri_0p5uf::SI::GSHUNT_v0": 9552,
+    "cpri_0p5uf::SI::OSHUNT_v0": 9618,
+    "research_3uf::LI::GSHUNT_v0": 9843,
+    "research_3uf::LI::OSHUNT_v0": 9832,
+    "research_3uf::SI::GSHUNT_v0": 9663,
+    "research_3uf::SI::OSHUNT_v0": 10358
+  },
+  "row_count": 78244,
+  "rows_sha256": "57145d51b3a7d7e7b5e0e165c68bee53cbc074e367619bc2b8bd148b73ddf3eb",
+  "schema_version": "powernext_v3_dataset_1.0",
+  "scope_contract": "EXACT_MODULES_PER_BRANCH_V5",
+  "scope_filter": {
+    "exact_modules_per_branch": 2,
+    "field_front": "front_network_module_count",
+    "field_tail": "tail_network_module_count",
+    "front_network_module_count": 2,
+    "rule": "front_network_module_count == 2 and tail_network_module_count == 2",
+    "tail_network_module_count": 2
+  },
+  "scope_filter_sha256": "558ac674756b5e8ce0b22c62fcc95b26595ab943ba8319696d67891cd2e63e75",
+  "source_hashes": {
+    "powernext_v3/dataset.py": "7d6bcd573dbabbf6c4a6eff4d1a7c35cb420a0028878e9d3adb20861c27f13ee",
+    "powernext_v3/features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+    "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+    "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+    "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+  },
+  "split_counts": {
+    "test": 16034,
+    "train": 47003,
+    "validation": 15207
+  },
+  "split_route_counts": {
+    "cpri_0p5uf::LI::GSHUNT_v0": {
+      "test": 1963,
+      "train": 5821,
+      "validation": 1868
+    },
+    "cpri_0p5uf::LI::OSHUNT_v0": {
+      "test": 1980,
+      "train": 5840,
+      "validation": 1906
+    },
+    "cpri_0p5uf::SI::GSHUNT_v0": {
+      "test": 1976,
+      "train": 5702,
+      "validation": 1874
+    },
+    "cpri_0p5uf::SI::OSHUNT_v0": {
+      "test": 1962,
+      "train": 5779,
+      "validation": 1877
+    },
+    "research_3uf::LI::GSHUNT_v0": {
+      "test": 2015,
+      "train": 5931,
+      "validation": 1897
+    },
+    "research_3uf::LI::OSHUNT_v0": {
+      "test": 2027,
+      "train": 5871,
+      "validation": 1934
+    },
+    "research_3uf::SI::GSHUNT_v0": {
+      "test": 1960,
+      "train": 5834,
+      "validation": 1869
+    },
+    "research_3uf::SI::OSHUNT_v0": {
+      "test": 2151,
+      "train": 6225,
+      "validation": 1982
+    }
+  },
+  "split_rule": "Parent exact2 split labels are immutable; supplemental setup contexts are assigned train_a/train_b/train_c/validation/test before Physics labels.",
+  "status": "COMPLETE",
+  "waveform_policy": "none; worker arrays discarded after each result"
+}

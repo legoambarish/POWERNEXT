@@ -9,7 +9,7 @@ import pytest
 from powernext_v3.features import BASELINE_COLUMNS, FEATURE_COLUMNS, feature_matrix, feature_rows
 from powernext_v3.models import NetworkModel, make_candidates
 from powernext_v3.registry import load_model, register_model
-from powernext_v3.training import _deduplicate_training_rows, _pairwise_rank_accuracy, _selection_key, _validate_training_scope, assign_splits, load_rows, optimization_validation_metrics, train, write_rows_jsonl
+from powernext_v3.training import _deduplicate_training_rows, _digest, _pairwise_rank_accuracy, _selection_key, _training_dataset_scope, _validate_exact_two_rows, _validate_training_scope, assign_splits, load_rows, optimization_validation_metrics, train, write_rows_jsonl
 
 
 SETUP = {
@@ -60,6 +60,58 @@ def _fixture_rows(count: int = 15):
             }
         )
     return rows
+
+
+def _exact_two_scope_manifest():
+    scope = {
+        "field_front": "front_network_module_count",
+        "field_tail": "tail_network_module_count",
+        "exact_modules_per_branch": 2,
+        "rule": "front_network_module_count == 2 and tail_network_module_count == 2",
+        "scope_contract": "EXACT_MODULES_PER_BRANCH_V5",
+    }
+    return {
+        "dataset_id": "fixture_exact2",
+        "scope_contract": "EXACT_MODULES_PER_BRANCH_V5",
+        "exact_modules_per_branch": 2,
+        "scope_filter": scope,
+        "scope_filter_sha256": _digest(scope),
+        "parent_dataset_id": "parent",
+        "parent_manifest_sha256": "manifest-hash",
+        "parent_rows_sha256": "rows-hash",
+        "parent_design_sha256": "design-hash",
+        "parent_design_file_sha256": "design-file-hash",
+    }
+
+
+def _exact_two_row():
+    row = _fixture_rows(1)[0]
+    row["configuration"]["front_network"] = {"op": "S", "children": [{"op": "R", "ohm": 30}, {"op": "R", "ohm": 46}]}
+    row["configuration"]["tail_network"] = {"op": "P", "children": [{"op": "R", "ohm": 180}, {"op": "R", "ohm": 520}]}
+    row["front_network_module_count"] = 2
+    row["tail_network_module_count"] = 2
+    return row
+
+
+def test_exact_two_scope_rejects_forged_less_than_or_equal_scope():
+    manifest = _exact_two_scope_manifest()
+    manifest["scope_filter"] = dict(manifest["scope_filter"], rule="max(front_network_module_count, tail_network_module_count) <= 2")
+    manifest["scope_filter_sha256"] = _digest(manifest["scope_filter"])
+    with pytest.raises(ValueError, match="scope rule"):
+        _training_dataset_scope(manifest)
+
+
+def test_exact_two_row_gate_checks_trees_and_declared_counts():
+    manifest = _exact_two_scope_manifest()
+    row = _exact_two_row()
+    _validate_exact_two_rows([row], manifest)
+    row["configuration"]["front_network"] = {"op": "R", "ohm": 30}
+    with pytest.raises(ValueError, match="front_network must be an S/P tree"):
+        _validate_exact_two_rows([row], manifest)
+    row = _exact_two_row()
+    row["tail_network_module_count"] = 1
+    with pytest.raises(ValueError, match="tail_network_module_count"):
+        _validate_exact_two_rows([row], manifest)
 
 
 def test_feature_schema_excludes_request_and_recipe_identity():

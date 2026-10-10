@@ -15,15 +15,22 @@ assert.match(index, /src="\/networks\.js"/);
 
 for (const id of [
   'v3-network-workspace', 'v3-search-form', 'v3-domain', 'v3-impulse', 'v3-topology',
-  'v3-target', 'v3-polarity', 'v3-max-modules', 'v3-search-mode', 'v3-priority',
+  'v3-target', 'v3-polarity', 'v3-module-scope', 'v3-search-mode', 'v3-priority',
   'v3-max-ml', 'v3-max-physics', 'v3-budget', 'v3-progress-events', 'v3-search-result',
   'v3-front-network', 'v3-tail-network', 'v3-predict-form', 'v3-reference-file',
   'v3-reference-metadata', 'v3-reference-submit', 'v3-ref-crest', 'v3-ref-front', 'v3-ref-tail', 'v3-reference-metrics-submit',
 ]) assert.match(html, new RegExp(`id="${id}"`), `missing ${id}`);
 assert.match(html, /id="v3-stage-charge"[^>]*step="any"/, 'fixed prediction accepts fractional stage charge');
-assert.match(html, /<option value="2"[^>]*>/, 'active module bound 2 is selectable');
-assert.match(html, /<option value="3" selected>/, 'active module bound 3 is the default');
+assert.match(html, /Fixed at exactly 2/, 'active product scope is visibly fixed at exactly two modules');
+assert.match(html, /exactly two resistor modules in both front and tail branches/i, 'both branches state the exact-two contract');
+assert.match(html, /"op":"S"[^\n]+"ohm":3700/, 'front fixed example is a two-module S tree');
+assert.match(html, /"op":"P"[^\n]+"ohm":180/, 'tail fixed example is a two-module P tree');
+assert.doesNotMatch(html, /id="v3-max-modules"/, 'module bound is not a user-selectable dropdown');
+assert.doesNotMatch(html, /<option value="3"/, 'three-module bound is not an active UI selection');
 assert.doesNotMatch(html, /<option value="4"/, 'four-module bound is not an active UI selection');
+assert.match(js, /PUBLIC_MAX_MODULES\s*=\s*2/, 'request builder uses the fixed two-module bound');
+assert.match(js, /min_modules:\s*PUBLIC_MAX_MODULES/, 'request builder declares the exact lower bound');
+assert.match(js, /count !== PUBLIC_MAX_MODULES/, 'fixed tree validation rejects singles as well as larger trees');
 
 for (const phrase of ['Research comparison domain', 'Physics-compliant numerical candidate', 'Passed alternatives', 'Failed alternatives', 'not recommended', 'Raw CSV bytes', 'immutable', 'ML and Physics']) {
   assert.match(`${html}\n${js}`, new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'), `missing UI copy: ${phrase}`);

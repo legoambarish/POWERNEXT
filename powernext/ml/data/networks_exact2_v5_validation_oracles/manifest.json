@@ -1,0 +1,162 @@
+{
+  "schema_version": "optimization_oracles_v3",
+  "purpose": "validation",
+  "status": "COMPLETE",
+  "physics": {
+    "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+    "sources": {
+      "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6",
+      "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+      "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+      "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+      "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+      "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+      "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d"
+    }
+  },
+  "execution_contract": {
+    "sources": {
+      "optimizer.py": "c63abeb31b576a7f0f606a394643dc3206ee476ef9401804da47faf162dcf8b2",
+      "catalog.py": "ef7b565e120455691c6bc076ebb13b0b109c7c5aefea7f25597abb38b62c84b1",
+      "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+      "benchmark.py": "4f34c54412f35c7fc53b75f19a48c7e5bc85a75b7febede3545a0b9ce6c79520"
+    },
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    }
+  },
+  "request_seed": 20261201,
+  "requests_sha256": "fc2e30876e717e9de7944a80edede30951cded26b7cbc5a71598585deb51748e",
+  "cases": [
+    {
+      "path": "FROZEN_validation_seed20261201_cpri_0p5uf_LI_GSHUNT_v0_0.json",
+      "sha256": "553f53e6fbe659bda4dedce01be1c9eab7a74197fe1add9b2dde047d3e65513b",
+      "route": "cpri_0p5uf:LI:GSHUNT_v0",
+      "candidates": 5292,
+      "passes": 12,
+      "unsupported": 243
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_cpri_0p5uf_LI_GSHUNT_v0_1.json",
+      "sha256": "32eceaee49f73141e03abb1952c4193c871c3355d71d8cafdc3d3babbbba2b13",
+      "route": "cpri_0p5uf:LI:GSHUNT_v0",
+      "candidates": 5292,
+      "passes": 14,
+      "unsupported": 403
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_cpri_0p5uf_LI_OSHUNT_v0_0.json",
+      "sha256": "c96f9b67b92c645c8559021d59dbc1728263ac7314c13bcfea7ae113e4235e2a",
+      "route": "cpri_0p5uf:LI:OSHUNT_v0",
+      "candidates": 5292,
+      "passes": 15,
+      "unsupported": 370
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_cpri_0p5uf_LI_OSHUNT_v0_1.json",
+      "sha256": "6f938b8417467233e7a6b445375c9bbce74aafb4df2688f319010bf12cf0a2f6",
+      "route": "cpri_0p5uf:LI:OSHUNT_v0",
+      "candidates": 5292,
+      "passes": 29,
+      "unsupported": 383
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_cpri_0p5uf_SI_GSHUNT_v0_0.json",
+      "sha256": "1bd71ae33a7338f13dc1db6c6a78b3a4842b8355ac749eb2f0042989b102915d",
+      "route": "cpri_0p5uf:SI:GSHUNT_v0",
+      "candidates": 5292,
+      "passes": 147,
+      "unsupported": 613
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_cpri_0p5uf_SI_GSHUNT_v0_1.json",
+      "sha256": "bd50faff55a1afeeb972e94a4c9add6da87f8049793f02a2140f07156f19a30d",
+      "route": "cpri_0p5uf:SI:GSHUNT_v0",
+      "candidates": 5292,
+      "passes": 133,
+      "unsupported": 620
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_cpri_0p5uf_SI_OSHUNT_v0_0.json",
+      "sha256": "c848ab18d34a3515da32350feefd134896bdb26a7c4c2f1ba0efd3a24ed96e4c",
+      "route": "cpri_0p5uf:SI:OSHUNT_v0",
+      "candidates": 5292,
+      "passes": 99,
+      "unsupported": 86
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_cpri_0p5uf_SI_OSHUNT_v0_1.json",
+      "sha256": "af8dd38648aeb7af8d0f389de607efc70846f02ff28d7e408ce20db75219f497",
+      "route": "cpri_0p5uf:SI:OSHUNT_v0",
+      "candidates": 5292,
+      "passes": 98,
+      "unsupported": 415
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_research_3uf_LI_GSHUNT_v0_0.json",
+      "sha256": "57521c2a358f941deff0541d2879614153b740afa7bb4c70c13debc90a40446e",
+      "route": "research_3uf:LI:GSHUNT_v0",
+      "candidates": 5292,
+      "passes": 34,
+      "unsupported": 733
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_research_3uf_LI_GSHUNT_v0_1.json",
+      "sha256": "1e0c4deacc33716e1e256d361ca6d41ae45b1e2090ff0a5567ba9f04b3da3277",
+      "route": "research_3uf:LI:GSHUNT_v0",
+      "candidates": 5292,
+      "passes": 40,
+      "unsupported": 444
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_research_3uf_LI_OSHUNT_v0_0.json",
+      "sha256": "1a2eadfc6732173f0aa7ad9792fbc64f780918f4942e457ab4ad69be94c6d270",
+      "route": "research_3uf:LI:OSHUNT_v0",
+      "candidates": 5292,
+      "passes": 0,
+      "unsupported": 1569
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_research_3uf_LI_OSHUNT_v0_1.json",
+      "sha256": "e5c41418f9dce21351f6fec6e4baa30c2e28398bd1062fade492b25192a8d65c",
+      "route": "research_3uf:LI:OSHUNT_v0",
+      "candidates": 5292,
+      "passes": 0,
+      "unsupported": 1694
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_research_3uf_SI_GSHUNT_v0_0.json",
+      "sha256": "5e587e0e329b1d6949e666c317b12d5d912d252a4021ed8660f16e10d4b0a7ca",
+      "route": "research_3uf:SI:GSHUNT_v0",
+      "candidates": 5292,
+      "passes": 97,
+      "unsupported": 1156
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_research_3uf_SI_GSHUNT_v0_1.json",
+      "sha256": "174c82c8b73be9260a69f0976338dcd8ba25a6a6bab17b81e986b57e1116c0da",
+      "route": "research_3uf:SI:GSHUNT_v0",
+      "candidates": 5292,
+      "passes": 106,
+      "unsupported": 832
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_research_3uf_SI_OSHUNT_v0_0.json",
+      "sha256": "fb4c26e5d0fc6f967d148f02a3f7ffe3ebeff7dad118e89bc44a91a37797fa53",
+      "route": "research_3uf:SI:OSHUNT_v0",
+      "candidates": 5292,
+      "passes": 0,
+      "unsupported": 1343
+    },
+    {
+      "path": "FROZEN_validation_seed20261201_research_3uf_SI_OSHUNT_v0_1.json",
+      "sha256": "8d27a26ecb27e3cf8b7b93264a79cadc78d3c0830cf01a887efbc582dcbe8dbf",
+      "route": "research_3uf:SI:OSHUNT_v0",
+      "candidates": 5292,
+      "passes": 0,
+      "unsupported": 1617
+    }
+  ]
+}

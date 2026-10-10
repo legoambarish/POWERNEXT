@@ -1,5 +1,7 @@
 # Phase B v3 data contract
 
+**Final production scope:** exactly two series/parallel resistors on each front and tail branch. Active data are `powernext/ml/data/networks_exact2_v5_aug1`; selected registry/results are `networks_exact2_v5`. Both branches are varied jointly, and all eight routes remain separate. Original v3 runs and broader catalog examples below are historical implementation context. See [exact-two data](EXACT2_DATASET_REPORT.md), [models](EXACT2_MODEL_REPORT.md), and [acceptance](PHASE_B_ACCEPTANCE.md).
+
 Phase B uses the standalone `powernext_v3.dataset` pipeline.  It is separate
 from the legacy `powernext/ml` generator and leaves the original workbook and
 legacy artifacts unchanged.

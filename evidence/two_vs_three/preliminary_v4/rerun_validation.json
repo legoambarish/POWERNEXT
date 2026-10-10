@@ -1,0 +1,51 @@
+{
+  "all_scientific_metrics_and_recipes_equal": true,
+  "baseline_artifact": "evidence/two_vs_three/preliminary_v3",
+  "baseline_run_script_sha256": "403d7fab1abf9ec6aec7d2e7c52e69018880299ccff2ffa96d338210948937b7",
+  "case_count": 5,
+  "expected_label_only_changes": [
+    {
+      "case": "cases/cpri_0p5uf_LI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_0/case.json",
+      "row": "controlled_same_N_charge_three",
+      "v3": "controlled_three_same_N_charge",
+      "v4": "post_selection_replay_three_same_N_charge"
+    },
+    {
+      "case": "cases/cpri_0p5uf_LI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_1/case.json",
+      "row": "controlled_same_N_charge_three",
+      "v3": "controlled_three_same_N_charge",
+      "v4": "post_selection_replay_three_same_N_charge"
+    },
+    {
+      "case": "cases/cpri_0p5uf_LI_OSHUNT_v0_FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_0/case.json",
+      "row": "controlled_same_N_charge_three",
+      "v3": "controlled_three_same_N_charge",
+      "v4": "post_selection_replay_three_same_N_charge"
+    },
+    {
+      "case": "cases/cpri_0p5uf_SI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0/case.json",
+      "row": "controlled_same_N_charge_three",
+      "v3": "controlled_three_same_N_charge",
+      "v4": "post_selection_replay_three_same_N_charge"
+    },
+    {
+      "case": "cases/cpri_0p5uf_SI_OSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_OSHUNT_v0_0/case.json",
+      "row": "controlled_same_N_charge_three",
+      "v3": "controlled_three_same_N_charge",
+      "v4": "post_selection_replay_three_same_N_charge"
+    }
+  ],
+  "notes": [
+    "The only v3/v4 differences are the explicit post-selection replay label hardening; Physics was not changed.",
+    "This replay validates the hardened identity guard and source provenance against the five saved preliminary cases."
+  ],
+  "purpose": "HARDENED_SCRIPT_SOURCE_AND_IDENTITY_GUARD_REPLAY",
+  "recipe_or_configuration_mismatches": [],
+  "rerun_artifact": "evidence/two_vs_three/preliminary_v4",
+  "rerun_script_sha256": "64af52904f3c81357db0a3f4f464767c3ec9b3da1be00a2e84b59728c0309f1b",
+  "rerun_snapshot_sha256": "64af52904f3c81357db0a3f4f464767c3ec9b3da1be00a2e84b59728c0309f1b",
+  "rerun_source_snapshot": "evidence/two_vs_three/preliminary_v4/compare_two_three_waveforms_run.py",
+  "schema_version": "two_vs_three_preliminary_rerun_validation_v1",
+  "scientific_metric_mismatches": [],
+  "source_hash_matches_snapshot": true
+}

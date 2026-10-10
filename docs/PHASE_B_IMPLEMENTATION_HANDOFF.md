@@ -1,5 +1,7 @@
 # PowerNext Phase B v3 implementation handoff
 
+> Historical Phase B v3 evidence (one through four modules). This report is preserved for provenance and is not the final exact-two training or release acceptance. The current scope is exactly two resistors in each front and tail branch; see [final scope](FINAL_RESISTOR_SCOPE_DECISION.md), [exact-two model report](EXACT2_MODEL_REPORT.md), and [acceptance ledger](PHASE_B_ACCEPTANCE.md).
+
 This document describes the current Phase B implementation, the evidence that
 can be relied on, the boundaries of each result, and the commands needed to
 continue the work. It is written for the next engineer or reviewer working
@@ -30,7 +32,7 @@ and
 
 There are four candidate artifacts per route and eight selected route models,
 so the frozen serving set is 8 of 32 candidates. Selection is recorded in
-`powernext/ml/results/networks_v3/selected_models.json` and the decision is
+`powernext/ml/results/networks_exact2_v5/selected_models.json` and the decision is
 documented by
 [`evidence/phase_b/lead_validation_decision.json`](../evidence/phase_b/lead_validation_decision.json).
 The decision uses the validation partition and independent request-oracle
@@ -67,14 +69,14 @@ measurement-software qualification.
 
 ## Current active application scope
 
-The live application, CLI and Network optimizer UI now expose maximum branch
-bounds of 2 or 3 resistor modules, defaulting to 3. Each bound includes
-single-part recipes. Explicit four-module search requests and fixed trees are
-rejected at the public boundary with `UNSUPPORTED_CURRENT_SCOPE` before a job
-or prediction artifact is created. The low-level enumerator, Physics adapter,
-training artifacts and historical four-module evidence remain unchanged and
-available for archival or controlled replay; they are outside the current live
-workflow and require no new four-module development.
+The live application, CLI and Network optimizer UI now require exactly 2
+resistor modules in both the front and tail branches. The UI has no
+module-bound selector. Explicit 1-, 3-, or 4-module search requests and fixed
+trees are rejected at the public boundary with `UNSUPPORTED_CURRENT_SCOPE`
+before a job or prediction artifact is created. The low-level enumerator,
+Physics adapter, training artifacts and historical 1-, 3-, and 4-module
+evidence remain unchanged and available for archival or controlled replay;
+they are outside the current live workflow.
 
 ## Architecture and ownership
 
@@ -91,7 +93,7 @@ workflow and require no new four-module development.
 | Optimizer | `powernext_v3/optimizer.py` | Normalize requests, load the route model, rank a bounded candidate pool, run independent Physics verification, preserve failed alternatives and save complete results/waveforms. |
 | v3 application | `powernext_v3/application.py` | Persist jobs and predictions, enforce one active search, expose fixed prediction/reference APIs, and publish an artifact only after the subprocess completes. |
 | HTTP integration | `powernext_app/server.py` | Mount `/api/v3/*` lazily beside the unchanged legacy routes and enforce local-origin/security headers. |
-| UI | `ui/networks.html`, `ui/networks.js`, existing `ui/app.css` | Expose domain, mode, topology, polarity, stages, module bound, search policy, fixed prediction and later-reference controls. |
+| UI | `ui/networks.html`, `ui/networks.js`, existing `ui/app.css` | Expose domain, mode, topology, polarity, stages, the fixed two-module scope, search policy, fixed prediction and later-reference controls. |
 | Acceptance harness | `tests/verify_networks_release.py` | Run isolated bundled-runtime checks against an extracted release. Pending model/manifest checks are reported as blocked, never silently downgraded to ML acceptance. |
 
 The v3 subprocess entry point is `powernext_v3/__main__.py`. It accepts a
@@ -191,9 +193,9 @@ described as a CPRI rating.
 
 The low-level `normalize_request()` accepts `adaptive` and `complete` search
 modes and the `combined`, `ml`, `analytical` and `complete_physics` policies.
-Its historical catalogue bound remains four modules per branch. The live
-application and CLI apply the current maximum of three modules before calling
-this low-level contract. Requests are bounded by stages 2–15, the declared six components,
+Its historical catalogue still supports one-through-four modules per branch.
+The live application and CLI require `min_modules=2` and `max_modules=2` before
+calling this low-level contract. Requests are bounded by stages 2–15, the declared six components,
 finite values and explicit setup fields. `recommend()` first forms an
 analytical/L0 or loaded-model candidate pool, then independently evaluates the
 ordered candidates with detailed Physics.
@@ -293,10 +295,10 @@ New-Item -ItemType Directory -Force "$env:TEMP\PowerNext-v3-demo" | Out-Null
 
 Open `http://127.0.0.1:18767/`, select **Network optimizer**, and keep the
 selected domain, impulse mode, topology, polarity and stage range visible in
-the request. The current selected-model browser audit used the fixed smoke
-configuration front `R180`, tail `R30`, two active stages and 50,000 V per
-stage. That setting demonstrates the route and evidence flow; it is not a
-hardware recommendation.
+the request. The current selected-model browser audit used an exact-two fixed
+smoke configuration (front `S(180,30)`, tail `P(180,30)`), two active stages
+and 50,000 V per stage. That setting demonstrates the route and evidence flow;
+it is not a hardware recommendation.
 
 For a direct offline optimizer subprocess, the output directory must be new:
 
@@ -304,8 +306,8 @@ For a direct offline optimizer subprocess, the output directory must be new:
 .\runtime\python.exe -B -m powernext_v3 optimize `
   --request .\request.json `
   --output "$env:TEMP\PowerNext-v3-result-unique" `
-  --registry .\powernext\ml\registry\networks_v3 `
-  --selection .\powernext\ml\results\networks_v3\selected_models.json
+  --registry .\powernext\ml\registry\networks_exact2_v5 `
+  --selection .\powernext\ml\results\networks_exact2_v5\selected_models.json
 ```
 
 For an extracted package, run the acceptance harness from the extracted root

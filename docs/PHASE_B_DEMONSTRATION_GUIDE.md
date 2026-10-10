@@ -21,16 +21,19 @@ scientific-field mismatches and zero numeric differences outside tolerance.
 Receipts are in evidence/phase_b/production_application_audit.json and
 evidence/phase_b/oracle_scientific_comparison.json.
 
-The current active UI and public application scope supports maximum branch bounds
-of 2 or 3 modules, defaulting to 3; both bounds include single-part recipes.
-Four-module search and fixed-recipe requests are rejected with an explicit
-UNSUPPORTED_CURRENT_SCOPE reason before a job or prediction artifact is saved.
-Historical four-module network, Physics and model artifacts remain retained for
-archival replay.
+The current active UI and public application scope requires exactly 2 modules
+in each front and tail branch. The UI does not offer a module-bound selector.
+Explicit 1-, 3-, or 4-module search and fixed-recipe requests are rejected with
+an explicit `UNSUPPORTED_CURRENT_SCOPE` reason before a job or prediction
+artifact is saved. Historical 1-, 3-, and 4-module network, Physics and model
+artifacts remain retained for archival replay through low-level APIs.
 
-The four-policy benchmark and extracted-package acceptance are still pending.
-The current checkout therefore does not establish moved-folder or package-manifest
-acceptance. Keep those gates separate from this application demonstration.
+The four-policy benchmark is complete: all adaptive policies retained passing
+results on all twelve feasible frozen requests with zero best-objective regret.
+Analytical ranking matched those results; incremental ML benefit was not shown,
+and combined ranking missed five additional passing alternatives in one case.
+Timings are shared-load observations. Extracted-package acceptance remains a
+separate gate; checkout tests do not establish moved-folder acceptance.
 
 ## Launch from the checkout
 
@@ -40,9 +43,10 @@ bundled runtime:
     New-Item -ItemType Directory -Force "$env:TEMP\PowerNext-v3-demo" | Out-Null
     .\runtime\python.exe -B -m powernext_app --port 18767 --data-dir "$env:TEMP\PowerNext-v3-demo" --no-browser
 
-Open http://127.0.0.1:18767/ and select **Network optimizer**. The serving
-mapping is powernext/ml/results/networks_v3/selected_models.json and the checked
-cards and models are under powernext/ml/registry/networks_v3. Keep the selected
+Open http://127.0.0.1:18767/ and select **Network optimizer**. The active serving
+mapping is powernext/ml/results/networks_exact2_v5/selected_models.json and the
+checked cards and models are under powernext/ml/registry/networks_exact2_v5.
+Historical networks_v3 assets remain retained separately. Keep the selected
 domain, impulse mode, topology, polarity and stage range visible in the request.
 
 ## Choose the evidence domain first
@@ -62,8 +66,9 @@ every crest/setup combination is achievable.
 1. Select domain, LI or SI, and the declared tail connection.
 2. Enter the fixed DUT, divider, stray capacitance and connection parameters.
    State whether the 480 pF basic load is already covered by the other values.
-3. Choose the bounded recipe size and search budget. Every active stage uses
-   the same selected front recipe and the same selected tail recipe.
+3. Review the fixed exact-two product scope and choose the search budget. Every
+   active stage uses the same selected two-resistor front recipe and the same
+   selected two-resistor tail recipe.
 4. Start the search and watch candidate scoring and detailed verification.
 5. Inspect the exact recipes, per-stage equivalents, total component demand,
    legal charge and individual waveform conformity of each passing result.

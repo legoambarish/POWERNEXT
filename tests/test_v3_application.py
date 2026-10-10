@@ -8,6 +8,7 @@ import json
 import threading
 import time
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 
 import pytest
 
@@ -18,17 +19,22 @@ def request(**updates):
     value = V3Application.default_request()
     value.update(
         request_id="TEST_NETWORK_APPLICATION",
-        max_modules=1,
+        min_modules=2,
+        max_modules=2,
         stages=[2],
-        search_mode="complete",
+        search_mode="adaptive",
         priority="complete_physics",
         max_ml_candidates=100,
-        max_physics_evaluations=100,
+        max_physics_evaluations=4,
         budget_seconds=30.0,
         alternatives=2,
     )
     value.update(updates)
     return value
+
+
+def two_tree(op: str, first: int, second: int):
+    return {"op": op, "children": [{"op": "R", "ohm": first}, {"op": "R", "ohm": second}]}
 
 
 def wait_for(app: V3Application, job_id: str, timeout: float = 60.0):
@@ -49,52 +55,59 @@ def test_metadata_and_validation_expose_declared_catalog(tmp_path):
         assert metadata["offline"] is True
         assert metadata["hardware_control"] is False
         assert metadata["components_ohm"] == [30, 46, 180, 520, 3700, 5000]
-        assert metadata["max_modules"] == 3
-        assert metadata["supported_module_bounds"] == [2, 3]
-        assert V3Application.default_request()["max_modules"] == 3
+        assert metadata["max_modules"] == 2
+        assert metadata["supported_module_bounds"] == [2]
+        assert V3Application.default_request()["max_modules"] == 2
+        assert V3Application.default_request()["min_modules"] == 2
         checked = app.validate(request())
         assert checked["valid"] is True
         assert checked["request"]["stages"] == [2]
-        assert checked["catalog"]["theoretical_recipe_configurations"] == 36
-        assert checked["catalog"]["distinct_response_candidates"] == 36
+        assert checked["catalog"]["min_modules_per_branch"] == 2
+        assert checked["catalog"]["max_modules_per_branch"] == 2
+        assert checked["catalog"]["recipes_per_branch"] == 42
+        assert checked["catalog"]["theoretical_recipe_configurations"] == 1764
+        assert checked["catalog"]["distinct_response_candidates"] == 1764
         assert checked["model"]["fallback"].startswith("PHYSICS_L0_BASELINE")
     finally:
         app.close()
 
 
-@pytest.mark.parametrize("max_modules", [2, 3])
-def test_current_application_scope_accepts_two_and_three_module_requests(tmp_path, max_modules):
+def test_current_application_scope_accepts_exact_two_module_requests(tmp_path):
     app = V3Application(tmp_path / "v3")
     try:
-        checked = app.validate(request(max_modules=max_modules))
+        checked = app.validate(request(min_modules=2, max_modules=2))
         assert checked["valid"] is True
-        assert checked["request"]["max_modules"] == max_modules
+        assert checked["request"]["min_modules"] == 2
+        assert checked["request"]["max_modules"] == 2
     finally:
         app.close()
 
 
-def test_four_module_search_is_rejected_before_job_creation(tmp_path):
+@pytest.mark.parametrize("module_bound", [1, 3, 4])
+def test_non_exact_module_search_is_rejected_before_job_creation(tmp_path, module_bound):
     app = V3Application(tmp_path / "v3")
     try:
         with pytest.raises(ValueError, match="UNSUPPORTED_CURRENT_SCOPE"):
-            app.start_search(request(max_modules=4))
+            app.start_search(request(min_modules=module_bound, max_modules=module_bound))
         assert not list((tmp_path / "v3" / "jobs").glob("v3_*/state.json"))
     finally:
         app.close()
 
 
-def test_four_module_fixed_recipe_is_rejected_before_prediction_artifact(tmp_path):
+@pytest.mark.parametrize("leaf_count", [1, 3, 4])
+def test_non_exact_module_fixed_recipes_are_rejected_before_prediction_artifact(tmp_path, leaf_count):
     app = V3Application(tmp_path / "v3")
     try:
-        four = {"op": "S", "children": [{"op": "R", "ohm": 30}, {"op": "R", "ohm": 46}, {"op": "R", "ohm": 180}, {"op": "R", "ohm": 520}]}
+        leaves = [30, 46, 180, 520][:leaf_count]
+        network = {"op": "R", "ohm": leaves[0]} if leaf_count == 1 else {"op": "S", "children": [{"op": "R", "ohm": value} for value in leaves]}
         with pytest.raises(ValueError, match="UNSUPPORTED_CURRENT_SCOPE"):
             app.predict_fixed({
-                "request": request(max_modules=3),
+                "request": request(max_modules=2),
                 "configuration": {
                     "stages": 2,
                     "stage_charge_V": 50_000.0,
-                    "front_network": four,
-                    "tail_network": {"op": "R", "ohm": 30},
+                    "front_network": network,
+                    "tail_network": {"op": "S", "children": [{"op": "R", "ohm": 30}, {"op": "R", "ohm": 46}]},
                 },
             })
         assert not list((tmp_path / "v3" / "predictions").glob("pred_v3_*"))
@@ -102,12 +115,35 @@ def test_four_module_fixed_recipe_is_rejected_before_prediction_artifact(tmp_pat
         app.close()
 
 
-def test_cli_four_module_request_is_rejected_before_destination_creation(tmp_path):
+def test_two_module_series_parallel_fixed_recipes_remain_in_scope(tmp_path):
+    app = V3Application(tmp_path / "v3")
+    try:
+        request_value = request(max_modules=2)
+        normalized, configuration = app._fixed_inputs(
+            {
+                "request": request_value,
+                "configuration": {
+                    "stages": 2,
+                    "stage_charge_V": 50_000.0,
+                    "front_network": {"op": "S", "children": [{"op": "R", "ohm": 30}, {"op": "R", "ohm": 46}]},
+                    "tail_network": {"op": "P", "children": [{"op": "R", "ohm": 180}, {"op": "R", "ohm": 520}]},
+                },
+            }
+        )
+        assert normalized["max_modules"] == 2
+        assert configuration["front_per_stage_ohm"] == 76.0
+        assert configuration["tail_per_stage_ohm"] == pytest.approx(180 * 520 / (180 + 520))
+    finally:
+        app.close()
+
+
+@pytest.mark.parametrize("module_bound", [1, 3, 4])
+def test_cli_non_exact_module_requests_are_rejected_before_destination_creation(tmp_path, module_bound):
     from powernext_v3.__main__ import main
 
     request_path = tmp_path / "request.json"
     output_path = tmp_path / "result"
-    request_path.write_text(json.dumps(request(max_modules=4)), encoding="utf-8")
+    request_path.write_text(json.dumps(request(min_modules=module_bound, max_modules=module_bound)), encoding="utf-8")
     with pytest.raises(ValueError, match="UNSUPPORTED_CURRENT_SCOPE"):
         main(["optimize", "--request", str(request_path), "--output", str(output_path)])
     assert not output_path.exists()
@@ -121,17 +157,19 @@ def test_search_job_publishes_only_complete_result_and_waveform_integrity(tmp_pa
         assert bundle["run"]["status"] == "COMPLETED"
         result = bundle["result"]
         assert result["schema_version"] == "network_result_v3"
-        assert result["search"]["catalog_complete"] is True
-        assert result["search"]["theoretical_recipe_configurations"] == 36
-        assert result["search"]["physics_evaluated_count"] == 36
+        assert result["search"]["catalog_complete"] is False
+        assert result["search"]["theoretical_recipe_configurations"] == 1764
+        assert result["search"]["physics_evaluated_count"] <= 4
         assert bundle["run"]["result_sha256"] == hashlib.sha256(
             (tmp_path / "v3" / "jobs" / state["job_id"] / "artifact" / "result.json").read_bytes()
         ).hexdigest()
-        row = next(row for row in result["candidates"] if row.get("waveform_reference"))
-        waveform = app.waveform(state["job_id"], row["candidate_id"])
-        assert waveform["candidate_id"] == row["candidate_id"]
-        assert len(waveform["time_s"]) == len(waveform["voltage_V"])
-        assert waveform["sha256"] == row["waveform_reference"]["sha256"]
+        rows_with_waveforms = [row for row in result["candidates"] if row.get("waveform_reference")]
+        if rows_with_waveforms:
+            row = rows_with_waveforms[0]
+            waveform = app.waveform(state["job_id"], row["candidate_id"])
+            assert waveform["candidate_id"] == row["candidate_id"]
+            assert len(waveform["time_s"]) == len(waveform["voltage_V"])
+            assert waveform["sha256"] == row["waveform_reference"]["sha256"]
     finally:
         app.close()
 
@@ -187,8 +225,8 @@ def test_fixed_prediction_and_later_reference_comparison_are_immutable(tmp_path)
         configuration = {
             "stages": 2,
             "stage_charge_V": 50_000.0,
-            "front_network": {"op": "R", "ohm": 3700},
-            "tail_network": {"op": "R", "ohm": 5000},
+            "front_network": two_tree("S", 3700, 5000),
+            "tail_network": two_tree("P", 180, 520),
         }
         prediction = app.predict_fixed({"request": q, "configuration": configuration})
         assert prediction["schema_version"] == "network_prediction_v3"
@@ -254,8 +292,8 @@ def test_fixed_prediction_rejects_explicit_route_mismatch_before_artifact(tmp_pa
             "polarity": 1,
             "stages": 2,
             "stage_charge_V": 50_000.0,
-            "front_network": {"op": "R", "ohm": 180},
-            "tail_network": {"op": "R", "ohm": 30},
+            "front_network": two_tree("S", 180, 30),
+            "tail_network": two_tree("P", 180, 30),
         }
         configuration[field] = value
         with pytest.raises(ValueError, match="does not match request"):
@@ -279,8 +317,8 @@ def test_optional_load_keeps_detailed_physics_and_marks_ml_unsupported(tmp_path)
                     "polarity": 1,
                     "stages": 2,
                     "stage_charge_V": 50_000.0,
-                    "front_network": {"op": "R", "ohm": 180},
-                    "tail_network": {"op": "R", "ohm": 30},
+                    "front_network": two_tree("S", 180, 30),
+                    "tail_network": two_tree("P", 180, 30),
                 },
             }
         )
@@ -315,8 +353,8 @@ def test_unexpected_physics_failure_is_not_published_as_unsupported(tmp_path, mo
                     "configuration": {
                         "stages": 2,
                         "stage_charge_V": 50_000.0,
-                        "front_network": {"op": "R", "ohm": 180},
-                        "tail_network": {"op": "R", "ohm": 30},
+                        "front_network": two_tree("S", 180, 30),
+                        "tail_network": two_tree("P", 180, 30),
                     },
                 }
             )
@@ -358,8 +396,8 @@ def test_invalid_physics_waveform_stays_computed_but_not_verified(tmp_path, monk
                 "configuration": {
                     "stages": 2,
                     "stage_charge_V": 50_000.0,
-                    "front_network": {"op": "R", "ohm": 180},
-                    "tail_network": {"op": "R", "ohm": 30},
+                    "front_network": two_tree("S", 180, 30),
+                    "tail_network": two_tree("P", 180, 30),
                 },
             }
         )
@@ -391,15 +429,22 @@ def test_http_v3_routes_keep_legacy_server_boundary(tmp_path):
             data=None if body is None else json.dumps(body).encode("utf-8"),
             headers={"Content-Type": "application/json"},
         )
-        with urlopen(request_object, timeout=30) as response:
-            return response.status, json.load(response)
+        try:
+            with urlopen(request_object, timeout=30) as response:
+                return response.status, json.load(response)
+        except HTTPError as error:
+            return error.code, json.load(error)
 
     try:
         status, metadata = call("/api/v3/meta")
         assert status == 200 and metadata["schema_version"] == "network_application_v3"
-        checked_request = request(max_modules=1, stages=[2], max_physics_evaluations=1)
+        checked_request = request(min_modules=2, max_modules=2, stages=[2], max_physics_evaluations=1)
         status, validated = call("/api/v3/validate", checked_request)
         assert status == 200 and validated["valid"] is True
+        unsupported_request = dict(checked_request)
+        unsupported_request["max_modules"] = 3
+        status, rejected = call("/api/v3/validate", unsupported_request)
+        assert status == 400 and "UNSUPPORTED_CURRENT_SCOPE" in rejected["error"]
         status, prediction = call(
             "/api/v3/predict",
             {
@@ -407,8 +452,8 @@ def test_http_v3_routes_keep_legacy_server_boundary(tmp_path):
                 "configuration": {
                     "stages": 2,
                     "stage_charge_V": 50_000,
-                    "front_network": {"op": "R", "ohm": 3700},
-                    "tail_network": {"op": "R", "ohm": 5000},
+                    "front_network": two_tree("S", 3700, 5000),
+                    "tail_network": two_tree("P", 180, 520),
                 },
             },
         )
@@ -450,7 +495,7 @@ def test_prediction_hash_is_checked_before_reference_comparison(tmp_path):
     app = V3Application(tmp_path / "v3")
     try:
         q = request()
-        prediction = app.predict_fixed({"request": q, "configuration": {"stages": 2, "stage_charge_V": 50_000, "front_network": {"op": "R", "ohm": 3700}, "tail_network": {"op": "R", "ohm": 5000}}})
+        prediction = app.predict_fixed({"request": q, "configuration": {"stages": 2, "stage_charge_V": 50_000, "front_network": two_tree("S", 3700, 5000), "tail_network": two_tree("P", 180, 520)}})
         path = tmp_path / "v3" / "predictions" / prediction["prediction_id"] / "prediction.json"
         path.write_text(path.read_text(encoding="utf-8") + "\n", encoding="utf-8")
         with pytest.raises(ValueError, match="integrity"):

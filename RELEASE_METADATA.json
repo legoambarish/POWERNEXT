@@ -1,8 +1,8 @@
 {
-  "application_version": "3.0.0+networks20261010",
+  "application_version": "3.2.0+exact2_20261010",
   "interface_version": "3.0.0",
   "equipment_profile_id": "CPRI_IVG_OCT04_2026_v2",
-  "release_name": "PowerNext_Track1_Networks_v3",
+  "release_name": "PowerNext_Track1_Exact2",
   "release_date": "2026-10-10",
   "architecture": "ANALYTICAL_AND_ML_PRIORITY_ADAPTIVE_PHYSICS_VERIFICATION",
   "ml_pruning": false,
@@ -13,11 +13,25 @@
   "waveform_profile": "CPRI_COMPETITION_LI_1.2_50_SI_Tp_250_2500",
   "primary_document": "docs/PHASE_B_ACCEPTANCE.md",
   "legacy_waveform_definition_document": "docs/integration/IEC_AND_PS_COMPLIANCE_VERIFICATION.md",
-  "network_modules_per_branch_max": 3,
-  "supported_network_modes": [2, 3],
+  "network_modules_per_branch_max": 2,
+  "supported_network_modes": [
+    2
+  ],
+  "selected_registry": "powernext/ml/registry/networks_exact2_v5",
+  "selected_models": "powernext/ml/results/networks_exact2_v5/selected_models.json",
   "historical_training_module_scope": "1_TO_4_COMPLETED_BEFORE_SCOPE_REVISION",
   "stage_configuration": "UNIFORM",
-  "domains": ["cpri_0p5uf", "research_3uf"],
+  "domains": [
+    "cpri_0p5uf",
+    "research_3uf"
+  ],
   "adaptive_search_global_optimum_claim": false,
-  "accepted_fallback_release": "PowerNext_Track1_Offline"
+  "accepted_fallback_release": "PowerNext_Track1_Offline",
+  "network_modules_per_branch_min": 2,
+  "network_modules_per_branch_exact": 2,
+  "network_connection_types": [
+    "SERIES",
+    "PARALLEL"
+  ],
+  "active_training_dataset": "powernext/ml/data/networks_exact2_v5_aug1"
 }

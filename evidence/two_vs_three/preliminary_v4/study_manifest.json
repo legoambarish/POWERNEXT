@@ -1,0 +1,238 @@
+{
+  "case_files": [
+    "cases/cpri_0p5uf_LI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_0/case.json",
+    "cases/cpri_0p5uf_LI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_1/case.json",
+    "cases/cpri_0p5uf_LI_OSHUNT_v0_FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_0/case.json",
+    "cases/cpri_0p5uf_SI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0/case.json",
+    "cases/cpri_0p5uf_SI_OSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_OSHUNT_v0_0/case.json"
+  ],
+  "cases": [
+    {
+      "case_id": "cpri_0p5uf_LI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_0",
+      "domain_id": "cpri_0p5uf",
+      "mode": "LI",
+      "request_id": "FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_0",
+      "setup": {
+        "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+        "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+        "divider_capacitance_F": 4.21687057355031e-10,
+        "dut_capacitance_F": 1.1987431791557394e-09,
+        "load_resistance_ohm": null,
+        "loop_inductance_H": 6.313198519691094e-05,
+        "loop_resistance_ohm": 1.9904126809016436,
+        "setup_id": "FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_0",
+        "stray_capacitance_F": 2.5295564868662685e-10
+      },
+      "source_kind": "FROZEN_BENCHMARK_REQUEST",
+      "source_path": "evidence/phase_b/search_benchmark/requests.json",
+      "source_sha256": "4a8e393643454ae8c25cedf6d30b261432ce5c05b8e5c8278bbeabbf15e57506",
+      "stages": [
+        6,
+        9,
+        12
+      ],
+      "target_crest_V": 1000000.0,
+      "topology_id": "GSHUNT_v0"
+    },
+    {
+      "case_id": "cpri_0p5uf_LI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_1",
+      "domain_id": "cpri_0p5uf",
+      "mode": "LI",
+      "request_id": "FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_1",
+      "setup": {
+        "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+        "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+        "divider_capacitance_F": 6.278851341656671e-10,
+        "dut_capacitance_F": 1.008053153261094e-09,
+        "load_resistance_ohm": null,
+        "loop_inductance_H": 4.258014715549113e-05,
+        "loop_resistance_ohm": 3.322304103237241,
+        "setup_id": "FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_1",
+        "stray_capacitance_F": 1.6572606087431433e-10
+      },
+      "source_kind": "FROZEN_BENCHMARK_REQUEST",
+      "source_path": "evidence/phase_b/search_benchmark/requests.json",
+      "source_sha256": "4a8e393643454ae8c25cedf6d30b261432ce5c05b8e5c8278bbeabbf15e57506",
+      "stages": [
+        6,
+        9,
+        12
+      ],
+      "target_crest_V": 750000.0,
+      "topology_id": "GSHUNT_v0"
+    },
+    {
+      "case_id": "cpri_0p5uf_LI_OSHUNT_v0_FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_0",
+      "domain_id": "cpri_0p5uf",
+      "mode": "LI",
+      "request_id": "FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_0",
+      "setup": {
+        "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+        "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+        "divider_capacitance_F": 3.3823326022688466e-10,
+        "dut_capacitance_F": 9.763631417395038e-10,
+        "load_resistance_ohm": null,
+        "loop_inductance_H": 3.4819453909992485e-05,
+        "loop_resistance_ohm": 4.887464759317714,
+        "setup_id": "FROZEN_test_cpri_0p5uf_LI_OSHUNT_v0_0",
+        "stray_capacitance_F": 1.030498609368811e-10
+      },
+      "source_kind": "FROZEN_BENCHMARK_REQUEST",
+      "source_path": "evidence/phase_b/search_benchmark/requests.json",
+      "source_sha256": "4a8e393643454ae8c25cedf6d30b261432ce5c05b8e5c8278bbeabbf15e57506",
+      "stages": [
+        6,
+        9,
+        12
+      ],
+      "target_crest_V": 1550000.0,
+      "topology_id": "OSHUNT_v0"
+    },
+    {
+      "case_id": "cpri_0p5uf_SI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0",
+      "domain_id": "cpri_0p5uf",
+      "mode": "SI",
+      "request_id": "FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0",
+      "setup": {
+        "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+        "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+        "divider_capacitance_F": 5.647757401530103e-10,
+        "dut_capacitance_F": 1.1014886013914275e-09,
+        "load_resistance_ohm": null,
+        "loop_inductance_H": 3.898308871082481e-05,
+        "loop_resistance_ohm": 2.418134535251869,
+        "setup_id": "FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0",
+        "stray_capacitance_F": 2.854613338243485e-10
+      },
+      "source_kind": "FROZEN_BENCHMARK_REQUEST",
+      "source_path": "evidence/phase_b/search_benchmark/requests.json",
+      "source_sha256": "4a8e393643454ae8c25cedf6d30b261432ce5c05b8e5c8278bbeabbf15e57506",
+      "stages": [
+        6,
+        9,
+        12
+      ],
+      "target_crest_V": 1300000.0,
+      "topology_id": "GSHUNT_v0"
+    },
+    {
+      "case_id": "cpri_0p5uf_SI_OSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_OSHUNT_v0_0",
+      "domain_id": "cpri_0p5uf",
+      "mode": "SI",
+      "request_id": "FROZEN_test_cpri_0p5uf_SI_OSHUNT_v0_0",
+      "setup": {
+        "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+        "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+        "divider_capacitance_F": 4.688019770126365e-10,
+        "dut_capacitance_F": 1.5654681940278886e-09,
+        "load_resistance_ohm": null,
+        "loop_inductance_H": 2.2138876584277713e-05,
+        "loop_resistance_ohm": 0.7470653965642632,
+        "setup_id": "FROZEN_test_cpri_0p5uf_SI_OSHUNT_v0_0",
+        "stray_capacitance_F": 8.749596834373588e-11
+      },
+      "source_kind": "FROZEN_BENCHMARK_REQUEST",
+      "source_path": "evidence/phase_b/search_benchmark/requests.json",
+      "source_sha256": "4a8e393643454ae8c25cedf6d30b261432ce5c05b8e5c8278bbeabbf15e57506",
+      "stages": [
+        6,
+        9,
+        12
+      ],
+      "target_crest_V": 750000.0,
+      "topology_id": "OSHUNT_v0"
+    }
+  ],
+  "catalogs": {
+    "max_modules_2": {
+      "catalog_sha256": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+      "distinct_resistances_per_branch": 48,
+      "distinct_response_candidates": 6912,
+      "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+      "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED",
+      "max_modules_per_branch": 2,
+      "recipes_per_branch": 48,
+      "stages": [
+        6,
+        9,
+        12
+      ],
+      "theoretical_recipe_configurations": 6912,
+      "uniform_stages": true
+    },
+    "max_modules_3": {
+      "catalog_sha256": "0fec271fa1d7d9051c6ea9b535d939770b772718cc053f3fdbb946618c093261",
+      "distinct_resistances_per_branch": 407,
+      "distinct_response_candidates": 496947,
+      "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+      "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED",
+      "max_modules_per_branch": 3,
+      "recipes_per_branch": 412,
+      "stages": [
+        6,
+        9,
+        12
+      ],
+      "theoretical_recipe_configurations": 509232,
+      "uniform_stages": true
+    }
+  },
+  "concurrent_load_caveat": "The approved four-policy two-module benchmark was running concurrently; wall times are diagnostic and are not cross-machine throughput measurements.",
+  "created_at_utc": "2026-10-10T13:31:43.898765+00:00",
+  "elapsed_seconds": 11.68494070000088,
+  "no_claims": [
+    "not a global <=3 optimum",
+    "not hardware approval",
+    "not IEC certification",
+    "not measured-data validation",
+    "not an ML result"
+  ],
+  "physics_source_fingerprint": {
+    "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+    "sources": {
+      "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+      "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+      "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+      "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+      "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+      "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+      "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+    }
+  },
+  "purpose": "PRELIMINARY_ACTUAL_WAVEFORM_CROSSOVER_NO_ML_NO_TRAINING",
+  "rerun_validation": "rerun_validation.json",
+  "runtime": {
+    "pid": 21932,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "sample_policy": {
+    "anchor_policy": "matching_frozen_or_guided_two_baseline_is_selected_before_three_simulation; up_to_5x5 physical three-module response neighbours at the anchor stage are rotated across seeds",
+    "guided_by": "log_distance_to_nominal_front_tail_and_module_count_strata_plus_deterministic_broad_draws_and_frozen_two_anchor_neighbours",
+    "max_three_records": 96,
+    "seed_base": 20261010,
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "schema_version": "two_vs_three_waveform_preliminary_v1",
+  "source_artifacts": {
+    "comparison_script": {
+      "path": "tools/compare_two_three_waveforms.py",
+      "sha256": "64af52904f3c81357db0a3f4f464767c3ec9b3da1be00a2e84b59728c0309f1b"
+    },
+    "target_reference_helper": {
+      "path": "tools/impulse_target_reference.py",
+      "sha256": "7aafde3d16bb8e292547a21fc671ef5e776dee7eb7420b44c2bbef2a9f78c954"
+    }
+  },
+  "source_snapshot": "compare_two_three_waveforms_run.py",
+  "stages": [
+    6,
+    9,
+    12
+  ],
+  "supersedes_output": "evidence/two_vs_three/preliminary and preliminary_v2 (retained immutable drafts; this run is the accepted version)"
+}

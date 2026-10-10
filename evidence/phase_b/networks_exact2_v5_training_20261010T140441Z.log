@@ -1,0 +1,338 @@
+[2026-10-10T14:05:27+00:00] v3-ml dataset loaded rows=78244 eligible=66682 canonical=66244 duplicates_removed=438 load_seconds=37.087
+[2026-10-10T14:05:27+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 start train=5275 validation=1778 test=1860
+[2026-10-10T14:05:27+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 start rows=1713
+[2026-10-10T14:05:28+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 fit_complete=true fit_seconds=1.148
+[2026-10-10T14:05:29+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:21.666303543774877 ood:107
+[2026-10-10T14:05:29+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 start rows=3383
+[2026-10-10T14:05:33+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 fit_complete=true fit_seconds=3.654
+[2026-10-10T14:05:33+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:14.67169317918514 ood:74
+[2026-10-10T14:05:33+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 start rows=5275
+[2026-10-10T14:05:37+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 fit_complete=true fit_seconds=4.026
+[2026-10-10T14:05:38+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:8.222657602209939 ood:2
+[2026-10-10T14:05:43+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 start rows=1713
+[2026-10-10T14:05:44+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.136
+[2026-10-10T14:05:44+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:8.36006612022419 ood:107
+[2026-10-10T14:05:44+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 start rows=3383
+[2026-10-10T14:05:46+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.230
+[2026-10-10T14:05:46+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:8.261528040552482 ood:74
+[2026-10-10T14:05:46+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 start rows=5275
+[2026-10-10T14:05:48+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.492
+[2026-10-10T14:05:49+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:5.877903500141147 ood:2
+[2026-10-10T14:05:51+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.25 start rows=1713
+[2026-10-10T14:05:52+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.25 fit_complete=true fit_seconds=1.006
+[2026-10-10T14:05:52+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:0.18000779168113118 ood:107
+[2026-10-10T14:05:52+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.50 start rows=3383
+[2026-10-10T14:05:55+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.50 fit_complete=true fit_seconds=2.282
+[2026-10-10T14:05:55+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:0.11707574919384761 ood:74
+[2026-10-10T14:05:55+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=1.00 start rows=5275
+[2026-10-10T14:05:59+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=1.00 fit_complete=true fit_seconds=4.021
+[2026-10-10T14:05:59+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:0.09565793801672753 ood:2
+[2026-10-10T14:06:04+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 start rows=1713
+[2026-10-10T14:06:05+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.139
+[2026-10-10T14:06:06+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:2.5741586747938525 ood:107
+[2026-10-10T14:06:06+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 start rows=3383
+[2026-10-10T14:06:07+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.156
+[2026-10-10T14:06:08+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:0.5710369282788718 ood:74
+[2026-10-10T14:06:08+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 start rows=5275
+[2026-10-10T14:06:09+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.253
+[2026-10-10T14:06:10+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:0.13131476464670924 ood:2
+[2026-10-10T14:06:14+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees registered model=model_3a83df18d693fc1715f4 validation_score=8.017158780587426
+[2026-10-10T14:06:14+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting registered model=model_43e0c3a2e9d7cfc302d0 validation_score=5.876749914920196
+[2026-10-10T14:06:16+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/extra_trees registered model=model_b93a212a9e99fc3b67ca validation_score=0.10230592838139971
+[2026-10-10T14:06:16+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting registered model=model_0c689d518dff38cb4dca validation_score=0.10945289796106268
+[2026-10-10T14:06:18+00:00] v3-ml route=cpri_0p5uf:LI:GSHUNT_v0 complete selected=residual/extra_trees model=model_b93a212a9e99fc3b67ca
+[2026-10-10T14:06:18+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 start train=5373 validation=1805 test=1865
+[2026-10-10T14:06:18+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 start rows=1903
+[2026-10-10T14:06:19+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 fit_complete=true fit_seconds=1.161
+[2026-10-10T14:06:20+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:15.576351189473986 ood:4
+[2026-10-10T14:06:20+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 start rows=3588
+[2026-10-10T14:06:22+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 fit_complete=true fit_seconds=2.643
+[2026-10-10T14:06:23+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:13.378287408263683 ood:4
+[2026-10-10T14:06:23+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 start rows=5373
+[2026-10-10T14:06:26+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 fit_complete=true fit_seconds=3.609
+[2026-10-10T14:06:27+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:12.803273266956522 ood:4
+[2026-10-10T14:06:31+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 start rows=1903
+[2026-10-10T14:06:33+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.253
+[2026-10-10T14:06:33+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:10.87511568301989 ood:4
+[2026-10-10T14:06:33+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 start rows=3588
+[2026-10-10T14:06:35+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.338
+[2026-10-10T14:06:35+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:8.706022048374585 ood:4
+[2026-10-10T14:06:35+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 start rows=5373
+[2026-10-10T14:06:37+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.568
+[2026-10-10T14:06:38+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:5.529503695897024 ood:4
+[2026-10-10T14:06:41+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.25 start rows=1903
+[2026-10-10T14:06:42+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.25 fit_complete=true fit_seconds=1.345
+[2026-10-10T14:06:43+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:0.183631765365326 ood:4
+[2026-10-10T14:06:43+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.50 start rows=3588
+[2026-10-10T14:06:45+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.50 fit_complete=true fit_seconds=2.309
+[2026-10-10T14:06:45+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:0.12855474658734234 ood:4
+[2026-10-10T14:06:45+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=1.00 start rows=5373
+[2026-10-10T14:06:50+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=1.00 fit_complete=true fit_seconds=4.269
+[2026-10-10T14:06:50+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:0.09898477072476104 ood:4
+[2026-10-10T14:06:55+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 start rows=1903
+[2026-10-10T14:06:56+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.050
+[2026-10-10T14:06:56+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:0.21475348448405474 ood:4
+[2026-10-10T14:06:56+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 start rows=3588
+[2026-10-10T14:06:58+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.369
+[2026-10-10T14:06:59+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:0.27489507149156445 ood:4
+[2026-10-10T14:06:59+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 start rows=5373
+[2026-10-10T14:07:00+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.319
+[2026-10-10T14:07:01+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:0.23870372682025953 ood:4
+[2026-10-10T14:07:05+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees registered model=model_3f49494ffd473834e120 validation_score=13.023857810910581
+[2026-10-10T14:07:05+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting registered model=model_abd72342029c968eb366 validation_score=5.529641537317113
+[2026-10-10T14:07:07+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/extra_trees registered model=model_f61024e3ebff070740f2 validation_score=0.10003306400314654
+[2026-10-10T14:07:07+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting registered model=model_18eeb3f3d86d6e076963 validation_score=0.24156909451666422
+[2026-10-10T14:07:08+00:00] v3-ml route=cpri_0p5uf:LI:OSHUNT_v0 complete selected=residual/extra_trees model=model_f61024e3ebff070740f2
+[2026-10-10T14:07:08+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 start train=5221 validation=1793 test=1884
+[2026-10-10T14:07:08+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 start rows=1922
+[2026-10-10T14:07:10+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 fit_complete=true fit_seconds=1.218
+[2026-10-10T14:07:11+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:0.7826899705317002 ood:9
+[2026-10-10T14:07:11+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 start rows=3444
+[2026-10-10T14:07:13+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 fit_complete=true fit_seconds=2.483
+[2026-10-10T14:07:14+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:0.5876741047055711 ood:7
+[2026-10-10T14:07:14+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 start rows=5221
+[2026-10-10T14:07:18+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 fit_complete=true fit_seconds=3.780
+[2026-10-10T14:07:18+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:0.49374098867034016 ood:4
+[2026-10-10T14:07:23+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 start rows=1922
+[2026-10-10T14:07:24+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.214
+[2026-10-10T14:07:25+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:0.19772679028914072 ood:9
+[2026-10-10T14:07:25+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 start rows=3444
+[2026-10-10T14:07:26+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.443
+[2026-10-10T14:07:27+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:0.22789181080584378 ood:7
+[2026-10-10T14:07:27+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 start rows=5221
+[2026-10-10T14:07:29+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.569
+[2026-10-10T14:07:29+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:0.22125052869191225 ood:4
+[2026-10-10T14:07:32+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.25 start rows=1922
+[2026-10-10T14:07:33+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.25 fit_complete=true fit_seconds=1.298
+[2026-10-10T14:07:33+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:0.032284718154763546 ood:9
+[2026-10-10T14:07:33+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.50 start rows=3444
+[2026-10-10T14:07:36+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.50 fit_complete=true fit_seconds=2.534
+[2026-10-10T14:07:36+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:0.02289880428879628 ood:7
+[2026-10-10T14:07:36+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=1.00 start rows=5221
+[2026-10-10T14:07:40+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=1.00 fit_complete=true fit_seconds=3.655
+[2026-10-10T14:07:40+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:0.01911752407004363 ood:4
+[2026-10-10T14:07:45+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 start rows=1922
+[2026-10-10T14:07:46+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.063
+[2026-10-10T14:07:46+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:0.037562618446152635 ood:9
+[2026-10-10T14:07:46+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 start rows=3444
+[2026-10-10T14:07:47+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.116
+[2026-10-10T14:07:48+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:0.02418293959930336 ood:7
+[2026-10-10T14:07:48+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 start rows=5221
+[2026-10-10T14:07:50+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.332
+[2026-10-10T14:07:51+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:0.01881671242954735 ood:4
+[2026-10-10T14:07:54+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees registered model=model_05021ade5e8e28888d03 validation_score=0.5157901957056477
+[2026-10-10T14:07:55+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting registered model=model_87290befcffe65a5f06c validation_score=0.2196848281759006
+[2026-10-10T14:07:57+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/extra_trees registered model=model_b3457a4ab274663522e0 validation_score=0.01986993894072439
+[2026-10-10T14:07:57+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting registered model=model_84fe522ca453b26ee7c8 validation_score=0.017917076829570937
+[2026-10-10T14:07:58+00:00] v3-ml route=cpri_0p5uf:SI:GSHUNT_v0 complete selected=residual/hist_gradient_boosting model=model_84fe522ca453b26ee7c8
+[2026-10-10T14:07:58+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 start train=5359 validation=1795 test=1878
+[2026-10-10T14:08:00+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 start rows=1864
+[2026-10-10T14:08:01+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 fit_complete=true fit_seconds=1.168
+[2026-10-10T14:08:02+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:0.812151886171279 ood:48
+[2026-10-10T14:08:02+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 start rows=3430
+[2026-10-10T14:08:04+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 fit_complete=true fit_seconds=2.068
+[2026-10-10T14:08:04+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:0.7670902977026653 ood:35
+[2026-10-10T14:08:04+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 start rows=5359
+[2026-10-10T14:08:08+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 fit_complete=true fit_seconds=3.834
+[2026-10-10T14:08:09+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:0.6683160169317803 ood:3
+[2026-10-10T14:08:13+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 start rows=1864
+[2026-10-10T14:08:14+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.161
+[2026-10-10T14:08:15+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:0.1553576796921615 ood:48
+[2026-10-10T14:08:15+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 start rows=3430
+[2026-10-10T14:08:16+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.412
+[2026-10-10T14:08:17+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:0.1362899205507024 ood:35
+[2026-10-10T14:08:17+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 start rows=5359
+[2026-10-10T14:08:18+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.455
+[2026-10-10T14:08:19+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:0.13842323320121935 ood:3
+[2026-10-10T14:08:21+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.25 start rows=1864
+[2026-10-10T14:08:22+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.25 fit_complete=true fit_seconds=1.076
+[2026-10-10T14:08:23+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:0.01661647519220532 ood:48
+[2026-10-10T14:08:23+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.50 start rows=3430
+[2026-10-10T14:08:25+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.50 fit_complete=true fit_seconds=2.222
+[2026-10-10T14:08:25+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:0.01735995636725102 ood:35
+[2026-10-10T14:08:25+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=1.00 start rows=5359
+[2026-10-10T14:08:29+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=1.00 fit_complete=true fit_seconds=3.327
+[2026-10-10T14:08:29+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:0.017233989281836143 ood:3
+[2026-10-10T14:08:33+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 start rows=1864
+[2026-10-10T14:08:34+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=0.963
+[2026-10-10T14:08:34+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:0.02705458257531378 ood:48
+[2026-10-10T14:08:34+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 start rows=3430
+[2026-10-10T14:08:36+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.138
+[2026-10-10T14:08:36+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:0.022141893469236732 ood:35
+[2026-10-10T14:08:36+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 start rows=5359
+[2026-10-10T14:08:38+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.476
+[2026-10-10T14:08:39+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:0.01867236607681706 ood:3
+[2026-10-10T14:08:43+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees registered model=model_e0e35153eed393d1a2b6 validation_score=0.6534983189848931
+[2026-10-10T14:08:43+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting registered model=model_6e5f6a650c1f2acb81df validation_score=0.13941179578074445
+[2026-10-10T14:08:45+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/extra_trees registered model=model_363a62ea485011c25683 validation_score=0.017951347839378448
+[2026-10-10T14:08:45+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting registered model=model_0072631921f9d119023c validation_score=0.021330023402088727
+[2026-10-10T14:08:46+00:00] v3-ml route=cpri_0p5uf:SI:OSHUNT_v0 complete selected=residual/extra_trees model=model_363a62ea485011c25683
+[2026-10-10T14:08:46+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 start train=4923 validation=1612 test=1690
+[2026-10-10T14:08:47+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 start rows=1439
+[2026-10-10T14:08:48+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 fit_complete=true fit_seconds=0.973
+[2026-10-10T14:08:48+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:145.2606294912123 ood:210
+[2026-10-10T14:08:48+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 start rows=3212
+[2026-10-10T14:08:51+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 fit_complete=true fit_seconds=2.102
+[2026-10-10T14:08:52+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:23.213259447080496 ood:2
+[2026-10-10T14:08:52+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 start rows=4923
+[2026-10-10T14:08:56+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 fit_complete=true fit_seconds=3.554
+[2026-10-10T14:08:56+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:12.83574894365537 ood:2
+[2026-10-10T14:09:00+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 start rows=1439
+[2026-10-10T14:09:01+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.117
+[2026-10-10T14:09:02+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:116.8806599414693 ood:210
+[2026-10-10T14:09:02+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 start rows=3212
+[2026-10-10T14:09:03+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.199
+[2026-10-10T14:09:04+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:28.44732353693757 ood:2
+[2026-10-10T14:09:04+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 start rows=4923
+[2026-10-10T14:09:06+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.429
+[2026-10-10T14:09:06+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:11.313233971332334 ood:2
+[2026-10-10T14:09:08+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.25 start rows=1439
+[2026-10-10T14:09:10+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.25 fit_complete=true fit_seconds=1.082
+[2026-10-10T14:09:10+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:1.6331953104173365 ood:210
+[2026-10-10T14:09:10+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.50 start rows=3212
+[2026-10-10T14:09:12+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.50 fit_complete=true fit_seconds=2.387
+[2026-10-10T14:09:13+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:0.3051842418289759 ood:2
+[2026-10-10T14:09:13+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=1.00 start rows=4923
+[2026-10-10T14:09:16+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=1.00 fit_complete=true fit_seconds=3.319
+[2026-10-10T14:09:16+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:0.17408588558478347 ood:2
+[2026-10-10T14:09:20+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 start rows=1439
+[2026-10-10T14:09:21+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=0.886
+[2026-10-10T14:09:21+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:2.3351979168380916 ood:210
+[2026-10-10T14:09:21+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 start rows=3212
+[2026-10-10T14:09:23+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.309
+[2026-10-10T14:09:24+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:0.2841820761813253 ood:2
+[2026-10-10T14:09:24+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 start rows=4923
+[2026-10-10T14:09:25+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.405
+[2026-10-10T14:09:26+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:0.2686970229467993 ood:2
+[2026-10-10T14:09:30+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/extra_trees registered model=model_c35cb0f57f0ffda63286 validation_score=12.989818889843205
+[2026-10-10T14:09:30+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting registered model=model_3fa37e3b41ee9650bddb validation_score=11.31276778893077
+[2026-10-10T14:09:31+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/extra_trees registered model=model_e8344e41ca77cf6429b1 validation_score=0.16293293876248405
+[2026-10-10T14:09:32+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 candidate=residual/hist_gradient_boosting registered model=model_8ac2eec0e7d30ec41175 validation_score=0.2465541269495067
+[2026-10-10T14:09:33+00:00] v3-ml route=research_3uf:LI:GSHUNT_v0 complete selected=residual/extra_trees model=model_e8344e41ca77cf6429b1
+[2026-10-10T14:09:33+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 start train=4055 validation=1388 test=1434
+[2026-10-10T14:09:33+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 start rows=1527
+[2026-10-10T14:09:34+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 fit_complete=true fit_seconds=1.024
+[2026-10-10T14:09:35+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:27.37322134716167 ood:32
+[2026-10-10T14:09:35+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 start rows=2802
+[2026-10-10T14:09:36+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 fit_complete=true fit_seconds=1.514
+[2026-10-10T14:09:36+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:14.61028309412254 ood:30
+[2026-10-10T14:09:36+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 start rows=4055
+[2026-10-10T14:09:39+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 fit_complete=true fit_seconds=2.488
+[2026-10-10T14:09:39+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:13.06036562467345 ood:18
+[2026-10-10T14:09:42+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 start rows=1527
+[2026-10-10T14:09:43+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.024
+[2026-10-10T14:09:44+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:6.560725123234904 ood:32
+[2026-10-10T14:09:44+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 start rows=2802
+[2026-10-10T14:09:45+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.213
+[2026-10-10T14:09:46+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:3.676588186029203 ood:30
+[2026-10-10T14:09:46+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 start rows=4055
+[2026-10-10T14:09:47+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.386
+[2026-10-10T14:09:48+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:3.644853729743113 ood:18
+[2026-10-10T14:09:50+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.25 start rows=1527
+[2026-10-10T14:09:51+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.25 fit_complete=true fit_seconds=1.058
+[2026-10-10T14:09:51+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:0.19175115350592956 ood:32
+[2026-10-10T14:09:51+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.50 start rows=2802
+[2026-10-10T14:09:53+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.50 fit_complete=true fit_seconds=1.766
+[2026-10-10T14:09:53+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:0.1163745122002508 ood:30
+[2026-10-10T14:09:53+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=1.00 start rows=4055
+[2026-10-10T14:09:56+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=1.00 fit_complete=true fit_seconds=2.535
+[2026-10-10T14:09:56+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:0.11953830317033541 ood:18
+[2026-10-10T14:09:59+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 start rows=1527
+[2026-10-10T14:10:00+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.004
+[2026-10-10T14:10:00+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:0.2230839531065004 ood:32
+[2026-10-10T14:10:00+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 start rows=2802
+[2026-10-10T14:10:02+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.072
+[2026-10-10T14:10:02+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:0.17546577708240857 ood:30
+[2026-10-10T14:10:02+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 start rows=4055
+[2026-10-10T14:10:04+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.233
+[2026-10-10T14:10:04+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:0.19120501021376518 ood:18
+[2026-10-10T14:10:08+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/extra_trees registered model=model_982dbdb1e717665af076 validation_score=13.289299651207774
+[2026-10-10T14:10:08+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting registered model=model_9d62bb616cbdced231f2 validation_score=3.662864895525208
+[2026-10-10T14:10:09+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/extra_trees registered model=model_9d48f5370f8d2d4e549a validation_score=0.11355990439965317
+[2026-10-10T14:10:10+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 candidate=residual/hist_gradient_boosting registered model=model_bab12c5484a992c6048e validation_score=0.20531020806427994
+[2026-10-10T14:10:11+00:00] v3-ml route=research_3uf:LI:OSHUNT_v0 complete selected=residual/extra_trees model=model_9d48f5370f8d2d4e549a
+[2026-10-10T14:10:11+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 start train=4911 validation=1607 test=1674
+[2026-10-10T14:10:11+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 start rows=1526
+[2026-10-10T14:10:12+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 fit_complete=true fit_seconds=0.905
+[2026-10-10T14:10:13+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:1.791489923726719 ood:102
+[2026-10-10T14:10:13+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 start rows=3150
+[2026-10-10T14:10:15+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 fit_complete=true fit_seconds=2.268
+[2026-10-10T14:10:16+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:0.46166450132813414 ood:12
+[2026-10-10T14:10:16+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 start rows=4911
+[2026-10-10T14:10:21+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 fit_complete=true fit_seconds=5.556
+[2026-10-10T14:10:22+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:0.2639764498776817 ood:7
+[2026-10-10T14:10:26+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 start rows=1526
+[2026-10-10T14:10:27+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.241
+[2026-10-10T14:10:28+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:1.2211710306229167 ood:102
+[2026-10-10T14:10:28+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 start rows=3150
+[2026-10-10T14:10:30+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.467
+[2026-10-10T14:10:30+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:0.3889345138010006 ood:12
+[2026-10-10T14:10:30+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 start rows=4911
+[2026-10-10T14:10:32+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.526
+[2026-10-10T14:10:33+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:0.2659598416502675 ood:7
+[2026-10-10T14:10:35+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.25 start rows=1526
+[2026-10-10T14:10:36+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.25 fit_complete=true fit_seconds=0.939
+[2026-10-10T14:10:36+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:0.020874638133717656 ood:102
+[2026-10-10T14:10:36+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.50 start rows=3150
+[2026-10-10T14:10:38+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.50 fit_complete=true fit_seconds=1.983
+[2026-10-10T14:10:39+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:0.013566693326628373 ood:12
+[2026-10-10T14:10:39+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=1.00 start rows=4911
+[2026-10-10T14:10:42+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=1.00 fit_complete=true fit_seconds=3.463
+[2026-10-10T14:10:43+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:0.011193807499443941 ood:7
+[2026-10-10T14:10:46+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 start rows=1526
+[2026-10-10T14:10:47+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.228
+[2026-10-10T14:10:48+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:0.033911246938200044 ood:102
+[2026-10-10T14:10:48+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 start rows=3150
+[2026-10-10T14:10:50+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.532
+[2026-10-10T14:10:51+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:0.019284466770405836 ood:12
+[2026-10-10T14:10:51+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 start rows=4911
+[2026-10-10T14:10:53+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.395
+[2026-10-10T14:10:53+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:0.02081320330446848 ood:7
+[2026-10-10T14:10:57+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/extra_trees registered model=model_db5265dc1d925af6f37a validation_score=0.26515220345143814
+[2026-10-10T14:10:58+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=physics_guided/hist_gradient_boosting registered model=model_0b1acb0b56892d65198f validation_score=0.26482625518508385
+[2026-10-10T14:10:59+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/extra_trees registered model=model_1c991302020290fa0b4b validation_score=0.011284335155129591
+[2026-10-10T14:11:00+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 candidate=residual/hist_gradient_boosting registered model=model_f1f04f45b09ec20a97ba validation_score=0.020770947197562728
+[2026-10-10T14:11:01+00:00] v3-ml route=research_3uf:SI:GSHUNT_v0 complete selected=residual/extra_trees model=model_1c991302020290fa0b4b
+[2026-10-10T14:11:01+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 start train=4194 validation=1401 test=1469
+[2026-10-10T14:11:01+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 start rows=1189
+[2026-10-10T14:11:01+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 fit_complete=true fit_seconds=0.582
+[2026-10-10T14:11:02+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:2.365094833299038 ood:21
+[2026-10-10T14:11:02+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 start rows=2557
+[2026-10-10T14:11:04+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 fit_complete=true fit_seconds=1.512
+[2026-10-10T14:11:04+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:1.402898704493895 ood:11
+[2026-10-10T14:11:04+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 start rows=4194
+[2026-10-10T14:11:07+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 fit_complete=true fit_seconds=2.900
+[2026-10-10T14:11:07+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:0.6152906170481278 ood:4
+[2026-10-10T14:11:11+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 start rows=1189
+[2026-10-10T14:11:12+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=1.124
+[2026-10-10T14:11:13+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:0.1985405120266429 ood:21
+[2026-10-10T14:11:13+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 start rows=2557
+[2026-10-10T14:11:14+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.327
+[2026-10-10T14:11:15+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:0.12457210781840429 ood:11
+[2026-10-10T14:11:15+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 start rows=4194
+[2026-10-10T14:11:16+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.474
+[2026-10-10T14:11:17+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:0.09220415259030515 ood:4
+[2026-10-10T14:11:19+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.25 start rows=1189
+[2026-10-10T14:11:19+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.25 fit_complete=true fit_seconds=0.649
+[2026-10-10T14:11:20+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.25 validation_complete=true validation_metrics=selection_score:0.032547182163715736 ood:21
+[2026-10-10T14:11:20+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.50 start rows=2557
+[2026-10-10T14:11:21+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.50 fit_complete=true fit_seconds=1.424
+[2026-10-10T14:11:22+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=0.50 validation_complete=true validation_metrics=selection_score:0.019494581300030164 ood:11
+[2026-10-10T14:11:22+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=1.00 start rows=4194
+[2026-10-10T14:11:25+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=1.00 fit_complete=true fit_seconds=2.982
+[2026-10-10T14:11:25+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/extra_trees fraction=1.00 validation_complete=true validation_metrics=selection_score:0.010242097796949318 ood:4
+[2026-10-10T14:11:28+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 start rows=1189
+[2026-10-10T14:11:29+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 fit_complete=true fit_seconds=0.989
+[2026-10-10T14:11:30+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.25 validation_complete=true validation_metrics=selection_score:0.03826100894177136 ood:21
+[2026-10-10T14:11:30+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 start rows=2557
+[2026-10-10T14:11:31+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 fit_complete=true fit_seconds=1.202
+[2026-10-10T14:11:32+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=0.50 validation_complete=true validation_metrics=selection_score:0.024417170819259613 ood:11
+[2026-10-10T14:11:32+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 start rows=4194
+[2026-10-10T14:11:33+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 fit_complete=true fit_seconds=1.207
+[2026-10-10T14:11:34+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting fraction=1.00 validation_complete=true validation_metrics=selection_score:0.011025064215182259 ood:4
+[2026-10-10T14:11:37+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/extra_trees registered model=model_92e7033df1da93edd534 validation_score=0.6238257924238675
+[2026-10-10T14:11:37+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=physics_guided/hist_gradient_boosting registered model=model_5c7773efbaa91ae89882 validation_score=0.09204231137865308
+[2026-10-10T14:11:39+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/extra_trees registered model=model_2bff610c2e2cb0899c19 validation_score=0.010601571807769302
+[2026-10-10T14:11:39+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 candidate=residual/hist_gradient_boosting registered model=model_52b124f6ac1345d233d2 validation_score=0.010493741266437566
+[2026-10-10T14:11:40+00:00] v3-ml route=research_3uf:SI:OSHUNT_v0 complete selected=residual/hist_gradient_boosting model=model_52b124f6ac1345d233d2
+[2026-10-10T14:11:41+00:00] v3-ml run complete routes=8 output=powernext\ml\results\networks_exact2_v5

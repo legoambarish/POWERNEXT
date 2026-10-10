@@ -1,0 +1,7 @@
+{
+  "audit": "powernext/ml/data/networks_exact2_v5_aug1/normalized_coverage_audit.json",
+  "audit_sha256": "775e0c4e9d15a95f6e4343750a3facb6ff3ca09c8f978cc59bce24767b6eec70",
+  "dataset_id": "networks_exact2_v5_aug1_936a80511a31",
+  "dataset_manifest_sha256": "4359870424ba6b5b2464264b4b80cbb5cb22d1c9a3c1f9baf030754436b718f6",
+  "status": "COMPLETE"
+}

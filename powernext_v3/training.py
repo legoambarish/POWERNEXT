@@ -16,6 +16,7 @@ from typing import Any, Callable, Iterable, Mapping, Sequence
 import numpy as np
 
 from .features import TARGET_COLUMNS
+from .dataset import digest as _dataset_digest
 from .models import FAMILIES, FORMULATIONS, NetworkModel, make_candidates
 from .registry import file_hash, register_model, runtime_versions, source_fingerprint
 
@@ -51,6 +52,199 @@ def _json_write(path: Path, payload: Any) -> None:
 
 def _digest(value: Any) -> str:
     return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()).hexdigest()
+
+
+def _training_dataset_scope(data_manifest: Mapping[str, Any]) -> dict[str, Any] | None:
+    """Return and verify an explicit derived-dataset scope contract.
+
+    The exact-two retraining set is a raw-filtered, balanced projection of the
+    immutable R2 design/row inputs. Cards and run manifests must carry the
+    verified contract, rather than a caller-supplied scope label. Historical
+    v3 data and explicit fixtures have no such projection and therefore return
+    None.
+    """
+
+    scope = data_manifest.get("scope_filter")
+    manifest_filter = False
+    if scope is None:
+        # The exact-two worker publishes its immutable predicate under
+        # ``filter`` (the parent R2 manifest uses ``scope_filter``).  Accept
+        # that schema only after checking the complete predicate below.
+        scope = data_manifest.get("filter")
+        manifest_filter = scope is not None
+    if scope is None:
+        return None
+    if not isinstance(scope, Mapping):
+        raise ValueError("Derived dataset scope_filter must be an object")
+    expected_rule = "front_network_module_count == 2 and tail_network_module_count == 2"
+    if manifest_filter:
+        if (
+            data_manifest.get("dataset_kind") != "FILTERED_SUBSET_OF_PHASE_B_R2_EXACT_TWO_PER_BRANCH"
+            or scope.get("front_leaf_count") != 2
+            or scope.get("tail_leaf_count") != 2
+            or set(scope.get("root_ops", ())) != {"S", "P"}
+            or scope.get("no_physics_rerun") is not True
+            or scope.get("preserve_original_row_ids") is not True
+            or scope.get("preserve_original_split_labels") is not True
+            or scope.get("retain_invalid_or_unsupported_rows") is not True
+        ):
+            raise ValueError("Exact-two dataset filter predicate is incomplete")
+        provenance = data_manifest.get("provenance")
+        filter_provenance = provenance.get("filter") if isinstance(provenance, Mapping) else None
+        if not isinstance(filter_provenance, Mapping) or filter_provenance.get("predicate") != "front and tail canonical trees each exactly two resistor leaves; root operation P or S":
+            raise ValueError("Exact-two dataset is missing its verified filter predicate")
+        recorded_filter_hash = _digest(dict(scope))
+    else:
+        if scope.get("rule") != expected_rule:
+            raise ValueError("Unsupported derived training scope rule")
+        if scope.get("field_front") != "front_network_module_count" or scope.get("field_tail") != "tail_network_module_count":
+            raise ValueError("Derived training scope must cover both network branches")
+        if scope.get("exact_modules_per_branch") != 2 or data_manifest.get("exact_modules_per_branch") != 2:
+            raise ValueError("Derived training scope is not exact_modules_per_branch=2 on both branches")
+        if data_manifest.get("scope_contract") != "EXACT_MODULES_PER_BRANCH_V5":
+            raise ValueError("Unsupported exact-two dataset scope contract")
+        recorded_filter_hash = data_manifest.get("scope_filter_sha256")
+    actual_filter_hash = _digest(dict(scope))
+    if not recorded_filter_hash or recorded_filter_hash != actual_filter_hash:
+        raise ValueError("Derived training scope filter hash is missing or invalid")
+    parent_fields = {
+        "parent_dataset_id": data_manifest.get("parent_dataset_id"),
+        "parent_manifest_sha256": data_manifest.get("parent_manifest_sha256"),
+        "parent_rows_sha256": data_manifest.get("parent_rows_sha256"),
+        "parent_design_sha256": data_manifest.get("parent_design_sha256"),
+        "parent_design_file_sha256": data_manifest.get("parent_design_file_sha256"),
+    }
+    missing = [key for key, value in parent_fields.items() if not value]
+    if missing:
+        raise ValueError("Derived training manifest is missing parent provenance: " + ", ".join(missing))
+    return {
+        "scope_contract": "EXACT_MODULES_PER_BRANCH_V5",
+        "exact_modules_per_branch": 2,
+        "rule": expected_rule,
+        "scope_filter_sha256": recorded_filter_hash,
+        "dataset_id": data_manifest.get("dataset_id"),
+        **parent_fields,
+    }
+
+
+def _exact_two_design_counts(rows_path: Path, data_manifest: Mapping[str, Any]) -> dict[str, tuple[int, int]]:
+    """Read immutable design declarations used to audit filtered row trees."""
+
+    design_path = rows_path.parent / "design.jsonl"
+    if not design_path.is_file():
+        raise ValueError(f"Exact-two dataset is missing design.jsonl: {design_path}")
+    expected_file_hash = data_manifest.get("design_file_sha256")
+    if not isinstance(expected_file_hash, str) or not expected_file_hash:
+        raise ValueError("Exact-two dataset manifest is missing design_file_sha256")
+    actual_file_hash = file_hash(design_path)
+    if actual_file_hash != expected_file_hash:
+        raise ValueError("Exact-two design.jsonl hash does not match its manifest")
+    design_rows: list[dict[str, Any]] = []
+    with design_path.open("r", encoding="utf-8") as stream:
+        for line_no, line in enumerate(stream, 1):
+            if not line.strip():
+                continue
+            try:
+                design = json.loads(line)
+            except json.JSONDecodeError as exc:
+                raise ValueError(f"Invalid exact-two design JSONL at line {line_no}") from exc
+            if not isinstance(design, dict):
+                raise ValueError(f"Exact-two design row {line_no} is not an object")
+            design_rows.append(design)
+    declared_design_count = data_manifest.get("design_row_count")
+    if declared_design_count is not None and int(declared_design_count) != len(design_rows):
+        raise ValueError("Exact-two design_row_count does not match design.jsonl")
+    expected_design_hash = data_manifest.get("design_sha256")
+    # ``design_sha256`` is part of the versioned dataset contract and is
+    # produced by ``powernext_v3.dataset.digest``.  That digest canonicalizes
+    # floating-point values before JSON serialization; using the training
+    # artifact digest here would reject otherwise valid augmented design files
+    # whose JSON carries more than 15 significant digits.  Keep the raw file
+    # SHA check above as the byte-level immutability guard.
+    if not isinstance(expected_design_hash, str) or expected_design_hash != _dataset_digest(design_rows):
+        raise ValueError("Exact-two design content hash does not match its manifest")
+    result: dict[str, tuple[int, int]] = {}
+    for index, design in enumerate(design_rows):
+        row_id = design.get("row_id")
+        if not row_id or str(row_id) in result:
+            raise ValueError(f"Exact-two design row {index} has a missing or duplicate row_id")
+        front = design.get("front_network_module_count")
+        tail = design.get("tail_network_module_count")
+        if any(isinstance(value, bool) or not isinstance(value, (int, float)) or int(value) != value for value in (front, tail)):
+            raise ValueError(f"Exact-two design row {index} has invalid branch module counts")
+        result[str(row_id)] = (int(front), int(tail))
+    return result
+
+
+def _validate_exact_two_rows(
+    rows: Sequence[Mapping[str, Any]],
+    data_manifest: Mapping[str, Any],
+    *,
+    design_counts: Mapping[str, tuple[int, int]] | None = None,
+) -> None:
+    """Validate exact-two S/P recipes from row configuration trees.
+
+    The manifest is necessary provenance, but it is not evidence that every
+    row obeys the scope.  For the exact-two dataset, parse both actual trees
+    with the canonical network validator and compare their leaf counts with
+    the declared row fields.  This is deliberately performed while loading,
+    before split assignment or estimator fitting.
+    """
+
+    if _training_dataset_scope(data_manifest) is None:
+        return
+    from .networks import NetworkValidationError, canonicalize
+
+    failures: list[str] = []
+    for index, row in enumerate(rows):
+        configuration = row.get("configuration")
+        if not isinstance(configuration, Mapping):
+            failures.append(f"row {index}: missing configuration")
+            continue
+        for branch in ("front", "tail"):
+            field = f"{branch}_network_module_count"
+            tree_key = f"{branch}_network"
+            declared = row.get(field)
+            row_id = row.get("row_id")
+            design_declared = None
+            if design_counts is not None:
+                design_declared = design_counts.get(str(row_id)) if row_id is not None else None
+                if design_declared is None:
+                    failures.append(f"row {index}: row_id is absent from design declarations")
+                    continue
+                design_value = design_declared[0 if branch == "front" else 1]
+                if declared is not None and declared != design_value:
+                    failures.append(f"row {index}: {field} disagrees with design declaration")
+                    continue
+                declared = design_value
+            if isinstance(declared, bool) or not isinstance(declared, (int, float)) or int(declared) != declared:
+                failures.append(f"row {index}: {field} is not an integer count")
+                continue
+            if int(declared) != 2:
+                failures.append(f"row {index}: {field}={declared!r}, expected 2")
+                continue
+            tree = configuration.get(tree_key)
+            try:
+                canonical = canonicalize(tree)
+            except (NetworkValidationError, TypeError, ValueError) as exc:
+                failures.append(f"row {index}: invalid {tree_key}: {exc}")
+                continue
+            if canonical.get("op") not in {"S", "P"}:
+                failures.append(f"row {index}: {tree_key} must be an S/P tree")
+                continue
+
+            def leaf_count(node: Mapping[str, Any]) -> int:
+                if node.get("op") == "R":
+                    return 1
+                return sum(leaf_count(child) for child in node.get("children", ()))
+
+            actual = leaf_count(canonical)
+            if actual != 2:
+                failures.append(f"row {index}: {tree_key} has {actual} leaves, expected 2")
+    if failures:
+        preview = "; ".join(failures[:8])
+        suffix = "" if len(failures) <= 8 else f"; ... ({len(failures)} failures)"
+        raise ValueError("Exact-two row validation failed: " + preview + suffix)
 
 
 def _route(row: Mapping[str, Any]) -> tuple[str | None, str | None, str | None]:
@@ -164,6 +358,9 @@ def load_rows(data_dir: str | Path) -> tuple[list[dict[str, Any]], dict[str, Any
     declared_count = manifest.get("row_count")
     if declared_count is not None and int(declared_count) != len(rows):
         raise ValueError("Dataset row_count does not match rows.jsonl")
+    exact_scope = _training_dataset_scope(manifest)
+    design_counts = _exact_two_design_counts(rows_path, manifest) if exact_scope is not None else None
+    _validate_exact_two_rows(rows, manifest, design_counts=design_counts)
     manifest = dict(manifest, rows_sha256=actual_rows_hash, row_count=len(rows), data_path=str(rows_path.resolve()), manifest_sha256=manifest_file_hash)
     return rows, manifest
 
@@ -1202,6 +1399,7 @@ def _route_provenance(
     *,
     optimization_validation_hook: Callable | None = None,
     optimization_oracles: str | Path | None = None,
+    training_dataset_scope: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     from .physics import source_fingerprint as physics_fingerprint
 
@@ -1218,6 +1416,10 @@ def _route_provenance(
         "registry_code_sha256": file_hash(root / "registry.py"),
         "runtime": runtime_versions(),
     }
+    if training_dataset_scope is None:
+        training_dataset_scope = _training_dataset_scope(data_manifest)
+    if training_dataset_scope is not None:
+        result["training_dataset_scope"] = dict(training_dataset_scope)
     result.update(_hook_provenance(optimization_validation_hook, optimization_oracles))
     return result
 
@@ -1258,6 +1460,7 @@ def train(
     eligible_rows = [row for row in rows_all if _eligible(row)]
     if not eligible_rows:
         raise ValueError("Dataset contains no eligible labelled rows")
+    training_dataset_scope = _training_dataset_scope(data_manifest)
     if output_dir is None:
         stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
         output = Path(__file__).resolve().parent.parent / "powernext" / "ml" / "results" / f"networks_v3_{stamp}"
@@ -1265,7 +1468,7 @@ def train(
         output = Path(output_dir)
     if output.exists():
         raise FileExistsError(f"Versioned results directory exists: {output}")
-    registry = Path(registry_dir) if registry_dir is not None else Path(__file__).resolve().parent.parent / "powernext" / "ml" / "registry" / "networks_v3"
+    registry = Path(registry_dir) if registry_dir is not None else Path(__file__).resolve().parent.parent / "powernext" / "ml" / "registry" / "networks_exact2_v5"
     # Validate all explicit split identities before deduplication so a
     # repeated response shape cannot hide a train/validation crossing.
     original_assignments = assign_splits(eligible_rows, seed=seed)
@@ -1300,6 +1503,7 @@ def train(
         data_manifest,
         optimization_validation_hook=optimization_validation_hook,
         optimization_oracles=optimization_oracles,
+        training_dataset_scope=training_dataset_scope,
     )
     _progress(
         f"dataset loaded rows={len(rows_all)} eligible={len(eligible_rows)} canonical={len(rows)} "
@@ -1424,6 +1628,8 @@ def train(
         _progress(f"route={route_id} complete selected={best['formulation']}/{best['family']} model={best['model_id']}")
     result_status = "COMPLETE_FIXTURE" if fixture else "COMPLETE"
     result = dict(schema_version="ml_results_v3", status=result_status, scope=scope, data_manifest=data_manifest, provenance=provenance, deduplication=deduplication, routes=route_results, selected_models=selected_models)
+    if training_dataset_scope is not None:
+        result["training_dataset_scope"] = dict(training_dataset_scope)
     _json_write(output / "results.json", result)
     _json_write(output / "selections.json", selections)
     _json_write(output / "selected_models.json", selected_models)
@@ -1444,6 +1650,8 @@ def train(
         load_seconds=load_elapsed,
         load_rows_per_second=float(len(rows_all) / load_elapsed) if load_elapsed > 0 else None,
     )
+    if training_dataset_scope is not None:
+        run_manifest["training_dataset_scope"] = dict(training_dataset_scope)
     _json_write(output / "run_manifest.json", run_manifest)
     _progress(f"run complete routes={len(route_results)} output={output}")
     return result

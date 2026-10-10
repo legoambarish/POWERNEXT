@@ -1,0 +1,20 @@
+{
+  "scope": "EXACTLY_TWO_RESISTORS_EACH_FRONT_AND_TAIL_SERIES_OR_PARALLEL",
+  "domain_routes": 8,
+  "candidate_approaches": [
+    "physics_guided_extra_trees",
+    "physics_guided_hist_gradient_boosting",
+    "residual_extra_trees",
+    "residual_hist_gradient_boosting"
+  ],
+  "recipes_each_branch": 42,
+  "pairs_each_stage": 1764,
+  "all_stage_candidates": 24696,
+  "validation_request_seed": 20261201,
+  "final_test_request_seed": 20261202,
+  "selection_partition": "validation_only",
+  "historical_test_qualification": "Previously inspected held-out rows are regression evidence; fresh request tests and new grouped supplemental test rows are separate.",
+  "numerical_contract": "UNCHANGED_VALIDATED_PHYSICS",
+  "accuracy_gate": "Select using existing predeclared validation objective and independent optimization retention/regret; never use final tests for enrichment or selection; detailed Physics verifies final candidate conformity.",
+  "hardware_validation": false
+}

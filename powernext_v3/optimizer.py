@@ -21,8 +21,8 @@ from .catalog import Catalog
 from .physics import derive, simulate, scale_response, source_fingerprint
 from .profiles import get_profile
 
-REGISTRY = ROOT / "powernext/ml/registry/networks_v3"
-SELECTION = ROOT / "powernext/ml/results/networks_v3/selected_models.json"
+REGISTRY = ROOT / "powernext/ml/registry/networks_exact2_v5"
+SELECTION = ROOT / "powernext/ml/results/networks_exact2_v5/selected_models.json"
 
 
 def _digest(value):
@@ -32,7 +32,7 @@ def _digest(value):
 def normalize_request(raw):
     if not isinstance(raw,dict):raise ValueError("Request must be an object")
     allowed={"schema_version","request_id","domain_id","impulse_type","topology_id","target_crest_V","setup","polarity",
-        "max_modules","stages","search_mode","priority","max_ml_candidates","max_physics_evaluations","budget_seconds",
+        "min_modules","max_modules","stages","search_mode","priority","max_ml_candidates","max_physics_evaluations","budget_seconds",
         "alternatives","inventory","assumptions","charge_min_V","charge_step_V","charge_grid_origin_V"}
     unknown=set(raw)-allowed
     if unknown:raise ValueError("Unknown request fields: "+", ".join(sorted(unknown)))
@@ -43,7 +43,8 @@ def normalize_request(raw):
     q.setdefault("domain_id","cpri_0p5uf")
     q.setdefault("topology_id","GSHUNT_v0")
     q.setdefault("polarity",1)
-    q.setdefault("max_modules",4)
+    q.setdefault("max_modules",2)
+    q.setdefault("min_modules",2)
     q.setdefault("search_mode","adaptive")
     q.setdefault("priority","combined")
     q.setdefault("max_ml_candidates",65536)
@@ -64,7 +65,7 @@ def normalize_request(raw):
     if not isinstance(q["request_id"],str) or len(q["request_id"])>200:raise ValueError("Invalid request_id")
     if not isinstance(q["assumptions"],list) or any(not isinstance(x,str) for x in q["assumptions"]):raise ValueError("Assumptions must be text list")
     p=get_profile(q["domain_id"])
-    catalog=Catalog(q["max_modules"],q.get("stages"))
+    catalog=Catalog(q["max_modules"],q.get("stages"),min_modules=q["min_modules"])
     q["stages"]=list(catalog.stages)
     probe=dict(impulse_type=q.get("impulse_type"),stages=catalog.stages[0],stage_charge_V=100000.,
         front_per_stage_ohm=30.,tail_per_stage_ohm=180.,topology_id=q["topology_id"],polarity=q["polarity"])
@@ -125,6 +126,10 @@ def load_predictor(request, registry=None, selection=None):
     if not isinstance(identifier,str) or Path(identifier).name!=identifier:raise ValueError("Invalid model identifier")
     expected=dict(domain_id=request["domain_id"],mode=request["impulse_type"],topology=request["topology_id"])
     model,card=load_model_cached(Path(registry or REGISTRY)/identifier,expected_route=expected)
+    if request.get("min_modules",2) == request.get("max_modules",2) == 2:
+        scope=card.get("provenance",{}).get("training_dataset_scope",{})
+        if scope.get("scope_contract") != "EXACT_MODULES_PER_BRANCH_V5" or scope.get("exact_modules_per_branch") != 2:
+            raise ValueError("Final exact-two serving requires an independently trained exact-two model artifact")
     return model,card
 
 

@@ -44,8 +44,12 @@ PREDICTION_SCHEMA = "network_prediction_v3"
 REFERENCE_SCHEMA = "network_reference_comparison_v3"
 _ID_RE = re.compile(r"^(?:v3|pred_v3)_[a-f0-9]{20}$")
 _LOAD_FEATURE_UNSUPPORTED = "L0 feature baseline does not support load_resistance_ohm; use the physics route"
-PUBLIC_MAX_MODULES = 3
-PUBLIC_MODULE_OPTIONS = (2, 3)
+# The live product is intentionally fixed to exactly two resistor modules per
+# branch.  ``networks.py`` and the historical catalog still retain the
+# one-through-four-module synthesis space for archival replay; this boundary
+# is where the active product scope is enforced.
+PUBLIC_MAX_MODULES = 2
+PUBLIC_MODULE_OPTIONS = (2,)
 UNSUPPORTED_CURRENT_SCOPE = "UNSUPPORTED_CURRENT_SCOPE"
 
 
@@ -83,27 +87,25 @@ def _network_module_count(tree: Mapping[str, Any]) -> int:
 def normalize_public_request(raw: Mapping[str, Any]) -> tuple[dict[str, Any], Any]:
     """Normalize a request at the active application/CLI scope boundary.
 
-    The low-level catalogue still supports its historical four-module space.
-    The live application and CLI default to three and reject explicit four-module
-    requests before a job or result artifact can be created.
+    The low-level catalogue still supports its historical one-through-four
+    module space.  The live application and CLI require exactly two modules
+    per front and tail branch, rejecting single-part, three-module, and
+    four-module requests before a job or result artifact can be created.
     """
 
     if not isinstance(raw, Mapping):
         raise ValueError("Request must be an object")
     value = dict(raw)
-    if "max_modules" not in value:
-        value["max_modules"] = PUBLIC_MAX_MODULES
-    requested = value.get("max_modules")
-    if not isinstance(requested, bool) and isinstance(requested, (int, float, np.number)):
-        try:
-            too_large = math.isfinite(float(requested)) and float(requested) > PUBLIC_MAX_MODULES
-        except (TypeError, ValueError, OverflowError):
-            too_large = False
-        if too_large:
+    value.setdefault("min_modules", PUBLIC_MAX_MODULES)
+    value.setdefault("max_modules", PUBLIC_MAX_MODULES)
+    for name in ("min_modules", "max_modules"):
+        requested = value.get(name)
+        if type(requested) is int and requested != PUBLIC_MAX_MODULES:
             raise ValueError(
-                f"{UNSUPPORTED_CURRENT_SCOPE}: max_modules={requested!r} exceeds the current active limit of "
-                f"{PUBLIC_MAX_MODULES}; supported UI selections are 2 or 3 modules (single-part recipes are included). "
-                "Historical four-module network, Physics and model artifacts are retained but unavailable at this public boundary.",
+                f"{UNSUPPORTED_CURRENT_SCOPE}: {name}={requested!r} is outside the active exact-two scope; "
+                "the public product requires exactly 2 resistor modules in both the front and tail branches. "
+                "Single-part, three-module, and four-module historical artifacts remain retained only for "
+                "low-level replay.",
             )
     return normalize_request(value)
 
@@ -153,6 +155,7 @@ def _default_request() -> dict[str, Any]:
             "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
             "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
         },
+        "min_modules": PUBLIC_MAX_MODULES,
         "max_modules": PUBLIC_MAX_MODULES,
         "stages": list(range(2, 16)),
         "search_mode": "adaptive",
@@ -238,8 +241,10 @@ class V3Application:
             "offline": True,
             "hardware_control": False,
             "components_ohm": list(COMPONENTS),
+            "min_modules": PUBLIC_MAX_MODULES,
             "max_modules": PUBLIC_MAX_MODULES,
             "supported_module_bounds": list(PUBLIC_MODULE_OPTIONS),
+            "network_scope": "EXACTLY_TWO_MODULES_PER_BRANCH",
             "profiles": [profile.as_dict() for profile in PROFILES.values()],
             "default_request": self.default_request(),
             "model_routes": self._model_routes(),
@@ -550,32 +555,26 @@ class V3Application:
         configuration.setdefault("impulse_type", request["impulse_type"])
         configuration.setdefault("topology_id", request["topology_id"])
         configuration.setdefault("polarity", request["polarity"])
-        if "front_network" in configuration:
-            configuration["front_network"] = canonicalize(configuration["front_network"])
-            front_count = _network_module_count(configuration["front_network"])
-            if front_count > min(PUBLIC_MAX_MODULES, request["max_modules"]):
+        for branch in ("front_network", "tail_network"):
+            if branch not in configuration:
                 raise ValueError(
-                    f"{UNSUPPORTED_CURRENT_SCOPE}: front_network uses {front_count} resistor modules; "
-                    f"the current fixed-recipe scope supports at most {min(PUBLIC_MAX_MODULES, request['max_modules'])}. "
-                    "Historical four-module trees remain available only in retained low-level artifacts.",
+                    f"{UNSUPPORTED_CURRENT_SCOPE}: fixed prediction requires an exactly-two-resistor "
+                    f"{branch} S/P tree; single-part and historical three-/four-module trees are unavailable."
                 )
-            front = float(equivalent_resistance(configuration["front_network"]))
-            if "front_per_stage_ohm" in configuration and not math.isclose(float(configuration["front_per_stage_ohm"]), front, rel_tol=1e-12, abs_tol=0.0):
-                raise ValueError("front_per_stage_ohm disagrees with front_network")
-            configuration["front_per_stage_ohm"] = front
-        if "tail_network" in configuration:
-            configuration["tail_network"] = canonicalize(configuration["tail_network"])
-            tail_count = _network_module_count(configuration["tail_network"])
-            if tail_count > min(PUBLIC_MAX_MODULES, request["max_modules"]):
+            configuration[branch] = canonicalize(configuration[branch])
+            count = _network_module_count(configuration[branch])
+            if count != PUBLIC_MAX_MODULES:
                 raise ValueError(
-                    f"{UNSUPPORTED_CURRENT_SCOPE}: tail_network uses {tail_count} resistor modules; "
-                    f"the current fixed-recipe scope supports at most {min(PUBLIC_MAX_MODULES, request['max_modules'])}. "
-                    "Historical four-module trees remain available only in retained low-level artifacts.",
+                    f"{UNSUPPORTED_CURRENT_SCOPE}: {branch} uses {count} resistor modules; "
+                    "the public fixed-recipe scope requires exactly 2 in both the front and tail branches. "
+                    "Single-part, three-module, and four-module historical trees remain available only in "
+                    "retained low-level artifacts."
                 )
-            tail = float(equivalent_resistance(configuration["tail_network"]))
-            if "tail_per_stage_ohm" in configuration and not math.isclose(float(configuration["tail_per_stage_ohm"]), tail, rel_tol=1e-12, abs_tol=0.0):
-                raise ValueError("tail_per_stage_ohm disagrees with tail_network")
-            configuration["tail_per_stage_ohm"] = tail
+            equivalent = float(equivalent_resistance(configuration[branch]))
+            key = "front_per_stage_ohm" if branch == "front_network" else "tail_per_stage_ohm"
+            if key in configuration and not math.isclose(float(configuration[key]), equivalent, rel_tol=1e-12, abs_tol=0.0):
+                raise ValueError(f"{key} disagrees with {branch}")
+            configuration[key] = equivalent
         for name in ("stages", "stage_charge_V", "front_per_stage_ohm", "tail_per_stage_ohm"):
             if name not in configuration:
                 raise ValueError(f"Fixed prediction requires {name}")

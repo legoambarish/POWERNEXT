@@ -1,6 +1,6 @@
 # PowerNext — offline impulse engineering workbench
 
-Current implementation: **3.0.0+networks20261010**. The Network optimizer uses
+Current implementation: **3.2.0+exact2_20261010**. The Network optimizer uses
 route-specific ML to prioritize bounded resistor-network configurations, then
 verifies recommendations with the detailed RLC Physics engine. The original
 recommendation, rapid-discovery and waveform-evidence workspaces remain available.
@@ -27,7 +27,7 @@ an implementation or a fallback smoke test alone is not release acceptance.
 
 - **Network optimizer:** choose CPRI 0.5 uF or the separate research 3 uF profile,
   LI or SI, explicit requested impulse crest, and a fixed electrical setup.
-  Select up-to-two or up-to-three modules per front/tail branch from
+  Use exactly two resistors in EACH front and tail branch, in series or parallel, from
   30, 46, 180, 520, 3700 and 5000 ohms. All active stages use the same recipes.
   Results show exact composition, component demand, charge, individual conformity,
   ML predictions, detailed Physics and search coverage.
@@ -38,10 +38,7 @@ an implementation or a fallback smoke test alone is not release acceptance.
   scenario discovery, waveform review, history and evidence export. Their
   historical models and source contracts remain separate from v3.
 
-The supported three-module catalog has 412 physical recipes and 407 exact
-resistance groups per branch: 2,319,086 electrical configurations across stages
-2–15. Two-module mode has 48 recipes/groups and 32,256 configurations over the
-same stages. Each mode includes simpler networks.
+The final catalog contains 42 physical recipes and 42 exact resistance groups per branch: 21 series pairs and 21 parallel pairs. It jointly explores 1,764 front/tail pairings per stage and 24,696 configurations across stages 2–15. Singles, three-part and four-part recipes are excluded from final training and public optimization. There is one fixed network scope, with no module-count selector.
 The controller indexes and streams this space. Small catalogs use complete
 Physics verification; bounded large searches report partial coverage and the
 best verified candidate found. They do not establish a global optimum or prove
@@ -51,18 +48,12 @@ that an unexplored catalog has no solution. Failed diagnostics are marked
 Eight ML routes keep capacitance domain, impulse type and topology separate.
 Each compares Physics-guided and residual formulations using ExtraTrees and
 HistGradientBoosting. The serving selection is
-`powernext/ml/results/networks_v3/selected_models.json`; versioned cards and
-binaries are in `powernext/ml/registry/networks_v3/`. Detailed Physics remains the
+`powernext/ml/results/networks_exact2_v5/selected_models.json`; versioned cards and
+binaries are in `powernext/ml/registry/networks_exact2_v5/`. Detailed Physics remains the
 final authority for simulated conformity. Missing/incompatible models and
 unsupported ML inputs produce explicit fallback/support status.
 
-The supported scope was revised to two/three modules after the initial dataset
-and model training completed. Existing models were trained on electrical shapes
-from one through four modules; those immutable artifacts are preserved and this
-provenance is disclosed. Four-module application work and further data generation
-or training are stopped. See the [scope revision](docs/PHASE_B_SCOPE_REVISION.md)
-and [model evaluation](docs/PHASE_B_MODEL_REPORT.md). No dedicated two/three-only
-retraining is implied by restricting the application's search scope.
+The earlier one-through-four-module datasets and models remain historical artifacts. The final exact-two dataset reuses valid original Physics records and adds balanced front/tail coverage with independent split groups. The four agreed approaches are compared separately for all eight routes. Model selection uses validation accuracy and independent optimization cases; final tests are evaluated after selection. Current completion status is recorded in [Phase B acceptance](docs/PHASE_B_ACCEPTANCE.md). The independent [two-versus-three waveform comparison](docs/TWO_VS_THREE_PRELIMINARY.md) is separate from final training.
 
 ## Evidence and limits
 
@@ -98,7 +89,7 @@ preserved as rollback artifacts. The new release uses a separate name and
 manifest. Training corpora, rejected attempts, pilots, validation oracles and
 unselected models are reproducibility artifacts; the portable package excludes
 new corpora and includes all eight selected routes. Large JSONL and model files
-use the repository's Git LFS rules. No remote push is part of this work.
+use the repository's Git LFS rules. Completed code and reproducibility artifacts are published to the authorized repository branch; release acceptance is recorded separately.
 
 `data/` holds writable local evidence. Stop the server before moving the whole
 application folder, and retain that directory to preserve saved runs. Never

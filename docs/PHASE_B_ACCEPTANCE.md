@@ -1,5 +1,9 @@
 # Phase B completion gates
 
+**Current gate: EXACTLY TWO resistors on EACH front and tail branch.** The historical table below records the completed 1–4 dataset/model campaign and prior scope, not acceptance of the new exact-two release. New data, 32 fits, eight selected models, exact-two joint search, fresh benchmarks and extracted release acceptance must all pass before final completion. Active paths are `networks_exact2_v5`; original and intermediate artifacts remain historical.
+
+New exact-two acceptance evidence is collected under `evidence/exact2_v5`.
+
 This is a completion ledger, not a claim that pending items have passed.
 The full approved scope remains active until every required deliverable has
 current evidence. The original accepted release and its ZIP are unchanged.

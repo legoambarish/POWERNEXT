@@ -1,0 +1,1925 @@
+{
+  "status": "PASS",
+  "raw_rows": 78244,
+  "eligible_rows": 66682,
+  "canonical_rows": 66244,
+  "dataset_id": "networks_exact2_v5_aug1_936a80511a31",
+  "dataset_rows_sha256": "57145d51b3a7d7e7b5e0e165c68bee53cbc074e367619bc2b8bd148b73ddf3eb",
+  "results_sha256": "9aa7e4fd2e04eaf4d2879b11a4293fbd5a933ebe40f1089e25057b2d80fad9af",
+  "exact_two_catalog": {
+    "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+    "min_modules_per_branch": 2,
+    "max_modules_per_branch": 2,
+    "network_scope": "EXACTLY_TWO_SERIES_OR_PARALLEL",
+    "uniform_stages": true,
+    "recipes_per_branch": 42,
+    "distinct_resistances_per_branch": 42,
+    "theoretical_recipe_configurations": 24696,
+    "distinct_response_candidates": 24696,
+    "stages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "catalog_sha256": "499a8733ed499760b72428c0de2ec364a0148c856bfbd2e5f8eb2e5a0d392efa",
+    "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED"
+  },
+  "deduplication": {
+    "input_eligible_rows": 66682,
+    "canonical_rows": 66244,
+    "duplicates_removed": 438,
+    "duplicate_group_count": 77,
+    "unkeyed_rows_retained": 0,
+    "label_tolerance": {
+      "rtol": 1e-08,
+      "atol": {
+        "gain": 1e-10,
+        "front_us": 1e-07,
+        "tail_us": 1e-05
+      }
+    },
+    "canonical_policy": "lexicographically_smallest_row_id_per_route_response_group_key",
+    "duplicates_removed_by_route": {
+      "cpri_0p5uf:LI:GSHUNT_v0": 54,
+      "cpri_0p5uf:LI:OSHUNT_v0": 81,
+      "cpri_0p5uf:SI:GSHUNT_v0": 47,
+      "cpri_0p5uf:SI:OSHUNT_v0": 49,
+      "research_3uf:LI:GSHUNT_v0": 81,
+      "research_3uf:LI:OSHUNT_v0": 84,
+      "research_3uf:SI:GSHUNT_v0": 36,
+      "research_3uf:SI:OSHUNT_v0": 6
+    },
+    "duplicate_groups_by_route": {
+      "cpri_0p5uf:LI:GSHUNT_v0": 12,
+      "cpri_0p5uf:LI:OSHUNT_v0": 14,
+      "cpri_0p5uf:SI:GSHUNT_v0": 5,
+      "cpri_0p5uf:SI:OSHUNT_v0": 6,
+      "research_3uf:LI:GSHUNT_v0": 12,
+      "research_3uf:LI:OSHUNT_v0": 21,
+      "research_3uf:SI:GSHUNT_v0": 2,
+      "research_3uf:SI:OSHUNT_v0": 5
+    }
+  },
+  "routes": [
+    {
+      "route": "cpri_0p5uf:LI:GSHUNT_v0",
+      "counts": {
+        "train": 5275,
+        "test": 1860,
+        "validation": 1778
+      },
+      "setup_family_counts": {
+        "train": 338,
+        "test": 71,
+        "validation": 61
+      },
+      "selected_model_id": "model_b93a212a9e99fc3b67ca",
+      "selected_formulation": "residual",
+      "selected_family": "extra_trees",
+      "held_out_metrics": {
+        "gain": {
+          "MAE": 0.001770338112682163,
+          "P95_absolute_error": 0.009646996429368957,
+          "RMSE": 0.006774446645501793,
+          "max_absolute_error": 0.11802857701888303,
+          "tolerance_normalized_MAE": 0.07271792066043009,
+          "tolerance_normalized_P95": 0.40410758339528857
+        },
+        "front_us": {
+          "MAE": 0.0540362717670876,
+          "P95_absolute_error": 0.22148906341124494,
+          "RMSE": 0.1026147303634247,
+          "max_absolute_error": 0.7153963041910103,
+          "tolerance_normalized_MAE": 0.15010075490857666,
+          "tolerance_normalized_P95": 0.6152473983645692
+        },
+        "tail_us": {
+          "MAE": 0.8323073079534461,
+          "P95_absolute_error": 4.530563840708137,
+          "RMSE": 3.4382995003767145,
+          "max_absolute_error": 71.73020750847627,
+          "tolerance_normalized_MAE": 0.08323073079534461,
+          "tolerance_normalized_P95": 0.45305638407081367
+        },
+        "n": 1860,
+        "ood_count": 3
+      },
+      "actual_fixed_prediction": {
+        "status": "ML_PREDICTION",
+        "source": "VERSIONED_ROUTE_MODEL",
+        "model_id": "model_b93a212a9e99fc3b67ca",
+        "gain": 0.6001190596615924,
+        "front_us": 8.329388332752908,
+        "tail_us": 43.120689833279506,
+        "crest_V": 420083.3417631147,
+        "ml_ood": false
+      },
+      "actual_physics": {
+        "schema_version": "physics_networks_v3",
+        "model_version": "3.0.0",
+        "domain_id": "cpri_0p5uf",
+        "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+        "topology_id": "GSHUNT_v0",
+        "inputs": {
+          "configuration": {
+            "front_network": {
+              "op": "S",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 30
+                },
+                {
+                  "op": "R",
+                  "ohm": 30
+                }
+              ]
+            },
+            "front_per_stage_ohm": 60.0,
+            "impulse_type": "LI",
+            "polarity": -1,
+            "stage_charge_V": 100000.0,
+            "stages": 7,
+            "tail_network": {
+              "op": "S",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 30
+                },
+                {
+                  "op": "R",
+                  "ohm": 30
+                }
+              ]
+            },
+            "tail_per_stage_ohm": 60.0,
+            "topology_id": "GSHUNT_v0"
+          },
+          "setup": {
+            "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+            "basic_coverage_assumption": "INCLUDED_IN_OTHER_COMPONENTS",
+            "divider_capacitance_F": 3e-09,
+            "dut_capacitance_F": 1e-08,
+            "load_resistance_ohm": null,
+            "loop_inductance_H": 0.00012,
+            "loop_resistance_ohm": 20.0,
+            "setup_id": "V3_SETUP_00005",
+            "stray_capacitance_F": 1e-09
+          },
+          "domain_id": "cpri_0p5uf"
+        },
+        "derived": {
+          "Cg_F": 7.142857142857142e-08,
+          "CL_F": 1.4000000000000001e-08,
+          "Rf_total_ohm": 440.0,
+          "Rt_total_ohm": 420.0,
+          "U0_V": -700000.0,
+          "stage_capacitance_F": 5e-07,
+          "stage_energy_J": 2500.0,
+          "profile": {
+            "domain_id": "cpri_0p5uf",
+            "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+            "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+            "stage_capacitance_F": 5e-07,
+            "stage_charge_max_V": 200000.0,
+            "stage_energy_max_J": 10000.0,
+            "total_energy_max_J": 150000.0,
+            "stages_min": 2,
+            "stages_max": 15,
+            "summed_charge_max_V": 3000000.0,
+            "basic_load_capacitance_F": 4.8e-10,
+            "hardware_verified": false,
+            "research_only": false,
+            "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS"
+          }
+        },
+        "input_sha256": "2a377ffdd0301e0db2e8bfb5635240b5c111a1fa1e3aa22db913043d7f1aa7d3",
+        "metrics": {
+          "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+          "evaluation_curve_id": "raw_clean",
+          "interpolation": "PCHIP",
+          "standards_certified": false,
+          "polarity": -1,
+          "baseline_V": 0.0,
+          "raw_crest_magnitude_V": 419720.23588427855,
+          "raw_signed_crest_V": -419720.23588427855,
+          "crest_magnitude_V": 419720.23588427855,
+          "t_peak_s": 1.1425930971278498e-05,
+          "T1_s": 8.521170087093617e-06,
+          "Tp_s": null,
+          "T2_s": 4.317503550086352e-05,
+          "t30_s": 1.5030776710600424e-06,
+          "t90_s": 6.6157797233162114e-06,
+          "t50_falling_s": 4.2121762145795475e-05,
+          "virtual_origin_s": -1.0532733550680427e-06,
+          "beginning_s": 0.0,
+          "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+          "compliance_status": "FAIL",
+          "reasons": [],
+          "checks": {
+            "front_or_peak": false,
+            "tail": true,
+            "crest": false
+          },
+          "deviation_pct": {
+            "front_or_peak_pct": 610.0975072578015,
+            "tail_pct": -13.649928998272964,
+            "crest_pct": -67.71382800890164
+          }
+        },
+        "numeric_status": "VALID",
+        "evidence_domain": "CPRI_PARAMETERS_PROVISIONAL_TOPOLOGY_SYNTHETIC",
+        "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+        "eligible_for_hardware_recommendation": false,
+        "hardware_reason_codes": [
+          "TOPOLOGY_UNCONFIRMED",
+          "MOUNTING_AND_INVENTORY_UNCONFIRMED",
+          "COMPONENT_PULSE_RATINGS_UNKNOWN",
+          "MIN_STAGE_CHARGE_UNKNOWN",
+          "AUXILIARY_BRANCH_STATE_UNCONFIRMED"
+        ],
+        "stored_energy_J": 17500.0,
+        "remaining_energy_J": 5.160793017412685e-07,
+        "integrated_loss_J": 17499.999920687562,
+        "energy_balance_relative_error": -4.5026490365022e-09,
+        "branch_loss_J": {
+          "Rt": 15058.687202812598,
+          "front_path": 2441.312717874961
+        },
+        "voltage_gain": 0.5996003369775408,
+        "front_current_peak_A": 1380.5704829094323,
+        "numerical_pass_is_not_IEC_certification": true,
+        "solver": {
+          "method": "linear_modal_v1",
+          "requested_method": "modal",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "t_end_s": 0.000444510184426969,
+          "sample_count": 1608
+        },
+        "assumptions": [
+          "Ideal simultaneous complete erection and equal uniform stages.",
+          "Purely resistive two-terminal networks; unmodeled connection parasitics and pulse ratings.",
+          "Linear capacitive DUT; no breakdown, corona or measurement transfer function.",
+          "Topology is a declared reduced-circuit hypothesis, not confirmed laboratory mounting.",
+          "Supplied 0.5 uF equipment limits apply."
+        ],
+        "application_status": "PHYSICS_VERIFIED"
+      },
+      "feature_order": [
+        "stages",
+        "front_per_stage_ohm",
+        "tail_per_stage_ohm",
+        "dut_nF",
+        "divider_nF",
+        "stray_nF",
+        "basic_additional_nF",
+        "loop_uH",
+        "loop_ohm",
+        "load_kohm",
+        "Cg_nF",
+        "CL_nF",
+        "Rf_ohm",
+        "Rt_ohm",
+        "CL_over_Cg",
+        "Rf_CL_us",
+        "Rt_Cg_us",
+        "LC_us",
+        "zero_L",
+        "baseline_gain",
+        "baseline_front_us",
+        "baseline_tail_us"
+      ]
+    },
+    {
+      "route": "cpri_0p5uf:LI:OSHUNT_v0",
+      "counts": {
+        "train": 5373,
+        "test": 1865,
+        "validation": 1805
+      },
+      "setup_family_counts": {
+        "train": 378,
+        "test": 70,
+        "validation": 82
+      },
+      "selected_model_id": "model_f61024e3ebff070740f2",
+      "selected_formulation": "residual",
+      "selected_family": "extra_trees",
+      "held_out_metrics": {
+        "gain": {
+          "MAE": 0.001123571313454965,
+          "P95_absolute_error": 0.006872769515667986,
+          "RMSE": 0.0032996984408445924,
+          "max_absolute_error": 0.05398799359294559,
+          "tolerance_normalized_MAE": 0.055949163890853255,
+          "tolerance_normalized_P95": 0.33019415474284636
+        },
+        "front_us": {
+          "MAE": 0.05505891635811406,
+          "P95_absolute_error": 0.2585075937584641,
+          "RMSE": 0.12119767674844764,
+          "max_absolute_error": 0.7736070155924217,
+          "tolerance_normalized_MAE": 0.1529414343280946,
+          "tolerance_normalized_P95": 0.7180766493290669
+        },
+        "tail_us": {
+          "MAE": 1.3712037858217982,
+          "P95_absolute_error": 6.092917289482011,
+          "RMSE": 5.875465014965472,
+          "max_absolute_error": 79.58423830810807,
+          "tolerance_normalized_MAE": 0.13712037858217985,
+          "tolerance_normalized_P95": 0.609291728948201
+        },
+        "n": 1865,
+        "ood_count": 11
+      },
+      "actual_fixed_prediction": {
+        "status": "ML_PREDICTION",
+        "source": "VERSIONED_ROUTE_MODEL",
+        "model_id": "model_f61024e3ebff070740f2",
+        "gain": 0.8507348653109927,
+        "front_us": 2.892571984554638,
+        "tail_us": 52.84652985372575,
+        "crest_V": 459396.8272679361,
+        "ml_ood": false
+      },
+      "actual_physics": {
+        "schema_version": "physics_networks_v3",
+        "model_version": "3.0.0",
+        "domain_id": "cpri_0p5uf",
+        "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+        "topology_id": "OSHUNT_v0",
+        "inputs": {
+          "configuration": {
+            "front_network": {
+              "op": "P",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 46
+                },
+                {
+                  "op": "R",
+                  "ohm": 46
+                }
+              ]
+            },
+            "front_per_stage_ohm": 23.0,
+            "impulse_type": "LI",
+            "polarity": 1,
+            "stage_charge_V": 180000.0,
+            "stages": 3,
+            "tail_network": {
+              "op": "P",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 180
+                },
+                {
+                  "op": "R",
+                  "ohm": 520
+                }
+              ]
+            },
+            "tail_per_stage_ohm": 133.71428571428572,
+            "topology_id": "OSHUNT_v0"
+          },
+          "setup": {
+            "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+            "basic_coverage_assumption": "INCLUDED_IN_OTHER_COMPONENTS",
+            "divider_capacitance_F": 3e-09,
+            "dut_capacitance_F": 1e-08,
+            "load_resistance_ohm": null,
+            "loop_inductance_H": 0.00012,
+            "loop_resistance_ohm": 20.0,
+            "setup_id": "V3_SETUP_100005",
+            "stray_capacitance_F": 1e-09
+          },
+          "domain_id": "cpri_0p5uf"
+        },
+        "derived": {
+          "Cg_F": 1.6666666666666665e-07,
+          "CL_F": 1.4000000000000001e-08,
+          "Rf_total_ohm": 89.0,
+          "Rt_total_ohm": 401.14285714285717,
+          "U0_V": 540000.0,
+          "stage_capacitance_F": 5e-07,
+          "stage_energy_J": 8100.0,
+          "profile": {
+            "domain_id": "cpri_0p5uf",
+            "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+            "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+            "stage_capacitance_F": 5e-07,
+            "stage_charge_max_V": 200000.0,
+            "stage_energy_max_J": 10000.0,
+            "total_energy_max_J": 150000.0,
+            "stages_min": 2,
+            "stages_max": 15,
+            "summed_charge_max_V": 3000000.0,
+            "basic_load_capacitance_F": 4.8e-10,
+            "hardware_verified": false,
+            "research_only": false,
+            "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS"
+          }
+        },
+        "input_sha256": "3d03e3258bc6e646ac45f36ace306a17b15bd2bfb78a4bbaca63e4b99e4a9d2e",
+        "metrics": {
+          "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+          "evaluation_curve_id": "raw_clean",
+          "interpolation": "PCHIP",
+          "standards_certified": false,
+          "polarity": 1,
+          "baseline_V": 0.0,
+          "raw_crest_magnitude_V": 468298.56292258744,
+          "raw_signed_crest_V": 468298.56292258744,
+          "crest_magnitude_V": 468298.56292258744,
+          "t_peak_s": 4.087575141249237e-06,
+          "T1_s": 2.9627213295253694e-06,
+          "Tp_s": null,
+          "T2_s": 5.108188519674597e-05,
+          "t30_s": 1.1418684053410005e-06,
+          "t90_s": 2.9195012030562222e-06,
+          "t50_falling_s": 5.133493720322936e-05,
+          "virtual_origin_s": 2.5305200648338977e-07,
+          "beginning_s": 0.0,
+          "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+          "compliance_status": "FAIL",
+          "reasons": [],
+          "checks": {
+            "front_or_peak": false,
+            "tail": true,
+            "crest": false
+          },
+          "deviation_pct": {
+            "front_or_peak_pct": 146.89344412711415,
+            "tail_pct": 2.1637703934919372,
+            "crest_pct": -70.73133981733828
+          }
+        },
+        "numeric_status": "VALID",
+        "evidence_domain": "CPRI_PARAMETERS_PROVISIONAL_TOPOLOGY_SYNTHETIC",
+        "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+        "eligible_for_hardware_recommendation": false,
+        "hardware_reason_codes": [
+          "TOPOLOGY_UNCONFIRMED",
+          "MOUNTING_AND_INVENTORY_UNCONFIRMED",
+          "COMPONENT_PULSE_RATINGS_UNKNOWN",
+          "MIN_STAGE_CHARGE_UNKNOWN",
+          "AUXILIARY_BRANCH_STATE_UNCONFIRMED"
+        ],
+        "stored_energy_J": 24299.999999999996,
+        "remaining_energy_J": 8.737823934235915e-07,
+        "integrated_loss_J": 24299.99983145233,
+        "energy_balance_relative_error": -6.9001599427201475e-09,
+        "branch_loss_J": {
+          "Rt": 18843.00209754546,
+          "front_path": 5456.997733906867
+        },
+        "voltage_gain": 0.8672195609677545,
+        "front_current_peak_A": 3240.9590805922503,
+        "numerical_pass_is_not_IEC_certification": true,
+        "solver": {
+          "method": "linear_modal_v1",
+          "requested_method": "modal",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "t_end_s": 0.0010334653637950864,
+          "sample_count": 1610
+        },
+        "assumptions": [
+          "Ideal simultaneous complete erection and equal uniform stages.",
+          "Purely resistive two-terminal networks; unmodeled connection parasitics and pulse ratings.",
+          "Linear capacitive DUT; no breakdown, corona or measurement transfer function.",
+          "Topology is a declared reduced-circuit hypothesis, not confirmed laboratory mounting.",
+          "Supplied 0.5 uF equipment limits apply."
+        ],
+        "application_status": "PHYSICS_VERIFIED"
+      },
+      "feature_order": [
+        "stages",
+        "front_per_stage_ohm",
+        "tail_per_stage_ohm",
+        "dut_nF",
+        "divider_nF",
+        "stray_nF",
+        "basic_additional_nF",
+        "loop_uH",
+        "loop_ohm",
+        "load_kohm",
+        "Cg_nF",
+        "CL_nF",
+        "Rf_ohm",
+        "Rt_ohm",
+        "CL_over_Cg",
+        "Rf_CL_us",
+        "Rt_Cg_us",
+        "LC_us",
+        "zero_L",
+        "baseline_gain",
+        "baseline_front_us",
+        "baseline_tail_us"
+      ]
+    },
+    {
+      "route": "cpri_0p5uf:SI:GSHUNT_v0",
+      "counts": {
+        "train": 5221,
+        "validation": 1793,
+        "test": 1884
+      },
+      "setup_family_counts": {
+        "train": 304,
+        "validation": 72,
+        "test": 72
+      },
+      "selected_model_id": "model_84fe522ca453b26ee7c8",
+      "selected_formulation": "residual",
+      "selected_family": "hist_gradient_boosting",
+      "held_out_metrics": {
+        "gain": {
+          "MAE": 0.0028826489468017293,
+          "P95_absolute_error": 0.010861487343232501,
+          "RMSE": 0.01387845141124433,
+          "max_absolute_error": 0.15762380996986414,
+          "tolerance_normalized_MAE": 0.11489015102675187,
+          "tolerance_normalized_P95": 0.508683645433181
+        },
+        "front_us": {
+          "MAE": 0.153778237388642,
+          "P95_absolute_error": 0.6859451270360115,
+          "RMSE": 0.3765133993790341,
+          "max_absolute_error": 3.7707595692536717,
+          "tolerance_normalized_MAE": 0.0030755647477728396,
+          "tolerance_normalized_P95": 0.013718902540720232
+        },
+        "tail_us": {
+          "MAE": 0.6138441014583195,
+          "P95_absolute_error": 2.8551792888378813,
+          "RMSE": 2.4805927979108917,
+          "max_absolute_error": 32.52181561613202,
+          "tolerance_normalized_MAE": 0.000409229400972213,
+          "tolerance_normalized_P95": 0.0019034528592252542
+        },
+        "n": 1884,
+        "ood_count": 16
+      },
+      "actual_fixed_prediction": {
+        "status": "ML_PREDICTION",
+        "source": "VERSIONED_ROUTE_MODEL",
+        "model_id": "model_84fe522ca453b26ee7c8",
+        "gain": 0.8091865479089746,
+        "front_us": 326.0123180097097,
+        "tail_us": 2542.7229179036967,
+        "crest_V": 971023.8574907695,
+        "ml_ood": false
+      },
+      "actual_physics": {
+        "schema_version": "physics_networks_v3",
+        "model_version": "3.0.0",
+        "domain_id": "cpri_0p5uf",
+        "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+        "topology_id": "GSHUNT_v0",
+        "inputs": {
+          "configuration": {
+            "front_network": {
+              "op": "P",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 3700
+                },
+                {
+                  "op": "R",
+                  "ohm": 3700
+                }
+              ]
+            },
+            "front_per_stage_ohm": 1850.0,
+            "impulse_type": "SI",
+            "polarity": 1,
+            "stage_charge_V": 100000.0,
+            "stages": 12,
+            "tail_network": {
+              "op": "S",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 520
+                },
+                {
+                  "op": "R",
+                  "ohm": 5000
+                }
+              ]
+            },
+            "tail_per_stage_ohm": 5520.0,
+            "topology_id": "GSHUNT_v0"
+          },
+          "setup": {
+            "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+            "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+            "divider_capacitance_F": 1.56468009774681e-09,
+            "dut_capacitance_F": 1.77168632785221e-09,
+            "load_resistance_ohm": null,
+            "loop_inductance_H": 4.31702823959326e-05,
+            "loop_resistance_ohm": 10.8188114542637,
+            "setup_id": "V3_SETUP_200036",
+            "stray_capacitance_F": 6.66394297490304e-10
+          },
+          "domain_id": "cpri_0p5uf"
+        },
+        "derived": {
+          "Cg_F": 4.166666666666666e-08,
+          "CL_F": 4.482760723089324e-09,
+          "Rf_total_ohm": 22210.818811454265,
+          "Rt_total_ohm": 66240.0,
+          "U0_V": 1200000.0,
+          "stage_capacitance_F": 5e-07,
+          "stage_energy_J": 2500.0,
+          "profile": {
+            "domain_id": "cpri_0p5uf",
+            "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+            "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+            "stage_capacitance_F": 5e-07,
+            "stage_charge_max_V": 200000.0,
+            "stage_energy_max_J": 10000.0,
+            "total_energy_max_J": 150000.0,
+            "stages_min": 2,
+            "stages_max": 15,
+            "summed_charge_max_V": 3000000.0,
+            "basic_load_capacitance_F": 4.8e-10,
+            "hardware_verified": false,
+            "research_only": false,
+            "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS"
+          }
+        },
+        "input_sha256": "42404073f64b41a22ed858d92cefa0e6bd303b1f16ed38f01e84c5c0fe332021",
+        "metrics": {
+          "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+          "evaluation_curve_id": "raw_clean",
+          "interpolation": "PCHIP",
+          "standards_certified": false,
+          "polarity": 1,
+          "baseline_V": 0.0,
+          "raw_crest_magnitude_V": 970987.8461374704,
+          "raw_signed_crest_V": 970987.8461374704,
+          "crest_magnitude_V": 970987.8461374704,
+          "t_peak_s": 0.0003260926820393648,
+          "T1_s": null,
+          "Tp_s": 0.0003260926820393648,
+          "T2_s": 0.0025428421364424377,
+          "t30_s": 2.832949326744886e-05,
+          "t90_s": 0.0001626659912009114,
+          "t50_falling_s": 0.0025428421364424377,
+          "virtual_origin_s": null,
+          "beginning_s": 0.0,
+          "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+          "compliance_status": "FAIL",
+          "reasons": [],
+          "checks": {
+            "front_or_peak": false,
+            "tail": true,
+            "crest": false
+          },
+          "deviation_pct": {
+            "front_or_peak_pct": 30.437072815745925,
+            "tail_pct": 1.7136854576975002,
+            "crest_pct": 142.74696153436764
+          }
+        },
+        "numeric_status": "VALID",
+        "evidence_domain": "CPRI_PARAMETERS_PROVISIONAL_TOPOLOGY_SYNTHETIC",
+        "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+        "eligible_for_hardware_recommendation": false,
+        "hardware_reason_codes": [
+          "TOPOLOGY_UNCONFIRMED",
+          "MOUNTING_AND_INVENTORY_UNCONFIRMED",
+          "COMPONENT_PULSE_RATINGS_UNKNOWN",
+          "MIN_STAGE_CHARGE_UNKNOWN",
+          "AUXILIARY_BRANCH_STATE_UNCONFIRMED"
+        ],
+        "stored_energy_J": 29999.999999999996,
+        "remaining_energy_J": 1.0157975381109004e-06,
+        "integrated_loss_J": 29999.99986542445,
+        "energy_balance_relative_error": -4.451991723423514e-09,
+        "branch_loss_J": {
+          "Rt": 27177.845458658827,
+          "front_path": 2822.1544067656196
+        },
+        "voltage_gain": 0.809156538447892,
+        "front_current_peak_A": 54.01597489701771,
+        "numerical_pass_is_not_IEC_certification": true,
+        "solver": {
+          "method": "linear_modal_v1",
+          "requested_method": "modal",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "t_end_s": 0.03680281804944432,
+          "sample_count": 1608
+        },
+        "assumptions": [
+          "Ideal simultaneous complete erection and equal uniform stages.",
+          "Purely resistive two-terminal networks; unmodeled connection parasitics and pulse ratings.",
+          "Linear capacitive DUT; no breakdown, corona or measurement transfer function.",
+          "Topology is a declared reduced-circuit hypothesis, not confirmed laboratory mounting.",
+          "Supplied 0.5 uF equipment limits apply."
+        ],
+        "application_status": "PHYSICS_VERIFIED"
+      },
+      "feature_order": [
+        "stages",
+        "front_per_stage_ohm",
+        "tail_per_stage_ohm",
+        "dut_nF",
+        "divider_nF",
+        "stray_nF",
+        "basic_additional_nF",
+        "loop_uH",
+        "loop_ohm",
+        "load_kohm",
+        "Cg_nF",
+        "CL_nF",
+        "Rf_ohm",
+        "Rt_ohm",
+        "CL_over_Cg",
+        "Rf_CL_us",
+        "Rt_Cg_us",
+        "LC_us",
+        "zero_L",
+        "baseline_gain",
+        "baseline_front_us",
+        "baseline_tail_us"
+      ]
+    },
+    {
+      "route": "cpri_0p5uf:SI:OSHUNT_v0",
+      "counts": {
+        "train": 5359,
+        "validation": 1795,
+        "test": 1878
+      },
+      "setup_family_counts": {
+        "train": 331,
+        "validation": 75,
+        "test": 68
+      },
+      "selected_model_id": "model_363a62ea485011c25683",
+      "selected_formulation": "residual",
+      "selected_family": "extra_trees",
+      "held_out_metrics": {
+        "gain": {
+          "MAE": 0.001549804738869309,
+          "P95_absolute_error": 0.00618000872603806,
+          "RMSE": 0.006370318796477513,
+          "max_absolute_error": 0.07539984404191058,
+          "tolerance_normalized_MAE": 0.08109184048434413,
+          "tolerance_normalized_P95": 0.3940964722203464
+        },
+        "front_us": {
+          "MAE": 0.18035859749322372,
+          "P95_absolute_error": 1.2046124873156976,
+          "RMSE": 0.4778602717109883,
+          "max_absolute_error": 3.0819299985573636,
+          "tolerance_normalized_MAE": 0.0036071719498644733,
+          "tolerance_normalized_P95": 0.02409224974631395
+        },
+        "tail_us": {
+          "MAE": 0.7568884624287939,
+          "P95_absolute_error": 3.91876487692089,
+          "RMSE": 3.319612673675559,
+          "max_absolute_error": 59.90882805453566,
+          "tolerance_normalized_MAE": 0.0005045923082858627,
+          "tolerance_normalized_P95": 0.00261250991794726
+        },
+        "n": 1878,
+        "ood_count": 14
+      },
+      "actual_fixed_prediction": {
+        "status": "ML_PREDICTION",
+        "source": "VERSIONED_ROUTE_MODEL",
+        "model_id": "model_363a62ea485011c25683",
+        "gain": 0.7392150431323508,
+        "front_us": 273.37687978908656,
+        "tail_us": 3610.462333562418,
+        "crest_V": 1463645.7854020544,
+        "ml_ood": false
+      },
+      "actual_physics": {
+        "schema_version": "physics_networks_v3",
+        "model_version": "3.0.0",
+        "domain_id": "cpri_0p5uf",
+        "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+        "topology_id": "OSHUNT_v0",
+        "inputs": {
+          "configuration": {
+            "front_network": {
+              "op": "S",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 520
+                },
+                {
+                  "op": "R",
+                  "ohm": 520
+                }
+              ]
+            },
+            "front_per_stage_ohm": 1040.0,
+            "impulse_type": "SI",
+            "polarity": 1,
+            "stage_charge_V": 180000.0,
+            "stages": 11,
+            "tail_network": {
+              "op": "S",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 3700
+                },
+                {
+                  "op": "R",
+                  "ohm": 3700
+                }
+              ]
+            },
+            "tail_per_stage_ohm": 7400.0,
+            "topology_id": "OSHUNT_v0"
+          },
+          "setup": {
+            "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+            "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+            "divider_capacitance_F": 1.09321047639942e-09,
+            "dut_capacitance_F": 5.24594281224409e-09,
+            "load_resistance_ohm": null,
+            "loop_inductance_H": 9.33047634143061e-05,
+            "loop_resistance_ohm": 17.2762015067024,
+            "setup_id": "V3_SETUP_300044",
+            "stray_capacitance_F": 1.27181072053101e-10
+          },
+          "domain_id": "cpri_0p5uf"
+        },
+        "derived": {
+          "Cg_F": 4.545454545454545e-08,
+          "CL_F": 6.9463343606966105e-09,
+          "Rf_total_ohm": 11457.276201506702,
+          "Rt_total_ohm": 81400.0,
+          "U0_V": 1980000.0,
+          "stage_capacitance_F": 5e-07,
+          "stage_energy_J": 8100.0,
+          "profile": {
+            "domain_id": "cpri_0p5uf",
+            "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+            "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+            "stage_capacitance_F": 5e-07,
+            "stage_charge_max_V": 200000.0,
+            "stage_energy_max_J": 10000.0,
+            "total_energy_max_J": 150000.0,
+            "stages_min": 2,
+            "stages_max": 15,
+            "summed_charge_max_V": 3000000.0,
+            "basic_load_capacitance_F": 4.8e-10,
+            "hardware_verified": false,
+            "research_only": false,
+            "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS"
+          }
+        },
+        "input_sha256": "7e34f1885d19d0fccb23e8cba48a601932a7ed7c19f2512edeea3a2e3148092d",
+        "metrics": {
+          "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+          "evaluation_curve_id": "raw_clean",
+          "interpolation": "PCHIP",
+          "standards_certified": false,
+          "polarity": 1,
+          "baseline_V": 0.0,
+          "raw_crest_magnitude_V": 1463646.2361357089,
+          "raw_signed_crest_V": 1463646.2361357089,
+          "crest_magnitude_V": 1463646.2361357089,
+          "t_peak_s": 0.000273371670254379,
+          "T1_s": null,
+          "Tp_s": 0.000273371670254379,
+          "T2_s": 0.00361045938762123,
+          "t30_s": 2.081243922573245e-05,
+          "t90_s": 0.00012444650618739558,
+          "t50_falling_s": 0.00361045938762123,
+          "virtual_origin_s": null,
+          "beginning_s": 0.0,
+          "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+          "compliance_status": "FAIL",
+          "reasons": [],
+          "checks": {
+            "front_or_peak": true,
+            "tail": true,
+            "crest": false
+          },
+          "deviation_pct": {
+            "front_or_peak_pct": 9.348668101751612,
+            "tail_pct": 44.418375504849195,
+            "crest_pct": 1363.6462361357087
+          }
+        },
+        "numeric_status": "VALID",
+        "evidence_domain": "CPRI_PARAMETERS_PROVISIONAL_TOPOLOGY_SYNTHETIC",
+        "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+        "eligible_for_hardware_recommendation": false,
+        "hardware_reason_codes": [
+          "TOPOLOGY_UNCONFIRMED",
+          "MOUNTING_AND_INVENTORY_UNCONFIRMED",
+          "COMPONENT_PULSE_RATINGS_UNKNOWN",
+          "MIN_STAGE_CHARGE_UNKNOWN",
+          "AUXILIARY_BRANCH_STATE_UNCONFIRMED"
+        ],
+        "stored_energy_J": 89099.99999999999,
+        "remaining_energy_J": 3.000626148892578e-06,
+        "integrated_loss_J": 89099.99959323436,
+        "energy_balance_relative_error": -4.531593792617121e-09,
+        "branch_loss_J": {
+          "Rt": 68879.1516218998,
+          "front_path": 20220.847971334544
+        },
+        "voltage_gain": 0.7392152707756106,
+        "front_current_peak_A": 172.6519564671762,
+        "numerical_pass_is_not_IEC_certification": true,
+        "solver": {
+          "method": "linear_modal_v1",
+          "requested_method": "modal",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "t_end_s": 0.056686559568097684,
+          "sample_count": 1608
+        },
+        "assumptions": [
+          "Ideal simultaneous complete erection and equal uniform stages.",
+          "Purely resistive two-terminal networks; unmodeled connection parasitics and pulse ratings.",
+          "Linear capacitive DUT; no breakdown, corona or measurement transfer function.",
+          "Topology is a declared reduced-circuit hypothesis, not confirmed laboratory mounting.",
+          "Supplied 0.5 uF equipment limits apply."
+        ],
+        "application_status": "PHYSICS_VERIFIED"
+      },
+      "feature_order": [
+        "stages",
+        "front_per_stage_ohm",
+        "tail_per_stage_ohm",
+        "dut_nF",
+        "divider_nF",
+        "stray_nF",
+        "basic_additional_nF",
+        "loop_uH",
+        "loop_ohm",
+        "load_kohm",
+        "Cg_nF",
+        "CL_nF",
+        "Rf_ohm",
+        "Rt_ohm",
+        "CL_over_Cg",
+        "Rf_CL_us",
+        "Rt_Cg_us",
+        "LC_us",
+        "zero_L",
+        "baseline_gain",
+        "baseline_front_us",
+        "baseline_tail_us"
+      ]
+    },
+    {
+      "route": "research_3uf:LI:GSHUNT_v0",
+      "counts": {
+        "test": 1690,
+        "train": 4923,
+        "validation": 1612
+      },
+      "setup_family_counts": {
+        "test": 73,
+        "train": 383,
+        "validation": 78
+      },
+      "selected_model_id": "model_e8344e41ca77cf6429b1",
+      "selected_formulation": "residual",
+      "selected_family": "extra_trees",
+      "held_out_metrics": {
+        "gain": {
+          "MAE": 0.0011217997531585964,
+          "P95_absolute_error": 0.006356239576616972,
+          "RMSE": 0.0034112566900952835,
+          "max_absolute_error": 0.04266210100509715,
+          "tolerance_normalized_MAE": 0.038953839697018364,
+          "tolerance_normalized_P95": 0.22501282412608845
+        },
+        "front_us": {
+          "MAE": 0.052300066912655575,
+          "P95_absolute_error": 0.22832486836746452,
+          "RMSE": 0.09417472062369539,
+          "max_absolute_error": 0.5578452869839321,
+          "tolerance_normalized_MAE": 0.14527796364626552,
+          "tolerance_normalized_P95": 0.6342357454651791
+        },
+        "tail_us": {
+          "MAE": 3.225993563708019,
+          "P95_absolute_error": 11.544387095395631,
+          "RMSE": 15.965293143604404,
+          "max_absolute_error": 211.26690737403806,
+          "tolerance_normalized_MAE": 0.32259935637080184,
+          "tolerance_normalized_P95": 1.1544387095395632
+        },
+        "n": 1690,
+        "ood_count": 14
+      },
+      "actual_fixed_prediction": {
+        "status": "ML_PREDICTION",
+        "source": "VERSIONED_ROUTE_MODEL",
+        "model_id": "model_e8344e41ca77cf6429b1",
+        "gain": 0.9563692031076414,
+        "front_us": 11.939458336396152,
+        "tail_us": 1036.9112000654486,
+        "crest_V": 994623.9712319471,
+        "ml_ood": false
+      },
+      "actual_physics": {
+        "schema_version": "physics_networks_v3",
+        "model_version": "3.0.0",
+        "domain_id": "research_3uf",
+        "profile_id": "RESEARCH_3uF_NETWORKS_v3",
+        "topology_id": "GSHUNT_v0",
+        "inputs": {
+          "configuration": {
+            "front_network": {
+              "op": "P",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 46
+                },
+                {
+                  "op": "R",
+                  "ohm": 3700
+                }
+              ]
+            },
+            "front_per_stage_ohm": 45.43513080619327,
+            "impulse_type": "LI",
+            "polarity": -1,
+            "stage_charge_V": 80000.0,
+            "stages": 13,
+            "tail_network": {
+              "op": "P",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 520
+                },
+                {
+                  "op": "R",
+                  "ohm": 5000
+                }
+              ]
+            },
+            "tail_per_stage_ohm": 471.0144927536232,
+            "topology_id": "GSHUNT_v0"
+          },
+          "setup": {
+            "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+            "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+            "divider_capacitance_F": 4.7269183184951e-10,
+            "dut_capacitance_F": 5.67531179514779e-09,
+            "load_resistance_ohm": null,
+            "loop_inductance_H": 9.24042498238287e-05,
+            "loop_resistance_ohm": 19.5704329032437,
+            "setup_id": "V3_SETUP_400002",
+            "stray_capacitance_F": 1.75379549963786e-10
+          },
+          "domain_id": "research_3uf"
+        },
+        "derived": {
+          "Cg_F": 2.3076923076923078e-07,
+          "CL_F": 6.8033831769610855e-09,
+          "Rf_total_ohm": 610.2271333837563,
+          "Rt_total_ohm": 6123.188405797101,
+          "U0_V": -1040000.0,
+          "stage_capacitance_F": 3e-06,
+          "stage_energy_J": 9600.0,
+          "profile": {
+            "domain_id": "research_3uf",
+            "profile_id": "RESEARCH_3uF_NETWORKS_v3",
+            "label": "Research comparison \u2014 3 \u00b5F/stage (not CPRI hardware)",
+            "stage_capacitance_F": 3e-06,
+            "stage_charge_max_V": 200000.0,
+            "stage_energy_max_J": 60000.0,
+            "total_energy_max_J": 900000.0,
+            "stages_min": 2,
+            "stages_max": 15,
+            "summed_charge_max_V": 3000000.0,
+            "basic_load_capacitance_F": 4.8e-10,
+            "hardware_verified": false,
+            "research_only": true,
+            "constraint_basis": "HYPOTHETICAL_200kV_15_STAGE_DOMAIN_ENERGY_DERIVED_FROM_3uF_NOT_EQUIPMENT_APPROVAL"
+          }
+        },
+        "input_sha256": "25efb7f2615feca3d647b4551599732a579dbfd0a1e24e5fab72a02d427c7c8d",
+        "metrics": {
+          "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+          "evaluation_curve_id": "raw_clean",
+          "interpolation": "PCHIP",
+          "standards_certified": false,
+          "polarity": -1,
+          "baseline_V": 0.0,
+          "raw_crest_magnitude_V": 994266.5317472308,
+          "raw_signed_crest_V": -994266.5317472308,
+          "crest_magnitude_V": 994266.5317472308,
+          "t_peak_s": 2.319268825828486e-05,
+          "T1_s": 1.1955231239985978e-05,
+          "Tp_s": null,
+          "T2_s": 0.001037546649052933,
+          "t30_s": 1.5177272119608746e-06,
+          "t90_s": 8.690865955952461e-06,
+          "t50_falling_s": 0.0010354778068928981,
+          "virtual_origin_s": -2.0688421600349186e-06,
+          "beginning_s": 0.0,
+          "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+          "compliance_status": "FAIL",
+          "reasons": [],
+          "checks": {
+            "front_or_peak": false,
+            "tail": false,
+            "crest": false
+          },
+          "deviation_pct": {
+            "front_or_peak_pct": 896.2692699988315,
+            "tail_pct": 1975.093298105866,
+            "crest_pct": -37.85834176579807
+          }
+        },
+        "numeric_status": "VALID",
+        "evidence_domain": "RESEARCH_SYNTHETIC",
+        "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+        "eligible_for_hardware_recommendation": false,
+        "hardware_reason_codes": [
+          "TOPOLOGY_UNCONFIRMED",
+          "MOUNTING_AND_INVENTORY_UNCONFIRMED",
+          "COMPONENT_PULSE_RATINGS_UNKNOWN",
+          "MIN_STAGE_CHARGE_UNKNOWN",
+          "AUXILIARY_BRANCH_STATE_UNCONFIRMED"
+        ],
+        "stored_energy_J": 124800.0,
+        "remaining_energy_J": 4.575697264843292e-06,
+        "integrated_loss_J": 124799.99931396767,
+        "energy_balance_relative_error": -5.4603896597445085e-09,
+        "branch_loss_J": {
+          "Rt": 121236.27582864076,
+          "front_path": 3563.7234853268724
+        },
+        "voltage_gain": 0.9560255112954142,
+        "front_current_peak_A": 1548.0080380633378,
+        "numerical_pass_is_not_IEC_certification": true,
+        "solver": {
+          "method": "linear_modal_v1",
+          "requested_method": "modal",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "t_end_s": 0.017457852998313452,
+          "sample_count": 1608
+        },
+        "assumptions": [
+          "Ideal simultaneous complete erection and equal uniform stages.",
+          "Purely resistive two-terminal networks; unmodeled connection parasitics and pulse ratings.",
+          "Linear capacitive DUT; no breakdown, corona or measurement transfer function.",
+          "Topology is a declared reduced-circuit hypothesis, not confirmed laboratory mounting.",
+          "Research 3 uF ratings are hypothetical and are not actual CPRI ratings."
+        ],
+        "application_status": "PHYSICS_VERIFIED"
+      },
+      "feature_order": [
+        "stages",
+        "front_per_stage_ohm",
+        "tail_per_stage_ohm",
+        "dut_nF",
+        "divider_nF",
+        "stray_nF",
+        "basic_additional_nF",
+        "loop_uH",
+        "loop_ohm",
+        "load_kohm",
+        "Cg_nF",
+        "CL_nF",
+        "Rf_ohm",
+        "Rt_ohm",
+        "CL_over_Cg",
+        "Rf_CL_us",
+        "Rt_Cg_us",
+        "LC_us",
+        "zero_L",
+        "baseline_gain",
+        "baseline_front_us",
+        "baseline_tail_us"
+      ]
+    },
+    {
+      "route": "research_3uf:LI:OSHUNT_v0",
+      "counts": {
+        "train": 4055,
+        "test": 1434,
+        "validation": 1388
+      },
+      "setup_family_counts": {
+        "train": 351,
+        "test": 98,
+        "validation": 100
+      },
+      "selected_model_id": "model_9d48f5370f8d2d4e549a",
+      "selected_formulation": "residual",
+      "selected_family": "extra_trees",
+      "held_out_metrics": {
+        "gain": {
+          "MAE": 0.0007373434249887422,
+          "P95_absolute_error": 0.0031797542396590707,
+          "RMSE": 0.0029512325258363344,
+          "max_absolute_error": 0.03386191715151665,
+          "tolerance_normalized_MAE": 0.03669487350676544,
+          "tolerance_normalized_P95": 0.15799095970841393
+        },
+        "front_us": {
+          "MAE": 0.0573211256907852,
+          "P95_absolute_error": 0.2520162413231197,
+          "RMSE": 0.11235316225029189,
+          "max_absolute_error": 1.4400591870150066,
+          "tolerance_normalized_MAE": 0.15922534914107,
+          "tolerance_normalized_P95": 0.7000451147864436
+        },
+        "tail_us": {
+          "MAE": 1.4819255999142884,
+          "P95_absolute_error": 5.709090798680981,
+          "RMSE": 6.8891225210290425,
+          "max_absolute_error": 99.61946722358516,
+          "tolerance_normalized_MAE": 0.14819255999142886,
+          "tolerance_normalized_P95": 0.570909079868098
+        },
+        "n": 1434,
+        "ood_count": 31
+      },
+      "actual_fixed_prediction": {
+        "status": "ML_PREDICTION",
+        "source": "VERSIONED_ROUTE_MODEL",
+        "model_id": "model_9d48f5370f8d2d4e549a",
+        "gain": 0.567980583371117,
+        "front_us": 1.444833976122534,
+        "tail_us": 135.3974885847856,
+        "crest_V": 443024.8550294712,
+        "ml_ood": false
+      },
+      "actual_physics": {
+        "schema_version": "physics_networks_v3",
+        "model_version": "3.0.0",
+        "domain_id": "research_3uf",
+        "profile_id": "RESEARCH_3uF_NETWORKS_v3",
+        "topology_id": "OSHUNT_v0",
+        "inputs": {
+          "configuration": {
+            "front_network": {
+              "op": "P",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 30
+                },
+                {
+                  "op": "R",
+                  "ohm": 180
+                }
+              ]
+            },
+            "front_per_stage_ohm": 25.714285714285715,
+            "impulse_type": "LI",
+            "polarity": 1,
+            "stage_charge_V": 60000.0,
+            "stages": 13,
+            "tail_network": {
+              "op": "P",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 46
+                },
+                {
+                  "op": "R",
+                  "ohm": 180
+                }
+              ]
+            },
+            "tail_per_stage_ohm": 36.63716814159292,
+            "topology_id": "OSHUNT_v0"
+          },
+          "setup": {
+            "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+            "basic_coverage_assumption": "INCLUDED_IN_OTHER_COMPONENTS",
+            "divider_capacitance_F": 9.19046401420037e-10,
+            "dut_capacitance_F": 2.5822643633659e-10,
+            "load_resistance_ohm": null,
+            "loop_inductance_H": 5.33244168868619e-05,
+            "loop_resistance_ohm": 17.3959029323736,
+            "setup_id": "V3_SETUP_500007",
+            "stray_capacitance_F": 1.33526316195447e-09
+          },
+          "domain_id": "research_3uf"
+        },
+        "derived": {
+          "Cg_F": 2.3076923076923078e-07,
+          "CL_F": 2.5125359997110973e-09,
+          "Rf_total_ohm": 351.68161721808787,
+          "Rt_total_ohm": 476.28318584070803,
+          "U0_V": 780000.0,
+          "stage_capacitance_F": 3e-06,
+          "stage_energy_J": 5400.0,
+          "profile": {
+            "domain_id": "research_3uf",
+            "profile_id": "RESEARCH_3uF_NETWORKS_v3",
+            "label": "Research comparison \u2014 3 \u00b5F/stage (not CPRI hardware)",
+            "stage_capacitance_F": 3e-06,
+            "stage_charge_max_V": 200000.0,
+            "stage_energy_max_J": 60000.0,
+            "total_energy_max_J": 900000.0,
+            "stages_min": 2,
+            "stages_max": 15,
+            "summed_charge_max_V": 3000000.0,
+            "basic_load_capacitance_F": 4.8e-10,
+            "hardware_verified": false,
+            "research_only": true,
+            "constraint_basis": "HYPOTHETICAL_200kV_15_STAGE_DOMAIN_ENERGY_DERIVED_FROM_3uF_NOT_EQUIPMENT_APPROVAL"
+          }
+        },
+        "input_sha256": "401439612f8a23da9d693d5e635c0280a76dea9e9565cfc482aea191219857c4",
+        "metrics": {
+          "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+          "evaluation_curve_id": "raw_clean",
+          "interpolation": "PCHIP",
+          "standards_certified": false,
+          "polarity": 1,
+          "baseline_V": 0.0,
+          "raw_crest_magnitude_V": 441791.7044326828,
+          "raw_signed_crest_V": 441791.7044326828,
+          "crest_magnitude_V": 441791.7044326828,
+          "t_peak_s": 2.5600060038579863e-06,
+          "T1_s": 1.3088281544024191e-06,
+          "Tp_s": null,
+          "T2_s": 0.00013587516856752152,
+          "t30_s": 3.047318773434327e-07,
+          "t90_s": 1.0900287699848842e-06,
+          "t50_falling_s": 0.00013578725199854422,
+          "virtual_origin_s": -8.791656897729301e-08,
+          "beginning_s": 0.0,
+          "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+          "compliance_status": "FAIL",
+          "reasons": [],
+          "checks": {
+            "front_or_peak": true,
+            "tail": false,
+            "crest": false
+          },
+          "deviation_pct": {
+            "front_or_peak_pct": 9.069012866868276,
+            "tail_pct": 171.75033713504303,
+            "crest_pct": 10.447926108170691
+          }
+        },
+        "numeric_status": "VALID",
+        "evidence_domain": "RESEARCH_SYNTHETIC",
+        "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+        "eligible_for_hardware_recommendation": false,
+        "hardware_reason_codes": [
+          "TOPOLOGY_UNCONFIRMED",
+          "MOUNTING_AND_INVENTORY_UNCONFIRMED",
+          "COMPONENT_PULSE_RATINGS_UNKNOWN",
+          "MIN_STAGE_CHARGE_UNKNOWN",
+          "AUXILIARY_BRANCH_STATE_UNCONFIRMED"
+        ],
+        "stored_energy_J": 70200.0,
+        "remaining_energy_J": 2.6432185832354647e-06,
+        "integrated_loss_J": 70199.99961216819,
+        "energy_balance_relative_error": -5.487016879122948e-09,
+        "branch_loss_J": {
+          "Rt": 40159.01351050268,
+          "front_path": 30040.986101665527
+        },
+        "voltage_gain": 0.566399621067542,
+        "front_current_peak_A": 1748.8351059021015,
+        "numerical_pass_is_not_IEC_certification": true,
+        "solver": {
+          "method": "linear_modal_v1",
+          "requested_method": "modal",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "t_end_s": 0.002300340629188509,
+          "sample_count": 1608
+        },
+        "assumptions": [
+          "Ideal simultaneous complete erection and equal uniform stages.",
+          "Purely resistive two-terminal networks; unmodeled connection parasitics and pulse ratings.",
+          "Linear capacitive DUT; no breakdown, corona or measurement transfer function.",
+          "Topology is a declared reduced-circuit hypothesis, not confirmed laboratory mounting.",
+          "Research 3 uF ratings are hypothetical and are not actual CPRI ratings."
+        ],
+        "application_status": "PHYSICS_VERIFIED"
+      },
+      "feature_order": [
+        "stages",
+        "front_per_stage_ohm",
+        "tail_per_stage_ohm",
+        "dut_nF",
+        "divider_nF",
+        "stray_nF",
+        "basic_additional_nF",
+        "loop_uH",
+        "loop_ohm",
+        "load_kohm",
+        "Cg_nF",
+        "CL_nF",
+        "Rf_ohm",
+        "Rt_ohm",
+        "CL_over_Cg",
+        "Rf_CL_us",
+        "Rt_Cg_us",
+        "LC_us",
+        "zero_L",
+        "baseline_gain",
+        "baseline_front_us",
+        "baseline_tail_us"
+      ]
+    },
+    {
+      "route": "research_3uf:SI:GSHUNT_v0",
+      "counts": {
+        "validation": 1607,
+        "test": 1674,
+        "train": 4911
+      },
+      "setup_family_counts": {
+        "validation": 67,
+        "test": 76,
+        "train": 363
+      },
+      "selected_model_id": "model_1c991302020290fa0b4b",
+      "selected_formulation": "residual",
+      "selected_family": "extra_trees",
+      "held_out_metrics": {
+        "gain": {
+          "MAE": 0.0010124101968121688,
+          "P95_absolute_error": 0.0025903552538108416,
+          "RMSE": 0.005380018398775707,
+          "max_absolute_error": 0.07325165436649894,
+          "tolerance_normalized_MAE": 0.03496362735781708,
+          "tolerance_normalized_P95": 0.0945633248230248
+        },
+        "front_us": {
+          "MAE": 0.13614718284589386,
+          "P95_absolute_error": 0.5702026962978344,
+          "RMSE": 0.3859392633658012,
+          "max_absolute_error": 3.7335295687648298,
+          "tolerance_normalized_MAE": 0.002722943656917877,
+          "tolerance_normalized_P95": 0.011404053925956687
+        },
+        "tail_us": {
+          "MAE": 1.3143573312885357,
+          "P95_absolute_error": 6.440374362001086,
+          "RMSE": 6.262743077339053,
+          "max_absolute_error": 115.79659214967705,
+          "tolerance_normalized_MAE": 0.000876238220859024,
+          "tolerance_normalized_P95": 0.004293582908000724
+        },
+        "n": 1674,
+        "ood_count": 10
+      },
+      "actual_fixed_prediction": {
+        "status": "ML_PREDICTION",
+        "source": "VERSIONED_ROUTE_MODEL",
+        "model_id": "model_1c991302020290fa0b4b",
+        "gain": 0.9573458205173626,
+        "front_us": 225.17565016102316,
+        "tail_us": 5540.464946360213,
+        "crest_V": 114881.49846208352,
+        "ml_ood": false
+      },
+      "actual_physics": {
+        "schema_version": "physics_networks_v3",
+        "model_version": "3.0.0",
+        "domain_id": "research_3uf",
+        "profile_id": "RESEARCH_3uF_NETWORKS_v3",
+        "topology_id": "GSHUNT_v0",
+        "inputs": {
+          "configuration": {
+            "front_network": {
+              "op": "S",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 520
+                },
+                {
+                  "op": "R",
+                  "ohm": 520
+                }
+              ]
+            },
+            "front_per_stage_ohm": 1040.0,
+            "impulse_type": "SI",
+            "polarity": -1,
+            "stage_charge_V": 40000.0,
+            "stages": 3,
+            "tail_network": {
+              "op": "P",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 5000
+                },
+                {
+                  "op": "R",
+                  "ohm": 5000
+                }
+              ]
+            },
+            "tail_per_stage_ohm": 2500.0,
+            "topology_id": "GSHUNT_v0"
+          },
+          "setup": {
+            "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+            "basic_coverage_assumption": "INCLUDED_IN_OTHER_COMPONENTS",
+            "divider_capacitance_F": 3e-09,
+            "dut_capacitance_F": 1e-08,
+            "load_resistance_ohm": null,
+            "loop_inductance_H": 0.00012,
+            "loop_resistance_ohm": 20.0,
+            "setup_id": "V3_SETUP_600005",
+            "stray_capacitance_F": 1e-09
+          },
+          "domain_id": "research_3uf"
+        },
+        "derived": {
+          "Cg_F": 1e-06,
+          "CL_F": 1.4000000000000001e-08,
+          "Rf_total_ohm": 3140.0,
+          "Rt_total_ohm": 7500.0,
+          "U0_V": -120000.0,
+          "stage_capacitance_F": 3e-06,
+          "stage_energy_J": 2400.0,
+          "profile": {
+            "domain_id": "research_3uf",
+            "profile_id": "RESEARCH_3uF_NETWORKS_v3",
+            "label": "Research comparison \u2014 3 \u00b5F/stage (not CPRI hardware)",
+            "stage_capacitance_F": 3e-06,
+            "stage_charge_max_V": 200000.0,
+            "stage_energy_max_J": 60000.0,
+            "total_energy_max_J": 900000.0,
+            "stages_min": 2,
+            "stages_max": 15,
+            "summed_charge_max_V": 3000000.0,
+            "basic_load_capacitance_F": 4.8e-10,
+            "hardware_verified": false,
+            "research_only": true,
+            "constraint_basis": "HYPOTHETICAL_200kV_15_STAGE_DOMAIN_ENERGY_DERIVED_FROM_3uF_NOT_EQUIPMENT_APPROVAL"
+          }
+        },
+        "input_sha256": "f3c114c0825e14a52dee45ff171a4147efb8e4694175fbdbdc35ef80cdee66df",
+        "metrics": {
+          "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+          "evaluation_curve_id": "raw_clean",
+          "interpolation": "PCHIP",
+          "standards_certified": false,
+          "polarity": -1,
+          "baseline_V": 0.0,
+          "raw_crest_magnitude_V": 114882.37046223026,
+          "raw_signed_crest_V": -114882.37046223026,
+          "crest_magnitude_V": 114882.37046223026,
+          "t_peak_s": 0.00022516307141659273,
+          "T1_s": null,
+          "Tp_s": 0.00022516307141659273,
+          "T2_s": 0.005540405612153523,
+          "t30_s": 1.4966788639722224e-05,
+          "t90_s": 9.216476965505187e-05,
+          "t50_falling_s": 0.005540405612153523,
+          "virtual_origin_s": null,
+          "beginning_s": 0.0,
+          "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+          "compliance_status": "FAIL",
+          "reasons": [],
+          "checks": {
+            "front_or_peak": true,
+            "tail": false,
+            "crest": false
+          },
+          "deviation_pct": {
+            "front_or_peak_pct": -9.93477143336291,
+            "tail_pct": 121.61622448614091,
+            "crest_pct": -80.85293825629496
+          }
+        },
+        "numeric_status": "VALID",
+        "evidence_domain": "RESEARCH_SYNTHETIC",
+        "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+        "eligible_for_hardware_recommendation": false,
+        "hardware_reason_codes": [
+          "TOPOLOGY_UNCONFIRMED",
+          "MOUNTING_AND_INVENTORY_UNCONFIRMED",
+          "COMPONENT_PULSE_RATINGS_UNKNOWN",
+          "MIN_STAGE_CHARGE_UNKNOWN",
+          "AUXILIARY_BRANCH_STATE_UNCONFIRMED"
+        ],
+        "stored_energy_J": 7200.0,
+        "remaining_energy_J": 2.680137414626262e-07,
+        "integrated_loss_J": 7199.999966977667,
+        "energy_balance_relative_error": -4.549211022701153e-09,
+        "branch_loss_J": {
+          "Rt": 7101.163011280616,
+          "front_path": 98.8369556970491
+        },
+        "voltage_gain": 0.9573530871852521,
+        "front_current_peak_A": 38.012108874928565,
+        "numerical_pass_is_not_IEC_certification": true,
+        "solver": {
+          "method": "linear_modal_v1",
+          "requested_method": "modal",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "t_end_s": 0.09126732503051933,
+          "sample_count": 1608
+        },
+        "assumptions": [
+          "Ideal simultaneous complete erection and equal uniform stages.",
+          "Purely resistive two-terminal networks; unmodeled connection parasitics and pulse ratings.",
+          "Linear capacitive DUT; no breakdown, corona or measurement transfer function.",
+          "Topology is a declared reduced-circuit hypothesis, not confirmed laboratory mounting.",
+          "Research 3 uF ratings are hypothetical and are not actual CPRI ratings."
+        ],
+        "application_status": "PHYSICS_VERIFIED"
+      },
+      "feature_order": [
+        "stages",
+        "front_per_stage_ohm",
+        "tail_per_stage_ohm",
+        "dut_nF",
+        "divider_nF",
+        "stray_nF",
+        "basic_additional_nF",
+        "loop_uH",
+        "loop_ohm",
+        "load_kohm",
+        "Cg_nF",
+        "CL_nF",
+        "Rf_ohm",
+        "Rt_ohm",
+        "CL_over_Cg",
+        "Rf_CL_us",
+        "Rt_Cg_us",
+        "LC_us",
+        "zero_L",
+        "baseline_gain",
+        "baseline_front_us",
+        "baseline_tail_us"
+      ]
+    },
+    {
+      "route": "research_3uf:SI:OSHUNT_v0",
+      "counts": {
+        "train": 4194,
+        "test": 1469,
+        "validation": 1401
+      },
+      "setup_family_counts": {
+        "train": 448,
+        "test": 96,
+        "validation": 105
+      },
+      "selected_model_id": "model_52b124f6ac1345d233d2",
+      "selected_formulation": "residual",
+      "selected_family": "hist_gradient_boosting",
+      "held_out_metrics": {
+        "gain": {
+          "MAE": 0.0005616283707420406,
+          "P95_absolute_error": 0.0029881956144431885,
+          "RMSE": 0.0021368448255592422,
+          "max_absolute_error": 0.027916828318644393,
+          "tolerance_normalized_MAE": 0.027965764650367177,
+          "tolerance_normalized_P95": 0.12836648208092605
+        },
+        "front_us": {
+          "MAE": 0.22901102274799745,
+          "P95_absolute_error": 0.9878290544958942,
+          "RMSE": 0.42971194170494253,
+          "max_absolute_error": 3.675429920581979,
+          "tolerance_normalized_MAE": 0.004580220454959949,
+          "tolerance_normalized_P95": 0.019756581089917884
+        },
+        "tail_us": {
+          "MAE": 1.6893687504342638,
+          "P95_absolute_error": 6.139474274685584,
+          "RMSE": 11.640166046758019,
+          "max_absolute_error": 392.92283625007985,
+          "tolerance_normalized_MAE": 0.0011262458336228427,
+          "tolerance_normalized_P95": 0.004092982849790389
+        },
+        "n": 1469,
+        "ood_count": 4
+      },
+      "actual_fixed_prediction": {
+        "status": "ML_PREDICTION",
+        "source": "VERSIONED_ROUTE_MODEL",
+        "model_id": "model_52b124f6ac1345d233d2",
+        "gain": 0.13532313909377794,
+        "front_us": 23.620996745170377,
+        "tail_us": 447.4889323330862,
+        "crest_V": 341014.3105163204,
+        "ml_ood": false
+      },
+      "actual_physics": {
+        "schema_version": "physics_networks_v3",
+        "model_version": "3.0.0",
+        "domain_id": "research_3uf",
+        "profile_id": "RESEARCH_3uF_NETWORKS_v3",
+        "topology_id": "OSHUNT_v0",
+        "inputs": {
+          "configuration": {
+            "front_network": {
+              "op": "P",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 180
+                },
+                {
+                  "op": "R",
+                  "ohm": 3700
+                }
+              ]
+            },
+            "front_per_stage_ohm": 171.64948453608247,
+            "impulse_type": "SI",
+            "polarity": -1,
+            "stage_charge_V": 180000.0,
+            "stages": 14,
+            "tail_network": {
+              "op": "P",
+              "children": [
+                {
+                  "op": "R",
+                  "ohm": 30
+                },
+                {
+                  "op": "R",
+                  "ohm": 520
+                }
+              ]
+            },
+            "tail_per_stage_ohm": 28.363636363636363,
+            "topology_id": "OSHUNT_v0"
+          },
+          "setup": {
+            "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+            "basic_coverage_assumption": "INCLUDED_IN_OTHER_COMPONENTS",
+            "divider_capacitance_F": 3e-09,
+            "dut_capacitance_F": 1e-08,
+            "load_resistance_ohm": null,
+            "loop_inductance_H": 0.00012,
+            "loop_resistance_ohm": 20.0,
+            "setup_id": "V3_SETUP_700005",
+            "stray_capacitance_F": 1e-09
+          },
+          "domain_id": "research_3uf"
+        },
+        "derived": {
+          "Cg_F": 2.1428571428571428e-07,
+          "CL_F": 1.4000000000000001e-08,
+          "Rf_total_ohm": 2423.0927835051543,
+          "Rt_total_ohm": 397.09090909090907,
+          "U0_V": -2520000.0,
+          "stage_capacitance_F": 3e-06,
+          "stage_energy_J": 48600.0,
+          "profile": {
+            "domain_id": "research_3uf",
+            "profile_id": "RESEARCH_3uF_NETWORKS_v3",
+            "label": "Research comparison \u2014 3 \u00b5F/stage (not CPRI hardware)",
+            "stage_capacitance_F": 3e-06,
+            "stage_charge_max_V": 200000.0,
+            "stage_energy_max_J": 60000.0,
+            "total_energy_max_J": 900000.0,
+            "stages_min": 2,
+            "stages_max": 15,
+            "summed_charge_max_V": 3000000.0,
+            "basic_load_capacitance_F": 4.8e-10,
+            "hardware_verified": false,
+            "research_only": true,
+            "constraint_basis": "HYPOTHETICAL_200kV_15_STAGE_DOMAIN_ENERGY_DERIVED_FROM_3uF_NOT_EQUIPMENT_APPROVAL"
+          }
+        },
+        "input_sha256": "348d0d7e7ce571efc272cc4cc64ae4a400c8039d1e338531571c253318af2771",
+        "metrics": {
+          "profile_id": "CPRI_COMPETITION_LI_1p2_50_SI_Tp250_T2_2500_v1",
+          "evaluation_curve_id": "raw_clean",
+          "interpolation": "PCHIP",
+          "standards_certified": false,
+          "polarity": -1,
+          "baseline_V": 0.0,
+          "raw_crest_magnitude_V": 341022.71369459963,
+          "raw_signed_crest_V": -341022.71369459963,
+          "crest_magnitude_V": 341022.71369459963,
+          "t_peak_s": 2.3307623989329495e-05,
+          "T1_s": null,
+          "Tp_s": 2.3307623989329495e-05,
+          "T2_s": 0.0004474932844166838,
+          "t30_s": 1.6751348314298888e-06,
+          "t90_s": 9.97406574324195e-06,
+          "t50_falling_s": 0.0004474932844166838,
+          "virtual_origin_s": null,
+          "beginning_s": 0.0,
+          "waveform_status": "VALID_CLEAN_FULL_IMPULSE",
+          "compliance_status": "FAIL",
+          "reasons": [],
+          "checks": {
+            "front_or_peak": false,
+            "tail": false,
+            "crest": false
+          },
+          "deviation_pct": {
+            "front_or_peak_pct": -90.6769504042682,
+            "tail_pct": -82.10026862333265,
+            "crest_pct": -73.76748356195387
+          }
+        },
+        "numeric_status": "VALID",
+        "evidence_domain": "RESEARCH_SYNTHETIC",
+        "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+        "eligible_for_hardware_recommendation": false,
+        "hardware_reason_codes": [
+          "TOPOLOGY_UNCONFIRMED",
+          "MOUNTING_AND_INVENTORY_UNCONFIRMED",
+          "COMPONENT_PULSE_RATINGS_UNKNOWN",
+          "MIN_STAGE_CHARGE_UNKNOWN",
+          "AUXILIARY_BRANCH_STATE_UNCONFIRMED"
+        ],
+        "stored_energy_J": 680400.0,
+        "remaining_energy_J": 2.5657651941781154e-05,
+        "integrated_loss_J": 680399.9958989201,
+        "energy_balance_relative_error": -5.989744539303089e-09,
+        "branch_loss_J": {
+          "Rt": 94936.87502827453,
+          "front_path": 585463.1208706455
+        },
+        "voltage_gain": 0.1353264736883332,
+        "front_current_peak_A": 1031.297138121103,
+        "numerical_pass_is_not_IEC_certification": true,
+        "solver": {
+          "method": "linear_modal_v1",
+          "requested_method": "modal",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "t_end_s": 0.007260859515701756,
+          "sample_count": 1608
+        },
+        "assumptions": [
+          "Ideal simultaneous complete erection and equal uniform stages.",
+          "Purely resistive two-terminal networks; unmodeled connection parasitics and pulse ratings.",
+          "Linear capacitive DUT; no breakdown, corona or measurement transfer function.",
+          "Topology is a declared reduced-circuit hypothesis, not confirmed laboratory mounting.",
+          "Research 3 uF ratings are hypothetical and are not actual CPRI ratings."
+        ],
+        "application_status": "PHYSICS_VERIFIED"
+      },
+      "feature_order": [
+        "stages",
+        "front_per_stage_ohm",
+        "tail_per_stage_ohm",
+        "dut_nF",
+        "divider_nF",
+        "stray_nF",
+        "basic_additional_nF",
+        "loop_uH",
+        "loop_ohm",
+        "load_kohm",
+        "Cg_nF",
+        "CL_nF",
+        "Rf_ohm",
+        "Rt_ohm",
+        "CL_over_Cg",
+        "Rf_CL_us",
+        "Rt_Cg_us",
+        "LC_us",
+        "zero_L",
+        "baseline_gain",
+        "baseline_front_us",
+        "baseline_tail_us"
+      ]
+    }
+  ],
+  "limitations": "Distinct shapes are correlated within setup families. Held-out rows are never fitted; retained old test rows are historical regression evidence. Fresh request-level tests remain a separate benchmark."
+}

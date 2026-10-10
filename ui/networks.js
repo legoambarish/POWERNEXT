@@ -3,6 +3,7 @@
 const main = document.getElementById('main');
 const nav = document.getElementById('v3-networks-nav');
 const V3_TEMPLATE = '/networks.html';
+const PUBLIC_MAX_MODULES = 2;
 let templateText = null;
 let metadata = null;
 let activeJob = null;
@@ -45,14 +46,18 @@ function networkModuleCount(tree) {
   if (tree.op !== 'S' && tree.op !== 'P' || !Array.isArray(tree.children)) throw new Error('Network tree must use R, S, or P with children.');
   return tree.children.reduce((total, child) => {
     const next = total + networkModuleCount(child);
-    if (next > 3) throw new Error('UNSUPPORTED_CURRENT_SCOPE: fixed network trees support at most 3 resistor modules; four-module historical trees are retained but unavailable here.');
+    if (next > PUBLIC_MAX_MODULES) throw new Error(`UNSUPPORTED_CURRENT_SCOPE: fixed network trees require exactly ${PUBLIC_MAX_MODULES} resistor modules per branch; historical three- and four-module trees are retained but unavailable here.`);
     return next;
   }, 0);
 }
 
 function enforceNetworkScope(tree, label) {
   try {
-    return networkModuleCount(tree);
+    const count = networkModuleCount(tree);
+    if (count !== PUBLIC_MAX_MODULES) {
+      throw new Error(`UNSUPPORTED_CURRENT_SCOPE: ${label} requires exactly ${PUBLIC_MAX_MODULES} resistor modules joined by S or P; single-part, three-, and four-module trees are retained historically but unavailable here.`);
+    }
+    return count;
   } catch (error) {
     if (String(error.message || '').startsWith('UNSUPPORTED_CURRENT_SCOPE')) throw new Error(`${label}: ${error.message}`);
     throw error;
@@ -78,7 +83,8 @@ function buildRequest() {
       basic_coverage_assumption: document.getElementById('v3-coverage').value,
       auxiliary_assumption: document.getElementById('v3-auxiliary').value,
     },
-    max_modules: Number(document.getElementById('v3-max-modules').value),
+    min_modules: PUBLIC_MAX_MODULES,
+    max_modules: PUBLIC_MAX_MODULES,
     stages: parseStages(document.getElementById('v3-stages').value),
     search_mode: document.getElementById('v3-search-mode').value,
     priority: document.getElementById('v3-priority').value,
@@ -103,7 +109,7 @@ function renderResearchBanner() {
 function renderMetadata() {
   const catalog = document.getElementById('v3-catalog-status');
   if (!catalog || !metadata) return;
-  catalog.textContent = `${metadata.components_ohm.length} parts · up to ${metadata.max_modules} modules`;
+  catalog.textContent = `${metadata.components_ohm.length} parts · exactly ${metadata.max_modules} modules per branch`;
   const stages = document.getElementById('v3-stages');
   if (stages && !stages.value) stages.value = metadata.default_request.stages.join(',');
 }

@@ -1,0 +1,18 @@
+{
+  "seed": 20261202,
+  "purpose": "POST_SELECTION_TEST_ONLY",
+  "requests_sha256": "d66422486962d885c1e515e0ad24259ac4eb1ddf2722521dd21cc191d5be25f8",
+  "execution_contract": {
+    "sources": {
+      "optimizer.py": "c63abeb31b576a7f0f606a394643dc3206ee476ef9401804da47faf162dcf8b2",
+      "catalog.py": "ef7b565e120455691c6bc076ebb13b0b109c7c5aefea7f25597abb38b62c84b1",
+      "features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+      "benchmark.py": "4f34c54412f35c7fc53b75f19a48c7e5bc85a75b7febede3545a0b9ce6c79520"
+    },
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    }
+  }
+}

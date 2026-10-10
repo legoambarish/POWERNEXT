@@ -16,7 +16,7 @@ import numpy as np
 from .features import BASELINE_COLUMNS, FEATURE_COLUMNS
 
 
-DEFAULT_REGISTRY_ROOT = Path(__file__).resolve().parent.parent / "powernext" / "ml" / "registry" / "networks_v3"
+DEFAULT_REGISTRY_ROOT = Path(__file__).resolve().parent.parent / "powernext" / "ml" / "registry" / "networks_exact2_v5"
 _PREDICTIVE_V3_SOURCES = ("profiles.py", "networks.py", "physics.py", "features.py", "models.py")
 _PREDICTIVE_PHYSICS_SOURCES = (
     "powernext_v3/profiles.py",

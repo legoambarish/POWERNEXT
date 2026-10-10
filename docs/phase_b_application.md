@@ -55,11 +55,10 @@ never exposes a partial result.
 
 For a deliberately small declared catalogue, the service uses complete
 coverage as a safety fallback even when the request selects adaptive search or
-sets a low Physics bound. This prevents a six-part or one-module audit request
-from being presented as representative while it has only sampled a handful of
-known candidates. The saved search counters and `catalog_complete` flag make
-that decision visible; larger catalogues still honor the requested adaptive
-and Physics limits.
+sets a low Physics bound. The saved search counters and `catalog_complete` flag
+make that decision visible; larger catalogues still honor the requested
+adaptive and Physics limits. The live public boundary independently requires
+exactly two modules in each front and tail branch.
 
 ## Model and measurement boundary
 
@@ -93,23 +92,24 @@ The UI is available from the `Network optimizer` navigation item. The research
 3 µF/stage profile is marked in the page and in every saved request as a
 research comparison domain.
 
-The current active application scope exposes maximum branch bounds of 2 or 3
-modules, defaulting to 3; each bound includes single-part recipes in its
-catalogue. The application and CLI reject explicit four-module search requests
-and fixed network trees with `UNSUPPORTED_CURRENT_SCOPE` before creating a job
-or prediction artifact. The historical four-module enumerator, Physics paths,
-model artifacts and evidence remain retained for archival and low-level replay.
+The current active application scope requires exactly 2 modules in both the
+front and tail branches. The application and CLI reject explicit 1-, 3-, or
+4-module requests and fixed network trees with `UNSUPPORTED_CURRENT_SCOPE`
+before creating a job or prediction artifact. The historical 1-, 3-, and
+4-module enumerator, Physics paths, model artifacts and evidence remain
+retained for archival and low-level replay. The product UI has no module-bound
+selector and shows the exact-two S/P requirement directly.
 
 ## Extracted release acceptance
 
 `tests/verify_networks_release.py` is the read-only acceptance harness for a
-new extracted v3 release. Run it from the release directory with the embedded
+new extracted exact-two v5 release. Run it from the release directory with the embedded
 runtime; use an output path outside that directory so the package cannot be
 changed while its manifest is being checked:
 
 ```powershell
 runtime\python.exe -B tests\verify_networks_release.py `
-  --output C:\Temp\powernext-v3-release-acceptance.json
+  --output C:\Temp\PowerNext_Track1_Exact2-acceptance.json
 ```
 
 The harness checks that imports resolve to the embedded runtime or release
@@ -118,15 +118,20 @@ and `model.joblib` and passes strict registry loading, and the immutable
 manifest remains byte-for-byte unchanged after execution. It also performs a
 fixed Physics prediction and scalar-reference freeze for all eight routes.
 The complete catalogue gate evaluates the LI rare timing fixture and the SI
-fixture over stages 2 through 15 with one module per branch: 504 theoretical
-recipes, 504 distinct response candidates, and 504 Physics evaluations per
-fixture.
+fixture over the exact-two branch scope. For a single requested stage this is
+42 recipes per branch and 1,764 front/tail configurations; all stages 2 through
+15 contain 24,696 configurations before any search budget is applied.
 
-Selected v3 artifacts and the serving mapping now exist in the current
-checkout. Normal selected-model acceptance is therefore current: the harness
-must load eight cards/models and perform route, hash and fixed-prediction checks
-without `--allow-pending`. The final extracted package and immutable package
-manifest gate remain pending until the lead-owned builder produces that package.
+The historical v3 selected artifacts remain retained, while the active serving
+mapping is being regenerated under `networks_exact2_v5`. Normal selected-model
+acceptance for that exact-two mapping must load eight cards/models and perform
+route, hash and fixed-prediction checks without `--allow-pending` once those
+artifacts are available. The final extracted package and immutable package
+manifest gate remain pending until the lead-owned builder produces that
+package.
+The lead-owned extracted release target is `PowerNext_Track1_Exact2`; its
+destination and archive must be new paths so the accepted historical release
+and its manifest remain immutable.
 `--allow-pending` remains useful only for a checkout or extraction intentionally
 missing the final model or package gate; it keeps the Physics fallback and
 catalog smoke checks usable, but it never converts `PHYSICS_FALLBACK` into an ML

@@ -19,3 +19,24 @@ excel_comparison.py -text
 powernext/ml/results/networks_v3/results.json filter=lfs diff=lfs merge=lfs -text
 powernext/ml/results/networks_v3/split_assignments.json filter=lfs diff=lfs merge=lfs -text
 powernext/ml/results/networks_v3/checkpoint_*.json filter=lfs diff=lfs merge=lfs -text
+powernext/ml/results/networks_max2_v4/results.json filter=lfs diff=lfs merge=lfs -text
+powernext/ml/results/networks_max2_v4/split_assignments.json filter=lfs diff=lfs merge=lfs -text
+powernext/ml/results/networks_max2_v4/checkpoint_*.json filter=lfs diff=lfs merge=lfs -text
+
+powernext/ml/results/networks_exact2_v5/results.json filter=lfs diff=lfs merge=lfs -text
+powernext/ml/results/networks_exact2_v5/split_assignments.json filter=lfs diff=lfs merge=lfs -text
+powernext/ml/results/networks_exact2_v5/checkpoint_*.json filter=lfs diff=lfs merge=lfs -text
+
+# Preserve byte identities recorded by scientific provenance and release audits.
+tools/*.py -text
+evidence/**/*.py -text
+powernext/ml/data/networks_exact2_v5*/manifest.json -text
+powernext/ml/data/networks_exact2_v5*/coverage_audit.json -text
+powernext/ml/data/networks_exact2_v5*/normalized_coverage_audit*.json -text
+powernext/ml/data/networks_exact2_v5_validation_oracles/*.json -text
+powernext/ml/registry/networks_exact2_v5/**/*.json -text
+powernext/ml/results/networks_exact2_v5/*.json -text
+evidence/exact2_v5/**/*.json -text
+evidence/exact2_v5/*.json -text
+evidence/two_vs_three/**/*.json -text
+powernext/ml/data/networks_max2_v4/*.json -text

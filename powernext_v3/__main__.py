@@ -21,8 +21,9 @@ def main(argv=None):
     def progress(message):print(f"[{datetime.now(timezone.utc).isoformat()}] {message}",flush=True)
     request=json.loads(args.request.read_text(encoding="utf-8"))
     # Validate the public active scope before touching the destination or
-    # starting the optimizer.  Historical four-module artifacts remain usable
-    # through their low-level APIs but are not a live CLI request shape.
+    # starting the optimizer. Historical one-, three-, and four-module
+    # artifacts remain usable through their low-level APIs but are not live
+    # CLI request shapes.
     request,_=normalize_public_request(request)
     if args.output.exists():raise FileExistsError("Result directory already exists; preserve immutable evidence")
     progress("Starting network search")

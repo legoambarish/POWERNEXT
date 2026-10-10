@@ -1,0 +1,284 @@
+{
+  "counts": {
+    "canonical_eligible_rows_after_existing_loader_dedup": 23763,
+    "canonical_route_split_counts": {
+      "cpri_0p5uf::LI::GSHUNT_v0": {
+        "test": 560,
+        "train": 1858,
+        "validation": 333
+      },
+      "cpri_0p5uf::LI::OSHUNT_v0": {
+        "test": 607,
+        "train": 1896,
+        "validation": 373
+      },
+      "cpri_0p5uf::SI::GSHUNT_v0": {
+        "test": 570,
+        "train": 1696,
+        "validation": 355
+      },
+      "cpri_0p5uf::SI::OSHUNT_v0": {
+        "test": 595,
+        "train": 1774,
+        "validation": 335
+      },
+      "research_3uf::LI::GSHUNT_v0": {
+        "test": 595,
+        "train": 2114,
+        "validation": 374
+      },
+      "research_3uf::LI::OSHUNT_v0": {
+        "test": 613,
+        "train": 2010,
+        "validation": 415
+      },
+      "research_3uf::SI::GSHUNT_v0": {
+        "test": 636,
+        "train": 2047,
+        "validation": 347
+      },
+      "research_3uf::SI::OSHUNT_v0": {
+        "test": 816,
+        "train": 2383,
+        "validation": 461
+      }
+    },
+    "deduplication": {
+      "canonical_policy": "lexicographically_smallest_row_id_per_route_response_group_key",
+      "canonical_rows": 23763,
+      "duplicate_group_count": 616,
+      "duplicate_groups_by_route": {
+        "cpri_0p5uf:LI:GSHUNT_v0": 74,
+        "cpri_0p5uf:LI:OSHUNT_v0": 92,
+        "cpri_0p5uf:SI:GSHUNT_v0": 59,
+        "cpri_0p5uf:SI:OSHUNT_v0": 57,
+        "research_3uf:LI:GSHUNT_v0": 87,
+        "research_3uf:LI:OSHUNT_v0": 98,
+        "research_3uf:SI:GSHUNT_v0": 55,
+        "research_3uf:SI:OSHUNT_v0": 94
+      },
+      "duplicates_removed": 2431,
+      "duplicates_removed_by_route": {
+        "cpri_0p5uf:LI:GSHUNT_v0": 283,
+        "cpri_0p5uf:LI:OSHUNT_v0": 370,
+        "cpri_0p5uf:SI:GSHUNT_v0": 228,
+        "cpri_0p5uf:SI:OSHUNT_v0": 238,
+        "research_3uf:LI:GSHUNT_v0": 449,
+        "research_3uf:LI:OSHUNT_v0": 440,
+        "research_3uf:SI:GSHUNT_v0": 261,
+        "research_3uf:SI:OSHUNT_v0": 162
+      },
+      "input_eligible_rows": 26194,
+      "label_tolerance": {
+        "atol": {
+          "front_us": 1e-07,
+          "gain": 1e-10,
+          "tail_us": 1e-05
+        },
+        "rtol": 1e-08
+      },
+      "unkeyed_rows_retained": 0
+    },
+    "eligible_route_counts": {
+      "cpri_0p5uf::LI::GSHUNT_v0": 3034,
+      "cpri_0p5uf::LI::OSHUNT_v0": 3246,
+      "cpri_0p5uf::SI::GSHUNT_v0": 2849,
+      "cpri_0p5uf::SI::OSHUNT_v0": 2942,
+      "research_3uf::LI::GSHUNT_v0": 3532,
+      "research_3uf::LI::OSHUNT_v0": 3478,
+      "research_3uf::SI::GSHUNT_v0": 3291,
+      "research_3uf::SI::OSHUNT_v0": 3822
+    },
+    "eligible_rows_after_filter": 26194,
+    "eligible_split_counts": {
+      "cpri_0p5uf::LI::GSHUNT_v0::test": 707,
+      "cpri_0p5uf::LI::GSHUNT_v0::train": 1896,
+      "cpri_0p5uf::LI::GSHUNT_v0::validation": 431,
+      "cpri_0p5uf::LI::OSHUNT_v0::test": 791,
+      "cpri_0p5uf::LI::OSHUNT_v0::train": 1969,
+      "cpri_0p5uf::LI::OSHUNT_v0::validation": 486,
+      "cpri_0p5uf::SI::GSHUNT_v0::test": 684,
+      "cpri_0p5uf::SI::GSHUNT_v0::train": 1723,
+      "cpri_0p5uf::SI::GSHUNT_v0::validation": 442,
+      "cpri_0p5uf::SI::OSHUNT_v0::test": 713,
+      "cpri_0p5uf::SI::OSHUNT_v0::train": 1801,
+      "cpri_0p5uf::SI::OSHUNT_v0::validation": 428,
+      "research_3uf::LI::GSHUNT_v0::test": 843,
+      "research_3uf::LI::GSHUNT_v0::train": 2196,
+      "research_3uf::LI::GSHUNT_v0::validation": 493,
+      "research_3uf::LI::OSHUNT_v0::test": 853,
+      "research_3uf::LI::OSHUNT_v0::train": 2103,
+      "research_3uf::LI::OSHUNT_v0::validation": 522,
+      "research_3uf::SI::GSHUNT_v0::test": 774,
+      "research_3uf::SI::GSHUNT_v0::train": 2069,
+      "research_3uf::SI::GSHUNT_v0::validation": 448,
+      "research_3uf::SI::OSHUNT_v0::test": 906,
+      "research_3uf::SI::OSHUNT_v0::train": 2455,
+      "research_3uf::SI::OSHUNT_v0::validation": 461
+    },
+    "raw_leaf_distribution": {
+      "front=1,tail=1": 7797,
+      "front=1,tail=2": 7625,
+      "front=1,tail=3": 7662,
+      "front=1,tail=4": 7539,
+      "front=2,tail=1": 7721,
+      "front=2,tail=2": 7684,
+      "front=2,tail=3": 7572,
+      "front=2,tail=4": 7569,
+      "front=3,tail=1": 7576,
+      "front=3,tail=2": 7632,
+      "front=3,tail=3": 7736,
+      "front=3,tail=4": 7536,
+      "front=4,tail=1": 7663,
+      "front=4,tail=2": 7619,
+      "front=4,tail=3": 7545,
+      "front=4,tail=4": 7524
+    },
+    "raw_route_counts": {
+      "cpri_0p5uf::LI::GSHUNT_v0": 3365,
+      "cpri_0p5uf::LI::OSHUNT_v0": 3528,
+      "cpri_0p5uf::SI::GSHUNT_v0": 2977,
+      "cpri_0p5uf::SI::OSHUNT_v0": 3091,
+      "research_3uf::LI::GSHUNT_v0": 4075,
+      "research_3uf::LI::OSHUNT_v0": 4107,
+      "research_3uf::SI::GSHUNT_v0": 3561,
+      "research_3uf::SI::OSHUNT_v0": 6123
+    },
+    "raw_rows": 122000,
+    "raw_rows_rejected": 91173,
+    "raw_rows_retained": 30827,
+    "raw_split_counts": {
+      "cpri_0p5uf::LI::GSHUNT_v0::test": 785,
+      "cpri_0p5uf::LI::GSHUNT_v0::train": 2109,
+      "cpri_0p5uf::LI::GSHUNT_v0::validation": 471,
+      "cpri_0p5uf::LI::OSHUNT_v0::test": 873,
+      "cpri_0p5uf::LI::OSHUNT_v0::train": 2131,
+      "cpri_0p5uf::LI::OSHUNT_v0::validation": 524,
+      "cpri_0p5uf::SI::GSHUNT_v0::test": 730,
+      "cpri_0p5uf::SI::GSHUNT_v0::train": 1792,
+      "cpri_0p5uf::SI::GSHUNT_v0::validation": 455,
+      "cpri_0p5uf::SI::OSHUNT_v0::test": 766,
+      "cpri_0p5uf::SI::OSHUNT_v0::train": 1880,
+      "cpri_0p5uf::SI::OSHUNT_v0::validation": 445,
+      "research_3uf::LI::GSHUNT_v0::test": 974,
+      "research_3uf::LI::GSHUNT_v0::train": 2548,
+      "research_3uf::LI::GSHUNT_v0::validation": 553,
+      "research_3uf::LI::OSHUNT_v0::test": 1004,
+      "research_3uf::LI::OSHUNT_v0::train": 2513,
+      "research_3uf::LI::OSHUNT_v0::validation": 590,
+      "research_3uf::SI::GSHUNT_v0::test": 856,
+      "research_3uf::SI::GSHUNT_v0::train": 2231,
+      "research_3uf::SI::GSHUNT_v0::validation": 474,
+      "research_3uf::SI::OSHUNT_v0::test": 1541,
+      "research_3uf::SI::OSHUNT_v0::train": 3712,
+      "research_3uf::SI::OSHUNT_v0::validation": 870
+    },
+    "raw_status_counts_retained": {
+      "INVALID_OR_UNSUPPORTED": 3616,
+      "SIMULATED": 27211
+    }
+  },
+  "created_at_utc": "2026-10-10T00:00:00Z",
+  "filter_contract": {
+    "domains_strictly_separate": true,
+    "filter_before_training_dedup": true,
+    "leaf_counter": "Recursive canonical tree count: R=1; P/S=sum(children); missing or unknown tree rejects the row.",
+    "physical_storage": "One combined JSONL is acceptable, with domain_id/mode/topology route keys and per-route audit counts; training must retain eight route partitions.",
+    "predicate": "Retain a raw R2 row only when the actual canonical configuration front_network and tail_network trees each contain at most two resistor leaves.",
+    "preserve_labels_and_features_byte_values": true,
+    "preserve_row_ids_and_explicit_splits": true,
+    "proposed_dataset_kind": "FILTERED_SUBSET_OF_PHASE_B_R2",
+    "proposed_output_version": "networks_v3_le2_r2",
+    "retain_invalid_or_unsupported_rows": true
+  },
+  "observed_current_census_read_only": true,
+  "provenance_requirements": {
+    "add_filter_script_hash_after_contract_approval": true,
+    "dedup_policy": "Use existing training._deduplicate_training_rows only after raw tree filter; canonical row is lexicographically smallest row_id within route/response_group_key, with current label tolerances.",
+    "design_leaf_validation": "Recompute leaves from both design.configuration trees and require equality with design front_network_module_count and tail_network_module_count and with row configuration trees. Any mismatch is a hard filter error.",
+    "design_pairing": "For every retained row, resolve the design record by exact row_id; require matching route, split, response_group_key, setup_family_key, front/tail recipe family, and requested configuration.",
+    "manifest_parent_dataset_id": "v3_37efa30cfc8f8006a483",
+    "manifest_parent_design_sha256": "9640bed2b6ca23a02a13cf5d6a5907f9c7fc868ac63314660b3854bed196acb6",
+    "manifest_parent_manifest_sha256": "93f3d521d171559d2b6bd9f30d657fb98d56a1922e53d6ca627805b83df4ebc4",
+    "manifest_parent_rows_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+    "negative_evidence": "Retained invalid/unsupported rows keep original status, null labels, error, input hash, source provenance, row_id, group/split identities.",
+    "source_hashes_copy_verbatim": true,
+    "split_policy": "Copy original train/validation/test labels; validate assign_splits on the filtered eligible rows and run existing loader dedup after filtering. Do not reassign or repair splits."
+  },
+  "purpose": "Count and provenance plan for an immutable <=2-resistor-leaf subset; no rows were written by this plan.",
+  "schema_version": "powernext_v3_filtered_subset_plan_v1",
+  "source": {
+    "dataset_id": "v3_37efa30cfc8f8006a483",
+    "design_file_sha256": "d6498b8bce3bc62b47dd166e8a755d2b38289696bdacc0709e5586498784c880",
+    "design_sha256": "9640bed2b6ca23a02a13cf5d6a5907f9c7fc868ac63314660b3854bed196acb6",
+    "generator_provenance": {
+      "dataset_module": "powernext_v3_dataset_1.0",
+      "network_catalog": {
+        "api": "powernext_v3.networks.enumerate_networks",
+        "fallback_single_resistor": false,
+        "max_modules": 4,
+        "module_counts": {
+          "1": 6,
+          "2": 42,
+          "3": 364,
+          "4": 3780
+        },
+        "recipe_count": 4192
+      },
+      "networks_module": "C:\\Users\\User\\Downloads\\Powernext\\POWERNEXT\\powernext_v3\\networks.py",
+      "physics_module": "unknown",
+      "physics_source_fingerprint": {
+        "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+        "sources": {
+          "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+          "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+          "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+          "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+          "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+          "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+          "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+        }
+      },
+      "profile_ids": {
+        "cpri_0p5uf": "CPRI_0p5uF_NETWORKS_v3",
+        "research_3uf": "RESEARCH_3uF_NETWORKS_v3"
+      },
+      "profiles_module": "C:\\Users\\User\\Downloads\\Powernext\\POWERNEXT\\powernext_v3\\profiles.py"
+    },
+    "manifest_sha256": "93f3d521d171559d2b6bd9f30d657fb98d56a1922e53d6ca627805b83df4ebc4",
+    "manifest_status": "STAGE_COMPLETE",
+    "path": "powernext/ml/data/networks_v3_r2",
+    "physics_source_fingerprint": {
+      "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+      "sources": {
+        "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+        "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+        "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+        "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+        "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "row_count": 122000,
+    "rows_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+    "source_hashes": {
+      "powernext/ml/data/networks_v3_r2/manifest.json": "93f3d521d171559d2b6bd9f30d657fb98d56a1922e53d6ca627805b83df4ebc4",
+      "powernext/ml/data/networks_v3_r2/rows.jsonl": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+      "powernext_v3/dataset.py": "7d6bcd573dbabbf6c4a6eff4d1a7c35cb420a0028878e9d3adb20861c27f13ee",
+      "powernext_v3/features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+      "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+      "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+      "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+    }
+  },
+  "status": "PLAN_ONLY_PENDING_ML_OUTPUT_CONTRACT",
+  "validation_gates_before_write": [
+    "Source rows and design hashes match the recorded R2 manifest.",
+    "Every retained row has a paired design record and both front/tail leaf counts <=2.",
+    "No retained row changes row_id, split, route, response/setup identities, features, labels, status, or error.",
+    "All eight routes have non-empty train/validation/test eligible canonical rows.",
+    "training.load_rows accepts the new manifest source contract and training.assign_splits passes on eligible filtered rows.",
+    "Output directory does not exist before immutable write; write rows/design/manifest atomically and record output hashes."
+  ]
+}

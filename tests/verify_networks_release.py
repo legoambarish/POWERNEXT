@@ -1,4 +1,4 @@
-"""Acceptance gates for an extracted PowerNext v3 network release.
+"""Acceptance gates for an extracted PowerNext exact-two v5 network release.
 
 The script is deliberately an executable acceptance test rather than a build
 helper.  It never installs packages, regenerates a manifest, trains a model,
@@ -15,10 +15,12 @@ Examples (run from the extracted release directory)::
         --output C:\\Temp\\powernext-v3-release-acceptance.json \
         --allow-pending
 
-The optional output must be outside the release root so the immutable package
-cannot be changed while it is being verified.  Complete catalogue checks are
-intentionally exhaustive for the two small max-modules=1 acceptance cases:
-both cover stages 2 through 15 (504 distinct response candidates each).
+The example output is named for the exact-two Track 1 package. The optional output must be outside the release root so the immutable package
+cannot be changed while it is being verified. Exact-two fixed prediction checks
+cover all eight routes. Search acceptance scores the complete 1,764-pair
+response pool for two frozen preliminary setups, then verifies a bounded
+Physics subset; this checks the public contract without claiming a global
+optimization proof.
 """
 
 from __future__ import annotations
@@ -41,8 +43,12 @@ ROOT = Path(__file__).resolve().parents[1]
 RUNTIME = ROOT / "runtime" / ("python.exe" if os.name == "nt" else "bin/python")
 MANIFEST = ROOT / "FINAL_FILE_MANIFEST.json"
 METADATA = ROOT / "RELEASE_METADATA.json"
-SELECTION = ROOT / "powernext" / "ml" / "results" / "networks_v3" / "selected_models.json"
-REGISTRY = ROOT / "powernext" / "ml" / "registry" / "networks_v3"
+ACTIVE_ASSET_SET = "networks_exact2_v5"
+ACTIVE_DATA_RELATIVE = Path("powernext") / "ml" / "data" / (ACTIVE_ASSET_SET + "_aug1")
+SELECTION = ROOT / "powernext" / "ml" / "results" / ACTIVE_ASSET_SET / "selected_models.json"
+REGISTRY = ROOT / "powernext" / "ml" / "registry" / ACTIVE_ASSET_SET
+SCOPE_METADATA = ROOT / "powernext" / "ml" / "results" / ACTIVE_ASSET_SET / "release_scope.json"
+SERVING_BENCHMARK = ROOT / "evidence" / "exact2_v5" / "serving_benchmark.json"
 ROUTES = tuple(
     f"{domain}:{mode}:{topology}"
     for domain in ("cpri_0p5uf", "research_3uf")
@@ -52,6 +58,22 @@ ROUTES = tuple(
 _HASH_RE = re.compile(r"^[0-9a-f]{64}$")
 _MODEL_ID_RE = re.compile(r"^model_[A-Za-z0-9_-]+$")
 _MARKER = "__POWERnext_V3_ACCEPTANCE_RESULT__"
+_PRELIMINARY_SEARCH_CASES = (
+    (
+        "LI_N9",
+        "evidence/two_vs_three/preliminary_v4/cases/"
+        "cpri_0p5uf_LI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_LI_GSHUNT_v0_0/case.json",
+        "LI",
+        9,
+    ),
+    (
+        "SI_N12",
+        "evidence/two_vs_three/preliminary_v4/cases/"
+        "cpri_0p5uf_SI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0/case.json",
+        "SI",
+        12,
+    ),
+)
 
 
 def _sha256(path: Path) -> str:
@@ -403,8 +425,188 @@ def _manifest_immutability(rows: Iterable[dict[str, Any]], manifest_digest: str 
     }
 
 
+def _active_scope_check() -> dict[str, Any]:
+    """Check package selection, scope attestation and exclusion boundaries."""
+
+    base: dict[str, Any] = {
+        "name": "active_exact_two_package_scope",
+        "status": "BLOCKED",
+        "asset_set": ACTIVE_ASSET_SET,
+        "scope_metadata_path": str(SCOPE_METADATA),
+        "selection_path": str(SELECTION),
+        "registry_path": str(REGISTRY),
+    }
+    # A checkout before the coordinated v5 model handoff has no active
+    # selection/scope file.  Keep this explicit pending state so the fallback
+    # acceptance remains useful without treating historical v3 assets as live.
+    if not SCOPE_METADATA.is_file() or not SELECTION.is_file() or not REGISTRY.is_dir():
+        base.update(
+            reason="BLOCKED_PENDING_EXACT2_V5_PACKAGE_SCOPE",
+            scope_metadata_exists=SCOPE_METADATA.is_file(),
+            selection_exists=SELECTION.is_file(),
+            registry_exists=REGISTRY.is_dir(),
+        )
+        return base
+    try:
+        scope = _json(SCOPE_METADATA)
+        selection = _json(SELECTION)
+    except (OSError, json.JSONDecodeError) as exc:
+        base.update(status="FAIL", reason=f"Invalid active exact-two scope metadata: {exc}")
+        return base
+    rule = "".join(str(scope.get("scope_rule", "")).split()).lower()
+    exact_front = re.search(r"front_network_module_count={1,2}2", rule) is not None
+    exact_tail = re.search(r"tail_network_module_count={1,2}2", rule) is not None
+    if (
+        scope.get("schema_version") != "network_release_scope_v5"
+        or scope.get("asset_set") != ACTIVE_ASSET_SET
+        or scope.get("dataset_path") != ACTIVE_DATA_RELATIVE.as_posix()
+        or scope.get("min_modules") != 2
+        or scope.get("max_modules") != 2
+        or scope.get("supported_module_options") != [2]
+        or not exact_front
+        or not exact_tail
+        or scope.get("allow_single_part_recipes") is not False
+        or scope.get("network_count_policy") != "EXACTLY_TWO_PER_BRANCH"
+        or scope.get("training_corpora_included") is not False
+        or scope.get("selected_route_count") != 8
+        or not isinstance(scope.get("dataset_rows_sha256"), str)
+        or not _HASH_RE.fullmatch(scope["dataset_rows_sha256"])
+    ):
+        base.update(status="FAIL", reason="Active package scope metadata does not declare exact-two front/tail branches")
+        return base
+    if not isinstance(selection, dict) or set(selection) != set(ROUTES):
+        base.update(status="FAIL", reason="Active package selection must contain exactly eight routes")
+        return base
+    identifiers = list(selection.values())
+    if any(not isinstance(identifier, str) or not _MODEL_ID_RE.fullmatch(identifier) for identifier in identifiers):
+        base.update(status="FAIL", reason="Active package selection contains invalid model identifiers")
+        return base
+    selected = set(identifiers)
+    if len(selected) != 8:
+        base.update(status="FAIL", reason="Active package selection must contain eight distinct model identifiers")
+        return base
+    if selected != set(scope.get("selected_model_ids", [])):
+        base.update(status="FAIL", reason="Scope metadata selected_model_ids differ from selected_models.json")
+        return base
+    forbidden: list[str] = []
+    allowed_active_results = {
+        "powernext/ml/results/networks_exact2_v5/selected_models.json",
+        "powernext/ml/results/networks_exact2_v5/release_scope.json",
+    }
+    for path in ROOT.rglob("*"):
+        if not path.is_file():
+            continue
+        relative = path.relative_to(ROOT).as_posix()
+        if _is_mutable_path(relative):
+            continue
+        if relative.startswith("powernext/ml/data/"):
+            forbidden.append(relative)
+        elif relative.startswith("powernext/ml/registry/networks_v3/"):
+            forbidden.append(relative)
+        elif relative.startswith("powernext/ml/registry/networks_max2_v4/"):
+            forbidden.append(relative)
+        elif relative.startswith("powernext/ml/results/networks_v3/"):
+            forbidden.append(relative)
+        elif relative.startswith("powernext/ml/results/networks_max2_v4/"):
+            forbidden.append(relative)
+        elif relative.startswith("powernext/ml/results/networks_exact2_v5/") and relative not in allowed_active_results:
+            forbidden.append(relative)
+    active_files = []
+    if REGISTRY.is_dir():
+        active_files = [path.relative_to(ROOT).as_posix() for path in REGISTRY.rglob("*") if path.is_file()]
+    unexpected_models = sorted(
+        relative for relative in active_files
+        if len(Path(relative).parts) < 5 or Path(relative).parts[4] not in selected
+    )
+    if forbidden or unexpected_models:
+        base.update(
+            status="FAIL",
+            reason="Active package contains historical network artifacts or training corpora",
+            forbidden_files=sorted(forbidden)[:20],
+            forbidden_file_count=len(forbidden),
+            unexpected_active_model_files=unexpected_models[:20],
+            unexpected_active_model_file_count=len(unexpected_models),
+        )
+        return base
+    base.update(
+        status="PASS",
+        selected_model_ids=sorted(selected),
+        selected_route_count=len(selection),
+        active_model_files=len(active_files),
+        dataset_id=scope.get("dataset_id"),
+        dataset_rows_sha256=scope.get("dataset_rows_sha256"),
+    )
+    return base
+
+
+def _serving_benchmark_evidence_check() -> dict[str, Any]:
+    """Require the fresh eight-route full-ML-pool serving evidence."""
+
+    base: dict[str, Any] = {
+        "name": "exact2_full_catalog_serving_benchmark",
+        "path": str(SERVING_BENCHMARK),
+        "status": "BLOCKED",
+        "required_routes": list(ROUTES),
+        "theoretical_candidates_per_route": 24696,
+        "physics_budget_per_route": 256,
+    }
+    if not SERVING_BENCHMARK.is_file():
+        base["reason"] = "BLOCKED_PENDING_EXACT2_SERVING_EVIDENCE"
+        return base
+    try:
+        evidence = _json(SERVING_BENCHMARK)
+    except (OSError, json.JSONDecodeError) as exc:
+        base.update(status="FAIL", reason=f"Invalid serving benchmark evidence: {exc}")
+        return base
+    if (
+        evidence.get("schema_version") != "exact2_v5_full_catalog_serving_benchmark_v1"
+        or evidence.get("status") != "PASS"
+        or evidence.get("theoretical_recipe_configurations_per_route") != 24696
+        or evidence.get("physics_budget_per_route") != 256
+        or evidence.get("stages") != list(range(2, 16))
+        or evidence.get("serving_search_mode") != "adaptive_full_ml_pool_physics_bounded"
+    ):
+        base.update(status="FAIL", reason="Serving evidence does not declare the exact2 full-pool contract")
+        return base
+    rows = evidence.get("routes")
+    selected = evidence.get("selected_models")
+    if not isinstance(rows, list) or len(rows) != len(ROUTES) or not isinstance(selected, dict) or set(selected) != set(ROUTES):
+        base.update(status="FAIL", reason="Serving evidence does not contain all eight selected routes")
+        return base
+    invalid: list[str] = []
+    for row in rows:
+        if not isinstance(row, dict):
+            invalid.append("<non-object>")
+            continue
+        route = row.get("route")
+        if (
+            route not in ROUTES
+            or row.get("model_id") != selected.get(route)
+            or row.get("catalog_count") != 24696
+            or row.get("ml_predicted_count") != 24696
+            or row.get("physics_evaluated_count") != 256
+            or row.get("ml_pool_complete") is not True
+            or row.get("catalog_complete") is not False
+        ):
+            invalid.append(str(route))
+    if sorted(row.get("route") for row in rows if isinstance(row, dict)) != sorted(ROUTES):
+        invalid.append("route_set")
+    if invalid:
+        base.update(status="FAIL", reason="Serving evidence contains an incomplete or mismatched route result", invalid_routes=sorted(set(invalid)))
+        return base
+    base.update(
+        status="PASS",
+        route_count=len(rows),
+        model_ids={route: selected[route] for route in ROUTES},
+        all_ml_pools_complete=True,
+        all_physics_budgets_exact=True,
+        note="Results cover all ML candidates; Physics coverage is intentionally bounded and does not establish global no-solution claims.",
+    )
+    return base
+
+
 def _model_artifact_check() -> tuple[dict[str, Any], bool]:
-    """Require exactly eight strict route artifacts when they are present."""
+    """Require exactly eight strict exact-two route artifacts when present."""
 
     base: dict[str, Any] = {
         "name": "selected_route_models",
@@ -429,9 +631,17 @@ def _model_artifact_check() -> tuple[dict[str, Any], bool]:
     if not isinstance(selection, dict) or set(selection) != set(ROUTES):
         base.update(
             status="FAIL",
-            reason="selected_models.json must contain exactly eight v3 routes",
+            reason="selected_models.json must contain exactly eight exact-two v5 routes",
             actual_routes=sorted(selection) if isinstance(selection, dict) else None,
         )
+        return base, False
+    if len({identifier for identifier in selection.values() if isinstance(identifier, str)}) != len(ROUTES):
+        base.update(status="FAIL", reason="selected_models.json must contain eight distinct exact-two model identifiers")
+        return base, False
+    try:
+        scope = _json(SCOPE_METADATA)
+    except (OSError, json.JSONDecodeError) as exc:
+        base.update(status="FAIL", reason=f"Invalid release scope metadata: {exc}")
         return base, False
     invalid: list[str] = []
     missing: list[dict[str, str]] = []
@@ -446,6 +656,22 @@ def _model_artifact_check() -> tuple[dict[str, Any], bool]:
             path = folder / filename
             if not path.is_file() or path.is_symlink():
                 missing.append({"route": route, "path": str(path)})
+        if folder is not None and (folder / "card.json").is_file():
+            try:
+                card = _json(folder / "card.json")
+            except (OSError, json.JSONDecodeError):
+                invalid.append(route)
+                continue
+            if card.get("data_sha256") != scope.get("dataset_rows_sha256"):
+                invalid.append(route)
+                continue
+            provenance = card.get("provenance")
+            if (
+                not isinstance(provenance, dict)
+                or provenance.get("data_sha256") != scope.get("dataset_rows_sha256")
+                or provenance.get("data_manifest_sha256") != scope.get("dataset_manifest_sha256")
+            ):
+                invalid.append(route)
     if invalid:
         base.update(status="FAIL", reason="Invalid selected model identifiers", invalid_routes=invalid)
         return base, False
@@ -462,7 +688,7 @@ payload = json.load(__import__("sys").stdin)
 loaded = []
 for route in payload["routes"]:
     domain, mode, topology = route.split(":")
-    request = {"domain_id": domain, "impulse_type": mode, "topology_id": topology}
+    request = {"domain_id": domain, "impulse_type": mode, "topology_id": topology, "min_modules": 2, "max_modules": 2}
     model, card = load_predictor(request, registry=payload["registry"], selection=payload["selection"])
     card_route = card.get("route", {})
     if card_route.get("domain_id", card_route.get("domain")) != domain:
@@ -510,7 +736,8 @@ try:
             "target_crest_V": 1000000.0 if mode == "LI" else 1300000.0,
             "search_mode": "complete",
             "priority": "complete_physics",
-            "max_modules": 1,
+            "min_modules": 2,
+            "max_modules": 2,
             "stages": list(range(2, 16)),
         })
         configuration = {
@@ -519,14 +746,14 @@ try:
             "polarity": 1,
             "stages": 2,
             "stage_charge_V": 50000.0,
-            # This supplied pair gives a clean evaluator trace for every
+            # This supplied exact-two pair gives a clean evaluator trace for every
             # provisional domain/topology while remaining inside the solver's
             # 200 ms reference window.  It is a fixed Physics smoke
             # configuration, not an optimizer claim.
-            "front_per_stage_ohm": 180.0,
-            "tail_per_stage_ohm": 30.0,
-            "front_network": {"op": "R", "ohm": 180},
-            "tail_network": {"op": "R", "ohm": 30},
+            "front_per_stage_ohm": 210.0,
+            "tail_per_stage_ohm": 25.714285714285715,
+            "front_network": {"op": "S", "children": [{"op": "R", "ohm": 180}, {"op": "R", "ohm": 30}]},
+            "tail_network": {"op": "P", "children": [{"op": "R", "ohm": 180}, {"op": "R", "ohm": 30}]},
         }
         record = app.predict_fixed({"request": request, "configuration": configuration})
         physics = record.get("physics", {})
@@ -599,41 +826,121 @@ print("__POWERnext_V3_ACCEPTANCE_RESULT__" + json.dumps({
     return child
 
 
-def _complete_catalog_check() -> dict[str, Any]:
-    """Exhaustively verify one LI rare and one SI small catalogue."""
+def _network_module_count(tree: Any) -> int:
+    """Count resistor leaves in a stored canonical network tree."""
 
-    rare_path = ROOT / "powernext" / "optimizer" / "examples" / "LI_rare_timing_pass_recommendation.json"
-    si_path = ROOT / "powernext" / "optimizer" / "examples" / "SI_request.json"
-    if not rare_path.is_file() or not si_path.is_file():
-        return {
-            "name": "complete_small_catalogues",
-            "status": "FAIL",
-            "error": "Required optimizer request fixtures are missing",
-        }
+    if not isinstance(tree, dict):
+        raise ValueError("Network tree must be an object")
+    op = tree.get("op")
+    if op == "R":
+        return 1
+    children = tree.get("children")
+    if op not in {"S", "P"} or not isinstance(children, list) or len(children) < 2:
+        raise ValueError("Network tree is not a bounded series/parallel tree")
+    return sum(_network_module_count(child) for child in children)
+
+
+def _preliminary_search_requests() -> list[dict[str, Any]]:
+    """Load and attest the two completed preliminary exact-two smoke cases.
+
+    These files are copied into a release by the existing evidence directory.
+    The baseline rows are checked before their setups become acceptance inputs,
+    so a renamed or one-module fixture cannot silently turn into a search gate.
+    """
+
+    requests: list[dict[str, Any]] = []
+    for name, relative, mode, expected_stage in _PRELIMINARY_SEARCH_CASES:
+        path = ROOT / Path(relative)
+        if not path.is_file():
+            raise FileNotFoundError(f"Missing frozen preliminary search fixture: {relative}")
+        document = _json(path)
+        if document.get("schema_version") != "two_vs_three_waveform_case_v1":
+            raise ValueError(f"Unexpected preliminary fixture schema: {relative}")
+        case = document.get("case")
+        if not isinstance(case, dict):
+            raise ValueError(f"Preliminary fixture has no case identity: {relative}")
+        if (
+            case.get("domain_id") != "cpri_0p5uf"
+            or case.get("mode") != mode
+            or case.get("topology_id") != "GSHUNT_v0"
+        ):
+            raise ValueError(f"Preliminary fixture route mismatch: {relative}")
+        if document.get("baseline_identity_guard", {}).get("passed") is not True:
+            raise ValueError(f"Preliminary fixture identity guard did not pass: {relative}")
+        baselines = document.get("baselines")
+        if not isinstance(baselines, list):
+            raise ValueError(f"Preliminary fixture has no baseline rows: {relative}")
+        baseline = next((row for row in baselines if row.get("label") == "best2_existing_complete"), None)
+        if (
+            not isinstance(baseline, dict)
+            or baseline.get("status") != "PASS"
+            or baseline.get("compliance_status") != "PASS"
+            or baseline.get("numeric_status") != "VALID"
+            or baseline.get("waveform_status") != "VALID_CLEAN_FULL_IMPULSE"
+        ):
+            raise ValueError(f"Preliminary fixture exact-two baseline is not PASS: {relative}")
+        configuration = baseline.get("configuration")
+        if (
+            not isinstance(configuration, dict)
+            or configuration.get("impulse_type") != mode
+            or configuration.get("topology_id") != "GSHUNT_v0"
+            or configuration.get("polarity") != 1
+            or configuration.get("stages") != expected_stage
+        ):
+            raise ValueError(f"Preliminary fixture baseline stage is not N{expected_stage}: {relative}")
+        for branch in ("front_network", "tail_network"):
+            if _network_module_count(configuration.get(branch)) != 2:
+                raise ValueError(f"Preliminary fixture baseline is not exact-two in {branch}: {relative}")
+        setup = case.get("setup")
+        if not isinstance(setup, dict):
+            raise ValueError(f"Preliminary fixture has no setup object: {relative}")
+        requests.append(
+            {
+                "name": name,
+                "source_case": relative,
+                "source_case_sha256": _sha256(path),
+                "expected_stage": expected_stage,
+                "request": {
+                    "schema_version": "network_request_v3",
+                    "request_id": "RELEASE_ACCEPTANCE_" + name,
+                    "domain_id": case.get("domain_id"),
+                    "impulse_type": mode,
+                    "topology_id": case.get("topology_id"),
+                    "target_crest_V": case.get("target_crest_V"),
+                    "setup": setup,
+                    "polarity": 1,
+                    "min_modules": 2,
+                    "max_modules": 2,
+                    "stages": [expected_stage],
+                    "search_mode": "adaptive",
+                    "priority": "combined",
+                    "max_ml_candidates": 1764,
+                    "max_physics_evaluations": 512,
+                    "budget_seconds": 180.0,
+                    "alternatives": 4,
+                    "inventory": None,
+                    "assumptions": [
+                        "Score all 1,764 exact-two front/tail response pairs for this frozen setup.",
+                        "Physics verification is intentionally bounded at 512 candidates; this is a partial search smoke, not an exhaustive optimum proof.",
+                    ],
+                },
+            }
+        )
+    return requests
+
+
+def _bounded_exact2_search_check(models_available: bool) -> dict[str, Any]:
+    """Score the complete exact-two pair pool and verify a bounded subset.
+
+    Each request has one fixed preliminary stage (N9 for LI and N12 for SI),
+    1,764 response candidates in its ML/analytical pool, and up to 512 Physics
+    evaluations.  The search is intentionally partial on the Physics side.
+    """
+
     try:
-        rare = _json(rare_path)
-        si = _json(si_path)
-        rare_request = rare["request"]
-        si_setup = si["setup"]
-    except (OSError, KeyError, json.JSONDecodeError) as exc:
-        return {"name": "complete_small_catalogues", "status": "FAIL", "error": str(exc)}
-    common = {
-        "schema_version": "network_request_v3",
-        "polarity": 1,
-        "topology_id": "GSHUNT_v0",
-        "max_modules": 1,
-        "stages": list(range(2, 16)),
-        "search_mode": "complete",
-        "priority": "complete_physics",
-        "max_ml_candidates": 2000000,
-        "max_physics_evaluations": 1000,
-        "budget_seconds": 240.0,
-        "alternatives": 4,
-        "inventory": None,
-        "assumptions": ["Offline release acceptance; exhaustive mathematical catalogue."],
-    }
-    li = dict(common, request_id="RELEASE_ACCEPTANCE_LI_RARE", domain_id="cpri_0p5uf", impulse_type="LI", target_crest_V=1000000.0, setup=rare_request["setup"])
-    si = dict(common, request_id="RELEASE_ACCEPTANCE_SI", domain_id="cpri_0p5uf", impulse_type="SI", target_crest_V=1300000.0, setup=si_setup)
+        smoke_requests = _preliminary_search_requests()
+    except (OSError, KeyError, TypeError, ValueError, json.JSONDecodeError) as exc:
+        return {"name": "bounded_exact2_searches", "status": "FAIL", "error": str(exc)}
     child_code = r'''
 import json
 import powernext_config  # noqa: F401  # installs the offline socket guard
@@ -641,37 +948,79 @@ from powernext_v3.optimizer import recommend
 
 payload = json.load(__import__("sys").stdin)
 records = []
+
+def module_count(tree):
+    if not isinstance(tree, dict):
+        return -1
+    if tree.get("op") == "R":
+        return 1
+    children = tree.get("children")
+    if tree.get("op") not in ("S", "P") or not isinstance(children, list):
+        return -1
+    return sum(module_count(child) for child in children)
+
 for item in payload["requests"]:
     name = item["name"]
     result, _ = recommend(item["request"], registry=payload["registry"], selection=payload["selection"], retain_waveforms=False)
     search = result["search"]
     best = result.get("best_configuration")
     best_configuration = None if best is None else best.get("configuration", {})
-    expected_pass = item["expected_passing_count"]
-    valid = (
-        search.get("catalog_complete") is True
-        and search.get("theoretical_recipe_configurations") == 504
-        and search.get("distinct_response_candidates") == 504
-        and search.get("physics_evaluated_count") == 504
-        and search.get("considered_count") == 504
-        and search.get("passing_count") == expected_pass
+    expected_stage = item["expected_stage"]
+    expected_catalog_count = 1764
+    model_card = result.get("model")
+    model_id = model_card.get("model_id") if isinstance(model_card, dict) else None
+    expected_model_id = None
+    if payload["models_available"]:
+        route = item["request"]["domain_id"] + ":" + item["request"]["impulse_type"] + ":" + item["request"]["topology_id"]
+        expected_model_id = json.loads(open(payload["selection"], encoding="utf-8").read())[route]
+    recipes_exact_two = bool(
+        isinstance(best, dict)
+        and best.get("front_recipe", {}).get("module_count") == 2
+        and best.get("tail_recipe", {}).get("module_count") == 2
+        and module_count(best_configuration.get("front_network")) == 2
+        and module_count(best_configuration.get("tail_network")) == 2
     )
-    if name == "LI_rare":
-        valid = valid and best_configuration is not None and (
-            best_configuration.get("stages"),
-            best_configuration.get("front_per_stage_ohm"),
-            best_configuration.get("tail_per_stage_ohm"),
-        ) == (7, 30.0, 180.0)
+    valid = (
+        search.get("catalog_complete") is False
+        and search.get("ml_pool_complete") is True
+        and search.get("min_modules_per_branch") == 2
+        and search.get("max_modules_per_branch") == 2
+        and search.get("theoretical_recipe_configurations") == expected_catalog_count
+        and search.get("distinct_response_candidates") == expected_catalog_count
+        and search.get("physics_evaluated_count") in (256, 512)
+        and search.get("considered_count") == expected_catalog_count
+        and isinstance(best, dict)
+        and best.get("compliant") is True
+        and best.get("verification_status") == "PHYSICS_VERIFIED"
+        and best_configuration.get("stages") == expected_stage
+        and recipes_exact_two
+        and result.get("status") == "VERIFIED_COMPLIANT"
+    )
+    model_present = isinstance(model_card, dict)
+    if payload["models_available"]:
+        valid = valid and model_present and model_id == expected_model_id and search.get("ml_predicted_count") == expected_catalog_count
+    else:
+        valid = valid and not model_present and search.get("ml_predicted_count") == 0
     records.append({
         "name": name,
         "status": "PASS" if valid else "FAIL",
         "result_status": result.get("status"),
+        "source_case": item["source_case"],
+        "source_case_sha256": item["source_case_sha256"],
+        "expected_stage": expected_stage,
         "catalog_complete": search.get("catalog_complete"),
+        "ml_pool_complete": search.get("ml_pool_complete"),
         "theoretical_recipe_configurations": search.get("theoretical_recipe_configurations"),
         "distinct_response_candidates": search.get("distinct_response_candidates"),
         "considered_count": search.get("considered_count"),
         "physics_evaluated_count": search.get("physics_evaluated_count"),
         "passing_count": search.get("passing_count"),
+        "ml_predicted_count": search.get("ml_predicted_count"),
+        "model_loaded": model_present,
+        "model_id": model_id,
+        "expected_model_id": expected_model_id,
+        "best_compliant": bool(isinstance(best, dict) and best.get("compliant") is True),
+        "best_recipes_exact_two": recipes_exact_two,
         "unsupported_count": search.get("unsupported_count"),
         "best_configuration": best_configuration,
     })
@@ -681,17 +1030,15 @@ print("__POWERnext_V3_ACCEPTANCE_RESULT__" + json.dumps({
 }, sort_keys=True))
 '''
     return _run_child(
-        "complete_small_catalogues",
+        "bounded_exact2_searches",
         child_code,
         {
-            "requests": [
-                {"name": "LI_rare", "request": li, "expected_passing_count": 1},
-                {"name": "SI", "request": si, "expected_passing_count": 14},
-            ],
+            "requests": smoke_requests,
             "registry": str(REGISTRY),
             "selection": str(SELECTION),
+            "models_available": models_available,
         },
-        timeout=360.0,
+        timeout=600.0,
     )
 
 
@@ -715,7 +1062,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
     report: dict[str, Any] = {
-        "schema_version": "powernext_v3_release_acceptance_v1",
+        "schema_version": "powernext_exact2_v5_release_acceptance_v1",
         "root": str(ROOT),
         "runtime": str(RUNTIME),
         "offline": True,
@@ -723,7 +1070,7 @@ def main(argv: list[str] | None = None) -> int:
         "builder_review": {
             "path": "tools/build_networks_release.py",
             "status": "REQUIREMENTS_CHECKED_INDEPENDENTLY_BY_THIS_HARNESS",
-            "requirement": "Every selected model must include card.json and model.joblib and pass source, runtime, hash and route compatibility checks. The builder also validates these before copying.",
+            "requirement": "Exactly eight networks_exact2_v5 selected routes must include card.json and model.joblib, carry exact-two front/tail dataset provenance, and pass source, runtime, hash and route compatibility checks. Historical network model/results/data assets and all training corpora are excluded from the active package.",
         },
         "checks": [],
         "pending_reasons": [],
@@ -735,13 +1082,17 @@ def main(argv: list[str] | None = None) -> int:
         report["checks"].append(runtime)
         manifest, rows, manifest_digest = _manifest_check()
         report["checks"].append(manifest)
+        scope = _active_scope_check()
+        report["checks"].append(scope)
+        serving = _serving_benchmark_evidence_check()
+        report["checks"].append(serving)
         models, models_available = _model_artifact_check()
         report["checks"].append(models)
         # The fixed path always runs.  If trained artifacts are absent this is
         # explicitly a Physics fallback smoke test, not a model acceptance.
         fixed = _fixed_prediction_check(models_available)
         report["checks"].append(fixed)
-        catalog = _complete_catalog_check()
+        catalog = _bounded_exact2_search_check(models_available)
         report["checks"].append(catalog)
         report["checks"].append(_manifest_immutability(rows, manifest_digest))
     except Exception as exc:

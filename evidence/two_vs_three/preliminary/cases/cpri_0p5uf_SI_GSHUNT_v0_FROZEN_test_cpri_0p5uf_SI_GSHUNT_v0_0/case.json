@@ -1,0 +1,7119 @@
+{
+  "baselines": [
+    {
+      "candidate_index": null,
+      "catalog_count": 6912,
+      "compliance_status": "PASS",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "P"
+        },
+        "front_per_stage_ohm": 2500.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 126245.83800048548,
+        "stages": 12,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 5180.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1300000.0000000002,
+      "derived": {
+        "CL_F": 2.431725675368786e-09,
+        "Cg_F": 4.166666666666666e-08,
+        "Rf_total_ohm": 30002.41813453525,
+        "Rt_total_ohm": 62160.0,
+        "U0_V": 1514950.0560058258,
+        "profile": {
+          "basic_load_capacitance_F": 4.8e-10,
+          "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS",
+          "domain_id": "cpri_0p5uf",
+          "hardware_verified": false,
+          "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+          "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+          "research_only": false,
+          "stage_capacitance_F": 5e-07,
+          "stage_charge_max_V": 200000.0,
+          "stage_energy_max_J": 10000.0,
+          "stages_max": 15,
+          "stages_min": 2,
+          "summed_charge_max_V": 3000000.0,
+          "total_energy_max_J": 150000.0
+        },
+        "stage_capacitance_F": 5e-07,
+        "stage_energy_J": 3984.502903111206
+      },
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -6.3834155613324365e-09,
+      "front_module_options": [
+        2
+      ],
+      "front_us": 260.23211350076315,
+      "gain": 0.8581140974557653,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "integrated_loss_J": 47814.034530417295,
+      "label": "best2_existing_complete",
+      "numeric_status": "VALID",
+      "objective_J": 0.07360416975696166,
+      "provenance": "evidence/phase_b/search_benchmark/FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0.json",
+      "reason_codes": [],
+      "scope": "<=2",
+      "simulation_seconds": 0.014085499999055173,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.03294339367378436
+      },
+      "status": "PASS",
+      "stored_energy_J": 47814.03483733447,
+      "tail_module_options": [
+        1,
+        2
+      ],
+      "tail_us": 2232.824308871645,
+      "target_crest_V": 1300000.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": null,
+      "catalog_count": 6912,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_per_stage_ohm": 30.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 144444.44444444444,
+        "stages": 9,
+        "tail_per_stage_ohm": 5000.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1243689.5830272299,
+      "derived": {
+        "CL_F": 2.431725675368786e-09,
+        "Cg_F": 5.5555555555555555e-08,
+        "Rf_total_ohm": 272.41813453525185,
+        "Rt_total_ohm": 45000.0,
+        "U0_V": 1300000.0,
+        "profile": {
+          "basic_load_capacitance_F": 4.8e-10,
+          "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS",
+          "domain_id": "cpri_0p5uf",
+          "hardware_verified": false,
+          "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+          "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+          "research_only": false,
+          "stage_capacitance_F": 5e-07,
+          "stage_charge_max_V": 200000.0,
+          "stage_energy_max_J": 10000.0,
+          "stages_max": 15,
+          "stages_min": 2,
+          "summed_charge_max_V": 3000000.0,
+          "total_energy_max_J": 150000.0
+        },
+        "stage_capacitance_F": 5e-07,
+        "stage_energy_J": 5216.049382716049
+      },
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.052134015090411e-09,
+      "front_module_options": [
+        1,
+        2
+      ],
+      "front_us": 3.9520654611990236,
+      "gain": 0.9566842946363306,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "integrated_loss_J": 46944.44420557696,
+      "label": "baseline2_simple",
+      "numeric_status": "VALID",
+      "objective_J": 26.510256583313588,
+      "provenance": "simple_single_module_reference",
+      "reason_codes": [],
+      "scope": "<=2",
+      "simulation_seconds": 0.013548599999921862,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.03131346528765259
+      },
+      "status": "FAIL",
+      "stored_energy_J": 46944.444444444445,
+      "tail_module_options": [
+        1,
+        2
+      ],
+      "tail_us": 1813.1055373305442,
+      "target_crest_V": 1300000.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    }
+  ],
+  "best_three_pair_metrics": {
+    "actual_2_vs_target_Linf_normalized": 0.04907112642870759,
+    "actual_2_vs_target_RMSE_normalized": 0.019971399955063765,
+    "actual_2v3_L2_time_norm_normalized_sqrt_V2s_per_V": 0.0,
+    "actual_2v3_Linf_normalized": 0.0,
+    "actual_2v3_MAE_normalized": 0.0,
+    "actual_2v3_RMSE_normalized": 0.0,
+    "actual_2v3_time_integral_abs_normalized_Vs_per_V": 0.0,
+    "actual_3_vs_target_Linf_normalized": 0.04907112642870759,
+    "actual_3_vs_target_RMSE_normalized": 0.019971399955063765,
+    "common_grid_points": 1600,
+    "common_time_duration_s": 0.03294339367378436,
+    "common_time_end_s": 0.03294339367378436,
+    "common_time_start_s": 0.0,
+    "crest_normalization_V": 1300000.0,
+    "target_reference": {
+      "alignment": "Physical firing t=0; no shift of simulated traces",
+      "analytic_front_s": 0.00025,
+      "analytic_tail_s": 0.0024999999999999996,
+      "crest_normalization_V": 1300000.0,
+      "family": "NON_UNIQUE_DOUBLE_EXPONENTIAL_REFERENCE",
+      "fast_tau_s": 6.248290042186293e-05,
+      "mode": "SI",
+      "no_peak_shift_or_amplitude_renormalization": true,
+      "nominal_front_s": 0.00025,
+      "nominal_tail_s": 0.0025,
+      "peak_time_s": 0.00025,
+      "qualification": "Plotting reference only; three scalar requirements do not uniquely specify a waveform",
+      "slow_tau_s": 0.003155015490913454,
+      "status": "REFERENCE_GENERATED",
+      "time_origin": "physical_firing_t0",
+      "unscaled_peak": 0.905523584845703,
+      "virtual_origin_s": -2.9172219863636772e-05
+    }
+  },
+  "case": {
+    "case_id": "cpri_0p5uf_SI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0",
+    "domain_id": "cpri_0p5uf",
+    "mode": "SI",
+    "request_id": "FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0",
+    "setup": {
+      "auxiliary_assumption": "UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED",
+      "basic_coverage_assumption": "ADDITIONAL_DISJOINT",
+      "divider_capacitance_F": 5.647757401530103e-10,
+      "dut_capacitance_F": 1.1014886013914275e-09,
+      "load_resistance_ohm": null,
+      "loop_inductance_H": 3.898308871082481e-05,
+      "loop_resistance_ohm": 2.418134535251869,
+      "setup_id": "FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0",
+      "stray_capacitance_F": 2.854613338243485e-10
+    },
+    "source_kind": "FROZEN_BENCHMARK_REQUEST",
+    "source_path": "evidence/phase_b/search_benchmark/requests.json",
+    "source_sha256": "4a8e393643454ae8c25cedf6d30b261432ce5c05b8e5c8278bbeabbf15e57506",
+    "stages": [
+      6,
+      9,
+      12
+    ],
+    "target_crest_V": 1300000.0,
+    "topology_id": "GSHUNT_v0"
+  },
+  "catalogs": {
+    "max_modules_2": {
+      "catalog_sha256": "ce230a3177128339d0afcc58f04c412201dddb9392c605693a4bfe991c82b4bd",
+      "distinct_resistances_per_branch": 48,
+      "distinct_response_candidates": 6912,
+      "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+      "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED",
+      "max_modules_per_branch": 2,
+      "recipes_per_branch": 48,
+      "stages": [
+        6,
+        9,
+        12
+      ],
+      "theoretical_recipe_configurations": 6912,
+      "uniform_stages": true
+    },
+    "max_modules_3": {
+      "catalog_sha256": "0fec271fa1d7d9051c6ea9b535d939770b772718cc053f3fdbb946618c093261",
+      "distinct_resistances_per_branch": 407,
+      "distinct_response_candidates": 496947,
+      "grammar_id": "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3",
+      "hardware_inventory_status": "UNKNOWN_UNLESS_EXPLICITLY_SUPPLIED",
+      "max_modules_per_branch": 3,
+      "recipes_per_branch": 412,
+      "stages": [
+        6,
+        9,
+        12
+      ],
+      "theoretical_recipe_configurations": 509232,
+      "uniform_stages": true
+    },
+    "three_sample_count": 25,
+    "three_sample_seed_counts": {
+      "0": 10,
+      "1": 7,
+      "2": 7
+    }
+  },
+  "crossover": {
+    "actual_2_vs_target_Linf_normalized": 0.04907112642870759,
+    "actual_2_vs_target_RMSE_normalized": 0.019971399955063765,
+    "actual_2v3_L2_time_norm_normalized_sqrt_V2s_per_V": 0.009943823720921178,
+    "actual_2v3_Linf_normalized": 0.2741219299878838,
+    "actual_2v3_MAE_normalized": 0.033234096877690134,
+    "actual_2v3_RMSE_normalized": 0.054765958072863836,
+    "actual_2v3_time_integral_abs_normalized_Vs_per_V": 0.0010957842347900154,
+    "actual_3_vs_target_Linf_normalized": 0.3003588000287994,
+    "actual_3_vs_target_RMSE_normalized": 0.03752176403251058,
+    "common_grid_points": 1600,
+    "common_time_duration_s": 0.03294339367378436,
+    "common_time_end_s": 0.03294339367378436,
+    "common_time_start_s": 0.0,
+    "crest_normalization_V": 1300000.0,
+    "target_reference": {
+      "alignment": "Physical firing t=0; no shift of simulated traces",
+      "analytic_front_s": 0.00025,
+      "analytic_tail_s": 0.0024999999999999996,
+      "crest_normalization_V": 1300000.0,
+      "family": "NON_UNIQUE_DOUBLE_EXPONENTIAL_REFERENCE",
+      "fast_tau_s": 6.248290042186293e-05,
+      "mode": "SI",
+      "no_peak_shift_or_amplitude_renormalization": true,
+      "nominal_front_s": 0.00025,
+      "nominal_tail_s": 0.0025,
+      "peak_time_s": 0.00025,
+      "qualification": "Plotting reference only; three scalar requirements do not uniquely specify a waveform",
+      "slow_tau_s": 0.003155015490913454,
+      "status": "REFERENCE_GENERATED",
+      "time_origin": "physical_firing_t0",
+      "unscaled_peak": 0.905523584845703,
+      "virtual_origin_s": -2.9172219863636772e-05
+    }
+  },
+  "schema_version": "two_vs_three_waveform_case_v1",
+  "selection": {
+    "best_status_semantics": "PASS requires VALID numeric status, VALID_CLEAN_FULL_IMPULSE waveform, and evaluator PASS; otherwise result is retained as FAIL/UNSUPPORTED.",
+    "best_three_sampled": {
+      "baseline_source": "evidence/phase_b/search_benchmark/FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0.json",
+      "candidate_index": null,
+      "catalog_count": 496947,
+      "compliance_status": "PASS",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "P"
+        },
+        "front_per_stage_ohm": 2500.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 126245.83800048548,
+        "stages": 12,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 5180.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1300000.0000000002,
+      "derived": {
+        "CL_F": 2.431725675368786e-09,
+        "Cg_F": 4.166666666666666e-08,
+        "Rf_total_ohm": 30002.41813453525,
+        "Rt_total_ohm": 62160.0,
+        "U0_V": 1514950.0560058258,
+        "profile": {
+          "basic_load_capacitance_F": 4.8e-10,
+          "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS",
+          "domain_id": "cpri_0p5uf",
+          "hardware_verified": false,
+          "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+          "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+          "research_only": false,
+          "stage_capacitance_F": 5e-07,
+          "stage_charge_max_V": 200000.0,
+          "stage_energy_max_J": 10000.0,
+          "stages_max": 15,
+          "stages_min": 2,
+          "summed_charge_max_V": 3000000.0,
+          "total_energy_max_J": 150000.0
+        },
+        "stage_capacitance_F": 5e-07,
+        "stage_energy_J": 3984.502903111206
+      },
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -6.3834155613324365e-09,
+      "front_us": 260.23211350076315,
+      "gain": 0.8581140974557653,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "integrated_loss_J": 47814.034530417295,
+      "label": "exact_two_baseline_in_three_pool",
+      "numeric_status": "VALID",
+      "objective_J": 0.07360416975696166,
+      "provenance": "exact_two_baseline_in_three_pool",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": -1,
+      "simulation_seconds": 0.010062999997899169,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.03294339367378436
+      },
+      "status": "PASS",
+      "stored_energy_J": 47814.03483733447,
+      "tail_us": 2232.824308871645,
+      "target_crest_V": 1300000.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    "best_two": {
+      "candidate_index": null,
+      "catalog_count": 6912,
+      "compliance_status": "PASS",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "P"
+        },
+        "front_per_stage_ohm": 2500.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 126245.83800048548,
+        "stages": 12,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 5180.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1300000.0000000002,
+      "derived": {
+        "CL_F": 2.431725675368786e-09,
+        "Cg_F": 4.166666666666666e-08,
+        "Rf_total_ohm": 30002.41813453525,
+        "Rt_total_ohm": 62160.0,
+        "U0_V": 1514950.0560058258,
+        "profile": {
+          "basic_load_capacitance_F": 4.8e-10,
+          "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS",
+          "domain_id": "cpri_0p5uf",
+          "hardware_verified": false,
+          "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+          "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+          "research_only": false,
+          "stage_capacitance_F": 5e-07,
+          "stage_charge_max_V": 200000.0,
+          "stage_energy_max_J": 10000.0,
+          "stages_max": 15,
+          "stages_min": 2,
+          "summed_charge_max_V": 3000000.0,
+          "total_energy_max_J": 150000.0
+        },
+        "stage_capacitance_F": 5e-07,
+        "stage_energy_J": 3984.502903111206
+      },
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -6.3834155613324365e-09,
+      "front_module_options": [
+        2
+      ],
+      "front_us": 260.23211350076315,
+      "gain": 0.8581140974557653,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "integrated_loss_J": 47814.034530417295,
+      "label": "best2_existing_complete",
+      "numeric_status": "VALID",
+      "objective_J": 0.07360416975696166,
+      "provenance": "evidence/phase_b/search_benchmark/FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0.json",
+      "reason_codes": [],
+      "scope": "<=2",
+      "simulation_seconds": 0.014085499999055173,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.03294339367378436
+      },
+      "status": "PASS",
+      "stored_energy_J": 47814.03483733447,
+      "tail_module_options": [
+        1,
+        2
+      ],
+      "tail_us": 2232.824308871645,
+      "target_crest_V": 1300000.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    "controlled_same_N_charge_three": {
+      "candidate_index": 481459,
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 180,
+                  "op": "R"
+                },
+                {
+                  "ohm": 520,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 5133.714285714285,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 126245.83800048548,
+        "stages": 12,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 6850.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1252282.8802627367,
+      "derived": {
+        "CL_F": 2.431725675368786e-09,
+        "Cg_F": 4.166666666666666e-08,
+        "Rf_total_ohm": 61606.989563106676,
+        "Rt_total_ohm": 82200.0,
+        "U0_V": 1514950.0560058258,
+        "profile": {
+          "basic_load_capacitance_F": 4.8e-10,
+          "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS",
+          "domain_id": "cpri_0p5uf",
+          "hardware_verified": false,
+          "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+          "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+          "research_only": false,
+          "stage_capacitance_F": 5e-07,
+          "stage_charge_max_V": 200000.0,
+          "stage_energy_max_J": 10000.0,
+          "stages_max": 15,
+          "stages_min": 2,
+          "summed_charge_max_V": 3000000.0,
+          "total_energy_max_J": 150000.0
+        },
+        "stage_capacitance_F": 5e-07,
+        "stage_energy_J": 3984.502903111206
+      },
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.280347012861686e-09,
+      "front_recipe": {
+        "components": [
+          180,
+          520,
+          5000
+        ],
+        "equivalent_ohm": "35936/7",
+        "id": "S(R5000,P(R180,R520))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 180,
+                  "op": "R"
+                },
+                {
+                  "ohm": 520,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 477.1636879534836,
+      "gain": 0.8266166104276649,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "integrated_loss_J": 47814.03458316249,
+      "label": "controlled_three_same_N_charge",
+      "numeric_status": "VALID",
+      "objective_J": 22.32022121253237,
+      "provenance": "selected_three_network_fixed_two_baseline_N_and_charge",
+      "reason_codes": [],
+      "scope": "<=3_CONTROLLED_FIXED_N_Q",
+      "seed": 0,
+      "simulation_seconds": 0.014644499999121763,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.043601805531670056
+      },
+      "source_sample_row": 481459,
+      "status": "FAIL",
+      "stored_energy_J": 47814.03483733447,
+      "tail_recipe": {
+        "components": [
+          3700,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "6850",
+        "id": "S(R5000,P(R3700,R3700))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 3139.734837841761,
+      "target_crest_V": 1300000.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    "cumulative_seed_minima": [
+      {
+        "best_candidate_index": 481459,
+        "best_objective_J": 20.823230077739268,
+        "best_status": "FAIL",
+        "sample_count": 10,
+        "through_seed": 0
+      },
+      {
+        "best_candidate_index": 481459,
+        "best_objective_J": 20.823230077739268,
+        "best_status": "FAIL",
+        "sample_count": 17,
+        "through_seed": 1
+      },
+      {
+        "best_candidate_index": 481459,
+        "best_objective_J": 20.823230077739268,
+        "best_status": "FAIL",
+        "sample_count": 24,
+        "through_seed": 2
+      }
+    ],
+    "scope": "BEST_FOUND_IN_DECLARED_SAMPLE",
+    "selected_three_for_crossover": {
+      "candidate_index": 481459,
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 180,
+                  "op": "R"
+                },
+                {
+                  "ohm": 520,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 5133.714285714285,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 126245.83800048548,
+        "stages": 12,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 6850.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1252282.8802627367,
+      "derived": {
+        "CL_F": 2.431725675368786e-09,
+        "Cg_F": 4.166666666666666e-08,
+        "Rf_total_ohm": 61606.989563106676,
+        "Rt_total_ohm": 82200.0,
+        "U0_V": 1514950.0560058258,
+        "profile": {
+          "basic_load_capacitance_F": 4.8e-10,
+          "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS",
+          "domain_id": "cpri_0p5uf",
+          "hardware_verified": false,
+          "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+          "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+          "research_only": false,
+          "stage_capacitance_F": 5e-07,
+          "stage_charge_max_V": 200000.0,
+          "stage_energy_max_J": 10000.0,
+          "stages_max": 15,
+          "stages_min": 2,
+          "summed_charge_max_V": 3000000.0,
+          "total_energy_max_J": 150000.0
+        },
+        "stage_capacitance_F": 5e-07,
+        "stage_energy_J": 3984.502903111206
+      },
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.280347012861686e-09,
+      "front_recipe": {
+        "components": [
+          180,
+          520,
+          5000
+        ],
+        "equivalent_ohm": "35936/7",
+        "id": "S(R5000,P(R180,R520))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 180,
+                  "op": "R"
+                },
+                {
+                  "ohm": 520,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 477.1636879534836,
+      "gain": 0.8266166104276649,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "integrated_loss_J": 47814.03458316249,
+      "label": "controlled_three_same_N_charge",
+      "numeric_status": "VALID",
+      "objective_J": 22.32022121253237,
+      "provenance": "selected_three_network_fixed_two_baseline_N_and_charge",
+      "reason_codes": [],
+      "scope": "<=3_CONTROLLED_FIXED_N_Q",
+      "seed": 0,
+      "simulation_seconds": 0.014644499999121763,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.043601805531670056
+      },
+      "source_sample_row": 481459,
+      "status": "FAIL",
+      "stored_energy_J": 47814.03483733447,
+      "tail_recipe": {
+        "components": [
+          3700,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "6850",
+        "id": "S(R5000,P(R3700,R3700))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 3139.734837841761,
+      "target_crest_V": 1300000.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    "selected_three_for_overlay": {
+      "baseline_source": "evidence/phase_b/search_benchmark/FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0.json",
+      "candidate_index": null,
+      "catalog_count": 496947,
+      "compliance_status": "PASS",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "P"
+        },
+        "front_per_stage_ohm": 2500.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 126245.83800048548,
+        "stages": 12,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 5180.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1300000.0000000002,
+      "derived": {
+        "CL_F": 2.431725675368786e-09,
+        "Cg_F": 4.166666666666666e-08,
+        "Rf_total_ohm": 30002.41813453525,
+        "Rt_total_ohm": 62160.0,
+        "U0_V": 1514950.0560058258,
+        "profile": {
+          "basic_load_capacitance_F": 4.8e-10,
+          "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS",
+          "domain_id": "cpri_0p5uf",
+          "hardware_verified": false,
+          "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+          "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+          "research_only": false,
+          "stage_capacitance_F": 5e-07,
+          "stage_charge_max_V": 200000.0,
+          "stage_energy_max_J": 10000.0,
+          "stages_max": 15,
+          "stages_min": 2,
+          "summed_charge_max_V": 3000000.0,
+          "total_energy_max_J": 150000.0
+        },
+        "stage_capacitance_F": 5e-07,
+        "stage_energy_J": 3984.502903111206
+      },
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -6.3834155613324365e-09,
+      "front_us": 260.23211350076315,
+      "gain": 0.8581140974557653,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "integrated_loss_J": 47814.034530417295,
+      "label": "exact_two_baseline_in_three_pool",
+      "numeric_status": "VALID",
+      "objective_J": 0.07360416975696166,
+      "provenance": "exact_two_baseline_in_three_pool",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": -1,
+      "simulation_seconds": 0.010062999997899169,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.03294339367378436
+      },
+      "status": "PASS",
+      "stored_energy_J": 47814.03483733447,
+      "tail_us": 2232.824308871645,
+      "target_crest_V": 1300000.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    "selected_three_interpretation": "PASS_SELECTED",
+    "selected_two_for_crossover": {
+      "candidate_index": null,
+      "catalog_count": 6912,
+      "compliance_status": "PASS",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "P"
+        },
+        "front_per_stage_ohm": 2500.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 126245.83800048548,
+        "stages": 12,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 5180.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1300000.0000000002,
+      "derived": {
+        "CL_F": 2.431725675368786e-09,
+        "Cg_F": 4.166666666666666e-08,
+        "Rf_total_ohm": 30002.41813453525,
+        "Rt_total_ohm": 62160.0,
+        "U0_V": 1514950.0560058258,
+        "profile": {
+          "basic_load_capacitance_F": 4.8e-10,
+          "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS",
+          "domain_id": "cpri_0p5uf",
+          "hardware_verified": false,
+          "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+          "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+          "research_only": false,
+          "stage_capacitance_F": 5e-07,
+          "stage_charge_max_V": 200000.0,
+          "stage_energy_max_J": 10000.0,
+          "stages_max": 15,
+          "stages_min": 2,
+          "summed_charge_max_V": 3000000.0,
+          "total_energy_max_J": 150000.0
+        },
+        "stage_capacitance_F": 5e-07,
+        "stage_energy_J": 3984.502903111206
+      },
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -6.3834155613324365e-09,
+      "front_module_options": [
+        2
+      ],
+      "front_us": 260.23211350076315,
+      "gain": 0.8581140974557653,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "integrated_loss_J": 47814.034530417295,
+      "label": "best2_existing_complete",
+      "numeric_status": "VALID",
+      "objective_J": 0.07360416975696166,
+      "provenance": "evidence/phase_b/search_benchmark/FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0.json",
+      "reason_codes": [],
+      "scope": "<=2",
+      "simulation_seconds": 0.014085499999055173,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.03294339367378436
+      },
+      "status": "PASS",
+      "stored_energy_J": 47814.03483733447,
+      "tail_module_options": [
+        1,
+        2
+      ],
+      "tail_us": 2232.824308871645,
+      "target_crest_V": 1300000.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    }
+  },
+  "simulation_cost": {
+    "attempt_count": 27,
+    "status_counts": {
+      "FAIL": 25,
+      "PASS": 2,
+      "UNSUPPORTED": 0
+    },
+    "three_module_coverage": "DETERMINISTIC_BOUNDED_SAMPLE",
+    "total_simulation_seconds": 0.46037419999265694,
+    "two_module_coverage": "COMPLETE_PHYSICS_REPLAY"
+  },
+  "study_limits": {
+    "common_grid_intersection_only": true,
+    "fixed_crossover_charge_V": 126245.83800048548,
+    "fixed_crossover_stage": 12,
+    "n_points": 1600,
+    "no_ml": true,
+    "no_optimizer": true,
+    "no_peak_shift_or_amplitude_renormalization": true,
+    "no_training": true
+  },
+  "three_sample_records": [
+    {
+      "baseline_source": "evidence/phase_b/search_benchmark/FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0.json",
+      "candidate_index": null,
+      "catalog_count": 496947,
+      "compliance_status": "PASS",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "P"
+        },
+        "front_per_stage_ohm": 2500.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 126245.83800048548,
+        "stages": 12,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 5180.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1300000.0000000002,
+      "derived": {
+        "CL_F": 2.431725675368786e-09,
+        "Cg_F": 4.166666666666666e-08,
+        "Rf_total_ohm": 30002.41813453525,
+        "Rt_total_ohm": 62160.0,
+        "U0_V": 1514950.0560058258,
+        "profile": {
+          "basic_load_capacitance_F": 4.8e-10,
+          "constraint_basis": "SUPPLIED_CPRI_PARAMETER_SHEET_AND_EXPLICIT_CLARIFICATIONS",
+          "domain_id": "cpri_0p5uf",
+          "hardware_verified": false,
+          "label": "CPRI parameter profile \u2014 0.5 \u00b5F/stage",
+          "profile_id": "CPRI_0p5uF_NETWORKS_v3",
+          "research_only": false,
+          "stage_capacitance_F": 5e-07,
+          "stage_charge_max_V": 200000.0,
+          "stage_energy_max_J": 10000.0,
+          "stages_max": 15,
+          "stages_min": 2,
+          "summed_charge_max_V": 3000000.0,
+          "total_energy_max_J": 150000.0
+        },
+        "stage_capacitance_F": 5e-07,
+        "stage_energy_J": 3984.502903111206
+      },
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -6.3834155613324365e-09,
+      "front_us": 260.23211350076315,
+      "gain": 0.8581140974557653,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "integrated_loss_J": 47814.034530417295,
+      "label": "exact_two_baseline_in_three_pool",
+      "numeric_status": "VALID",
+      "objective_J": 0.07360416975696166,
+      "provenance": "exact_two_baseline_in_three_pool",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": -1,
+      "simulation_seconds": 0.010062999997899169,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.03294339367378436
+      },
+      "status": "PASS",
+      "stored_energy_J": 47814.03483733447,
+      "tail_us": 2232.824308871645,
+      "target_crest_V": 1300000.0,
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 163593,
+      "canonical_score": {
+        "J": 73.88640612391858,
+        "components": {
+          "T2_s": {
+            "deviation_pct": 27.110653926270277,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": 0.45184423210450475,
+            "normalized_margin": 0.5481557678954952,
+            "squared_contribution": 0.20416321008610955,
+            "target": 0.0025,
+            "value": 0.003177766348156757,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 94.30562799861374,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 4.715281399930689,
+            "normalized_margin": -3.715281399930689,
+            "squared_contribution": 22.233878680532314,
+            "target": 0.00025,
+            "value": 0.00048576406999653436,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -21.518254531901547,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -7.172751510633848,
+            "normalized_margin": -6.172751510633848,
+            "squared_contribution": 51.44836423330015,
+            "target": 1300000.0,
+            "value": 1020262.6910852799,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -6.172751510633848,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 10180.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 7126.436781609195,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1020262.6910852799,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -4.833589143042143e-09,
+      "front_index": 401,
+      "front_module_options": [
+        3
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            180,
+            5000,
+            5000
+          ],
+          "equivalent_ohm": "10180",
+          "id": "S(R180,R5000,R5000)",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 180,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          180,
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "10180",
+        "id": "S(R180,R5000,R5000)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          180,
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "10180",
+        "id": "S(R180,R5000,R5000)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 485.7640699965344,
+      "gain": 0.8502189092377332,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 73.88640612391858,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_0",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 0,
+      "simulation_seconds": 0.014107300001342082,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.04405895314593959
+      },
+      "status": "FAIL",
+      "tail_index": 386,
+      "tail_module_options": [
+        3
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            5000,
+            5000
+          ],
+          "equivalent_ohm": "620000/87",
+          "id": "S(R5000,P(R3700,R5000))",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "children": [
+                  {
+                    "ohm": 3700,
+                    "op": "R"
+                  },
+                  {
+                    "ohm": 5000,
+                    "op": "R"
+                  }
+                ],
+                "op": "P"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          3700,
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "620000/87",
+        "id": "S(R5000,P(R3700,R5000))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          3700,
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "620000/87",
+        "id": "S(R5000,P(R3700,R5000))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 3177.766348156757,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 322729,
+      "canonical_score": {
+        "J": 21.43977908693339,
+        "components": {
+          "T2_s": {
+            "deviation_pct": 24.377017743689322,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": 0.4062836290614887,
+            "normalized_margin": 0.5937163709385113,
+            "squared_contribution": 0.16506638724337333,
+            "target": 0.0025,
+            "value": 0.003109425443592233,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 92.24903836829954,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 4.612451918414979,
+            "normalized_margin": -3.6124519184149797,
+            "squared_contribution": 21.274712699690017,
+            "target": 0.00025,
+            "value": 0.0004806225959207489,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": 0.0,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": 0.0,
+            "normalized_margin": 1.0,
+            "squared_contribution": 0.0,
+            "target": 1300000.0,
+            "value": 1300000.0,
+            "within_limits": true
+          }
+        },
+        "minimum_margin": -3.6124519184149797,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 6850.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 172735.68697272433,
+        "stages": 9,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 6850.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1300000.0,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -4.908169567998913e-09,
+      "front_index": 385,
+      "front_module_options": [
+        3
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            3700,
+            5000
+          ],
+          "equivalent_ohm": "6850",
+          "id": "S(R5000,P(R3700,R3700))",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "children": [
+                  {
+                    "ohm": 3700,
+                    "op": "R"
+                  },
+                  {
+                    "ohm": 3700,
+                    "op": "R"
+                  }
+                ],
+                "op": "P"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "6850",
+        "id": "S(R5000,P(R3700,R3700))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "6850",
+        "id": "S(R5000,P(R3700,R3700))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 480.6225959207489,
+      "gain": 0.8362165744433159,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 21.43977908693339,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_0",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 0,
+      "simulation_seconds": 0.0147225000000617,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.04297758729296885
+      },
+      "status": "FAIL",
+      "tail_index": 385,
+      "tail_module_options": [
+        3
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            3700,
+            5000
+          ],
+          "equivalent_ohm": "6850",
+          "id": "S(R5000,P(R3700,R3700))",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "children": [
+                  {
+                    "ohm": 3700,
+                    "op": "R"
+                  },
+                  {
+                    "ohm": 3700,
+                    "op": "R"
+                  }
+                ],
+                "op": "P"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          3700,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "6850",
+        "id": "S(R5000,P(R3700,R3700))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          3700,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "6850",
+        "id": "S(R5000,P(R3700,R3700))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 3109.425443592233,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 481459,
+      "canonical_score": {
+        "J": 20.823230077739268,
+        "components": {
+          "T2_s": {
+            "deviation_pct": 25.589393513670487,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": 0.426489891894508,
+            "normalized_margin": 0.573510108105492,
+            "squared_contribution": 0.1818936278881891,
+            "target": 0.0025,
+            "value": 0.003139734837841762,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 90.86547518139344,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 4.543273759069673,
+            "normalized_margin": -3.5432737590696735,
+            "squared_contribution": 20.641336449851078,
+            "target": 0.00025,
+            "value": 0.0004771636879534836,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -2.220446049250313e-14,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -5.970016503945375e-15,
+            "normalized_margin": 0.999999999999994,
+            "squared_contribution": 3.5641097057380153e-29,
+            "target": 1300000.0,
+            "value": 1299999.9999999998,
+            "within_limits": true
+          }
+        },
+        "minimum_margin": -3.5432737590696735,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 180,
+                  "op": "R"
+                },
+                {
+                  "ohm": 520,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 5133.714285714285,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 131056.32280639166,
+        "stages": 12,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 6850.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1299999.9999999998,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.280346886138432e-09,
+      "front_index": 368,
+      "front_module_options": [
+        3
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            180,
+            520,
+            5000
+          ],
+          "equivalent_ohm": "35936/7",
+          "id": "S(R5000,P(R180,R520))",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "children": [
+                  {
+                    "ohm": 180,
+                    "op": "R"
+                  },
+                  {
+                    "ohm": 520,
+                    "op": "R"
+                  }
+                ],
+                "op": "P"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          180,
+          520,
+          5000
+        ],
+        "equivalent_ohm": "35936/7",
+        "id": "S(R5000,P(R180,R520))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 180,
+                  "op": "R"
+                },
+                {
+                  "ohm": 520,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          180,
+          520,
+          5000
+        ],
+        "equivalent_ohm": "35936/7",
+        "id": "S(R5000,P(R180,R520))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 180,
+                  "op": "R"
+                },
+                {
+                  "ohm": 520,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 477.1636879534836,
+      "gain": 0.8266166104276647,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 20.823230077739268,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_0",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 0,
+      "simulation_seconds": 0.013654700000188313,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.043601805531670056
+      },
+      "status": "FAIL",
+      "tail_index": 385,
+      "tail_module_options": [
+        3
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            3700,
+            5000
+          ],
+          "equivalent_ohm": "6850",
+          "id": "S(R5000,P(R3700,R3700))",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "children": [
+                  {
+                    "ohm": 3700,
+                    "op": "R"
+                  },
+                  {
+                    "ohm": 3700,
+                    "op": "R"
+                  }
+                ],
+                "op": "P"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          3700,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "6850",
+        "id": "S(R5000,P(R3700,R3700))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          3700,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "6850",
+        "id": "S(R5000,P(R3700,R3700))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 3139.734837841762,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 129255,
+      "canonical_score": {
+        "J": 187.50153014905803,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -86.0160648766803,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -1.4336010812780051,
+            "normalized_margin": -0.4336010812780051,
+            "squared_contribution": 2.0552120602414656,
+            "target": 0.0025,
+            "value": 0.00034959837808299233,
+            "within_limits": false
+          },
+          "Tp_s": {
+            "deviation_pct": -57.550169387850104,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": -2.8775084693925064,
+            "normalized_margin": -1.8775084693925062,
+            "squared_contribution": 8.280054991425605,
+            "target": 0.00025,
+            "value": 0.00010612457653037474,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -39.931145336397734,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -13.310381778799245,
+            "normalized_margin": -12.310381778799245,
+            "squared_contribution": 177.16626309739095,
+            "target": 1300000.0,
+            "value": 780895.1106268294,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -12.310381778799245,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "ohm": 3700,
+          "op": "R"
+        },
+        "front_per_stage_ohm": 3700.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "ohm": 520,
+          "op": "R"
+        },
+        "tail_per_stage_ohm": 520.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 780895.1106268294,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -6.931513659462023e-09,
+      "front_index": 317,
+      "front_module_options": [
+        1
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700
+          ],
+          "equivalent_ohm": "3700",
+          "id": "R3700",
+          "module_count": 1,
+          "tree": {
+            "ohm": 3700,
+            "op": "R"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "front_us": 106.12457653037474,
+      "gain": 0.6507459255223579,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 187.50153014905803,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_0",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 0,
+      "simulation_seconds": 0.014207699998223688,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.0032338534949168532
+      },
+      "status": "FAIL",
+      "tail_index": 236,
+      "tail_module_options": [
+        1
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            520
+          ],
+          "equivalent_ohm": "520",
+          "id": "R520",
+          "module_count": 1,
+          "tree": {
+            "ohm": 520,
+            "op": "R"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          520
+        ],
+        "equivalent_ohm": "520",
+        "id": "R520",
+        "module_count": 1,
+        "tree": {
+          "ohm": 520,
+          "op": "R"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          520
+        ],
+        "equivalent_ohm": "520",
+        "id": "R520",
+        "module_count": 1,
+        "tree": {
+          "ohm": 520,
+          "op": "R"
+        }
+      },
+      "tail_us": 349.5983780829923,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 142821,
+      "canonical_score": {
+        "J": 39.503324051653514,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -12.60260796353755,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.2100434660589591,
+            "normalized_margin": 0.7899565339410409,
+            "squared_contribution": 0.0441182576340611,
+            "target": 0.0025,
+            "value": 0.0021849348009115614,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 5.614125216973398,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 0.2807062608486695,
+            "normalized_margin": 0.7192937391513302,
+            "squared_contribution": 0.0787960048796413,
+            "target": 0.00025,
+            "value": 0.0002640353130424335,
+            "within_limits": true
+          },
+          "crest": {
+            "deviation_pct": -18.826143739551615,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -6.275381246517203,
+            "normalized_margin": -5.275381246517203,
+            "squared_contribution": 39.38040978913981,
+            "target": 1300000.0,
+            "value": 1055260.131385829,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -5.275381246517203,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "ohm": 5000,
+          "op": "R"
+        },
+        "front_per_stage_ohm": 5000.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 5180.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1055260.131385829,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -6.404517019594399e-09,
+      "front_index": 350,
+      "front_module_options": [
+        1
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            5000
+          ],
+          "equivalent_ohm": "5000",
+          "id": "R5000",
+          "module_count": 1,
+          "tree": {
+            "ohm": 5000,
+            "op": "R"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          5000
+        ],
+        "equivalent_ohm": "5000",
+        "id": "R5000",
+        "module_count": 1,
+        "tree": {
+          "ohm": 5000,
+          "op": "R"
+        }
+      },
+      "front_representative": {
+        "components": [
+          5000
+        ],
+        "equivalent_ohm": "5000",
+        "id": "R5000",
+        "module_count": 1,
+        "tree": {
+          "ohm": 5000,
+          "op": "R"
+        }
+      },
+      "front_us": 264.0353130424335,
+      "gain": 0.8793834428215243,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 39.503324051653514,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_0",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 0,
+      "simulation_seconds": 0.013844099998095771,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.032012437143025894
+      },
+      "status": "FAIL",
+      "tail_index": 371,
+      "tail_module_options": [
+        2
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            180,
+            5000
+          ],
+          "equivalent_ohm": "5180",
+          "id": "S(R180,R5000)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 180,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          180,
+          5000
+        ],
+        "equivalent_ohm": "5180",
+        "id": "S(R180,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          180,
+          5000
+        ],
+        "equivalent_ohm": "5180",
+        "id": "S(R180,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 2184.9348009115615,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 142728,
+      "canonical_score": {
+        "J": 97.72432586517206,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -67.18083094605346,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -1.1196805157675576,
+            "normalized_margin": -0.11968051576755769,
+            "squared_contribution": 1.2536844573895036,
+            "target": 0.0025,
+            "value": 0.0008204792263486635,
+            "within_limits": false
+          },
+          "Tp_s": {
+            "deviation_pct": -24.59611980882236,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": -1.2298059904411185,
+            "normalized_margin": -0.22980599044111824,
+            "squared_contribution": 1.5124227741248604,
+            "target": 0.00025,
+            "value": 0.0001885097004779441,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -29.233952310676692,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -9.744650770225565,
+            "normalized_margin": -8.744650770225565,
+            "squared_contribution": 94.9582186336577,
+            "target": 1300000.0,
+            "value": 919958.619961203,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -8.744650770225565,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "ohm": 5000,
+          "op": "R"
+        },
+        "front_per_stage_ohm": 5000.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 520,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 1560.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 919958.619961203,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -4.1652897683282694e-09,
+      "front_index": 350,
+      "front_module_options": [
+        1
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            5000
+          ],
+          "equivalent_ohm": "5000",
+          "id": "R5000",
+          "module_count": 1,
+          "tree": {
+            "ohm": 5000,
+            "op": "R"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          5000
+        ],
+        "equivalent_ohm": "5000",
+        "id": "R5000",
+        "module_count": 1,
+        "tree": {
+          "ohm": 5000,
+          "op": "R"
+        }
+      },
+      "front_representative": {
+        "components": [
+          5000
+        ],
+        "equivalent_ohm": "5000",
+        "id": "R5000",
+        "module_count": 1,
+        "tree": {
+          "ohm": 5000,
+          "op": "R"
+        }
+      },
+      "front_us": 188.5097004779441,
+      "gain": 0.7666321833010025,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 97.72432586517206,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_0",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 0,
+      "simulation_seconds": 0.01461120000021765,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.009660351430550803
+      },
+      "status": "FAIL",
+      "tail_index": 278,
+      "tail_module_options": [
+        3
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            520,
+            520,
+            520
+          ],
+          "equivalent_ohm": "1560",
+          "id": "S(R520,R520,R520)",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 520,
+                "op": "R"
+              },
+              {
+                "ohm": 520,
+                "op": "R"
+              },
+              {
+                "ohm": 520,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          520,
+          520,
+          520
+        ],
+        "equivalent_ohm": "1560",
+        "id": "S(R520,R520,R520)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 520,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          520,
+          520,
+          520
+        ],
+        "equivalent_ohm": "1560",
+        "id": "S(R520,R520,R520)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 520,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 820.4792263486635,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 157826,
+      "canonical_score": {
+        "J": 68.20980682983833,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -29.947871101878476,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.4991311850313079,
+            "normalized_margin": 0.5008688149686922,
+            "squared_contribution": 0.2491319398707577,
+            "target": 0.0025,
+            "value": 0.0017513032224530383,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 28.63883418572266,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 1.4319417092861335,
+            "normalized_margin": -0.4319417092861338,
+            "squared_contribution": 2.0504570587932935,
+            "target": 0.00025,
+            "value": 0.00032159708546430666,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -24.35553244091716,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -8.118510813639055,
+            "normalized_margin": -7.1185108136390545,
+            "squared_contribution": 65.91021783117428,
+            "target": 1300000.0,
+            "value": 983378.0782680769,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -7.1185108136390545,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 7400.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "ohm": 3700,
+          "op": "R"
+        },
+        "tail_per_stage_ohm": 3700.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 983378.0782680769,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.767977927462198e-09,
+      "front_index": 387,
+      "front_module_options": [
+        2
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            3700
+          ],
+          "equivalent_ohm": "7400",
+          "id": "S(R3700,R3700)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 3700,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700,
+          3700
+        ],
+        "equivalent_ohm": "7400",
+        "id": "S(R3700,R3700)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700,
+          3700
+        ],
+        "equivalent_ohm": "7400",
+        "id": "S(R3700,R3700)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 321.59708546430664,
+      "gain": 0.819481731890064,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 68.20980682983833,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_0",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 0,
+      "simulation_seconds": 0.019531300000380725,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.022886687436930904
+      },
+      "status": "FAIL",
+      "tail_index": 317,
+      "tail_module_options": [
+        1
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            3700
+          ],
+          "equivalent_ohm": "3700",
+          "id": "R3700",
+          "module_count": 1,
+          "tree": {
+            "ohm": 3700,
+            "op": "R"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "tail_us": 1751.3032224530382,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 162379,
+      "canonical_score": {
+        "J": 70.97627917395515,
+        "components": {
+          "T2_s": {
+            "deviation_pct": 50.21186990696336,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": 0.8368644984493894,
+            "normalized_margin": 0.16313550155061066,
+            "squared_contribution": 0.700342188764948,
+            "target": 0.0025,
+            "value": 0.003755296747674084,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 102.0946538057307,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 5.104732690286537,
+            "normalized_margin": -4.1047326902865375,
+            "squared_contribution": 26.05829583928002,
+            "target": 0.00025,
+            "value": 0.0005052366345143268,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -19.94890398776814,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -6.6496346625893805,
+            "normalized_margin": -5.6496346625893805,
+            "squared_contribution": 44.217641145910186,
+            "target": 1300000.0,
+            "value": 1040664.2481590142,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -5.6496346625893805,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 10000.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 8700.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1040664.2481590142,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.507828124488394e-09,
+      "front_index": 398,
+      "front_module_options": [
+        2
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            5000,
+            5000
+          ],
+          "equivalent_ohm": "10000",
+          "id": "S(R5000,R5000)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "10000",
+        "id": "S(R5000,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "10000",
+        "id": "S(R5000,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 505.2366345143268,
+      "gain": 0.8672202067991784,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 70.97627917395515,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_0",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 0,
+      "simulation_seconds": 0.014150599999993574,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.0537744990958864
+      },
+      "status": "FAIL",
+      "tail_index": 393,
+      "tail_module_options": [
+        2
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            5000
+          ],
+          "equivalent_ohm": "8700",
+          "id": "S(R3700,R5000)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "8700",
+        "id": "S(R3700,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "8700",
+        "id": "S(R3700,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 3755.296747674084,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 162301,
+      "canonical_score": {
+        "J": 100.63409776417411,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -33.49576849469913,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.5582628082449854,
+            "normalized_margin": 0.4417371917550146,
+            "squared_contribution": 0.31165736306957736,
+            "target": 0.0025,
+            "value": 0.0016626057876325219,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 51.640452512378545,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 2.582022625618928,
+            "normalized_margin": -1.5820226256189283,
+            "squared_contribution": 6.666840839208063,
+            "target": 0.00025,
+            "value": 0.00037910113128094636,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -29.032746960235578,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -9.677582320078526,
+            "normalized_margin": -8.677582320078526,
+            "squared_contribution": 93.65559956189648,
+            "target": 1300000.0,
+            "value": 922574.2895169375,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -8.677582320078526,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 10000.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                }
+              ],
+              "op": "S"
+            }
+          ],
+          "op": "P"
+        },
+        "tail_per_stage_ohm": 3175.182481751825,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 922574.2895169375,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -4.688237822847442e-09,
+      "front_index": 398,
+      "front_module_options": [
+        2
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            5000,
+            5000
+          ],
+          "equivalent_ohm": "10000",
+          "id": "S(R5000,R5000)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "10000",
+        "id": "S(R5000,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "10000",
+        "id": "S(R5000,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 379.10113128094633,
+      "gain": 0.7688119079307812,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 100.63409776417411,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_0",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 0,
+      "simulation_seconds": 0.016059599998698104,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.01966136608057125
+      },
+      "status": "FAIL",
+      "tail_index": 315,
+      "tail_module_options": [
+        3
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            5000,
+            5000
+          ],
+          "equivalent_ohm": "435000/137",
+          "id": "P(R5000,S(R3700,R5000))",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "children": [
+                  {
+                    "ohm": 3700,
+                    "op": "R"
+                  },
+                  {
+                    "ohm": 5000,
+                    "op": "R"
+                  }
+                ],
+                "op": "S"
+              }
+            ],
+            "op": "P"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          3700,
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "435000/137",
+        "id": "P(R5000,S(R3700,R5000))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                }
+              ],
+              "op": "S"
+            }
+          ],
+          "op": "P"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          3700,
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "435000/137",
+        "id": "P(R5000,S(R3700,R5000))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 3700,
+                  "op": "R"
+                },
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                }
+              ],
+              "op": "S"
+            }
+          ],
+          "op": "P"
+        }
+      },
+      "tail_us": 1662.605787632522,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 165559,
+      "canonical_score": {
+        "J": 144.42800760207135,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -17.082404344939683,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.2847067390823281,
+            "normalized_margin": 0.715293260917672,
+            "squared_contribution": 0.08105792727889284,
+            "target": 0.0025,
+            "value": 0.002072939891376508,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 109.64224658692791,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 5.482112329346397,
+            "normalized_margin": -4.482112329346397,
+            "squared_contribution": 30.05355559157178,
+            "target": 0.00025,
+            "value": 0.0005241056164673198,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -32.072426580303926,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -10.69080886010131,
+            "normalized_margin": -9.69080886010131,
+            "squared_contribution": 114.29339408322066,
+            "target": 1300000.0,
+            "value": 883058.4544560489,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -9.69080886010131,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 15000.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "ohm": 3700,
+          "op": "R"
+        },
+        "tail_per_stage_ohm": 3700.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 883058.4544560489,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -6.10030413857506e-09,
+      "front_index": 406,
+      "front_module_options": [
+        3
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            5000,
+            5000,
+            5000
+          ],
+          "equivalent_ohm": "15000",
+          "id": "S(R5000,R5000,R5000)",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          5000,
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "15000",
+        "id": "S(R5000,R5000,R5000)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          5000,
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "15000",
+        "id": "S(R5000,R5000,R5000)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 524.1056164673198,
+      "gain": 0.7358820453800408,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 144.42800760207135,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_0",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 0,
+      "simulation_seconds": 0.02420699999856879,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.022931601295261807
+      },
+      "status": "FAIL",
+      "tail_index": 317,
+      "tail_module_options": [
+        1
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            3700
+          ],
+          "equivalent_ohm": "3700",
+          "id": "R3700",
+          "module_count": 1,
+          "tree": {
+            "ohm": 3700,
+            "op": "R"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "tail_us": 2072.939891376508,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 129369,
+      "canonical_score": {
+        "J": 34.167744989972874,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -18.16493667301543,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.30274894455025714,
+            "normalized_margin": 0.6972510554497429,
+            "squared_contribution": 0.09165692342629467,
+            "target": 0.0025,
+            "value": 0.0020458765831746144,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": -16.643102876278526,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": -0.8321551438139263,
+            "normalized_margin": 0.16784485618607392,
+            "squared_contribution": 0.6924821833759763,
+            "target": 0.00025,
+            "value": 0.0002083922428093037,
+            "within_limits": true
+          },
+          "crest": {
+            "deviation_pct": -17.333564346334985,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -5.777854782111662,
+            "normalized_margin": -4.777854782111662,
+            "squared_contribution": 33.3836058831706,
+            "target": 1300000.0,
+            "value": 1074663.6634976452,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -4.777854782111662,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "ohm": 3700,
+          "op": "R"
+        },
+        "front_per_stage_ohm": 3700.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "ohm": 5000,
+          "op": "R"
+        },
+        "tail_per_stage_ohm": 5000.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1074663.6634976452,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -4.718699468260942e-09,
+      "front_index": 317,
+      "front_module_options": [
+        1
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700
+          ],
+          "equivalent_ohm": "3700",
+          "id": "R3700",
+          "module_count": 1,
+          "tree": {
+            "ohm": 3700,
+            "op": "R"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "front_us": 208.3922428093037,
+      "gain": 0.8955530529147043,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 34.167744989972874,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_1",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 1,
+      "simulation_seconds": 0.02201699999932316,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.030894172948080435
+      },
+      "status": "FAIL",
+      "tail_index": 350,
+      "tail_module_options": [
+        1
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            5000
+          ],
+          "equivalent_ohm": "5000",
+          "id": "R5000",
+          "module_count": 1,
+          "tree": {
+            "ohm": 5000,
+            "op": "R"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          5000
+        ],
+        "equivalent_ohm": "5000",
+        "id": "R5000",
+        "module_count": 1,
+        "tree": {
+          "ohm": 5000,
+          "op": "R"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          5000
+        ],
+        "equivalent_ohm": "5000",
+        "id": "R5000",
+        "module_count": 1,
+        "tree": {
+          "ohm": 5000,
+          "op": "R"
+        }
+      },
+      "tail_us": 2045.8765831746143,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 129397,
+      "canonical_score": {
+        "J": 32.07744236361754,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -10.552518526258448,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.17587530877097418,
+            "normalized_margin": 0.8241246912290259,
+            "squared_contribution": 0.030932124235285508,
+            "target": 0.0025,
+            "value": 0.002236187036843539,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": -14.689550663782647,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": -0.7344775331891328,
+            "normalized_margin": 0.26552246681086755,
+            "squared_contribution": 0.5394572467595936,
+            "target": 0.00025,
+            "value": 0.00021327612334054338,
+            "within_limits": true
+          },
+          "crest": {
+            "deviation_pct": -16.839343126547547,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -5.613114375515847,
+            "normalized_margin": -4.613114375515847,
+            "squared_contribution": 31.50705299262266,
+            "target": 1300000.0,
+            "value": 1081088.539354882,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -4.613114375515847,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "ohm": 3700,
+          "op": "R"
+        },
+        "front_per_stage_ohm": 3700.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 5520.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1081088.539354882,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.6259016370556014e-09,
+      "front_index": 317,
+      "front_module_options": [
+        1
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700
+          ],
+          "equivalent_ohm": "3700",
+          "id": "R3700",
+          "module_count": 1,
+          "tree": {
+            "ohm": 3700,
+            "op": "R"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "front_us": 213.2761233405434,
+      "gain": 0.9009071161290683,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 32.07744236361754,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_1",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 1,
+      "simulation_seconds": 0.022810499998740852,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.034105180108048215
+      },
+      "status": "FAIL",
+      "tail_index": 378,
+      "tail_module_options": [
+        2
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            520,
+            5000
+          ],
+          "equivalent_ohm": "5520",
+          "id": "S(R520,R5000)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 520,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          520,
+          5000
+        ],
+        "equivalent_ohm": "5520",
+        "id": "S(R520,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          520,
+          5000
+        ],
+        "equivalent_ohm": "5520",
+        "id": "S(R520,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 2236.187036843539,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 129403,
+      "canonical_score": {
+        "J": 29.899247188881304,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -0.622323203877706,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.01037205339796179,
+            "normalized_margin": 0.9896279466020382,
+            "squared_contribution": 0.0001075794916901707,
+            "target": 0.0025,
+            "value": 0.0024844419199030574,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": -12.385129120076,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": -0.6192564560038004,
+            "normalized_margin": 0.3807435439961999,
+            "squared_contribution": 0.3834785583023868,
+            "target": 0.00025,
+            "value": 0.00021903717719981,
+            "within_limits": true
+          },
+          "crest": {
+            "deviation_pct": -16.29849531275157,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -5.432831770917192,
+            "normalized_margin": -4.432831770917192,
+            "squared_contribution": 29.51566105108723,
+            "target": 1300000.0,
+            "value": 1088119.5609342295,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -4.432831770917192,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "ohm": 3700,
+          "op": "R"
+        },
+        "front_per_stage_ohm": 3700.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                },
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 6200.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1088119.5609342295,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -6.33917770755943e-09,
+      "front_index": 317,
+      "front_module_options": [
+        1
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700
+          ],
+          "equivalent_ohm": "3700",
+          "id": "R3700",
+          "module_count": 1,
+          "tree": {
+            "ohm": 3700,
+            "op": "R"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "front_us": 219.03717719981,
+      "gain": 0.9067663007785246,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 29.899247188881304,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_1",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 1,
+      "simulation_seconds": 0.02471760000116774,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.03830419889729639
+      },
+      "status": "FAIL",
+      "tail_index": 384,
+      "tail_module_options": [
+        3
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            5000,
+            5000
+          ],
+          "equivalent_ohm": "6200",
+          "id": "S(R3700,P(R5000,R5000))",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "children": [
+                  {
+                    "ohm": 5000,
+                    "op": "R"
+                  },
+                  {
+                    "ohm": 5000,
+                    "op": "R"
+                  }
+                ],
+                "op": "P"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          3700,
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "6200",
+        "id": "S(R3700,P(R5000,R5000))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                },
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          3700,
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "6200",
+        "id": "S(R3700,P(R5000,R5000))",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "children": [
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                },
+                {
+                  "ohm": 5000,
+                  "op": "R"
+                }
+              ],
+              "op": "P"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 2484.441919903057,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 151347,
+      "canonical_score": {
+        "J": 41.44725733911648,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -14.874279984821225,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.24790466641368714,
+            "normalized_margin": 0.7520953335863129,
+            "squared_contribution": 0.0614567236296815,
+            "target": 0.0025,
+            "value": 0.0021281430003794693,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 7.494915877386399,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 0.37474579386932017,
+            "normalized_margin": 0.6252542061306796,
+            "squared_contribution": 0.140434410022747,
+            "target": 0.00025,
+            "value": 0.000268737289693466,
+            "within_limits": true
+          },
+          "crest": {
+            "deviation_pct": -19.266766616357202,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -6.422255538785735,
+            "normalized_margin": -5.422255538785735,
+            "squared_contribution": 41.24536620546405,
+            "target": 1300000.0,
+            "value": 1049532.0339873563,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -5.422255538785735,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 5180.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "ohm": 5000,
+          "op": "R"
+        },
+        "tail_per_stage_ohm": 5000.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1049532.0339873563,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.047623926657253e-09,
+      "front_index": 371,
+      "front_module_options": [
+        2
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            180,
+            5000
+          ],
+          "equivalent_ohm": "5180",
+          "id": "S(R180,R5000)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 180,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          180,
+          5000
+        ],
+        "equivalent_ohm": "5180",
+        "id": "S(R180,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          180,
+          5000
+        ],
+        "equivalent_ohm": "5180",
+        "id": "S(R180,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 180,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 268.737289693466,
+      "gain": 0.874610028322797,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 41.44725733911648,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_1",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 1,
+      "simulation_seconds": 0.024118099998304388,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.03090189284815044
+      },
+      "status": "FAIL",
+      "tail_index": 350,
+      "tail_module_options": [
+        1
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            5000
+          ],
+          "equivalent_ohm": "5000",
+          "id": "R5000",
+          "module_count": 1,
+          "tree": {
+            "ohm": 5000,
+            "op": "R"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          5000
+        ],
+        "equivalent_ohm": "5000",
+        "id": "R5000",
+        "module_count": 1,
+        "tree": {
+          "ohm": 5000,
+          "op": "R"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          5000
+        ],
+        "equivalent_ohm": "5000",
+        "id": "R5000",
+        "module_count": 1,
+        "tree": {
+          "ohm": 5000,
+          "op": "R"
+        }
+      },
+      "tail_us": 2128.1430003794694,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 160253,
+      "canonical_score": {
+        "J": 103.84438297486116,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -46.27424395572195,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.7712373992620326,
+            "normalized_margin": 0.22876260073796745,
+            "squared_contribution": 0.5948071260204639,
+            "target": 0.0025,
+            "value": 0.0013431439011069512,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 27.805377776872,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 1.3902688888436003,
+            "normalized_margin": -0.39026888884360067,
+            "squared_contribution": 1.9328475832864191,
+            "target": 0.00025,
+            "value": 0.00031951344444218,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -30.196863320384594,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -10.065621106794865,
+            "normalized_margin": -9.065621106794865,
+            "squared_contribution": 101.31672826555427,
+            "target": 1300000.0,
+            "value": 907440.7768350003,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -9.065621106794865,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 8700.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "P"
+        },
+        "tail_per_stage_ohm": 2500.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 907440.7768350003,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -6.87750992559207e-09,
+      "front_index": 393,
+      "front_module_options": [
+        2
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            5000
+          ],
+          "equivalent_ohm": "8700",
+          "id": "S(R3700,R5000)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "8700",
+        "id": "S(R3700,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "8700",
+        "id": "S(R3700,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 319.51344444218,
+      "gain": 0.7562006473625003,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 103.84438297486116,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_1",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 1,
+      "simulation_seconds": 0.024230400002124952,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.015485465811028378
+      },
+      "status": "FAIL",
+      "tail_index": 302,
+      "tail_module_options": [
+        2
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            5000,
+            5000
+          ],
+          "equivalent_ohm": "2500",
+          "id": "P(R5000,R5000)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "P"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "2500",
+        "id": "P(R5000,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "P"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "2500",
+        "id": "P(R5000,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "P"
+        }
+      },
+      "tail_us": 1343.1439011069513,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 157903,
+      "canonical_score": {
+        "J": 46.241197799305475,
+        "components": {
+          "T2_s": {
+            "deviation_pct": 45.022680101434375,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": 0.750378001690573,
+            "normalized_margin": 0.24962199830942694,
+            "squared_contribution": 0.5630671454211376,
+            "target": 0.0025,
+            "value": 0.0036255670025358597,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 61.374879564231335,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 3.068743978211568,
+            "normalized_margin": -2.0687439782115686,
+            "squared_contribution": 9.417189603809762,
+            "target": 0.00025,
+            "value": 0.00040343719891057836,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -18.065117476802396,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -6.021705825600797,
+            "normalized_margin": -5.021705825600797,
+            "squared_contribution": 36.26094105007458,
+            "target": 1300000.0,
+            "value": 1065153.472801569,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -5.021705825600797,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 7400.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 30,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 8730.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1065153.472801569,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.37803413559838e-09,
+      "front_index": 387,
+      "front_module_options": [
+        2
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            3700
+          ],
+          "equivalent_ohm": "7400",
+          "id": "S(R3700,R3700)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 3700,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700,
+          3700
+        ],
+        "equivalent_ohm": "7400",
+        "id": "S(R3700,R3700)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700,
+          3700
+        ],
+        "equivalent_ohm": "7400",
+        "id": "S(R3700,R3700)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 403.4371989105784,
+      "gain": 0.8876278940013075,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 46.241197799305475,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_1",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 1,
+      "simulation_seconds": 0.023489200000767596,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.05394610056730522
+      },
+      "status": "FAIL",
+      "tail_index": 394,
+      "tail_module_options": [
+        3
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            30,
+            3700,
+            5000
+          ],
+          "equivalent_ohm": "8730",
+          "id": "S(R30,R3700,R5000)",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 30,
+                "op": "R"
+              },
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          30,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "8730",
+        "id": "S(R30,R3700,R5000)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 30,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          30,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "8730",
+        "id": "S(R30,R3700,R5000)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 30,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 3625.5670025358595,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 164664,
+      "canonical_score": {
+        "J": 404.731078599742,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -76.5805779407574,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -1.2763429656792897,
+            "normalized_margin": -0.27634296567928973,
+            "squared_contribution": 1.6290513660390045,
+            "target": 0.0025,
+            "value": 0.0005854855514810654,
+            "within_limits": false
+          },
+          "Tp_s": {
+            "deviation_pct": -14.213531128682344,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": -0.7106765564341173,
+            "normalized_margin": 0.28932344356588297,
+            "squared_contribution": 0.5050611678650552,
+            "target": 0.00025,
+            "value": 0.00021446617217829415,
+            "within_limits": true
+          },
+          "crest": {
+            "deviation_pct": -60.19445734112521,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -20.0648191137084,
+            "normalized_margin": -19.0648191137084,
+            "squared_contribution": 402.59696606583793,
+            "target": 1300000.0,
+            "value": 517472.05456537235,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -19.0648191137084,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 12400.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "ohm": 520,
+          "op": "R"
+        },
+        "tail_per_stage_ohm": 520.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 517472.05456537235,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -4.787729631061666e-09,
+      "front_index": 404,
+      "front_module_options": [
+        3
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            3700,
+            5000
+          ],
+          "equivalent_ohm": "12400",
+          "id": "S(R3700,R3700,R5000)",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "12400",
+        "id": "S(R3700,R3700,R5000)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "12400",
+        "id": "S(R3700,R3700,R5000)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 214.46617217829416,
+      "gain": 0.4312267121378103,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 404.731078599742,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_1",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 1,
+      "simulation_seconds": 0.016005400000722148,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.0033752055572519456
+      },
+      "status": "FAIL",
+      "tail_index": 236,
+      "tail_module_options": [
+        1
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            520
+          ],
+          "equivalent_ohm": "520",
+          "id": "R520",
+          "module_count": 1,
+          "tree": {
+            "ohm": 520,
+            "op": "R"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          520
+        ],
+        "equivalent_ohm": "520",
+        "id": "R520",
+        "module_count": 1,
+        "tree": {
+          "ohm": 520,
+          "op": "R"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          520
+        ],
+        "equivalent_ohm": "520",
+        "id": "R520",
+        "module_count": 1,
+        "tree": {
+          "ohm": 520,
+          "op": "R"
+        }
+      },
+      "tail_us": 585.4855514810654,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 96369,
+      "canonical_score": {
+        "J": 34.65586331448761,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -45.26597176097916,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.754432862682986,
+            "normalized_margin": 0.24556713731701402,
+            "squared_contribution": 0.5691689442960453,
+            "target": 0.0025,
+            "value": 0.001368350705975521,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": -83.56758751360822,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": -4.178379375680413,
+            "normalized_margin": -3.178379375680412,
+            "squared_contribution": 17.458854207111436,
+            "target": 0.00025,
+            "value": 4.108103121597945e-05,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -12.233174627533161,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -4.077724875844388,
+            "normalized_margin": -3.077724875844388,
+            "squared_contribution": 16.62784016308013,
+            "target": 1300000.0,
+            "value": 1140968.7298420689,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -3.178379375680412,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "ohm": 520,
+          "op": "R"
+        },
+        "front_per_stage_ohm": 520.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "ohm": 3700,
+          "op": "R"
+        },
+        "tail_per_stage_ohm": 3700.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1140968.7298420689,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -6.365554872900248e-09,
+      "front_index": 236,
+      "front_module_options": [
+        1
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            520
+          ],
+          "equivalent_ohm": "520",
+          "id": "R520",
+          "module_count": 1,
+          "tree": {
+            "ohm": 520,
+            "op": "R"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          520
+        ],
+        "equivalent_ohm": "520",
+        "id": "R520",
+        "module_count": 1,
+        "tree": {
+          "ohm": 520,
+          "op": "R"
+        }
+      },
+      "front_representative": {
+        "components": [
+          520
+        ],
+        "equivalent_ohm": "520",
+        "id": "R520",
+        "module_count": 1,
+        "tree": {
+          "ohm": 520,
+          "op": "R"
+        }
+      },
+      "front_us": 41.08103121597945,
+      "gain": 0.9508072748683907,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 34.65586331448761,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_2",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 2,
+      "simulation_seconds": 0.012847400001192,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.022850405147372622
+      },
+      "status": "FAIL",
+      "tail_index": 317,
+      "tail_module_options": [
+        1
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            3700
+          ],
+          "equivalent_ohm": "3700",
+          "id": "R3700",
+          "module_count": 1,
+          "tree": {
+            "ohm": 3700,
+            "op": "R"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          3700
+        ],
+        "equivalent_ohm": "3700",
+        "id": "R3700",
+        "module_count": 1,
+        "tree": {
+          "ohm": 3700,
+          "op": "R"
+        }
+      },
+      "tail_us": 1368.3507059755211,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 96430,
+      "canonical_score": {
+        "J": 32.27335847221129,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -19.183262624852137,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.3197210437475356,
+            "normalized_margin": 0.6802789562524644,
+            "squared_contribution": 0.1022215458150136,
+            "target": 0.0025,
+            "value": 0.0020204184343786966,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": -82.40667336086939,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": -4.120333668043471,
+            "normalized_margin": -3.120333668043471,
+            "squared_contribution": 16.97714953601256,
+            "target": 0.00025,
+            "value": 4.398331659782653e-05,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -11.693839682219586,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -3.897946560739862,
+            "normalized_margin": -2.897946560739862,
+            "squared_contribution": 15.193987390383716,
+            "target": 1300000.0,
+            "value": 1147980.0841311454,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -3.120333668043471,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "ohm": 520,
+          "op": "R"
+        },
+        "front_per_stage_ohm": 520.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 5520.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1147980.0841311454,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.388343197409995e-09,
+      "front_index": 236,
+      "front_module_options": [
+        1
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            520
+          ],
+          "equivalent_ohm": "520",
+          "id": "R520",
+          "module_count": 1,
+          "tree": {
+            "ohm": 520,
+            "op": "R"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          520
+        ],
+        "equivalent_ohm": "520",
+        "id": "R520",
+        "module_count": 1,
+        "tree": {
+          "ohm": 520,
+          "op": "R"
+        }
+      },
+      "front_representative": {
+        "components": [
+          520
+        ],
+        "equivalent_ohm": "520",
+        "id": "R520",
+        "module_count": 1,
+        "tree": {
+          "ohm": 520,
+          "op": "R"
+        }
+      },
+      "front_us": 43.98331659782653,
+      "gain": 0.9566500701092878,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 32.27335847221129,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_2",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 2,
+      "simulation_seconds": 0.012781600002199411,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.03408905516424371
+      },
+      "status": "FAIL",
+      "tail_index": 378,
+      "tail_module_options": [
+        2
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            520,
+            5000
+          ],
+          "equivalent_ohm": "5520",
+          "id": "S(R520,R5000)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 520,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          520,
+          5000
+        ],
+        "equivalent_ohm": "5520",
+        "id": "S(R520,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          520,
+          5000
+        ],
+        "equivalent_ohm": "5520",
+        "id": "S(R520,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 2020.4184343786967,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 96457,
+      "canonical_score": {
+        "J": 31.889215233613378,
+        "components": {
+          "T2_s": {
+            "deviation_pct": 97.78985034913761,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": 1.6298308391522935,
+            "normalized_margin": -0.6298308391522935,
+            "squared_contribution": 2.656348564251869,
+            "target": 0.0025,
+            "value": 0.0049447462587284404,
+            "within_limits": false
+          },
+          "Tp_s": {
+            "deviation_pct": -79.75268263014577,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": -3.9876341315072894,
+            "normalized_margin": -2.987634131507289,
+            "squared_contribution": 15.901225966761894,
+            "target": 0.00025,
+            "value": 5.06182934246356e-05,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -10.953755809008914,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -3.6512519363363047,
+            "normalized_margin": -2.6512519363363047,
+            "squared_contribution": 13.331640702599614,
+            "target": 1300000.0,
+            "value": 1157601.1744828841,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -2.987634131507289,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "ohm": 520,
+          "op": "R"
+        },
+        "front_per_stage_ohm": 520.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 13700.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1157601.1744828841,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.2384283965996784e-09,
+      "front_index": 236,
+      "front_module_options": [
+        1
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            520
+          ],
+          "equivalent_ohm": "520",
+          "id": "R520",
+          "module_count": 1,
+          "tree": {
+            "ohm": 520,
+            "op": "R"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          520
+        ],
+        "equivalent_ohm": "520",
+        "id": "R520",
+        "module_count": 1,
+        "tree": {
+          "ohm": 520,
+          "op": "R"
+        }
+      },
+      "front_representative": {
+        "components": [
+          520
+        ],
+        "equivalent_ohm": "520",
+        "id": "R520",
+        "module_count": 1,
+        "tree": {
+          "ohm": 520,
+          "op": "R"
+        }
+      },
+      "front_us": 50.618293424635596,
+      "gain": 0.9646676454024035,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 31.889215233613378,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_2",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 2,
+      "simulation_seconds": 0.011239399998885347,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.08460124030437974
+      },
+      "status": "FAIL",
+      "tail_index": 405,
+      "tail_module_options": [
+        3
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            5000,
+            5000
+          ],
+          "equivalent_ohm": "13700",
+          "id": "S(R3700,R5000,R5000)",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          3700,
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "13700",
+        "id": "S(R3700,R5000,R5000)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          3700,
+          5000,
+          5000
+        ],
+        "equivalent_ohm": "13700",
+        "id": "S(R3700,R5000,R5000)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 4944.746258728441,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 114196,
+      "canonical_score": {
+        "J": 118.61655799058188,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -88.75903895981683,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -1.4793173159969473,
+            "normalized_margin": -0.4793173159969474,
+            "squared_contribution": 2.188379721408412,
+            "target": 0.0025,
+            "value": 0.00028102402600457897,
+            "within_limits": false
+          },
+          "Tp_s": {
+            "deviation_pct": -73.01339265186463,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": -3.6506696325932326,
+            "normalized_margin": -2.650669632593233,
+            "squared_contribution": 13.327388766338409,
+            "target": 0.00025,
+            "value": 6.746651837033841e-05,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -30.46156768003767,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -10.15385589334589,
+            "normalized_margin": -9.15385589334589,
+            "squared_contribution": 103.10078950283506,
+            "target": 1300000.0,
+            "value": 903999.6201595103,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -9.15385589334589,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "P"
+        },
+        "front_per_stage_ohm": 1850.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "ohm": 520,
+          "op": "R"
+        },
+        "tail_per_stage_ohm": 520.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 903999.6201595103,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.076490197097883e-09,
+      "front_index": 280,
+      "front_module_options": [
+        2
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            3700
+          ],
+          "equivalent_ohm": "1850",
+          "id": "P(R3700,R3700)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 3700,
+                "op": "R"
+              }
+            ],
+            "op": "P"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700,
+          3700
+        ],
+        "equivalent_ohm": "1850",
+        "id": "P(R3700,R3700)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "P"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700,
+          3700
+        ],
+        "equivalent_ohm": "1850",
+        "id": "P(R3700,R3700)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "P"
+        }
+      },
+      "front_us": 67.46651837033842,
+      "gain": 0.7533330167995919,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 118.61655799058188,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_2",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 2,
+      "simulation_seconds": 0.012789600001269719,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.003221224373461161
+      },
+      "status": "FAIL",
+      "tail_index": 236,
+      "tail_module_options": [
+        1
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            520
+          ],
+          "equivalent_ohm": "520",
+          "id": "R520",
+          "module_count": 1,
+          "tree": {
+            "ohm": 520,
+            "op": "R"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          520
+        ],
+        "equivalent_ohm": "520",
+        "id": "R520",
+        "module_count": 1,
+        "tree": {
+          "ohm": 520,
+          "op": "R"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          520
+        ],
+        "equivalent_ohm": "520",
+        "id": "R520",
+        "module_count": 1,
+        "tree": {
+          "ohm": 520,
+          "op": "R"
+        }
+      },
+      "tail_us": 281.02402600457896,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 157887,
+      "canonical_score": {
+        "J": 53.95069512775536,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -2.5184425574641622,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.04197404262440274,
+            "normalized_margin": 0.9580259573755973,
+            "squared_contribution": 0.0017618202542351781,
+            "target": 0.0025,
+            "value": 0.002437038936063396,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 43.65982938222146,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 2.1829914691110743,
+            "normalized_margin": -1.1829914691110743,
+            "squared_contribution": 4.7654517542117265,
+            "target": 0.00025,
+            "value": 0.00035914957345555367,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -21.03928073817175,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -7.013093579390581,
+            "normalized_margin": -6.013093579390581,
+            "squared_contribution": 49.1834815532894,
+            "target": 1300000.0,
+            "value": 1026489.3504037673,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -6.013093579390581,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 7400.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 5520.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1026489.3504037673,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.711072177897829e-09,
+      "front_index": 387,
+      "front_module_options": [
+        2
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            3700
+          ],
+          "equivalent_ohm": "7400",
+          "id": "S(R3700,R3700)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 3700,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700,
+          3700
+        ],
+        "equivalent_ohm": "7400",
+        "id": "S(R3700,R3700)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700,
+          3700
+        ],
+        "equivalent_ohm": "7400",
+        "id": "S(R3700,R3700)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 359.14957345555365,
+      "gain": 0.8554077920031394,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 53.95069512775536,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_2",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 2,
+      "simulation_seconds": 0.013152899999113288,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.0341246095524541
+      },
+      "status": "FAIL",
+      "tail_index": 378,
+      "tail_module_options": [
+        2
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            520,
+            5000
+          ],
+          "equivalent_ohm": "5520",
+          "id": "S(R520,R5000)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 520,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          520,
+          5000
+        ],
+        "equivalent_ohm": "5520",
+        "id": "S(R520,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          520,
+          5000
+        ],
+        "equivalent_ohm": "5520",
+        "id": "S(R520,R5000)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 520,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 2437.038936063396,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 157912,
+      "canonical_score": {
+        "J": 45.71873609643967,
+        "components": {
+          "T2_s": {
+            "deviation_pct": 79.7716336589391,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": 1.329527227648985,
+            "normalized_margin": -0.3295272276489849,
+            "squared_contribution": 1.7676426490599957,
+            "target": 0.0025,
+            "value": 0.0044942908414734774,
+            "within_limits": false
+          },
+          "Tp_s": {
+            "deviation_pct": 70.83052292387573,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 3.541526146193788,
+            "normalized_margin": -2.541526146193788,
+            "squared_contribution": 12.542407444174223,
+            "target": 0.00025,
+            "value": 0.00042707630730968934,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -16.813035836185243,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -5.604345278728413,
+            "normalized_margin": -4.604345278728413,
+            "squared_contribution": 31.408686003205453,
+            "target": 1300000.0,
+            "value": 1081430.534129592,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -4.604345278728413,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 7400.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "tail_per_stage_ohm": 11100.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 1081430.534129592,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -5.752998549723999e-09,
+      "front_index": 387,
+      "front_module_options": [
+        2
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            3700
+          ],
+          "equivalent_ohm": "7400",
+          "id": "S(R3700,R3700)",
+          "module_count": 2,
+          "tree": {
+            "children": [
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 3700,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700,
+          3700
+        ],
+        "equivalent_ohm": "7400",
+        "id": "S(R3700,R3700)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700,
+          3700
+        ],
+        "equivalent_ohm": "7400",
+        "id": "S(R3700,R3700)",
+        "module_count": 2,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 427.07630730968935,
+      "gain": 0.9011921117746599,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 45.71873609643967,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_2",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 2,
+      "simulation_seconds": 0.02093819999936386,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.06858085941026246
+      },
+      "status": "FAIL",
+      "tail_index": 403,
+      "tail_module_options": [
+        3
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            3700,
+            3700
+          ],
+          "equivalent_ohm": "11100",
+          "id": "S(R3700,R3700,R3700)",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 3700,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          3700,
+          3700,
+          3700
+        ],
+        "equivalent_ohm": "11100",
+        "id": "S(R3700,R3700,R3700)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          3700,
+          3700,
+          3700
+        ],
+        "equivalent_ohm": "11100",
+        "id": "S(R3700,R3700,R3700)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "tail_us": 4494.2908414734775,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    },
+    {
+      "candidate_index": 164778,
+      "canonical_score": {
+        "J": 103.90494882699508,
+        "components": {
+          "T2_s": {
+            "deviation_pct": -1.0069809354429693,
+            "limits": [
+              0.001,
+              0.004
+            ],
+            "normalized_deviation": -0.01678301559071618,
+            "normalized_margin": 0.9832169844092838,
+            "squared_contribution": 0.00028166961231822235,
+            "target": 0.0025,
+            "value": 0.002474825476613926,
+            "within_limits": true
+          },
+          "Tp_s": {
+            "deviation_pct": 102.3629277125735,
+            "limits": [
+              0.0002,
+              0.0003
+            ],
+            "normalized_deviation": 5.118146385628677,
+            "normalized_margin": -4.118146385628677,
+            "squared_contribution": 26.195422424723887,
+            "target": 0.00025,
+            "value": 0.0005059073192814337,
+            "within_limits": false
+          },
+          "crest": {
+            "deviation_pct": -26.445854166464912,
+            "limits": [
+              1261000.0,
+              1339000.0
+            ],
+            "normalized_deviation": -8.815284722154972,
+            "normalized_margin": -7.815284722154972,
+            "squared_contribution": 77.70924473265887,
+            "target": 1300000.0,
+            "value": 956203.8958359561,
+            "within_limits": false
+          }
+        },
+        "minimum_margin": -7.815284722154972,
+        "scalar_limits_pass": false
+      },
+      "catalog_count": 496947,
+      "compliance_status": "FAIL",
+      "configuration": {
+        "front_network": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        },
+        "front_per_stage_ohm": 12400.0,
+        "impulse_type": "SI",
+        "polarity": 1,
+        "stage_charge_V": 200000.0,
+        "stages": 6,
+        "tail_network": {
+          "ohm": 5000,
+          "op": "R"
+        },
+        "tail_per_stage_ohm": 5000.0,
+        "topology_id": "GSHUNT_v0"
+      },
+      "crest_V": 956203.8958359561,
+      "eligible_for_hardware_recommendation": false,
+      "energy_balance_relative_error": -7.577850192319604e-09,
+      "front_index": 404,
+      "front_module_options": [
+        3
+      ],
+      "front_physical_alternatives": [
+        {
+          "components": [
+            3700,
+            3700,
+            5000
+          ],
+          "equivalent_ohm": "12400",
+          "id": "S(R3700,R3700,R5000)",
+          "module_count": 3,
+          "tree": {
+            "children": [
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 3700,
+                "op": "R"
+              },
+              {
+                "ohm": 5000,
+                "op": "R"
+              }
+            ],
+            "op": "S"
+          }
+        }
+      ],
+      "front_recipe": {
+        "components": [
+          3700,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "12400",
+        "id": "S(R3700,R3700,R5000)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_representative": {
+        "components": [
+          3700,
+          3700,
+          5000
+        ],
+        "equivalent_ohm": "12400",
+        "id": "S(R3700,R3700,R5000)",
+        "module_count": 3,
+        "tree": {
+          "children": [
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 3700,
+              "op": "R"
+            },
+            {
+              "ohm": 5000,
+              "op": "R"
+            }
+          ],
+          "op": "S"
+        }
+      },
+      "front_us": 505.90731928143373,
+      "gain": 0.7968365798632967,
+      "hardware_status": "PROVISIONAL_NOT_VERIFIED",
+      "label": "three_module_catalog_sample",
+      "numeric_status": "VALID",
+      "objective_J": 103.90494882699508,
+      "physical_alternative_count": 1,
+      "provenance": "deterministic_sample_seed_2",
+      "reason_codes": [],
+      "scope": "<=3",
+      "seed": 2,
+      "simulation_seconds": 0.022443799996835878,
+      "solver": {
+        "atol": 1e-11,
+        "method": "linear_modal_v1",
+        "requested_method": "modal",
+        "rtol": 1e-09,
+        "sample_count": 1608,
+        "t_end_s": 0.03094148365724483
+      },
+      "status": "FAIL",
+      "tail_index": 350,
+      "tail_module_options": [
+        1
+      ],
+      "tail_physical_alternatives": [
+        {
+          "components": [
+            5000
+          ],
+          "equivalent_ohm": "5000",
+          "id": "R5000",
+          "module_count": 1,
+          "tree": {
+            "ohm": 5000,
+            "op": "R"
+          }
+        }
+      ],
+      "tail_recipe": {
+        "components": [
+          5000
+        ],
+        "equivalent_ohm": "5000",
+        "id": "R5000",
+        "module_count": 1,
+        "tree": {
+          "ohm": 5000,
+          "op": "R"
+        }
+      },
+      "tail_representative": {
+        "components": [
+          5000
+        ],
+        "equivalent_ohm": "5000",
+        "id": "R5000",
+        "module_count": 1,
+        "tree": {
+          "ohm": 5000,
+          "op": "R"
+        }
+      },
+      "tail_us": 2474.8254766139257,
+      "target_crest_V": 1300000.0,
+      "verification_status": "PHYSICS_VERIFIED",
+      "waveform_status": "VALID_CLEAN_FULL_IMPULSE"
+    }
+  ],
+  "waveforms": {
+    "controlled_three": "waveforms/cpri_0p5uf_SI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0__controlled_three.npz",
+    "overlay_plot": "plots/cpri_0p5uf_SI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0__overlay.png",
+    "selected_three": "waveforms/cpri_0p5uf_SI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0__selected_three.npz",
+    "selected_two": "waveforms/cpri_0p5uf_SI_GSHUNT_v0_FROZEN_test_cpri_0p5uf_SI_GSHUNT_v0_0__selected_two.npz"
+  }
+}

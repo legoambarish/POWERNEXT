@@ -17,10 +17,15 @@ GRAMMAR_ID = "UNIFORM_SERIES_PARALLEL_1_TO_4_MODULES_v3"
 
 
 class Catalog:
-    def __init__(self, max_modules=4, stages=None):
+    def __init__(self, max_modules=2, stages=None, min_modules=1):
+        if type(min_modules) is not int or type(max_modules) is not int or not 1 <= min_modules <= max_modules <= 4:
+            raise ValueError("Module bounds must satisfy 1 <= minimum <= maximum <= 4")
+        self.min_modules = min_modules
         self.max_modules = max_modules
-        self.recipes = enumerate_networks(max_modules)
-        self.groups = electrical_groups(max_modules)
+        self.recipes = tuple(r for r in enumerate_networks(max_modules) if r.module_count >= min_modules)
+        self.groups = {value: tuple(r for r in recipes if r.module_count >= min_modules)
+                       for value, recipes in electrical_groups(max_modules).items()
+                       if any(r.module_count >= min_modules for r in recipes)}
         self.exact_values = tuple(self.groups)
         self.values = np.array([float(x) for x in self.exact_values])
         self.width = len(self.values)
@@ -30,11 +35,12 @@ class Catalog:
         self.stages = tuple(sorted(self.stages))
         self.count = len(self.stages)*self.width**2
         self.recipe_count = len(self.stages)*len(self.recipes)**2
-        self.identity = hashlib.sha256(json.dumps(dict(grammar=GRAMMAR_ID, max_modules=max_modules,
+        self.identity = hashlib.sha256(json.dumps(dict(grammar=GRAMMAR_ID, min_modules=min_modules, max_modules=max_modules,
             stages=self.stages, values=[str(x) for x in self.exact_values], recipes=[r.id for r in self.recipes]),sort_keys=True).encode()).hexdigest()
 
     def info(self):
-        return dict(grammar_id=GRAMMAR_ID, max_modules_per_branch=self.max_modules,
+        return dict(grammar_id=GRAMMAR_ID, min_modules_per_branch=self.min_modules, max_modules_per_branch=self.max_modules,
+                    network_scope="EXACTLY_TWO_SERIES_OR_PARALLEL" if self.min_modules == self.max_modules == 2 else "HISTORICAL_BOUNDED_CATALOG",
                     uniform_stages=True, recipes_per_branch=len(self.recipes), distinct_resistances_per_branch=self.width,
                     theoretical_recipe_configurations=self.recipe_count, distinct_response_candidates=self.count,
                     stages=list(self.stages), catalog_sha256=self.identity,

@@ -1,0 +1,174 @@
+{
+  "audit_summary": {
+    "canonical_eligible_rows": 5939,
+    "eligible_rows": 6377,
+    "raw_retained_rows": 7684
+  },
+  "coverage_audit": "coverage_audit.json",
+  "coverage_audit_sha256": "d99486042b85d5ec5469879a1cc39d940063f2609cb3fae67fcccd9deaa5b553",
+  "created_at": "2026-10-10T13:44:29+00:00",
+  "dataset_id": "networks_exact2_v5_a620bc6a3215",
+  "dataset_kind": "FILTERED_SUBSET_OF_PHASE_B_R2_EXACT_TWO_PER_BRANCH",
+  "design_file_sha256": "b4c70e369a778393643bb96144253ad5a6d77cba2844ad3815d16371127cac9c",
+  "design_row_count": 7684,
+  "design_sha256": "bc9dae2d381fdbf31274435b8713b02b2074249df8636f9c88ad9b70d91d2026",
+  "filter": {
+    "domains": [
+      "cpri_0p5uf",
+      "research_3uf"
+    ],
+    "front_leaf_count": 2,
+    "no_physics_rerun": true,
+    "preserve_original_row_ids": true,
+    "preserve_original_split_labels": true,
+    "retain_invalid_or_unsupported_rows": true,
+    "root_ops": [
+      "P",
+      "S"
+    ],
+    "tail_leaf_count": 2
+  },
+  "parent_dataset_id": "v3_37efa30cfc8f8006a483",
+  "parent_design_file_sha256": "d6498b8bce3bc62b47dd166e8a755d2b38289696bdacc0709e5586498784c880",
+  "parent_design_sha256": "9640bed2b6ca23a02a13cf5d6a5907f9c7fc868ac63314660b3854bed196acb6",
+  "parent_manifest_contract_copied": true,
+  "parent_manifest_sha256": "93f3d521d171559d2b6bd9f30d657fb98d56a1922e53d6ca627805b83df4ebc4",
+  "parent_path": "powernext/ml/data/networks_v3_r2",
+  "parent_rows_sha256": "e7da922ad701cedbee587178484ad5f476ee0977fe4e780cffce62b2211f4611",
+  "physics_source_fingerprint": {
+    "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+    "sources": {
+      "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+      "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+      "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+      "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+      "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+      "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+      "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+    }
+  },
+  "provenance": {
+    "dataset_module": "powernext_v3_dataset_1.0",
+    "filter": {
+      "filter_before_eligibility_and_response_dedup": true,
+      "parent_dataset_id": "v3_37efa30cfc8f8006a483",
+      "parent_path": "powernext/ml/data/networks_v3_r2",
+      "physics_simulation_performed": false,
+      "predicate": "front and tail canonical trees each exactly two resistor leaves; root operation P or S",
+      "tool": "tools/filter_exact2_dataset.py",
+      "tool_sha256": "0d70a590a5ed1838e6c1777de7058252acdc5ea2bd9c24f0bd6bb86b1bdf2316"
+    },
+    "network_catalog": {
+      "api": "powernext_v3.networks.enumerate_networks",
+      "fallback_single_resistor": false,
+      "max_modules": 4,
+      "module_counts": {
+        "1": 6,
+        "2": 42,
+        "3": 364,
+        "4": 3780
+      },
+      "recipe_count": 4192
+    },
+    "networks_module": "C:\\Users\\User\\Downloads\\Powernext\\POWERNEXT\\powernext_v3\\networks.py",
+    "physics_module": "unknown",
+    "physics_source_fingerprint": {
+      "sha256": "85b57da86579e88f215d4b41d7804ef18081dc939b0748246feb2cf1c2b3d51b",
+      "sources": {
+        "powernext/physics/physics_engine/analytic.py": "f2e781bb9f633bee7a1bb7aa3ebeaccc4a880a566b021aece9de445210348d2d",
+        "powernext/physics/physics_engine/engine.py": "8fc6ff4d390719e8dd37c740739471e1b98de290635df709ab6912f6198498bb",
+        "powernext/physics/physics_engine/evaluator.py": "cc201faaf251e4a483a9f0db080af38e33914c5f1a6c5f8bbd32d791ffc0829b",
+        "powernext/physics/physics_engine/network.py": "19a0f12a98b9c33d5a903178ee432b51f039e7da6c10fa8d554dbef36d95561a",
+        "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+        "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+        "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+      }
+    },
+    "profile_ids": {
+      "cpri_0p5uf": "CPRI_0p5uF_NETWORKS_v3",
+      "research_3uf": "RESEARCH_3uF_NETWORKS_v3"
+    },
+    "profiles_module": "C:\\Users\\User\\Downloads\\Powernext\\POWERNEXT\\powernext_v3\\profiles.py"
+  },
+  "regression_eligible_count": 5939,
+  "regression_eligible_row_count": 6377,
+  "route_eligible_counts": {
+    "cpri_0p5uf::LI::GSHUNT_v0": 693,
+    "cpri_0p5uf::LI::OSHUNT_v0": 739,
+    "cpri_0p5uf::SI::GSHUNT_v0": 648,
+    "cpri_0p5uf::SI::OSHUNT_v0": 710,
+    "research_3uf::LI::GSHUNT_v0": 747,
+    "research_3uf::LI::OSHUNT_v0": 761,
+    "research_3uf::SI::GSHUNT_v0": 724,
+    "research_3uf::SI::OSHUNT_v0": 917
+  },
+  "route_request_counts": {
+    "cpri_0p5uf::LI::GSHUNT_v0": 832,
+    "cpri_0p5uf::LI::OSHUNT_v0": 906,
+    "cpri_0p5uf::SI::GSHUNT_v0": 732,
+    "cpri_0p5uf::SI::OSHUNT_v0": 798,
+    "research_3uf::LI::GSHUNT_v0": 1023,
+    "research_3uf::LI::OSHUNT_v0": 1012,
+    "research_3uf::SI::GSHUNT_v0": 843,
+    "research_3uf::SI::OSHUNT_v0": 1538
+  },
+  "row_count": 7684,
+  "rows_sha256": "f1d349ff2470453f17ddb6105715c164fea3f1d54c12e7eff5c505a3e44112d6",
+  "schema_version": "powernext_v3_dataset_1.0",
+  "source_hashes": {
+    "powernext_v3/dataset.py": "7d6bcd573dbabbf6c4a6eff4d1a7c35cb420a0028878e9d3adb20861c27f13ee",
+    "powernext_v3/features.py": "576e66078b12122a444e7d2e40ca7decaf23ecd849ce50fca9ada2ff181f4d65",
+    "powernext_v3/networks.py": "7877c97b16c77359825a97ca0d0048884f514ae6f9e3515d8389ecc24659e4d7",
+    "powernext_v3/physics.py": "fdd9af9deb2b66ef3a769b6cf93e96b749d45a2fde8d78dd2ca0d6e571bd738f",
+    "powernext_v3/profiles.py": "a3af0b2a7ad91ea28b0f50f1fe02fe3f247ccc52395247e35c45561e9ec536e6"
+  },
+  "source_rows_not_relabelled": true,
+  "split_counts": {
+    "test": 1922,
+    "train": 4667,
+    "validation": 1095
+  },
+  "split_route_counts": {
+    "cpri_0p5uf::LI::GSHUNT_v0": {
+      "test": 199,
+      "train": 529,
+      "validation": 104
+    },
+    "cpri_0p5uf::LI::OSHUNT_v0": {
+      "test": 216,
+      "train": 548,
+      "validation": 142
+    },
+    "cpri_0p5uf::SI::GSHUNT_v0": {
+      "test": 212,
+      "train": 410,
+      "validation": 110
+    },
+    "cpri_0p5uf::SI::OSHUNT_v0": {
+      "test": 198,
+      "train": 487,
+      "validation": 113
+    },
+    "research_3uf::LI::GSHUNT_v0": {
+      "test": 251,
+      "train": 639,
+      "validation": 133
+    },
+    "research_3uf::LI::OSHUNT_v0": {
+      "test": 263,
+      "train": 579,
+      "validation": 170
+    },
+    "research_3uf::SI::GSHUNT_v0": {
+      "test": 196,
+      "train": 542,
+      "validation": 105
+    },
+    "research_3uf::SI::OSHUNT_v0": {
+      "test": 387,
+      "train": 933,
+      "validation": 218
+    }
+  },
+  "status": "COMPLETE"
+}

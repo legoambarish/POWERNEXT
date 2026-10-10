@@ -11,7 +11,7 @@ from powernext_v3.optimizer import recommend, normalize_request
 def request(mode="SI", **updates):
     old=json.loads((ROOT/f"powernext/optimizer/examples/{mode}_request.json").read_text())
     result=dict(domain_id="cpri_0p5uf",impulse_type=mode,topology_id=old["topology_id"],
-        setup=old["setup"],target_crest_V=old["target_crest_V"],max_modules=1,
+        setup=old["setup"],target_crest_V=old["target_crest_V"],min_modules=1,max_modules=1,
         priority="complete_physics",budget_seconds=90)
     result.update(updates)
     return result
@@ -28,6 +28,28 @@ class DeliberatelyWrongModel:
 
 
 class CatalogTests(unittest.TestCase):
+    def test_exact_two_catalog_explores_both_networks_and_all_pair_types(self):
+        from itertools import product
+        c=Catalog(2,stages=[9],min_modules=2)
+        self.assertEqual(len(c.recipes),42)
+        self.assertEqual(c.width,42)
+        self.assertEqual(c.count,1764)
+        self.assertEqual(sum(r.tree["op"]=="S" for r in c.recipes),21)
+        self.assertEqual(sum(r.tree["op"]=="P" for r in c.recipes),21)
+        found=set()
+        for index in range(c.count):
+            item=c.physical(index)
+            self.assertEqual(item["front"].module_count,2)
+            self.assertEqual(item["tail"].module_count,2)
+            found.add((item["front"].id,item["tail"].id))
+        self.assertEqual(found,set(product((r.id for r in c.recipes),repeat=2)))
+
+    def test_final_default_is_exact_two_on_each_branch(self):
+        q=request();del q["min_modules"];del q["max_modules"]
+        normalized,c=normalize_request(q)
+        self.assertEqual((normalized["min_modules"],normalized["max_modules"]),(2,2))
+        self.assertEqual(c.count,14*1764)
+
     def test_four_module_catalog_count_without_pair_materialization(self):
         c=Catalog(4)
         self.assertEqual(c.width,4080)

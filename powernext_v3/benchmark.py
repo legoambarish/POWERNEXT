@@ -32,9 +32,10 @@ def log(message):
     print(f"[{datetime.now(timezone.utc).isoformat()}] {message}",flush=True)
 
 
-def frozen_requests(purpose="validation", max_modules=2, cases_per_route=2):
+def frozen_requests(purpose="validation", max_modules=2, cases_per_route=2, seed=None):
     if purpose not in ("validation","test"):raise ValueError("Unknown benchmark partition")
-    rng=np.random.default_rng(20261101 if purpose=="validation" else 20261102)
+    rng=np.random.default_rng((20261101 if purpose=="validation" else 20261102) if seed is None else seed)
+    identity_prefix=f"FROZEN_{purpose}" if seed is None else f"FROZEN_{purpose}_seed{seed}"
     requests=[]
     for domain in ("cpri_0p5uf","research_3uf"):
         for mode in ("LI","SI"):
@@ -44,10 +45,10 @@ def frozen_requests(purpose="validation", max_modules=2, cases_per_route=2):
                     setup=dict(dut_capacitance_F=float(rng.uniform(.35,1.6)*1e-9),divider_capacitance_F=float(rng.uniform(.25,.65)*1e-9),
                         stray_capacitance_F=float(rng.uniform(.04,.3)*1e-9),loop_inductance_H=float(rng.uniform(5,75)*1e-6),
                         loop_resistance_ohm=float(rng.uniform(0,5)),basic_coverage_assumption="ADDITIONAL_DISJOINT",
-                        setup_id=f"FROZEN_{purpose}_{domain}_{mode}_{top}_{k}")
+                        setup_id=f"{identity_prefix}_{domain}_{mode}_{top}_{k}")
                     requests.append(dict(schema_version="network_request_v3",request_id=setup["setup_id"],domain_id=domain,
                         impulse_type=mode,topology_id=top,setup=setup,target_crest_V=float(rng.choice([750000.,1000000.,1300000.,1550000.])),
-                        stages=[6,9,12],max_modules=max_modules,search_mode="complete",priority="complete_physics",budget_seconds=7200,
+                        stages=[6,9,12],min_modules=2,max_modules=max_modules,search_mode="complete",priority="complete_physics",budget_seconds=7200,
                         alternatives=4,max_ml_candidates=100000,max_physics_evaluations=100000))
     return requests
 
@@ -69,15 +70,15 @@ def _oracle_task(request):
     return dict(request=result["request"],search=result["search"],candidates=rows)
 
 
-def generate_oracles(output,purpose="validation",max_modules=2,cases_per_route=2,workers=4):
+def generate_oracles(output,purpose="validation",max_modules=2,cases_per_route=2,workers=4,seed=None):
     output=Path(output)
-    requests=frozen_requests(purpose,max_modules,cases_per_route)
+    requests=frozen_requests(purpose,max_modules,cases_per_route,seed=seed)
     output.mkdir(parents=True,exist_ok=False)
     (output/"requests.json").write_text(json.dumps(requests,indent=2),encoding="utf-8")
     fingerprint=source_fingerprint()
     contract=execution_contract()
     manifest=dict(schema_version="optimization_oracles_v3",purpose=purpose,status="IN_PROGRESS",
-        physics=fingerprint,execution_contract=contract,
+        physics=fingerprint,execution_contract=contract,request_seed=seed,
         requests_sha256=hashlib.sha256((output/"requests.json").read_bytes()).hexdigest(),cases=[])
     (output/"manifest.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
     log(f"Generating {len(requests)} complete declared-catalog {purpose} oracles with {workers} workers")
@@ -138,7 +139,7 @@ class OracleValidation:
                 rows=sorted(case["candidates"],key=lambda row: row["catalog_index"])
                 case["candidates"]=rows
                 configs=[r["configuration"] for r in rows]
-                catalog=Catalog(q["max_modules"],q["stages"])
+                catalog=Catalog(q["max_modules"],q["stages"],min_modules=q.get("min_modules",2))
                 if case.get("search",{}).get("catalog_sha256")!=catalog.identity:
                     raise ValueError("Oracle catalog identity differs")
                 if [r["catalog_index"] for r in rows]!=list(range(catalog.count)):
@@ -202,7 +203,7 @@ def _peak_memory_bytes():
 
 
 def run_policy_benchmarks(output, registry=None, selection=None, cases_per_route=2,
-                          max_modules=2, physics_budget=256, pool_budget=65536):
+                          max_modules=2, physics_budget=256, pool_budget=65536, seed=None):
     """Sequential timed runs on frozen test requests, never a selection hook.
 
     All policies share each request's exact declared catalog. Adaptive policies
@@ -211,19 +212,19 @@ def run_policy_benchmarks(output, registry=None, selection=None, cases_per_route
     Peak process memory is a cumulative native OS high-water mark, not a delta.
     """
     output = Path(output); output.mkdir(parents=True, exist_ok=False)
-    requests = frozen_requests("test", max_modules, cases_per_route)
+    requests = frozen_requests("test", max_modules, cases_per_route,seed=seed)
     # The known rare-LI regression is named separately from unseen test cases.
     rare_path = ROOT / "powernext/optimizer/examples/LI_rare_timing_pass_recommendation.json"
     rare = json.loads(rare_path.read_text(encoding="utf-8"))["request"]
-    requests.append(dict(schema_version="network_request_v3", request_id="KNOWN_RARE_LI_REGRESSION",
+    requests.append(dict(schema_version="network_request_v3", request_id="KNOWN_RARE_LI_SETUP_EXACT2",
         domain_id="cpri_0p5uf", impulse_type="LI", topology_id="GSHUNT_v0",
-        setup=rare["setup"], target_crest_V=1000000., max_modules=1,
+        setup=rare["setup"], target_crest_V=1000000., min_modules=2, max_modules=2,
         search_mode="complete", priority="complete_physics", budget_seconds=7200,
         alternatives=4, max_ml_candidates=pool_budget, max_physics_evaluations=physics_budget))
     (output / "requests.json").write_text(json.dumps(requests, indent=2), encoding="utf-8")
     pinned = source_fingerprint()
     manifest = dict(schema_version="search_policy_benchmark_v3", purpose="test", status="IN_PROGRESS",
-        physics=pinned, execution_contract=execution_contract(), requests_sha256=hashlib.sha256((output/"requests.json").read_bytes()).hexdigest(),
+        physics=pinned, execution_contract=execution_contract(), request_seed=seed, requests_sha256=hashlib.sha256((output/"requests.json").read_bytes()).hexdigest(),
         timing_protocol="Sequential policies in declared order after explicit shared catalog/feature/model warm-up; loaded-model search latency; first-route/reused-route loading separately labeled; not cold application startup; no concurrent benchmark workers",
         memory_protocol="Cumulative OS process peak working set including native arrays; not per-policy incremental allocation",
         physics_budget=physics_budget, pool_budget=pool_budget, cases=[])
@@ -242,7 +243,7 @@ def run_policy_benchmarks(output, registry=None, selection=None, cases_per_route
         # setup before any timed policy, instead of favoring later policies.
         from .features import feature_matrix
         warm_start=time.perf_counter()
-        warm_catalog=Catalog(q["max_modules"],q.get("stages"))
+        warm_catalog=Catalog(q["max_modules"],q.get("stages"),min_modules=q.get("min_modules",2))
         warm_n,warm_f,warm_t=warm_catalog.decode(np.arange(min(32,warm_catalog.count)))
         warm_x=feature_matrix(warm_n,warm_f,warm_t,q["setup"],*route)
         model.predict(warm_x);model.ood(warm_x)
@@ -378,22 +379,23 @@ def run_four_module_smoke(output, registry=None, selection=None, physics_budget=
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument("command",choices=["oracles","policies","four-module"])
+    parser.add_argument("command",choices=["oracles","policies"])
     parser.add_argument("--output",required=True)
     parser.add_argument("--purpose",choices=["validation","test"],default="validation")
-    parser.add_argument("--max-modules",type=int,default=2)
+    parser.add_argument("--max-modules",type=int,choices=[2],default=2)
     parser.add_argument("--cases-per-route",type=int,default=2)
     parser.add_argument("--workers",type=int,default=4)
+    parser.add_argument("--seed",type=int,help="Freeze a new independent request design; omit to reproduce the historical design")
     parser.add_argument("--registry")
     parser.add_argument("--selection")
     parser.add_argument("--physics-budget",type=int,default=256)
     parser.add_argument("--pool-budget",type=int,default=65536)
     args=parser.parse_args()
     if args.command=="oracles":
-        generate_oracles(args.output,args.purpose,args.max_modules,args.cases_per_route,args.workers)
+        generate_oracles(args.output,args.purpose,args.max_modules,args.cases_per_route,args.workers,args.seed)
     elif args.command=="policies":
         run_policy_benchmarks(args.output,args.registry,args.selection,args.cases_per_route,
-            args.max_modules,args.physics_budget,args.pool_budget)
+            args.max_modules,args.physics_budget,args.pool_budget,args.seed)
     else:
         run_four_module_smoke(args.output,args.registry,args.selection,args.physics_budget,args.pool_budget)
 
