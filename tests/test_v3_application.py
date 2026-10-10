@@ -182,6 +182,145 @@ def test_fixed_prediction_and_later_reference_comparison_are_immutable(tmp_path)
         app.close()
 
 
+@pytest.mark.parametrize(
+    "field,value",
+    [
+        ("impulse_type", "SI"),
+        ("topology_id", "OSHUNT_v0"),
+        ("polarity", -1),
+        ("domain_id", "research_3uf"),
+    ],
+)
+def test_fixed_prediction_rejects_explicit_route_mismatch_before_artifact(tmp_path, field, value):
+    app = V3Application(tmp_path / "v3")
+    try:
+        configuration = {
+            "impulse_type": "LI",
+            "topology_id": "GSHUNT_v0",
+            "polarity": 1,
+            "stages": 2,
+            "stage_charge_V": 50_000.0,
+            "front_network": {"op": "R", "ohm": 180},
+            "tail_network": {"op": "R", "ohm": 30},
+        }
+        configuration[field] = value
+        with pytest.raises(ValueError, match="does not match request"):
+            app.predict_fixed({"request": request(), "configuration": configuration})
+        assert not list((tmp_path / "v3" / "predictions").glob("pred_v3_*"))
+    finally:
+        app.close()
+
+
+def test_optional_load_keeps_detailed_physics_and_marks_ml_unsupported(tmp_path):
+    app = V3Application(tmp_path / "v3")
+    try:
+        q = request(target_crest_V=100_000.0)
+        q["setup"]["load_resistance_ohm"] = 100_000.0
+        prediction = app.predict_fixed(
+            {
+                "request": q,
+                "configuration": {
+                    "impulse_type": "LI",
+                    "topology_id": "GSHUNT_v0",
+                    "polarity": 1,
+                    "stages": 2,
+                    "stage_charge_V": 50_000.0,
+                    "front_network": {"op": "R", "ohm": 180},
+                    "tail_network": {"op": "R", "ohm": 30},
+                },
+            }
+        )
+        assert prediction["prediction"]["status"] == "PHYSICS_FALLBACK"
+        assert prediction["prediction"]["source"] == "DETAILED_PHYSICS"
+        assert prediction["prediction"]["prediction_is_not_an_ml_claim"] is True
+        assert prediction["model"]["status"] == "UNAVAILABLE"
+        assert prediction["model"]["fallback_source"] == "DETAILED_PHYSICS"
+        assert prediction["model"]["ml_unsupported_reason"].startswith(
+            "L0 feature baseline does not support load_resistance_ohm"
+        )
+        assert prediction["physics"]["application_status"] == "PHYSICS_VERIFIED"
+        assert prediction["physics"]["metrics"]["crest_magnitude_V"] == prediction["prediction"]["crest_V"]
+        assert prediction["physics_waveform"] is not None
+    finally:
+        app.close()
+
+
+def test_unexpected_physics_failure_is_not_published_as_unsupported(tmp_path, monkeypatch):
+    import powernext_v3.physics as physics
+
+    def broken(*args, **kwargs):
+        raise RuntimeError("unexpected solver defect")
+
+    monkeypatch.setattr(physics, "simulate", broken)
+    app = V3Application(tmp_path / "v3")
+    try:
+        with pytest.raises(RuntimeError, match="unexpected solver defect"):
+            app.predict_fixed(
+                {
+                    "request": request(),
+                    "configuration": {
+                        "stages": 2,
+                        "stage_charge_V": 50_000.0,
+                        "front_network": {"op": "R", "ohm": 180},
+                        "tail_network": {"op": "R", "ohm": 30},
+                    },
+                }
+            )
+        assert not list((tmp_path / "v3" / "predictions").glob("pred_v3_*"))
+    finally:
+        app.close()
+
+
+def test_invalid_physics_waveform_stays_computed_but_not_verified(tmp_path, monkeypatch):
+    from types import SimpleNamespace
+
+    import powernext_v3.physics as physics
+
+    def mocked(*args, **kwargs):
+        return SimpleNamespace(
+            metadata={
+                "schema_version": "physics_networks_v3",
+                "numeric_status": "VALID",
+                "voltage_gain": 1.0,
+                "metrics": {
+                    "waveform_status": "INDETERMINATE",
+                    "crest_magnitude_V": 100_000.0,
+                    "T1_s": None,
+                    "T2_s": None,
+                },
+            },
+            arrays={
+                "time_s": [0.0, 1.0e-6, 2.0e-6, 3.0e-6],
+                "voltage_V": [0.0, 10.0, 20.0, 15.0],
+            },
+        )
+
+    monkeypatch.setattr(physics, "simulate", mocked)
+    app = V3Application(tmp_path / "v3")
+    try:
+        prediction = app.predict_fixed(
+            {
+                "request": request(target_crest_V=100_000.0),
+                "configuration": {
+                    "stages": 2,
+                    "stage_charge_V": 50_000.0,
+                    "front_network": {"op": "R", "ohm": 180},
+                    "tail_network": {"op": "R", "ohm": 30},
+                },
+            }
+        )
+        physics_record = prediction["physics"]
+        assert physics_record["application_status"] == "PHYSICS_UNSUPPORTED"
+        assert physics_record["physics_error_code"] == "WAVEFORM_NOT_CLEAN_FULL_IMPULSE"
+        assert "waveform_status='INDETERMINATE'" in physics_record["physics_unsupported_reason"]
+        assert physics_record["metrics"]["crest_magnitude_V"] == 100_000.0
+        assert prediction["physics_waveform"] is not None
+        waveform = app.prediction_waveform(prediction["prediction_id"])
+        assert waveform["arrays"]["voltage_V"] == [0.0, 10.0, 20.0, 15.0]
+    finally:
+        app.close()
+
+
 def test_http_v3_routes_keep_legacy_server_boundary(tmp_path):
     from powernext_app.server import make_server
     from powernext_app.service import Application as LegacyApplication

@@ -43,6 +43,7 @@ SCHEMA_VERSION = "network_application_v3"
 PREDICTION_SCHEMA = "network_prediction_v3"
 REFERENCE_SCHEMA = "network_reference_comparison_v3"
 _ID_RE = re.compile(r"^(?:v3|pred_v3)_[a-f0-9]{20}$")
+_LOAD_FEATURE_UNSUPPORTED = "L0 feature baseline does not support load_resistance_ohm; use the physics route"
 
 
 def _now() -> str:
@@ -244,13 +245,17 @@ class V3Application:
         return self._job_dir(job_id) / "state.json"
 
     def _read_state(self, job_id: str) -> dict[str, Any]:
-        path = self._state_path(job_id)
-        if not path.is_file():
-            raise FileNotFoundError("v3 run not found")
-        state = _read_json(path)
-        if state.get("job_id") != job_id:
-            raise ValueError("v3 run identity mismatch")
-        return state
+        # Windows can briefly deny a reader while another thread replaces the
+        # state file.  Serialize readers with the atomic writer so status
+        # polling never leaks that filesystem race to the API caller.
+        with self._lock:
+            path = self._state_path(job_id)
+            if not path.is_file():
+                raise FileNotFoundError("v3 run not found")
+            state = _read_json(path)
+            if state.get("job_id") != job_id:
+                raise ValueError("v3 run identity mismatch")
+            return state
 
     def _update_state(self, job_id: str, **changes: Any) -> dict[str, Any]:
         with self._lock:
@@ -411,13 +416,14 @@ class V3Application:
                 self._futures.pop(job_id, None)
 
     def list_runs(self) -> list[dict[str, Any]]:
-        values: list[dict[str, Any]] = []
-        for path in self.jobs.glob("v3_*/state.json"):
-            try:
-                values.append(_read_json(path))
-            except (OSError, ValueError, json.JSONDecodeError):
-                continue
-        return sorted(values, key=lambda item: (item.get("created_at", ""), item.get("job_id", "")), reverse=True)
+        with self._lock:
+            values: list[dict[str, Any]] = []
+            for path in self.jobs.glob("v3_*/state.json"):
+                try:
+                    values.append(_read_json(path))
+                except (OSError, ValueError, json.JSONDecodeError):
+                    continue
+            return sorted(values, key=lambda item: (item.get("created_at", ""), item.get("job_id", "")), reverse=True)
 
     list_jobs = list_runs
 
@@ -489,6 +495,15 @@ class V3Application:
             raise ValueError("A fixed prediction requires request and configuration objects")
         request, _ = normalize_request(dict(request_raw))
         configuration = _json_copy(dict(configuration))
+        # A fixed prediction has one immutable route identity.  Defaults make
+        # the compact UI configuration convenient, but explicit route fields
+        # must agree with the request before Physics or artifact creation.
+        for name in ("impulse_type", "topology_id", "polarity", "domain_id"):
+            if name not in configuration:
+                continue
+            expected = request[name] if name != "domain_id" else request["domain_id"]
+            if configuration[name] != expected:
+                raise ValueError(f"configuration {name} does not match request: expected {expected!r}")
         configuration.setdefault("impulse_type", request["impulse_type"])
         configuration.setdefault("topology_id", request["topology_id"])
         configuration.setdefault("polarity", request["polarity"])
@@ -535,19 +550,40 @@ class V3Application:
                 n_points=1600,
             )
             metadata = _json_copy(solved.metadata)
-            status = "PHYSICS_VERIFIED" if metadata.get("numeric_status") == "VALID" else "PHYSICS_UNSUPPORTED"
+            metrics = metadata.get("metrics") if isinstance(metadata.get("metrics"), Mapping) else {}
+            waveform_status = metadata.get("waveform_status", metrics.get("waveform_status"))
+            numeric_status = metadata.get("numeric_status")
+            fully_verified = (
+                numeric_status == "VALID"
+                and waveform_status == "VALID_CLEAN_FULL_IMPULSE"
+            )
+            status = "PHYSICS_VERIFIED" if fully_verified else "PHYSICS_UNSUPPORTED"
             metadata["application_status"] = status
+            if not fully_verified:
+                metadata["physics_error_code"] = "WAVEFORM_NOT_CLEAN_FULL_IMPULSE"
+                metadata["physics_unsupported_reason"] = (
+                    "Detailed Physics computed a waveform but it is not a clean full impulse: "
+                    f"numeric_status={numeric_status!r}, waveform_status={waveform_status!r}"
+                )
             arrays = {
                 key: np.asarray(value, dtype=float)
                 for key, value in solved.arrays.items()
                 if key in {"time_s", "voltage_V", "generator_voltage_V", "front_current_A", "stored_energy_J", "dissipated_power_W"}
             }
             return metadata, arrays
-        except Exception as exc:  # PhysicsError and solver failures are data, not ML fallbacks.
+        except Exception as exc:
+            # PhysicsError is a declared, user-facing unsupported solve.  Do
+            # not turn an unexpected programming or numerical failure into a
+            # plausible-looking Physics fallback or verified record.
+            from physics_engine.network import PhysicsError
+
+            if not isinstance(exc, PhysicsError):
+                raise
             return {
                 "schema_version": "physics_networks_v3",
                 "application_status": "PHYSICS_UNSUPPORTED",
                 "error": str(exc),
+                "physics_error_code": exc.code,
                 "eligible_for_hardware_recommendation": False,
                 "numerical_pass_is_not_IEC_certification": True,
             }, None
@@ -555,61 +591,98 @@ class V3Application:
     def predict_fixed(self, raw: Mapping[str, Any]) -> dict[str, Any]:
         request, configuration = self._fixed_inputs(raw)
         physics_metadata, physics_arrays = self._fixed_physics(request, configuration)
-        features = feature_matrix(
-            [configuration["stages"]],
-            [configuration["front_per_stage_ohm"]],
-            [configuration["tail_per_stage_ohm"]],
-            request["setup"],
-            request["domain_id"],
-            request["impulse_type"],
-            request["topology_id"],
-        )
+        feature_fallback_reason = None
+        try:
+            features = feature_matrix(
+                [configuration["stages"]],
+                [configuration["front_per_stage_ohm"]],
+                [configuration["tail_per_stage_ohm"]],
+                request["setup"],
+                request["domain_id"],
+                request["impulse_type"],
+                request["topology_id"],
+            )
+        except ValueError as exc:
+            # Detailed Physics models an optional leakage branch, while the
+            # L0 feature contract intentionally refuses to ignore it.  Keep
+            # the Physics result and record an explicit non-ML fallback.  A
+            # different feature error remains a hard input/program failure.
+            load_resistance = request["setup"].get("load_resistance_ohm") if isinstance(request["setup"], Mapping) else None
+            if load_resistance is None or str(exc) != _LOAD_FEATURE_UNSUPPORTED:
+                raise
+            feature_fallback_reason = str(exc)
+            features = None
         model = None
         card = None
-        fallback_reason = None
-        try:
-            model, card = load_predictor(request, registry=self.registry, selection=self.selection)
-        except (OSError, ValueError, KeyError, RuntimeError) as exc:
-            fallback_reason = str(exc)
-        if model is None:
-            values = baseline(features)[0]
+        fallback_reason = feature_fallback_reason
+        route = f"{request['domain_id']}:{request['impulse_type']}:{request['topology_id']}"
+        if feature_fallback_reason is not None:
+            metrics = physics_metadata.get("metrics", {}) if isinstance(physics_metadata, Mapping) else {}
+            front_key = "T1_s" if request["impulse_type"] == "LI" else "Tp_s"
             prediction = {
                 "status": "PHYSICS_FALLBACK",
-                "source": "L0_PHYSICS_BASELINE",
+                "source": "DETAILED_PHYSICS",
                 "model_id": None,
-                "gain": float(values[0]),
-                "front_us": float(values[1]),
-                "tail_us": float(values[2]),
-                "crest_V": float(values[0] * configuration["stages"] * configuration["stage_charge_V"]),
+                "gain": None if physics_metadata.get("voltage_gain") is None else float(physics_metadata["voltage_gain"]),
+                "front_us": None if metrics.get(front_key) is None else float(metrics[front_key]) * 1e6,
+                "tail_us": None if metrics.get("T2_s") is None else float(metrics["T2_s"]) * 1e6,
+                "crest_V": None if metrics.get("crest_magnitude_V") is None else float(metrics["crest_magnitude_V"]),
                 "ml_ood": None,
+                "ml_unsupported_reason": feature_fallback_reason,
+                "prediction_is_not_an_ml_claim": True,
             }
             model_info = {
                 "status": "UNAVAILABLE",
                 "fallback_reason": fallback_reason,
+                "ml_unsupported_reason": feature_fallback_reason,
+                "fallback_source": "DETAILED_PHYSICS",
                 "prediction_is_not_an_ml_claim": True,
-                "route": f"{request['domain_id']}:{request['impulse_type']}:{request['topology_id']}",
+                "route": route,
             }
         else:
-            predicted = np.asarray(model.predict(features), dtype=float)[0]
-            if not np.isfinite(predicted).all() or (predicted <= 0).any():
-                raise ValueError("Loaded model returned a non-positive or non-finite prediction")
-            ood = bool(np.asarray(model.ood(features), dtype=bool).reshape(-1)[0])
-            prediction = {
-                "status": "ML_PREDICTION",
-                "source": "VERSIONED_ROUTE_MODEL",
-                "model_id": card.get("model_id"),
-                "gain": float(predicted[0]),
-                "front_us": float(predicted[1]),
-                "tail_us": float(predicted[2]),
-                "crest_V": float(predicted[0] * configuration["stages"] * configuration["stage_charge_V"]),
-                "ml_ood": ood,
-            }
-            model_info = {
-                "status": "LOADED",
-                "model_id": card.get("model_id"),
-                "card_sha256": _sha256_bytes(json.dumps(card, sort_keys=True, allow_nan=False).encode()),
-                "route": f"{request['domain_id']}:{request['impulse_type']}:{request['topology_id']}",
-            }
+            try:
+                model, card = load_predictor(request, registry=self.registry, selection=self.selection)
+            except (OSError, ValueError, KeyError, RuntimeError) as exc:
+                fallback_reason = str(exc)
+            if model is None:
+                values = baseline(features)[0]
+                prediction = {
+                    "status": "PHYSICS_FALLBACK",
+                    "source": "L0_PHYSICS_BASELINE",
+                    "model_id": None,
+                    "gain": float(values[0]),
+                    "front_us": float(values[1]),
+                    "tail_us": float(values[2]),
+                    "crest_V": float(values[0] * configuration["stages"] * configuration["stage_charge_V"]),
+                    "ml_ood": None,
+                }
+                model_info = {
+                    "status": "UNAVAILABLE",
+                    "fallback_reason": fallback_reason,
+                    "prediction_is_not_an_ml_claim": True,
+                    "route": route,
+                }
+            else:
+                predicted = np.asarray(model.predict(features), dtype=float)[0]
+                if not np.isfinite(predicted).all() or (predicted <= 0).any():
+                    raise ValueError("Loaded model returned a non-positive or non-finite prediction")
+                ood = bool(np.asarray(model.ood(features), dtype=bool).reshape(-1)[0])
+                prediction = {
+                    "status": "ML_PREDICTION",
+                    "source": "VERSIONED_ROUTE_MODEL",
+                    "model_id": card.get("model_id"),
+                    "gain": float(predicted[0]),
+                    "front_us": float(predicted[1]),
+                    "tail_us": float(predicted[2]),
+                    "crest_V": float(predicted[0] * configuration["stages"] * configuration["stage_charge_V"]),
+                    "ml_ood": ood,
+                }
+                model_info = {
+                    "status": "LOADED",
+                    "model_id": card.get("model_id"),
+                    "card_sha256": _sha256_bytes(json.dumps(card, sort_keys=True, allow_nan=False).encode()),
+                    "route": route,
+                }
         prediction_id = "pred_v3_" + uuid.uuid4().hex[:20]
         source_fingerprint = self._source_fingerprint()
         record = {

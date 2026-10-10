@@ -28,9 +28,15 @@ def selected_ids(root):
     values=json.loads(selection.read_text(encoding="utf-8"))
     required={f"{domain}:{mode}:{top}" for domain in ("cpri_0p5uf","research_3uf") for mode in ("LI","SI") for top in ("GSHUNT_v0","OSHUNT_v0")}
     if set(values)!=required:raise ValueError("All eight selected domain-compatible model routes are required for release")
-    for identifier in values.values():
+    from powernext_v3.registry import load_model
+    for route,identifier in values.items():
         if not isinstance(identifier,str) or Path(identifier).name!=identifier:raise ValueError("Invalid selected model identifier")
-        if not (root/"powernext/ml/registry/networks_v3"/identifier/"model.joblib").is_file():raise FileNotFoundError(identifier)
+        folder=root/"powernext/ml/registry/networks_v3"/identifier
+        if not (folder/"model.joblib").is_file() or not (folder/"card.json").is_file():raise FileNotFoundError(identifier)
+        domain,mode,topology=route.split(":")
+        # Release preparation must reject a stale, mismatched, or tampered
+        # selected artifact before any package directory is created.
+        load_model(folder,expected_route=dict(domain_id=domain,mode=mode,topology=topology))
     return set(values.values())
 
 

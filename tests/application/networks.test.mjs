@@ -29,7 +29,7 @@ for (const phrase of ['Research comparison domain', 'Physics-compliant numerical
 for (const route of ['/api/v3/meta', '/api/v3/validate', '/api/v3/runs', '/api/v3/predict', '/api/v3/predictions/', '/api/v3/runs/', '/reference-metrics', '/waveform']) {
   assert.match(js, new RegExp(route.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `missing route ${route}`);
 }
-for (const contract of ['failed_alternatives', 'catalog_complete', 'physics_evaluated_count', 'PHYSICS_FALLBACK', 'csv_base64', 'input_sha256', 'raw_sha256']) {
+for (const contract of ['failed_alternatives', 'catalog_complete', 'physics_evaluated_count', 'PHYSICS_FALLBACK', 'DETAILED_PHYSICS', 'ML OOD status', 'Detailed Physics', 'OUT_OF_DOMAIN', 'Load computed Physics waveform', 'csv_base64', 'input_sha256', 'raw_sha256']) {
   assert.match(`${html}\n${js}`, new RegExp(contract), `missing contract field ${contract}`);
 }
 assert.match(js, /recipe\?\.id/, 'renders canonical recipe identifiers from result rows');

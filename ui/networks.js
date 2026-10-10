@@ -236,7 +236,26 @@ async function fixedPredict(event) {
     fixedPrediction = record;
     const out = document.getElementById('v3-prediction-result');
     out.hidden = false;
-    out.innerHTML = `<div class="note ${record.prediction.status === 'ML_PREDICTION' ? 'info' : 'caution'}"><div><b>${esc(record.prediction.status)}</b> · ${esc(record.prediction.source)}<br><span>${record.model.status === 'LOADED' ? `Model ${esc(record.model.model_id)}` : 'No versioned route model loaded; Physics L0 baseline is shown explicitly.'}</span></div></div><dl class="kvs tight"><div class="kv"><dt>Prediction id</dt><dd><code>${esc(record.prediction_id)}</code></dd></div><div class="kv"><dt>Gain / front / tail</dt><dd class="num">${record.prediction.gain} / ${record.prediction.front_us} / ${record.prediction.tail_us}</dd></div><div class="kv"><dt>Predicted crest</dt><dd class="num">${record.prediction.crest_V} V</dd></div><div class="kv"><dt>Physics status</dt><dd>${esc(record.physics?.application_status || 'unavailable')}</dd></div><div class="kv"><dt>Frozen input hash</dt><dd><code>${esc(record.input_sha256)}</code></dd></div></dl>${record.physics_waveform ? `<div class="actions"><button class="btn sm" data-v3-pred-wave="${esc(record.prediction_id)}">Load verified Physics waveform</button><span id="v3-pred-wave-${esc(record.prediction_id)}" class="muted small"></span></div>` : ''}`;
+    const prediction = record.prediction || {};
+    const model = record.model || {};
+    const physics = record.physics || {};
+    const physicsMetrics = physics.metrics || {};
+    const physicsFrontKey = request.impulse_type === 'LI' ? 'T1_s' : 'Tp_s';
+    const metric = value => value == null ? '—' : esc(String(value));
+    const timeUs = value => value == null ? '—' : metric(Number(value) * 1e6);
+    const fallbackReason = model.ml_unsupported_reason || prediction.ml_unsupported_reason || model.fallback_reason || 'route artifact unavailable';
+    const modelSummary = model.status === 'LOADED'
+      ? `Model ${esc(model.model_id || 'unknown')} loaded for ${esc(model.route || 'the requested route')}.`
+      : prediction.source === 'DETAILED_PHYSICS'
+        ? `No versioned route model; detailed Physics fallback shown. Reason: ${esc(fallbackReason)}`
+        : `No versioned route model; Physics L0 baseline shown explicitly. Reason: ${esc(fallbackReason)}`;
+    const mlOodStatus = model.status === 'LOADED'
+      ? (prediction.ml_ood == null ? 'UNAVAILABLE' : prediction.ml_ood ? 'OUT_OF_DOMAIN' : 'IN_DOMAIN')
+      : 'NOT_EVALUATED';
+    const physicsStatus = physics.application_status || 'UNAVAILABLE';
+    const waveformLabel = physicsStatus === 'PHYSICS_VERIFIED' ? 'Load verified Physics waveform' : 'Load computed Physics waveform';
+    const physicsReason = physics.physics_unsupported_reason || physics.error || 'Computed detailed Physics is not marked verified.';
+    out.innerHTML = `<div class="note ${prediction.status === 'ML_PREDICTION' ? 'info' : 'caution'}"><div><b>${esc(prediction.status || 'UNAVAILABLE')} · ${esc(prediction.source || 'UNKNOWN')}</b><br><span>${modelSummary}</span></div></div><dl class="kvs tight"><div class="kv"><dt>Prediction id</dt><dd><code>${esc(record.prediction_id)}</code></dd></div><div class="kv"><dt>Frozen input hash</dt><dd><code>${esc(record.input_sha256)}</code></dd></div></dl><div class="grid-2 inner"><section class="card"><div class="card-head"><h4>ML / route prediction</h4><span class="chip neutral">${esc(model.status || 'UNAVAILABLE')}</span></div><dl class="kvs tight"><div class="kv"><dt>ML gain</dt><dd class="num">${metric(prediction.gain)}</dd></div><div class="kv"><dt>ML front / tail (µs)</dt><dd class="num">${metric(prediction.front_us)} / ${metric(prediction.tail_us)}</dd></div><div class="kv"><dt>ML crest</dt><dd class="num">${metric(prediction.crest_V)} V</dd></div><div class="kv"><dt>ML OOD status</dt><dd>${esc(mlOodStatus)}</dd></div><div class="kv"><dt>ML source</dt><dd>${esc(prediction.source || 'UNKNOWN')}</dd></div></dl></section><section class="card"><div class="card-head"><h4>Detailed Physics</h4><span class="chip ${physicsStatus === 'PHYSICS_VERIFIED' ? 'pass' : 'caution'}">${esc(physicsStatus)}</span></div><dl class="kvs tight"><div class="kv"><dt>Physics crest</dt><dd class="num">${metric(physicsMetrics.crest_magnitude_V)} V</dd></div><div class="kv"><dt>Physics front / tail (µs)</dt><dd class="num">${timeUs(physicsMetrics[physicsFrontKey])} / ${timeUs(physicsMetrics.T2_s)}</dd></div><div class="kv"><dt>Waveform status</dt><dd>${esc(physicsMetrics.waveform_status || physics.waveform_status || 'UNAVAILABLE')}</dd></div><div class="kv"><dt>Physics note</dt><dd>${esc(physicsStatus === 'PHYSICS_VERIFIED' ? 'Clean full impulse and energy audit passed.' : physicsReason)}</dd></div></dl></section></div>${record.physics_waveform ? `<div class="actions"><button class="btn sm" data-v3-pred-wave="${esc(record.prediction_id)}">${waveformLabel}</button><span id="v3-pred-wave-${esc(record.prediction_id)}" class="muted small"></span></div>` : ''}`;
     document.getElementById('v3-reference-panel').hidden = false;
     if (status) status.textContent = 'Frozen prediction saved.';
   } catch (error) { if (status) status.textContent = error.message; }

@@ -85,7 +85,7 @@
       <div class="actions"><button class="btn primary" type="submit">Freeze &amp; predict</button><span id="v3-predict-status" class="muted small" role="status"></span></div>
     </form>
     <div id="v3-prediction-result" class="v3-output" hidden></div>
-    <p class="micro">If no versioned route artifact loads, the saved status is <code>PHYSICS_FALLBACK</code>; the interface never labels that baseline as an ML prediction.</p>
+    <p class="micro">If no versioned route artifact loads, the saved status is <code>PHYSICS_FALLBACK</code>. The result separates ML route output from detailed Physics; leakage uses a <code>DETAILED_PHYSICS</code> fallback and every fallback stays explicitly outside an ML claim.</p>
     <div id="v3-reference-panel" class="v3-reference" hidden>
       <div class="divider"></div><h3>Attach measured reference later</h3>
       <p class="hint">Raw CSV bytes and source metadata are preserved. The comparison is numerical evidence only and never retrains or mutates the frozen prediction.</p>

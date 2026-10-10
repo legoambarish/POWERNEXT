@@ -248,12 +248,95 @@ def run_policy_benchmarks(output, registry=None, selection=None, cases_per_route
     if source_fingerprint()!=pinned:raise RuntimeError("Physics changed during benchmarks")
     manifest["status"]="COMPLETE"
     manifest_path.write_text(json.dumps(manifest,indent=2),encoding="utf-8")
+    write_policy_report(output)
+    return manifest
+
+
+def write_policy_report(directory):
+    directory=Path(directory)
+    manifest=json.loads((directory/"manifest.json").read_text(encoding="utf-8"))
+    if manifest.get("status")!="COMPLETE" or manifest.get("purpose")!="test":
+        raise ValueError("Only completed final benchmark evidence can be summarized")
+    cases=[]
+    for record in manifest["cases"]:
+        content=(directory/record["path"]).read_bytes()
+        if hashlib.sha256(content).hexdigest()!=record["sha256"]:raise ValueError("Benchmark case changed")
+        cases.append(json.loads(content))
+    def number(value):return "unavailable" if value is None else f"{value:.4g}"
+    lines=["# Four-policy search benchmark", "", "These are measured runs over identical declared catalogs for each fixed request. "
+        "Final test requests use a separate input seed from model selection. The known rare-LI regression is labeled separately.", "",
+        "The complete reference reuses linear waveform scaling. Adaptive policies have the recorded candidate-pool and Physics budgets; "
+        "they do not establish a global optimum. All reported passing candidates were verified by the detailed simulator.", "",
+        "Timing protocol: "+manifest["timing_protocol"]+".", "", "Memory protocol: "+manifest["memory_protocol"]+".", "",
+        "| Request | Policy | First pass, s | Four passes, s | Total, s | Physics calls | ML predictions | Passes found/reference | Best J | Regret |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
+    for case in cases:
+        for row in case["policies"]:
+            s=row["search"]
+            lines.append(f"| {case['request']['request_id']} | {row['policy']} | {number(s['time_to_first_pass_seconds'])} | "
+                f"{number(s['time_to_alternatives_seconds'])} | {number(s['total_seconds'])} | {s['physics_evaluated_count']} | "
+                f"{s['ml_predicted_count']} | {row['feasible_candidates_found']}/{row['oracle_feasible_count']} | "
+                f"{number(row['best_objective'])} | {number(row['regret'])} |")
+    lines += ["", "## Paired discovery outcomes", "", "A missing pass time is not zero. Ratios below use only cases where both policies found a pass; "
+        "missed feasible requests are listed separately to avoid hiding failures. A ratio above one means the adaptive policy reached its first pass sooner.", "",
+        "| Policy | Feasible test requests | Missed feasible requests | Paired first-pass timings | Median complete/adaptive time ratio |",
+        "|---|---:|---:|---:|---:|"]
+    unseen=[case for case in cases if not case["request"]["request_id"].startswith("KNOWN_")]
+    for policy in ("analytical","ml","combined"):
+        rows=[next(row for row in case["policies"] if row["policy"]==policy) for case in unseen]
+        feasible=sum(row["oracle_feasible_count"]>0 for row in rows)
+        missed=sum(row["missed_feasible_request"] for row in rows)
+        ratios=[]
+        for case,row in zip(unseen,rows):
+            base=case["policies"][0]["search"]["time_to_first_pass_seconds"]
+            adaptive=row["search"]["time_to_first_pass_seconds"]
+            if base is not None and adaptive is not None and adaptive>0:ratios.append(base/adaptive)
+        lines.append(f"| {policy} | {feasible} | {missed} | {len(ratios)} | {number(float(np.median(ratios)) if ratios else None)} |")
+    lines += ["", "Per-case JSON includes OOD and unsupported counts, complete/partial coverage, model-loading time, "
+        "scoring throughput and process peak memory. These results describe this runtime, input set and declared catalog; "
+        "they establish no general speedup over every electrical setup or four-module search. No real-hardware validation is claimed.", ""]
+    (directory/"report.md").write_text("\n".join(lines),encoding="utf-8")
+
+
+def run_four_module_smoke(output, registry=None, selection=None, physics_budget=256, pool_budget=65536):
+    """Exercise actual trained routing against the full declared four-module catalog.
+
+    This is bounded acceptance evidence, without a complete-reference regret or
+    optimality claim. Requests are frozen before evaluation and never select models.
+    """
+    output=Path(output); output.mkdir(parents=True,exist_ok=False)
+    requests=frozen_requests("test",4,1)
+    for q in requests:
+        q.update(request_id=q["request_id"]+"_FOUR_MODULE",stages=list(range(2,16)),
+            search_mode="adaptive",priority="combined",budget_seconds=180,
+            max_ml_candidates=pool_budget,max_physics_evaluations=physics_budget)
+    payload=json.dumps(requests,indent=2)
+    (output/"requests.json").write_text(payload,encoding="utf-8")
+    manifest=dict(schema_version="four_module_acceptance_v3",status="IN_PROGRESS",purpose="test",
+        physics=source_fingerprint(),requests_sha256=hashlib.sha256(payload.encode()).hexdigest(),cases=[])
+    for q in requests:
+        log("Four-module acceptance "+q["request_id"])
+        result,_=recommend(q,registry=registry,selection=selection,retain_waveforms=False)
+        search=result["search"]
+        if search["effective_strategy"]!="combined" or search["ml_predicted_count"]<=0:
+            raise RuntimeError("Four-module acceptance requires the actual selected ML model")
+        if any(not r["compliant"] for r in [result["best_configuration"]] if r):
+            raise RuntimeError("A failed configuration was selected")
+        path=output/(q["request_id"]+".json")
+        path.write_text(json.dumps(result,indent=2,allow_nan=False),encoding="utf-8")
+        manifest["cases"].append(dict(path=path.name,sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+            status=result["status"],search=search,process_peak_memory_bytes=_peak_memory_bytes()))
+        (output/"manifest.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
+        log(f"Four-module result {result['status']}: {search['ml_predicted_count']} ML predictions, {search['physics_evaluated_count']} Physics evaluations")
+    if source_fingerprint()!=manifest["physics"]:raise RuntimeError("Physics changed during acceptance")
+    manifest["status"]="COMPLETE"
+    (output/"manifest.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
     return manifest
 
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument("command",choices=["oracles","policies"])
+    parser.add_argument("command",choices=["oracles","policies","four-module"])
     parser.add_argument("--output",required=True)
     parser.add_argument("--purpose",choices=["validation","test"],default="validation")
     parser.add_argument("--max-modules",type=int,default=2)
@@ -266,9 +349,11 @@ def main():
     args=parser.parse_args()
     if args.command=="oracles":
         generate_oracles(args.output,args.purpose,args.max_modules,args.cases_per_route,args.workers)
-    else:
+    elif args.command=="policies":
         run_policy_benchmarks(args.output,args.registry,args.selection,args.cases_per_route,
             args.max_modules,args.physics_budget,args.pool_budget)
+    else:
+        run_four_module_smoke(args.output,args.registry,args.selection,args.physics_budget,args.pool_budget)
 
 
 if __name__=="__main__":main()

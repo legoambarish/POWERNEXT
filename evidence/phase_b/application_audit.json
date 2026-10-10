@@ -1,0 +1,108 @@
+{
+  "schema_version": "powernext_v3_application_audit_v1",
+  "captured_at": "2026-10-10T12:05:00Z",
+  "workspace_root": "C:/Users/User/Downloads/Powernext/POWERNEXT",
+  "server": {
+    "base_url": "http://127.0.0.1:18766",
+    "pid": 29564,
+    "data_root": "C:/Users/User/AppData/Local/Temp/powernext-v3-audit-20261010",
+    "offline": true,
+    "hardware_control": false,
+    "startup_log": "C:/Users/User/AppData/Local/Temp/powernext-v3-audit-20261010/server.stdout.log"
+  },
+  "model_state": {
+    "selection_path": "powernext/ml/results/networks_v3/selected_models.json",
+    "selection_exists": false,
+    "registry_path": "powernext/ml/registry/networks_v3",
+    "registry_exists": false,
+    "all_eight_routes": "PHYSICS_FALLBACK",
+    "prediction_is_not_an_ml_claim": true,
+    "acceptance_state": "PENDING_TRAINED_MODEL_ARTIFACTS"
+  },
+  "api": {
+    "meta": {"status": 200, "schema": "network_application_v3", "routes_checked": 8},
+    "validation": {
+      "status": "PASS",
+      "requests": [
+        {"domain_id": "cpri_0p5uf", "impulse_type": "LI", "status": 200, "valid": true},
+        {"domain_id": "cpri_0p5uf", "impulse_type": "SI", "status": 200, "valid": true},
+        {"domain_id": "research_3uf", "impulse_type": "LI", "status": 200, "valid": true},
+        {"domain_id": "research_3uf", "impulse_type": "SI", "status": 200, "valid": true}
+      ]
+    },
+    "single_active_job": {
+      "first_post_status": 202,
+      "second_post_status": 400,
+      "second_error_prefix": "A v3 search is already active",
+      "completed_status": "COMPLETED",
+      "completed_result_status": "NO_COMPLIANT_CONFIGURATION_YET",
+      "catalog_complete": false,
+      "physics_evaluated_count": 1
+    },
+    "complete_small_catalog_stage_2": {
+      "cpri_0p5uf_LI": {"status": "COMPLETED", "catalog_complete": true, "theoretical": 36, "physics": 36, "result_status": "NO_COMPLIANT_CONFIGURATION_IN_DECLARED_CATALOG"},
+      "cpri_0p5uf_SI": {"status": "COMPLETED", "catalog_complete": true, "theoretical": 36, "physics": 36, "result_status": "NO_COMPLIANT_CONFIGURATION_IN_DECLARED_CATALOG"},
+      "research_3uf_LI": {"status": "COMPLETED", "catalog_complete": true, "theoretical": 36, "physics": 36, "result_status": "NO_COMPLIANT_CONFIGURATION_IN_DECLARED_CATALOG"},
+      "research_3uf_SI": {"status": "COMPLETED", "catalog_complete": true, "theoretical": 36, "physics": 36, "result_status": "NO_COMPLIANT_CONFIGURATION_IN_DECLARED_CATALOG"}
+    },
+    "fixed_predictions": {
+      "cpri_0p5uf_LI": {"status": 201, "prediction_id": "pred_v3_8af7a08768154c63857a", "prediction_status": "PHYSICS_FALLBACK", "physics_status": "PHYSICS_VERIFIED"},
+      "cpri_0p5uf_SI": {"status": 201, "prediction_id": "pred_v3_5aebf9c3c7044ad0bd74", "prediction_status": "PHYSICS_FALLBACK", "physics_status": "PHYSICS_VERIFIED"},
+      "research_3uf_LI": {"status": 201, "prediction_id": "pred_v3_456358212df946cebfa6", "prediction_status": "PHYSICS_FALLBACK", "physics_status": "PHYSICS_VERIFIED"},
+      "research_3uf_SI": {"status": 201, "prediction_id": "pred_v3_0a0c8f65edd54c85a436", "prediction_status": "PHYSICS_FALLBACK", "physics_status": "PHYSICS_VERIFIED"}
+    },
+    "references": {
+      "scalar": {"status": 201, "prediction_id": "pred_v3_8af7a08768154c63857a", "comparison_id": "ref_v3_46f7e2178a324cec8eec", "qualification": "NUMERICAL_SCALAR_REFERENCE_ONLY", "raw_sha256": null},
+      "csv": {"status": 201, "prediction_id": "pred_v3_8af7a08768154c63857a", "comparison_id": "ref_v3_6ae401be1a964a7f8fbc", "qualification": "NUMERICAL_REFERENCE_COMPARISON_ONLY", "raw_sha256": "da738a11dc13c72659dc94df89a54d672b4a4ea8913ce64d9e2ccdb1d813d859"}
+    },
+    "integrity_negative_checks": {
+      "prediction_tamper_status": 400,
+      "prediction_tamper_error": "v3 prediction integrity mismatch",
+      "comparison_tamper_status": 400,
+      "comparison_tamper_error": "v3 reference comparison integrity mismatch",
+      "restored_prediction_status": 200,
+      "restored_comparison_status": 200
+    }
+  },
+  "browser": {
+    "browser": "Chrome extension",
+    "url": "http://127.0.0.1:18766/",
+    "navigation_visible": true,
+    "research_banner_visible": true,
+    "validation_rendered": "Valid · 504 response candidates",
+    "live_progress_rendered": true,
+    "complete_result_rendered": true,
+    "rendered_exact_recipes": "R3700 / R520",
+    "rendered_bom": "520Ω × 11 (UNKNOWN); 3700Ω × 11 (UNKNOWN)",
+    "fixed_prediction_rendered": "PHYSICS_FALLBACK · L0_PHYSICS_BASELINE",
+    "scalar_comparison_rendered": "NUMERICAL_SCALAR_REFERENCE_ONLY",
+    "screenshot_paths": [],
+    "screenshot_note": "A real screenshot was observed through CUA, but the browser connector exposed no filesystem export path; no fabricated path is recorded.",
+    "follow_up_rendered_ui": {
+      "captured_at": "2026-10-10T18:02:21+05:30",
+      "fresh_tab_url": "http://127.0.0.1:18766/?v=202610101758#measured",
+      "sections_visible": ["ML / route prediction", "Detailed Physics"],
+      "ml_ood_status_visible": "NOT_EVALUATED",
+      "physics_status_visible": "PHYSICS_VERIFIED",
+      "waveform_status_visible": "VALID_CLEAN_FULL_IMPULSE",
+      "waveform_action_visible": "Load verified Physics waveform",
+      "fallback_reason_visible": true,
+      "screenshot_paths": []
+    },
+    "optional_load_api_check": {
+      "base_url": "http://127.0.0.1:18767",
+      "prediction_source": "DETAILED_PHYSICS",
+      "prediction_status": "PHYSICS_FALLBACK",
+      "physics_status": "PHYSICS_VERIFIED",
+      "physics_waveform_saved": true,
+      "ml_unsupported_reason_visible": true
+    }
+  },
+  "no_result_semantics": {
+    "complete_no_pass_result": "NO_COMPLIANT_CONFIGURATION_IN_DECLARED_CATALOG with best_configuration null",
+    "planned_partial_result": "valid COMPLETED result with catalog_complete false",
+    "interrupted_job": "FAILED with result null",
+    "raw_csv_not_inferred_for_scalar": true
+  }
+}
+

@@ -74,6 +74,54 @@ limitations. The numerical comparison is evidence for review only; it does not
 retrain, mutate, or certify the prediction and cannot establish CPRI or IEC
 qualification.
 
+An explicit `load_resistance_ohm` setup field is supported by detailed Physics
+but is outside the versioned L0 feature contract. The fixed prediction keeps
+the detailed Physics metrics and waveform, marks the fallback source as
+`DETAILED_PHYSICS`, and records `ml_unsupported_reason`; it never labels that
+record as an ML prediction. Explicit configuration route fields
+(`domain_id`, `impulse_type`, `topology_id`, and `polarity`) must agree with the
+request before Physics runs or a prediction artifact is created. Unexpected
+Physics failures remain errors and are not relabeled as unsupported traces.
+`PHYSICS_VERIFIED` additionally requires both `numeric_status=VALID` and
+`waveform_status=VALID_CLEAN_FULL_IMPULSE`; a computed waveform with an
+indeterminate or truncated evaluator status remains available for review but
+is labeled `PHYSICS_UNSUPPORTED` with an explicit reason. The fixed-prediction
+view displays ML OOD status and detailed Physics crest/timing independently;
+its waveform action says `computed` unless the clean-full-impulse gate passed.
+
 The UI is available from the `Network optimizer` navigation item. The research
 3 µF/stage profile is marked in the page and in every saved request as a
 research comparison domain.
+
+## Extracted release acceptance
+
+`tests/verify_networks_release.py` is the read-only acceptance harness for a
+new extracted v3 release. Run it from the release directory with the embedded
+runtime; use an output path outside that directory so the package cannot be
+changed while its manifest is being checked:
+
+```powershell
+runtime\python.exe -B tests\verify_networks_release.py `
+  --output C:\Temp\powernext-v3-release-acceptance.json
+```
+
+The harness checks that imports resolve to the embedded runtime or release
+root, outbound sockets are denied, every selected route has both `card.json`
+and `model.joblib` and passes strict registry loading, and the immutable
+manifest remains byte-for-byte unchanged after execution. It also performs a
+fixed Physics prediction and scalar-reference freeze for all eight routes.
+The complete catalogue gate evaluates the LI rare timing fixture and the SI
+fixture over stages 2 through 15 with one module per branch: 504 theoretical
+recipes, 504 distinct response candidates, and 504 Physics evaluations per
+fixture.
+
+Before trained v3 artifacts and a v3 package manifest exist, the normal exit
+status is `BLOCKED` (exit code 2). `--allow-pending` returns zero only to make
+the Physics fallback smoke and catalogue checks usable during development; it
+does not convert `PHYSICS_FALLBACK` into an ML acceptance. The current source
+checkout is intentionally in that pending state: it has the legacy v2
+manifest and no `powernext/ml/registry/networks_v3` or selected-model file.
+The release builder's route selection now applies the strict card gate before
+copying selected models. The acceptance harness independently requires both
+`card.json` and `model.joblib`, then performs registry card/hash/route checks;
+it does not modify the builder.
