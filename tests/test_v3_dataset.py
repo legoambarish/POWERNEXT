@@ -34,6 +34,31 @@ def test_amplitude_polarity_and_capacitance_partition_share_response_group():
     assert grouped[0]["split"] == grouped[1]["split"]
 
 
+def test_declared_setup_family_is_a_split_union_edge():
+    first = {
+        "row_id": "family-a",
+        "domain_id": "cpri_0p5uf",
+        "mode": "LI",
+        "topology_id": "GSHUNT_v0",
+        "response_group_key": "shape-a",
+        "setup_family_key": "normalized-a",
+        "setup_family_id": "DECLARED_SHARED_FAMILY",
+    }
+    second = dict(first, row_id="family-b", response_group_key="shape-b", setup_family_key="normalized-b")
+    groups = dataset._union_find_groups([first, second])
+    assert groups[0] == groups[1]
+
+
+def test_training_splitter_accepts_actual_v3_design_assignments():
+    """The dataset and ML splitter must enforce the same input identities."""
+
+    from powernext_v3.training import assign_splits
+
+    rows = dataset.design_requests(target_per_route=256, learning_curve_capacity_per_route=256, seed=20261010)
+    assert len(rows) == 8 * 256
+    assert assign_splits(rows) == [row["split"] for row in rows]
+
+
 def test_route_eligible_counts_are_unique_response_shapes():
     rows = [
         {"domain_id": "cpri_0p5uf", "mode": "LI", "topology_id": "GSHUNT_v0", "response_group_key": "same", "regression_eligible": True},

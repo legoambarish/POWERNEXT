@@ -377,6 +377,11 @@ def _setup_for(
 
     family_id = f"V3_SETUP_{family_index:05d}"
     if boundary:
+        # Boundary setups use deterministic values by design.  Keep their
+        # declared family IDs distinct from ordinary/random slots and from
+        # each other; the normalized physical key still supplies the separate
+        # alias union edge where it is genuinely equivalent.
+        family_id = f"{family_id}_BOUNDARY_{boundary_variant}"
         if boundary_variant == "high":
             dut_nF, divider_nF, stray_nF, loop_uH, loop_r = 12.0, 2.0, 1.5, 120.0, 20.0
         elif boundary_variant == "low":
@@ -476,7 +481,14 @@ def _stable_split(group_id: str) -> str:
 
 
 def _union_find_groups(requests: Sequence[Mapping[str, Any]]) -> list[str]:
-    """Join response equivalents and fixed setup families before labels."""
+    """Join response equivalents and every declared/normalized setup family.
+
+    The declared family identifier is part of the public ML split contract,
+    while ``setup_family_key`` captures physical aliases.  Both are retained
+    as union edges so a nominal family cannot cross a split merely because its
+    normalized values differ (and shared rare-neighborhood identifiers remain
+    intentionally atomic across their routes).
+    """
 
     parent = list(range(len(requests)))
 
@@ -493,9 +505,11 @@ def _union_find_groups(requests: Sequence[Mapping[str, Any]]) -> list[str]:
 
     seen_shape: dict[str, int] = {}
     seen_family: dict[str, int] = {}
+    seen_declared_family: dict[str, int] = {}
     for index, request in enumerate(requests):
         shape = str(request.get("response_group_key") or request.get("response_group_id") or _response_group_identity(request))
         family = str(request.get("setup_family_key") or _setup_family_identity(request))
+        declared_family = str(request.get("setup_family_id") or "UNSPECIFIED")
         if shape in seen_shape:
             union(index, seen_shape[shape])
         else:
@@ -504,6 +518,10 @@ def _union_find_groups(requests: Sequence[Mapping[str, Any]]) -> list[str]:
             union(index, seen_family[family])
         else:
             seen_family[family] = index
+        if declared_family in seen_declared_family:
+            union(index, seen_declared_family[declared_family])
+        else:
+            seen_declared_family[declared_family] = index
     members: dict[int, list[str]] = defaultdict(list)
     for index, request in enumerate(requests):
         members[find(index)].append(str(request.get("row_id", index)))
@@ -1126,7 +1144,7 @@ def _manifest_for(
         "design_sha256": digest(requests),
         "source_hashes": _source_hashes(),
         "provenance": _provenance(),
-        "split_rule": "Input-only connected components over normalized response_group_key and normalized setup_family_key; frozen before labels/enrichment.",
+        "split_rule": "Input-only connected components over response_group_key, declared setup_family_id, and normalized setup_family_key; frozen before labels/enrichment.",
         "label_rule": "Only numeric_status=VALID and waveform_status=VALID_CLEAN_FULL_IMPULSE rows with complete metrics are regression eligible; invalid or unsupported rows retain null labels.",
         "waveform_policy": plan.waveform_policy,
         "observed_data_used_for_training": False,
