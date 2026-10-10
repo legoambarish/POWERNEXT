@@ -76,7 +76,7 @@ def normalize_request(raw):
         value=q.get(key)
         if value is not None and (type(value) not in (int,float) or not math.isfinite(value) or value<0 or (key=="charge_step_V" and value==0)):
             raise ValueError(key+" must be a valid explicit charging constraint")
-    if q.get("charge_min_V",0)>p.stage_charge_max_V:raise ValueError("Charging minimum exceeds domain maximum")
+    if (q.get("charge_min_V") or 0)>p.stage_charge_max_V:raise ValueError("Charging minimum exceeds domain maximum")
     return q,catalog
 
 
@@ -206,7 +206,7 @@ def verify_candidate(index,catalog,q,p,ml_prediction=None,ml_ood=None):
         return row,None,1
 
 
-def recommend(raw, *, model=None, model_card=None, registry=None, selection=None, progress=None):
+def recommend(raw, *, model=None, model_card=None, registry=None, selection=None, progress=None, retain_waveforms=True):
     start=time.perf_counter()
     q,catalog=normalize_request(raw)
     p=get_profile(q["domain_id"])
@@ -257,7 +257,7 @@ def recommend(raw, *, model=None, model_card=None, registry=None, selection=None
     else:
         iterator=range(catalog.count) if full else catalog.progressive_ids(q["setup"],q["domain_id"],q["impulse_type"])
         ordered=((idx,None,None) for idx in iterator)
-    rows=[];waveforms={};physics_calls=0;first_pass=None;alternatives_time=None;stop="CANDIDATE_POOL_EXHAUSTED"
+    rows=[];waveforms={};physics_calls=0;first_pass=None;alternatives_time=None;stop="CANDIDATE_POOL_EXHAUSTED";pass_count=0
     max_checks=catalog.count if full else min(q["max_physics_evaluations"],len(pool_ids) if pool_ids else catalog.count)
     for index,pred,ood in ordered:
         if len(rows)>=max_checks:stop="PHYSICS_EVALUATION_BUDGET";break
@@ -265,8 +265,8 @@ def recommend(raw, *, model=None, model_card=None, registry=None, selection=None
         row,wave,calls=verify_candidate(index,catalog,q,p,pred,ood)
         physics_calls+=calls
         rows.append(row)
-        if wave is not None:waveforms[row["candidate_id"]]=wave.arrays
-        pass_count=sum(r["compliant"] for r in rows)
+        if wave is not None and retain_waveforms:waveforms[row["candidate_id"]]=wave.arrays
+        pass_count+=int(row["compliant"])
         elapsed=time.perf_counter()-start
         if row["compliant"] and first_pass is None:first_pass=elapsed
         if pass_count>=q["alternatives"] and alternatives_time is None:alternatives_time=elapsed

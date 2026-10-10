@@ -69,3 +69,23 @@ Profile-aware Physics integration: seven new tests passed (legacy single-respons
 - Model selection must include waveform-feasibility ranking metrics; gain-order
   correlation alone is not acceptable evidence of candidate retention.
 
+# Integration checkpoint — 10 October 2026, 12:06 UTC
+
+The complete legacy runner passed all nine suites: 47 Physics, 30 ML,
+89 optimizer, 61 application, 66 frontend, 86 red-team, one UI-race fixture,
+17 integration and eight final-release checks (405 checks total).
+Machine-readable timings are in `evidence/phase_b/legacy_regression_summary.json`.
+This validates the current source against the legacy contracts; it is not
+acceptance of the still-pending new model artifacts or packaged v3 release.
+
+Sixteen independent validation request oracles completed, each covering 6,912
+electrical candidates. Their input design is separate from the final benchmark
+seed. Oracle ML-score ties are resolved by catalog index, never the stored
+Physics ranking. Five new benchmark-integrity tests pass.
+
+The production dataset sampling audit found and corrected correlated tail
+resistance sampling and repeated per-request catalog sorting. The corrected
+2,048-input pilot design covers every stage from 2 to 15, all sixteen front/tail
+module-count pairings, broad independent log-resistance samples, and approximate
+inverse-guided tolerance probes. Full production generation remains gated on
+current-source pilot validation and independent eligible-shape accounting.

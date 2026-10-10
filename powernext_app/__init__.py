@@ -1,1 +1,1 @@
-__version__ = '1.0.0+integration20261008'
+__version__ = '3.0.0+networks20261010'

@@ -10,6 +10,21 @@ from .evidence import reopen_bundle
 from .bench import predict_bench,compare_bench
 
 def make_server(app,port=PORT):
+    # The v3 network workspace is deliberately lazy and versioned.  The
+    # legacy service keeps ownership of its existing executor, database, and
+    # model routes; a v3 request creates a separate facade below
+    # ``<data-root>/v3`` only when that API is used.
+    v3_holder={'application':None,'lock':threading.RLock()}
+    def v3_application():
+        with v3_holder['lock']:
+            if v3_holder['application'] is None:
+                from powernext_v3.application import V3Application
+                workers=min(4,max(1,int(getattr(app,'workers',1))))
+                v3_holder['application']=V3Application(
+                    app.store.root/'v3', workers=workers,
+                    timeout_seconds=float(getattr(app,'timeout_seconds',90.0)),
+                )
+            return v3_holder['application']
     class LocalServer(ThreadingHTTPServer):
         # Windows SO_REUSEADDR permits two HTTP listeners on the same endpoint;
         # clients can then reach an older app even though startup reports success.
@@ -17,6 +32,13 @@ def make_server(app,port=PORT):
         def server_bind(self):
             if os.name=='nt':self.socket.setsockopt(socket.SOL_SOCKET,socket.SO_EXCLUSIVEADDRUSE,1)
             super().server_bind()
+        def server_close(self):
+            with v3_holder['lock']:
+                current=v3_holder['application']
+                v3_holder['application']=None
+            if current is not None:
+                current.close()
+            super().server_close()
     class Handler(BaseHTTPRequestHandler):
         server_version='PowerNextLocal/0.1'
         def log_message(self,fmt,*args):pass
@@ -36,6 +58,20 @@ def make_server(app,port=PORT):
             try:
                 self.check_origin();url=urlparse(self.path);parts=url.path.strip('/').split('/');query=parse_qs(url.query)
                 if url.path=='/api/meta':return self.reply(app.metadata())
+                if url.path=='/api/v3/meta':return self.reply(v3_application().metadata())
+                if url.path=='/api/v3/runs':return self.reply(v3_application().list_runs())
+                if len(parts)==4 and parts[:3]==['api','v3','runs']:
+                    return self.reply(v3_application().get_run(parts[3]))
+                if len(parts)==5 and parts[:4]==['api','v3','runs',parts[3]] and parts[4]=='waveform':
+                    candidate=query.get('candidate',[None])[0]
+                    if not candidate:raise ValueError('candidate query parameter is required')
+                    return self.reply(v3_application().waveform(parts[3],candidate))
+                if len(parts)==4 and parts[:3]==['api','v3','predictions']:
+                    return self.reply(v3_application().get_prediction(parts[3]))
+                if len(parts)==5 and parts[:4]==['api','v3','predictions',parts[3]] and parts[4]=='waveform':
+                    return self.reply(v3_application().prediction_waveform(parts[3]))
+                if len(parts)==6 and parts[:3]==['api','v3','predictions'] and parts[4]=='reference':
+                    return self.reply(v3_application().get_reference(parts[3],parts[5]))
                 if len(parts)==3 and parts[:2]==['api','technical'] and parts[2] in app.metadata()['technical_documents']:
                     return self.reply((PACKAGE/'docs/integration'/parts[2]).read_text(encoding='utf-8'),content_type='text/plain; charset=utf-8')
                 if url.path=='/api/runs':return self.reply(app.store.list())
@@ -83,6 +119,34 @@ def make_server(app,port=PORT):
                     self.reply(dict(status='STOPPING',detail='Current optimization, if any, completes before data lock is released'))
                     threading.Thread(target=self.server.shutdown,daemon=True).start();return
                 if parts==['api','validate']:return self.reply(app.validate(data['request'],data.get('annotations')))
+                if parts==['api','v3','validate']:
+                    request=data.get('request',data) if isinstance(data,dict) else data
+                    return self.reply(v3_application().validate(request))
+                if parts==['api','v3','runs']:
+                    request=data.get('request',data) if isinstance(data,dict) else data
+                    return self.reply(v3_application().start_search(request),202)
+                if parts==['api','v3','predict']:
+                    return self.reply(v3_application().predict_fixed(data),201)
+                if len(parts)==5 and parts[:3]==['api','v3','predictions'] and parts[4]=='reference':
+                    if not isinstance(data,dict):raise ValueError('Reference request must be an object')
+                    metadata=data.get('metadata',{})
+                    metadata_text=data.get('metadata_text')
+                    metadata_bytes=metadata_text.encode('utf-8') if isinstance(metadata_text,str) else None
+                    if 'metrics' in data:
+                        return self.reply(v3_application().attach_reference_metrics(parts[3],data['metrics'],metadata,metadata_bytes=metadata_bytes),201)
+                    if 'csv_base64' in data:
+                        raw=base64.b64decode(data['csv_base64'],validate=True)
+                    elif 'csv_text' in data:
+                        raw=data['csv_text']
+                    else:
+                        raise ValueError('Reference request requires csv_text or csv_base64')
+                    return self.reply(v3_application().attach_reference(parts[3],raw,metadata,metadata_bytes=metadata_bytes),201)
+                if len(parts)==5 and parts[:3]==['api','v3','predictions'] and parts[4]=='reference-metrics':
+                    if not isinstance(data,dict):raise ValueError('Reference request must be an object')
+                    metadata=data.get('metadata',{})
+                    metadata_text=data.get('metadata_text')
+                    metadata_bytes=metadata_text.encode('utf-8') if isinstance(metadata_text,str) else None
+                    return self.reply(v3_application().attach_reference_metrics(parts[3],data.get('metrics',{}),metadata,metadata_bytes=metadata_bytes),201)
                 if parts==['api','screen']:return self.reply(app.screen_scenarios(data['scenarios']))
                 if parts==['api','predict']:return self.reply(predict_configuration(app,data))
                 if parts==['api','discoveries']:return self.reply(discover(app,data),201)

@@ -1,15 +1,21 @@
 {
-  "application_version": "1.0.0+integration20261008",
-  "interface_version": "1.0.0",
+  "application_version": "3.0.0+networks20261010",
+  "interface_version": "3.0.0",
   "equipment_profile_id": "CPRI_IVG_OCT04_2026_v2",
-  "release_name": "PowerNext_Track1_Offline",
-  "release_date": "2026-10-08",
-  "architecture": "USER_REQUEST_OPTIMIZER_PHYSICS_OPTIMIZER_RECOMMENDATION",
+  "release_name": "PowerNext_Track1_Networks_v3",
+  "release_date": "2026-10-10",
+  "architecture": "ANALYTICAL_AND_ML_PRIORITY_ADAPTIVE_PHYSICS_VERIFICATION",
   "ml_pruning": false,
   "real_machine_calibration": false,
   "measured_residual_training": false,
   "hardware_approved_recipes": 0,
   "iec_measurement_software_qualified": false,
   "waveform_profile": "CPRI_COMPETITION_LI_1.2_50_SI_Tp_250_2500",
-  "primary_document": "docs/integration/IEC_AND_PS_COMPLIANCE_VERIFICATION.md"
+  "primary_document": "docs/PHASE_B_ACCEPTANCE.md",
+  "legacy_waveform_definition_document": "docs/integration/IEC_AND_PS_COMPLIANCE_VERIFICATION.md",
+  "network_modules_per_branch_max": 4,
+  "stage_configuration": "UNIFORM",
+  "domains": ["cpri_0p5uf", "research_3uf"],
+  "adaptive_search_global_optimum_claim": false,
+  "accepted_fallback_release": "PowerNext_Track1_Offline"
 }

@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>PowerNext · Impulse test planning</title><link rel="icon" href="/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/app.css"><script type="module" src="/app.js"></script></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>PowerNext · Impulse test planning</title><link rel="icon" href="/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/app.css"><script type="module" src="/app.js"></script><script type="module" src="/networks.js"></script></head>
 <body>
 <a class="skip" href="#main">Skip to workspace</a>
 <header class="top">
@@ -11,6 +11,7 @@
     <button type="button" data-nav="discovery" data-screen="discovery">ML Prediction & Discovery</button>
     <button type="button" data-nav="history" data-screen="history">History</button>
     <button type="button" data-nav="measured" data-screen="measured">Waveform Review</button>
+    <button type="button" id="v3-networks-nav" data-v3-nav="networks">Network optimizer</button>
   </nav>
   <div class="top-tools">
     <label class="scenario"><span class="sr">Open a synthetic scenario</span><select id="scenario-jump"><option value="">Scenarios…</option></select></label>

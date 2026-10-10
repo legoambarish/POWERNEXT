@@ -1,0 +1,102 @@
+<div id="v3-network-workspace" class="v3-workspace">
+  <section class="page-head">
+    <div>
+      <div class="eyebrow">PowerNext v3 · bounded offline search</div>
+      <h1>Network optimizer</h1>
+      <p>Enumerate canonical series/parallel resistor networks, rank the declared response candidates, and verify a bounded shortlist with the independent Physics model.</p>
+    </div>
+    <div class="chips" aria-label="v3 status"><span class="chip info">Offline</span><span class="chip caution">Research assumptions remain visible</span></div>
+  </section>
+
+  <div id="v3-research-banner" class="note caution" hidden role="note">
+    <span aria-hidden="true">!</span>
+    <div><b>Research comparison domain</b><br><span>3 µF/stage is a hypothetical comparison profile. It is not a CPRI equipment rating and cannot qualify hardware.</span></div>
+  </div>
+
+  <div class="grid-2 v3-layout">
+    <section class="card">
+      <div class="card-head"><div><h2>Search request</h2><p class="card-sub">Every request is normalized, hashed, and saved with its result.</p></div><span id="v3-catalog-status" class="chip neutral">Catalog not loaded</span></div>
+      <form id="v3-search-form">
+        <div class="fields">
+          <div class="field"><label for="v3-domain">Domain</label><select id="v3-domain" name="domain_id"><option value="cpri_0p5uf">CPRI · 0.5 µF/stage</option><option value="research_3uf">Research comparison · 3 µF/stage</option></select><div class="hint">The selected domain is carried into Physics and the saved record.</div></div>
+          <div class="field"><label for="v3-impulse">Impulse type</label><select id="v3-impulse" name="impulse_type"><option value="LI">LI · lightning impulse</option><option value="SI">SI · switching impulse</option></select></div>
+          <div class="field"><label for="v3-topology">Topology hypothesis</label><select id="v3-topology" name="topology_id"><option value="GSHUNT_v0">GSHUNT · generator side shunt</option><option value="OSHUNT_v0">OSHUNT · output side shunt</option></select></div>
+          <div class="field"><label for="v3-polarity">Polarity</label><select id="v3-polarity" name="polarity"><option value="1">+1 · positive</option><option value="-1">−1 · negative</option></select></div>
+          <div class="field"><label for="v3-target">Target crest voltage (V)</label><input id="v3-target" name="target_crest_V" type="number" min="50000" max="2400000" step="1000" value="1000000" required><div class="hint">Explicit requested impulse crest; equipment approval remains out of scope.</div></div>
+          <div class="field"><label for="v3-stages">Uniform active stages</label><input id="v3-stages" name="stages" value="2–15" inputmode="text"><div class="hint">Use <code>2-15</code>, <code>2,5,9</code>, or a single stage count.</div></div>
+          <div class="field"><label for="v3-max-modules">Maximum modules per branch</label><select id="v3-max-modules" name="max_modules"><option value="1">1 · six single parts</option><option value="2">2 · series/parallel pairs</option><option value="3">3 · mixed trees</option><option value="4" selected>4 · complete bounded catalog</option></select></div>
+          <div class="field"><label for="v3-search-mode">Search policy</label><select id="v3-search-mode" name="search_mode"><option value="adaptive">Adaptive · bounded progressive coverage</option><option value="complete">Complete · declared catalog</option></select></div>
+          <div class="field"><label for="v3-priority">Ranking policy</label><select id="v3-priority" name="priority"><option value="combined" selected>Combined · ML + analytical + Physics</option><option value="complete_physics">Complete Physics</option><option value="analytical">Analytical baseline</option><option value="ml">ML route, then Physics</option></select></div>
+          <div class="field"><label for="v3-alternatives">Passed alternatives</label><input id="v3-alternatives" name="alternatives" type="number" min="1" max="20" step="1" value="4"></div>
+        </div>
+
+        <details class="fold" style="margin-top:18px"><summary>Declared setup</summary>
+          <div class="fields">
+            <div class="field"><label for="v3-dut-cap">DUT capacitance (F)</label><input id="v3-dut-cap" type="number" step="any" value="8.5e-10"></div>
+            <div class="field"><label for="v3-divider-cap">Divider capacitance (F)</label><input id="v3-divider-cap" type="number" step="any" value="5e-10"></div>
+            <div class="field"><label for="v3-stray-cap">Stray capacitance (F)</label><input id="v3-stray-cap" type="number" step="any" value="1.5e-10"></div>
+            <div class="field"><label for="v3-loop-inductance">Loop inductance (H)</label><input id="v3-loop-inductance" type="number" step="any" value="1.85e-5"></div>
+            <div class="field"><label for="v3-loop-resistance">Loop resistance (Ω)</label><input id="v3-loop-resistance" type="number" min="0" step="any" value="0"></div>
+            <div class="field"><label for="v3-coverage">Basic capacitance coverage</label><select id="v3-coverage"><option value="ADDITIONAL_DISJOINT">Additional disjoint 480 pF</option><option value="INCLUDED_IN_OTHER_COMPONENTS">Included in declared components</option></select></div>
+            <div class="field"><label for="v3-auxiliary">Auxiliary branches</label><select id="v3-auxiliary"><option value="UNCONFIRMED_AUXILIARY_BRANCHES_OMITTED">Unconfirmed branches omitted</option></select></div>
+            <div class="field"><label for="v3-setup-id">Setup identifier</label><input id="v3-setup-id" value="V3_UI_DECLARED_SETUP"></div>
+          </div>
+        </details>
+
+        <details class="fold" style="margin-top:18px"><summary>Advanced bounds</summary>
+          <div class="fields">
+            <div class="field"><label for="v3-max-ml">Maximum ML candidates</label><input id="v3-max-ml" type="number" min="1" max="2000000" step="1" value="4096"></div>
+            <div class="field"><label for="v3-max-physics">Maximum Physics evaluations</label><input id="v3-max-physics" type="number" min="1" max="1000000" step="1" value="128"></div>
+            <div class="field"><label for="v3-budget">Planned search budget (s)</label><input id="v3-budget" type="number" min="0.1" max="86400" step="0.1" value="90"></div>
+            <div class="field"><label for="v3-request-id">Request identifier</label><input id="v3-request-id" value="NETWORK_UI_REQUEST"></div>
+          </div>
+        </details>
+        <div class="actions"><button id="v3-validate" class="btn" type="button">Validate request</button><button id="v3-run" class="btn primary" type="submit">Start bounded search</button><span id="v3-form-status" class="muted small" role="status"></span></div>
+      </form>
+    </section>
+
+    <aside class="card">
+      <div class="card-head"><div><h2>Live progress</h2><p class="card-sub">A queued or running record has no partial result.</p></div><span id="v3-job-status" class="chip neutral">Idle</span></div>
+      <div id="v3-progress" class="note"><span class="spinner" hidden></span><div>Submit a request to stream catalog and Physics progress here.</div></div>
+      <div id="v3-progress-events" class="v3-events" aria-live="polite"></div>
+      <dl id="v3-search-counts" class="kvs tight"></dl>
+      <p class="micro">Planned budget exhaustion is retained as a valid completed result with explicit partial coverage. A crash or process stop is recorded as failed and never promoted.</p>
+    </aside>
+  </div>
+
+  <section id="v3-search-result" class="card v3-result" hidden>
+    <div class="card-head"><div><h2>Search result</h2><p class="card-sub">Physics passes are separated from ML predictions and failed alternatives.</p></div><span id="v3-result-status" class="chip neutral"></span></div>
+    <div id="v3-result-summary"></div>
+    <div class="divider"></div>
+    <div id="v3-best-configuration"></div>
+    <div id="v3-alternatives"></div>
+    <details class="fold" style="margin-top:18px"><summary>Full saved JSON</summary><pre id="v3-result-json" class="v3-json"></pre></details>
+  </section>
+
+  <section class="card" style="margin-top:18px">
+    <div class="card-head"><div><h2>Fixed configuration prediction</h2><p class="card-sub">Freeze one exact network and forward-predict before attaching a later reference trace.</p></div><span class="chip info">Immutable input + model version</span></div>
+    <form id="v3-predict-form">
+      <div class="fields">
+        <div class="field full"><label for="v3-front-network">Front network tree</label><textarea id="v3-front-network" rows="3">{"op":"R","ohm":3700}</textarea><div class="hint">Canonical JSON, for example <code>{"op":"S","children":[{"op":"R","ohm":30},{"op":"R","ohm":46}]}</code>.</div></div>
+        <div class="field full"><label for="v3-tail-network">Tail network tree</label><textarea id="v3-tail-network" rows="3">{"op":"R","ohm":5000}</textarea></div>
+        <div class="field"><label for="v3-fixed-stages">Active stages</label><input id="v3-fixed-stages" type="number" min="2" max="15" step="1" value="9"></div>
+        <div class="field"><label for="v3-stage-charge">Stage charge (V)</label><input id="v3-stage-charge" type="number" min="1" max="200000" step="any" value="100000"><div class="hint">Fractional values are retained when copied from a ranked Physics candidate.</div></div>
+      </div>
+      <div class="actions"><button class="btn primary" type="submit">Freeze &amp; predict</button><span id="v3-predict-status" class="muted small" role="status"></span></div>
+    </form>
+    <div id="v3-prediction-result" class="v3-output" hidden></div>
+    <p class="micro">If no versioned route artifact loads, the saved status is <code>PHYSICS_FALLBACK</code>; the interface never labels that baseline as an ML prediction.</p>
+    <div id="v3-reference-panel" class="v3-reference" hidden>
+      <div class="divider"></div><h3>Attach measured reference later</h3>
+      <p class="hint">Raw CSV bytes and source metadata are preserved. The comparison is numerical evidence only and never retrains or mutates the frozen prediction.</p>
+      <div class="fields" style="margin-top:14px"><div class="field"><label for="v3-reference-file">Reference CSV</label><input id="v3-reference-file" type="file" accept=".csv,text/csv"></div><div class="field"><label for="v3-reference-metadata">Metadata JSON</label><textarea id="v3-reference-metadata" rows="4">{"measurement":{"time_column":"time","voltage_column":"voltage","time_unit":"us","voltage_unit":"V","voltage_scale_to_DUT":1,"baseline_V":0,"beginning_s":0},"source_organization":"USER_SUPPLIED"}</textarea></div></div>
+      <div class="actions"><button id="v3-reference-submit" class="btn" type="button">Save reference comparison</button><span id="v3-reference-status" class="muted small" role="status"></span></div>
+      <div id="v3-reference-result" class="v3-output" hidden></div>
+      <div class="divider"></div><h3>Scalar reference values</h3>
+      <p class="hint">For a report that supplies only measured crest and timing values, save those values without inventing a waveform. Units are SI seconds and volts.</p>
+      <div class="fields" style="margin-top:14px"><div class="field"><label for="v3-ref-crest">Measured crest (V)</label><input id="v3-ref-crest" type="number" min="0" step="any"></div><div class="field"><label for="v3-ref-front">Measured front / peak time (s)</label><input id="v3-ref-front" type="number" min="0" step="any"></div><div class="field"><label for="v3-ref-tail">Measured tail (s)</label><input id="v3-ref-tail" type="number" min="0" step="any"></div></div>
+      <div class="actions"><button id="v3-reference-metrics-submit" class="btn" type="button">Save scalar comparison</button><span id="v3-reference-metrics-status" class="muted small" role="status"></span></div>
+      <div id="v3-reference-metrics-result" class="v3-output" hidden></div>
+    </div>
+  </section>
+</div>
